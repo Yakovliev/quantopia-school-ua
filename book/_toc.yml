@@ -5,4 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: astronomy_content/introduction_1
+- file: astronomy_content/introduction_2
 
