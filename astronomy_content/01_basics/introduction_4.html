@@ -1,0 +1,808 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Короткий огляд об’єктів дослідження в астрономії &#8212; Quantopia&#39;:&#39; Physics, Python, and Pi - Ukrainian Course of Physics and Astronomy (School)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'astronomy_content/01_basics/introduction_4';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia':' Physics, Python, and Pi - Ukrainian Course of Physics and Astronomy (School) - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia':' Physics, Python, and Pi - Ukrainian Course of Physics and Astronomy (School) - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fastronomy_content/01_basics/introduction_4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/astronomy_content/01_basics/introduction_4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Короткий огляд об’єктів дослідження в астрономії</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Короткий огляд об’єктів дослідження в астрономії</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Об’єкти Сонячної системи</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Сонце</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Планети</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Планети земної групи</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Планети-гіганти</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Малі тіла Сонячної системи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Зорі та зоряні системи</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Класифікація зір</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Особливі типи зір</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Зоряні скупчення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Міжзоряне середовище</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Газопилові туманності</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Міжзоряна речовина</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Галактики</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Типи галактик (за класифікацією Габбла)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Наша Галактика (Молочний Шлях)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Особливі галактичні об’єкти</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Великомасштабні структури</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Скупчення галактик</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Специфічні структури</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Космологічні об’єкти та явища</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Темна матерія</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Темна енергія</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Реліктове випромінювання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Гравітаційні хвилі</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Короткий огляд об’єктів дослідження в астрономії</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Наша космічна околиця: Сонячна система</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Зоряний світ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Життєвий цикл зір та їх останні стадії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Галактики – зоряні міста</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Великомасштабна структура Всесвіту</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Короткий огляд об’єктів дослідження в астрономії<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Об’єкти Сонячної системи<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>Сонце<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Центральна зоря нашої планетної системи</p></li>
+<li><p>Жовтий карлик спектрального класу G2V</p></li>
+<li><p>Температура поверхні: ≈ 5778 K</p></li>
+<li><p>Маса: <span class="math notranslate nohighlight">\(1.989 \times 10^{30}\)</span> кг</p></li>
+<li><p>Радіус: 696 340 км</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Планети<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h4>Планети земної групи<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Меркурій</strong>: найближча до Сонця планета</p></li>
+<li><p><strong>Венера</strong>: найгарячіша планета Сонячної системи</p></li>
+<li><p><strong>Земля</strong>: єдина відома планета з життям</p></li>
+<li><p><strong>Марс</strong>: червона планета з полярними шапками</p></li>
+</ul>
+</section>
+<section id="id6">
+<h4>Планети-гіганти<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Юпітер</strong>: найбільша планета</p></li>
+<li><p><strong>Сатурн</strong>: планета з найвиразнішою системою кілець</p></li>
+<li><p><strong>Уран</strong>: “лежача” планета з нахиленою віссю обертання</p></li>
+<li><p><strong>Нептун</strong>: планета з найсильнішими вітрами</p></li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h3>Малі тіла Сонячної системи<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Астероїди</strong>: кам’янисті тіла різних розмірів</p></li>
+<li><p><strong>Комети</strong>: крижані тіла з хвостами</p></li>
+<li><p><strong>Метеороїди</strong>: дрібні тіла, що створюють метеори</p></li>
+<li><p><strong>Карликові планети</strong> (Плутон, Церера, Еріда та інші)</p></li>
+</ul>
+</section>
+</section>
+<section id="id8">
+<h2>Зорі та зоряні системи<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h3>Класифікація зір<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>За спектральними класами</strong>: O, B, A, F, G, K, M</p></li>
+<li><p><strong>За розмірами</strong>:</p>
+<ul>
+<li><p>Надгіганти</p></li>
+<li><p>Гіганти</p></li>
+<li><p>Субгіганти</p></li>
+<li><p>Карлики</p></li>
+<li><p>Субкарлики</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id10">
+<h3>Особливі типи зір<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Змінні зорі</strong>:</p>
+<ul>
+<li><p>Цефеїди</p></li>
+<li><p>Нові зорі</p></li>
+<li><p>Наднові зорі</p></li>
+</ul>
+</li>
+<li><p><strong>Подвійні та кратні зоряні системи</strong></p></li>
+<li><p><strong>Пульсари та нейтронні зорі</strong></p></li>
+<li><p><strong>Чорні діри</strong></p></li>
+</ul>
+</section>
+<section id="id11">
+<h3>Зоряні скупчення<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Розсіяні скупчення</strong> (наприклад, Плеяди)</p></li>
+<li><p><strong>Кулясті скупчення</strong> (наприклад, M13)</p></li>
+</ul>
+</section>
+</section>
+<section id="id12">
+<h2>Міжзоряне середовище<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h3>Газопилові туманності<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Емісійні туманності</strong> (наприклад, туманність Оріона)</p></li>
+<li><p><strong>Відбивні туманності</strong></p></li>
+<li><p><strong>Планетарні туманності</strong></p></li>
+<li><p><strong>Залишки наднових</strong></p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>Міжзоряна речовина<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Газ (переважно водень та гелій)</p></li>
+<li><p>Пил</p></li>
+<li><p>Космічні промені</p></li>
+<li><p>Магнітні поля</p></li>
+</ul>
+</section>
+</section>
+<section id="id15">
+<h2>Галактики<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<section id="id16">
+<h3>Типи галактик (за класифікацією Габбла)<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Еліптичні галактики</strong> (E0-E7)</p></li>
+<li><p><strong>Спіральні галактики</strong> (Sa, Sb, Sc)</p></li>
+<li><p><strong>Спіральні з перемичкою</strong> (SBa, SBb, SBc)</p></li>
+<li><p><strong>Неправильні галактики</strong></p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Наша Галактика (Молочний Шлях)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Спіральна галактика з перемичкою</p></li>
+<li><p>Діаметр: ≈ 100 000 світлових років</p></li>
+<li><p>Містить 200-400 мільярдів зір</p></li>
+</ul>
+</section>
+<section id="id18">
+<h3>Особливі галактичні об’єкти<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Активні ядра галактик</strong></p></li>
+<li><p><strong>Квазари</strong></p></li>
+<li><p><strong>Радіогалактики</strong></p></li>
+<li><p><strong>Взаємодіючі галактики</strong></p></li>
+</ul>
+</section>
+</section>
+<section id="id19">
+<h2>Великомасштабні структури<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<section id="id20">
+<h3>Скупчення галактик<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Регулярні скупчення</strong></p></li>
+<li><p><strong>Нерегулярні скупчення</strong></p></li>
+<li><p><strong>Надскупчення</strong></p></li>
+</ul>
+</section>
+<section id="id21">
+<h3>Специфічні структури<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Галактичні нитки</strong></p></li>
+<li><p><strong>Галактичні стіни</strong></p></li>
+<li><p><strong>Великі порожнечі</strong></p></li>
+</ul>
+</section>
+</section>
+<section id="id22">
+<h2>Космологічні об’єкти та явища<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h3>Темна матерія<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Невидима речовина, що виявляє себе гравітаційно</p></li>
+<li><p>Складає ≈ 27% вмісту Всесвіту</p></li>
+</ul>
+</section>
+<section id="id24">
+<h3>Темна енергія<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Гіпотетична форма енергії</p></li>
+<li><p>Відповідальна за прискорене розширення Всесвіту</p></li>
+<li><p>Складає ≈ 68% вмісту Всесвіту</p></li>
+</ul>
+</section>
+<section id="id25">
+<h3>Реліктове випромінювання<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Електромагнітне випромінювання раннього Всесвіту</p></li>
+<li><p>Температура: ≈ 2.7 K</p></li>
+<li><p>Найдавніше електромагнітне випромінювання, яке ми можемо спостерігати</p></li>
+</ul>
+</section>
+<section id="id26">
+<h3>Гравітаційні хвилі<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Коливання простору-часу</p></li>
+<li><p>Виникають при злитті масивних об’єктів</p></li>
+<li><p>Вперше зареєстровані у 2015 році</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id27">
+<h1>Короткий огляд об’єктів дослідження в астрономії<a class="headerlink" href="#id27" title="Link to this heading">#</a></h1>
+<p>Всесвіт наповнений надзвичайно різноманітними об’єктами, кожен з яких унікальний і цікавий по-своєму. Щоб краще зрозуміти цю різноманітність, давайте здійснимо уявну подорож, починаючи з найближчих до нас об’єктів і рухаючись до найвіддаленіших куточків космосу.</p>
+<section id="id28">
+<h2>Наша космічна околиця: Сонячна система<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<p>У центрі нашої планетної системи знаходиться Сонце – типова зоря середнього віку, яка дає життя всій Сонячній системі. Це гігантська плазмова куля з температурою поверхні близько 5778 Кельвінів, що безперервно виробляє енергію шляхом термоядерних реакцій у своєму ядрі. Сонце настільки масивне, що складає 99.86% всієї маси Сонячної системи!</p>
+<p>Навколо Сонця обертаються вісім великих планет, які можна розділити на дві групи за їхніми фізичними характеристиками. Планети земної групи – Меркурій, Венера, Земля та Марс – відносно малі, складаються переважно з каменю та металів, мають тверду поверхню. Планети-гіганти – Юпітер, Сатурн, Уран і Нептун – набагато більші за розмірами, складаються в основному з газів і не мають твердої поверхні у звичному розумінні.</p>
+<p>Але планети – це лише початок. Між орбітами Марса та Юпітера розташований пояс астероїдів – область, де обертаються тисячі кам’янистих тіл різних розмірів. За орбітою Нептуна знаходиться пояс Койпера, населений крижаними тілами, найвідомішим з яких є Плутон – колишня планета, а тепер карликова планета.</p>
+</section>
+<section id="id29">
+<h2>Зоряний світ<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<p>Коли ми виходимо за межі Сонячної системи, перед нами відкривається неймовірний світ зір. Найближча до нас зоря – Проксима Центавра – знаходиться на відстані 4.24 світлових років. Це лише початок безмежного зоряного океану.</p>
+<p>Зорі надзвичайно різноманітні. Вони відрізняються за розмірами, масою, температурою, кольором та іншими характеристиками. Астрономи класифікують їх за спектральними класами, використовуючи послідовність OBAFGKM, де O – найгарячіші зорі, а M – найхолодніші. Наше Сонце належить до класу G і є жовтим карликом.</p>
+<p>Особливо цікавими є змінні зорі, яскравість яких періодично змінюється. Серед них виділяють цефеїди – пульсуючі надгіганти, які використовуються як “стандартні свічки” для вимірювання космічних відстаней. Також існують тісні подвійні зоряні системи, де зорі можуть обмінюватися речовиною, що призводить до вибухів нових зір.</p>
+</section>
+<section id="id30">
+<h2>Життєвий цикл зір та їх останні стадії<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<p>Зорі народжуються в газопилових туманностях, живуть мільйони або мільярди років, і вмирають різними способами залежно від їхньої початкової маси. Масивні зорі закінчують своє життя грандіозними вибухами наднових, а їхні залишки перетворюються на нейтронні зорі або чорні діри.</p>
+<p>Нейтронні зорі – це надщільні об’єкти розміром з місто, але масою з зорю. Деякі з них обертаються з величезною швидкістю і випромінюють регулярні імпульси радіохвиль – такі об’єкти називають пульсарами.</p>
+<p>Чорні діри – це об’єкти з настільки сильною гравітацією, що навіть світло не може покинути їх поверхню. Вони виявляють себе через взаємодію з навколишньою речовиною та гравітаційний вплив на інші об’єкти.</p>
+</section>
+<section id="id31">
+<h2>Галактики – зоряні міста<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<p>Всі видимі зорі входять до складу галактик – гігантських зоряних систем, що містять мільярди зір, а також газ, пил та темну матерію. Наша Галактика – Молочний Шлях – це спіральна галактика з перемичкою, що містить приблизно 200-400 мільярдів зір.</p>
+<p>Галактики бувають різних форм і розмірів. За класифікацією Габбла їх поділяють на еліптичні, спіральні та неправильні. Особливо вражаючими є активні галактики, в центрах яких знаходяться надмасивні чорні діри, що активно поглинають речовину і випромінюють величезну кількість енергії. Найяскравіші з них називаються квазарами.</p>
+</section>
+<section id="id32">
+<h2>Великомасштабна структура Всесвіту<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<p>На найбільших масштабах галактики утворюють скупчення та надскупчення, формуючи складну мережеподібну структуру Всесвіту. Між цими структурами знаходяться величезні порожнечі – області, майже позбавлені галактик.</p>
+<p>Більшість речовини у Всесвіті існує у формі темної матерії – загадкової субстанції, яка не випромінює світла, але виявляє себе через гравітаційну взаємодію. Ще більш загадковою є темна енергія – форма енергії, що змушує Всесвіт розширюватися з прискоренням.</p>
+<p>Найдавнішим світлом, яке ми можемо спостерігати, є реліктове випромінювання – відлуння Великого Вибуху, що несе інформацію про ранній Всесвіт. А в 2015 році вчені вперше зареєстрували гравітаційні хвилі – коливання самої тканини простору-часу, що виникають при злитті масивних об’єктів, відкривши нове вікно для спостереження за Всесвітом.</p>
+<p>«Кассіні — Гюйгенс» є місією до зовнішніх планет флагманського класу (планетарні місії «Галілео», «Вояджерів» і «Вікінгів» є також флагманськими)</p>
+<p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D0%BB%D1%96%D0%BB%D0%B5%D0%BE_(%D0%BA%D0%BE%D1%81%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D0%B0%D0%BF%D0%B0%D1%80%D0%B0%D1%82)">https://uk.wikipedia.org/wiki/Галілео_(космічний_апарат)</a></p>
+<p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D0%BE%D1%8F%D0%B4%D0%B6%D0%B5%D1%80">https://uk.wikipedia.org/wiki/Вояджер</a></p>
+<p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0_%C2%AB%D0%92%D1%96%D0%BA%D1%96%D0%BD%D0%B3%C2%BB">https://uk.wikipedia.org/wiki/Програма_«Вікінг»</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./astronomy_content\01_basics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Короткий огляд об’єктів дослідження в астрономії</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Об’єкти Сонячної системи</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Сонце</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Планети</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Планети земної групи</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Планети-гіганти</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Малі тіла Сонячної системи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Зорі та зоряні системи</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Класифікація зір</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Особливі типи зір</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Зоряні скупчення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Міжзоряне середовище</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Газопилові туманності</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Міжзоряна речовина</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Галактики</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Типи галактик (за класифікацією Габбла)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Наша Галактика (Молочний Шлях)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Особливі галактичні об’єкти</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Великомасштабні структури</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Скупчення галактик</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Специфічні структури</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Космологічні об’єкти та явища</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Темна матерія</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Темна енергія</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Реліктове випромінювання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Гравітаційні хвилі</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Короткий огляд об’єктів дослідження в астрономії</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Наша космічна околиця: Сонячна система</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Зоряний світ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Життєвий цикл зір та їх останні стадії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Галактики – зоряні міста</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Великомасштабна структура Всесвіту</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
