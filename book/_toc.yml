@@ -3,7 +3,19 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: astronomy_content/01_basics/cassini
+
+options:  # Add these options
+  numbered: false
+  expand_sections: false  # This makes sections collapsed by default
+parts:
+  - caption: АСТРОНОМІЯ
+    chapters:
+      - file: astronomy_content/01_basics/cassini_laws
+
+  # - caption: ФІЗИКА
+
+  # - caption: Розділ Електричне поле
+
+  # - caption: МАТЕМАТИЧНИЙ МІНІМУМ
 
 
