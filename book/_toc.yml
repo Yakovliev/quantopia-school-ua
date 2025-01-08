@@ -10,7 +10,8 @@ options:  # Add these options
 parts:
   - caption: АСТРОНОМІЯ
     chapters:
-      - file: astronomy_content/01_basics/cassini_laws
+      - file: astronomy_content/01_basics/cassini
+      - file: astronomy_content/01_basics/astronomy_science
 
   # - caption: ФІЗИКА
 
