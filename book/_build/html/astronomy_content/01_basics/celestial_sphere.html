@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Quantopia&#39;:&#39; Physics, Python, and Pi - Ukrainian Course of Physics and Astronomy (School)</title>
+    <title>Небесна сфера та небесні координати &#8212; Quantopia&#39;:&#39; Physics, Python, and Pi - Ukrainian Course of Physics and Astronomy (School)</title>
   
   
   
@@ -60,9 +60,10 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'astronomy_content/01_basics/solar_system';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'astronomy_content/01_basics/celestial_sphere';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Астрономія та її основні розділи" href="astronomy_science.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -113,8 +114,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -169,10 +168,10 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="cassini.html">Великий фінал: останній політ крізь кільця</a></li>
 <li class="toctree-l1"><a class="reference internal" href="astronomy_science.html">Астрономія та її основні розділи</a></li>
-<li class="toctree-l1"><a class="reference internal" href="celestial_sphere.html">Небесна сфера та небесні координати</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Небесна сфера та небесні координати</a></li>
 </ul>
 
     </div>
@@ -249,7 +248,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fastronomy_content/01_basics/solar_system.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fastronomy_content/01_basics/celestial_sphere.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -279,7 +278,7 @@
       
       
       
-      <li><a href="../../_sources/astronomy_content/01_basics/solar_system.ipynb" target="_blank"
+      <li><a href="../../_sources/astronomy_content/01_basics/celestial_sphere.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +354,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Небесна сфера та небесні координати</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -364,9 +363,15 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Поняття небесної сфери</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Системи небесних координат</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Математичні величини в астрономії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Важливі співвідношення:</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Горизонтальна система координат</a></li>
+</ul>
             </nav>
         </div>
     </div>
@@ -377,17 +382,64 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><a class="reference external" href="https://science.nasa.gov/solar-system/">https://science.nasa.gov/solar-system/</a></p>
-<p>3D мапа сонячної системи за прямим посиланням NASA:</p>
-<p><a class="reference external" href="https://eyes.nasa.gov/apps/solar-system/#/sc_parker_solar_probe?embed=true">https://eyes.nasa.gov/apps/solar-system/#/sc_parker_solar_probe?embed=true</a></p>
-<iframe 
-  width="100%" 
-  height="600" 
-  src="https://eyes.nasa.gov/apps/solar-system/#/home?embed=true" 
-  title="Solar System 3D" 
-  frameborder="0"
-  allowfullscreen>
-</iframe>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Небесна сфера та небесні координати<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Поняття небесної сфери<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Небесна сфера виникла з практичної потреби опису положення зір у космічному просторі. Незважаючи на те, що зорі надзвичайно віддалені від Землі, і при спостереженні навіть через телескоп неможливо визначити, яка з них знаходиться далі, а яка ближче, нам здається, що всі небесні світила розташовані на однаковій відстані - на поверхні велетенської сфери, в центрі якої знаходиться спостерігач.</p>
+<blockquote>
+<div><p>Небесна сфера - це уявна сфера довільного радіуса із центром у точці спостереження, на яку спроектовані небесні світила.</p>
+</div></blockquote>
+<p>Важливо розуміти, що точкою спостереження може бути:</p>
+<ul class="simple">
+<li><p>центр Землі</p></li>
+<li><p>центр Сонця</p></li>
+<li><p>місце спостереження на поверхні Землі або будь-яка інша точка</p></li>
+</ul>
+<p><img alt="Celestial Sphere 01" src="../../_images/celestial_sphere_1.png" /></p>
+<p>Image: Ілюстрація небесної сфери. На рисунку зображено три зірки, які перебувають на різній відстані від спостерігача, а також їх проекції на небесну сферу.</p>
+<img src="../images/celestial_sphere_1.png" alt="Celestial Sphere 01" style="width: 100%; max-width: 500px;"></section>
+<section id="id3">
+<h2>Системи небесних координат<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>На небесній і земній сферах можна провести певні кола, отримавши точки та лінії, за допомогою яких визначаються небесні координати світил. Залежно від вибору головної площини та точки відліку на ній розрізняють такі системи координат:</p>
+<ul class="simple">
+<li><p>горизонтальну</p></li>
+<li><p>першу екваторіальну</p></li>
+<li><p>другу екваторіальну</p></li>
+<li><p>екліптичну</p></li>
+<li><p>галактичну</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>Математичні величини в астрономії<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>В астрономії для вимірювання кутів використовуються такі одиниці:</p>
+<ul class="simple">
+<li><p>градуси</p></li>
+<li><p>радіани</p></li>
+<li><p>години</p></li>
+</ul>
+<section id="id5">
+<h3>Важливі співвідношення:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>1 радіан = 360°/(2π) = 57°,3 = 206265″</p>
+<p>Для часових мір:</p>
+<ul class="simple">
+<li><p>1ʰ (година) - це центральний кут, який відповідає 1/24 частини кола</p></li>
+<li><p>1ʰ = 60ᵐ = 3600ˢ</p></li>
+<li><p>1ʰ = 15°, 1ᵐ = 15′, 1ˢ = 15″</p></li>
+</ul>
+</section>
+</section>
+<section id="id6">
+<h2>Горизонтальна система координат<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Горизонтальна система координат пов’язана із Землею, а не із зорями. Для її розуміння потрібно уявити себе спостерігачем і провести умовну прямовисну лінію, яка:</p>
+<ul class="simple">
+<li><p>проходить через центр Землі</p></li>
+<li><p>збігається з напрямком сили тяжіння в місці спостереження</p></li>
+<li><p>перетинає небесну сферу в двох точках, які називають зеніт і надир</p></li>
+</ul>
+</section>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -418,6 +470,15 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="astronomy_science.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Астрономія та її основні розділи</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
@@ -434,9 +495,15 @@
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Поняття небесної сфери</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Системи небесних координат</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Математичні величини в астрономії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Важливі співвідношення:</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Горизонтальна система координат</a></li>
+</ul>
   </nav></div>
 
 </div></div>

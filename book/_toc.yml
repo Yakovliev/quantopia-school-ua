@@ -12,6 +12,7 @@ parts:
     chapters:
       - file: astronomy_content/01_basics/cassini
       - file: astronomy_content/01_basics/astronomy_science
+      - file: astronomy_content/01_basics/celestial_sphere
 
   # - caption: ФІЗИКА
 
