@@ -14,7 +14,9 @@ parts:
       - file: astronomy_content/01_basics/astronomy_science
       - file: astronomy_content/01_basics/celestial_sphere
 
-  # - caption: ФІЗИКА
+  - caption: ФІЗИКА
+    chapters:
+      - file: physics_content/internal_energy
 
   # - caption: Розділ Електричне поле
 
