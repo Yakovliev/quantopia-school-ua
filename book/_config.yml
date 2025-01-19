@@ -31,13 +31,15 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  favicon: _static/favicon.ico
 
 sphinx:
   config:
-    language: en
+    language: ua
     suppress_warnings: ["mystnb.unknown_mime_type"]
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js #this is necessary to improve the performance of the rendering of math equations
 
 
 launch_buttons:
