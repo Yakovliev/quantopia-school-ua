@@ -20,6 +20,7 @@ parts:
         sections:
           - file: physics_content/heat_transfer
           - file: physics_content/internal_energy_task_01
+      - file: physics_content/charge_01
 
   # - caption: Розділ Електричне поле
 
