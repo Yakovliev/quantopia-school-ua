@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Перший закон термодинаміки &#8212; Quantopia School UA</title>
+    <title>Перший закон термодинаміки та адіабатний процес &#8212; Quantopia School UA</title>
   
   
   
@@ -67,6 +67,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Електричний заряд. Закон Кулона" href="charge_01.html" />
+    <link rel="prev" title="Робота в термодинаміці" href="work_thermo.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
   <meta name="docsearch:version" content="" />
@@ -117,8 +119,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -180,13 +180,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../astronomy_content/01_basics/celestial_sphere.html">Небесна сфера та небесні координати</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="heat_transfer.html">Види теплопередачі</a></li>
 <li class="toctree-l2"><a class="reference internal" href="internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Перший закон термодинаміки та адіабатний процес</a></li>
 <li class="toctree-l1"><a class="reference internal" href="charge_01.html">Електричний заряд. Закон Кулона</a></li>
 </ul>
 
@@ -401,7 +402,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Перший закон термодинаміки</h1>
+    <h1>Перший закон термодинаміки та адіабатний процес</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -411,12 +412,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Перший закон термодинаміки</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Варіанти першого закону для ізопроцесів</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Адіабатний процес</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Підсумки</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Формулювання першого закону термодинаміки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Перший закон термодинаміки для різних процесів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Адіабатний процес</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -427,43 +426,64 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p><strong>Перший закон термодинаміки та адіабатний процес</strong></p>
-<p>Один із фундаментальних законів природи - закон збереження та перетворення енергії - має цікаву історію відкриття. Німецький лікар і фізик Юліус Роберт фон Маєр (1814-1878) зробив важливе спостереження під час своєї практики. Він помітив, що венозна кров у жителів тропічних країн має світліший колір, ніж у європейців. Це спостереження привело його до розуміння зв'язку між кількістю спожитого кисню та процесами в організмі. Незалежно від Маєра, до схожих висновків прийшли англійський промисловець Джеймс Прескотт Джоуль (1818-1889) та німецький фізик і фізіолог Герман Людвіг Фердинанд фон Гельмгольц (1821-1894).</p>
-<p><strong>Формулювання першого закону термодинаміки</strong></p>
-<p>У термодинаміці розглядаються системи, де механічна енергія при переході між станами може змінюватися. При цьому, якщо зовнішні сили виконують роботу <span class="math notranslate nohighlight">\(A'\)</span> і системі передається певна кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span>, то вся ця енергія йде на зміну внутрішньої енергії системи <span class="math notranslate nohighlight">\(\Delta U\)</span>. Математично це записується як:</p>
-<p><span class="math notranslate nohighlight">\(\Delta U = A' + Q\)</span></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Перший закон термодинаміки та адіабатний процес<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Формулювання першого закону термодинаміки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У термодинаміці розглядаються системи, де механічна енергія при переході між станами може змінюватися. При цьому, якщо зовнішні сили виконують роботу <span class="math notranslate nohighlight">\(A'\)</span> і системі передається певна кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span>, то вся ця енергія йде на зміну внутрішньої енергії системи <span class="math notranslate nohighlight">\(\Delta U\)</span>.</p>
+<p>Закон збереження та перетвореня енергії (зауважте, що саме &quot;енергії&quot;, а не &quot;механічної енергії&quot;) в такому випадку називають <strong>першим законом термодинаміки</strong>:</p>
+<blockquote>
+<div><p>Зміна внутрішньої енергії <span class="math notranslate nohighlight">\(\Delta U\)</span> при переході з одного термодинамічного стану в інших дорівнює сумі роботи <span class="math notranslate nohighlight">\(A'\)</span> зовнішніх сил і кількості теплоти <span class="math notranslate nohighlight">\(Q\)</span>, переданої системі або переданої системою навколишнім тілам у процесі теплообміну:</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[ \Delta U = A' + Q \]</div>
 <p>Важливо зазначити: якщо система отримує теплоту, то <span class="math notranslate nohighlight">\(Q\)</span> береться зі знаком &quot;+&quot;, якщо віддає - зі знаком &quot;-&quot;. На практиці частіше розглядають роботу <span class="math notranslate nohighlight">\(A\)</span>, яку виконує сама система проти зовнішніх сил. Оскільки <span class="math notranslate nohighlight">\(A' = -A\)</span>, перший закон термодинаміки можна записати у формі:</p>
-<p><span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span></p>
-<p><strong>Перший закон термодинаміки для різних процесів</strong></p>
+<div class="math notranslate nohighlight">
+\[ Q = \Delta U + A \]</div>
+<p>Звідси, перший закон термодинаміки можна сформулювати наступним чином:</p>
+<blockquote>
+<div><p>Кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span>, передана системі, йде на зміну внутрішньої енергії системи <span class="math notranslate nohighlight">\(\Delta U\)</span> та на виконання системою роботи <span class="math notranslate nohighlight">\(A\)</span> проти зовнішніх сил.</p>
+</div></blockquote>
+<p>Згідно з цим законом <strong>неможливо створити вічний двигун першого роду</strong> - циклічний пристрій, який виконував би механічну роботу без споживання енергії ззовні або виконував би роботу більшу, ніж споживана ним енергія.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Перший закон термодинаміки для різних процесів<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Ізохорний процес <span class="math notranslate nohighlight">\((V = const)\)</span>:</p>
 <ul class="simple">
 <li><p>Об'єм газу не змінюється <span class="math notranslate nohighlight">\((∆V = 0)\)</span></p></li>
 <li><p>Робота газу дорівнює нулю <span class="math notranslate nohighlight">\((A = 0)\)</span></p></li>
-<li><p>Рівняння набуває вигляду: <span class="math notranslate nohighlight">\(Q = \Delta U\)</span></p></li>
-<li><p>Для ідеального одноатомного газу: <span class="math notranslate nohighlight">\(Q = \Delta U = \frac{3}{2} \frac{m}{M}R\Delta T\)</span></p></li>
+<li><p>Рівняння набуває вигляду: <span class="math notranslate nohighlight">\(Q = \Delta U\)</span>, тобто при ізохорному процесі вся передана газу кількість теплоти витрачається на збільшення внутрішньої енергії газу.</p></li>
+<li><p>Для ідеального одноатомного газу: <span class="math notranslate nohighlight">\(Q = \Delta U = \frac{3}{2} \frac{m}{M}R\Delta T = \frac{3}{2} V \Delta p\)</span></p></li>
 </ul>
 </li>
 <li><p>Ізотермічний процес <span class="math notranslate nohighlight">\((T = const)\)</span>:</p>
 <ul class="simple">
-<li><p>Температура не змінюється</p></li>
-<li><p>Внутрішня енергія залишається сталою <span class="math notranslate nohighlight">\((\Delta U = 0)\)</span></p></li>
+<li><p>Температура не змінюється <span class="math notranslate nohighlight">\((T = const)\)</span></p></li>
+<li><p>А отже і внутрішня енергія залишається сталою <span class="math notranslate nohighlight">\((\Delta U = 0)\)</span></p></li>
 <li><p>Рівняння набуває вигляду: <span class="math notranslate nohighlight">\(Q = A\)</span></p></li>
-<li><p>Вся передана теплота йде на виконання роботи</p></li>
+<li><p>Вся передана кількість теплоти йде на виконання механічної роботи</p></li>
 </ul>
 </li>
 <li><p>Ізобарний процес <span class="math notranslate nohighlight">\((p = const)\)</span>:</p>
 <ul class="simple">
-<li><p>Тиск залишається сталим</p></li>
+<li><p>Тиск залишається сталим <span class="math notranslate nohighlight">\((p = const)\)</span></p></li>
 <li><p>Рівняння має вигляд: <span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span></p></li>
-<li><p>Для ідеального одноатомного газу: <span class="math notranslate nohighlight">\(Q = \frac{5}{2}p\Delta V\)</span> або <span class="math notranslate nohighlight">\(Q = \frac{5}{2}\frac{m}{M}R\Delta T\)</span></p></li>
+<li><p>Якщо газ ідеальний одноатомний, то робота газу дорівнює <span class="math notranslate nohighlight">\(A = p \Delta V\)</span>, а зміна його внутрішньої енергії <span class="math notranslate nohighlight">\(\Delta U = \frac{3}{2} p \Delta V\)</span></p></li>
+<li><p>Як результат, для ідеального одноатомного газу <span class="math notranslate nohighlight">\(Q = \Delta U + А = \frac{3}{2} p \Delta V + p \Delta V = \frac{5}{2}p\Delta V\)</span> або <span class="math notranslate nohighlight">\(Q = \frac{5}{2}\frac{m}{M}R\Delta T\)</span></p></li>
 </ul>
 </li>
 </ol>
-<p><strong>Адіабатний процес</strong></p>
-<p>Адіабатним називається процес, який відбувається без теплообміну з навколишнім середовищем <span class="math notranslate nohighlight">\((Q = 0)\)</span>. У цьому випадку перший закон термодинаміки набуває вигляду:</p>
-<p><span class="math notranslate nohighlight">\(\Delta U + A = 0\)</span> або <span class="math notranslate nohighlight">\(A = -\Delta U\)</span></p>
-<p>При адіабатному розширенні газ виконує додатну роботу за рахунок зменшення внутрішньої енергії, що призводить до зниження його температури. При адіабатному стисненні спостерігається протилежний ефект.</p>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Адіабатний процес<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Адіабатним називається процес, який відбувається без теплообміну з навколишнім середовищем <span class="math notranslate nohighlight">\((Q = 0)\)</span>.</p>
+<blockquote>
+<div><p>У цьому випадку перший закон термодинаміки набуває вигляду: <span class="math notranslate nohighlight">\(\Delta U + A = 0\)</span> або <span class="math notranslate nohighlight">\(A = -\Delta U\)</span></p>
+</div></blockquote>
+<p>Під час адіабатного розширення газ виконує додатну роботу за рахунок зменшення внутрішньої енергії, при цьому температура газу зменшується. Навпаки, під час адіабатного стиснення, робота газу є від'ємною (бо фактично над газом виконується додатня робота) і внутрішня енергія, як і температура, збільшуються.</p>
 <p>В реальних умовах процеси, близькі до адіабатних, можна спостерігати:</p>
 <ul class="simple">
 <li><p>У посудині з хорошою теплоізоляцією</p></li>
@@ -472,79 +492,8 @@
 <li><p>При швидкому розширенні газу під час вибуху</p></li>
 </ul>
 <p>Практичне застосування адіабатного стиснення можна побачити в дизельних двигунах, де саме різке стиснення повітря призводить до значного підвищення температури, достатньої для самозаймання паливної суміші.</p>
-<p><strong>Перший закон термодинаміки. Адіабатний процес</strong></p>
-<hr class="docutils" />
-<section id="id1">
-<h1><strong>Перший закон термодинаміки</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>Перший закон термодинаміки формулює закон збереження енергії для термодинамічних систем. При переході системи з одного стану в інший, якщо зовнішні сили виконують роботу <span class="math notranslate nohighlight">\( A' \)</span>, а системі передається певна кількість теплоти <span class="math notranslate nohighlight">\( Q \)</span>, то зміна внутрішньої енергії <span class="math notranslate nohighlight">\( \Delta U \)</span> визначається як:
-$<span class="math notranslate nohighlight">\(
-\Delta U = A' + Q,
-\)</span>$
-де:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( A' \)</span> — робота зовнішніх сил,</p></li>
-<li><p><span class="math notranslate nohighlight">\( Q \)</span> — кількість теплоти.</p></li>
-</ul>
-<p>З огляду на те, що робота, яку виконує система проти зовнішніх сил, дорівнює <span class="math notranslate nohighlight">\( A = -A' \)</span>, рівняння набуває вигляду:
-$<span class="math notranslate nohighlight">\(
-Q = \Delta U + A.
-\)</span>$</p>
-<p><strong>Зверніть увагу:</strong> Якщо теплота передається системі, то <span class="math notranslate nohighlight">\( Q &gt; 0 \)</span>. Якщо система втрачає теплоту, <span class="math notranslate nohighlight">\( Q &lt; 0 \)</span>.</p>
-<hr class="docutils" />
+<p>Примітка: тут ще будуть додані приклади з кодом.</p>
 </section>
-<section id="id2">
-<h1><strong>Варіанти першого закону для ізопроцесів</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
-<ol class="arabic simple">
-<li><p><strong>Ізохорний процес</strong> (<span class="math notranslate nohighlight">\( V = const \)</span>):
-$<span class="math notranslate nohighlight">\(
-Q = \Delta U.
-\)</span>$
-Уся теплота витрачається на збільшення внутрішньої енергії газу.</p></li>
-<li><p><strong>Ізотермічний процес</strong> (<span class="math notranslate nohighlight">\( T = const \)</span>):
-$<span class="math notranslate nohighlight">\(
-Q = A.
-\)</span><span class="math notranslate nohighlight">\(
-Внутрішня енергія не змінюється (\)</span> \Delta U = 0 $), вся теплота йде на виконання роботи.</p></li>
-<li><p><strong>Ізобарний процес</strong> (<span class="math notranslate nohighlight">\( p = const \)</span>):
-$<span class="math notranslate nohighlight">\(
-Q = \Delta U + A.
-\)</span><span class="math notranslate nohighlight">\(
-Теплота витрачається як на зміну внутрішньої енергії, так і на виконання роботи:
-\)</span><span class="math notranslate nohighlight">\(
-Q = \frac{5}{2} \frac{m}{M} RT.
-\)</span>$</p></li>
-</ol>
-<hr class="docutils" />
-</section>
-<section id="id3">
-<h1><strong>Адіабатний процес</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
-<p>Адіабатний процес — це термодинамічний процес, що відбувається без теплообміну (<span class="math notranslate nohighlight">\( Q = 0 \)</span>):
-$<span class="math notranslate nohighlight">\(
-\Delta U = -A.
-\)</span>$</p>
-<ul class="simple">
-<li><p><strong>Розширення:</strong> Газ виконує роботу, його внутрішня енергія зменшується, а температура падає.</p></li>
-<li><p><strong>Стиснення:</strong> Газ втрачає об’єм, його внутрішня енергія збільшується, температура зростає.</p></li>
-</ul>
-<p><strong>Особливості:</strong></p>
-<ul class="simple">
-<li><p>Адіабатне стиснення відбувається швидше, ніж ізотермічне, через відсутність обміну теплом з навколишнім середовищем.</p></li>
-<li><p>Для опису використовується рівняння Пуассона:
-$<span class="math notranslate nohighlight">\(
-pV^\gamma = const,
-\)</span><span class="math notranslate nohighlight">\(
-де \)</span> \gamma = \frac{C_p}{C_v} $ — показник адіабати.</p></li>
-</ul>
-<p><strong>Застосування:</strong> Адіабатні процеси використовуються в дизельних двигунах, де адіабатне стиснення призводить до займання паливної суміші.</p>
-<hr class="docutils" />
-</section>
-<section id="id4">
-<h1><strong>Підсумки</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h1>
-<ol class="arabic simple">
-<li><p>Перший закон термодинаміки описує збереження енергії в термодинамічних процесах.</p></li>
-<li><p>У різних ізопроцесах теплота або витрачається на зміну внутрішньої енергії, або йде на виконання роботи.</p></li>
-<li><p>Адіабатний процес є прикладом ефективного використання енергії без теплообміну.</p></li>
-</ol>
 </section>
 
     <script type="text/x-thebe-config">
@@ -577,6 +526,24 @@ pV^\gamma = const,
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="work_thermo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Робота в термодинаміці</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="charge_01.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Електричний заряд. Закон Кулона</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -594,12 +561,10 @@ pV^\gamma = const,
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Перший закон термодинаміки</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Варіанти першого закону для ізопроцесів</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Адіабатний процес</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Підсумки</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Формулювання першого закону термодинаміки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Перший закон термодинаміки для різних процесів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Адіабатний процес</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
