@@ -25,6 +25,7 @@ parts:
       - file: physics_content/first_law_thermo
       - file: physics_content/charge_01
       - file: physics_content/nature_of_light
+      - file: physics_content/light_reflection
 
   # - caption: Розділ Електричне поле
 
