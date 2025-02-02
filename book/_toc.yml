@@ -14,6 +14,8 @@ parts:
       - file: astronomy_content/01_basics/astronomy_science
       - file: astronomy_content/01_basics/discoveries_inventions
       - file: astronomy_content/01_basics/celestial_sphere
+      - file: astronomy_content/01_basics/angle_dimensions
+      - file: astronomy_content/01_basics/celestial_coordinates
 
   - caption: ФІЗИКА
     chapters:
