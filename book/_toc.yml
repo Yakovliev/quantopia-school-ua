@@ -13,9 +13,12 @@ parts:
       - file: astronomy_content/01_basics/cassini
       - file: astronomy_content/01_basics/astronomy_science
       - file: astronomy_content/01_basics/discoveries_inventions
+      - file: astronomy_content/01_basics/dark_matter_and_energy
       - file: astronomy_content/01_basics/celestial_sphere
       - file: astronomy_content/01_basics/angle_dimensions
       - file: astronomy_content/01_basics/celestial_coordinates
+      - file: astronomy_content/01_basics/apparent_magnitude
+
 
   - caption: ФІЗИКА
     chapters:
@@ -26,7 +29,9 @@ parts:
       - file: physics_content/work_thermo
       - file: physics_content/first_law_thermo
       - file: physics_content/charge_01
+      - file: physics_content/charge_02
       - file: physics_content/nature_of_light
+#      - file: physics_content/photometric_quantities
       - file: physics_content/light_reflection
 
   # - caption: Розділ Електричне поле
