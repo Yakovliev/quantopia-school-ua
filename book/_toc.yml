@@ -31,7 +31,7 @@ parts:
       - file: physics_content/charge_01
       - file: physics_content/charge_02
       - file: physics_content/nature_of_light
-#      - file: physics_content/photometric_quantities
+      - file: physics_content/photometric_quantities
       - file: physics_content/light_reflection
 
   # - caption: Розділ Електричне поле
