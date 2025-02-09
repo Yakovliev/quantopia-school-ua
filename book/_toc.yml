@@ -17,7 +17,9 @@ parts:
       - file: astronomy_content/01_basics/celestial_sphere
       - file: astronomy_content/01_basics/angle_dimensions
       - file: astronomy_content/01_basics/celestial_coordinates
-      - file: astronomy_content/01_basics/apparent_magnitude
+      - file: astronomy_content/01_basics/distances
+      - file: astronomy_content/01_basics/apparent_and_absolute_magnitude
+      - file: astronomy_content/01_basics/time_and_calendar
 
 
   - caption: ФІЗИКА
