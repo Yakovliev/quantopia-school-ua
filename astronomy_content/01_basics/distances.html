@@ -67,7 +67,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Видима зоряна величина" href="apparent_and_absolute_magnitude.html" />
+    <link rel="next" title="Видима та абсолютна зоряна величина" href="apparent_and_absolute_magnitude.html" />
     <link rel="prev" title="Системи небесних координат" href="celestial_coordinates.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -182,7 +182,8 @@
 <li class="toctree-l1"><a class="reference internal" href="angle_dimensions.html">Одиниці вимірювання кутів</a></li>
 <li class="toctree-l1"><a class="reference internal" href="celestial_coordinates.html">Системи небесних координат</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Вимірювання відстаней в астрономії</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apparent_and_absolute_magnitude.html">Видима зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="time_and_calendar.html">Визначення часу з астрономічних спостережень. Календарні системи</a></li>
 
 
@@ -535,13 +536,13 @@ Distance light travels in a year is 63,241.08 astronomical units
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Parsec-uk.svg" alt="Parsec-uk.svg" height="575" width="500"><br>Рис. 1. Означення парсека</p><p>Спробуємо тепер порахувати, яке значення має 1 парсек.</p>
 <p>За означенням, тангенс кута прямокутного трикутника дорівнює відношенню протилежного катета до прилеглого катета. Таким чином, з вищевказаного рисунку 1 маємо:</p>
 <div class="math notranslate nohighlight">
-\[\tg(1'') = \frac{1 \text{ а.о.}}{1 \text{ пк}}\]</div>
+\[\text{tg}(1'') = \frac{1 \text{ а.о.}}{1 \text{ пк}}\]</div>
 <p>Для кутів, що виражаються у радіанах, справедливе наступне наближення (хоча вам це наближення може здаватись чимось новим і незрозумілим, однак це наближчення дуже часто застосовується у фізиці для спрощення багатьох виведень та запису формул):</p>
 <div class="math notranslate nohighlight">
-\[\tg \alpha \approx \alpha\]</div>
+\[\text{tg} \alpha \approx \alpha\]</div>
 <p>Одна кутова секунда в радіанах:</p>
 <div class="math notranslate nohighlight">
-\[1″ = \frac{1\degree}{3600} = \frac{1}{3600} \cdot \frac{\pi}{180} \text{ рад} \approx 4.848137 \cdot 10^{-6} \text{ рад}\]</div>
+\[1″ = \frac{1 ^\circ}{3600} = \frac{1}{3600} \cdot \frac{\pi}{180} \text{ рад} \approx 4.848137 \cdot 10^{-6} \text{ рад}\]</div>
 <p>Як результат</p>
 <div class="math notranslate nohighlight">
 \[\tg(4.848137 \cdot 10^{-6}) \approx 4.848137 \cdot 10^{-6}\]</div>
@@ -551,10 +552,12 @@ Distance light travels in a year is 63,241.08 astronomical units
 <p>Тепер виразимо значення парсека:</p>
 <div class="math notranslate nohighlight">
 \[1 \text{ пк} = \frac{1 \text{ а.о.}}{4.848137 \cdot 10^{-6}} = 206264.806 \text{ а.о.} \approx 206268 \text{ а.о.}\]</div>
-<p>Підставимо значення астрономічної одиниці в метрах:
-$<span class="math notranslate nohighlight">\(1 \text{ пк} = 206 264.806 \cdot 149 597 870 700 \text{ м} \approx 3.0856 \cdot 10^{16} \text{ м}\)</span>$</p>
-<p>Щоб отримати значення парсека у світлових роках, поділимо отримане значення на довжину світлового року:
-$<span class="math notranslate nohighlight">\(1 \text{ пк} = \frac{3.0856 \cdot 10^{16} \text{ м}}{9.460730 \cdot 10^{15} \text{ м / св. р.}} \approx 3.2618 \text{ св. р.}\)</span>$</p>
+<p>Підставимо значення астрономічної одиниці в метрах:</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ пк} = 206 264.806 \cdot 149 597 870 700 \text{ м} \approx 3.0856 \cdot 10^{16} \text{ м}\]</div>
+<p>Щоб отримати значення парсека у світлових роках, поділимо отримане значення на довжину світлового року:</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ пк} = \frac{3.0856 \cdot 10^{16} \text{ м}}{9.460730 \cdot 10^{15} \text{ м / св. р.}} \approx 3.2618 \text{ св. р.}\]</div>
 <p>Таким чином, ми отримали всі основні співвідношення для парсека:</p>
 <ul class="simple">
 <li><p>1 пк = 206264.806 а.о.</p></li>
@@ -669,7 +672,7 @@ $<span class="math notranslate nohighlight">\(1 \text{ пк} = \frac{3.0856 \cdo
 <p>Отримаємо також формулу для випадку, коли <span class="math notranslate nohighlight">\(p_0\)</span> виражається в кутових секундах як <span class="math notranslate nohighlight">\(p_0''\)</span>, а не в радіанах.</p>
 <p>Одна кутова секунда в радіанах:</p>
 <div class="math notranslate nohighlight">
-\[1'' = \frac{1\degree}{3600} = \frac{1}{3600} \cdot \frac{\pi}{180} \text{ рад} = \frac{\pi}{648000} \text{ рад} = \frac{1}{\frac{648000}{\pi}} \text{ рад} = \frac{1}{206265} \text{ рад}\]</div>
+\[1'' = \frac{1^\circ}{3600} = \frac{1}{3600} \cdot \frac{\pi}{180} \text{ рад} = \frac{\pi}{648000} \text{ рад} = \frac{1}{\frac{648000}{\pi}} \text{ рад} = \frac{1}{206265} \text{ рад}\]</div>
 <p>Звідси  <span class="math notranslate nohighlight">\(p_0''\)</span> кутових секунд в радіанах дорівнює</p>
 <div class="math notranslate nohighlight">
 \[p_0'' = \frac{p_0''}{206265} \text{ рад}\]</div>
@@ -807,7 +810,7 @@ $<span class="math notranslate nohighlight">\(1 \text{ пк} = \frac{3.0856 \cdo
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Видима зоряна величина</p>
+        <p class="prev-next-title">Видима та абсолютна зоряна величина</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
