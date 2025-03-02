@@ -21,7 +21,6 @@ parts:
       - file: astronomy_content/01_basics/apparent_and_absolute_magnitude
       # - file: astronomy_content/01_basics/time_and_calendar
 
-
   - caption: ФІЗИКА
     chapters:
       - file: physics_content/internal_energy
@@ -35,6 +34,10 @@ parts:
       - file: physics_content/nature_of_light
       - file: physics_content/photometric_quantities
       - file: physics_content/light_reflection
+
+  - caption: ЕЛЕКТРОДИНАМІКА
+    chapters:
+      - file: physics_content/electrodynamics/electric_current
 
   # - caption: Розділ Електричне поле
 
