@@ -427,6 +427,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке електричний струм?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Що таке електричне коло?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Закон Ома, сила струму, напруга, опір</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Послідовне з'єднання провідників</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Паралельне з'єднання провідників</a></li>
 </ul>
             </nav>
         </div>
@@ -550,6 +552,103 @@
 \[I = \frac{U}{R}\]</div>
 </div></blockquote>
 </section>
+<section id="id5">
+<h2>Послідовне з'єднання провідників<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Послідовним</strong> називають з'єднання провідників, при якому вони розташовані один за одним без розгалужень. При такому з'єднанні електричний струм, проходячи через один провідник, обов'язково проходить і через усі інші.</p>
+</div></blockquote>
+<p>Розглянемо ділянку кола, яка містить два послідовно з'єднані резистори (Рис. 2), і виведемо загальні співвідношення для будь-якої кількості послідовно з'єднаних провідників.</p>
+<p><img alt="series_circuit" src="../../_images/series_circuit.png" /></p>
+<p>Рис. 2. Послідовне з'єднання провідників</p>
+<p>При послідовному з'єднанні сила струму в усіх провідниках однакова і дорівнює загальній силі струму в ділянці кола.</p>
+<p>Це пояснюється тим, що електричне коло з послідовним з'єднанням не містить розгалужень, тому заряд, який проходить через поперечний переріз будь-якого провідника за певний час <span class="math notranslate nohighlight">\(t\)</span>, буде однаковим:</p>
+<div class="math notranslate nohighlight">
+\[q_1 = q_2 = q\]</div>
+<p>Ділячи обидві частини рівності на <span class="math notranslate nohighlight">\(t\)</span>, отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[\frac{q_1}{t} = \frac{q_2}{t} = \frac{q}{t}\]</div>
+<p>За означенням сили струму: <span class="math notranslate nohighlight">\(\frac{q}{t} = I\)</span>. Отже:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[I_1 = I_2 = I\]</div>
+</div></blockquote>
+<p>Загальна напруга на послідовно з'єднаних провідниках дорівнює сумі напруг на цих провідниках. Коли заряд <span class="math notranslate nohighlight">\(q\)</span> переміщується під дією електричного поля, воно виконує роботу <span class="math notranslate nohighlight">\(A_1\)</span> в першому провіднику і <span class="math notranslate nohighlight">\(A_2\)</span> у другому. Оскільки для переміщення цього заряду через обидва провідники має бути виконана робота <span class="math notranslate nohighlight">\(A = A_1 + A_2\)</span>, то, поділивши обидві частини рівності на заряд <span class="math notranslate nohighlight">\(q\)</span> і використовуючи означення напруги (<span class="math notranslate nohighlight">\(U = \frac{A}{q}\)</span>), маємо:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[U = U_1 + U_2\]</div>
+</div></blockquote>
+<p>Загальний опір послідовно з'єднаних провідників дорівнює сумі опорів цих провідників. Дійсно, якщо візьмемо до уваги попередньо отриманий результат <span class="math notranslate nohighlight">\(U = U_1 + U_2\)</span> і застосуємо до цієї формули закон Ома, то отримаємо:</p>
+<div class="math notranslate nohighlight">
+\[I R = I_1 R_1 + I_2 R_2\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(I_1 = I_2 = I\)</span>, отримуємо: <span class="math notranslate nohighlight">\(IR = I R_1 + I R_2 = I(R_1 + R_2)\)</span>, звідки</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[R = R_1 + R_2\]</div>
+</div></blockquote>
+<p>Отриманий результат можемо легко узагальнити на випадок <span class="math notranslate nohighlight">\(n\)</span> провідників, з'єднаних послідовно:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[I_1 = I_2 = ... = I_n = I\]</div>
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[U = U_1 + U_2 + ... + U_n\]</div>
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[R = R_1 + R_2 + ... + R_n\]</div>
+</div></blockquote>
+<p>Додаткові результати:</p>
+<ul class="simple">
+<li><p>Загальний опір провідників, з'єднаних послідовно, завжди більший за опір кожного з цих провідників.</p></li>
+<li><p>Загальний опір <span class="math notranslate nohighlight">\(n\)</span> послідовно з'єднаних провідників з однаковим опором <span class="math notranslate nohighlight">\(R_0\)</span> дорівнює <span class="math notranslate nohighlight">\(R = nR_0\)</span>.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>Паралельне з'єднання провідників<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>З'єднання провідників називається <strong>паралельним</strong>, якщо для проходження струму існує два чи більше шляхів (гілок), і всі ці гілки мають одну пару спільних точок — вузлів (Рис. 3). У вузлах (вузлових точках) відбувається розгалуження кола (у кожному вузлі з'єднуються не менш ніж три провідники).</p>
+<p>Розглянемо ділянку кола, яка містить два паралельно з'єднані резистори.</p>
+<p><img alt="parallel_circuit" src="../../_images/parallel_circuit.png" /></p>
+<p>Рис. 3. Паралельне з'єднання провідників</p>
+<p>При паралельному з'єднанні загальна сила струму в нерозгалуженій частині кола дорівнює сумі сил струмів у відгалуженнях (окремих гілках).</p>
+<p>У вузловій точці струм розтікається по двох гілках. Заряд у вузловій точці не накопичується, тому заряд <span class="math notranslate nohighlight">\(q\)</span>, який надійшов у вузол за певний час <span class="math notranslate nohighlight">\(t\)</span>, дорівнює сумі зарядів, які вийшли з цього вузла за той самий час: <span class="math notranslate nohighlight">\(q = q_1 + q_2\)</span>.</p>
+<p>Поділивши обидві частини рівності на <span class="math notranslate nohighlight">\(t\)</span> і беручи до уваги, що <span class="math notranslate nohighlight">\(\frac{q}{t} = I\)</span>, маємо:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[I = \frac{q_1}{t} + \frac{q_2}{t} = I_1 + I_2\]</div>
+</div></blockquote>
+<p>Загальна напруга на ділянці кола та напруга на кожному з паралельно з'єднаних провідників є однаковими. Якщо ділянка кола не містить джерел струму, то напруга на ділянці дорівнює різниці потенціалів на кінцях цієї ділянки. Таким чином, напруга усієї ділянки дорівнює <span class="math notranslate nohighlight">\(U = \varphi_L - \varphi_R\)</span>, де <span class="math notranslate nohighlight">\(\varphi_L\)</span> та <span class="math notranslate nohighlight">\(\varphi_R\)</span> - потенціали у лівій вузловій точці та правій вузловій точці відповідно. Напруга для ділянки із опором <span class="math notranslate nohighlight">\(R_1\)</span> дорівнює <span class="math notranslate nohighlight">\(U_1 = \varphi_L - \varphi_R\)</span>, а напруга для ділянки із опором <span class="math notranslate nohighlight">\(R_2\)</span> дорівнює <span class="math notranslate nohighlight">\(U_2 = \varphi_L - \varphi_R\)</span>. Праві частини усіх цих виразів однакові, тому:</p>
+<div class="math notranslate nohighlight">
+\[U = U_1 = U_2\]</div>
+<p><strong>Опір <span class="math notranslate nohighlight">\(R\)</span>:</strong>
+Величина, обернена до загального опору розгалуженої ділянки кола, дорівнює сумі величин, кожна з яких обернена до опору відповідної гілки цього розгалуження:</p>
+<p><span class="math notranslate nohighlight">\(\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\)</span></p>
+<p>Оскільки <span class="math notranslate nohighlight">\(I = I_1 + I_2\)</span>, то за законом Ома: <span class="math notranslate nohighlight">\(\frac{U}{R} = \frac{U_1}{R_1} + \frac{U_2}{R_2}\)</span>. А оскільки <span class="math notranslate nohighlight">\(U = U_1 = U_2\)</span>, то <span class="math notranslate nohighlight">\(\frac{U}{R} = U(\frac{1}{R_1} + \frac{1}{R_2})\)</span>. Після скорочення на <span class="math notranslate nohighlight">\(U\)</span> отримуємо: <span class="math notranslate nohighlight">\(\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}\)</span>.</p>
+<p>Зверніть увагу:</p>
+<ul class="simple">
+<li><p>Загальний опір паралельно з'єднаних провідників менший від опору кожного з цих провідників.</p></li>
+<li><p>Загальний опір <span class="math notranslate nohighlight">\(n\)</span> паралельно з'єднаних провідників з однаковим опором <span class="math notranslate nohighlight">\(R_0\)</span> дорівнює <span class="math notranslate nohighlight">\(R = \frac{R_0}{n}\)</span>.</p></li>
+<li><p>Опір двох паралельно з'єднаних провідників дорівнює <span class="math notranslate nohighlight">\(R = \frac{R_1 \cdot R_2}{R_1 + R_2}\)</span>.</p></li>
+</ul>
+<p>Отриманий результат можемо легко узагальнити на випадок <span class="math notranslate nohighlight">\(n\)</span> провідників, з'єднаних послідовно:</p>
+<div class="math notranslate nohighlight">
+\[I = I_1 + I_2 + ... + I_n\]</div>
+<div class="math notranslate nohighlight">
+\[U = U_1 = U_2 = ... = U_n\]</div>
+<div class="math notranslate nohighlight">
+\[R = R_1 + R_2 + ... + R_n\]</div>
+<p><strong>Фізичне обґрунтування</strong>:</p>
+<p>У вузловій точці заряд розділяється, тому <span class="math notranslate nohighlight">\(q = q_1 + q_2 + ... + q_n\)</span>. Поділивши на час, отримуємо: <span class="math notranslate nohighlight">\(I = I_1 + I_2 + ... + I_n\)</span>.</p>
+<p>Напруга між спільними точками однакова для всіх гілок, бо потенціал у кожній точці вузла однаковий.</p>
+<p>За законом Ома: <span class="math notranslate nohighlight">\(I = U/R\)</span>, <span class="math notranslate nohighlight">\(I_1 = U/R_1\)</span>, <span class="math notranslate nohighlight">\(I_2 = U/R_2\)</span>, тощо. Підставивши у формулу для загального струму: <span class="math notranslate nohighlight">\(U/R = U/R_1 + U/R_2 + ... + U/R_n\)</span>, звідки <span class="math notranslate nohighlight">\(\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\)</span>.</p>
+<p><strong>Важливо</strong>:</p>
+<ul class="simple">
+<li><p>Загальний опір при паралельному з'єднанні завжди менший за найменший з опорів провідників.</p></li>
+<li><p>Для <span class="math notranslate nohighlight">\(n\)</span> однакових провідників з опором <span class="math notranslate nohighlight">\(R_0\)</span>: <span class="math notranslate nohighlight">\(R = \frac{R_0}{n}\)</span>.</p></li>
+<li><p>Опір двох паралельно з'єднаних провідників: <span class="math notranslate nohighlight">\(R = \frac{R_1 \cdot R_2}{R_1 + R_2}\)</span>.</p></li>
+</ul>
+<p>Тепер можемо відповісти на запитання про гірлянду: у послідовному з'єднанні, коли перегорає одна лампа, розривається коло, і струм припиняється в усьому колі.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -611,6 +710,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке електричний струм?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Що таке електричне коло?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Закон Ома, сила струму, напруга, опір</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Послідовне з'єднання провідників</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Паралельне з'єднання провідників</a></li>
 </ul>
   </nav></div>
 
