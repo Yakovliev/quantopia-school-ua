@@ -598,7 +598,7 @@
 <div><div class="math notranslate nohighlight">
 \[R = R_1 + R_2 + ... + R_n\]</div>
 </div></blockquote>
-<p>Додаткові результати:</p>
+<p>Додаткові наслідки:</p>
 <ul class="simple">
 <li><p>Загальний опір провідників, з'єднаних послідовно, завжди більший за опір кожного з цих провідників.</p></li>
 <li><p>Загальний опір <span class="math notranslate nohighlight">\(n\)</span> послідовно з'єднаних провідників з однаковим опором <span class="math notranslate nohighlight">\(R_0\)</span> дорівнює <span class="math notranslate nohighlight">\(R = nR_0\)</span>.</p></li>
@@ -618,36 +618,40 @@
 \[I = \frac{q_1}{t} + \frac{q_2}{t} = I_1 + I_2\]</div>
 </div></blockquote>
 <p>Загальна напруга на ділянці кола та напруга на кожному з паралельно з'єднаних провідників є однаковими. Якщо ділянка кола не містить джерел струму, то напруга на ділянці дорівнює різниці потенціалів на кінцях цієї ділянки. Таким чином, напруга усієї ділянки дорівнює <span class="math notranslate nohighlight">\(U = \varphi_L - \varphi_R\)</span>, де <span class="math notranslate nohighlight">\(\varphi_L\)</span> та <span class="math notranslate nohighlight">\(\varphi_R\)</span> - потенціали у лівій вузловій точці та правій вузловій точці відповідно. Напруга для ділянки із опором <span class="math notranslate nohighlight">\(R_1\)</span> дорівнює <span class="math notranslate nohighlight">\(U_1 = \varphi_L - \varphi_R\)</span>, а напруга для ділянки із опором <span class="math notranslate nohighlight">\(R_2\)</span> дорівнює <span class="math notranslate nohighlight">\(U_2 = \varphi_L - \varphi_R\)</span>. Праві частини усіх цих виразів однакові, тому:</p>
-<div class="math notranslate nohighlight">
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[U = U_1 = U_2\]</div>
-<p><strong>Опір <span class="math notranslate nohighlight">\(R\)</span>:</strong>
-Величина, обернена до загального опору розгалуженої ділянки кола, дорівнює сумі величин, кожна з яких обернена до опору відповідної гілки цього розгалуження:</p>
-<p><span class="math notranslate nohighlight">\(\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\)</span></p>
-<p>Оскільки <span class="math notranslate nohighlight">\(I = I_1 + I_2\)</span>, то за законом Ома: <span class="math notranslate nohighlight">\(\frac{U}{R} = \frac{U_1}{R_1} + \frac{U_2}{R_2}\)</span>. А оскільки <span class="math notranslate nohighlight">\(U = U_1 = U_2\)</span>, то <span class="math notranslate nohighlight">\(\frac{U}{R} = U(\frac{1}{R_1} + \frac{1}{R_2})\)</span>. Після скорочення на <span class="math notranslate nohighlight">\(U\)</span> отримуємо: <span class="math notranslate nohighlight">\(\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}\)</span>.</p>
-<p>Зверніть увагу:</p>
+</div></blockquote>
+<p>Величина, обернена до загального опору розгалуженої ділянки кола, дорівнює сумі величин, кожна з яких обернена до опору відповідної гілки цього розгалуження. Доведемо це.</p>
+<p>Оскільки <span class="math notranslate nohighlight">\(I = I_1 + I_2\)</span>, то за законом Ома: <span class="math notranslate nohighlight">\(\frac{U}{R} = \frac{U_1}{R_1} + \frac{U_2}{R_2}\)</span>. А оскільки <span class="math notranslate nohighlight">\(U = U_1 = U_2\)</span>, то <span class="math notranslate nohighlight">\(\frac{U}{R} = U(\frac{1}{R_1} + \frac{1}{R_2})\)</span>. Після скорочення на <span class="math notranslate nohighlight">\(U\)</span> отримуємо:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2}\]</div>
+</div></blockquote>
+<p>Звідси, можемо отримати:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} = \frac{R_1 + R_2}{R_1 R_2}\]</div>
+<p>та</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{R_1 R_2}{R_1 + R_2} \]</div>
+<p>Додаткові наслідки:</p>
 <ul class="simple">
 <li><p>Загальний опір паралельно з'єднаних провідників менший від опору кожного з цих провідників.</p></li>
 <li><p>Загальний опір <span class="math notranslate nohighlight">\(n\)</span> паралельно з'єднаних провідників з однаковим опором <span class="math notranslate nohighlight">\(R_0\)</span> дорівнює <span class="math notranslate nohighlight">\(R = \frac{R_0}{n}\)</span>.</p></li>
-<li><p>Опір двох паралельно з'єднаних провідників дорівнює <span class="math notranslate nohighlight">\(R = \frac{R_1 \cdot R_2}{R_1 + R_2}\)</span>.</p></li>
 </ul>
-<p>Отриманий результат можемо легко узагальнити на випадок <span class="math notranslate nohighlight">\(n\)</span> провідників, з'єднаних послідовно:</p>
-<div class="math notranslate nohighlight">
+<p>Отриманий результат можемо легко узагальнити на випадок <span class="math notranslate nohighlight">\(n\)</span> провідників, з'єднаних паралельно:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[I = I_1 + I_2 + ... + I_n\]</div>
-<div class="math notranslate nohighlight">
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[U = U_1 = U_2 = ... = U_n\]</div>
-<div class="math notranslate nohighlight">
-\[R = R_1 + R_2 + ... + R_n\]</div>
-<p><strong>Фізичне обґрунтування</strong>:</p>
-<p>У вузловій точці заряд розділяється, тому <span class="math notranslate nohighlight">\(q = q_1 + q_2 + ... + q_n\)</span>. Поділивши на час, отримуємо: <span class="math notranslate nohighlight">\(I = I_1 + I_2 + ... + I_n\)</span>.</p>
-<p>Напруга між спільними точками однакова для всіх гілок, бо потенціал у кожній точці вузла однаковий.</p>
-<p>За законом Ома: <span class="math notranslate nohighlight">\(I = U/R\)</span>, <span class="math notranslate nohighlight">\(I_1 = U/R_1\)</span>, <span class="math notranslate nohighlight">\(I_2 = U/R_2\)</span>, тощо. Підставивши у формулу для загального струму: <span class="math notranslate nohighlight">\(U/R = U/R_1 + U/R_2 + ... + U/R_n\)</span>, звідки <span class="math notranslate nohighlight">\(\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\)</span>.</p>
-<p><strong>Важливо</strong>:</p>
-<ul class="simple">
-<li><p>Загальний опір при паралельному з'єднанні завжди менший за найменший з опорів провідників.</p></li>
-<li><p>Для <span class="math notranslate nohighlight">\(n\)</span> однакових провідників з опором <span class="math notranslate nohighlight">\(R_0\)</span>: <span class="math notranslate nohighlight">\(R = \frac{R_0}{n}\)</span>.</p></li>
-<li><p>Опір двох паралельно з'єднаних провідників: <span class="math notranslate nohighlight">\(R = \frac{R_1 \cdot R_2}{R_1 + R_2}\)</span>.</p></li>
-</ul>
-<p>Тепер можемо відповісти на запитання про гірлянду: у послідовному з'єднанні, коли перегорає одна лампа, розривається коло, і струм припиняється в усьому колі.</p>
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}\]</div>
+</div></blockquote>
 </section>
 </section>
 
