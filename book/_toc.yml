@@ -39,6 +39,11 @@ parts:
     chapters:
       - file: physics_content/electrodynamics/electric_current
 
+  - caption: ОПТИКА
+    chapters:
+      - file: physics_content/optics/interference
+      - file: physics_content/optics/diffraction
+
   # - caption: Розділ Електричне поле
 
   # - caption: МАТЕМАТИЧНИЙ МІНІМУМ
