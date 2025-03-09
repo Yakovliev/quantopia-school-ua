@@ -38,6 +38,10 @@ parts:
   - caption: ЕЛЕКТРОДИНАМІКА
     chapters:
       - file: physics_content/electrodynamics/electric_current
+      - file: physics_content/electrodynamics/series_and_parallel_connection
+      - file: physics_content/electrodynamics/work_power_electric_current
+      - file: physics_content/electrodynamics/electromotive_force
+      - file: physics_content/electrodynamics/electric_current_metals
 
   - caption: ОПТИКА
     chapters:

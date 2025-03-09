@@ -201,6 +201,10 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="current nav bd-sidenav">
@@ -429,16 +433,13 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Явище дифракції та умови його спостереження</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Чи може світло огинати перешкоди?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Явище дифракції та умови його спостереження</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Дифракційні картини від різних перешкод</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Принцип Гюйгенса — Френеля</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Зверніть увагу!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Дифракційні картини від різних перешкод</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Принцип Гюйгенса — Френеля</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Зверніть увагу!</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Дифракційна гратка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Дифракційна гратка</a></li>
 </ul>
             </nav>
         </div>
@@ -454,22 +455,23 @@
 <h1>Дифракція світла<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
 <h2>Явище дифракції та умови його спостереження<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Вивчаючи оптичні прилади, ми базувалися на законах геометричної оптики. Виявляється, що згідно з цими законами за допомогою мікроскопа можна розрізнити найдрібніші деталі, а за допомогою телескопа — спостерігати найвіддаленіші об'єкти. Проте на практиці існують обмеження. Отримання чітких зображень дуже віддалених об'єктів можливе тільки завдяки космічним апаратам (наприклад, «Voyager 1», який подорожує в космосі вже понад 40 років), а розглянути надзвичайно дрібні частинки — тільки за допомогою електронного мікроскопа. Обмеження виникають через явище дифракції.</p>
-<section id="id3">
-<h3>Чи може світло огинати перешкоди?<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Вивчаючи оптичні прилади, ми базувалися на законах геометричної оптики. Виявляється, що згідно з цими законами за допомогою мікроскопа можна розрізнити найдрібніші деталі, а за допомогою телескопа — спостерігати найвіддаленіші об'єкти. Проте на практиці існують обмеження. Отримання чітких зображень дуже віддалених об'єктів можливе тільки завдяки космічним апаратам, а розглянути надзвичайно дрібні частинки — тільки за допомогою електронного мікроскопа. Обмеження виникають через явище дифракції.</p>
 <p>Ми добре знаємо, що звук машини можна почути, навіть якщо вона знаходиться за рогом будинку. Це пояснюється тим, що звукові хвилі, як і будь-які інші, здатні огинати перешкоди.</p>
-<p><strong>Явище огинання хвилями перешкод або будь-яке інше відхилення поширення хвилі від законів геометричної оптики називають дифракцією</strong> (від латинського <em>diffractus</em> — розломлений).</p>
+<blockquote>
+<div><p><strong>Явище огинання хвилями перешкод або будь-яке інше відхилення поширення хвилі від законів геометричної оптики називають дифракцією</strong> (від латинського <em>diffractus</em> — розломлений).</p>
+</div></blockquote>
 <p>Дифракція характерна для всіх типів хвиль незалежно від їхньої природи і спостерігається у двох основних випадках:</p>
 <ol class="arabic simple">
 <li><p>коли лінійні розміри перешкод, на які падає хвиля (або розміри отворів, через які хвиля поширюється), порівнянні з довжиною хвилі;</p></li>
 <li><p>коли відстань від перешкоди до місця спостереження набагато більша за розмір перешкоди.</p></li>
 </ol>
-<p>Хвилі, що огинають перешкоду, когерентні, тому дифракція завжди супроводжується інтерференцією. <strong>Інтерференційну картину, отриману внаслідок дифракції, називають дифракційною картиною</strong>.</p>
+<blockquote>
+<div><p>Хвилі, що огинають перешкоду, когерентні, тому дифракція завжди супроводжується інтерференцією. <strong>Інтерференційну картину, отриману внаслідок дифракції, називають дифракційною картиною</strong>.</p>
+</div></blockquote>
 <p>Оскільки світло теж є хвилею, в разі виконання зазначених вище умов можна спостерігати і дифракцію світла. Але світло — це дуже короткі хвилі (400-760 нм), тому дифракцію на предметі розміром, наприклад, 10 см можна помітити лише на відстанях у декілька кілометрів. Якщо ж розміри перешкоди менші за 1 мм, дифракцію можна спостерігати й на відстанях у кілька метрів.</p>
 </section>
-</section>
-<section id="id4">
-<h2>Дифракційні картини від різних перешкод<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>Дифракційні картини від різних перешкод<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Під дифракцією світла розуміють огинання світловими хвилями меж непрозорих тіл і проникнення світла в ділянку геометричної тіні.</p>
 <p>На рисунку показано, який вигляд мають дифракційні картини від різних перешкод, що освітлюються монохроматичним світлом:</p>
 <ul class="simple">
@@ -479,18 +481,20 @@
 <p>Так само оточена світлими й темними кільцями кругла пляма світла, якщо світло надходить від потужного точкового джерела і проходить крізь невеликий круглий отвір. Змінюючи діаметр отвору, можна отримати в центрі картини й темну пляму.</p>
 <p>Якщо освітлювати перешкоду або отвір пучком білого світла, то на дифракційній картині замість темних і світлих смуг будуть райдужні смуги, які легко побачити, дивлячись на джерело світла крізь клаптик капрону або крізь вії. Подібні дифракційні картини досить часто спостерігаються й у природі (наприклад, явище &quot;сяйво Будди&quot; виникає внаслідок дифракції світла на дрібненьких крапельках води, коли сонячне світло пробивається крізь туман або хмару).</p>
 </section>
-<section id="id5">
-<h2>Принцип Гюйгенса — Френеля<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h2>Принцип Гюйгенса — Френеля<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>Кількісну теорію дифракції світла побудував французький фізик Огюстен Жан Френель (1788–1827), сформулювавши принцип, який із часом отримав назву <strong>принцип Гюйгенса — Френеля</strong>:</p>
-<p><strong>Кожна точка хвильової поверхні є джерелом вторинних хвиль, ці вторинні хвилі є когерентними; хвильова поверхня в будь-який момент часу є результатом інтерференції вторинних хвиль.</strong></p>
+<blockquote>
+<div><p><strong>Кожна точка хвильової поверхні є джерелом вторинних хвиль, ці вторинні хвилі є когерентними; хвильова поверхня в будь-який момент часу є результатом інтерференції вторинних хвиль.</strong></p>
+</div></blockquote>
 <p>Якщо на вузьку щілину падає плоска світлова хвиля, то на екрані, який розташований на досить великій відстані від щілини, можна спостерігати дифракційну картину. Пояснимо її появу, користуючись принципом Гюйгенса — Френеля.</p>
 <p>Згідно з цим принципом, освітлену щілину можна розглядати як велику кількість вторинних джерел світла, від кожного з яких в усіх напрямках поширюються когерентні хвилі. Якщо на шляху цих хвиль розмістити збиральну лінзу, то промені, паралельні один одному, збиратимуться на екрані, розташованому у фокальній площині лінзи.</p>
 <p>Із рисунка бачимо, що різниця ходу <span class="math notranslate nohighlight">\(\Delta d\)</span> для двох хвиль, що поширюються від сусідніх щілин під кутом <span class="math notranslate nohighlight">\(\varphi\)</span>, дорівнює: <span class="math notranslate nohighlight">\(\Delta d = d \sin \varphi\)</span>. Щоб у точці екрана спостерігався інтерференційний максимум, різниця ходу <span class="math notranslate nohighlight">\(\Delta d\)</span> має дорівнювати цілому числу довжин хвиль: <span class="math notranslate nohighlight">\(\Delta d = k\lambda\)</span>.</p>
 <p>Звідси маємо <strong>формулу дифракційної гратки</strong>:</p>
 <p><span class="math notranslate nohighlight">\(d \sin \varphi = k\lambda\)</span>,</p>
 <p>де <span class="math notranslate nohighlight">\(k\)</span> — ціле число: <span class="math notranslate nohighlight">\(k = 0\)</span> — відповідає центральному (нульовому) максимуму (<span class="math notranslate nohighlight">\(\Delta d = 0\)</span>), <span class="math notranslate nohighlight">\(k = \pm 1\)</span> — відповідає максимумам першого порядку (<span class="math notranslate nohighlight">\(\Delta d = \lambda\)</span>) і т. д. Максимуми одного порядку розташовані симетрично з обох боків від центрального максимуму.</p>
-<section id="id6">
-<h3>Зверніть увагу!<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h3>Зверніть увагу!<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Кут <span class="math notranslate nohighlight">\(\varphi\)</span>, за якого спостерігається інтерференційний максимум, залежить від довжини хвилі, тому <strong>дифракційні гратки розкладають немонохроматичне світло у спектр</strong>. Такий спектр називають дифракційним.</p></li>
 <li><p>Довжина хвиль червоного кольору більша за довжину хвиль фіолетового кольору, тому в дифракційному спектрі червоні лінії розташовані далі від центрального максимуму, ніж фіолетові.</p></li>
@@ -500,8 +504,8 @@
 <p><span class="math notranslate nohighlight">\(\lambda = \frac{d \sin \varphi}{k}\)</span></p>
 </section>
 </section>
-<section id="id7">
-<h2>Дифракційна гратка<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>Дифракційна гратка<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>Дифракційна картина від плоскої хвилі спостерігається тільки якщо ширина щілини є в багато разів меншою, ніж відстань до екрана. За цієї умови на екран потрапляє дуже мало світла. Щоб отримати яскравішу дифракційну картину, використовують <strong>дифракційну гратку</strong>.</p>
 <p><strong>Дифракційна гратка</strong> — це оптичний пристрій, дія якого заснована на явищі дифракції світла і який являє собою сукупність великої кількості паралельних штрихів, нанесених на певну поверхню на однаковій відстані один від одного.</p>
 <p>На якісні дифракційні гратки штрихи наносять алмазним різцем спеціальні ділильні машини. Кількість штрихів сягає 2000 на 1 мм.</p>
@@ -571,16 +575,13 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Явище дифракції та умови його спостереження</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Чи може світло огинати перешкоди?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Явище дифракції та умови його спостереження</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Дифракційні картини від різних перешкод</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Принцип Гюйгенса — Френеля</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Зверніть увагу!</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Дифракційні картини від різних перешкод</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Принцип Гюйгенса — Френеля</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Зверніть увагу!</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Дифракційна гратка</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Дифракційна гратка</a></li>
 </ul>
   </nav></div>
 
