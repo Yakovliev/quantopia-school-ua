@@ -203,8 +203,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="electric_current.html">Електричний струм та закон Ома</a></li>
 <li class="toctree-l1"><a class="reference internal" href="series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
-<li class="toctree-l1"><a class="reference internal" href="work_power_electric_current.html">Робота та потужність струму: основні поняття</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="work_power_electric_current.html">Робота та потужність постійного струму</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Електричний струм у металах</a></li>
@@ -438,16 +437,15 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Як рухаються електрони у металевому провіднику</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як швидко рухаються електрони</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Швидкість руху електронів</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Залежність опору металів від температури</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Надпровідність</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Залежність опору металів від температури</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Надпровідність</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2. Як опір металів залежить від температури</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3. Знайомимося з явищем надпровідності</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові експерименти та явища</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Дослід Стюарта — Толмена</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">"Труна Магомета"</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2. Як опір металів залежить від температури</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3. Знайомимося з явищем надпровідності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Додаткові експерименти та явища</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Дослід Стюарта — Толмена</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">"Труна Магомета"</a></li>
 </ul>
 </li>
 </ul>
@@ -472,33 +470,27 @@
 <div><p><strong>Електричний струм у металах</strong> – це напрямлений рух вільних електронів.</p>
 </div></blockquote>
 <p>Розглянемо модель руху електрона в металі з прикладеним електричним полем. За класичною теорією, електрон короткий час прискорюється електричним полем, потім, зіткнувшись із позитивним іоном, змінює напрямок руху, знову набирає швидкості, знову стикається з іоном і так далі. Під час зіткнень електрон передає іону частину кінетичної енергії, отриманої внаслідок дії поля. Саме ці зіткнення відповідальні за електричний опір металу.</p>
-<p>Визначимо середню швидкість <span class="math notranslate nohighlight">\(\overline{v}\)</span> впорядкованого руху електронів. За час <span class="math notranslate nohighlight">\(t\)</span> через поперечний переріз провідника <span class="math notranslate nohighlight">\(S\)</span> пройде кількість електронів:</p>
+<p>Визначимо середню швидкість <span class="math notranslate nohighlight">\(\overline{v}\)</span> напрямленого руху електронів. За час <span class="math notranslate nohighlight">\(t\)</span> через поперечний переріз провідника <span class="math notranslate nohighlight">\(S\)</span> пройде кількість електронів:</p>
 <div class="math notranslate nohighlight">
 \[N = nS\overline{v}t,\]</div>
-<p>de <span class="math notranslate nohighlight">\(n\)</span> – концентрація вільних електронів. Заряд, який перенесеться за цей час:</p>
+<p>де <span class="math notranslate nohighlight">\(n\)</span> – концентрація вільних електронів. Добуток <span class="math notranslate nohighlight">\(\overline{v}t\)</span> є середньою довжиною, на яку буде зміщений електрон за час <span class="math notranslate nohighlight">\(t\)</span>. Добуток площі поперечного перерізу провідника <span class="math notranslate nohighlight">\(S\)</span> на середню довжину <span class="math notranslate nohighlight">\(\overline{v}t\)</span> є об'ємом провідника, з якого електрони пройдуть через фіксований поперечний переріз провідника. Тоді <span class="math notranslate nohighlight">\(N\)</span> дорівнює добутку концентрації вільний електронів на цей об'єм. Заряд, який перенесеться за цей час:</p>
 <div class="math notranslate nohighlight">
-\[q = N|e|.\]</div>
+\[q = N|q_e|\]</div>
+<p>де <span class="math notranslate nohighlight">\(q_e = -e\)</span> є зарядом електрона, <span class="math notranslate nohighlight">\(e\)</span> - елементарний заряд.</p>
+<p>Зауваження: насправді переноситься негативний заряд, але ми говоримо про силу струму, напрямок якої визначається рухом (або умовним рухом) позитивних зарядів. Тому у вищевказаній формулі ми беремо модуль із негативного заряду електрона.</p>
 <p>Тоді, згідно з означенням електричного струму, отримуємо:</p>
 <div class="math notranslate nohighlight">
-\[I = \frac{q}{t} = \frac{N|e|}{t} = n|e|S\overline{v},\]</div>
+\[I = \frac{q}{t} = \frac{N|q_e|}{t} = n|q_e|S\overline{v},\]</div>
 <p>звідки середня швидкість направленого руху електронів:</p>
 <div class="math notranslate nohighlight">
-\[\overline{v} = \frac{I}{n|e|S}.\]</div>
-<p>Визначимо середню швидкість <span class="math notranslate nohighlight">\(\bar{v}\)</span> направленого руху електронів. За інтервал часу <span class="math notranslate nohighlight">\(t\)</span> через переріз площею <span class="math notranslate nohighlight">\(S\)</span> провідника проходить <span class="math notranslate nohighlight">\(N\)</span> електронів: <span class="math notranslate nohighlight">\(N = nS\bar{v}t\)</span>, де <span class="math notranslate nohighlight">\(n\)</span> — концентрація електронів.</p>
+\[\overline{v} = \frac{I}{n|q_e|S}\]</div>
 </section>
 <section id="id3">
 <h2>Як швидко рухаються електрони<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Середня швидкість хаотичного руху вільних електронів досить велика — близько 300 км/с. Водночас середня швидкість їхнього направленого руху надзвичайно мала — кілька десятих міліметра за секунду.</p>
-<p>Чому ж, тільки-но ми натискаємо вимикач лампи, вона відразу спалахує? Річ у тім, що електричне поле поширюється в провіднику зі швидкістю 300 000 км/с. Завдяки дії поля вільні електрони, розташовані в будь-якій точці провідника, майже миттєво втягуються в направлений рух.</p>
-<p>Перенесення заряду вільних електронів у провіднику визначається як: <span class="math notranslate nohighlight">\(q = N|e|\)</span>. За означенням:</p>
-<p><span class="math notranslate nohighlight">\(I = \frac{q}{t}\)</span>. Отже, маємо:</p>
-<p><span class="math notranslate nohighlight">\(I = n|e|\bar{v}S \Rightarrow \bar{v} = \frac{I}{n|e|S}\)</span></p>
+<p>Чому ж, тільки-но ми натискаємо вимикач лампи, вона відразу спалахує? Відповідь полягає в тому, що електричне поле поширюється в провіднику зі швидкістю майже рівню швидкості світла 300 000 км/с. Завдяки цьому вільні електрони, розташовані в будь-якій точці провідника, майже миттєво втягуються в напрямлений рух цим електричним полем.</p>
 <section id="id4">
-<h3>Швидкість руху електронів<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
-<p>Хаотичний рух електронів має величезну швидкість (~300000 км/с). Однак їх середня швидкість у напрямку поля є дуже малою – всього кілька десятків міліметрів за секунду. Електричне поле поширюється зі швидкістю світла, тому струм у провіднику виникає практично миттєво.</p>
-</section>
-<section id="id5">
-<h3>Залежність опору металів від температури<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h3>Залежність опору металів від температури<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>Опір металевого провідника залежить від його розмірів, матеріалу та температури. Дослідження показали, що для температур, значно нижчих за температуру плавлення, залежність питомого опору від температури є майже лінійною:</p>
 <div class="math notranslate nohighlight">
 \[\rho = \rho_0 (1 + \alpha t), \quad R = R_0 (1 + \alpha t),\]</div>
@@ -509,8 +501,8 @@
 <p>Для більшості металів <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span>. Наприклад, для алюмінію <span class="math notranslate nohighlight">\(\alpha = 0,0038\,\text{К}^{-1}\)</span>.</p>
 <p>Однак при температурах, що наближаються до абсолютного нуля або до точки плавлення, лінійність цієї залежності порушується.</p>
 </section>
-<section id="id6">
-<h3>Надпровідність<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h3>Надпровідність<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>У 1911 році нідерландський фізик Гейке Камерлінг-Оннес виявив, що при охолодженні ртуті до 4,1 K її опір різко падає до нуля. Це явище назвали надпровідністю. Згодом воно було виявлено й у інших металів (олово, свинець тощо).</p>
 <p>Надпровідники здатні проводити струм необмежено довго без додаткового джерела енергії. Це відкриває широкі перспективи їхнього використання у промисловості. Проте перешкодою є висока вартість та складність підтримання низьких температур.</p>
 <p>Надпровідність неможливо пояснити класичною електронною теорією. Лише у 1957 році було запропоновано квантову теорію надпровідності, авторами якої були американські фізики Джон Бардін, Леон Купер і Джон Шріффер, а також радянський фізик Микола Боголюбов.</p>
@@ -519,8 +511,8 @@
 </div></blockquote>
 </section>
 </section>
-<section id="id7">
-<h2>2. Як опір металів залежить від температури<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>2. Як опір металів залежить від температури<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>Опір металевого провідника залежить не тільки від його геометричних розмірів і речовини, з якої він виготовлений, а й від температури. Досліди свідчать: якщо температура <span class="math notranslate nohighlight">\(t\)</span> металу не надто низька і не надто висока <span class="math notranslate nohighlight">\((t &lt; t_{плавл})\)</span>, питомий опір металу та опір металевого провідника залежать від температури майже лінійно (рис. 5.1):</p>
 <p><span class="math notranslate nohighlight">\(\rho = \rho_0 (1 + \alpha t), \, R = R_0 (1 + \alpha t)\)</span>,</p>
 <p>де <span class="math notranslate nohighlight">\(\rho_0\)</span>, <span class="math notranslate nohighlight">\(R_0\)</span> — відповідно питомий опір і опір провідника за температури 0 °C; <span class="math notranslate nohighlight">\(\rho\)</span>, <span class="math notranslate nohighlight">\(R\)</span> — відповідно питомий опір і опір провідника за температури <span class="math notranslate nohighlight">\(t\)</span>; <span class="math notranslate nohighlight">\(\alpha\)</span> — температурний коефіцієнт електричного опору.</p>
@@ -531,23 +523,23 @@
 <p>Для всіх металів <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span>. Наприклад, температурний коефіцієнт електричного опору алюмінію становить 0,0038 К⁻¹ (див. Додаток 1).</p>
 <p>Якщо температура металу зменшується, наближаючись до абсолютного нуля (0 К, -273 °С), або збільшується, наближаючись до температури плавлення, то залежність <span class="math notranslate nohighlight">\(\rho(t)\)</span> вже не буде лінійною (рис. 5.2).</p>
 </section>
-<section id="id8">
-<h2>3. Знайомимося з явищем надпровідності<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h2>3. Знайомимося з явищем надпровідності<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>У 1911 р. нідерландський учений Гейке Камерлінґ-Оннес (1853-1926), досліджуючи, як поводиться ртуть за температур, близьких до абсолютного нуля, помітив дивне явище: в разі зниження температури ртуті до 4,1 К її питомий опір стрибком падав до нуля.</p>
 <p>Аналогічне явище спостерігалося з оловом, свинцем і низкою інших металів (рис. 5.3). Це явище назвали <strong>надпровідністю</strong>. Зараз відомо багато речовин і матеріалів, які за відповідної температури переходять у надпровідний стан.</p>
 <p>Якщо в замкненому провіднику, який перебуває в надпровідному стані, створити електричний струм, то струм існуватиме в провіднику без підтримки джерела необмежений час. Ця та інші властивості надпровідників відкривають широкі можливості для їх застосування в техніці й промисловості. Тільки створення надпровідних ліній електропередачі дозволяє зекономити 10-15 % електроенергії.</p>
 <p>Труднощі широкого застосування надпровідників пов'язані з необхідністю охолодження матеріалів до низьких температур — це досить дорого коштує. Зараз знайдено матеріали, які переходять у надпровідний стан за температури близько 100 К (-173 °С) і нижче. Останній &quot;рекорд&quot; високотемпературної надпровідності був поставлений у 2015 р.: за величезного тиску (1 млн атм.) сірководень (H₂S) був переведений у надпровідний стан за температури -70 °С.</p>
 <p>Надпровідність неможливо пояснити з точки зору класичної теорії електропровідності металів. У 1957 р. група американських учених: Джон Бардін (1908-1991), Леон Купер (народ. 1930), Джон Шріффер (народ. 1931) — і незалежно від них радянський учений Микола Миколайович Боголюбов розробили квантову теорію надпровідності.</p>
 </section>
+<section id="id8">
+<h2>Додаткові експерименти та явища<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <section id="id9">
-<h2>Додаткові експерименти та явища<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
-<section id="id10">
-<h3>Дослід Стюарта — Толмена<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<h3>Дослід Стюарта — Толмена<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>Якщо металевому провіднику (1) надати швидкого обертання, а потім різко зупинити, то вільні заряджені частинки рухатимуться за інерцією — в провіднику виникне короткочасний електричний струм. За відхиленням стрілки гальванометра (2) можна виявити, заряди якого знаку створюють цей струм, а знаючи опір провідника, силу струму та лінійну швидкість обертання, дізнатися, які саме частинки створюють струм.</p>
 <p>Такий дослід у 1916 р. здійснили американські вчені Річард Толмен (1881-1948) і Томас Стюарт (1890-1958). Вони експериментально довели, що електричний струм у металах являє собою направлений рух вільних електронів.</p>
 </section>
-<section id="id11">
-<h3>&quot;Труна Магомета&quot;<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<section id="id10">
+<h3>&quot;Труна Магомета&quot;<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p>Нульовий опір — це не єдина унікальна властивість матеріалів у надпровідному стані. У 1933 р. німецькі вчені Вальтер Мейснер (1882-1974) і Роберт Оксенфельд (1901-1993) виявили, що під час переходу в надпровідний стан магнітне поле повністю витісняється з провідника (ефект Мейснера).</p>
 <p>Якщо над провідником помістити магніт і, охолоджуючи, перевести провідник у надпровідний стан, магніт буде левітувати над надпровідником. Дослід, який демонструє ефект Мейснера, назвали &quot;труна Магомета&quot; — вважається, що труна з тілом пророка Магомета левітувала в повітрі без жодної підтримки.</p>
 </section>
@@ -621,16 +613,15 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Як рухаються електрони у металевому провіднику</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як швидко рухаються електрони</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Швидкість руху електронів</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Залежність опору металів від температури</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Надпровідність</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Залежність опору металів від температури</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Надпровідність</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2. Як опір металів залежить від температури</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3. Знайомимося з явищем надпровідності</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові експерименти та явища</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Дослід Стюарта — Толмена</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">"Труна Магомета"</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2. Як опір металів залежить від температури</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3. Знайомимося з явищем надпровідності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Додаткові експерименти та явища</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Дослід Стюарта — Толмена</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">"Труна Магомета"</a></li>
 </ul>
 </li>
 </ul>
