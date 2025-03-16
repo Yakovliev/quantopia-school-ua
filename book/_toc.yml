@@ -43,12 +43,12 @@ parts:
       - file: physics_content/electrodynamics/electromotive_force
       - file: physics_content/electrodynamics/electric_current_metals
       - file: physics_content/electrodynamics/electrolysis
-      - file: physics_content/electrodynamics/electromagnetic_spectrum
 
   - caption: ОПТИКА
     chapters:
       - file: physics_content/optics/interference
       - file: physics_content/optics/diffraction
+      - file: physics_content/electrodynamics/electromagnetic_spectrum
 
   # - caption: Розділ Електричне поле
 
