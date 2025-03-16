@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Шкала електромагнітних хвиль &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics_content/electrodynamics/electromagnetic_spectrum';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Інтерференція світла" href="../optics/interference.html" />
+    <link rel="prev" title="Електроліз та електроліти" href="electrolysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dark_matter_and_energy.html">Темна матерія та темна енергія (Preview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../light_reflection.html">Закони відбивання світла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Шкала електромагнітних хвиль</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics_content/electrodynamics/electromagnetic_spectrum.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics_content/electrodynamics/electromagnetic_spectrum.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics_content/electrodynamics/electromagnetic_spectrum.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Шкала електромагнітних хвиль</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Спектральна класифікація електромагнітних коливань</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Особливості радіохвильового випромінювання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Електромагнітні хвилі оптичного діапазону</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Інфрачервоне (теплове) випромінювання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Видиме світло</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ультрафіолетове випромінювання</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#x">Рентгенівське випромінювання (або X-промені)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Гамма-випромінювання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Шкала електромагнітних хвиль<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Електромагнітні коливання проявляються як поширення енергії електромагнітного поля у просторовому вимірі. Ці хвилі генеруються надзвичайно широким спектром об'єктів – від величезних космічних тіл до найдрібніших частинок атомного світу.</p>
+<section id="id2">
+<h2>Спектральна класифікація електромагнітних коливань<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Весь діапазон електромагнітних хвиль утворює безперервний спектр, що охоплює величезний діапазон довжин і частот. Залежно від характеристик виділяють такі основні типи:</p>
+<ul class="simple">
+<li><p>Радіохвилі</p></li>
+<li><p>Теплове (інфрачервоне) випромінювання</p></li>
+<li><p>Видиме світло</p></li>
+<li><p>Ультрафіолетове випромінювання</p></li>
+<li><p>Рентгенівське випромінювання</p></li>
+<li><p>Гамма-випромінювання</p></li>
+</ul>
+<p>Цікаво, що попри різне походження та властивості, всі ці види випромінювання є проявами однієї фізичної сутності – електромагнітних хвиль. Їх об'єднують фундаментальні властивості:</p>
+<ul class="simple">
+<li><p>Універсальна швидкість розповсюдження у вакуумі (швидкість світла)</p></li>
+<li><p>Виникнення внаслідок прискореного руху заряджених частинок</p></li>
+<li><p>Прояв дуалістичної природи (хвиля-частинка)</p></li>
+</ul>
+<p>Природа демонструє захоплюючий феномен – зі зростанням частоти посилюються квантові аспекти випромінювання, тоді як зі зменшенням частоти стають більш вираженими хвильові характеристики. У візуальному спектрі обидва аспекти майже збалансовані.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg" alt="EM Spectrum Properties edit.svg" height="400" width="675"><br>Діаграма електромагнітного спектру, що показує різні властивості в діапазоні частот і довжин хвиль. By <a href="https://commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a>, NASA - self-made, information by NASA. <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=2974242">Link</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Electromagnetic_spectrum%2C_NASA_illustration.jpg" alt="Electromagnetic spectrum, NASA illustration.jpg" height="600" width="920"><br>By NASA - <a rel="nofollow" class="external free" href="https://science.nasa.gov/ems/">https://science.nasa.gov/ems/</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=97302056">Link</a></p></section>
+<section id="id3">
+<h2>Особливості радіохвильового випромінювання<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Радіохвилі охоплюють діапазон електромагнітних коливань із довжинами від сотень кілометрів до десятих часток міліметра (частоти від кілогерц до терагерц). Головним джерелом цих хвиль є коливання електричного струму в провідниках.</p>
+<p>Низькочастотні коливання (наддовгі радіохвилі) формуються навколо провідників із змінним струмом та генераторів електричного струму. Через низьку енергію цього випромінювання (енергія визначається частотою випромінювання, тому оскільки тут низька частота, то й енергія також низька), воно розповсюджується на обмежені відстані й має мінімальний вплив на біологічні системи.</p>
+<p>Генерація радіохвиль у технічних системах забезпечується високочастотними генераторами електромагнітних коливань.</p>
+<p><strong>Характеристики різних типів радіохвиль</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Категорія</p></th>
+<th class="head"><p>Довжина хвилі</p></th>
+<th class="head"><p>Поведінка в атмосфері</p></th>
+<th class="head"><p>Галузі застосування</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Довгі радіохвилі</p></td>
+<td><p>~1-10 км</p></td>
+<td><p>Ефективно огинають земну кривизну, що дозволяє організовувати дальній зв'язок.</p></td>
+<td><p>Міжконтинентальне мовлення, системи навігації морського транспорту</p></td>
+</tr>
+<tr class="row-odd"><td><p>Середні радіохвилі</p></td>
+<td><p>100 м - 1 км</p></td>
+<td><p>Поширюються в радіусі приблизно 1000 км, взаємодіють з іоносферою. Найкраща чутність спостерігається в нічний час через зміни в іоносфері.</p></td>
+<td><p>Регіональне радіомовлення</p></td>
+</tr>
+<tr class="row-even"><td><p>Короткі радіохвилі</p></td>
+<td><p>10-100 м</p></td>
+<td><p>Завдяки багаторазовому відбиттю між земною поверхнею та іоносферою здатні охоплювати глобальні відстані.</p></td>
+<td><p>Міжнародний радіозв'язок</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ультракороткі радіохвилі</p></td>
+<td><p>0,1 мм - 10 м</p></td>
+<td><p>Мають переважно прямолінійне поширення, майже не взаємодіють з іоносферою. Легко піддаються спрямуванню та модуляції, що зменшує розсіювання.</p></td>
+<td><p>Мобільний зв'язок, телевізійне мовлення, радіолокаційні системи</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Атмосферна іоносфера відіграє визначальну роль у комунікаційних можливостях радіосигналів, створюючи природний &quot;дзеркальний коридор&quot; для певних частотних діапазонів.</p>
+</section>
+<section id="id4">
+<h2>Електромагнітні хвилі оптичного діапазону<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>У спектрі електромагнітних коливань оптичний діапазон займає особливе місце. Всі хвилі даного діапазону виникають внаслідок енергетичних трансформацій в атомах, коли відбувається перехід електрона з вищого енергетичного рівня до нижчого. Поглинання атомом певної кількості енергії (кванта) призводить до його збудження. При поверненні до основного стану, поглинута енергія перетворюється на електромагнітне випромінювання у формі світлового кванта. Наприклад, під час зіткнення атомів або молекул частина їх кінетичної енергії може витратитися на збудження (електрон чи електрони перейдуть на вище енергетичні рівні), а потім випромінитися у вигляді електромагнітної хвилі (кванта світла).</p>
+<p>Важливою властивістю будь-якого ізольованого атома є здатність випромінювати лише на певних частотах.</p>
+<section id="id5">
+<h3>Інфрачервоне (теплове) випромінювання<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p><strong>Довжина хвилі</strong>: від ~760 нм до ~1-2 мм</p>
+<ul class="simple">
+<li><p>Джерелами інфрачервоного випромінювання є всі об'єкти з температурою вище абсолютного нуля. Ця властивість лежить в основі функціонування тепловізорів (приладів нічного бачення).</p></li>
+<li><p>Людське око не здатне сприймати інфрачервоне випромінювання через недостатню енергію фотонів для активації нервових клітин сітківки. Однак багато представників тваринного світу мають спеціальні пристосування для сприйняття таких променів.</p></li>
+<li><p>Помірне інфрачервоне випромінювання зазвичай корисне для людини, але надмірні дози можуть викликати тепловий та сонячний удари</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Видиме світло<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p><strong>Довжина хвилі</strong>: від ~380 до ~760 нм</p>
+<ul class="simple">
+<li><p>Видиме світло випромінюється дуже нагрітими тілами, при цьому характер випромінювання залежить від температури об'єкта та речовини, з якої він складається.</p></li>
+<li><p>Випромінювання видимого світла може супроводжуватись хімічними реакціями (хемілюмінесценція).</p></li>
+<li><p>Видиме світло поділяється на сім основних кольорів: червоний, оранжевий, жовтий, зелений, блакитний, синій та фіолетовий.</p></li>
+<li><p>Людське око найкраще сприймає світлові хвилі довжиною 555 нм, що відповідають зеленій частині спектра.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Ультрафіолетове випромінювання<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Довжина хвилі</strong>: від ~10 до ~400 нм</p>
+<ul class="simple">
+<li><p>Основними джерелами ультрафіолетового випромінювання є Сонце, інші зірки, електричні дуги та спеціальні кварцові лампи.</p></li>
+<li><p>Людське око не реагує на ультрафіолетове випромінювання.</p></li>
+<li><p>Ультрафіолет характеризується високою хімічною активністю і в значних дозах негативно впливає на організм людини, тому не рекомендується тривале перебування під прямим сонячним випромінюванням.</p></li>
+<li><p>Водночас помірні дози ультрафіолету корисні, оскільки стимулюють вироблення вітаміну D, зміцнюють імунну систему та підтримують багато важливих функцій організму.</p></li>
+</ul>
+</section>
+</section>
+<section id="x">
+<h2>Рентгенівське випромінювання (або X-промені)<a class="headerlink" href="#x" title="Link to this heading">#</a></h2>
+<p><strong>Довжина хвилі</strong>: від ~0.01 нм до ~10 нм</p>
+<p>За відкриття рентгенівського випромінювання у 1895 році німецький фізик Вільгельм Конрад Рентген (1845-1923) став першим лауреатом Нобелівської премії.</p>
+<p>Рентгенівське випромінювання генерується внаслідок взаємодії швидких електронів з атомами катода в спеціальному пристрої - рентгенівській трубці. Ця трубка представляє собою вакуумну скляну колбу з двома електродами - анодом A і катодом K. Між електродами створюється висока напруга (10-500 кВ), а через катод пропускається електричний струм, що викликає емісію електронів з його поверхні.</p>
+<p>Електрони, що випромінюються катодом, прискорюються електричним полем до надзвичайно високих швидкостей. При попаданні на анод вони викликають два типи рентгенівського випромінювання:</p>
+<ul class="simple">
+<li><p>Гальмівне - зумовлене різким гальмуванням електронів на аноді</p></li>
+<li><p>Характеристичне - спричинене збудженням електронних оболонок атомів</p></li>
+</ul>
+<p>Найширше рентгенівське випромінювання використовується в медицині завдяки здатності проникати крізь непрозорі предмети, зокрема людське тіло. Оскільки кісткові тканини менш прозорі для рентгенівських променів порівняно з іншими тканинами організму, вони чітко видимі на рентгенограмі.</p>
+<p>Важливо пам'ятати, що рентгенівське випромінювання має руйнівну дію на клітини, тому його застосування вимагає надзвичайної обережності. Крім медицини, рентгенівські промені використовуються в промисловості для виявлення дефектів, у хімії для аналізу сполук та у фізиці для дослідження кристалічних структур.</p>
+</section>
+<section id="id8">
+<h2>Гамма-випромінювання<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p><strong>Довжина хвилі</strong>: менше 0,01 нм</p>
+<p>Гамма-випромінювання представляє собою електромагнітні хвилі з найкоротшою довжиною хвилі в електромагнітному спектрі. Воно утворюється збудженими атомними ядрами під час ядерних реакцій, радіоактивних перетворень та трансформацій елементарних частинок.</p>
+<p>Практичне застосування гамма-випромінювання включає:</p>
+<ul class="simple">
+<li><p>Дефектоскопію (виявлення внутрішніх дефектів у деталях)</p></li>
+<li><p>Радіаційну хімію (наприклад, у процесах полімеризації)</p></li>
+<li><p>Сільське господарство (стерилізація харчових продуктів)</p></li>
+<li><p>Медицину (стерилізація інструментів та променева терапія)</p></li>
+</ul>
+<p>На біологічні організми гамма-випромінювання чинить мутагенний і канцерогенний вплив. Проте цілеспрямоване й дозоване гамма-випромінювання ефективно використовується для знищення ракових клітин у променевій терапії.</p>
+<blockquote>
+<div><p><strong>Важливо!</strong> У діапазонах рентгенівського та гамма-випромінювання особливо яскраво проявляються квантові властивості електромагнітного випромінювання.</p>
+</div></blockquote>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics_content\electrodynamics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="electrolysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Електроліз та електроліти</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../optics/interference.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Інтерференція світла</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Спектральна класифікація електромагнітних коливань</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Особливості радіохвильового випромінювання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Електромагнітні хвилі оптичного діапазону</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Інфрачервоне (теплове) випромінювання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Видиме світло</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ультрафіолетове випромінювання</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#x">Рентгенівське випромінювання (або X-промені)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Гамма-випромінювання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
