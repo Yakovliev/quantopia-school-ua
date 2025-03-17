@@ -48,7 +48,7 @@ parts:
     chapters:
       - file: physics_content/optics/interference
       - file: physics_content/optics/diffraction
-      - file: physics_content/electrodynamics/electromagnetic_spectrum
+      - file: physics_content/optics/electromagnetic_spectrum
 
   # - caption: Розділ Електричне поле
 
