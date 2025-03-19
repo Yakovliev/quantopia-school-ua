@@ -19,6 +19,8 @@ parts:
       - file: astronomy_content/01_basics/celestial_coordinates
       - file: astronomy_content/01_basics/distances
       - file: astronomy_content/01_basics/apparent_and_absolute_magnitude
+      - file: astronomy_content/01_basics/terrestrial_planets
+      - file: astronomy_content/01_basics/giant_planets
       # - file: astronomy_content/01_basics/time_and_calendar
 
   - caption: ФІЗИКА
