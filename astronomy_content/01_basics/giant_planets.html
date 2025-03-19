@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'astronomy_content/01_basics/giant_planets';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -183,7 +185,6 @@
 <li class="toctree-l1"><a class="reference internal" href="apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Планети-гіганти</a></li>
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -437,19 +438,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Планети-гіганти</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Велетні Сонячної системи: Юпітер, Сатурн, Уран, Нептун та їх супутники</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Основні особливості газових гігантів</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Юпітер</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Структура атмосфери</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Юпітер</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Сатурн</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Уран</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Нептун</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Супутникова система Нептуна</a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сатурн</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Енергетична загадка Сатурна</a></li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -463,26 +457,20 @@
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Планети-гіганти<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <div class="full-width docutils">
-<iframe width="100%", height="600" src="https://eyes.nasa.gov/apps/solar-system/#/home?featured=false" allowfullscreen ></iframe>
+<iframe width="100%", height="550" src="https://eyes.nasa.gov/apps/solar-system/#/home?featured=false" allowfullscreen ></iframe>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id2">
-<h1>Велетні Сонячної системи: Юпітер, Сатурн, Уран, Нептун та їх супутники<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
-<section id="id3">
-<h2>Основні особливості газових гігантів<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Пряме посилання на 3D мапу: <a class="reference external" href="https://eyes.nasa.gov/apps/solar-system/#/home">https://eyes.nasa.gov/apps/solar-system/#/home</a></p>
+<hr class="docutils" />
 <p>Порівняно з планетами земного типу, газові гіганти відрізняються відсутністю твердої поверхні. Хімічний склад цих космічних об'єктів (близько 99% становлять Гідроген і Гелій) та їхня невисока густина (приблизно 1 г/см³) робить їх схожими на зорі. Колосальні маси цих планет створюють умови для нагрівання їхніх надр до надзвичайно високих температур — понад +10 000°C.</p>
 <p>Ці планети також характеризуються стрімким обертанням навколо своєї осі та вражаючою кількістю природних супутників.</p>
-</section>
-<section id="id4">
-<h2>Юпітер<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<p>Юпітер посідає перше місце за розмірами серед усіх планет нашої системи. Його оточує ціла сім'я супутників, серед яких чотири найбільші — Іо, Європа, Ганімед та Каллісто — відомі як Галілеєві супутники, названі на честь їхнього відкривача. За величиною ці небесні тіла можна зіставити з нашим Місяцем.</p>
-<p>Величезна маса Юпітера у 2,5 рази перевищує масу всіх інших планет разом узятих і в 318 разів більша за масу нашої планети.</p>
-<section id="id5">
-<h3>Структура атмосфери<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h2>Юпітер<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Юпітер посідає перше місце за розмірами серед усіх планет нашої системи. Його оточує ціла сім'я супутників, серед яких чотири найбільші — Іо, Європа, Ганімед та Каллісто - відомі як Галілеєві супутники, названі на честь їхнього відкривача. За величиною ці небесні тіла можна зіставити з нашим Місяцем.</p>
+<p>Величезна маса Юпітера у 2.5 рази перевищує масу всіх інших планет разом узятих і в 318 разів більша за масу нашої планети.</p>
 <p>В атмосфері Юпітера переважають водень (74%) і гелій (20%), а також присутні метан, аміак і водяна пара.</p>
 <p>Верхній атмосферний шар, де тиск дорівнює земному (1 атм), формують світлі хмари з кристалів аміаку. Під ними розташовуються хмари з домішками сірки, що надають червонуватого забарвлення (особливо помітного у формації &quot;Велика Червона Пляма&quot;). Ще глибше, на відстані приблизно 80 км від верхнього шару, знаходяться хмари з водяної пари.</p>
-<p>З глибиною в атмосфері зростають як температура, так і тиск. Сучасні дослідження висувають припущення про можливість існування життя в юпітеріанських хмарах, оскільки там присутні всі елементи, необхідні для розвитку життєформ. Деякі шари хмар мають навіть умови, потенційно прийнятні для виживання земних мікроорганізмів.</p>
-<p>На глибині близько 20 000 км водень трансформується у металічний стан, набуваючи властивостей рідкого металу з високою електропровідністю. Цей унікальний стан речовини (з густиною близько 4 г/см³ при тиску 106 атм) неможливо відтворити в земних умовах. Електричні струми, що виникають у цій металевій оболонці, генерують потужне магнітне поле, створюючи радіаційні пояси, інтенсивність яких у 10 000 разів перевищує земні, роблячи Юпітер потужним джерелом випромінювання.</p>
+<p>З глибиною в атмосфері зростають як температура, так і тиск. Сучасні дослідження висувають припущення про можливість існування життя в юпітеріанських хмарах, оскільки там присутні всі елементи, необхідні для розвитку життєвих форм. Деякі шари хмар мають навіть умови, потенційно прийнятні для виживання земних мікроорганізмів.</p>
+<p>На глибині близько 20 000 км водень трансформується у металічний стан, набуваючи властивостей рідкого металу з високою електропровідністю (з густиною близько 4 г/см³ при тиску 106 атм). Електричні струми, що виникають у цій металевій оболонці, генерують потужне магнітне поле, створюючи радіаційні пояси, інтенсивність яких у 10 000 разів перевищує земні, роблячи Юпітер потужним джерелом випромінювання.</p>
 <p>У центральній частині планети розташоване тверде ядро, за складом подібне до планет земної групи.</p>
 <p><strong>Параметри Юпітера</strong></p>
 <div class="pst-scrollable-table-container"><table class="table">
@@ -523,13 +511,12 @@
 </table>
 </div>
 </section>
-</section>
-<section id="id6">
-<h2>Сатурн<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h2>Сатурн<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Сатурн — друга за величиною планета-гігант, відома своїми вишуканими кільцями. Космічний зонд &quot;Вояджер-2&quot; виявив, що ці кільця складаються з тисяч тонших структур. Кожне таке кільце утворене з численних крижаних частинок, а загальна товщина системи кілець не перевищує 2 км.</p>
 <p>Хоча Сатурн не демонструє такого різноманіття кольорів, як Юпітер, будова атмосфер цих планет має багато спільного. Жовтуватий відтінок верхнім шарам надають хмари з кристалів аміаку. На глибині близько 300 км розташовуються водяні хмари, де при підвищенні температури можливе утворення опадів.</p>
 <p>Примітно, що середня густина Сатурна нижча за густину води, що свідчить про малу концентрацію важких елементів у його ядрі. Як і Юпітер, Сатурн володіє магнітним полем та радіаційними поясами.</p>
-<p>Навколо Сатурна обертається велика кількість супутників розміром від 34 до 5150 км. Найбільші з них мають поверхні, всіяні кратерами різних розмірів. Особливо виділяється Титан — найбільший супутник планети, який перевищує Місяць майже в 1,5 рази. Унікальність Титана полягає в наявності щільної азотної атмосфери та виявлених космічною станцією &quot;Кассіні&quot; озер і річок з рідкого азоту й метану.</p>
+<p>Навколо Сатурна обертається велика кількість супутників розміром від 34 до 5150 км. Найбільші з них мають поверхні, всіяні кратерами різних розмірів. Особливо виділяється Титан — найбільший супутник планети, який перевищує Місяць майже в 1.5 рази. Унікальність Титана полягає в наявності щільної азотної атмосфери та виявлених космічною станцією &quot;Кассіні&quot; озер і річок з рідкого азоту й метану.</p>
 <p><strong>Параметри Сатурна</strong></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -568,11 +555,173 @@
 </tbody>
 </table>
 </div>
+<p>Цікавим феноменом є те, що Сатурн випромінює в космос більше енергії, ніж отримує від Сонця. Сучасні дослідження виявили нижчий вміст гелію в атмосфері Сатурна порівняно з Юпітером, що привело до формування гіпотези про внутрішнє джерело енергії планети.</p>
+<p>Унікальність полягає в тому, що на Сатурні гелій не повністю змішується з воднем, як це відбувається на Юпітері з його вищими показниками тиску і температури. В сатурніанській водневій атмосфері Гелій формує дрібні краплі, які конденсуються у своєрідний туман і згодом випадають як &quot;гелієвий дощ&quot;. Цей процес може генерувати додаткову енергію, оскільки щільніший гелій опускається до центру планети. При цьому потенціальна енергія гелієвих крапель перетворюється на кінетичну, що призводить до загального підвищення температури надр. З часом, коли процес гелієвих опадів вичерпається, температура Сатурна поступово знизиться.</p>
 </section>
-<section id="id7">
-<h2>Енергетична загадка Сатурна<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
-<p>Цікавим феноменом є те, що Сатурн випромінює в космос більше енергії, ніж отримує від Сонця. Сучасні дослідження виявили нижчий вміст Гелію в атмосфері Сатурна порівняно з Юпітером, що привело до формування гіпотези про внутрішнє джерело енергії планети.</p>
-<p>Унікальність полягає в тому, що на Сатурні Гелій не повністю змішується з воднем, як це відбувається на Юпітері з його вищими показниками тиску і температури. В сатурніанській водневій атмосфері Гелій формує дрібні краплі, які конденсуються у своєрідний туман і згодом випадають як &quot;гелієвий дощ&quot;. Цей процес може генерувати додаткову енергію, оскільки щільніший Гелій опускається до центру планети. При цьому потенціальна енергія гелієвих крапель перетворюється на кінетичну, що призводить до загального підвищення температури надр. З часом, коли процес гелієвих опадів вичерпається, температура Сатурна поступово знизиться.</p>
+<section id="id4">
+<h2>Уран<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Уран, четверта за розміром планета нашої системи, вражає своїм незвичайним блакитно-зеленим забарвленням. Цей характерний відтінок виникає завдяки значній концентрації метану в атмосфері (близько 14% складу), який ефективно поглинає червоний спектр світла, пропускаючи лише блакитно-зелені хвилі.</p>
+<p>Найдивовижнішою рисою Урана є екстремальний нахил його осі обертання – майже 98° до площини орбіти. Образно кажучи, планета ніби &quot;котиться&quot; по своїй орбіті боком, а не обертається як дзиґа. Ця унікальна особливість повністю перевертає уявлення про зміну пір року:</p>
+<ul class="simple">
+<li><p>Полюси почергово спрямовані до Сонця</p></li>
+<li><p>Екватор розташований майже перпендикулярно до площини орбіти</p></li>
+<li><p>Кліматичні зони розподілені зовсім не так, як на інших планетах</p></li>
+</ul>
+<p><strong>Параметри Урану</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Характеристика</p></th>
+<th class="head"><p>Значення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Зоряна величина (максимальна)</p></td>
+<td><p>5,5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Середня відстань до Сонця</p></td>
+<td><p>2870 млн км / 19,18 а. о.</p></td>
+</tr>
+<tr class="row-even"><td><p>Період обертання навколо Сонця</p></td>
+<td><p>84,0 земного року</p></td>
+</tr>
+<tr class="row-odd"><td><p>Період обертання навколо осі</p></td>
+<td><p>17,24 год</p></td>
+</tr>
+<tr class="row-even"><td><p>Діаметр по екватору</p></td>
+<td><p>51120 км</p></td>
+</tr>
+<tr class="row-odd"><td><p>Маса (Земля = 1)</p></td>
+<td><p>14,5</p></td>
+</tr>
+<tr class="row-even"><td><p>Середня густина</p></td>
+<td><p><span class="math notranslate nohighlight">\(1,3·10^3\)</span> кг/м³</p></td>
+</tr>
+<tr class="row-odd"><td><p>Температура поверхні</p></td>
+<td><p><span class="math notranslate nohighlight">\(-217\)</span> °C</p></td>
+</tr>
+<tr class="row-even"><td><p>Сила тяжіння на екваторі (Земля = 1)</p></td>
+<td><p>0,9</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Незвичайні сезони Урана</strong></p>
+<p>Через екстремальний нахил осі обертання, сезонні зміни на Урані радикально відрізняються від земних. Коли один з полюсів спрямований до Сонця, він отримує постійне освітлення протягом приблизно 42 земних років, тоді як протилежний полюс перебуває у суцільній темряві.</p>
+<p>Тропіки на Урані фактично збігаються з полярними регіонами, створюючи унікальну кліматичну систему, не схожу на жодну іншу планету. Перехід між сезонами займає близько 21 земного року – це один &quot;урановий сезон&quot;.</p>
+<p>Планета оточена системою з 11 тонких кілець, відкритих лише у 1977 році. Ці кільця, розташовані на відстані приблизно 50 тисяч кілометрів від центра планети, мають товщину не більше 1 кілометра та розміщені в площині екватора Урана.</p>
+</section>
+<section id="id5">
+<h2>Нептун<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Нептун, восьма й найвіддаленіша планета, є найменшою серед газових гігантів, але все одно у 17 разів масивніша за Землю.</p>
+<p>Унікальною особливістю Нептуна є його надзвичайно активна атмосфера. Незважаючи на величезну відстань від Сонця і надзвичайно низькі температури, на планеті зафіксовані найшвидші вітри у Сонячній системі – до 600 м/с (понад 2100 км/год).</p>
+<p>Інша загадка Нептуна – внутрішнє джерело тепла. Планета випромінює у космос приблизно у 3 рази більше енергії, ніж отримує від Сонця. Це свідчить про значні внутрішні термічні процеси.</p>
+<p><strong>Параметри Нептуна</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Характеристика</p></th>
+<th class="head"><p>Значення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Зоряна величина (максимальна)</p></td>
+<td><p>7,8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Середня відстань до Сонця</p></td>
+<td><p>4491 млн км / 30,0 а. о.</p></td>
+</tr>
+<tr class="row-even"><td><p>Період обертання навколо Сонця</p></td>
+<td><p>164,6 земного року</p></td>
+</tr>
+<tr class="row-odd"><td><p>Період обертання навколо осі</p></td>
+<td><p>16,11 год</p></td>
+</tr>
+<tr class="row-even"><td><p>Діаметр по екватору</p></td>
+<td><p>49528 км</p></td>
+</tr>
+<tr class="row-odd"><td><p>Маса (Земля = 1)</p></td>
+<td><p>17,2</p></td>
+</tr>
+<tr class="row-even"><td><p>Середня густина</p></td>
+<td><p><span class="math notranslate nohighlight">\(1,8·10^3\)</span> кг/м³</p></td>
+</tr>
+<tr class="row-odd"><td><p>Температура поверхні</p></td>
+<td><p><span class="math notranslate nohighlight">\(-214\)</span> °C</p></td>
+</tr>
+<tr class="row-even"><td><p>Сила тяжіння на екваторі (Земля = 1)</p></td>
+<td><p>1,1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id6">
+<h2>Супутникова система Нептуна<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Навколо Нептуна обертаються вісім супутників, серед яких Тритон є найбільшим і обертається в напрямку, протилежному обертанню планети.</p>
+<p>Космічний апарат &quot;Вояджер-2&quot;, який пролетів повз Нептун у 1989 році, виявив складну систему кілець – три замкнуті та одне незамкнуте кільце, розташовані на відстані 1.7-2.5 радіуса планети.</p>
+<p><strong>Найбільші супутники планет Сонячної системи</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Планета</p></th>
+<th class="head"><p>Супутник</p></th>
+<th class="head"><p>Діаметр, км</p></th>
+<th class="head"><p>Маса, <span class="math notranslate nohighlight">\(·10^{22}\)</span> кг</p></th>
+<th class="head"><p>Густина, кг/м³</p></th>
+<th class="head"><p>Температура поверхні, °C</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Юпітер</p></td>
+<td><p>Ганімед</p></td>
+<td><p>5268</p></td>
+<td><p>1,49</p></td>
+<td><p>193</p></td>
+<td><p><span class="math notranslate nohighlight">\(-140\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Сатурн</p></td>
+<td><p>Титан</p></td>
+<td><p>5150</p></td>
+<td><p>1,35</p></td>
+<td><p>190</p></td>
+<td><p><span class="math notranslate nohighlight">\(-179\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Юпітер</p></td>
+<td><p>Калісто</p></td>
+<td><p>4806</p></td>
+<td><p>1,08</p></td>
+<td><p>1830</p></td>
+<td><p><span class="math notranslate nohighlight">\(-140\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Юпітер</p></td>
+<td><p>Іо</p></td>
+<td><p>3640</p></td>
+<td><p>0,892</p></td>
+<td><p>3550</p></td>
+<td><p><span class="math notranslate nohighlight">\(-130\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Земля</p></td>
+<td><p>Місяць</p></td>
+<td><p>3475</p></td>
+<td><p>0,735</p></td>
+<td><p>3340</p></td>
+<td><p>від <span class="math notranslate nohighlight">\(-170\)</span> до <span class="math notranslate nohighlight">\(+130\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Юпітер</p></td>
+<td><p>Європа</p></td>
+<td><p>3130</p></td>
+<td><p>0,485</p></td>
+<td><p>3040</p></td>
+<td><p><span class="math notranslate nohighlight">\(-140\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Нептун</p></td>
+<td><p>Тритон</p></td>
+<td><p>2700</p></td>
+<td><p>0,215</p></td>
+<td><p>2100</p></td>
+<td><p><span class="math notranslate nohighlight">\(-235\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 </section>
 
@@ -641,19 +790,12 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Планети-гіганти</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Велетні Сонячної системи: Юпітер, Сатурн, Уран, Нептун та їх супутники</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Основні особливості газових гігантів</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Юпітер</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Структура атмосфери</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Юпітер</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Сатурн</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Уран</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Нептун</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Супутникова система Нептуна</a></li>
 </ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сатурн</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Енергетична загадка Сатурна</a></li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
