@@ -42,6 +42,9 @@ parts:
       - file: physics_content/electrodynamics/electromotive_force
       - file: physics_content/electrodynamics/electric_current_metals
       - file: physics_content/electrodynamics/electrolysis
+      - file: physics_content/electrodynamics/ec_gases
+      - file: physics_content/electrodynamics/magnetic_field
+      - file: physics_content/electrodynamics/ampere_force_law
 
   - caption: ОПТИКА
     chapters:
@@ -51,6 +54,7 @@ parts:
       - file: physics_content/optics/interference
       - file: physics_content/optics/diffraction
       - file: physics_content/optics/electromagnetic_spectrum
+      - file: physics_content/optics/polarization
 
   # - caption: Розділ Електричне поле
 
