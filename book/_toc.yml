@@ -31,14 +31,11 @@ parts:
           - file: physics_content/internal_energy_task_01
       - file: physics_content/work_thermo
       - file: physics_content/first_law_thermo
-      - file: physics_content/charge_01
-      - file: physics_content/charge_02
-      - file: physics_content/nature_of_light
-      - file: physics_content/photometric_quantities
-      - file: physics_content/light_reflection
 
   - caption: ЕЛЕКТРОДИНАМІКА
     chapters:
+      - file: physics_content/electrodynamics/charge_01
+      - file: physics_content/electrodynamics/charge_02
       - file: physics_content/electrodynamics/electric_current
       - file: physics_content/electrodynamics/series_and_parallel_connection
       - file: physics_content/electrodynamics/work_power_electric_current
@@ -48,6 +45,9 @@ parts:
 
   - caption: ОПТИКА
     chapters:
+      - file: physics_content/optics/nature_of_light
+      - file: physics_content/optics/photometric_quantities
+      - file: physics_content/optics/light_reflection
       - file: physics_content/optics/interference
       - file: physics_content/optics/diffraction
       - file: physics_content/optics/electromagnetic_spectrum
