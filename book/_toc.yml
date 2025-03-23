@@ -55,6 +55,7 @@ parts:
       - file: physics_content/optics/diffraction
       - file: physics_content/optics/electromagnetic_spectrum
       - file: physics_content/optics/polarization
+      - file: physics_content/optics/quantum_em_field
 
   # - caption: Розділ Електричне поле
 
