@@ -21,6 +21,7 @@ parts:
       - file: astronomy_content/01_basics/apparent_and_absolute_magnitude
       - file: astronomy_content/01_basics/terrestrial_planets
       - file: astronomy_content/01_basics/giant_planets
+      - file: astronomy_content/01_basics/dwarf_planets_etc.ipynb
       # - file: astronomy_content/01_basics/time_and_calendar
 
   - caption: ФІЗИКА
