@@ -185,7 +185,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/giant_planets.html">Планети-гіганти</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dwarf_planets_etc.html">Карликові планети. Малі тіла Сонячної системи - астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -208,8 +209,10 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Електричний струм у металах</a></li>
 <li class="toctree-l1"><a class="reference internal" href="electrolysis.html">Електроліз та електроліти</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="magnetic_field.html">Магнітне поле</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lorentz-force.html">Сила Лоренца</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -221,6 +224,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
 </ul>
 
     </div>
@@ -477,18 +481,18 @@
 <p>де <span class="math notranslate nohighlight">\(n\)</span> – концентрація вільних електронів. Добуток <span class="math notranslate nohighlight">\(\overline{v}t\)</span> є середньою довжиною, на яку буде зміщений електрон за час <span class="math notranslate nohighlight">\(t\)</span>. Добуток площі поперечного перерізу провідника <span class="math notranslate nohighlight">\(S\)</span> на середню довжину <span class="math notranslate nohighlight">\(\overline{v}t\)</span> є об'ємом провідника, з якого електрони пройдуть через фіксований поперечний переріз провідника. Тоді <span class="math notranslate nohighlight">\(N\)</span> дорівнює добутку концентрації вільний електронів на цей об'єм. Заряд, який перенесеться за цей час:</p>
 <div class="math notranslate nohighlight">
 \[q = N|q_e|\]</div>
-<p>де <span class="math notranslate nohighlight">\(q_e = -e\)</span> є зарядом електрона, <span class="math notranslate nohighlight">\(e\)</span> - елементарний заряд.</p>
-<p>Зауваження: насправді переноситься негативний заряд, але ми говоримо про силу струму, напрямок якої визначається рухом (або умовним рухом) позитивних зарядів. Тому у вищевказаній формулі ми беремо модуль із негативного заряду електрона.</p>
+<p>де <span class="math notranslate nohighlight">\(q_e = -e\)</span> є зарядом електрона, <span class="math notranslate nohighlight">\(e\)</span> - елементарний заряд, <span class="math notranslate nohighlight">\(e = 1.6 \cdot 10^{-19}\)</span> Кл.</p>
+<p><strong>Зауваження</strong>: насправді переноситься негативний заряд, але ми говоримо про силу струму, напрямок якої визначається рухом (або умовним рухом) позитивних зарядів. Тому у вищевказаній формулі ми беремо модуль із негативного заряду електрона.</p>
 <p>Тоді, згідно з означенням електричного струму, отримуємо:</p>
 <div class="math notranslate nohighlight">
 \[I = \frac{q}{t} = \frac{N|q_e|}{t} = n|q_e|S\overline{v},\]</div>
 <p>звідки середня швидкість направленого руху електронів:</p>
 <div class="math notranslate nohighlight">
-\[\overline{v} = \frac{I}{n|q_e|S}\]</div>
+\[\overline{v} = \frac{I}{n|q_e|S} = \frac{I}{n e S}\]</div>
 </section>
 <section id="id3">
 <h2>Як швидко рухаються електрони<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p>Середня швидкість хаотичного руху вільних електронів досить велика — близько 300 км/с. Водночас середня швидкість їхнього направленого руху надзвичайно мала — кілька десятих міліметра за секунду.</p>
+<p>Середня швидкість хаотичного руху вільних електронів досить велика - близько 300 км/с. Водночас середня швидкість їхнього направленого руху надзвичайно мала - кілька десятих міліметра за секунду.</p>
 <p>Чому ж, тільки-но ми натискаємо вимикач лампи, вона відразу спалахує? Відповідь полягає в тому, що електричне поле поширюється в провіднику зі швидкістю майже рівню швидкості світла 300 000 км/с. Завдяки цьому вільні електрони, розташовані в будь-якій точці провідника, майже миттєво втягуються в напрямлений рух цим електричним полем.</p>
 </section>
 <section id="id4">

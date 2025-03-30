@@ -67,6 +67,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Фотоефект. Закони фотоефекту" href="photoelectric-effect.html" />
     <link rel="prev" title="Поляризація світла. Поляроїди" href="polarization.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -184,7 +185,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/giant_planets.html">Планети-гіганти</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dwarf_planets_etc.html">Карликові планети. Малі тіла Сонячної системи - астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -207,8 +209,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="current nav bd-sidenav">
@@ -220,6 +224,7 @@
 <li class="toctree-l1"><a class="reference internal" href="electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
 <li class="toctree-l1"><a class="reference internal" href="polarization.html">Поляризація світла. Поляроїди</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
 </ul>
 
     </div>
@@ -476,8 +481,23 @@
 </div></blockquote>
 <p>де <span class="math notranslate nohighlight">\(h\)</span> – фундаментальна фізична константа.</p>
 <p>З часом ці &quot;порції енергії&quot; отримали назву <strong>кванти енергії</strong>, а константу <span class="math notranslate nohighlight">\(h\)</span> почали називати <strong>сталою Планка</strong>. Відповідно до сучасних вимірювань, значення сталої Планка становить:</p>
-<div class="math notranslate nohighlight">
+<blockquote>
+<div><div class="math notranslate nohighlight">
 \[h = 6.626 \cdot 10^{-34} \text{ Дж} \cdot \text{с} \approx 6.63 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\]</div>
+</div></blockquote>
+<p>Також часто застосовують <strong>зведену сталу Планка</strong>:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\hbar = \frac{h}{2\pi}\]</div>
+</div></blockquote>
+<p>У цьому випадку ми можемо записати формулу для енергії трохи інакше</p>
+<div class="math notranslate nohighlight">
+\[E = h \nu = \frac{h \cdot 2\pi \nu}{2 \pi} = \hbar 2\pi \nu = \hbar \omega\]</div>
+<p>де <span class="math notranslate nohighlight">\(\omega = 2\pi \nu\)</span> - кутова частота. Частота <span class="math notranslate nohighlight">\(\nu\)</span> вимірюється в герцах (Гц = cекунда в мінус першій степені), а кутова частота <span class="math notranslate nohighlight">\(\omega\)</span> вимірюється в радіанах на секунду (рад/с). Таким чином:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[E = h \nu = \hbar \omega\]</div>
+</div></blockquote>
 </section>
 <section id="id3">
 <h2>Властивості фотонів<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
@@ -541,6 +561,15 @@
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Поляризація світла. Поляроїди</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="photoelectric-effect.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Фотоефект. Закони фотоефекту</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

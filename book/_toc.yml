@@ -21,7 +21,8 @@ parts:
       - file: astronomy_content/01_basics/apparent_and_absolute_magnitude
       - file: astronomy_content/01_basics/terrestrial_planets
       - file: astronomy_content/01_basics/giant_planets
-      - file: astronomy_content/01_basics/dwarf_planets_etc.ipynb
+      - file: astronomy_content/01_basics/dwarf_planets.ipynb
+      - file: astronomy_content/01_basics/asteroid_comet_meteoroid
       # - file: astronomy_content/01_basics/time_and_calendar
 
   - caption: ФІЗИКА
@@ -44,8 +45,10 @@ parts:
       - file: physics_content/electrodynamics/electric_current_metals
       - file: physics_content/electrodynamics/electrolysis
       - file: physics_content/electrodynamics/ec_gases
+      - file: physics_content/electrodynamics/electric-current-vacuum
       - file: physics_content/electrodynamics/magnetic_field
       - file: physics_content/electrodynamics/ampere_force_law
+      - file: physics_content/electrodynamics/lorentz-force
 
   - caption: ОПТИКА
     chapters:
@@ -57,6 +60,7 @@ parts:
       - file: physics_content/optics/electromagnetic_spectrum
       - file: physics_content/optics/polarization
       - file: physics_content/optics/quantum_em_field
+      - file: physics_content/optics/photoelectric-effect
 
   # - caption: Розділ Електричне поле
 
