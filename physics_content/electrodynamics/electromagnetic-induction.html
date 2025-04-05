@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Закон електромагнітної індукції &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics_content/electrodynamics/electromagnetic-induction';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Природа світла" href="../optics/nature_of_light.html" />
+    <link rel="prev" title="Сила Лоренца" href="lorentz-force.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dark_matter_and_energy.html">Темна матерія та темна енергія (Preview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/space-age.html">Початок космічної ери</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Закон електромагнітної індукції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics_content/electrodynamics/electromagnetic-induction.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics_content/electrodynamics/electromagnetic-induction.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics_content/electrodynamics/electromagnetic-induction.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Закон електромагнітної індукції</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Експериментальне виявлення електромагнітної індукції</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Фізичне поняття магнітного потоку</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Формулювання закону електромагнітної індукції</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Правило Ленца та його фізичний зміст</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Механізми виникнення ЕРС індукції</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Два основні випадки виникнення ЕРС індукції</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Практичне застосування вихрових струмів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Закон електромагнітної індукції<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Видатний англійський науковець Майкл Фарадей поставив перед собою амбітну мету, яку занотував у березні 1821 року: здійснити перетворення магнетизму в електрику. Знадобилося десять років наполегливих експериментів, і 29 серпня 1831 року вчений досягнув значного прориву — він уперше отримав електричний струм за рахунок магнітного поля. Цьому явищу Фарадей дав назву <strong>індукційний струм</strong>. Розглянемо детальніше, які фізичні умови необхідні для виникнення цього струму та як можна визначити його характеристики.</p>
+<section id="id2">
+<h2>Експериментальне виявлення електромагнітної індукції<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Розглянемо серію експериментів, які демонструють сучасну інтерпретацію класичних дослідів Фарадея.</p>
+<p><strong>Експериментальні спостереження</strong></p>
+<p><strong>Перший експеримент.</strong> Якщо з'єднати котушку з гальванометром та вводити в неї постійний магніт, можна спостерігати відхилення стрілки гальванометра, що свідчить про появу електричного струму. Варто зауважити, що швидкість руху магніту прямо впливає на силу струму - чим швидше рухається магніт, тим більше відхиляється стрілка. При зупинці магніту струм зникає, а стрілка повертається до нульової позначки. Цікаво, що при вийманні магніту з котушки стрілка відхиляється в протилежний бік, демонструючи зміну напрямку струму. Також якщо тримати магніт нерухомо, але рухати саму котушку, в ній також виникає електричний струм.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Experiencia_de_Faraday.gif" alt="Зображення" height="550" width="701">
+<br>
+Рис. 1. Ілюстрація до вищевказаного експерименту Фарадея.
+<a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=36761974">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Електромагнітна_індукція">Wiki</a></p><p><strong>Другий експеримент.</strong> При розміщенні двох котушок (А і В) на спільному осерді, де котушка А з'єднана з джерелом струму через реостат, а котушка В замкнена на гальванометр, можна спостерігати цікаве явище. Коли відбувається замикання чи розмикання кола котушки А або зміна сили струму в ній за допомогою реостата, в котушці В з'являється електричний струм. Важливою особливістю є те, що струм виникає як при збільшенні, так і при зменшенні сили струму в котушці А, але напрямки цих індукованих струмів в котушці В в кожному випадку будуть різними.</p>
+<p><strong>Третій і четвертий експерименти.</strong> При розташуванні котушки, замкненої на гальванометр, біля полюса потужного магніту і її різкому повороті гальванометр фіксує появу електричного струму. Електричний струм також виникає при зміні площі самої котушки (що можливо, якщо вона намотана на еластичний гумовий каркас).</p>
+<p>Аналіз цих чотирьох експериментів дозволяє зробити важливий висновок: індукційний струм у замкненому провідному контурі виникає тоді, коли змінюється кількість ліній магнітної індукції, що проходять через поверхню, обмежену цим контуром.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Induction_experiment.png" alt="Induction experiment.png" height="550" width="625">
+<br>
+Рис. 2. Експеримент Фарадея, що показує індукцію між витками дроту: рідинна батарея (справа) дає струм, який протікає через невелику котушку А, створюючи магнітне поле. Коли котушки нерухомі, струм не індукується. Але коли маленька котушка А вставляється або вилучається із великої котушки В, виникає струм, який реєструється гальванометром G.
+Автор: J. Lambert - Downloaded 2009-08-06 from <a rel="nofollow" class="external text" href="https://books.google.com/books?id=JzBAAAAAYAAJ&amp;pg=PA285">Arthur William Poyser (1892) Magnetism and electricity: A manual for students in advanced classes, Longmans, Green, &amp; Co., New York, p.285, fig.248</a> on Google Books. The drawing is signed Lambert, J., Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=9414728">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Закон_електромагнітної_індукції_Фарадея">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Electromagnetic_induction_-_solenoid_to_loop_-_animation.gif" alt="Electromagnetic induction - solenoid to loop - animation.gif" height="320" width="370">
+<br>
+Рис. 3. Через соленоїд ліворуч протікає змінний електричний струм, створюючи змінне магнітне поле. Це поле за допомогою електромагнітної індукції викликає електричний струм у дротяній петлі справа.
+By <a href="https://commons.wikimedia.org/wiki/User:Ponor" title="User:Ponor">Ponor</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=95026784">Link</a>. <a href="https://en.wikipedia.org/wiki/Electromagnetic_induction">Wiki</a></p></section>
+<section id="id3">
+<h2>Фізичне поняття магнітного потоку<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Для кількісного опису ліній магнітної індукції, що пронизують певну поверхню, у фізиці використовують спеціальну величину — <strong>магнітний потік</strong> (інша назва — <strong>потік магнітної індукції</strong>). Розглянемо плоский замкнений контур, розміщений у магнітному полі. Перпендикуляр <span class="math notranslate nohighlight">\(n\)</span> до поверхні, обмеженої контуром, утворює з вектором магнітної індукції <span class="math notranslate nohighlight">\(\vec{B}\)</span> кут <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<blockquote>
+<div><p><strong>Магнітний потік (потік магнітної індукції) Ф</strong> — фізична величина, що визначається добутком модуля магнітної індукції <span class="math notranslate nohighlight">\(B\)</span>, площі поверхні <span class="math notranslate nohighlight">\(S\)</span> та косинуса кута <span class="math notranslate nohighlight">\(\alpha\)</span> між вектором магнітної індукції і нормаллю до поверхні:</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\Phi = BS\cos\alpha\]</div>
+<p>У Міжнародній системі одиниць (СІ) <strong>одиницею вимірювання магнітного потоку</strong> служить вебер (Вб, Wb), названий на честь німецького фізика Вільгельма Вебера:</p>
+<div class="math notranslate nohighlight">
+\[[\Phi]=1 \text{ Вб (Wb)}.\]</div>
+<p>Один вебер відповідає магнітному потоку, створеному однорідним магнітним полем з індукцією 1 тесла, що пронизує перпендикулярну до ліній індукції поверхню площею 1 квадратний метр:</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ Вб} = 1 \text{ Тл} \cdot \text{м}^2.\]</div>
+<p><strong>Важливі властивості магнітного потоку:</strong></p>
+<ul class="simple">
+<li><p>Магнітний потік досягає максимального значення, коли поверхня розташована перпендикулярно до ліній магнітної індукції, і стає рівним нулю при паралельному розташуванні.</p></li>
+<li><p>У випадках неоднорідного магнітного поля або нерівної поверхні загальний магнітний потік можна обчислити, розбивши поверхню на малі ділянки <span class="math notranslate nohighlight">\(\Delta S\)</span>, знаходячи потік через кожну з них і підсумовуючи всі отримані значення.</p></li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Faraday_emf_experiment.svg" alt="Faraday emf experiment.svg" height="365" width="1035">
+<br>
+Рис. 4. Схема апарату Фарадея із залізним кільцем. Зміна магнітного потоку лівої котушки індукує струм у правій котушці.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:InverseHypercube" title="User:InverseHypercube">Eviatar Bach</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=16608674">Link</a>. <a href="https://en.wikipedia.org/wiki/Electromagnetic_induction">Wiki</a></p></section>
+<section id="id4">
+<h2>Формулювання закону електромагнітної індукції<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>На основі поняття магнітного потоку можна узагальнити результати дослідів Фарадея і сформулювати ключові закономірності.</p>
+<p><strong>Основні закономірності електромагнітної індукції:</strong></p>
+<p><strong>1. Індукційний струм виникає у замкненому провідному контурі лише за умови зміни магнітного потоку через поверхню, обмежену цим контуром.</strong></p>
+<p><strong>2. Інтенсивність індукційного струму в контурі прямо пропорційна швидкості зміни магнітного потоку.</strong></p>
+<p><strong>3. Напрямок індукційного струму залежить від характеру зміни магнітного потоку — зростання чи зменшення.</strong></p>
+<p>Виникає логічне запитання: що примушує електричні заряди рухатися в контурі, не під'єднаному до джерела живлення? Відповідь полягає в тому, що при зміні магнітного потоку з'являються особливі неелектростатичні (сторонні) сили, які виконують роботу з переміщення електричних зарядів у контурі.</p>
+<p>Фізична величина, яка характеризує роботу сторонніх сил <span class="math notranslate nohighlight">\(A_{ст}\)</span> з переміщення одиничного позитивного заряду, називається <strong>електрорушійною силою індукції (ЕРС індукції)</strong> <span class="math notranslate nohighlight">\(\mathcal{E}_i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}_i = \frac{A_{ст}}{q}\]</div>
+<p>Використовуючи закон Ома, можна визначити силу індукційного струму <span class="math notranslate nohighlight">\(I_i\)</span> в контурі з опором <span class="math notranslate nohighlight">\(R\)</span>: <span class="math notranslate nohighlight">\(I_i = \frac{\mathcal{E}_i}{R}\)</span>.</p>
+<p>Майкл Фарадей експериментальним шляхом встановив залежність між ЕРС індукції та швидкістю зміни магнітного потоку.</p>
+<p><strong>Закон електромагнітної індукції Фарадея:</strong></p>
+<blockquote>
+<div><p><strong>Електрорушійна сила індукції чисельно дорівнює швидкості зміни магнітного потоку через поверхню, обмежену контуром, і має протилежний знак:</strong></p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}_i = -\frac{\Delta\Phi}{\Delta t}\]</div>
+<p>Від'ємний знак у формулі відображає <strong>правило Ленца</strong>, яке визначає напрямок індукційного струму.</p>
+</section>
+<section id="id5">
+<h2>Правило Ленца та його фізичний зміст<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Російський фізик Генріх Ленц (1804–1865) сформулював правило для визначення напрямку індукційного струму, яке отримало назву <strong>правило Ленца</strong>: індукційний струм, що виникає в замкненому провідному контурі, завжди спрямований таким чином, що створюваний ним магнітний потік протидіє зміні того магнітного потоку, який викликав появу цього струму.</p>
+<p>Для наочної демонстрації правила Ленца зручно використовувати пристрій, сконструйований самим ученим. Він складається з двох алюмінієвих кілець — суцільного та розрізаного, які закріплені на легкорухомому коромислі, що обертається навколо вертикальної осі.</p>
+<p><strong>Додаткові аспекти закону електромагнітної індукції:</strong></p>
+<ul class="simple">
+<li><p>При нерівномірній зміні магнітного потоку розглядають граничний випадок, коли інтервал часу наближається до нуля (<span class="math notranslate nohighlight">\(\Delta t \to 0\)</span>), що дає диференціальну форму закону:
+$<span class="math notranslate nohighlight">\(\mathcal{E}_i = -\Phi'(t)\)</span>$</p></li>
+<li><p>Для контуру з <span class="math notranslate nohighlight">\(N\)</span> витків проводу формула для ЕРС індукції модифікується:
+$<span class="math notranslate nohighlight">\(\mathcal{E}_i = -N\frac{\Delta\Phi}{\Delta t} = -N\Phi'(t)\)</span>$</p></li>
+<li><p>Враховуючи, що <span class="math notranslate nohighlight">\(\Phi = BS\cos\alpha\)</span>, ЕРС індукції можна виразити залежно від того, що саме змінюється:</p>
+<ul>
+<li><p>при зміні магнітного поля:
+$<span class="math notranslate nohighlight">\(\mathcal{E}_i = \frac{\Delta B}{\Delta t}S\cos\alpha = B'S\cos\alpha;\)</span>$</p></li>
+<li><p>при зміні площі контуру:
+$<span class="math notranslate nohighlight">\(\mathcal{E}_i = B\frac{\Delta S}{\Delta t}\cos\alpha = BS'\cos\alpha;\)</span>$</p></li>
+<li><p>при обертанні контуру в магнітному полі:
+$<span class="math notranslate nohighlight">\(\mathcal{E}_i = BS\frac{\Delta\cos\alpha}{\Delta t} = BS\cos'\alpha\)</span>$</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id6">
+<h2>Механізми виникнення ЕРС індукції<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Розглянемо фізичні причини появи сторонніх сил, які діють на заряди в провіднику.</p>
+<section id="id7">
+<h3>Два основні випадки виникнення ЕРС індукції<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Випадок 1: Рух провідника в магнітному полі</strong></p>
+<p>У цій ситуації на вільні електрони, що переміщуються разом із провідником, діє сила Лоренца: <span class="math notranslate nohighlight">\(F_л = |q|Bv\sin\alpha\)</span>. Відповідно до правила лівої руки, ця сила зміщує електрони вздовж провідника, викликаючи його поляризацію — один кінець набуває надлишку електронів (негативний заряд), а другий кінець відповідно заряджається позитивно.</p>
+<p>При замиканні провідника в електричному колі виникає індукційний струм. Джерелом цього струму виступає рухомий провідник, а силою, що виконує роботу всередині джерела, є сила Лоренца: <span class="math notranslate nohighlight">\(A_{ст} = F_л \cdot l = |q|Bv\sin\alpha \cdot l\)</span>.</p>
+<p>Використовуючи визначення ЕРС (<span class="math notranslate nohighlight">\(\mathcal{E}_i = \frac{A_{ст}}{|q|}\)</span>), отримуємо формулу для розрахунку ЕРС індукції в рухомому провіднику:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}_i = Bvl\sin\alpha\]</div>
+<p>Таким чином, у випадку руху провідника в магнітному полі <strong>сторонні сили мають магнітну природу</strong>.</p>
+<p><strong>Випадок 2: Зміна магнітного поля навколо нерухомого провідника</strong></p>
+<p>У цьому випадку <strong>сторонні сили мають електричну природу</strong>. Змінне магнітне поле породжує вихрове електричне поле, яке безпосередньо діє на вільні заряджені частинки в провіднику, надаючи їм спрямованого руху і створюючи індукційний струм.</p>
+<p>Вихрове електричне поле суттєво відрізняється від електростатичного поля (створеного нерухомими зарядами) такими характеристиками:</p>
+<ul class="simple">
+<li><p>Силові лінії вихрового електричного поля завжди замкнені. Їх напрямок можна визначити за допомогою правила лівої руки: якщо магнітна індукція поля зростає, великий палець спрямовують проти вектора <span class="math notranslate nohighlight">\(\vec{B}\)</span>; якщо індукція зменшується — за напрямком вектора <span class="math notranslate nohighlight">\(\vec{B}\)</span>.</p></li>
+<li><p>На відміну від електростатичного поля, робота вихрового електричного поля по замкненій траєкторії зазвичай не дорівнює нулю.</p></li>
+</ul>
+<p>Описане явище утворення вихрового електричного поля або електричної поляризації провідника при зміні магнітного поля чи при русі провідника в магнітному полі визначається як <strong>явище електромагнітної індукції</strong>.</p>
+</section>
+</section>
+<section id="id8">
+<h2>Практичне застосування вихрових струмів<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Коли суцільному металевому предмету, підвішеному між полюсами магніту, надають коливального руху, цей рух швидко припиняється. Причиною є виникнення в металі індукційних вихрових струмів, які згідно з правилом Ленца створюють власне магнітне поле, що протидіє руху пластини. Важливо зазначити, що інтенсивність цих струмів обернено пропорційна електричному опору тіла, яке здійснює коливання.</p>
+<p>Ці вихрові струми були детально досліджені французьким фізиком Леоном Фуко (1819–1868), тому їх називають <strong>струмами Фуко</strong>.</p>
+<blockquote>
+<div><p><strong>Струми Фуко</strong> — це індукційні вихрові струми, що виникають всередині провідника при зміні магнітного потоку через його поверхню.</p>
+</div></blockquote>
+<p>Ефект гальмування коливань через виникнення струмів Фуко застосовують для демпфування — цілеспрямованого гасіння коливань рухомих елементів у різних вимірювальних приладах, таких як гальванометри, сейсмографи та інші чутливі інструменти.</p>
+<p>Оскільки будь-який електричний струм супроводжується виділенням тепла, струми Фуко також мають теплову дію. Якщо помістити масивний металевий зразок у змінне магнітне поле, він нагрівається. Це явище використовують в індукційних печах для нагрівання та плавлення металів. Технологія полягає в розміщенні металу всередині котушки, через яку пропускають змінний струм високої частоти (зазвичай 500–800 Гц). Змінний струм генерує змінне магнітне поле, яке індукує в металі вихрові струми Фуко, що нагрівають його.</p>
+<p>Водночас, струми Фуко в магнітопроводах трансформаторів, генераторів та електродвигунів спричиняють небажане нагрівання і призводять до значних енергетичних втрат. Для зменшення цих втрат підвищують електричний опір відповідних деталей: їх виготовляють із тонких сталевих листів, розділених шарами діелектрика, або використовують спеціальні матеріали — ферити, які хоч і посилюють магнітне поле, але мають низьку електропровідність.</p>
+<p><img alt="Fardays_Law_Drawing" src="../../_images/Fardays_Law_Drawing.jpg" /></p>
+<p>Рис. Закон Фарадея та закон Ленца визначають індуковану ЕРС, створювану в котушці змінним магнітним полем</p>
+</section>
+<section id="id9">
+<h2>Додаткові матеріали (українською)<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D1%96%D1%82%D0%BD%D0%B0_%D1%96%D0%BD%D0%B4%D1%83%D0%BA%D1%86%D1%96%D1%8F">Електромагнітна індукція</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D1%96%D1%82%D0%BD%D0%BE%D1%97_%D1%96%D0%BD%D0%B4%D1%83%D0%BA%D1%86%D1%96%D1%97_%D0%A4%D0%B0%D1%80%D0%B0%D0%B4%D0%B5%D1%8F">Закон електромагнітної індукції Фарадея</a></p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electromagnetic_induction">Electromagnetic induction</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics_content\electrodynamics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lorentz-force.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Сила Лоренца</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../optics/nature_of_light.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Природа світла</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Експериментальне виявлення електромагнітної індукції</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Фізичне поняття магнітного потоку</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Формулювання закону електромагнітної індукції</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Правило Ленца та його фізичний зміст</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Механізми виникнення ЕРС індукції</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Два основні випадки виникнення ЕРС індукції</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Практичне застосування вихрових струмів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
