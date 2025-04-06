@@ -23,7 +23,10 @@ parts:
       - file: astronomy_content/01_basics/giant_planets
       - file: astronomy_content/01_basics/dwarf_planets.ipynb
       - file: astronomy_content/01_basics/asteroid_comet_meteoroid
+      - file: astronomy_content/01_basics/last-alert-system
       - file: astronomy_content/01_basics/space-age
+      - file: astronomy_content/01_basics/sun-basics
+      - file: astronomy_content/01_basics/solar-neutrino
       # - file: astronomy_content/01_basics/time_and_calendar
 
   - caption: ФІЗИКА
