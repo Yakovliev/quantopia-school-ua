@@ -52,6 +52,7 @@ parts:
       - file: physics_content/electrodynamics/ampere_force_law
       - file: physics_content/electrodynamics/lorentz-force
       - file: physics_content/electrodynamics/electromagnetic-induction
+      - file: physics_content/electrodynamics/eddy-current
 
   - caption: ОПТИКА
     chapters:
