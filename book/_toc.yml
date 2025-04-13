@@ -56,6 +56,8 @@ parts:
       - file: physics_content/electrodynamics/lorentz-force
       - file: physics_content/electrodynamics/electromagnetic-induction
       - file: physics_content/electrodynamics/eddy-current
+      - file: physics_content/electrodynamics/inductance
+      - file: physics_content/electrodynamics/magnetic-properties
 
   - caption: ОПТИКА
     chapters:
