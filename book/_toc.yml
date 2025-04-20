@@ -40,8 +40,10 @@ parts:
 
   - caption: МЕХАНІЧНІ КОЛИВАННЯ
     chapters:
-      - file: physics_content/oscillations-and_waves/mechanical-oscillations
-      - file: physics_content/oscillations-and_waves/pendulums
+      - file: physics_content/oscillations-and-waves/mechanical-oscillations
+      - file: physics_content/oscillations-and-waves/pendulums
+      - file: physics_content/oscillations-and-waves/resonance
+      - file: physics_content/oscillations-and-waves/mechanical-waves
 
   - caption: ЕЛЕКТРОДИНАМІКА
     chapters:
@@ -77,6 +79,11 @@ parts:
       - file: physics_content/optics/polarization
       - file: physics_content/optics/quantum_em_field
       - file: physics_content/optics/photoelectric-effect
+
+  - caption: АТОМНА І ЯДЕРНА ФІЗИКА
+    chapters:
+      - file: physics_content/nuclear-physics/rutherford-bohr
+      
 
   # - caption: Розділ Електричне поле
 
