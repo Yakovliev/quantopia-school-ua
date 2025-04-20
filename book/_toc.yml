@@ -38,6 +38,11 @@ parts:
       - file: physics_content/work_thermo
       - file: physics_content/first_law_thermo
 
+  - caption: МЕХАНІЧНІ КОЛИВАННЯ
+    chapters:
+      - file: physics_content/oscillations-and_waves/mechanical-oscillations
+      - file: physics_content/oscillations-and_waves/pendulums
+
   - caption: ЕЛЕКТРОДИНАМІКА
     chapters:
       - file: physics_content/electrodynamics/charge_01
@@ -59,6 +64,7 @@ parts:
       - file: physics_content/electrodynamics/inductance
       - file: physics_content/electrodynamics/magnetic-properties
       - file: physics_content/electrodynamics/electromagnetic-field
+      - file: physics_content/electrodynamics/oscillations
 
   - caption: ОПТИКА
     chapters:
