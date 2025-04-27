@@ -1,0 +1,1279 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Спектральний аналіз &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics_content/nuclear-physics/spectrums';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dark_matter_and_energy.html">Темна матерія та темна енергія (Preview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/last-alert-system.html">Планетарний захист. Система останнього сповіщення (Preview)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/star-classification.html">Зорі: від народження до загибелі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics_content/nuclear-physics/spectrums.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics_content/nuclear-physics/spectrums.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics_content/nuclear-physics/spectrums.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Спектральний аналіз</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Види спектрів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Смугасті спектри</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3. Основи спектрального аналізу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs">5. Спектри розріджених газів vs стиснених газів, рідин та твердих тіл</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Розріджені гази</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Стиснені гази</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Рідини та тверді тіла</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">6. Молекулярні спектри (смугасті спектри)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Основи спектрального аналізу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Принципи якісного та кількісного аналізу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Лінійчасті спектри: природа та інтерпретація</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Серії спектральних ліній</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Спектри різних станів речовини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Спектри розріджених газів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Спектри стиснених газів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Спектри рідин та твердих тіл</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Молекулярні спектри</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Смугасті спектри</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Структура молекулярних спектрів</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Молекулярні спектри</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Основи спектрального аналізу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Звідки ми знаємо властивості далеких зір</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Фраунгоферові лінії та їхнє значення для астрономії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Походження фраунгоферових ліній</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Значення для астрофізики</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Вимірювання температури зорі за її спектром</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Абсолютно чорне тіло та закон Планка</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Закон зміщення Віна</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Метод колірної температури</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Метод іонізаційної рівноваги</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Ефект Доплера та його застосування в астрономії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Формула ефекту Доплера для світла</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Червоне та блакитне зміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Застосування в астрономії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Висновки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">7. Фраунгоферові лінії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">8. Як виміряти температуру зорі на основі спектрів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">Абсолютно чорне тіло</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Закон зміщення Віна</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">Визначення температури зорі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">9. Ефект Доплера та червоне зміщення</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Ефект Доплера</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Червоне зміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Блакитне зміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">Космологічне червоне зміщення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">Висновки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Спектральний аналіз<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Коли сонячне світло проходить крізь призму, ми бачимо дивовижне явище - білий промінь розділяється на різнокольорові смуги, утворюючи веселку кольорів від червоного до фіолетового. Це явище відкрив ще Ісаак Ньютон у XVII столітті, і саме він назвав цю кольорову смугу спектром.</p>
+<p>Однак справжнє значення спектрів для науки стало зрозумілим лише у XIX столітті, коли вчені виявили, що спектри містять унікальну інформацію про хімічний склад речовин, їхню температуру та багато інших фізичних властивостей. Спектри стали своєрідними &quot;відбитками пальців&quot; атомів і молекул, за якими ми можемо ідентифікувати речовини навіть на величезних космічних відстанях.</p>
+<blockquote>
+<div><p><strong>Спектр</strong> - це розподіл інтенсивності випромінювання за частотами або довжинами хвиль. Коли світло розкладається на складові компоненти (наприклад, коли біле світло проходить через призму), ми отримуємо спектр.</p>
+</div></blockquote>
+<p>Ключове рівняння, що пов'язує частоту (<span class="math notranslate nohighlight">\(\nu\)</span>) і довжину хвилі (<span class="math notranslate nohighlight">\(\lambda\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{c}{\lambda}\]</div>
+<p>де <span class="math notranslate nohighlight">\(c\)</span> - швидкість світла (<span class="math notranslate nohighlight">\(3 \times 10^8\)</span> м/с).</p>
+<section id="id2">
+<h2>Види спектрів<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У природі існує три основні типи спектрів, і кожен з них несе свою унікальну інформацію про джерело випромінювання.</p>
+<blockquote>
+<div><p><strong>Неперервний спектр</strong> - спектр, у якого монохроматичні складові заповнюють без розривів інтервал довжин хвиль, в межах якого відбувається випромінювання.</p>
+</div></blockquote>
+<p>Неперервні спектри</p>
+<ul class="simple">
+<li><p>Характеризуються безперервним розподілом енергії за всіма довжинами хвиль</p></li>
+<li><p>Випромінюються твердими, рідкими тілами або стисненим газом, нагрітими до високих температур</p></li>
+<li><p>Приклад: спектр абсолютно чорного тіла, випромінювання від лампи розжарювання</p></li>
+</ul>
+<p>Класичним прикладом джерела з неперервним спектром є лампа розжарювання. Нагріта металева спіраль випромінює світло всіх видимих частот, утворюючи суцільну кольорову смугу у спектрі.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Spectrum_roygbiv.jpg" alt="Spectrum roygbiv.jpg" height="72" width="600">
+<br>
+Рис. Неперервний спектр видимого випромінювання.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Wars" title="User:Wars">Wars</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=989220">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Спектр">Wiki</a></p><hr class="docutils" />
+<blockquote>
+<div><p>Коли розріджений газ збуджується (наприклад, нагріванням або електричним розрядом), його атоми випромінюють світло тільки певних, строго визначених довжин хвиль. Це створює <strong>лінійчастий спектр випромінювання</strong>, де на темному фоні видно яскраві кольорові лінії.</p>
+</div></blockquote>
+<p>Наприклад, якщо у полум'я потрапляє невелика кількість кухонної солі, воно набуває яскраво-жовтого забарвлення. Цей ефект пояснюється присутністю у складі солі елемента Натрію, атоми якого відповідальні за характерне жовте світіння. Під впливом високої температури полум'я атоми Натрію отримують додаткову енергію та переходять у збуджений енергетичний стан. При поверненні до основного стану надлишкова енергія вивільняється у формі <strong>електромагнітного випромінювання</strong>. Згідно з постулатами квантової теорії Бора, це випромінювання має <strong>строго визначені частоти та, відповідно, довжини хвиль</strong>. У випадку Натрію найінтенсивніше випромінювання припадає на довжини хвиль, що відповідають жовтій ділянці видимого спектра.</p>
+<p>Експериментальні дослідження підтверджують, що при достатньому нагріванні атоми будь-якого хімічного елемента здатні випромінювати світло. Якщо пропустити це випромінювання через призму, то вузький пучок світла розкладається на декілька окремих пучків. Для розріджених газів в атомарному стані на екрані спектрографа можна спостерігати <strong>окремі кольорові лінії з широкими темними проміжками між ними</strong>. Такий набір ліній і називають <strong>лінійчастим спектром випромінювання</strong>.</p>
+<p>Варто підкреслити, що <strong>спектральні лінії конкретного хімічного елемента утворюють унікальний набір, який відрізняється від спектрів усіх інших елементів</strong>. Це дозволяє використовувати спектр як своєрідний &quot;відбиток пальця&quot; або &quot;паспорт&quot; хімічного елемента.</p>
+<p>Лінійчасті спектри випромінювання</p>
+<ul class="simple">
+<li><p>Виникають, коли збуджені атоми переходять у стани з нижчою енергією</p></li>
+<li><p>Представлені яскравими кольоровими лініями на темному фоні</p></li>
+<li><p>Кожна лінія відповідає конкретному електронному переходу</p></li>
+</ul>
+<blockquote>
+<div><p>Якщо світло з неперервним спектром (наприклад, від розжареного тіла) пропустити через холодний розріджений газ, то атоми газу поглинатимуть фотони саме тих енергій, які вони могли б випромінити у збудженому стані. У результаті, на фоні яскравого неперервного спектра з'являються темні лінії - <strong>лінійчастий спектр поглинання</strong>.</p>
+</div></blockquote>
+<p>Положення темних ліній у спектрі поглинання точно відповідає положенню яскравих ліній у спектрі випромінювання того ж елемента.</p>
+<p>Лінійчасті спектри поглинання</p>
+<ul class="simple">
+<li><p>Виникають, коли світло проходить через речовину, і атоми поглинають фотони певних енергій</p></li>
+<li><p>Представлені темними лініями на яскравому кольоровому фоні</p></li>
+<li><p>Темні лінії з'являються на тих самих довжинах хвиль, що й яскраві лінії у спектрі випромінювання того ж елемента</p></li>
+</ul>
+<p>Лінійчасті спектри (поглинання та випромінювання)</p>
+<ul class="simple">
+<li><p>Складаються з окремих спектральних ліній на певних довжинах хвиль</p></li>
+<li><p>Характерні для атомів у газоподібному стані</p></li>
+<li><p>Кожен хімічний елемент має унікальний &quot;відбиток пальців&quot; з ліній</p></li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Spectral-lines-emission.svg" alt="Emission lines" height="40" width="335">
+<br>
+Рис. Лінійчастий спектр випромінювання (або просто спектр випромінювання)
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=42405329">Link</a>. <a href="https://en.wikipedia.org/wiki/Astronomical_spectroscopy">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Spectral-lines-absorption.svg" alt="Absorption lines" height="40" width="335">
+<br>
+Рис. Лінійчастий спектр поглинання (або просто спектр поглинання)
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=42405327">Link</a>. <a href="https://en.wikipedia.org/wiki/Astronomical_spectroscopy">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Emission_spectrum-Fe.svg" alt="Emission spectrum-Fe.svg" height="124" width="946">
+<br>
+Рис. Спектр випромінювання заліза
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=6781561">Link</a>. <a href="https://en.wikipedia.org/wiki/Emission_spectrum">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/AtomicLineSpEm.svg" alt="AtomicLineSpEm.svg" height="190" width="339">
+<br>
+Рис. Схематична діаграма спонтанного випромінювання.
+By <a href="https://commons.wikimedia.org/wiki/User:Cwbm_(commons)" title="User:Cwbm (commons)">Cwbm (commons)</a> - Own work based on: <a href="https://commons.wikimedia.org/wiki/File:AtomicLineSpEm.png" title="File:AtomicLineSpEm.png">AtomicLineSpEm.png</a>, <a href="https://www.gnu.org/licenses/gpl-3.0.html" title="GNU General Public License v3">GPLv3</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=21924718">Link</a>. <a href="https://en.wikipedia.org/wiki/Emission_spectrum">Wiki</a></p><section id="id3">
+<h3>Смугасті спектри<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Складаються з груп близько розташованих ліній, що формують смуги</p></li>
+<li><p>Характерні для молекул</p></li>
+<li><p>Виникають через додаткові коливальні та обертальні енергетичні рівні</p></li>
+</ul>
+</section>
+</section>
+<section id="id4">
+<h2>3. Основи спектрального аналізу<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Спектральний аналіз — це метод визначення хімічного складу речовини за її спектром. Він базується на тому, що:</p>
+<ol class="arabic simple">
+<li><p>Кожен хімічний елемент випромінює світло з унікальним набором частот</p></li>
+<li><p>Ці частоти відповідають переходам електронів між енергетичними рівнями</p></li>
+</ol>
+<p>Принцип спектрального аналізу можна описати рівнянням Бора:</p>
+<div class="math notranslate nohighlight">
+\[E_2 - E_1 = h\nu\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E_2\)</span> і <span class="math notranslate nohighlight">\(E_1\)</span> — енергії рівнів</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span> — стала Планка (<span class="math notranslate nohighlight">\(6.626 \times 10^{-34}\)</span> Дж·с)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nu\)</span> — частота випромінювання</p></li>
+</ul>
+<p>Основні етапи спектрального аналізу:</p>
+<ol class="arabic simple">
+<li><p>Збудження атомів речовини (нагріванням, електричним розрядом тощо)</p></li>
+<li><p>Розкладання випроміненого світла у спектр</p></li>
+<li><p>Реєстрація та аналіз отриманого спектру</p></li>
+</ol>
+</section>
+<section id="vs">
+<h2>5. Спектри розріджених газів vs стиснених газів, рідин та твердих тіл<a class="headerlink" href="#vs" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Розріджені гази<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Дають чіткі лінійчасті спектри</p></li>
+<li><p>Атоми взаємодіють слабко, енергетичні рівні не збурені</p></li>
+<li><p>Лінії вузькі і чітко визначені</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Стиснені гази<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>При збільшенні тиску спектральні лінії розширюються</p></li>
+<li><p>Причина: зіткнення між атомами змінюють енергетичні рівні (ефект Штарка)</p></li>
+<li><p>Формула розширення лінії: <span class="math notranslate nohighlight">\(\Delta \lambda \propto n\)</span>, де <span class="math notranslate nohighlight">\(n\)</span> — концентрація атомів</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Рідини та тверді тіла<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Дають переважно неперервні спектри</p></li>
+<li><p>Атоми тісно взаємодіють, енергетичні рівні перекриваються</p></li>
+<li><p>У кристалах можуть спостерігатися смуги поглинання, пов'язані зі структурою кристалічної ґратки</p></li>
+</ul>
+</section>
+</section>
+<section id="id8">
+<h2>6. Молекулярні спектри (смугасті спектри)<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Молекулярні спектри складніші за атомні через додаткові ступені свободи молекул:</p>
+<ol class="arabic simple">
+<li><p><strong>Електронні переходи</strong> — дають основну структуру спектра</p></li>
+<li><p><strong>Коливальні рівні</strong> — виникають через коливання атомів у молекулі</p></li>
+<li><p><strong>Обертальні рівні</strong> — виникають через обертання молекули як цілого</p></li>
+</ol>
+<p>Енергія молекули може бути представлена як:</p>
+<div class="math notranslate nohighlight">
+\[E = E_{електронна} + E_{коливальна} + E_{обертальна}\]</div>
+<p>Коливальна енергія двоатомної молекули (гармонічне наближення):</p>
+<div class="math notranslate nohighlight">
+\[E_{коливальна} = (v + \frac{1}{2})h\nu_0\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v\)</span> — коливальне квантове число (0, 1, 2, ...)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nu_0\)</span> — частота коливань</p></li>
+</ul>
+<p>Обертальна енергія двоатомної молекули:</p>
+<div class="math notranslate nohighlight">
+\[E_{обертальна} = \frac{h^2}{8\pi^2I}J(J+1)\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I\)</span> — момент інерції молекули</p></li>
+<li><p><span class="math notranslate nohighlight">\(J\)</span> — обертальне квантове число (0, 1, 2, ...)</p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>Основи спектрального аналізу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Спектральний аналіз — це потужний метод дослідження речовин за їхніми спектрами. Його основи були закладені німецькими вченими Густавом Кірхгофом та Робертом Бунзеном у 1859-1860 роках.</p>
+<section id="id10">
+<h3>Принципи якісного та кількісного аналізу<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Спектральний аналіз дозволяє:</p>
+<ol class="arabic simple">
+<li><p><strong>Якісно</strong> визначити, які хімічні елементи присутні в досліджуваній речовині (за положенням ліній у спектрі)</p></li>
+<li><p><strong>Кількісно</strong> визначити концентрацію цих елементів (за інтенсивністю ліній)</p></li>
+</ol>
+<p>Для проведення спектрального аналізу використовують спеціальні прилади — спектрометри (або спектрографи). Основними елементами спектрометра є:</p>
+<ul class="simple">
+<li><p>Вхідна щілина, через яку проходить досліджуване випромінювання</p></li>
+<li><p>Диспергуючий елемент (призма або дифракційна ґратка), який розкладає світло в спектр</p></li>
+<li><p>Детектор, який реєструє розподіл інтенсивності у спектрі</p></li>
+</ul>
+</section>
+</section>
+<section id="id11">
+<h2>Лінійчасті спектри: природа та інтерпретація<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Щоб зрозуміти природу лінійчастих спектрів, ми повинні звернутися до квантової теорії. На початку XX століття Нільс Бор запропонував модель атома, яка пояснювала дискретний характер спектрів.</p>
+<p>Згідно з моделлю Бора, електрони в атомі можуть перебувати лише на певних дозволених орбітах з фіксованими значеннями енергії. Коли електрон переходить з вищого енергетичного рівня на нижчий, він випромінює фотон, енергія якого дорівнює різниці енергій цих рівнів:</p>
+<div class="math notranslate nohighlight">
+\[E_{\text{фотона}} = E_{\text{вищого рівня}} - E_{\text{нижчого рівня}} = h\nu\]</div>
+<p>де <span class="math notranslate nohighlight">\(h\)</span> — стала Планка, а <span class="math notranslate nohighlight">\(\nu\)</span> — частота випроміненого світла.</p>
+<p>Оскільки енергетичні рівні в атомах квантовані (приймають лише дискретні значення), то й енергії випромінених фотонів також квантовані, що призводить до появи окремих спектральних ліній.</p>
+<section id="id12">
+<h3>Серії спектральних ліній<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>У спектрі атома водню спостерігаються кілька серій ліній, які відповідають переходам електрона на різні кінцеві енергетичні рівні:</p>
+<ol class="arabic simple">
+<li><p><strong>Серія Лаймана</strong> — переходи на перший (найнижчий) рівень. Ці лінії лежать в ультрафіолетовій області спектра.</p></li>
+<li><p><strong>Серія Бальмера</strong> — переходи на другий рівень. Ці лінії лежать у видимій області спектра і позначаються як <span class="math notranslate nohighlight">\(H_\alpha\)</span> (червона), <span class="math notranslate nohighlight">\(H_\beta\)</span> (блакитна), <span class="math notranslate nohighlight">\(H_\gamma\)</span> (фіолетова) тощо.</p></li>
+<li><p><strong>Серія Пашена</strong> — переходи на третій рівень. Ці лінії лежать в інфрачервоній області.</p></li>
+</ol>
+<p>Довжини хвиль ліній в цих серіях можна обчислити за формулою Рідберга:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{\lambda} = R \left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)\]</div>
+<p>де <span class="math notranslate nohighlight">\(R\)</span> — стала Рідберга, <span class="math notranslate nohighlight">\(n_1\)</span> — номер нижнього рівня, <span class="math notranslate nohighlight">\(n_2\)</span> — номер верхнього рівня (<span class="math notranslate nohighlight">\(n_2 &gt; n_1\)</span>).</p>
+</section>
+</section>
+<section id="id13">
+<h2>Спектри різних станів речовини<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>Спектри суттєво залежать від агрегатного стану речовини та умов, у яких вона перебуває.</p>
+<section id="id14">
+<h3>Спектри розріджених газів<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>Розріджені гази, де атоми знаходяться на значних відстанях один від одного і слабко взаємодіють, дають чіткі лінійчасті спектри. Кожен атом можна розглядати як майже ізольовану систему, і його енергетичні рівні практично не збурюються сусідніми атомами.</p>
+</section>
+<section id="id15">
+<h3>Спектри стиснених газів<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>При підвищенні тиску газу відстані між атомами зменшуються, і їхня взаємодія стає суттєвішою. Це призводить до розширення спектральних ліній — явища, відомого як <strong>тиснове розширення</strong>. При дуже високому тиску лінії можуть розширитися настільки, що перекриються, утворюючи майже неперервний спектр.</p>
+</section>
+<section id="id16">
+<h3>Спектри рідин та твердих тіл<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>У рідинах і твердих тілах атоми розташовані дуже близько один до одного і сильно взаємодіють. Це призводить до значного розширення і навіть розщеплення енергетичних рівнів.</p>
+<p>У кристалах дискретні енергетичні рівні атомів розщеплюються на енергетичні зони, що містять велику кількість близьких рівнів. Це призводить до того, що спектри твердих тіл часто мають характер широких смуг або стають неперервними.</p>
+</section>
+</section>
+<section id="id17">
+<h2>Молекулярні спектри<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<p>На відміну від атомів, молекули мають додаткові ступені свободи — вони можуть обертатися та коливатися. Це ускладнює їхні енергетичні спектри.</p>
+<section id="id18">
+<h3>Смугасті спектри<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Молекули зазвичай дають <strong>смугасті спектри</strong> — групи близько розташованих ліній, які при спостереженні з низькою роздільною здатністю здаються суцільними смугами.</p>
+<p>Смугасті спектри виникають через те, що кожному електронному переходу відповідає багато можливих коливальних і обертальних переходів. Це призводить до розщеплення кожної &quot;чистої&quot; електронної лінії на серію близьких ліній, які формують спектральну смугу.</p>
+</section>
+<section id="id19">
+<h3>Структура молекулярних спектрів<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<p>Молекулярний спектр містить інформацію про:</p>
+<ol class="arabic simple">
+<li><p><strong>Електронну структуру</strong> молекули — визначає загальне розташування спектральних смуг</p></li>
+<li><p><strong>Коливальні рівні</strong> — створюють структуру всередині кожної електронної смуги</p></li>
+<li><p><strong>Обертальні рівні</strong> — утворюють тонку структуру всередині коливальних смуг</p></li>
+</ol>
+<p>Аналіз молекулярних спектрів дозволяє визначити:</p>
+<ul class="simple">
+<li><p>Міжатомні відстані в молекулі</p></li>
+<li><p>Силу хімічних зв'язків</p></li>
+<li><p>Моменти інерції молекули</p></li>
+<li><p>Потенціальну енергію взаємодії атомів</p></li>
+</ul>
+<p><strong>Лінійчасті спектри можна спостерігати тільки у розріджених газах, де атоми перебувають в ізольованому стані</strong>. Наприклад, спостерігаючи через призму за світінням газорозрядної трубки, можна бачити характерний лінійчастий спектр газу, яким вона заповнена.</p>
+<p>При збільшенні густини газу відбуваються зміни в спектрі: спектральні лінії стають ширшими, а коли взаємодія між частинками (атомами, молекулами, іонами) досягає значної інтенсивності, окремі лінії зливаються, утворюючи <strong>неперервний спектр</strong>. Ось чому <strong>тверді тіла, рідини та щільні гази у нагрітому стані демонструють неперервний спектр випромінювання</strong>.</p>
+<blockquote>
+<div><p>Важлива закономірність: газ найбільш інтенсивно поглинає електромагнітні хвилі тих самих довжин, які він випромінює у нагрітому стані. Тому <strong>темні лінії в спектрі поглинання розташовані точно на тих самих місцях, де у спектрі випромінювання спостерігаються яскраві лінії</strong>.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="id20">
+<h2>Молекулярні спектри<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<p>Спектри газів у молекулярному стані суттєво відрізняються від атомарних спектрів. Вони представлені не окремими лініями, а <strong>системою смуг, що складаються з великої кількості дуже близько розташованих ліній</strong>. Такі спектри отримали назву <strong>смугастих спектрів</strong>.</p>
+<p>Формування смугастого спектра обумовлене складнішою структурою молекул порівняно з окремими атомами. При отриманні енергії в молекулах відбуваються одночасно кілька типів енергетичних переходів: електрони в атомах переходять на вищі енергетичні рівні, виникають коливання атомів відносно положення рівноваги всередині молекули, а також змінюється обертальний рух молекули як цілого. Відповідно до законів квантової фізики, енергії коливальних та обертальних рухів також можуть набувати лише дискретних значень. В результаті кожен електронний енергетичний рівень розщеплюється на множину коливальних підрівнів. Це суттєво збільшує кількість можливих енергетичних переходів при поверненні молекули до основного стану, що призводить до появи надзвичайно великої кількості спектральних ліній, які зливаються у характерні широкі смуги.</p>
+</section>
+<section id="id21">
+<h2>Основи спектрального аналізу<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<p>Як було вже зазначено, вивчення лінійчастих спектрів випромінювання та поглинання одноатомних газів дає можливість визначити їхній хімічний склад. Це можливо завдяки тому, що кожен газ в атомарному стані характеризується власним унікальним набором спектральних ліній (тобто специфічним набором довжин хвиль). Положення цих ліній залишається незмінним незалежно від методу збудження атомів. На сьогодні науковці визначили та систематизували спектри всіх відомих хімічних елементів, створивши детальні спектральні таблиці.</p>
+<p>Аналізуючи інтенсивність спектральних ліній, можна також визначити концентрацію елементів у газовій суміші: більша кількість атомів певного елемента відображається у вигляді яскравіших ліній у спектрі випромінювання або більш виражених темних ліній у спектрі поглинання.</p>
+<blockquote>
+<div><p><strong>Спектральним аналізом</strong> називається метод якісного та кількісного визначення складу речовини на основі дослідження її спектра.</p>
+</div></blockquote>
+<p>За допомогою спектрального аналізу було здійснено чимало наукових відкриттів, зокрема виявлено раніше невідомі хімічні елементи. Першим таким елементом став Цезій (від латинського слова <em>caesius</em>, що означає &quot;блакитний&quot;). Цей надзвичайно рідкісний на Землі елемент отримав свою назву через наявність у його спектрі випромінювання двох яскравих блакитних ліній.</p>
+<p>Спектральний аналіз став революційним методом дослідження в астрофізиці. Завдяки йому вчені змогли встановити хімічний склад зірок, міжзоряних газових хмар та інших космічних об'єктів, перебуваючи на відстані мільйонів світлових років від них.</p>
+<p>Завдяки своїй універсальності та надзвичайній чутливості (метод дозволяє виявити присутність елемента навіть якщо його маса становить лише <span class="math notranslate nohighlight">\(10^{-10}\)</span> г) спектральний аналіз знайшов широке застосування в багатьох галузях науки і техніки - хімії, металургії, ядерній фізиці та інших сферах.</p>
+<p>Важливо зауважити, що для молекулярних газів спектральний аналіз проводиться за їхніми характерними смугастими спектрами. Для твердих і рідких речовин прямий спектральний аналіз неможливий - спочатку необхідно перевести досліджуваний зразок у газоподібний стан.</p>
+</section>
+<section id="id22">
+<h2>Звідки ми знаємо властивості далеких зір<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<p>Історія вивчення спектрів зірок розпочалась у 1802 році, коли британський науковець Вільям Хайд Волластон (1766–1828) вперше спостерігав темні лінії в спектрі сонячного світла. Розглядаючи сонячне випромінювання через спектроскоп, він помітив декілька темних смуг, що перетинали райдужний спектр. Однак Волластон помилково вважав їх дефектом оптичної призми. Лише через 17 років німецький фізик Йозеф Фраунгофер (1787–1826) довів, що ці лінії є природною властивістю сонячного світла. Сьогодні темні лінії поглинання в спектрі Сонця називають <strong>фраунгоферовими лініями</strong> на його честь.</p>
+<p>Дослідження ліній поглинання в зоряних спектрах дозволяє астрофізикам визначати фундаментальні характеристики небесних тіл: їхній елементний склад, температурні показники, тиск атмосфери, швидкість обертання та інші параметри.</p>
+<p>Відповідно до закону випромінювання Макса Планка, підвищення температури зорі призводить до зміщення максимуму енергії випромінювання в напрямку короткохвильової (фіолетової) частини спектра. Аналізуючи співвідношення інтенсивності випромінювання різних спектральних діапазонів, астрономи можуть <strong>досить точно визначати температуру поверхневих шарів зірок</strong>.</p>
+<p><strong>Ефект Допплера</strong> став неоціненним інструментом для вимірювання швидкості руху космічних об'єктів, визначення відстаней до них, а також виявлення екзопланет. Суть цього ефекту полягає в зміні спостережуваної довжини хвилі залежно від відносного руху джерела та спостерігача: при наближенні джерела довжина хвилі зменшується (частота зростає), а при віддаленні - збільшується (частота зменшується). Завдяки цьому фізичному явищу було зроблено фундаментальне відкриття: спектральні лінії далеких галактик демонструють систематичне зміщення в бік довгохвильової (червоної) частини спектра, що свідчить про їхнє віддалення від нашої галактики з колосальними швидкостями.</p>
+</section>
+<section id="id23">
+<h2>Фраунгоферові лінії та їхнє значення для астрономії<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<p>На початку XIX століття німецький оптик Йозеф Фраунгофер помітив темні лінії в спектрі Сонця. Ці лінії, які пізніше були названі <strong>фраунгоферовими лініями</strong>, виявилися ключовими для розуміння хімічного складу Сонця та інших зір.</p>
+<section id="id24">
+<h3>Походження фраунгоферових ліній<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<p>Фраунгоферові лінії — це лінії поглинання, які утворюються, коли світло від гарячої фотосфери Сонця проходить через холодніші зовнішні шари сонячної атмосфери (хромосферу). Атоми в цих шарах поглинають певні довжини хвиль, створюючи характерні темні лінії в спектрі.</p>
+<p>Найбільш помітні фраунгоферові лінії були позначені Фраунгофером літерами. Наприклад:</p>
+<ul class="simple">
+<li><p><strong>A</strong> і <strong>B</strong> — лінії, викликані поглинанням кисню в земній атмосфері</p></li>
+<li><p><strong>C</strong> — червона лінія водню <span class="math notranslate nohighlight">\(H_\alpha\)</span></p></li>
+<li><p><strong>D</strong> — жовта дублетна лінія натрію</p></li>
+<li><p><strong>E</strong> — лінія заліза</p></li>
+<li><p><strong>F</strong> — блакитна лінія водню <span class="math notranslate nohighlight">\(H_\beta\)</span></p></li>
+<li><p><strong>G</strong> — лінія заліза та кальцію</p></li>
+<li><p><strong>H</strong> і <strong>K</strong> — фіолетові лінії кальцію</p></li>
+</ul>
+</section>
+<section id="id25">
+<h3>Значення для астрофізики<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<p>Відкриття Фраунгофера стало основою для розвитку астрофізики. Аналіз фраунгоферових ліній дозволив:</p>
+<ol class="arabic simple">
+<li><p>Визначити хімічний склад Сонця та інших зір</p></li>
+<li><p>Виявити нові хімічні елементи (наприклад, гелій було вперше виявлено в спектрі Сонця)</p></li>
+<li><p>Вимірювати магнітні поля на Сонці (за ефектом Зеємана — розщепленням спектральних ліній у магнітному полі)</p></li>
+<li><p>Вивчати динаміку сонячної атмосфери (за доплерівським зсувом ліній)</p></li>
+</ol>
+</section>
+</section>
+<section id="id26">
+<h2>Вимірювання температури зорі за її спектром<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<p>Одним із найважливіших параметрів зорі є її температура. Існує кілька методів визначення температури зорі за її спектром.</p>
+<section id="id27">
+<h3>Абсолютно чорне тіло та закон Планка<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<p><strong>Абсолютно чорне тіло</strong> (АЧТ) — це ідеалізований об'єкт, який повністю поглинає все електромагнітне випромінювання, що падає на нього. При нагріванні АЧТ випромінює світло зі спектром, який описується законом Планка:</p>
+<div class="math notranslate nohighlight">
+\[B_\lambda(T) = \frac{2hc^2}{\lambda^5} \cdot \frac{1}{e^{hc/\lambda kT} - 1}\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(B_\lambda\)</span> — спектральна світність на одиницю довжини хвилі</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span> — стала Планка</p></li>
+<li><p><span class="math notranslate nohighlight">\(c\)</span> — швидкість світла</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> — довжина хвилі</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> — стала Больцмана</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> — абсолютна температура</p></li>
+</ul>
+<p>Зорі, особливо їхні фотосфери, досить добре апроксимуються моделлю абсолютно чорного тіла.</p>
+</section>
+<section id="id28">
+<h3>Закон зміщення Віна<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<p>З закону Планка випливає закон зміщення Віна, який встановлює, що довжина хвилі, на яку припадає максимум випромінювання, обернено пропорційна температурі:</p>
+<div class="math notranslate nohighlight">
+\[\lambda_{max} = \frac{b}{T}\]</div>
+<p>де <span class="math notranslate nohighlight">\(b \approx 2.9 \cdot 10^{-3}\)</span> м·К — стала Віна.</p>
+<p>Це означає, що чим гарячіша зоря, тим коротші довжини хвиль переважають у її випромінюванні:</p>
+<ul class="simple">
+<li><p>Холодні червоні зорі (T ≈ 3000 K) мають максимум у червоній або навіть інфрачервоній області</p></li>
+<li><p>Зорі середньої температури, як наше Сонце (T ≈ 5800 K), мають максимум у жовто-зеленій області</p></li>
+<li><p>Найгарячіші блакитні зорі (T ≈ 30000 K) мають максимум у синій або ультрафіолетовій області</p></li>
+</ul>
+</section>
+<section id="id29">
+<h3>Метод колірної температури<a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
+<p>Одним із практичних методів визначення температури зорі є вимірювання її колірного індексу — різниці видимих зоряних величин, виміряних у різних спектральних смугах (наприклад, B-V, де B — блакитна, а V — візуальна смуга).</p>
+<p>Колірний індекс пов'язаний з температурою зорі, оскільки відображає нахил її спектра. Для зір головної послідовності можна використовувати емпіричні залежності типу:</p>
+<div class="math notranslate nohighlight">
+\[T_{eff} \approx \frac{7000 \text{ K}}{(B-V) + 0.56}\]</div>
+</section>
+<section id="id30">
+<h3>Метод іонізаційної рівноваги<a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
+<p>Інший метод базується на аналізі ліній іонізованих атомів різних ступенів іонізації. Відношення інтенсивностей ліній, що належать різним іонізаційним станам одного й того ж елемента (наприклад, нейтрального заліза Fe I і одноразово іонізованого заліза Fe II), залежить від температури згідно з рівнянням Саха:</p>
+<div class="math notranslate nohighlight">
+\[\frac{N_{i+1}}{N_i} \cdot \frac{N_e}{N_0} = \frac{2Z_{i+1}}{Z_i} \left(\frac{2\pi m_e kT}{h^2}\right)^{3/2} e^{-\chi_i/kT}\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(N_i\)</span>, <span class="math notranslate nohighlight">\(N_{i+1}\)</span> — концентрації атомів у станах іонізації <span class="math notranslate nohighlight">\(i\)</span> та <span class="math notranslate nohighlight">\(i+1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(N_e\)</span> — концентрація електронів</p></li>
+<li><p><span class="math notranslate nohighlight">\(Z_i\)</span>, <span class="math notranslate nohighlight">\(Z_{i+1}\)</span> — статистичні суми станів</p></li>
+<li><p><span class="math notranslate nohighlight">\(\chi_i\)</span> — потенціал іонізації</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> — температура</p></li>
+</ul>
+</section>
+</section>
+<section id="id31">
+<h2>Ефект Доплера та його застосування в астрономії<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<p>Ефект Доплера — це зміна частоти хвиль при відносному русі джерела і приймача. Він спостерігається для всіх типів хвиль, включаючи електромагнітні.</p>
+<section id="id32">
+<h3>Формула ефекту Доплера для світла<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
+<p>Для світла формула ефекту Доплера в нерелятивістському наближенні має вигляд:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta \lambda}{\lambda_0} = \frac{v_r}{c}\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta \lambda = \lambda - \lambda_0\)</span> — зміна довжини хвилі</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda_0\)</span> — довжина хвилі у спокої</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_r\)</span> — радіальна швидкість (додатна при віддаленні)</p></li>
+<li><p><span class="math notranslate nohighlight">\(c\)</span> — швидкість світла</p></li>
+</ul>
+<p>При релятивістських швидкостях формула ускладнюється.</p>
+</section>
+<section id="id33">
+<h3>Червоне та блакитне зміщення<a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
+<p>Залежно від напрямку руху джерела відносно спостерігача, ефект Доплера призводить до:</p>
+<ol class="arabic simple">
+<li><p><strong>Червоного зміщення</strong> — якщо джерело віддаляється, довжина хвилі збільшується, і спектральні лінії зміщуються в червону (довгохвильову) частину спектра</p></li>
+<li><p><strong>Блакитного зміщення</strong> — якщо джерело наближається, довжина хвилі зменшується, і спектральні лінії зміщуються в синю (короткохвильову) частину спектра</p></li>
+</ol>
+</section>
+<section id="id34">
+<h3>Застосування в астрономії<a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
+<p>Ефект Доплера має численні застосування в астрономії:</p>
+<ol class="arabic simple">
+<li><p><strong>Вимірювання радіальних швидкостей зір</strong> — за зміщенням спектральних ліній можна визначити, наскільки швидко зоря наближається до нас або віддаляється</p></li>
+<li><p><strong>Виявлення зоряних пульсацій</strong> — періодичні зміни розмірів зорі призводять до періодичного доплерівського зміщення ліній</p></li>
+<li><p><strong>Відкриття екзопланет</strong> — планета, обертаючись навколо зорі, спричиняє періодичні коливання її радіальної швидкості, які можна виявити за доплерівським зміщенням</p></li>
+<li><p><strong>Визначення швидкості обертання зір</strong> — різні частини поверхні зорі мають різні радіальні швидкості, що призводить до розширення спектральних ліній</p></li>
+<li><p><strong>Виявлення розширення Всесвіту</strong> — червоне зміщення в спектрах далеких галактик свідчить про їхнє віддалення від нас, причому чим далі галактика, тим більше червоне зміщення (закон Габбла):</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[v = H_0 \cdot d\]</div>
+<p>де <span class="math notranslate nohighlight">\(v\)</span> — швидкість віддалення, <span class="math notranslate nohighlight">\(d\)</span> — відстань, а <span class="math notranslate nohighlight">\(H_0\)</span> — стала Габбла.</p>
+</section>
+</section>
+<section id="id35">
+<h2>Висновки<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
+<p>Спектральний аналіз є одним із найпотужніших методів вивчення Всесвіту. Він дозволяє нам визначати хімічний склад, температуру, швидкість і багато інших параметрів космічних об'єктів, навіть якщо вони знаходяться на відстані мільйонів і мільярдів світлових років від нас.</p>
+<p>Розуміння природи спектрів, від найпростіших атомних до складних молекулярних і суцільних, а також знання законів, які керують їхнім утворенням і зміною, є фундаментальним для сучасної астрофізики.</p>
+<p>Завдяки спектральному аналізу ми можемо &quot;читати&quot; світло, що приходить до нас від далеких зір і галактик, розкриваючи таємниці Всесвіту, недоступні для безпосереднього спостереження.</p>
+</section>
+<section id="id36">
+<h2>7. Фраунгоферові лінії<a class="headerlink" href="#id36" title="Link to this heading">#</a></h2>
+<p>Фраунгоферові лінії — темні лінії поглинання в спектрі Сонця, відкриті Йозефом Фраунгофером на початку XIX століття.</p>
+<ul class="simple">
+<li><p>Виникають, коли світло від гарячого ядра Сонця проходить через більш холодні зовнішні шари</p></li>
+<li><p>Хімічні елементи в сонячній атмосфері поглинають світло на характерних для них довжинах хвиль</p></li>
+<li><p>Найвідоміші лінії: D (натрій), H та K (кальцій), G (залізо)</p></li>
+</ul>
+<p>Фраунгоферові лінії дозволили визначити хімічний склад Сонця без необхідності відвідувати його, що стало революцією в астрономії.</p>
+</section>
+<section id="id37">
+<h2>8. Як виміряти температуру зорі на основі спектрів<a class="headerlink" href="#id37" title="Link to this heading">#</a></h2>
+<section id="id38">
+<h3>Абсолютно чорне тіло<a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
+<p>Абсолютно чорне тіло (АЧТ) — ідеальний об'єкт, який поглинає все падаюче на нього випромінювання. Спектр його випромінювання описується законом Планка:</p>
+<div class="math notranslate nohighlight">
+\[I(\lambda, T) = \frac{2hc^2}{\lambda^5} \cdot \frac{1}{e^{\frac{hc}{\lambda kT}} - 1}\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(I(\lambda, T)\)</span> — спектральна густина потоку випромінювання</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> — абсолютна температура</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> — стала Больцмана (<span class="math notranslate nohighlight">\(1.38 \times 10^{-23}\)</span> Дж/К)</p></li>
+</ul>
+</section>
+<section id="id39">
+<h3>Закон зміщення Віна<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
+<p>Максимум випромінювання АЧТ зміщується при зміні температури відповідно до закону Віна:</p>
+<div class="math notranslate nohighlight">
+\[\lambda_{max} \cdot T = b\]</div>
+<p>де <span class="math notranslate nohighlight">\(b = 2.9 \times 10^{-3}\)</span> м·К — стала Віна.</p>
+</section>
+<section id="id40">
+<h3>Визначення температури зорі<a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Метод колірної температури</strong>:</p>
+<ul class="simple">
+<li><p>Вимірюється інтенсивність випромінювання на двох довжинах хвиль</p></li>
+<li><p>Співвідношення інтенсивностей порівнюється з теоретичними для АЧТ різних температур</p></li>
+</ul>
+</li>
+<li><p><strong>Метод спектральної класифікації</strong>:</p>
+<ul class="simple">
+<li><p>Зорі класифікуються за спектральними типами (O, B, A, F, G, K, M)</p></li>
+<li><p>Кожному типу відповідає певний діапазон температур</p></li>
+<li><p>Визначається наявність характерних ліній елементів</p></li>
+</ul>
+</li>
+<li><p><strong>Метод максимуму випромінювання</strong>:</p>
+<ul class="simple">
+<li><p>Визначається довжина хвилі, на якій інтенсивність випромінювання максимальна</p></li>
+<li><p>Застосовується закон Віна: <span class="math notranslate nohighlight">\(T = \frac{b}{\lambda_{max}}\)</span></p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="id41">
+<h2>9. Ефект Доплера та червоне зміщення<a class="headerlink" href="#id41" title="Link to this heading">#</a></h2>
+<section id="id42">
+<h3>Ефект Доплера<a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
+<p>Ефект Доплера — зміна спостережуваної частоти хвиль при відносному русі джерела і спостерігача.</p>
+<p>Формула для світла (нерелятивістське наближення):</p>
+<div class="math notranslate nohighlight">
+\[\frac{\Delta \lambda}{\lambda} = \frac{v_r}{c}\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta \lambda\)</span> — зміна довжини хвилі</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> — початкова довжина хвилі</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_r\)</span> — променева швидкість (проекція швидкості на лінію &quot;спостерігач-джерело&quot;)</p></li>
+<li><p><span class="math notranslate nohighlight">\(c\)</span> — швидкість світла</p></li>
+</ul>
+</section>
+<section id="id43">
+<h3>Червоне зміщення<a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Виникає, коли джерело віддаляється від спостерігача</p></li>
+<li><p>Довжина хвилі збільшується (зсувається до червоного кінця спектра)</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_r &gt; 0\)</span>, <span class="math notranslate nohighlight">\(\Delta \lambda &gt; 0\)</span></p></li>
+</ul>
+</section>
+<section id="id44">
+<h3>Блакитне зміщення<a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Виникає, коли джерело наближається до спостерігача</p></li>
+<li><p>Довжина хвилі зменшується (зсувається до синього кінця спектра)</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_r &lt; 0\)</span>, <span class="math notranslate nohighlight">\(\Delta \lambda &lt; 0\)</span></p></li>
+</ul>
+</section>
+<section id="id45">
+<h3>Космологічне червоне зміщення<a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
+<p>Окремий випадок — космологічне червоне зміщення, пов'язане з розширенням Всесвіту:</p>
+<div class="math notranslate nohighlight">
+\[z = \frac{\lambda_{спостережувана} - \lambda_{випромінена}}{\lambda_{випромінена}} = \frac{a_{тепер}}{a_{тоді}} - 1\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(z\)</span> — параметр червоного зміщення</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> — масштабний фактор Всесвіту</p></li>
+</ul>
+</section>
+</section>
+<section id="id46">
+<h2>Висновки<a class="headerlink" href="#id46" title="Link to this heading">#</a></h2>
+<p>Спектральний аналіз є потужним інструментом дослідження природи — від визначення складу речовин на Землі до вивчення далеких зір і галактик. Він дозволяє:</p>
+<ul class="simple">
+<li><p>Визначати хімічний склад об'єктів</p></li>
+<li><p>Вимірювати температуру віддалених тіл</p></li>
+<li><p>Визначати швидкість руху космічних об'єктів</p></li>
+<li><p>Вивчати фізичні процеси в атомах і молекулах</p></li>
+</ul>
+<p>Розуміння спектрів є фундаментальним для сучасної астрофізики, хімії та фізики, а спектроскопія залишається одним із найважливіших методів дослідження у природничих науках.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Fraunhofer_lines.svg" alt="Fraunhofer lines.svg" height="225" width="768">
+<br>
+Рис. Сонячний спектр з лініями Фраунгофера (лініями поглинання).
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=7003857">Link</a>. <a href="https://en.wikipedia.org/wiki/Fraunhofer_lines">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Spectrum_of_blue_sky.svg" alt="Spectrum of blue sky.svg" height="500" width="791">
+<br>
+Рис. Довжини хвиль візуального спектру від 380 до приблизно 740 нанометрів (нм).Зниження інтенсивності спостерігаються у вигляді темних ліній на довжинах хвиль ліній Фраунгофера.
+By <a href="https://commons.wikimedia.org/wiki/User:Eric_Bajart" title="User:Eric Bajart">Eric Bajart</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=10586771">Link</a>. <a href="https://en.wikipedia.org/wiki/Fraunhofer_lines">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Абсолютно_чорне_тіло.svg" alt="Абсолютно чорне тіло.svg" height="500" width="578">
+<br>
+Рис. Рух променів світла в абсолютно чорному тілі.
+Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=162121596">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Абсолютно_чорне_тіло">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Black_body.svg" alt="Black body.svg" height="480" width="600">
+<br>
+Рис. Криві абсолютно чорного тіла для різних температур.
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=10555337">Link</a>. <a href="https://en.wikipedia.org/wiki/Astronomical_spectroscopy">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Redshift_blueshift.svg" alt="Redshift blueshift.svg" height="500" width="800">
+<br>
+Рис. Червоне зміщення та синє зміщення.
+By <a href="https://commons.wikimedia.org/wiki/User:Ales_Tosovsky~commonswiki" title="User:Ales Tosovsky~commonswiki">Aleš Tošovský</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=662534">Link</a>. <a href="https://en.wikipedia.org/wiki/Astronomical_spectroscopy">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Wiki_Spect_Binaries_v2.gif" alt="Wiki Spect Binaries v2.gif" height="500" width="717">
+<br>
+Рис. Дві зірки різного розміру, що обертаються навколо центру мас. Можна побачити розщеплення спектру залежно від положення та швидкості зірок.
+By Primefac - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=30045878">Link</a>. <a href="https://en.wikipedia.org/wiki/Astronomical_spectroscopy">Wiki</a></p><p>Смугастий спектр - спектр, монохроматичні складові якого утворюють групи (смуги), що складаються з багатьох тісно розташованих ліній емісії. Смуги випромінювання різних хімічних елементів різні, на чому заснований спектральний аналіз речовини при аналізі сполук невідомого складу.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Nitrogen.Spectrum.Vis.jpg" alt="Nitrogen.Spectrum.Vis.jpg" height="40" width="784">
+<br>
+Рис. Смугастий спектр видимого випромінювання азоту.
+Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=284840">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Спектр">Wiki</a></p><p><img alt="image.png" src="physics_content/nuclear-physics/attachment:image.png" /></p>
+<p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D0%BA%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7">https://uk.wikipedia.org/wiki/Спектральний_аналіз</a></p>
+</section>
+<section id="id47">
+<h2>Додаткові матеріали (українською)<a class="headerlink" href="#id47" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D0%BA%D1%82%D1%80">Спектр</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D0%B1%D1%81%D0%BE%D0%BB%D1%8E%D1%82%D0%BD%D0%BE_%D1%87%D0%BE%D1%80%D0%BD%D0%B5_%D1%82%D1%96%D0%BB%D0%BE">Абсолютно чорне тіло</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D0%BA%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7">Спектральний аналіз</a></p></li>
+</ul>
+</section>
+<section id="id48">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id48" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Emission_spectrum">Emission spectrum</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Spectral_analysis">Spectral analysis</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Spectroscopy">Spectroscopy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Absorption_spectroscopy">Absorption spectroscopy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Fraunhofer_lines">Fraunhofer lines</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Astronomical_spectroscopy">Astronomical spectroscopy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Spectrum_analyzer">Spectrum analyzer</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Black-body_radiation">Black-body radiation</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics_content\nuclear-physics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Види спектрів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Смугасті спектри</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3. Основи спектрального аналізу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs">5. Спектри розріджених газів vs стиснених газів, рідин та твердих тіл</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Розріджені гази</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Стиснені гази</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Рідини та тверді тіла</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">6. Молекулярні спектри (смугасті спектри)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Основи спектрального аналізу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Принципи якісного та кількісного аналізу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Лінійчасті спектри: природа та інтерпретація</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Серії спектральних ліній</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Спектри різних станів речовини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Спектри розріджених газів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Спектри стиснених газів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Спектри рідин та твердих тіл</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Молекулярні спектри</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Смугасті спектри</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Структура молекулярних спектрів</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Молекулярні спектри</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Основи спектрального аналізу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Звідки ми знаємо властивості далеких зір</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Фраунгоферові лінії та їхнє значення для астрономії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Походження фраунгоферових ліній</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Значення для астрофізики</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Вимірювання температури зорі за її спектром</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Абсолютно чорне тіло та закон Планка</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Закон зміщення Віна</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Метод колірної температури</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Метод іонізаційної рівноваги</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Ефект Доплера та його застосування в астрономії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Формула ефекту Доплера для світла</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Червоне та блакитне зміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Застосування в астрономії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">Висновки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">7. Фраунгоферові лінії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">8. Як виміряти температуру зорі на основі спектрів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">Абсолютно чорне тіло</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">Закон зміщення Віна</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">Визначення температури зорі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">9. Ефект Доплера та червоне зміщення</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">Ефект Доплера</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Червоне зміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id44">Блакитне зміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id45">Космологічне червоне зміщення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">Висновки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id48">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
