@@ -29,6 +29,8 @@ parts:
       - file: astronomy_content/01_basics/solar-neutrino
       - file: astronomy_content/01_basics/solar-activity
       # - file: astronomy_content/01_basics/time_and_calendar
+      # - file: astronomy_content/01_basics/k2-18b-exoplanet
+      - file: astronomy_content/01_basics/star-classification
 
   - caption: ФІЗИКА
     chapters:
