@@ -86,6 +86,9 @@ parts:
   - caption: АТОМНА І ЯДЕРНА ФІЗИКА
     chapters:
       - file: physics_content/nuclear-physics/rutherford-bohr
+      #- file: physics_content/nuclear-physics/spectrums
+      - file: physics_content/nuclear-physics/atomic-nucleus
+      - file: physics_content/nuclear-physics/radioactivity
       
 
   # - caption: Розділ Електричне поле
