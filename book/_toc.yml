@@ -89,6 +89,7 @@ parts:
       #- file: physics_content/nuclear-physics/spectrums
       - file: physics_content/nuclear-physics/atomic-nucleus
       - file: physics_content/nuclear-physics/radioactivity
+      - file: physics_content/nuclear-physics/nuclear-chain-reaction
       
 
   # - caption: Розділ Електричне поле
