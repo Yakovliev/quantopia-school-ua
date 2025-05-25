@@ -32,6 +32,9 @@ parts:
       # - file: astronomy_content/01_basics/k2-18b-exoplanet
       - file: astronomy_content/01_basics/star-classification
       - file: astronomy_content/01_basics/milky-way
+      - file: astronomy_content/01_basics/galaxies
+      #- file: astronomy_content/01_basics/to_be_published
+      - file: astronomy_content/01_basics/universe
 
   - caption: ФІЗИКА
     chapters:
