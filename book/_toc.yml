@@ -13,17 +13,17 @@ parts:
       - file: astronomy_content/01_basics/cassini
       - file: astronomy_content/01_basics/astronomy_science
       - file: astronomy_content/01_basics/discoveries_inventions
-      - file: astronomy_content/01_basics/dark_matter_and_energy
+      # - file: astronomy_content/01_basics/dark_matter_and_energy
       - file: astronomy_content/01_basics/celestial_sphere
       - file: astronomy_content/01_basics/angle_dimensions
       - file: astronomy_content/01_basics/celestial_coordinates
       - file: astronomy_content/01_basics/distances
       - file: astronomy_content/01_basics/apparent_and_absolute_magnitude
-      - file: astronomy_content/01_basics/terrestrial_planets
+      - file: astronomy_content/01_basics/terrestrial_planets # To double-check
       - file: astronomy_content/01_basics/giant_planets
       - file: astronomy_content/01_basics/dwarf_planets.ipynb
       - file: astronomy_content/01_basics/asteroid_comet_meteoroid
-      - file: astronomy_content/01_basics/last-alert-system
+      # - file: astronomy_content/01_basics/last-alert-system
       - file: astronomy_content/01_basics/space-age
       - file: astronomy_content/01_basics/sun-basics
       - file: astronomy_content/01_basics/solar-neutrino
@@ -37,7 +37,8 @@ parts:
       - file: astronomy_content/01_basics/universe
 
   - caption: ФІЗИКА
-    chapters:
+    chapters: 
+      - file: physics_content/mechanics/kinematics-01
       - file: physics_content/internal_energy
         sections:
           - file: physics_content/heat_transfer
