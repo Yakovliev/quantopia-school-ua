@@ -67,6 +67,8 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Всесвіт" href="../../astronomy_content/01_basics/universe.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
   <meta name="docsearch:version" content="" />
@@ -117,8 +119,6 @@
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -196,7 +196,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/01_basics/universe.html">Всесвіт</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Механіка та кінематика</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
@@ -498,9 +499,9 @@
 <section id="id2">
 <h2>Основи механіки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <blockquote>
-<div><p><strong>Механіка</strong> - це розділ фізики, що вивчає закономірності механічного руху тіл та взаємодії, що відбуваються між ними. Це одна з найдавніших наук, основи якої заклали ще Галілео Галілей та Ісаак Ньютон.</p>
+<div><p><strong>Механіка</strong> - це розділ фізики, що вивчає закономірності механічного руху тіл, а також взаємодії, що його спричиняють. Простіше кажучи, механіка пояснює, як і чому тіла рухаються. Це одна з найдавніших наук, основи якої заклали ще Галілео Галілей та Ісаак Ньютон.</p>
 </div></blockquote>
-<p>Основна задача механіки полягає у тому, щоб <strong>визначати положення тіла у просторі в будь-який момент часу</strong>. Щоб розв'язати цю задачу, необхідно знати закони руху та початкові умови (положення та швидкість тіла в початковий момент часу).</p>
+<p><strong>Основна задача механіки</strong> - визначити положення тіла в просторі в будь-який момент часу. Знаючи початкове положення тіла, його швидкість та сили, що на нього діють, можна розрахувати, де воно буде знаходитись і як рухатиметься у майбутньому. Щоб розв'язати цю задачу, необхідно знати закони руху та початкові умови (положення та швидкість тіла в початковий момент часу).</p>
 <p>Механіка традиційно поділяється на три основні розділи:</p>
 <ul class="simple">
 <li><p><strong>Кінематика</strong>: Це розділ механіки, який вивчає рух тіл, але <strong>не розглядає причини, якими цей рух викликаний</strong>. Кінематика відповідає на питання &quot;Як рухається тіло?&quot;. Вона оперує такими поняттями, як швидкість, прискорення, переміщення.</p></li>
@@ -521,18 +522,30 @@
 <p>Різниця між цими поняттями полягає в тому, що тіло відліку є лише частиною системи відліку, яка є більш комплексним інструментом для опису руху.</p>
 <p>Дуже часто розміри тіла є несуттєвими порівняно з відстанями, які воно долає. У таких випадках для спрощення розрахунків використовують модель матеріальної точки.</p>
 <blockquote>
-<div><p><strong>Матеріальна точка</strong> - це тіло, розмірами, формою та внутрішньою структурою якого в умовах даної задачі можна знехтувати. Наприклад, Землю можна вважати матеріальною точкою при розгляді її руху навколо Сонця, але не можна - при вивченні її добового обертання.</p>
+<div><p><strong>Матеріальна точка</strong> - це тіло, розмірами, формою та внутрішньою структурою якого в умовах даної задачі можна знехтувати.</p>
 </div></blockquote>
+<p><strong>Коли можна вважати тіло матеріальною точкою?</strong></p>
+<ul class="simple">
+<li><p>Коли його розміри значно менші за відстані, які воно долає, або за відстані до інших тіл.</p></li>
+<li><p><strong>Приклад:</strong> Коли ми розраховуємо рух Землі навколо Сонця, розміри Землі (діаметр близько 12 756 км) несуттєві порівняно з радіусом її орбіти (близько 150 млн км). У цьому випадку Землю можна вважати матеріальною точкою. Однак, коли ми вивчаємо обертання Землі навколо власної осі, її розміри є принципово важливими, і вважати її матеріальною точкою не можна.</p></li>
+</ul>
 <blockquote>
 <div><p><strong>Траєкторія</strong> - це уявна лінія, яку описує тіло (матеріальна точка) під час свого руху в просторі. Прикладом видимої траєкторії є білий слід, що залишає літак у небі, або лінія від крейди на дошці.</p>
 </div></blockquote>
 <section id="l-vec-s">
 <h3><strong>Шлях (<span class="math notranslate nohighlight">\(l\)</span>) та Переміщення (<span class="math notranslate nohighlight">\(\vec{s}\)</span>)</strong><a class="headerlink" href="#l-vec-s" title="Link to this heading">#</a></h3>
 <p>Ці два поняття часто плутають, але вони мають різний фізичний зміст.</p>
+<p><strong>Шлях (<span class="math notranslate nohighlight">\(l\)</span>)</strong> - це фізична величина, що дорівнює довжині траєкторії, пройденої тілом за певний проміжок часу.</p>
 <ul class="simple">
-<li><p><strong>Шлях (<span class="math notranslate nohighlight">\(l\)</span>)</strong> - це фізична величина, що дорівнює <strong>довжині траєкторії</strong>, якою рухалося тіло. Шлях є <strong>скалярною</strong> величиною, тобто має лише числове значення (наприклад, 10 км).</p></li>
-<li><p><strong>Переміщення (<span class="math notranslate nohighlight">\(\vec{s}\)</span>)</strong> - це <strong>вектор</strong>, що сполучає початкове положення тіла з його кінцевим положенням. Як будь-який вектор, переміщення характеризується не тільки значенням (модулем), але й напрямком.</p></li>
-<li><p><strong>Модуль переміщення (<span class="math notranslate nohighlight">\(s\)</span>)</strong> - це довжина відрізка, що з'єднує початкову та кінцеву точки руху.</p></li>
+<li><p>Це <strong>скалярна</strong> величина, тобто вона має лише числове значення і не має напрямку.</p></li>
+<li><p>Шлях завжди є додатною величиною (<span class="math notranslate nohighlight">\(l \ge 0\)</span>).</p></li>
+<li><p><strong>Одиниця вимірювання в СІ:</strong> метр (м).</p></li>
+</ul>
+<p><strong>Переміщення (<span class="math notranslate nohighlight">\(\vec{s}\)</span>)</strong> - це вектор, що сполучає початкове положення тіла з його кінцевим положенням.</p>
+<ul class="simple">
+<li><p>Це <strong>векторна</strong> величина, тобто вона має і числове значення (модуль), і напрямок.</p></li>
+<li><p><strong>Модуль переміщення (<span class="math notranslate nohighlight">\(s\)</span>)</strong> - це довжина відрізка, що з'єднує початкову і кінцеву точки руху.</p></li>
+<li><p><strong>Одиниця вимірювання модуля переміщення в СІ:</strong> метр (м).</p></li>
 </ul>
 <p><strong>Порівняння шляху та модуля переміщення:</strong></p>
 <ul class="simple">
@@ -540,12 +553,19 @@
 <li><p>Шлях дорівнює модулю переміщення (<span class="math notranslate nohighlight">\(l = s\)</span>) лише в одному випадку: коли тіло рухається <strong>прямолінійно і в одному напрямку</strong>.</p></li>
 <li><p>Якщо тіло повернулося в початкову точку (наприклад, футболіст пробіг коло по стадіону і повернувся на старт), його переміщення дорівнює нулю (<span class="math notranslate nohighlight">\(\vec{s} = 0\)</span>), хоча шлях буде дорівнювати довжині кола (<span class="math notranslate nohighlight">\(l = 2\pi R\)</span>).</p></li>
 </ul>
+<p><em>Приклад:</em> Уявіть, що ви вийшли з дому (точка А), дійшли до магазину (точка Б), а потім повернулися додому.</p>
+<ul class="simple">
+<li><p><strong>Траєкторія:</strong> шлях від дому до магазину і назад.</p></li>
+<li><p><strong>Шлях (<span class="math notranslate nohighlight">\(l\)</span>):</strong> сума відстаней &quot;дім-магазин&quot; та &quot;магазин-дім&quot;. Якщо відстань до магазину 500 м, то шлях <span class="math notranslate nohighlight">\(l = 500 \text{ м} + 500 \text{ м} = 1000 \text{ м}\)</span>.</p></li>
+<li><p><strong>Переміщення (<span class="math notranslate nohighlight">\(\vec{s}\)</span>):</strong> оскільки ваше початкове і кінцеве положення збігаються (ви повернулися додому), вектор переміщення є нульовим: <span class="math notranslate nohighlight">\(\vec{s} = \vec{0}\)</span>.</p></li>
+<li><p><strong>Модуль переміщення (<span class="math notranslate nohighlight">\(s\)</span>):</strong> <span class="math notranslate nohighlight">\(s = 0\)</span> м.</p></li>
+</ul>
 <p><em>Приклад:</em> Автомобіль проїхав по прямій дорозі 3 км на схід, а потім повернув і проїхав 4 км на північ.</p>
 <ul class="simple">
 <li><p><strong>Шлях</strong> <span class="math notranslate nohighlight">\(l\)</span> = 3 км + 4 км = 7 км.</p></li>
-<li><p><strong>Переміщення</strong> <span class="math notranslate nohighlight">\(\vec{s}\)</span> - це вектор, напрямлений з точки старту до точки фінішу. Його <strong>модуль</strong> <span class="math notranslate nohighlight">\(s\)</span> можна знайти за теоремою Піфагора, оскільки рух автомобіля на схід, а потім на північ формує два катети прямокутного трикутника, а нам необхідно просто знайти гіпотенузу: <span class="math notranslate nohighlight">\(s = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)</span> км.</p></li>
+<li><p><strong>Переміщення</strong> <span class="math notranslate nohighlight">\(\vec{s}\)</span> - це вектор, напрямлений з точки старту до точки фінішу. Його <strong>модуль</strong> <span class="math notranslate nohighlight">\(s\)</span> можна знайти за теоремою Піфагора, оскільки рух автомобіля на схід, а потім на північ формує два катети прямокутного трикутника, а нам необхідно знайти гіпотенузу: <span class="math notranslate nohighlight">\(s = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)</span> км.</p></li>
 </ul>
-<p><strong>Відносність механічного руху</strong></p>
+<p><strong>Відносність механічного руху</strong>:</p>
 <ul class="simple">
 <li><p>Траєкторія, шлях, переміщення та швидкість руху залежать від вибору системи відліку. Це і є <strong>відносність руху</strong>.</p></li>
 <li><p><em>Приклад:</em> Для пасажира, що сидить у потязі, книги на столі нерухомі. Але для людини на пероні ці книги рухаються разом із потягом.</p></li>
@@ -554,25 +574,40 @@
 </section>
 <section id="id4">
 <h2>Класифікація механічних рухів<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<p><strong>За формою траєкторії</strong>:</p>
+<p><strong>Механічні рухи класифікують за формою траєкторії</strong></p>
 <ul class="simple">
 <li><p><strong>Прямолінійний рух</strong> - це рух, траєкторією якого є пряма лінія. Наприклад, рух автомобіля по прямій ділянці шосе.</p></li>
 <li><p><strong>Криволінійний рух</strong> - це рух, траєкторією якого є крива лінія. Наприклад, рух Землі навколо Сонця або рух автомобіля на повороті.</p></li>
 </ul>
-<p><strong>За характером зміни швидкості</strong>:</p>
-<ul>
-<li><p><strong>Рівномірний рух</strong> - це рух, під час якого тіло за будь-які рівні проміжки часу долає однаковий шлях (здійснює однакові переміщення). При такому русі швидкість тіла є сталою (<span class="math notranslate nohighlight">\(v = const\)</span>).</p>
-<ul>
-<li><p><strong>Формула для швидкості рівномірного руху:</strong></p>
+<p><strong>Механічні рухи також класифікують за характером зміни швидкості</strong></p>
+<blockquote>
+<div><p><strong>Швидкість</strong> - це векторна фізична величина, що характеризує стрімкість зміни положення тіла в просторі і дорівнює відношенню переміщення до часу, за який це переміщення відбулося.</p>
+</div></blockquote>
 <div class="math notranslate nohighlight">
-\[v = \frac{l}{t}\]</div>
-<p>де <span class="math notranslate nohighlight">\(l\)</span> - шлях, а <span class="math notranslate nohighlight">\(t\)</span> - час. Ця формула є визначенням, а не виводиться. З неї можна виразити шлях:</p>
-<div class="math notranslate nohighlight">
-\[l = v \cdot t\]</div>
-</li>
+\[\vec{v} = \frac{\vec{s}}{t}\]</div>
+<p><strong>Одиниця вимірювання в СІ:</strong> метр за секунду (позначається як м/с або <span class="math notranslate nohighlight">\(\frac{\text{м}}{\text{с}}\)</span>).</p>
+<p>Залежно від того, як змінюється швидкість, рух поділяють на рівномірний рух та нерівномірний рух.</p>
+<p><strong>Рівномірний рух</strong> - це рух, під час якого тіло за будь-які рівні проміжки часу здійснює однакові переміщення (долає однаковий шлях).</p>
+<ul class="simple">
+<li><p>При такому русі швидкість тіла є <strong>сталою</strong> за модулем і напрямком (<span class="math notranslate nohighlight">\(\vec{v} = \text{const}\)</span>).</p></li>
+<li><p><strong>Приклад:</strong> рух ескалатора в метро, рух Землі по орбіті на невеликих ділянках. Рівномірний прямолінійний рух у чистому вигляді зустрічається доволі рідко.</p></li>
 </ul>
-</li>
-<li><p><strong>Нерівномірний рух</strong> - це рух, під час якого тіло за рівні проміжки часу долає різний шлях. Швидкість при такому русі змінюється. Більшість рухів у природі є нерівномірними (наприклад, рух автобуса, який гальмує та розганяється). Для характеристики такого руху вводять поняття середньої та миттєвої швидкості.</p></li>
+<p><strong>Рівняння рівномірного прямолінійного руху:</strong></p>
+<p>Якщо тіло рухається вздовж осі ОХ, його координату в будь-який момент часу <span class="math notranslate nohighlight">\(t\)</span> можна знайти за формулою:</p>
+<div class="math notranslate nohighlight">
+\[x(t) = x_0 + v_x t\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x(t)\)</span> - координата тіла в момент часу <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_0\)</span> - початкова координата тіла (в момент <span class="math notranslate nohighlight">\(t=0\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_x\)</span> - проекція швидкості на вісь ОХ (може бути додатною, якщо рух в напрямку осі, і від'ємною, якщо рух проти осі).</p></li>
+</ul>
+<p><em>Це рівняння є розв'язком основної задачі механіки для даного типу руху.</em></p>
+<p><strong>Нерівномірний рух</strong> - це рух, під час якого тіло за рівні проміжки часу долає різний шлях.</p>
+<ul class="simple">
+<li><p>При такому русі швидкість тіла <strong>змінюється</strong> з часом.</p></li>
+<li><p><strong>Приклад:</strong> рух автобуса, який розганяється, гальмує і зупиняється. Більшість рухів у нашому житті є нерівномірними.
+Для опису нерівномірного руху використовують поняття середньої та миттєвої швидкості. Над вивченням нерівномірного руху зі сталим прискоренням (рівноприскореного руху) ми попрацюємо трохи згодом.</p></li>
 </ul>
 </section>
 </section>
@@ -607,6 +642,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../../astronomy_content/01_basics/universe.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Всесвіт</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../internal_energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
