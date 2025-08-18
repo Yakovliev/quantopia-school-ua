@@ -39,6 +39,8 @@ parts:
   - caption: ФІЗИКА
     chapters: 
       - file: physics_content/mechanics/kinematics-01
+      - file: physics_content/mechanics/kinematics-02
+      - file: physics_content/mechanics/kinematics-03
       - file: physics_content/internal_energy
         sections:
           - file: physics_content/heat_transfer

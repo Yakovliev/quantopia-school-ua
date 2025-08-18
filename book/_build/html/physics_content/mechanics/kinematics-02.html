@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Механіка та кінематика &#8212; Quantopia School UA</title>
+    <title>Швидкість та відносність руху &#8212; Quantopia School UA</title>
   
   
   
@@ -62,13 +62,13 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'physics_content/mechanics/kinematics-01';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics_content/mechanics/kinematics-02';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Швидкість та відносність руху" href="kinematics-02.html" />
-    <link rel="prev" title="Всесвіт" href="../../astronomy_content/01_basics/universe.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Механіка та кінематика" href="kinematics-01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
   <meta name="docsearch:version" content="" />
@@ -197,8 +197,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Механіка та кінематика</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Швидкість та відносність руху</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
@@ -314,7 +314,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics_content/mechanics/kinematics-01.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics_content/mechanics/kinematics-02.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -362,7 +362,7 @@
       
       
       
-      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics_content/mechanics/kinematics-01.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics_content/mechanics/kinematics-02.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -392,7 +392,7 @@
       
       
       
-      <li><a href="../../_sources/physics_content/mechanics/kinematics-01.ipynb" target="_blank"
+      <li><a href="../../_sources/physics_content/mechanics/kinematics-02.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -468,7 +468,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Механіка та кінематика</h1>
+    <h1>Швидкість та відносність руху</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -478,13 +478,18 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основи механіки</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ключові поняття кінематики</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-vec-s">Шлях <span class="math notranslate nohighlight">\(l\)</span> та Переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Рівномірний прямолінійний рух та його характеристики</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рівняння координати: як знайти тіло в будь-який момент часу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Графічне представлення рівномірного руху</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Нерівномірний рух: коли швидкість змінюється</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Середня швидкість: узагальнена характеристика руху</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Миттєва швидкість: що показує спідометр?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Класифікація механічних рухів</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Відносність руху: все залежить від спостерігача</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Закон додавання переміщень і швидкостей</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -497,160 +502,169 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Механіка та кінематика<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>Швидкість та відносність руху<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Ми вже розібралися з базовими поняттями кінематики, такими як система відліку, траєкторія, шлях та переміщення. Тепер настав час детальніше дослідити одну з ключових характеристик руху - <strong>швидкість</strong>. Ми з'ясуємо, чому простих уявлень про неї недостатньо для опису реальних рухів і як фізики вирішують цю проблему за допомогою різних видів швидкості.</p>
 <section id="id2">
-<h2>Основи механіки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>Рівномірний прямолінійний рух та його характеристики<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Як ми пам'ятаємо, рівномірний прямолінійний рух - це найпростіший вид руху, під час якого тіло за будь-які рівні проміжки часу здійснює однакові переміщення. Це означає, що його швидкість залишається незмінною як за значенням, так і за напрямком (<span class="math notranslate nohighlight">\(\vec{v} = \text{const}\)</span>).</p>
 <blockquote>
-<div><p><strong>Механіка</strong> - це розділ фізики, що вивчає закономірності механічного руху тіл, а також взаємодії, що його спричиняють. Простіше кажучи, механіка пояснює, як і чому тіла рухаються. Це одна з найдавніших наук, основи якої заклали ще Галілео Галілей та Ісаак Ньютон.</p>
-</div></blockquote>
-<p><strong>Основна задача механіки</strong> - визначити положення тіла в просторі в будь-який момент часу. Знаючи початкове положення тіла, його швидкість та сили, що на нього діють, можна розрахувати, де воно буде знаходитись і як рухатиметься у майбутньому. Щоб розв'язати цю задачу, необхідно знати закони руху та початкові умови (положення та швидкість тіла в початковий момент часу).</p>
-<p>Механіка традиційно поділяється на три основні розділи:</p>
-<ul class="simple">
-<li><p><strong>Кінематика</strong>: Це розділ механіки, який вивчає рух тіл, але <strong>не розглядає причини, якими цей рух викликаний</strong>. Кінематика відповідає на питання &quot;Як рухається тіло?&quot;. Вона оперує такими поняттями, як швидкість, прискорення, переміщення.</p></li>
-<li><p><strong>Динаміка</strong>: Цей розділ вивчає рух тіл у зв'язку з причинами, що його викликали, тобто <strong>під дією сил</strong>. Динаміка відповідає на питання &quot;Чому тіло рухається саме так?&quot;. Вона оперує поняттями маси, сили, імпульсу, енергії.</p></li>
-<li><p><strong>Статика</strong>: Вивчає умови рівноваги тіл, тобто умови, за яких тіла перебувають у стані спокою. Наприклад, закони статики дозволяють розрахувати, які сили діють на балки мосту, щоб він залишався нерухомим під навантаженням.</p></li>
-</ul>
-</section>
-<section id="id3">
-<h2>Ключові поняття кінематики<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<blockquote>
-<div><p><strong>Механічний рух</strong> - це зміна з часом положення тіла в просторі відносно інших тіл. Наприклад, автомобіль рухається відносно дороги, планети рухаються відносно Сонця, а учень йде відносно будівлі школи. Важливо, що будь-який рух є відносним.</p>
-</div></blockquote>
-<p>Щоб описати рух, нам завжди потрібно вказати, відносно чого цей рух відбувається.</p>
-<ul class="simple">
-<li><p><strong>Тіло відліку</strong> - це тіло, яке умовно вважається нерухомим і відносно якого вивчається рух інших тіл. За тіло відліку можна обрати будь-який об'єкт: дерево на узбіччі, вокзал, Землю або навіть Сонце.</p></li>
-<li><p><strong>Система відліку (СВ)</strong> - це сукупність, що включає <strong>тіло відліку</strong>, пов'язану з ним <strong>систему координат</strong> (наприклад, одновимірну, двовимірну чи тривимірну) та <strong>прилад для вимірювання часу</strong> (годинник). Саме в системі відліку ми можемо точно описати рух за допомогою математичних рівнянь.</p></li>
-</ul>
-<p>Різниця між цими поняттями полягає в тому, що тіло відліку є лише частиною системи відліку, яка є більш комплексним інструментом для опису руху.</p>
-<p>Дуже часто розміри тіла є несуттєвими порівняно з відстанями, які воно долає. У таких випадках для спрощення розрахунків використовують модель матеріальної точки.</p>
-<blockquote>
-<div><p><strong>Матеріальна точка</strong> - це тіло, розмірами, формою та внутрішньою структурою якого в умовах даної задачі можна знехтувати.</p>
-</div></blockquote>
-<p><strong>Коли можна вважати тіло матеріальною точкою?</strong></p>
-<ul class="simple">
-<li><p>Коли його розміри значно менші за відстані, які воно долає, або за відстані до інших тіл.</p></li>
-<li><p><strong>Приклад:</strong> Коли ми розраховуємо рух Землі навколо Сонця, розміри Землі (діаметр близько 12 756 км) несуттєві порівняно з радіусом її орбіти (близько 150 млн км). У цьому випадку Землю можна вважати матеріальною точкою. Однак, коли ми вивчаємо обертання Землі навколо власної осі, її розміри є принципово важливими, і вважати її матеріальною точкою не можна.</p></li>
-</ul>
-<blockquote>
-<div><p><strong>Траєкторія</strong> - це уявна лінія, яку описує тіло (матеріальна точка) під час свого руху в просторі. Прикладом видимої траєкторії є білий слід, що залишає літак у небі, або лінія від крейди на дошці.</p>
-</div></blockquote>
-<section id="l-vec-s">
-<h3>Шлях <span class="math notranslate nohighlight">\(l\)</span> та Переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span><a class="headerlink" href="#l-vec-s" title="Link to this heading">#</a></h3>
-<p>Ці два поняття часто плутають, але вони мають різний фізичний зміст.</p>
-<p><strong>Шлях <span class="math notranslate nohighlight">\(l\)</span></strong> - це фізична величина, що дорівнює довжині траєкторії, пройденої тілом за певний проміжок часу.</p>
-<ul class="simple">
-<li><p>Це <strong>скалярна</strong> величина, тобто вона має лише числове значення і не має напрямку.</p></li>
-<li><p>Шлях завжди є додатною величиною <span class="math notranslate nohighlight">\(l \ge 0\)</span>.</p></li>
-<li><p><strong>Одиниця вимірювання в СІ:</strong> метр (м).</p></li>
-</ul>
-<p><strong>Переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span></strong> - це вектор, що сполучає початкове положення тіла з його кінцевим положенням.</p>
-<ul class="simple">
-<li><p>Це <strong>векторна</strong> величина, тобто вона має і числове значення (модуль), і напрямок.</p></li>
-<li><p><strong>Модуль переміщення <span class="math notranslate nohighlight">\(s\)</span></strong> - це довжина відрізка, що з'єднує початкову і кінцеву точки руху.</p></li>
-<li><p><strong>Одиниця вимірювання модуля переміщення в СІ:</strong> метр (м).</p></li>
-</ul>
-<p><strong>Порівняння шляху та модуля переміщення:</strong></p>
-<ul class="simple">
-<li><p>Модуль переміщення <strong>ніколи не може бути більшим</strong> за пройдений шлях.</p></li>
-<li><p>Шлях дорівнює модулю переміщення <span class="math notranslate nohighlight">\(l = s\)</span> лише в одному випадку: коли тіло рухається <strong>прямолінійно і в одному напрямку</strong>.</p></li>
-<li><p>Якщо тіло повернулося в початкову точку (наприклад, футболіст пробіг коло по стадіону і повернувся на старт), його переміщення дорівнює нулю <span class="math notranslate nohighlight">\(\vec{s} = 0\)</span>, хоча шлях буде дорівнювати довжині кола <span class="math notranslate nohighlight">\(l = 2\pi R\)</span>.</p></li>
-</ul>
-<p><em>Приклад:</em> Уявіть, що ви вийшли з дому (точка А), дійшли до магазину (точка Б), а потім повернулися додому.</p>
-<ul class="simple">
-<li><p><strong>Траєкторія:</strong> шлях від дому до магазину і назад.</p></li>
-<li><p><strong>Шлях <span class="math notranslate nohighlight">\(l\)</span>:</strong> сума відстаней &quot;дім-магазин&quot; та &quot;магазин-дім&quot;. Якщо відстань до магазину 500 м, то шлях <span class="math notranslate nohighlight">\(l = 500 \text{ м} + 500 \text{ м} = 1000 \text{ м}\)</span>.</p></li>
-<li><p><strong>Переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span>:</strong> оскільки ваше початкове і кінцеве положення збігаються (ви повернулися додому), вектор переміщення є нульовим: <span class="math notranslate nohighlight">\(\vec{s} = \vec{0}\)</span>.</p></li>
-<li><p><strong>Модуль переміщення <span class="math notranslate nohighlight">\(s\)</span>:</strong> <span class="math notranslate nohighlight">\(s = 0\)</span> м.</p></li>
-</ul>
-<p><em>Приклад:</em> Автомобіль проїхав по прямій дорозі 3 км на схід, а потім повернув і проїхав 4 км на північ.</p>
-<ul class="simple">
-<li><p><strong>Шлях</strong> <span class="math notranslate nohighlight">\(l\)</span> = 3 км + 4 км = 7 км.</p></li>
-<li><p><strong>Переміщення</strong> <span class="math notranslate nohighlight">\(\vec{s}\)</span> - це вектор, напрямлений з точки старту до точки фінішу. Його <strong>модуль</strong> <span class="math notranslate nohighlight">\(s\)</span> можна знайти за теоремою Піфагора, оскільки рух автомобіля на схід, а потім на північ формує два катети прямокутного трикутника, а нам необхідно знайти гіпотенузу: <span class="math notranslate nohighlight">\(s = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)</span> км.</p></li>
-</ul>
-<p>Таблиця-порівняння:</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Характеристика</p></th>
-<th class="head text-left"><p>Шлях <span class="math notranslate nohighlight">\(l\)</span></p></th>
-<th class="head text-left"><p>Переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p><strong>Тип величини</strong></p></td>
-<td class="text-left"><p>Скалярна</p></td>
-<td class="text-left"><p>Векторна</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p><strong>Що характеризує?</strong></p></td>
-<td class="text-left"><p>Довжину траєкторії</p></td>
-<td class="text-left"><p>Зміну положення тіла</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p><strong>Напрямок</strong></p></td>
-<td class="text-left"><p>Немає</p></td>
-<td class="text-left"><p>Є (від початкової до кінцевої точки)</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p><strong>Значення</strong></p></td>
-<td class="text-left"><p>Завжди невід'ємний <span class="math notranslate nohighlight">\(l \ge 0\)</span></p></td>
-<td class="text-left"><p>Модуль завжди невід'ємний, проекція може бути від'ємною</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p><strong>Умова рівності</strong></p></td>
-<td class="text-left"><p><span class="math notranslate nohighlight">\(l=s\)</span> тільки при прямолінійному русі в одному напрямку</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Відносність механічного руху</strong>:</p>
-<ul class="simple">
-<li><p>Траєкторія, шлях, переміщення та швидкість руху залежать від вибору системи відліку. Це і є <strong>відносність руху</strong>.</p></li>
-<li><p><em>Приклад:</em> Для пасажира, що сидить у потязі, книги на столі нерухомі. Але для людини на пероні ці книги рухаються разом із потягом.</p></li>
-</ul>
-</section>
-</section>
-<section id="id4">
-<h2>Класифікація механічних рухів<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<p><strong>Механічні рухи класифікують за формою траєкторії</strong></p>
-<ul class="simple">
-<li><p><strong>Прямолінійний рух</strong> - це рух, траєкторією якого є пряма лінія. Наприклад, рух автомобіля по прямій ділянці шосе.</p></li>
-<li><p><strong>Криволінійний рух</strong> - це рух, траєкторією якого є крива лінія. Наприклад, рух Землі навколо Сонця або рух автомобіля на повороті.</p></li>
-</ul>
-<p><strong>Механічні рухи також класифікують за характером зміни швидкості</strong></p>
-<blockquote>
-<div><p><strong>Швидкість</strong> - це векторна фізична величина, що характеризує стрімкість зміни положення тіла в просторі і дорівнює відношенню переміщення до часу, за який це переміщення відбулося.</p>
-</div></blockquote>
+<div><p><strong>Швидкість рівномірного прямолінійного руху (<span class="math notranslate nohighlight">\(\vec{v}\)</span>)</strong> - це векторна фізична величина, що дорівнює відношенню переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span> до проміжку часу <span class="math notranslate nohighlight">\(t\)</span>, за який це переміщення відбулося.</p>
 <div class="math notranslate nohighlight">
 \[\vec{v} = \frac{\vec{s}}{t}\]</div>
-<p><strong>Одиниця вимірювання в СІ:</strong> метр за секунду (позначається як м/с або <span class="math notranslate nohighlight">\(\frac{\text{м}}{\text{с}}\)</span>).</p>
-<p>Залежно від того, як змінюється швидкість, рух поділяють на рівномірний рух та нерівномірний рух.</p>
-<p><strong>Рівномірний рух</strong> - це рух, під час якого тіло за будь-які рівні проміжки часу здійснює однакові переміщення (долає однаковий шлях).</p>
-<ul class="simple">
-<li><p>При такому русі швидкість тіла є <strong>сталою</strong> за модулем і напрямком <span class="math notranslate nohighlight">\(\vec{v} = \text{const}\)</span>.</p></li>
-<li><p>Прикладом руху зі сталою за модулем швидкістю є рух ескалатора в метро. Іноді як приклад наводять рух Землі по орбіті, однак, хоча модуль її швидкості майже незмінний (особливо, якщо брати не всю траєкторію руху Землі, а окремі відносно невеликі ділянки), напрямок її руху постійно змінюється, тому цей рух є криволінійним, а не прямолінійним.</p></li>
-</ul>
-<p><strong>Рівняння рівномірного прямолінійного руху:</strong></p>
-<p>Якщо тіло рухається вздовж осі ОХ, його координату в будь-який момент часу <span class="math notranslate nohighlight">\(t\)</span> можна знайти за формулою:</p>
+<p><strong>Одиниця вимірювання в СІ:</strong> метр за секунду (м/с).</p>
+</div></blockquote>
+</section>
+<section id="id3">
+<h2>Рівняння координати: як знайти тіло в будь-який момент часу<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Основна задача механіки - визначати положення тіла в будь-який момент часу. Для рівномірного руху це зробити досить просто. Давайте виведемо відповідну формулу.</p>
+<ol class="arabic">
+<li><p>Розглянемо рух тіла вздовж координатної осі, наприклад, осі ОХ.</p></li>
+<li><p>За визначенням, проекція швидкості на цю вісь дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[v_x = \frac{s_x}{t},\]</div>
+<p>де <span class="math notranslate nohighlight">\(s_x\)</span> - проекція переміщення.</p>
+</li>
+<li><p>Проекція переміщення - це різниця між кінцевою (<span class="math notranslate nohighlight">\(x\)</span>) та початковою (<span class="math notranslate nohighlight">\(x_0\)</span>) координатами:</p>
+<div class="math notranslate nohighlight">
+\[s_x = x - x_0\]</div>
+</li>
+<li><p>Підставимо вираз для <span class="math notranslate nohighlight">\(s_x\)</span> у формулу швидкості:</p>
+<div class="math notranslate nohighlight">
+\[v_x = \frac{x - x_0}{t}\]</div>
+</li>
+<li><p>Тепер виразимо звідси кінцеву координату <span class="math notranslate nohighlight">\(x\)</span>. Спочатку помножимо обидві частини на <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[v_x t = x - x_0\]</div>
+</li>
+<li><p>Перенесемо <span class="math notranslate nohighlight">\(x_0\)</span> в ліву частину і отримаємо кінцеве рівняння:</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Рівняння координати для рівномірного прямолінійного руху:</strong></p>
 <div class="math notranslate nohighlight">
 \[x(t) = x_0 + v_x t\]</div>
 <p>де:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x(t)\)</span> - координата тіла в момент часу <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(x_0\)</span> - початкова координата тіла в момент <span class="math notranslate nohighlight">\(t=0\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(v_x\)</span> - проекція швидкості на вісь ОХ (може бути додатною, якщо рух в напрямку осі, і від'ємною, якщо рух проти осі).</p></li>
+<li><p><span class="math notranslate nohighlight">\(x(t)\)</span> - координата тіла в момент часу <span class="math notranslate nohighlight">\(t\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_0\)</span> - початкова координата (в момент <span class="math notranslate nohighlight">\(t=0\)</span>);</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_x\)</span> - проекція швидкості на вісь ОХ.</p></li>
 </ul>
-<p><em>Це рівняння є розв'язком основної задачі механіки для даного типу руху.</em></p>
-<p><strong>Нерівномірний рух</strong> - це рух, під час якого тіло за рівні проміжки часу долає різний шлях.</p>
+</div></blockquote>
+<p><strong>Важливо:</strong> <span class="math notranslate nohighlight">\(v_x\)</span> є <strong>проекцією</strong>, а не модулем швидкості. Якщо тіло рухається в напрямку осі ОХ, то <span class="math notranslate nohighlight">\(v_x &gt; 0\)</span>. Якщо проти осі - <span class="math notranslate nohighlight">\(v_x &lt; 0\)</span>.</p>
+</section>
+<section id="id4">
+<h2>Графічне представлення рівномірного руху<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Графіки - це потужний інструмент для аналізу руху. Розглянемо два основні графіки для рівномірного руху.</p>
 <ul class="simple">
-<li><p>При такому русі швидкість тіла <strong>змінюється</strong> з часом.</p></li>
-<li><p><strong>Приклад:</strong> рух автобуса, який розганяється, гальмує і зупиняється. Більшість рухів у нашому житті є нерівномірними.
-Для опису нерівномірного руху використовують поняття середньої та миттєвої швидкості. Над вивченням нерівномірного руху зі сталим прискоренням (рівноприскореного руху) ми попрацюємо трохи згодом.</p></li>
+<li><p><strong>Графік проекції швидкості (<span class="math notranslate nohighlight">\(v_x(t)\)</span>):</strong>
+Оскільки при рівномірному русі швидкість стала (<span class="math notranslate nohighlight">\(v_x = \text{const}\)</span>), графіком її проекції є пряма лінія, паралельна осі часу.</p>
+<ul>
+<li><p>Якщо <span class="math notranslate nohighlight">\(v_x &gt; 0\)</span>, лінія лежить вище осі <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p>Якщо <span class="math notranslate nohighlight">\(v_x &lt; 0\)</span>, лінія лежить нижче осі <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p><strong>Геометричний зміст переміщення:</strong> Площа прямокутника під графіком <span class="math notranslate nohighlight">\(v_x(t)\)</span> чисельно дорівнює проекції переміщення <span class="math notranslate nohighlight">\(s_x\)</span> за час <span class="math notranslate nohighlight">\(t\)</span> (адже з формули <span class="math notranslate nohighlight">\(s_x = v_x \cdot t\)</span> видно, що це добуток сторін прямокутника).</p></li>
+</ul>
+</li>
+<li><p><strong>Графік координати (<span class="math notranslate nohighlight">\(x(t)\)</span>):</strong>
+Рівняння <span class="math notranslate nohighlight">\(x(t) = x_0 + v_x t\)</span> є лінійною функцією. Отже, графіком координати є пряма лінія.</p>
+<ul>
+<li><p><strong><span class="math notranslate nohighlight">\(x_0\)</span> (початкова координата)</strong> - це точка перетину графіка з віссю ординат.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(v_x\)</span> (проекція швидкості)</strong> - визначає нахил графіка. Чим більший кут нахилу графіка до осі часу, тим більший модуль швидкості. Якщо графік спадає, то <span class="math notranslate nohighlight">\(v_x &lt; 0\)</span>.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="id5">
-<h2>Додаткові матеріали (українською)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<h2>Нерівномірний рух: коли швидкість змінюється<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>У реальному світі рух рідко буває рівномірним. Автомобіль розганяється і гальмує, бігун змінює темп. Такий рух називається <strong>нерівномірним</strong>.</p>
+<blockquote>
+<div><p><strong>Нерівномірний рух</strong> - це рух, під час якого тіло за рівні проміжки часу долає різний шлях (здійснює різні переміщення).</p>
+</div></blockquote>
+<p>Для опису такого складного руху вводяться поняття середньої та миттєвої швидкостей.</p>
+<section id="id6">
+<h3>Середня швидкість: узагальнена характеристика руху<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Уявіть, що ви їдете з Києва до Львова (відстань приблизно 540 км) і вся поїздка зайняла 6 годин, враховуючи зупинки та затори. Якою була ваша швидкість? Вона постійно змінювалась. Щоб охарактеризувати такий рух загалом, використовують поняття середньої швидкості. Однак тут є важливий нюанс, тому розрізняють два її види.</p>
+<ol class="arabic">
+<li><p><strong>Середня шляхова швидкість (<span class="math notranslate nohighlight">\(v_{сер}\)</span>)</strong></p>
+<p>Це скалярна величина, що показує, як швидко тіло долало шлях.</p>
+<blockquote>
+<div><p><strong>Середня шляхова швидкість</strong> - це відношення всього пройденого шляху <span class="math notranslate nohighlight">\(l\)</span> до всього часу руху <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[v_{сер} = \frac{l_{загальний}}{t_{загальний}} = \frac{l_1 + l_2 + ...}{t_1 + t_2 + ...}\]</div>
+<p><strong>Одиниця вимірювання в СІ:</strong> метр за секунду (м/с).</p>
+</div></blockquote>
 <ul class="simple">
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0">https://uk.wikipedia.org/wiki/Кінематика</a></p></li>
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0_%D1%82%D0%BE%D1%87%D0%BA%D0%B0">https://uk.wikipedia.org/wiki/Матеріальна_точка</a></p></li>
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B2%D0%BD%D0%BE%D0%BC%D1%96%D1%80%D0%BD%D0%B8%D0%B9_%D1%80%D1%83%D1%85">https://uk.wikipedia.org/wiki/Рівномірний_рух</a></p></li>
+<li><p><strong>Приклад:</strong> Атлет пробіг 400 м по колу стадіону за 50 с. Його середня шляхова швидкість: <span class="math notranslate nohighlight">\(v_{сер} = \frac{400 \text{ м}}{50 \text{ с}} = 8 \text{ м/с}\)</span>.</p></li>
 </ul>
+</li>
+<li><p><strong>Середня векторна швидкість (або середня швидкість переміщення, <span class="math notranslate nohighlight">\(\vec{v}_{сер}\)</span>)</strong></p>
+<p>Це векторна величина, яка характеризує зміну положення тіла.</p>
+<blockquote>
+<div><p><strong>Середня векторна швидкість</strong> - це відношення вектора переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span> до часу <span class="math notranslate nohighlight">\(t\)</span>, за який це переміщення відбулося.</p>
+<div class="math notranslate nohighlight">
+\[\vec{v}_{сер} = \frac{\vec{s}}{t}\]</div>
+<p><strong>Одиниця вимірювання в СІ:</strong> метр за секунду (м/с).</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Приклад:</strong> Той самий атлет пробіг коло і повернувся в точку старту. Його шлях <span class="math notranslate nohighlight">\(l=400\)</span> м, але переміщення <span class="math notranslate nohighlight">\(\vec{s} = \vec{0}\)</span>, оскільки початкова і кінцева точки збігаються. Тому його середня векторна швидкість дорівнює нулю: <span class="math notranslate nohighlight">\(\vec{v}_{сер} = \frac{\vec{0}}{50 \text{ с}} = \vec{0}\)</span> м/с.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id7">
+<h3>Миттєва швидкість: що показує спідометр?<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Середня швидкість дає лише загальне уявлення про рух. Але що, як нас цікавить швидкість в конкретний момент часу, в конкретній точці траєкторії? Для цього існує поняття миттєвої швидкості.</p>
+<blockquote>
+<div><p><strong>Миттєва швидкість (<span class="math notranslate nohighlight">\(\vec{v}\)</span>)</strong> - це середня швидкість за нескінченно малий проміжок часу. Простими словами, це швидкість тіла в даний момент часу і в даній точці траєкторії.</p>
+</div></blockquote>
+<p>Саме миттєву швидкість (точніше, її модуль) показує спідометр автомобіля. Вектор миттєвої швидкості завжди <strong>напрямлений по дотичній до траєкторії</strong> в точці, де знаходиться тіло.</p>
+</section>
+</section>
+<section id="id8">
+<h2>Відносність руху: все залежить від спостерігача<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Одним з фундаментальних принципів механіки є <strong>принцип відносності руху</strong>: траєкторія, переміщення і швидкість тіла залежать від вибору системи відліку.</p>
+<p>Уявіть, що ви йдете по вагону поїзда. Відносно підлоги вагона ви рухаєтесь зі швидкістю, скажімо, 1 м/с. Але поїзд рухається відносно землі зі швидкістю 20 м/с. Якою буде ваша швидкість відносно людини, що стоїть на пероні? Щоб відповісти на такі питання, використовують закони додавання переміщень і швидкостей.</p>
+<p>Для цього введемо поняття:</p>
+<ul class="simple">
+<li><p><strong>Нерухома система відліку (НСВ)</strong> - система, що умовно вважається нерухомою (наприклад, Земля, перон).</p></li>
+<li><p><strong>Рухома система відліку (РСВ)</strong> - система, що рухається відносно нерухомої (наприклад, вагон поїзда).</p></li>
+</ul>
+<section id="id9">
+<h3>Закон додавання переміщень і швидкостей<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Давайте виведемо ці закони на нашому прикладі з поїздом.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{s}\)</span> - ваше переміщення відносно нерухомої системи відліку (НСВ) (Землі).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{s}_1\)</span> - переміщення рухомої системи відліку (РСВ) (вагона) відносно нерухомої системи відліку (НСВ) (Землі).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{s}_2\)</span> - ваше переміщення відносно рухомої системи відліку (РСВ) (вагона).</p></li>
+</ul>
+<p>Здоровий глузд підказує, що ваше повне переміщення відносно землі складається з переміщення самого поїзда та вашого переміщення всередині поїзда. Математично це записується так:</p>
+<blockquote>
+<div><p><strong>Закон додавання переміщень:</strong></p>
+<div class="math notranslate nohighlight">
+\[\vec{s} = \vec{s}_1 + \vec{s}_2\]</div>
+</div></blockquote>
+<p>А тепер найцікавіше - <strong>виведення закону додавання швидкостей</strong>. Якщо ми поділимо обидві частини попереднього рівняння на проміжок часу <span class="math notranslate nohighlight">\(t\)</span>, за який відбулися ці переміщення, ми отримаємо:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\vec{s}}{t} = \frac{\vec{s}_1}{t} + \frac{\vec{s}_2}{t} \]</div>
+<p>Кожен із цих дробів є, за визначенням, відповідною швидкістю:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{v} = \frac{\vec{s}}{t}\)</span> - швидкість тіла відносно нерухомої системи відліку (НСВ).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v}_1 = \frac{\vec{s}_1}{t}\)</span> - швидкість рухомої системи відліку (РСВ) відносно нерухомої системи відліку (НСВ).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v}_2 = \frac{\vec{s}_2}{t}\)</span> - швидкість тіла відносно рухомої системи відліку (РСВ).</p></li>
+</ul>
+<p>Таким чином, ми отримуємо класичний закон додавання швидкостей.</p>
+<blockquote>
+<div><p><strong>Закон додавання швидкостей (принцип відносності Галілея):</strong></p>
+<p>Швидкість тіла відносно нерухомої системи відліку дорівнює векторній сумі швидкості рухомої системи відліку відносно нерухомої та швидкості тіла відносно рухомої системи.</p>
+<div class="math notranslate nohighlight">
+\[\vec{v} = \vec{v}_1 + \vec{v}_2\]</div>
+</div></blockquote>
+<p><strong>Приклади застосування:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Ви йдете у напрямку руху поїзда:</strong> Ваша швидкість і швидкість поїзда напрямлені в один бік. Модулі швидкостей додаються. Якщо <span class="math notranslate nohighlight">\(v_1=20\)</span> м/с, а <span class="math notranslate nohighlight">\(v_2=1\)</span> м/с, то ваша швидкість відносно землі <span class="math notranslate nohighlight">\(v = 20 + 1 = 21\)</span> м/с.</p></li>
+<li><p><strong>Ви йдете проти руху поїзда:</strong> Ваша швидкість напрямлена проти швидкості поїзда. Модулі швидкостей віднімаються. Ваша швидкість відносно землі <span class="math notranslate nohighlight">\(v = 20 - 1 = 19\)</span> м/с.</p></li>
+<li><p><strong>Човен перепливає річку:</strong> Швидкість течії річки (<span class="math notranslate nohighlight">\(v_1\)</span>) перпендикулярна до власної швидкості човна (<span class="math notranslate nohighlight">\(v_2\)</span>). Щоб знайти результуючу швидкість човна відносно берега (<span class="math notranslate nohighlight">\(\vec{v}\)</span>), потрібно додати ці вектори за правилом прямокутника (або паралелограма). Модуль швидкості в цьому випадку знайдемо за теоремою Піфагора, оскільки обидві швидкості є перпендикулярними одна одній і формують катети прямокутного трикутника, а ми, фактично, шукаємо гіпотенузу: <span class="math notranslate nohighlight">\(v = \sqrt{v_1^2 + v_2^2}\)</span>.</p></li>
+</ol>
+<p>Отже, ми детально розібрали поняття швидкості, навчилися відрізняти рівномірний рух від нерівномірного, розібралися з різними видами швидкостей та зрозуміли, як вибір системи відліку впливає на опис руху. Ці знання є фундаментом для подальшого вивчення більш складних видів руху.</p>
+</section>
 </section>
 </section>
 
@@ -685,20 +699,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../astronomy_content/01_basics/universe.html"
+       href="kinematics-01.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Всесвіт</p>
+        <p class="prev-next-title">Механіка та кінематика</p>
       </div>
     </a>
     <a class="right-next"
-       href="kinematics-02.html"
+       href="../internal_energy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Швидкість та відносність руху</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -719,13 +733,18 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основи механіки</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Ключові поняття кінематики</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-vec-s">Шлях <span class="math notranslate nohighlight">\(l\)</span> та Переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Рівномірний прямолінійний рух та його характеристики</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рівняння координати: як знайти тіло в будь-який момент часу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Графічне представлення рівномірного руху</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Нерівномірний рух: коли швидкість змінюється</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Середня швидкість: узагальнена характеристика руху</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Миттєва швидкість: що показує спідометр?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Класифікація механічних рухів</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Відносність руху: все залежить від спостерігача</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Закон додавання переміщень і швидкостей</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
