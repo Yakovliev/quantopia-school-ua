@@ -488,11 +488,6 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Відносність руху: все залежить від спостерігача</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Закон додавання переміщень і швидкостей</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Відносність руху: все залежить від спостерігача</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Закон додавання переміщень і швидкостей</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Практичне застосування: розв'язуємо задачу разом</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -636,93 +631,39 @@
 <h3>Закон додавання переміщень і швидкостей<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>Давайте виведемо ці закони на нашому прикладі з поїздом.</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\vec{s}\)</span> - ваше переміщення відносно НСВ (Землі).</p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{s}_1\)</span> - переміщення РСВ (вагона) відносно НСВ (Землі).</p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{s}_2\)</span> - ваше переміщення відносно РСВ (вагона).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{s}\)</span> - ваше переміщення відносно нерухомої системи відліку (НСВ) (Землі).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{s}_1\)</span> - переміщення рухомої системи відліку (РСВ) (вагона) відносно нерухомої системи відліку (НСВ) (Землі).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{s}_2\)</span> - ваше переміщення відносно рухомої системи відліку (РСВ) (вагона).</p></li>
 </ul>
 <p>Здоровий глузд підказує, що ваше повне переміщення відносно землі складається з переміщення самого поїзда та вашого переміщення всередині поїзда. Математично це записується так:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>Закон додавання переміщень:</strong></p>
+<blockquote>
+<div><p><strong>Закон додавання переміщень:</strong></p>
 <div class="math notranslate nohighlight">
 \[\vec{s} = \vec{s}_1 + \vec{s}_2\]</div>
-</div>
-<p>А тепер найцікавіше - <strong>виведення закону додавання швидкостей</strong>. Якщо ми поділимо обидві частини попереднього рівняння на проміжок часу <span class="math notranslate nohighlight">\(t\)</span>, за який відбулися ці переміщення, ми отримаємо:
-$<span class="math notranslate nohighlight">\( \frac{\vec{s}}{t} = \frac{\vec{s}_1}{t} + \frac{\vec{s}_2}{t} \)</span>$
-Кожен із цих дробів є, за визначенням, відповідною швидкістю:</p>
+</div></blockquote>
+<p>А тепер найцікавіше - <strong>виведення закону додавання швидкостей</strong>. Якщо ми поділимо обидві частини попереднього рівняння на проміжок часу <span class="math notranslate nohighlight">\(t\)</span>, за який відбулися ці переміщення, ми отримаємо:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\vec{s}}{t} = \frac{\vec{s}_1}{t} + \frac{\vec{s}_2}{t} \]</div>
+<p>Кожен із цих дробів є, за визначенням, відповідною швидкістю:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\vec{v} = \frac{\vec{s}}{t}\)</span> - швидкість тіла відносно НСВ.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{v}_1 = \frac{\vec{s}_1}{t}\)</span> - швидкість РСВ відносно НСВ.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\vec{v}_2 = \frac{\vec{s}_2}{t}\)</span> - швидкість тіла відносно РСВ.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v} = \frac{\vec{s}}{t}\)</span> - швидкість тіла відносно нерухомої системи відліку (НСВ).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v}_1 = \frac{\vec{s}_1}{t}\)</span> - швидкість рухомої системи відліку (РСВ) відносно нерухомої системи відліку (НСВ).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v}_2 = \frac{\vec{s}_2}{t}\)</span> - швидкість тіла відносно рухомої системи відліку (РСВ).</p></li>
 </ul>
 <p>Таким чином, ми отримуємо класичний закон додавання швидкостей.</p>
 <blockquote>
-<div><p><strong>Закон додавання швидкостей (принцип відносності Галілея):</strong>
-Швидкість тіла відносно нерухомої системи відліку дорівнює векторній сумі швидкості рухомої системи відліку відносно нерухомої та швидкості тіла відносно рухомої системи.
-$<span class="math notranslate nohighlight">\(\vec{v} = \vec{v}_1 + \vec{v}_2\)</span>$</p>
+<div><p><strong>Закон додавання швидкостей (принцип відносності Галілея):</strong></p>
+<p>Швидкість тіла відносно нерухомої системи відліку дорівнює векторній сумі швидкості рухомої системи відліку відносно нерухомої та швидкості тіла відносно рухомої системи.</p>
+<div class="math notranslate nohighlight">
+\[\vec{v} = \vec{v}_1 + \vec{v}_2\]</div>
 </div></blockquote>
 <p><strong>Приклади застосування:</strong></p>
 <ol class="arabic simple">
 <li><p><strong>Ви йдете у напрямку руху поїзда:</strong> Ваша швидкість і швидкість поїзда напрямлені в один бік. Модулі швидкостей додаються. Якщо <span class="math notranslate nohighlight">\(v_1=20\)</span> м/с, а <span class="math notranslate nohighlight">\(v_2=1\)</span> м/с, то ваша швидкість відносно землі <span class="math notranslate nohighlight">\(v = 20 + 1 = 21\)</span> м/с.</p></li>
 <li><p><strong>Ви йдете проти руху поїзда:</strong> Ваша швидкість напрямлена проти швидкості поїзда. Модулі швидкостей віднімаються. Ваша швидкість відносно землі <span class="math notranslate nohighlight">\(v = 20 - 1 = 19\)</span> м/с.</p></li>
-<li><p><strong>Човен перепливає річку:</strong> Швидкість течії річки (<span class="math notranslate nohighlight">\(v_1\)</span>) перпендикулярна до власної швидкості човна (<span class="math notranslate nohighlight">\(v_2\)</span>). Щоб знайти результуючу швидкість човна відносно берега (<span class="math notranslate nohighlight">\(\vec{v}\)</span>), потрібно додати ці вектори за правилом прямокутника (або паралелограма). Модуль швидкості в цьому випадку знайдемо за теоремою Піфагора: <span class="math notranslate nohighlight">\(v = \sqrt{v_1^2 + v_2^2}\)</span>.</p></li>
+<li><p><strong>Човен перепливає річку:</strong> Швидкість течії річки (<span class="math notranslate nohighlight">\(v_1\)</span>) перпендикулярна до власної швидкості човна (<span class="math notranslate nohighlight">\(v_2\)</span>). Щоб знайти результуючу швидкість човна відносно берега (<span class="math notranslate nohighlight">\(\vec{v}\)</span>), потрібно додати ці вектори за правилом прямокутника (або паралелограма). Модуль швидкості в цьому випадку знайдемо за теоремою Піфагора, оскільки обидві швидкості є перпендикулярними одна одній і формують катети прямокутного трикутника, а ми, фактично, шукаємо гіпотенузу: <span class="math notranslate nohighlight">\(v = \sqrt{v_1^2 + v_2^2}\)</span>.</p></li>
 </ol>
-<p>Отже, сьогодні ми детально розібрали поняття швидкості, навчилися відрізняти рівномірний рух від нерівномірного, розібралися з різними видами швидкостей та зрозуміли, як вибір системи відліку впливає на опис руху. Ці знання є фундаментом для подальшого вивчення більш складних видів руху.</p>
-</section>
-<section id="id10">
-<h3>Відносність руху: все залежить від спостерігача<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
-<p><strong>Принцип відносності руху</strong> стверджує: траєкторія, переміщення і швидкість тіла залежать від вибору системи відліку.</p>
-<ul class="simple">
-<li><p><strong>Нерухома система відліку (НСВ)</strong> - умовно нерухома система (наприклад, Земля).</p></li>
-<li><p><strong>Рухома система відліку (РСВ)</strong> - система, що рухається відносно нерухомої (наприклад, вагон поїзда).</p></li>
-</ul>
-<section id="id11">
-<h4>Закон додавання переміщень і швидкостей<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
-<p>Давайте виведемо ці закони. Уявіть, що ви йдете по вагону поїзда. Ваше переміщення відносно землі (<span class="math notranslate nohighlight">\(\vec{s}\)</span>) складається з переміщення самого поїзда відносно землі (<span class="math notranslate nohighlight">\(\vec{s}_2\)</span>) та вашого переміщення всередині вагона (<span class="math notranslate nohighlight">\(\vec{s}_1\)</span>).</p>
-<blockquote>
-<div><p><strong>Закон додавання переміщень:</strong>
-Переміщення тіла в нерухомій системі відліку (<span class="math notranslate nohighlight">\(\vec{s}\)</span>) дорівнює векторній сумі переміщення тіла в рухомій системі відліку (<span class="math notranslate nohighlight">\(\vec{s}_1\)</span>) та переміщення самої рухомої системи відліку відносно нерухомої (<span class="math notranslate nohighlight">\(\vec{s}_2\)</span>).
-$<span class="math notranslate nohighlight">\(\vec{s} = \vec{s}_1 + \vec{s}_2\)</span>$</p>
-</div></blockquote>
-<p>Поділивши це рівняння на час <span class="math notranslate nohighlight">\(t\)</span>, ми отримуємо класичний закон додавання швидкостей.</p>
-<blockquote>
-<div><p><strong>Закон додавання швидкостей (принцип відносності Галілея):</strong>
-Швидкість тіла відносно нерухомої системи відліку (<span class="math notranslate nohighlight">\(\vec{v}\)</span>) дорівнює векторній сумі швидкості тіла відносно рухомої системи (<span class="math notranslate nohighlight">\(\vec{v}_1\)</span>) та швидкості рухомої системи відносно нерухомої (<span class="math notranslate nohighlight">\(\vec{v}_2\)</span>).
-$<span class="math notranslate nohighlight">\(\vec{v} = \vec{v}_1 + \vec{v}_2\)</span>$</p>
-</div></blockquote>
-</section>
-<section id="id12">
-<h4>Практичне застосування: розв'язуємо задачу разом<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
-<p>Щоб закріпити розуміння, розв'яжемо класичну задачу.</p>
-<p><strong>Задача:</strong> Човен перетинає річку шириною 400 м. Власна швидкість човна (швидкість відносно води) становить 4 м/с і напрямлена перпендикулярно до берега. Швидкість течії річки - 3 м/с. Визначити:</p>
-<ol class="arabic simple">
-<li><p>Час, за який човен перетне річку.</p></li>
-<li><p>Швидкість човна відносно берега.</p></li>
-<li><p>Відстань, на яку течія знесе човен.</p></li>
-</ol>
-<p><strong>Розв'язання:</strong></p>
-<ol class="arabic simple">
-<li><p><strong>Аналізуємо ситуацію.</strong></p>
-<ul class="simple">
-<li><p><strong>Нерухома СВ</strong> - берег.</p></li>
-<li><p><strong>Рухома СВ</strong> - вода в річці.</p></li>
-<li><p>Швидкість човна відносно рухомої СВ (води) - <span class="math notranslate nohighlight">\(\vec{v}_1\)</span> (4 м/с).</p></li>
-<li><p>Швидкість рухомої СВ (води) відносно нерухомої (берега) - <span class="math notranslate nohighlight">\(\vec{v}_2\)</span> (3 м/с).</p></li>
-<li><p>Нам потрібно знайти швидкість човна відносно нерухомої СВ (берега) - <span class="math notranslate nohighlight">\(\vec{v}\)</span>.</p></li>
-</ul>
-</li>
-<li><p><strong>Знаходимо час переправи.</strong>
-Час руху через річку залежить лише від компоненти швидкості, напрямленої поперек річки, тобто від власної швидкості човна <span class="math notranslate nohighlight">\(v_1\)</span>. Швидкість течії на цей час не впливає.
-<span class="math notranslate nohighlight">\(t = \frac{\text{ширина річки}}{v_1} = \frac{400 \text{ м}}{4 \text{ м/с}} = 100 \text{ с}\)</span>.</p></li>
-<li><p><strong>Знаходимо швидкість човна відносно берега.</strong>
-За законом додавання швидкостей: <span class="math notranslate nohighlight">\(\vec{v} = \vec{v}_1 + \vec{v}_2\)</span>. Оскільки вектори <span class="math notranslate nohighlight">\(\vec{v}_1\)</span> і <span class="math notranslate nohighlight">\(\vec{v}_2\)</span> перпендикулярні, модуль результуючої швидкості <span class="math notranslate nohighlight">\(\vec{v}\)</span> ми знаходимо за теоремою Піфагора:
-<span class="math notranslate nohighlight">\(v = \sqrt{v_1^2 + v_2^2} = \sqrt{(4 \text{ м/с})^2 + (3 \text{ м/с})^2} = \sqrt{16 + 9} = \sqrt{25} = 5 \text{ м/с}\)</span>.</p></li>
-<li><p><strong>Знаходимо відстань зносу.</strong>
-Ця відстань залежить від швидкості течії <span class="math notranslate nohighlight">\(v_2\)</span> і часу, протягом якого човен був на воді, тобто часу переправи <span class="math notranslate nohighlight">\(t\)</span>.
-<span class="math notranslate nohighlight">\(s_{зн} = v_2 \cdot t = 3 \text{ м/с} \cdot 100 \text{ с} = 300 \text{ м}\)</span>.</p></li>
-</ol>
-<p><strong>Відповідь:</strong> Човен перетне річку за 100 секунд, рухаючись відносно берега зі швидкістю 5 м/с, і його знесе течією на 300 метрів.</p>
-</section>
+<p>Отже, ми детально розібрали поняття швидкості, навчилися відрізняти рівномірний рух від нерівномірного, розібралися з різними видами швидкостей та зрозуміли, як вибір системи відліку впливає на опис руху. Ці знання є фундаментом для подальшого вивчення більш складних видів руху.</p>
 </section>
 </section>
 </section>
@@ -802,11 +743,6 @@ $<span class="math notranslate nohighlight">\(\vec{v} = \vec{v}_1 + \vec{v}_2\)<
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Відносність руху: все залежить від спостерігача</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Закон додавання переміщень і швидкостей</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Відносність руху: все залежить від спостерігача</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Закон додавання переміщень і швидкостей</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Практичне застосування: розв'язуємо задачу разом</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
