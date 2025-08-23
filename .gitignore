@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-wip/
+wip/*pts.txt
 
 # C extensions
 *.so

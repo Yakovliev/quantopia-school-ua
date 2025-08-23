@@ -1,0 +1,3 @@
+
+Parametric analysis of permeability coefficients based on Eq.~(\ref{permeability:2}). Fixed parameters: $p = 1$, $n_p = 10^5$, $T = 298.15$~K, $S_m = 10.89$~\textmu$\mathrm{m}^2$, and $h = 7$~nm. (a) Effect of porin radius $R$ on permeability, with $r = 3.58$~\AA{} and $Z = -1$. (b) Impact of solute radius $r$ on permeability, with $R = 0.6$~nm and $Z = -1$. (c) Influence of the DP on permeability, assuming linear potential impact $W(\phi) = W_{\mathrm{lin}}(\phi)$, with $r = 3.58$~\AA{} and $R = 0.6$~nm. (d) Combined effect of the DP and intrinsic periodic porin potential on permeability $W(\phi) = W_{\mathrm{lin}}(\phi) W_{\mathrm{per}}(\phi)$, with $r = 3.58$~\AA{} and $R = 0.6$~nm.
+
