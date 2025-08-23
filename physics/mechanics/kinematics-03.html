@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/kinematics-03';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -454,7 +456,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -470,6 +474,27 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Прискорення: Міра зміни швидкості</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Одиниця вимірювання прискорення в СІ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Проекції на вісь координат</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Рівняння та графіки для рівноприскореного руху</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Рівняння та графік проекції швидкості</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Рівняння та графік проекції переміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Виведення основного рівняння переміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Формула переміщення без часу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Рівняння координати (Рівняння руху)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Алгоритм розв'язування задач із кінематики</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -481,6 +506,201 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Рівноприскорений прямолінійний рух<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Для початку давайте згадаємо, що таке механічний рух. Це зміна положення тіла в просторі відносно інших тіл з плином часу. Рух буває різним, і один з найпростіших для вивчення - це прямолінійний рівномірний рух, коли тіло за будь-які рівні проміжки часу долає однаковий шлях, а його швидкість залишається незмінною.</p>
+<p>Але що, як швидкість змінюється? Такий рух ми називаємо <strong>нерівномірним</strong>.</p>
+<p>Уявіть собі автомобіль, що рушає зі світлофора, або потяг, що гальмує перед станцією. В обох випадках їхня швидкість не є сталою. Рівноприскорений прямолінійний рух - це окремий, але дуже поширений випадок нерівномірного руху.</p>
+<p><strong>Рівноприскорений прямолінійний рух</strong> - це такий рух, під час якого тіло рухається вздовж прямої, і його швидкість за будь-які рівні проміжки часу змінюється на однакову величину.</p>
+<p>Ключова характеристика такого руху - це <strong>прискорення</strong>.</p>
+<hr class="docutils" />
+<section id="id2">
+<h2>Прискорення: Міра зміни швидкості<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Коли ми говоримо, що швидкість тіла змінюється, нам потрібна фізична величина, яка б описувала, наскільки <em>швидко</em> ця зміна відбувається. Цією величиною і є прискорення.</p>
+<blockquote>
+<div><p><strong>Прискорення</strong> <span class="math notranslate nohighlight">\(\vec{a}\)</span> - це векторна фізична величина, яка характеризує швидкість зміни швидкості тіла і дорівнює відношенню зміни швидкості до проміжку часу, за який ця зміна відбулася.</p>
+</div></blockquote>
+<p>Математично це записується так:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a} = \frac{\Delta \vec{v}}{\Delta t}
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta \vec{v}\)</span> - зміна швидкості.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta t\)</span> - проміжок часу, за який відбулася ця зміна.</p></li>
+</ul>
+<p>Зміну швидкості можна розписати як різницю між кінцевою (миттєвою) та початковою швидкістю: <span class="math notranslate nohighlight">\(\Delta \vec{v} = \vec{v} - \vec{v_0}\)</span>. Якщо ми розглядаємо рух від самого початку (коли час <span class="math notranslate nohighlight">\(t_0 = 0\)</span>), то проміжок часу <span class="math notranslate nohighlight">\(\Delta t\)</span> дорівнюватиме просто <span class="math notranslate nohighlight">\(t\)</span>. Тоді формула набуває вигляду:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a} = \frac{\vec{v} - \vec{v_0}}{t}
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{v}\)</span> - <strong>миттєва швидкість</strong> - це швидкість тіла в даний момент часу <span class="math notranslate nohighlight">\(t\)</span> (в задачах з кінематики її часто називають кінцевою швидкістю, оскільки момент часу <span class="math notranslate nohighlight">\(t\)</span> часто вважають кінцевим моментом часу)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v_0}\)</span> - <strong>початкова швидкість</strong> - це швидкість тіла в початковий момент часу (<span class="math notranslate nohighlight">\(t=0\)</span>).</p></li>
+</ul>
+<section id="id3">
+<h3>Одиниця вимірювання прискорення в СІ<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Давайте виведемо одиницю вимірювання прискорення з його формули. Швидкість вимірюється в метрах за секунду (м/с), а час - у секундах (с).</p>
+<div class="math notranslate nohighlight">
+\[
+[a] = \frac{[v]}{[t]} = \frac{м/с}{с} = м/с^2
+\]</div>
+<p>Отже, одиниця вимірювання прискорення в Міжнародній системі одиниць (СІ) - <strong>метр на секунду в квадраті (<span class="math notranslate nohighlight">\(м/с^2\)</span>)</strong>.</p>
+<p>Що означає прискорення, наприклад, 2 <span class="math notranslate nohighlight">\(м/с^2\)</span>? Це означає, що за кожну секунду швидкість тіла збільшується на 2 м/с.</p>
+<ul class="simple">
+<li><p>Якщо в початковий момент часу тіло перебувало у спокої (<span class="math notranslate nohighlight">\(v_0 = 0\)</span>), то через 1 с його швидкість буде 2 м/с, через 2 с - 4 м/с, через 3 с - 6 м/с і так далі.</p></li>
+</ul>
+<p>Важливо пам'ятати, що прискорення, як і швидкість, є <strong>векторною величиною</strong>, тобто має і модуль (числове значення), і напрямок.</p>
+<ul class="simple">
+<li><p>Якщо напрямок вектора прискорення збігається з напрямком вектора швидкості, тіло <strong>розганяється</strong> (рух є прискореним).</p></li>
+<li><p>Якщо напрямок вектора прискорення протилежний напрямку вектора швидкості, тіло <strong>гальмує</strong> (рух є сповільненим).</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Проекції на вісь координат<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Працювати з векторами не завжди зручно, тому в задачах ми часто використовуємо їхні проекції на осі координат (наприклад, на вісь OX). Формула для прискорення в проекціях виглядає так:</p>
+<div class="math notranslate nohighlight">
+\[
+a_x = \frac{v_x - v_{0x}}{t}
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a_x\)</span> - проекція прискорення на вісь OX.</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_x\)</span> - проекція миттєвої (кінцевої) швидкості на вісь OX.</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_{0x}\)</span> - проекція початкової швидкості на вісь OX.</p></li>
+</ul>
+<p>Проекція може бути додатною, від'ємною або нульовою, залежно від того, куди напрямлений вектор відносно осі.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Рівняння та графіки для рівноприскореного руху<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Тепер, коли ми розібралися з прискоренням, ми можемо отримати основні рівняння, що описують рівноприскорений рух.</p>
+<section id="id6">
+<h3>Рівняння та графік проекції швидкості<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Давайте візьмемо нашу формулу для проекції прискорення <span class="math notranslate nohighlight">\(a_x = \frac{v_x - v_{0x}}{t}\)</span> і виразимо з неї кінцеву швидкість <span class="math notranslate nohighlight">\(v_x\)</span>.</p>
+<p>Крок 1: Помножимо обидві частини на <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[a_x \cdot t = v_x - v_{0x}\]</div>
+<p>Крок 2: Перенесемо <span class="math notranslate nohighlight">\(v_{0x}\)</span> в ліву частину з протилежним знаком:</p>
+<div class="math notranslate nohighlight">
+\[v_x = v_{0x} + a_x t\]</div>
+<p>Це і є <strong>рівняння залежності проекції швидкості від часу</strong> для рівноприскореного прямолінійного руху.</p>
+<p>Це рівняння має вигляд лінійної функції <span class="math notranslate nohighlight">\(y = b + kx\)</span>, де <span class="math notranslate nohighlight">\(y\)</span> - це <span class="math notranslate nohighlight">\(v_x\)</span>, <span class="math notranslate nohighlight">\(x\)</span> - це <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(b\)</span> - це <span class="math notranslate nohighlight">\(v_{0x}\)</span> (початкове значення), а <span class="math notranslate nohighlight">\(k\)</span> - це <span class="math notranslate nohighlight">\(a_x\)</span> (кутовий коефіцієнт). Отже, графік залежності <span class="math notranslate nohighlight">\(v_x(t)\)</span> - це <strong>пряма лінія</strong>.</p>
+<p><strong>Графік проекції швидкості (<span class="math notranslate nohighlight">\(v_x(t)\)</span>)</strong></p>
+<ul class="simple">
+<li><p><strong>Якщо <span class="math notranslate nohighlight">\(a_x &gt; 0\)</span></strong> (рух прискорений у напрямку осі OX), графік &quot;йде вгору&quot;.</p></li>
+<li><p><strong>Якщо <span class="math notranslate nohighlight">\(a_x &lt; 0\)</span></strong> (рух сповільнений або прискорений проти осі OX), графік &quot;йде вниз&quot;.</p></li>
+<li><p><strong>Якщо <span class="math notranslate nohighlight">\(a_x = 0\)</span></strong>, ми отримуємо рівномірний рух, і графік є горизонтальною лінією (<span class="math notranslate nohighlight">\(v_x = v_{0x}\)</span>).</p></li>
+</ul>
+<p>Особливий момент на графіку - це коли він перетинає вісь часу (<span class="math notranslate nohighlight">\(t\)</span>). У цей момент <span class="math notranslate nohighlight">\(v_x = 0\)</span>. Це означає, що тіло зупинилося. Якщо після цього проекція швидкості змінює знак (наприклад, з додатної на від'ємну), це означає, що тіло змінило напрямок свого руху. Цей момент називається <strong>точкою розвороту</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h3>Рівняння та графік проекції переміщення<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Переміщення</strong> (<span class="math notranslate nohighlight">\(\vec{s}\)</span>) - це вектор, що сполучає початкове положення тіла з його кінцевим положенням. При прямолінійному русі модуль переміщення дорівнює пройденому шляху, якщо тіло не змінювало напрямок руху.</p>
+<p>Як нам знайти переміщення при рівноприскореному русі? Ми можемо скористатися однією важливою властивістю.</p>
+<blockquote>
+<div><p>Для будь-якого прямолінійного руху проекція переміщення <span class="math notranslate nohighlight">\(s_x\)</span> чисельно дорівнює <strong>площі фігури під графіком проекції швидкості <span class="math notranslate nohighlight">\(v_x(t)\)</span></strong>.</p>
+</div></blockquote>
+<p>Давайте подивимось на наш графік <span class="math notranslate nohighlight">\(v_x(t)\)</span>. Фігура під ним за час <span class="math notranslate nohighlight">\(t\)</span> - це трапеція (або прямокутник, якщо рух рівномірний, чи трикутник, якщо <span class="math notranslate nohighlight">\(v_{0x}=0\)</span>).</p>
+<p>Площа трапеції обчислюється за формулою: <span class="math notranslate nohighlight">\(S = \frac{a+b}{2}h\)</span>, де <span class="math notranslate nohighlight">\(a\)</span> і <span class="math notranslate nohighlight">\(b\)</span> - основи, а <span class="math notranslate nohighlight">\(h\)</span> - висота. У нашому випадку:</p>
+<ul class="simple">
+<li><p>Основи - це <span class="math notranslate nohighlight">\(v_{0x}\)</span> та <span class="math notranslate nohighlight">\(v_x\)</span>.</p></li>
+<li><p>Висота - це час <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+</ul>
+<p>Отже, проекція переміщення:</p>
+<div class="math notranslate nohighlight">
+\[
+s_x = \frac{v_{0x} + v_x}{2} t
+\]</div>
+<p>Ця формула корисна, коли нам невідоме прискорення, але відомо, що тіло рухається рівноприскорено. Величина <span class="math notranslate nohighlight">\(\frac{v_{0x} + v_x}{2}\)</span> є середньою швидкістю при рівноприскореному русі.</p>
+</section>
+<section id="id8">
+<h3>Виведення основного рівняння переміщення<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Тепер давайте виведемо більш універсальну формулу. Ми підставимо в отримане рівняння для <span class="math notranslate nohighlight">\(s_x\)</span> вираз для <span class="math notranslate nohighlight">\(v_x\)</span> з рівняння швидкості (<span class="math notranslate nohighlight">\(v_x = v_{0x} + a_x t\)</span>).</p>
+<p>Крок 1: Початкова формула:</p>
+<div class="math notranslate nohighlight">
+\[s_x = \frac{v_{0x} + v_x}{2} t\]</div>
+<p>Крок 2: Підставляємо <span class="math notranslate nohighlight">\(v_x\)</span>:
+$<span class="math notranslate nohighlight">\(s_x = \frac{v_{0x} + (v_{0x} + a_x t)}{2} t\)</span>$</p>
+<p>Крок 3: Спрощуємо вираз у дужках:</p>
+<div class="math notranslate nohighlight">
+\[s_x = \frac{2v_{0x} + a_x t}{2} t\]</div>
+<p>Крок 4: Розділяємо дріб на два доданки:</p>
+<div class="math notranslate nohighlight">
+\[s_x = (\frac{2v_{0x}}{2} + \frac{a_x t}{2}) t\]</div>
+<div class="math notranslate nohighlight">
+\[s_x = (v_{0x} + \frac{a_x t}{2}) t\]</div>
+<p>Крок 5: Розкриваємо дужки:</p>
+<div class="math notranslate nohighlight">
+\[
+s_x = v_{0x} t + \frac{a_x t^2}{2}
+\]</div>
+<p>Це і є <strong>основне рівняння залежності проекції переміщення від часу</strong>.</p>
+<p>З цього рівняння ми бачимо, що залежність <span class="math notranslate nohighlight">\(s_x(t)\)</span> є квадратичною. Графіком такої залежності є <strong>парабола</strong>.</p>
+<p><strong>Графік проекції переміщення (<span class="math notranslate nohighlight">\(s_x(t)\)</span>)</strong></p>
+<ul class="simple">
+<li><p>Якщо <strong><span class="math notranslate nohighlight">\(a_x &gt; 0\)</span></strong>, вітки параболи напрямлені вгору.</p></li>
+<li><p>Якщо <strong><span class="math notranslate nohighlight">\(a_x &lt; 0\)</span></strong>, вітки параболи напрямлені вниз.</p></li>
+<li><p>Вершина параболи відповідає точці розвороту (<span class="math notranslate nohighlight">\(v_x = 0\)</span>).</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>Формула переміщення без часу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Іноді в задачах нам не дано час <span class="math notranslate nohighlight">\(t\)</span>, і знаходити його незручно. Давайте виведемо формулу, яка пов'язує переміщення, швидкість і прискорення без часу.</p>
+<p>Крок 1: З рівняння швидкості <span class="math notranslate nohighlight">\(v_x = v_{0x} + a_x t\)</span> виразимо час:</p>
+<div class="math notranslate nohighlight">
+\[a_x t = v_x - v_{0x} \implies t = \frac{v_x - v_{0x}}{a_x}\]</div>
+<p>Крок 2: Підставимо цей вираз для <span class="math notranslate nohighlight">\(t\)</span> у формулу <span class="math notranslate nohighlight">\(s_x = \frac{v_{0x} + v_x}{2} t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[s_x = \frac{v_{0x} + v_x}{2} \cdot \frac{v_x - v_{0x}}{a_x}\]</div>
+<p>Крок 3: Перепишемо цю формулу в дещо іншому вигляді:</p>
+<div class="math notranslate nohighlight">
+\[s_x = \frac{v_x + v_{0x}}{2} \cdot \frac{v_x - v_{0x}}{a_x}\]</div>
+<p>Крок 4: У чисельнику ми бачимо формулу різниці квадратів <span class="math notranslate nohighlight">\((a+b)(a-b) = a^2 - b^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[s_x = \frac{v_x^2 - v_{0x}^2}{2a_x}\]</div>
+<p>Ця формула дуже корисна для розв'язування багатьох задач.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Рівняння координати (Рівняння руху)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Ми знаємо, як знайти переміщення. Але часто нам потрібно знати не те, наскільки тіло перемістилося, а де саме воно знаходиться в певний момент часу. Для цього нам потрібна <strong>координата</strong>.</p>
+<p>Переміщення пов'язане з початковою (<span class="math notranslate nohighlight">\(x_0\)</span>) та кінцевою (<span class="math notranslate nohighlight">\(x\)</span>) координатами наступним чином:</p>
+<div class="math notranslate nohighlight">
+\[s_x = x - x_0\]</div>
+<p>Звідси ми можемо виразити кінцеву координату:</p>
+<div class="math notranslate nohighlight">
+\[x = x_0 + s_x\]</div>
+<p>Тепер, якщо ми підставимо сюди основне рівняння для проекції переміщення (<span class="math notranslate nohighlight">\(s_x = v_{0x} t + \frac{a_x t^2}{2}\)</span>), ми отримаємо <strong>рівняння координати</strong> або <strong>рівняння руху</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = x_0 + v_{0x} t + \frac{a_x t^2}{2}
+\]</div>
+<p>Це рівняння є основною задачею механіки - воно дозволяє визначити положення тіла в будь-який момент часу.</p>
+<p>Як і графік переміщення, графік залежності <span class="math notranslate nohighlight">\(x(t)\)</span> також є <strong>параболою</strong>, але вона починається не з нуля (якщо <span class="math notranslate nohighlight">\(x_0 \neq 0\)</span>), а з точки початкової координати на осі ординат.</p>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>Алгоритм розв'язування задач із кінематики<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Коли ви стикаєтеся із задачею на рівноприскорений рух, може бути корисним дотримуватися певного алгоритму.</p>
+<ol class="arabic simple">
+<li><p><strong>Уважно прочитайте умову задачі.</strong> З'ясуйте, який характер руху тіла (прискорений, сповільнений).</p></li>
+<li><p><strong>Запишіть коротку умову (&quot;Дано&quot;).</strong> Переведіть усі величини в систему СІ.</p></li>
+<li><p><strong>Зробіть малюнок.</strong> Покажіть на ньому тіло, вісь координат (напрямок осі обирайте так, щоб було зручно, зазвичай у напрямку початкового руху), вектори початкової швидкості, прискорення.</p></li>
+<li><p><strong>Запишіть основні рівняння руху в векторному вигляді, а потім у вигляді проекцій на обрану вісь.</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_x(t) = v_{0x} + a_x t\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x(t) = x_0 + v_{0x} t + \frac{a_x t^2}{2}\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>Проаналізуйте рівняння.</strong> Підставте відомі з умови величини (не забуваючи про їхні знаки!).</p></li>
+<li><p><strong>Розв'яжіть отриману систему рівнянь</strong> відносно невідомої величини.</p></li>
+<li><p><strong>Проаналізуйте результат</strong> на реалістичність і запишіть відповідь.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -537,6 +757,35 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Прискорення: Міра зміни швидкості</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Одиниця вимірювання прискорення в СІ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Проекції на вісь координат</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Рівняння та графіки для рівноприскореного руху</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Рівняння та графік проекції швидкості</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Рівняння та графік проекції переміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Виведення основного рівняння переміщення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Формула переміщення без часу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Рівняння координати (Рівняння руху)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Алгоритм розв'язування задач із кінематики</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
