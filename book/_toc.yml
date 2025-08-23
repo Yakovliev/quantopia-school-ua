@@ -41,6 +41,7 @@ parts:
       - file: physics/mechanics/kinematics-01
       - file: physics/mechanics/kinematics-02
       - file: physics/mechanics/kinematics-03
+      - file: physics/mechanics/kinematics-04
       - file: physics/internal_energy
         sections:
           - file: physics/heat_transfer
