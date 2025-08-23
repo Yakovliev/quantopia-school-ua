@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Активність Сонця &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'astronomy_content/solar-activity';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Зорі: від народження до загибелі" href="star-classification.html" />
+    <link rel="prev" title="Сонячне нейтрино" href="solar-neutrino.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../physics/internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/astronomy_content/solar-activity.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fastronomy_content/solar-activity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/astronomy_content/solar-activity.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Активність Сонця</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цикли сонячної активності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Магнітне поле Сонця - двигун сонячної активності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Механізм утворення сонячних плям</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Прояви сонячної активності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сонячний вітер і геліосфера</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Вплив сонячної активності на Землю</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Практичне значення: вплив на технології</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Активність Сонця<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Сонце — не просто яскрава незмінна куля на небі. Насправді, наша зірка — це динамічний і мінливий об'єкт, який проходить через періоди різної активності. Сонячна активність — це комплекс різноманітних явищ і процесів, що відбуваються на Сонці та пов'язані з його магнітним полем. Ці явища включають сонячні плями, спалахи, викиди корональної маси та інші процеси, які значно впливають на космічну погоду та стан нашої планети.</p>
+<section id="id2">
+<h2>Цикли сонячної активності<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>11-річний цикл</strong></p>
+<p>Сонячний цикл - це період тривалістю приблизно 11 років, протягом якого активність Сонця змінюється від мінімуму до максимуму і знову до мінімуму. Основними проявами сонячної активності є:</p>
+<p>Найвідоміший цикл сонячної активності триває приблизно 11 років (фактично від 9 до 14 років). Протягом цього періоду кількість сонячних плям та інших проявів активності зростає від мінімуму до максимуму, а потім знову зменшується.</p>
+<p>Під час максимуму сонячної активності:</p>
+<ul class="simple">
+<li><p>На Сонці з'являється багато сонячних плям</p></li>
+<li><p>Відбувається більше сонячних спалахів</p></li>
+<li><p>Частіше виникають корональні викиди маси</p></li>
+<li><p>Посилюється сонячний вітер</p></li>
+</ul>
+<p>Під час мінімуму:</p>
+<ul class="simple">
+<li><p>Сонячних плям мало або взагалі немає</p></li>
+<li><p>Спалахи відбуваються рідко</p></li>
+<li><p>Інші прояви активності також значно зменшуються</p></li>
+</ul>
+<p>Кожен цикл має власну інтенсивність, яка може відрізнятися від попередніх. Найкращим індикатором сонячного циклу залишаються сонячні плями - темні області на фотосфері Сонця.</p>
+<p><strong>Сонячні плями</strong> - це темні області на поверхні Сонця, які вперше спостерігав ще Галілей. Вони виглядають темними, оскільки їх температура на тисячі градусів нижча, ніж у навколишньої фотосфери. Типова температура плями становить близько 4500 К, тоді як звичайна температура поверхні Сонця - приблизно 5800 К.</p>
+<p>Плями виникають там, де сильні магнітні поля прориваються через поверхню Сонця і блокують нормальний потік тепла з нижніх шарів. Великі плями можуть досягати розмірів, більших за діаметр Землі.</p>
+<p>Цікавий факт: сонячні плями вперше систематично спостерігав Галілео Галілей у 1610 році, що допомогло довести, що Сонце обертається.</p>
+<p>Важливі характеристики сонячних плям:</p>
+<ul class="simple">
+<li><p>Вони швидко з'являються і відносно швидко зникають</p></li>
+<li><p>Розміри плям часто перевищують розміри Землі</p></li>
+<li><p>Вони мають тенденцію утворюватися парами з протилежною магнітною полярністю</p></li>
+<li><p>На початку циклу плями утворюються в середніх широтах Сонця (30-40°)</p></li>
+<li><p>З розвитком циклу зона утворення плям поступово зміщується до екватора</p></li>
+</ul>
+<p><strong>Діаграма метелика</strong></p>
+<p>Одним із найцікавіших візуальних представлень сонячного циклу є так звана &quot;діаграма метелика&quot;. Вона показує широту утворення сонячних плям протягом часу. На початку циклу плями з'являються у високих широтах, а потім поступово зміщуються до екватора, створюючи візерунок, що нагадує крила метелика.</p>
+<p>Перехід між циклами не є різким - плями попереднього циклу біля екватора можуть співіснувати з плямами нового циклу, що з'являються у вищих широтах. За даними NASA, такий перехід може тривати кілька місяців або навіть рік.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Sunspot_butterfly_graph.gif" alt="Spörer's law noted that at the start of an 11-year sunspot cycle, the spots appeared first at higher latitudes and later in progressively lower latitudes." height="500" width="840">
+<br>
+Рис. Діаграма метелика. Закон Шперера зазначав, що на початку 11-річного циклу сонячних плям плями з’являлися спочатку у вищих широтах, а потім у все нижчих широтах.
+By NASA, Marshal Space Flight Center, Solar Physics - <a rel="nofollow" class="external free" href="https://solarscience.msfc.nasa.gov/images/bfly.gif">https://solarscience.msfc.nasa.gov/images/bfly.gif</a> (updated monthly)<a rel="nofollow" class="external free" href="https://solarscience.msfc.nasa.gov/SunspotCycle.shtml">https://solarscience.msfc.nasa.gov/SunspotCycle.shtml</a> (explanatory text), Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=2543387">Link</a>. <a href="https://uk.wikipedia.org/wiki/Закон_Шперера">Wiki</a></p><p><strong>22-річний цикл (цикл Хейла)</strong></p>
+<p>Крім 11-річного циклу, існує також 22-річний магнітний цикл, відомий як цикл Хейла. Протягом 11-річного циклу магнітна полярність сонячних плям залишається незмінною: в одній півкулі Сонця плями мають переважно північну полярність, а в іншій — південну. Але після завершення 11-річного циклу, полярність змінюється на протилежну. Таким чином, повний магнітний цикл, коли полярність повертається до початкового стану, триває приблизно 22 роки.</p>
+<p>Примітка: передбачається існування циклів ще більшої тривалості, однак на даний момент експериментально підтверджено існування тільки 11-річних та 22-річних циклів.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Sunspot-number.png" alt="Sunspot-number.png" height="550" width="786">
+<br>
+Рис. Рівень сонячної активності (щомісячні числа Вольфа) в 1750-2006 роках.
+Автор: <a href="https://en.wikipedia.org/wiki/User:Leland_McInnes" class="extiw" title="en:User:Leland McInnes">Leland McInnes</a> at the <a href="https://en.wikipedia.org/wiki/" class="extiw" title="en:">English Wikipedia</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1578804">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Сонячна_активність">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Solar_irradiance_and_temperature_1880-2018.jpeg" alt="The graph shows the solar irradiance without a long-term trend. The 11 year solar cycle is also visible. The temperature, in contrast, shows an upward trend." height="500" width="640">
+<br>
+Рис. Сонячне опромінення (жовтий колір) і температура (червоний колір) з 1880 року.
+By NASA - Version 1: <a rel="nofollow" class="external free" href="https://climate.nasa.gov/internal_resources/1802/">https://climate.nasa.gov/internal_resources/1802/</a>Version 2: <a rel="nofollow" class="external free" href="https://climate.nasa.gov/climate_resources/189/graphic-temperature-vs-solar-activity/">https://climate.nasa.gov/climate_resources/189/graphic-temperature-vs-solar-activity/</a>Archive of Version 2 source: <a rel="nofollow" class="external free" href="https://web.archive.org/web/20210626002658/https://climate.nasa.gov/climate_resources/189/graphic-temperature-vs-solar-activity/">https://web.archive.org/web/20210626002658/https://climate.nasa.gov/climate_resources/189/graphic-temperature-vs-solar-activity/</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=80877764">Link</a>. <a href="https://en.wikipedia.org/wiki/Solar_activity_and_climate">Wiki</a></p><p>Крім 11-річних та 22-річних циклів, сонячна активність демонструє і довготривалі зміни. Найвідомішим прикладом є мінімум Маундера - період між 1645 і 1715 роками, коли кількість сонячних плям була надзвичайно малою (лише кілька десятків за весь період, що в тисячі разів менше звичайного).</p>
+<p>Мінімум Маундера збігся з періодом похолодання на Землі, відомого як Малий льодовиковий період. У цей час клімат у Європі став холоднішим, замерзали великі водойми, включаючи річку Темзу в Лондоні та частини Балтійського моря.</p>
+<p>Хоча прямий зв'язок між зниженою сонячною активністю та похолоданням не доведений остаточно (оскільки Малий льодовиковий період тривав довше, ніж мінімум Маундера), зменшення сонячного випромінювання могло сприяти зниженню температури на Землі.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Sunspot_Numbers.png" alt="Sunspot Numbers.png" height="500" width="1190">
+<br>
+Рис. 400 літня історія числа сонячних плям із відміченим мінімумом Маундера.
+<a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=969067">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Сонячна_активність">Wiki</a></p></section>
+<section id="id3">
+<h2>Магнітне поле Сонця - двигун сонячної активності<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>В основі всіх проявів сонячної активності лежить складне магнітне поле нашої зірки. Подібно до магнітного поля Землі, поле Сонця має дипольний характер з північним і південним полюсами. Однак, на відміну від відносно стабільного земного магнітного поля, сонячне поле постійно змінюється через особливості внутрішньої будови Сонця.</p>
+<p>Сонце складається з гарячої іонізованої речовини - плазми. Рух зарядженої плазми створює електричні струми, які генерують магнітні поля. Цей процес називають &quot;сонячним динамо&quot;.</p>
+<p>Важливі особливості магнітного поля Сонця:</p>
+<ul class="simple">
+<li><p>Різні шари Сонця обертаються з різною швидкістю (диференційне обертання)</p></li>
+<li><p>На екваторі обертання відбувається швидше, ніж на полюсах</p></li>
+<li><p>Це призводить до розтягування і скручування магнітних ліній</p></li>
+<li><p>Скручені магнітні поля утворюють так звані &quot;магнітні трубки потоку&quot;</p></li>
+<li><p>Ці трубки можуть підніматися до поверхні і проривати її, утворюючи сонячні плями</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>Механізм утворення сонячних плям<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Модель Бебкока, запропонована американським астрономом Горесом Бебкоком у 1961 році, пояснює утворення сонячних плям наступним чином:</p>
+<ol class="arabic simple">
+<li><p>Диференційне обертання Сонця розтягує і скручує магнітні лінії</p></li>
+<li><p>Скручені магнітні поля формують трубки потоку</p></li>
+<li><p>Ці магнітні структури підіймаються до поверхні через плавучість</p></li>
+<li><p>Коли магнітні трубки проривають фотосферу, вони утворюють пари плям з протилежною полярністю</p></li>
+<li><p>Сильні магнітні поля в плямах пригнічують конвекційні потоки гарячої плазми</p></li>
+<li><p>Через зменшення теплопереносу плями охолоджуються і виглядають темними</p></li>
+</ol>
+<p>Магнітні поля плям можуть бути в тисячі разів сильнішими за загальне магнітне поле Сонця. Вони з'єднують плями, утворюючи арки, по яких може рухатися плазма, створюючи вражаючі структури - корональні петлі та протуберанці.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Twistedflux.svg" alt="Twistedflux.svg" height="367" width="541">
+<br>
+Рис. Еволюція магнітного поля Сонця в моделі Бебкока. I - поблизу мінімуму 11-річного циклу, III - поблизу максимуму.
+Автор: Eeron80, resa vettoriale da Stains, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3990036">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Модель_Бебкока">Wiki</a></p><p>Наприкінці сонячного циклу кількість плям збільшується, а магнітне поле стає надзвичайно складним. Коли заплутаність магнітного поля досягає певного рівня, відбувається глобальна реорганізація - магнітні полюси міняються місцями. Північний магнітний полюс стає південним, і навпаки.</p>
+<p>Ця зміна полярності означає завершення одного циклу і початок наступного. В період зміни полярності активність Сонця зазвичай мінімальна. Поточний 25-й цикл розпочався у 2019 році, і його максимум очікується приблизно у 2025 році.</p>
+</section>
+<section id="id5">
+<h2>Прояви сонячної активності<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><strong>Сонячні спалахи</strong></p>
+<p><strong>Сонячні спалахи (solar flare)</strong> - це відносно інтенсивне локалізоване випромінювання електромагнітного випромінювання в атмосфері Сонця. Вважається, що сонячні спалахи виникають, коли накопичена магнітна енергія в атмосфері Сонця прискорює заряджені частинки в навколишній плазмі. Це призводить до випромінювання електромагнітного випромінювання по всьому електромагнітному спектру.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/BusyCOR2.jpg" alt="BusyCOR2.jpg" height="500" width="522">
+<br>
+Рис. Сонячний спалах зареєстрований коронографом STEREO (Ahead) (НАСА) 5 травня 2012 р. На світлині розташування Сонця позначено білим кільцем. Чорний диск блокує випромінювання безпосередньо від Сонця та від його ближньої корони й дає можливість бачити детальну структуру сонячного спалаху.
+Автор: Місія <a href="https://uk.wikipedia.org/wiki/STEREO" class="extiw" title="uk:STEREO">STEREO</a> (<a href="https://uk.wikipedia.org/wiki/%D0%9D%D0%90%D0%A1%D0%90" class="extiw" title="uk:НАСА">НАСА</a>) - <a rel="nofollow" class="external free" href="https://sohowww.nascom.nasa.gov/pickoftheweek/BusyCOR2.jpg">https://sohowww.nascom.nasa.gov/pickoftheweek/BusyCOR2.jpg</a>, Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=38799185">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Сонячний_спалах">Wiki</a></p><p><strong>Протуберанці</strong></p>
+<p>Протуберанці (англ. solar prominence) - це величезні хмари сонячного газу (плазми), які підтримуються магнітними полями і піднімаються над поверхнею Сонця. Ці структури можуть існувати тижнями або навіть місяцями і досягати висоти в сотні тисяч кілометрів. Коли ми спостерігаємо їх збоку (на краю сонячного диска), вони виглядають як яскраві петлі або арки. Коли ми бачимо їх зверху (на фоні сонячного диска), вони виглядають як темні нитки і називаються волокнами.
+Інколи протуберанці можуть раптово вибухати, викидаючи величезні об'єми сонячної речовини в космос, що призводить до корональних викидів маси.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Prominence_ESA423294.jpg" alt="Prominence ESA423294.jpg" height="500" width="600">
+<br>
+Рис. Сонячний протуберанець, видимий у реальному кольорі під час повного сонячного затемнення.
+By ESA/CESAR, <a rel="nofollow" class="external text" href="https://creativecommons.org/licenses/by-sa/3.0/igo/">CC BY-SA IGO 3.0</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en" title="Creative Commons Attribution-Share Alike 3.0 igo">CC BY-SA 3.0 igo</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=80398416">Link</a>. <a href="placeholder">Wiki</a></p><p><strong>Корональні викиди маси (КВМ)</strong></p>
+<p>Корональні викиди маси (англ. coronal mass ejection, скор. англ. CME) - це величезні хмари намагніченої плазми, які викидаються з сонячної корони в міжпланетний простір. Це одні з найдраматичніших проявів сонячної активності. КВМ можуть містити мільярди тонн матеріалу і рухатися зі швидкістю від 250 до 3000 км/с.</p>
+<p>КВМ часто (але не завжди) пов'язані з сонячними спалахами і вибухами протуберанців (сонячні спалахи та корональні викиди маси є різними й незалежними проявами сонячної активності). Якщо такий викид спрямований у бік Землі, він може досягти нашої планети приблизно за 1-3 дні і викликати сильні геомагнітні бурі.</p>
+<p>На відміну від сонячних спалахів, під час яких магнітна енергія, накопичена в активних областях Сонця, реалізується переважно в вигляді електромагнітного випромінювання, під час корональних викидів маси ця енергія витрачається на прискорення величезних мас речовини. Сонячні спалахи та корональні викиди є незалежними процесами. Викид містить плазму, що складається переважно з електронів та протонів поряд з невеликою кількістю важчих елементів - гелію, кисню, заліза та інших. Деякі іони часто мають нижчі стани іонізації (наприклад, одноразово іонізовані атоми гелію), ніж навколишня спокійна плазма корони. Це вказує на те, що значна частина маси викиду може бути прискорена з областей з нижчою температурою, тобто з рівня хромосфери. Характерною особливістю викиду є те, що його загальна топологія має форму велетенської петлі, обидва або один кінець якої закріплені за сонячну атмосферу, а магнітне поле у викиді, як правило, вище, ніж у спокійному сонячному вітрі, і являє собою скручені в джгут магнітні силові лінії.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Solar_8-P.gif" alt="Solar 8-P.gif" height="358" width="591">
+<br>
+Рис. Корональні викиди маси.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Penyulap" title="User:Penyulap">Penyulap</a> - Probably <a href="https://commons.wikimedia.org/w/index.php?title=File:August_31,_2012_Magnificent_CME.ogv&amp;action=edit&amp;redlink=1" class="new" title="File:August 31, 2012 Magnificent CME.ogv (page does not exist)">File:August 31, 2012 Magnificent CME.ogv</a> or some NASA PD source, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=24630739">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Корональні_викиди_маси">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Magnificent_CME_Erupts_on_the_Sun_-_August_31.jpg" alt="Magnificent CME Erupts on the Sun - August 31.jpg" height="500" width="889">
+<br>
+Рис. Корональний викид маси виривається з Сонця.
+Автор: <a rel="nofollow" class="external text" href="https://www.flickr.com/people/24662369@N07">NASA Goddard Space Flight Center</a> - <a href="https://commons.wikimedia.org/wiki/Flickr" class="mw-redirect" title="Flickr">Flickr</a>: <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/24662369@N07/7931831962">Magnificent CME Erupts on the Sun - August 31</a>Also available on NASA's Image and Video Library as <a rel="nofollow" class="external text" href="https://images.nasa.gov/details/GSFC_20171208_Archive_e001662">GSFC_20171208_Archive_e001662</a>, <a href="https://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=21422679">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Сонячний_вітер">Wiki</a></p></section>
+<section id="id6">
+<h2>Сонячний вітер і геліосфера<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p><strong>Що таке сонячний вітер?</strong></p>
+<p>Сонячний вітер - це постійний потік заряджених частинок (переважно електронів і протонів), які випромінюються Сонцем у всіх напрямках. Цей потік виникає через високу температуру сонячної корони (понад 1 мільйон градусів), яка дозволяє частинкам &quot;втікати&quot; від гравітаційного притягання Сонця.
+Сонячний вітер поділяється на два типи:</p>
+<ul class="simple">
+<li><p>Повільний сонячний вітер — зі швидкістю 300-400 км/с</p></li>
+<li><p>Швидкий сонячний вітер — зі швидкістю 750-800 км/с, який виходить із корональних дір (областей з відкритими магнітними полями)</p></li>
+</ul>
+<p><strong>Геліосфера</strong> - це величезна область простору навколо Сонця, заповнена сонячним вітром (потоком заряджених частинок, що летять від Сонця) та пронизана магнітним полем Сонця. Вона простягається далеко за орбіти планет.</p>
+<p>Галактичні космічні промені (ГКП) - це частинки надзвичайно високих енергій (переважно протони та ядра атомів), що прилітають до нас із джерел поза Сонячною системою (наприклад, від вибухів наднових зір).</p>
+<p>Сонячний вітер та магнітне поле, що формують геліосферу, діють як динамічний щит. Коли ГКП намагаються проникнути в Сонячну систему, вони взаємодіють із цим магнітним полем та потоком частинок сонячного вітру. Ця взаємодія призводить до того, що значна частина ГКП (особливо з нижчими енергіями) відхиляється, розсіюється і не може досягти внутрішніх областей Сонячної системи, де знаходяться планети, включаючи Землю. Рівень захисту, який надає геліосфера, не є абсолютним - частина галактичних космічних променів все ж проникає всередину Сонячної системи.</p>
+</section>
+<section id="id7">
+<h2>Вплив сонячної активності на Землю<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p><strong>Магнітосфера Землі</strong></p>
+<p>Магнітосфера Землі - це область навколо нашої планети, де домінує земне магнітне поле. Вона діє як щит, відхиляючи більшість заряджених частинок сонячного вітру. Без магнітосфери сонячний вітер міг би поступово &quot;здути&quot; атмосферу Землі, як це сталося з Марсом.</p>
+<p>Коли сонячний вітер стикається з магнітосферою, він деформує її, стискаючи з боку Сонця (до відстані близько 10 земних радіусів) і розтягуючи з протилежного боку у довгий &quot;хвіст&quot; (який може простягатись на сотні земних радіусів).</p>
+<p><strong>Магнітні бурі</strong></p>
+<p>Магнітна буря - це тимчасове збурення магнітосфери Землі, викликане сонячним вітром або корональними викидами маси. Під час магнітної бурі частинки сонячного вітру &quot;притискають&quot; магнітосферу і частково проникають усередину, викликаючи значні коливання магнітного поля Землі.</p>
+<p>Магнітні бурі класифікують за шкалою G від G1 (слабкі) до G5 (екстремальні). Сильні магнітні бурі можуть:</p>
+<ul class="simple">
+<li><p>Пошкоджувати супутники</p></li>
+<li><p>Викликати збої в електромережах</p></li>
+<li><p>Порушувати радіозв'язок</p></li>
+<li><p>Впливати на навігаційні системи</p></li>
+<li><p>Створювати ризики для астронавтів</p></li>
+</ul>
+<p><strong>Полярні сяйва</strong></p>
+<p>Одним із найкрасивіших проявів сонячної активності на Землі є полярні сяйва (аврори). Вони виникають, коли заряджені частинки сонячного вітру, захоплені магнітним полем Землі, стикаються з атомами і молекулами у верхніх шарах атмосфери (зазвичай на висоті 80-300 км).</p>
+<p>Під час цих зіткнень атоми атмосфери збуджуються і потім випромінюють світло різних кольорів:</p>
+<ul class="simple">
+<li><p>Зелений (найпоширеніший) - від атомів кисню на висоті близько 100-150 км</p></li>
+<li><p>Червоний — від кисню на більших висотах (200-300 км)</p></li>
+<li><p>Фіолетовий і блакитний - від азоту</p></li>
+</ul>
+<p>Зазвичай полярні сяйва видно лише поблизу магнітних полюсів Землі (Аврора Бореаліс на півночі та Аврора Австраліс на півдні), але під час сильних геомагнітних бур вони можуть бути видимі на набагато нижчих широтах.</p>
+</section>
+<section id="id8">
+<h2>Практичне значення: вплив на технології<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Сонячна активність може пошкоджувати супутники кількома способами:</p>
+<ul class="simple">
+<li><p>Зарядження частинками може викликати електростатичні розряди</p></li>
+<li><p>Нагрівання атмосфери під час сонячної активності збільшує опір для супутників на низьких орбітах</p></li>
+<li><p>Радіація може пошкодити електроніку</p></li>
+</ul>
+<p>Геомагнітні бурі індукують електричні струми в довгих провідниках (лініях електропередач), що може викликати перевантаження трансформаторів і навіть повне відключення електроенергії. Найвідоміший такий випадок стався в 1989 році в Квебеку (Канада), коли 6 мільйонів людей залишилися без електрики на 9 годин.</p>
+<p>Сонячні спалахи можуть порушувати радіозв'язок, особливо на високих частотах. Рентгенівське та ультрафіолетове випромінювання від спалахів іонізує верхні шари атмосфери, що впливає на поширення радіохвиль.</p>
+<p>Сонячні частинки можуть бути небезпечними для астронавтів за межами захисної магнітосфери Землі, наприклад, під час місій на Місяць або Марс. Навіть екіпажі та пасажири літаків, особливо на полярних маршрутах, отримують підвищену дозу радіації під час сильних сонячних подій.</p>
+<p><strong>Увага!</strong> При проведенні спостережень Сонця категорично забороняється безпосередній візуальний контакт із сонячним диском як неозброєним оком, так і через телескопічні прилади без застосування спеціалізованих світлофільтрів!</p>
+</section>
+<section id="id9">
+<h2>Додаткові матеріали (українською)<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D1%96_%D0%BF%D0%BB%D1%8F%D0%BC%D0%B8">Сонячні плями</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B5_%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%BE">Сонячне динамо</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%96_%D0%B2%D0%B8%D0%BA%D0%B8%D0%B4%D0%B8_%D0%BC%D0%B0%D1%81%D0%B8">Корональні викиди маси</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%92%D0%BE%D0%BB%D1%8C%D1%84%D0%B0">Число Вольфа</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B8%D0%B9_%D0%B2%D1%96%D1%82%D0%B5%D1%80">Сонячний вітер</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9E%D0%B4%D0%B8%D0%BD%D0%B0%D0%B4%D1%86%D1%8F%D1%82%D0%B8%D1%80%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D1%86%D0%B8%D0%BA%D0%BB_%D1%81%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%BE%D1%97_%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%96">Одинадцятирічний цикл сонячної активності</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B8%D0%B9_%D1%81%D0%BF%D0%B0%D0%BB%D0%B0%D1%85">Сонячний спалах</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%83%D0%BD%D0%B4%D0%B5%D1%80%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BC%D1%96%D0%BD%D1%96%D0%BC%D1%83%D0%BC">Маундерівський мінімум</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A6%D0%B8%D0%BA%D0%BB%D0%B8_%D1%81%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%BE%D1%97_%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%96">Цикли сонячної активності</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B0_%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C">Сонячна активність</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%A8%D0%BF%D0%B5%D1%80%D0%B5%D1%80%D0%B0">Закон Шперера</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%91%D0%B5%D0%B1%D0%BA%D0%BE%D0%BA%D0%B0">Модель Бебкока</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B8%D0%B9_%D1%84%D0%B0%D0%BA%D0%B5%D0%BB">Сонячний факел</a></p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_cycle_11">Solar cycle 11</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Space_climate">Space climate</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_energy">Solar energy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_flare">Solar flare</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_prominence">Solar prominence</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_cycle">Solar cycle</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_activity_and_climate">Solar activity and climate</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_phenomena">Solar phenomena</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_wind">Solar wind</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./astronomy_content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="solar-neutrino.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Сонячне нейтрино</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="star-classification.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Зорі: від народження до загибелі</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Цикли сонячної активності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Магнітне поле Сонця - двигун сонячної активності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Механізм утворення сонячних плям</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Прояви сонячної активності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сонячний вітер і геліосфера</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Вплив сонячної активності на Землю</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Практичне значення: вплив на технології</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

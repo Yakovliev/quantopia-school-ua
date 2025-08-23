@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Радіоактивність &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/nuclear-physics/radioactivity';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Ланцюгові ядерні реакції та термоядерні реакції" href="nuclear-chain-reaction.html" />
+    <link rel="prev" title="Модель атомного ядра. Ядерні сили. Енергія зв&#39;язку" href="atomic-nucleus.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy_content/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/nuclear-physics/radioactivity.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/nuclear-physics/radioactivity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/nuclear-physics/radioactivity.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Радіоактивність</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Відкриття радіоактивності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Фізична природа радіоактивного випромінювання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Правила радіоактивного зміщення</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Основний закон радіоактивного розпаду</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Активність радіонуклідів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Вивчення ядерних реакцій</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Одержання радіоактивних ізотопів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Загальні принципи роботи детекторів іонізуючого випромінювання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Радіоактивність<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Відкриття радіоактивності<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Феномен радіоактивності був відкритий після виявлення рентгенівського випромінювання. Дослідники висунули гіпотезу, що рентгенівські промені можуть виникати при флуоресценції певних матеріалів під дією сонячного світла. Саме цю ідею використав французький науковець Анрі Антуан Беккерель (1852–1908) у своїх експериментах у лютому 1896 року, випадково обравши для дослідження уранову сіль.</p>
+<p>Враховуючи здатність рентгенівських променів, на відміну від звичайного світла, проникати крізь непрозорі матеріали, Беккерель розмістив уранову сіль на загорнутій у чорний папір фотопластинці та виставив цю конструкцію на сонце. Проявивши фотопластинку, він виявив затемнення в місцях контакту з урановою сіллю. Це спостереження підтвердило, що <strong>уранова сіль дійсно випромінює промені з високою проникною здатністю</strong>.</p>
+<p>Через несприятливі погодні умови Беккерель був змушений відкласти подальші експерименти, помістивши підготовлену фотопластинку з урановою сіллю та мідним хрестом у шухляду. Проявивши пластинку через три дні, він виявив неочікуваний результат – чіткий обрис хреста. Це відкриття довело, що <strong>уранова сіль самостійно, без зовнішніх впливів, генерує невидиме випромінювання</strong>.</p>
+<p>Згодом це явище отримало назву <strong>радіоактивне випромінювання</strong>. Здатність речовин випромінювати такі промені була названа <strong>радіоактивністю</strong>, а ядра атомів, які мають цю властивість - <strong>радіонуклідами</strong>.</p>
+<p>Термін &quot;радіоактивність&quot; був запроваджений у науковий обіг Марією Склодовською-Кюрі (1867–1934). Її дослідження розпочалися з питання: «Чи лише Уран здатний випромінювати &quot;промені Беккереля&quot;?». У 1898 році Марія Склодовська-Кюрі разом із чоловіком П'єром Кюрі (1859–1906) виявили два нові хімічні елементи – Радій і Полоній. Радіоактивність Радію виявилася в мільйони разів інтенсивнішою порівняно з Ураном, проте виділення достатньої для досліджень кількості цієї речовини виявилося надзвичайно складним завданням. Подружжю Кюрі знадобилося додаткові чотири роки кропіткої праці та переробка близько 11 тонн уранової руди, щоб отримати мінімальну кількість чистого Радію.</p>
+<p>За свої відкриття в галузі радіоактивності подружжя Кюрі спільно з А. Беккерелем були удостоєні Нобелівської премії з фізики в 1903 році. Пізніше, у 1911 році, Марія Склодовська-Кюрі отримала ще й Нобелівську премію з хімії. В історії науки лише чотири особи стали двократними лауреатами Нобелівської премії.</p>
+</section>
+<section id="id3">
+<h2>Фізична природа радіоактивного випромінювання<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Експериментальні дослідження радіоактивних матеріалів виявили, що різні радіонукліди можуть випромінювати три основні типи променів:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span>-випромінювання - потоки позитивно заряджених масивних частинок, які є ядрами атомів Гелію;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span>-випромінювання, що існує у двох формах: <span class="math notranslate nohighlight">\(\beta^-\)</span>-випромінювання - потоки негативно заряджених легких частинок (швидких електронів) та <span class="math notranslate nohighlight">\(\beta^+\)</span>-випромінювання - потоки позитивно заряджених легких частинок (швидких позитронів);</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span>-випромінювання - електромагнітні хвилі надвисокої частоти.</p></li>
+</ol>
+<p>Одним із ключових експериментів для вивчення природи радіоактивного випромінювання була схема на Рис. 1, де пучок радіоактивного випромінювання спрямовувався спочатку через потужне магнітне поле, а потім потрапляв на фотопластинку. Після проявлення на фотопластинці було чітко видно три окремі плями, що підтверджувало наявність трьох різних типів випромінювання від уранового зразка.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Radioact1.tif/lossy-page1-572px-Radioact1.tif.jpg?20191223045113" alt="Radioact1.tif" height="487" width="572">
+<br>
+Рис. 1. Схема досліду з вивчення природи радіоактивного випромінювання. Це приблизний рисунок. Насправді альфа частинки повинні відхилятися ближче до спостерігача (а не вправо), а бета-частинки повинні відхилятись далі від спостерігача (а не вліво). Щоб у цьому переконатись, досить визначити напрямок сили Лоренца за правилом лівої руки.
+Wikimedia, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=85161510">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Радіоактивність">Wiki</a></p><hr class="docutils" />
+<p><strong>Характеристики видів радіоактивного випромінювання</strong></p>
+<p><strong>α-випромінювання</strong>
+Являє собою потік ядер атомів Гелію <span class="math notranslate nohighlight">\(^4_2 \text{He}\)</span>, що рухаються зі швидкістю порядку <span class="math notranslate nohighlight">\(10^7\)</span> м/с.</p>
+<div class="math notranslate nohighlight">
+\[q_α = +2e = +3.2 \cdot 10^{-19} \text{ Кл}\]</div>
+<div class="math notranslate nohighlight">
+\[m_α = 4.0 \text{ а.о.м.} = 6.6 \cdot 10^{-27} \text{ кг}\]</div>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Alpha_Decay.svg" alt="Alpha Decay.svg" height="340" width="500">
+<br>
+Рис. 2. Альфа-розпад.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="uk">Власна робота</span>, Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=2858666">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Альфа-розпад">Wiki</a></p><p><strong><span class="math notranslate nohighlight">\(\beta^-\)</span>-випромінювання</strong></p>
+<p>Складається з потоку електронів <span class="math notranslate nohighlight">\(^0_{-1}e\)</span>, що рухаються зі швидкістю, близькою до швидкості світла.</p>
+<div class="math notranslate nohighlight">
+\[q(β^-)=-e = -1.6 \cdot 10^{-19} \text{ Кл}\]</div>
+<div class="math notranslate nohighlight">
+\[m_e \approx 5.5 \cdot 10^{-4} \text{ а.о.м.} \approx 9.1 \cdot 10^{-31} \text{ кг}\]</div>
+<p><strong><span class="math notranslate nohighlight">\(\beta^+\)</span>-випромінювання</strong></p>
+<p>Утворене потоком позитронів <span class="math notranslate nohighlight">\(^0_{+1}e\)</span>, що рухаються зі швидкістю, близькою до швидкості світла.</p>
+<div class="math notranslate nohighlight">
+\[q(β^+)= +e = +1.6 \cdot 10^{-19} \text{ Кл}\]</div>
+<div class="math notranslate nohighlight">
+\[m(e^+) \approx 5.5 \cdot 10^{-4} \text{ а.о.м.} \approx 9.1 \cdot 10^{-31} \text{ кг}\]</div>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Beta-minus_Decay.svg" alt="Beta-minus Decay.svg" height="340" width="500">
+<br>
+Рис. 3. Бета-мінус випромінювання.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="uk">Власна робота</span>, Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=2859203">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Бета-розпад">Wiki</a></p><p><strong><span class="math notranslate nohighlight">\(\gamma\)</span>-випромінювання</strong></p>
+<p><span class="math notranslate nohighlight">\(\gamma\)</span>-випромінювання представлене електромагнітними хвилями надзвичайно високої частоти (понад <span class="math notranslate nohighlight">\(10^{19}\)</span> Гц), які поширюються у вакуумі зі швидкістю <span class="math notranslate nohighlight">\(3 \cdot 10^8\)</span> м/с.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Gamma_Decay.svg" alt="Зображення" height="320" width="470">
+<br>
+Рис. 4. Гамма-промені (гамма-випромінювання).
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Inductiveload" title="User:Inductiveload">Inductiveload</a> - <span class="int-own-work" lang="uk">Власна робота</span> (<span lang="en" dir="ltr">Original text: self-made</span>), Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=2859217">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Гамма-промені">Wiki</a></p><p>Важливо зазначити, що радіоактивне випромінювання неможливо виявити органами чуття людини, проте воно здатне спричинити серйозні руйнівні наслідки для організму. Від α- і β-випромінювання відносно легко захиститися: для блокування α-частинок достатньо тонкого аркуша паперу (товщиною 0.1 мм), а β-випромінювання повністю поглинається алюмінієвим шаром товщиною близько 1 мм. Найскладніше захиститися від γ-випромінювання, яке становить найбільшу небезпеку для людини.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Alfa_beta_gamma_radiation.svg" alt="Alfa beta gamma radiation.svg" height="550" width="412">
+<br>
+Рис. 5. Альфа-частинки можна повністю зупинити за допомогою аркушу паперу, бета-частинки за допомогою алюмінієвого екрану. Гамма-промені можна зупинити лише із використанням значно істотнішої маси, такої як товстий шар свинцю.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Stannered" title="User:Stannered">Stannered</a> - Traced from <a href="https://commons.wikimedia.org/wiki/File:Alfa_beta_gamma_radiation.png" title="File:Alfa beta gamma radiation.png">this PNG image</a>., <a href="https://creativecommons.org/licenses/by/2.5" title="Creative Commons Attribution 2.5">CC BY 2.5</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1716989">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Радіоактивність">Wiki</a></p></section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Правила радіоактивного зміщення<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Наукові дослідження показали, що <strong>радіоактивне випромінювання є результатом спонтанних трансформацій атомних ядер</strong>. Особливість цих перетворень полягає в тому, що вони відбуваються <strong>самовільно, без зовнішніх впливів</strong>. Процеси радіоактивного розпаду неможливо прискорити чи сповільнити, вони не залежать від зовнішніх чинників, таких як тиск, температура, магнітні та електричні поля, хімічні реакції чи освітлення.</p>
+<blockquote>
+<div><p>Радіоактивність - властивість ядер радіонуклідів спонтанно перетворюватися на ядра інших елементів з одночасним випромінюванням мікрочастинок.</p>
+</div></blockquote>
+<p>При випромінюванні <span class="math notranslate nohighlight">\(\alpha\)</span>- або <span class="math notranslate nohighlight">\(\beta\)</span>-частинок початкове ядро трансформується в ядро атома іншого хімічного елемента. Процеси <span class="math notranslate nohighlight">\(\alpha\)</span>- і <span class="math notranslate nohighlight">\(\beta\)</span>-розпаду часто супроводжуються <span class="math notranslate nohighlight">\(\gamma\)</span>-випромінюванням. Експериментальні дослідження дозволили встановити фундаментальні закономірності таких перетворень - <strong>правила радіоактивного зміщення</strong>:</p>
+<ol class="arabic simple">
+<li><p>При <span class="math notranslate nohighlight">\(\alpha\)</span>-розпаді загальна кількість нуклонів у ядрі зменшується на 4, а кількість протонів - на 2. У результаті утворюється ядро елемента, порядковий номер якого на 2 одиниці менший за порядковий номер вихідного елемента:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[^A_Z \text{X} \to ^4_2 \text{He} + ^{A-4}_{Z-2} \text{Y}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>При <span class="math notranslate nohighlight">\(\beta^-\)</span>-розпаді загальна кількість нуклонів у ядрі залишається незмінною, але кількість протонів збільшується на 1. Утворюється ядро елемента, порядковий номер якого на 1 одиницю більший за порядковий номер вихідного елемента:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[^A_Z \text{X} \to ^0_{-1} e + ^A_{Z+1} \text{Y}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>При <span class="math notranslate nohighlight">\(\beta^+\)</span>-розпаді загальна кількість нуклонів у ядрі залишається незмінною, але кількість протонів зменшується на 1. Утворюється ядро елемента, порядковий номер якого на 1 одиницю менший за порядковий номер вихідного елемента:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[^A_Z \text{X} \to ^0_{+1} e + ^A_{Z-1} \text{Y}\]</div>
+<p>Під час <span class="math notranslate nohighlight">\(\beta\)</span>-розпаду, окрім електрона (або позитрона), з ядра випромінюється ще одна частинка - <strong>антинейтрино або нейтрино</strong>. Через надзвичайно малу масу та відсутність електричного заряду ці частинки дуже слабко взаємодіють з речовиною, що ускладнює їх виявлення в експериментальних умовах.</p>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Основний закон радіоактивного розпаду<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Розглянемо герметично закриту посудину, що містить певну кількість Радону-220 – радіоактивного елемента, ядра якого спонтанно розпадаються з випромінюванням <span class="math notranslate nohighlight">\(\alpha\)</span>-частинок.</p>
+<p>Чи можливо передбачити, яке конкретне ядро розпадеться першим або останнім? Відповідь – ні, це неможливо визначити, оскільки <strong>розпад окремого ядра радіонукліда є випадковою подією</strong>. Водночас, загальна поведінка сукупності радіоактивних атомів підпорядковується чітким статистичним закономірностям: кожен радіонуклід характеризується власним <strong>періодом піврозпаду</strong> (див. таблицю нижче). У випадку з Радоном-220, приблизно за 55.6 секунди кількість атомів Радону в посудині зменшиться вдвічі. За наступні 55.6 секунди половина решти атомів також розпадеться, і так далі. Таким чином, 55.6 секунди становлять період піврозпаду для Радону-220.</p>
+<p><strong>Періоди піврозпаду вибраних радіоактивних нуклідів</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Радіонуклід</p></th>
+<th class="head"><p>Період піврозпаду</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Йод-131</p></td>
+<td><p>8 діб</p></td>
+</tr>
+<tr class="row-odd"><td><p>Калій-40</p></td>
+<td><p>1.25 млрд років</p></td>
+</tr>
+<tr class="row-even"><td><p>Карбон-14</p></td>
+<td><p>5700 років</p></td>
+</tr>
+<tr class="row-odd"><td><p>Кобальт-60</p></td>
+<td><p>5.3 року</p></td>
+</tr>
+<tr class="row-even"><td><p>Плутоній-239</p></td>
+<td><p>24 тис. років</p></td>
+</tr>
+<tr class="row-odd"><td><p>Радій-226</p></td>
+<td><p>1600 років</p></td>
+</tr>
+<tr class="row-even"><td><p>Радон-220</p></td>
+<td><p>55.6 секунди</p></td>
+</tr>
+<tr class="row-odd"><td><p>Радон-222</p></td>
+<td><p>3.8 доби</p></td>
+</tr>
+<tr class="row-even"><td><p>Стронцій-89</p></td>
+<td><p>50.5 доби</p></td>
+</tr>
+<tr class="row-odd"><td><p>Стронцій-90</p></td>
+<td><p>28.9 року</p></td>
+</tr>
+<tr class="row-even"><td><p>Уран-235</p></td>
+<td><p>0.7 млрд років</p></td>
+</tr>
+<tr class="row-odd"><td><p>Уран-238</p></td>
+<td><p>4.5 млрд років</p></td>
+</tr>
+<tr class="row-even"><td><p>Цезій-137</p></td>
+<td><p>30 років</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p><strong>Період піврозпаду</strong> <span class="math notranslate nohighlight">\(T_{1/2}\)</span> - фізична величина, що є характеристикою радіонукліда та визначає час, протягом якого розпадається половина наявних ядер даного типу.</p>
+</div></blockquote>
+<p>В Міжнародній системі одиниць (СІ) період піврозпаду вимірюється в секундах: <span class="math notranslate nohighlight">\([T_{1/2}] = 1\)</span> с (s).</p>
+<p>Припустимо, що в початковий момент часу радіоактивний зразок містить <span class="math notranslate nohighlight">\(N_0\)</span> ядер певного радіонукліда. Внаслідок радіоактивного розпаду кількість цих ядер з часом зменшуватиметься.</p>
+<ul class="simple">
+<li><p>Через час <span class="math notranslate nohighlight">\(t_1\)</span>, рівний періоду піврозпаду <span class="math notranslate nohighlight">\((t_1 = T_{1/2})\)</span>, кількість ядер, що не розпалися становитиме: <span class="math notranslate nohighlight">\(N_1 = \frac{N_0}{2} = N_0 \cdot 2^{-1}\)</span>.</p></li>
+<li><p>Ще через один період піврозпаду <span class="math notranslate nohighlight">\((t_2 = 2T_{1/2})\)</span> залишиться половина від <span class="math notranslate nohighlight">\(N_1\)</span>: <span class="math notranslate nohighlight">\(N_2 = \frac{N_1}{2} = \frac{N_0 \cdot 2^{-1}}{2} = N_0 \cdot 2^{-2}\)</span>;</p></li>
+<li><p>через час <span class="math notranslate nohighlight">\(t_3 = 3T_{1/2}\)</span> кількість ядер становитиме: <span class="math notranslate nohighlight">\(N_3 = \frac{N_2}{2} = \frac{N_0 \cdot 2^{-2}}{2} = N_0 \cdot 2^{-3}\)</span>.</p></li>
+<li><p>Узагальнюючи, через <span class="math notranslate nohighlight">\(n\)</span> періодів піврозпаду <span class="math notranslate nohighlight">\((t = nT_{1/2})\)</span> у зразку залишиться <span class="math notranslate nohighlight">\(N = N_0 \cdot 2^{-n}\)</span> ядер радіонукліда.</p></li>
+</ul>
+<p>Враховуючи, що <span class="math notranslate nohighlight">\(n = \frac{t}{T_{1/2}}\)</span>, отримуємо <strong>основний закон радіоактивного розпаду</strong>:</p>
+<div class="math notranslate nohighlight">
+\[N = N_0 \cdot 2^{- \frac{t}{T_{1/2}}}\]</div>
+<p>де <span class="math notranslate nohighlight">\(N\)</span> - кількість ядер радіонукліда, що залишились у зразку через час <span class="math notranslate nohighlight">\(t\)</span>; <span class="math notranslate nohighlight">\(N_0\)</span> - початкова кількість ядер; <span class="math notranslate nohighlight">\(T_{1/2}\)</span> - період піврозпаду; <span class="math notranslate nohighlight">\(t\)</span> - час від початку спостереження.</p>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Активність радіонуклідів<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Розглянемо Радон-220 і Радон-222, які обидва є <span class="math notranslate nohighlight">\(\alpha\)</span>-радіоактивними (їхні ядра спонтанно розпадаються на <span class="math notranslate nohighlight">\(\alpha\)</span>-частинку та відповідне дочірнє ядро). Постає запитання: якщо кількість атомів Радону-220 і Радону-222 однакова, з якого зразка за одиницю часу вилетить більше α-частинок?</p>
+<blockquote>
+<div><p>Фізична величина, яка чисельно дорівнює кількості актів розпаду, що відбуваються в радіоактивному джерелі за одну секунду, називається <strong>активністю</strong> <span class="math notranslate nohighlight">\(A\)</span> цього джерела.</p>
+</div></blockquote>
+<p>В СІ одиницею вимірювання активності є <strong>бекерель</strong>: <span class="math notranslate nohighlight">\([A] = 1\)</span> Бк (Bq).</p>
+<p>1 Бк відповідає активності такого радіоактивного джерела, в якому відбувається 1 розпад за секунду: 1 Бк = 1 розпад/с = c⁻¹.</p>
+<p>Оскільки 1 бекерель є дуже малою величиною активності, на практиці часто використовують позасистемну одиницю - <strong>кюрі</strong> (Кі): 1 Кі = <span class="math notranslate nohighlight">\(3.7 \cdot 10^{10}\)</span> Бк</p>
+<p>Для зразка, що містить атоми лише одного типу радіонукліда, активність можна обчислити за формулою:</p>
+<div class="math notranslate nohighlight">
+\[A = \lambda N\]</div>
+<p>де <span class="math notranslate nohighlight">\(N\)</span> - кількість атомів радіонукліда в зразку в даний момент часу; <span class="math notranslate nohighlight">\(\lambda\)</span> - <strong>стала радіоактивного розпаду</strong>, характеристична величина для кожного радіонукліда, пов'язана з періодом піврозпаду співвідношенням:</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \frac{\ln 2}{T_{1/2}}\]</div>
+<p>де <span class="math notranslate nohighlight">\([\lambda] = \text{c}^{-1}\)</span>.</p>
+<p>З плином часу в радіоактивному зразку кількість ядер, що не розпалися, поступово зменшується, що призводить до відповідного зниження активності зразка.</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Вивчення ядерних реакцій<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>У процесі будь-яких ядерних реакцій дотримуються фундаментальні закони збереження:</p>
+<ul class="simple">
+<li><p>закон збереження електричного заряду;</p></li>
+<li><p>закон збереження енергії-маси;</p></li>
+<li><p>закон збереження імпульсу;</p></li>
+<li><p>закон збереження масового числа.</p></li>
+</ul>
+<p>Трансформацію атомних ядер внаслідок їхньої взаємодії з елементарними частинками або іншими ядрами називають <strong>ядерною реакцією</strong>.</p>
+<p>Вперше ядерну реакцію реалізував Ернест Резерфорд у 1919 році. У цьому експерименті альфа-частинка (ядро Гелію) взаємодіяла з ядром Нітрогену, в результаті чого сформувалися ядро Оксигену та протон:</p>
+<div class="math notranslate nohighlight">
+\[^{14}_7N + ^4_2He \rightarrow ^{17}_8O + ^1_1p\]</div>
+<p>Чому саме альфа-частинки? Справа в тому, що альфа-частинки володіють колосальною швидкістю та здатні підійти до ядра на відстань, де починають діяти ядерні сили. Однак, у подальших експериментах науковці виявили, що енергія альфа-частинок недостатня для наближення до ядер з порядковим номером понад 19, оскільки зі зростанням заряду ядра посилюється кулонівське відштовхування.</p>
+<p>Для дослідження таких ядер можна було б застосувати протони (їхній заряд удвічі менший), проте високошвидкісні протони в природі відсутні. Тоді виникла концепція створення пучків <em>прискорених заряджених частинок</em>. Перша <em>ядерна реакція із застосуванням швидких протонів</em> відбулася в лабораторії Резерфорда у 1932 році: при бомбардуванні літію швидкими протонами ядро Літію розщепилося на дві альфа-частинки:</p>
+<div class="math notranslate nohighlight">
+\[^7_3Li + ^1_1p \rightarrow ^4_2He + ^4_2He\]</div>
+<p>Значно більше можливостей для вивчення ядерних реакцій з'явилося після відкриття нейтрона (1932 рік): <em>нейтрон не має електричного заряду, тому не зазнає відштовхування від ядра</em>, отже, його непотрібно прискорювати. При дослідженні реакцій з нейтронами було встановлено, що повільний нейтрон поглинається ядром ефективніше, ніж швидкий. Цей феномен експериментально виявила група молодих італійських фізиків під керівництвом Енріко Фермі (1901-1954) у 1934 році. Саме використання повільних нейтронів дало можливість згодом створити ядерний реактор.</p>
+<p><strong>Здійснення першої ядерної реакції</strong></p>
+<p>У 1919 році Резерфорд помітив, що при проходженні альфа-частинок через повітря утворюються протони. Резерфорд висунув два припущення, щоб це пояснити:</p>
+<ol class="arabic simple">
+<li><p>альфа-частинка як швидкий &quot;снаряд&quot; вибиває протон з ядра Нітрогену (азот становить близько 80% повітря), і ядро перетворюється на ядро Карбону:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[^{14}_7N + ^4_2He \rightarrow ^4_2He + ^{13}_6C + ^1_1p\]</div>
+<ol class="arabic simple" start="2">
+<li><p>альфа-частинка поглинається ядром Нітрогену, нове ядро випускає протон і трансформується в ядро Оксигену:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[^{14}_7N + ^4_2He \rightarrow ^{17}_8O + ^1_1p\]</div>
+<p>Правильним виявилося друге припущення - відповідну реакцію через кілька років спостерігали в камері Вільсона.</p>
+</section>
+<section id="id8">
+<h2>Одержання радіоактивних ізотопів<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Ізотопи</strong> - це атоми одного хімічного елемента, ядра яких містять однакову кількість протонів, але різну кількість нейтронів. Відповідно <strong>радіоактивні ізотопи</strong> - це атоми одного хімічного елемента, ядра яких здатні спонтанно трансформуватися в ядра інших елементів із випромінюванням мікрочастинок і гамма-випромінювання-.</p>
+</div></blockquote>
+<p>Перший штучний радіоактивний ізотоп - Фосфор-30 (<span class="math notranslate nohighlight">\(^{30}_{15}P\)</span>) - був отриманий подружжям Ірен та Фредеріком Жоліо-Кюрі у 1934 році. Опромінюючи алюміній альфа-частинками, вони зафіксували випускання нейтронів:</p>
+<div class="math notranslate nohighlight">
+\[^{27}_{13}Al + ^4_2He \rightarrow ^{30}_{15}P + ^1_0n\]</div>
+<p>Jдночасно з нейтронами випромінювалися позитрони.</p>
+<p>Наявність позитронів свідчила про те, що утворене ядро Фосфору-30 було бета-плюс-радіоактивним:</p>
+<div class="math notranslate nohighlight">
+\[^{30}_{15}P \rightarrow ^{30}_{14}Si + ^0_1e + ν\]</div>
+<p>Для кожного хімічного елемента за допомогою ядерних реакцій отримані штучні радіоактивні ізотопи. Більшість природних і штучних радіоактивних ядер є бета-мінус-радіоактивними.</p>
+<p>Природні та штучні радіоактивні ізотопи широко застосовуються в медицині, сільському господарстві, промисловості, енергетиці тощо. Виділяють три основні напрями використання радіоактивних ізотопів.</p>
+<p><strong>1. Застосування радіоактивних ізотопів як міток (індикаторів)</strong>. Радіоактивність слугує своєрідним маркером, що дозволяє виявити присутність елемента, відстежити його &quot;переміщення&quot; під час фізичних та біологічних процесів тощо.</p>
+<p><strong>2. Застосування радіоактивних ізотопів як джерел гамма-випромінювання</strong>. Гамма-випромінювання використовують для знищення мікроорганізмів (гамма-стерилізація), виявлення внутрішніх дефектів металів (гамма-дефектоскопія), лікування онкологічних захворювань. Опромінення насіння малими дозами гамма-випромінювання сприяє істотному збільшенню врожайності, а великі дози можуть спричинити мутації та появу рослин із покращеними характеристиками (радіоселекція).</p>
+<p><strong>3. Застосування радіоактивних ізотопів як джерел ядерної енергії</strong>. Наприклад, як ядерне паливо широко використовують Плутоній - трансурановий елемент, який практично відсутній у земній корі. Розглянемо процес захоплення нейтрона ядром Урану-238:</p>
+<div class="math notranslate nohighlight">
+\[^{238}_{92}U + ^1_0n \rightarrow ^{239}_{92}U \rightarrow ^{239}_{93}Np + ^0_{-1}e\]</div>
+<div class="math notranslate nohighlight">
+\[^{239}_{93}Np \rightarrow ^{239}_{94}Pu + ^0_{-1}e\]</div>
+</section>
+<section id="id9">
+<h2>Загальні принципи роботи детекторів іонізуючого випромінювання<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>В основі роботи більшості детекторів лежить один з двох основних ефектів, які іонізуюче випромінювання спричиняє в речовині:</p>
+<ol class="arabic simple">
+<li><p><strong>Іонізація:</strong> Заряджені частинки (альфа, бета, протони) або фотони (гамма, рентгенівське випромінювання) при проходженні через речовину відривають електрони від атомів або молекул, створюючи пари позитивно заряджених іонів та вільних електронів.</p></li>
+<li><p><strong>Збудження:</strong> Частинки або фотони передають частину своєї енергії атомам або молекулам, переводячи їх у збуджений стан. Повертаючись в основний стан, ці атоми/молекули можуть випромінювати світло (люмінесценція).</p></li>
+</ol>
+<p>Детектори фіксують ці ефекти, перетворюючи їх на сигнал, який можна виміряти (зазвичай електричний імпульс або струм).</p>
+<p><strong>Основні типи пристроїв та принципи їх роботи:</strong></p>
+<ol class="arabic">
+<li><p><strong>Газорозрядні лічильники</strong></p>
+<p><strong>Принцип роботи:</strong> Іонізація газу всередині детектора.</p>
+<p><strong>Іонізаційна камера</strong>. Між двома електродами, до яких прикладена напруга, знаходиться газ. Іонізуюче випромінювання створює іони та електрони в газі. Електричне поле змушує їх рухатися до відповідних електродів, створюючи слабкий електричний струм. Величина цього струму пропорційна інтенсивності випромінювання (потужності дози). Газового підсилення немає. <strong>Приклади:</strong> Дозиметри для вимірювання високих рівнів радіації, калібрувальні прилади.</p>
+<p><strong>Пропорційний лічильник</strong>. Схожий на іонізаційну камеру, але напруга між електродами вища. Електрони, утворені первинною іонізацією, прискорюються настільки, що самі починають іонізувати газ. Кількість вторинних іонів пропорційна початковій енергії частинки. Це дозволяє не тільки реєструвати частинки, але й визначати їхню енергію. <strong>Приклади:</strong> Лабораторні прилади для спектрометрії альфа- і бета-випромінювання, детектори нейтронів (з наповнювачем BF₃ або ³He).</p>
+<p><strong>Лічильник Гейгера-Мюллера</strong> (найвідоміший). Напруга між електродами ще вища, ніж у пропорційному лічильнику. Будь-яка іонізуюча частинка, що потрапляє в робочий об'єм, викликає лавинний газовий розряд по всьому об'єму лічильника. В результаті утворюється сильний електричний імпульс, амплітуда якого не залежить від енергії початкової частинки. Лічильник реєструє сам факт потрапляння частинки. Характерне &quot;клацання&quot; дозиметрів - це звукове відтворення цих імпульсів. <strong>Приклади:</strong> Побутові дозиметри-радіометри, пошукові радіометри.</p>
+</li>
+<li><p><strong>Сцинтиляційні лічильники</strong></p>
+<p><strong>Принцип роботи:</strong> Збудження атомів спеціальної речовини (сцинтилятора) з наступним випромінюванням світла (сцинтиляцією).</p>
+<p>Іонізуюче випромінювання, потрапляючи в сцинтилятор (кристал, пластик або рідина), викликає в ньому короткочасні спалахи світла. Ці спалахи світла реєструються фотопомножувачем (ФЕП) або фотодіодом, який перетворює їх на електричні імпульси. Амплітуда імпульсу зазвичай пропорційна енергії, поглинутій сцинтилятором. <strong>Приклади:</strong> Гамма-спектрометри (наприклад, з кристалами NaI(Tl) або CsI(Tl)), детектори в медичних томографах (ПЕТ, ОФЕКТ), портативні пошукові прилади.</p>
+</li>
+<li><p><strong>Напівпровідникові детектори</strong></p>
+<p><strong>Принцип роботи:</strong> Іонізація в об'ємі напівпровідника.</p>
+<p>Іонізуюче випромінювання, проходячи через напівпровідниковий матеріал (зазвичай кремній Si або германій Ge), створює в ньому пари електрон-дірка (аналоги іонів та електронів у газі). Під дією прикладеного електричного поля ці носії заряду рухаються до електродів, створюючи електричний імпульс. Амплітуда імпульсу пропорційна енергії частинки. Мають дуже високу енергетичну роздільну здатність. <strong>Приклади:</strong> Спектрометри високої роздільної здатності для гамма- та рентгенівського випромінювання (HPGe-детектори, часто потребують охолодження рідким азотом), кремнієві детектори для реєстрації заряджених частинок.</p>
+</li>
+<li><p><strong>Інші типи (менш поширені для загального використання або специфічні)</strong></p>
+<p><strong>Трекові детектори (камера Вільсона, бульбашкова камера, іскрова камера):</strong> Дозволяють візуалізувати траєкторії (треки) заряджених частинок. Мають переважно історичне або науково-дослідне значення.</p>
+<p><strong>Фотографічні методи (плівкові дозиметри):</strong> Іонізуюче випромінювання викликає почорніння фотоемульсії, ступінь якого пропорційний поглинутій дозі. <strong>Приклади:</strong> Індивідуальні плівкові дозиметри для персоналу, що працює з джерелами випромінювання.</p>
+<p><strong>Термолюмінесцентні дозиметри (ТЛД):</strong> Деякі матеріали (люмінофори) накопичують енергію іонізуючого випромінювання, а при нагріванні випромінюють світло, інтенсивність якого пропорційна поглинутій дозі. <strong>Приклади:</strong> Індивідуальні дозиметри (часто у вигляді маленьких таблеток або пластинок), дозиметрія навколишнього середовища.</p>
+<p><strong>Хімічні дозиметри:</strong> Використовують зміну хімічних властивостей речовин під дією випромінювання. Застосовуються для вимірювання великих доз.</p>
+</li>
+</ol>
+</section>
+<section id="id10">
+<h2>Додаткові матеріали (українською)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B4%D1%96%D0%BE%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C">Радіоактивність</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%84%D0%B0-%D1%80%D0%BE%D0%B7%D0%BF%D0%B0%D0%B4">Альфа-розпад</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%91%D0%B5%D1%82%D0%B0-%D1%80%D0%BE%D0%B7%D0%BF%D0%B0%D0%B4">Бета-розпад</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BB%D0%B0%D0%B1%D0%BA%D0%B0_%D0%B2%D0%B7%D0%B0%D1%94%D0%BC%D0%BE%D0%B4%D1%96%D1%8F">Слабка взаємодія</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D0%BC%D0%BC%D0%B0-%D0%BF%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D1%96">Гамма-промені</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D1%80%D0%B0%D0%B4%D1%96%D0%BE%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B4%D0%B6%D0%B5%D1%80%D0%B5%D0%BB%D0%B0">Активність радіоактивного джерела</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%BE%D0%BD%D1%96%D0%B7%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D0%B0_%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D0%B0">Іонізаційна камера</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%BF%D0%BE%D1%80%D1%86%D1%96%D0%B9%D0%BD%D0%B0_%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D0%B0">Пропорційна камера та пропорційний лічильник</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9B%D1%96%D1%87%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA_%D0%93%D0%B5%D0%B9%D0%B3%D0%B5%D1%80%D0%B0">Лічильник Гейгера-Мюллера</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D1%86%D0%B8%D0%BD%D1%82%D0%B8%D0%BB%D1%8F%D1%86%D1%96%D0%B9%D0%BD%D1%96_%D0%BB%D1%96%D1%87%D0%B8%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B8">Сцинтиляційні лічильники</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D0%BC%D0%BC%D0%B0-%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B5%D1%82%D1%80">Гамма-спектрометр</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D0%BF%D1%96%D0%B2%D0%BF%D1%80%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B8%D0%B9_%D0%B4%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%BE%D1%80">Напівпровідниковий детектор</a></p></li>
+</ul>
+</section>
+<section id="id11">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Radioactive_decay">Radioactive decay</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Alpha_decay">Alpha decay</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_particles">List of particles</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Beta_decay">Beta decay</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gamma_ray">Gamma ray</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\nuclear-physics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="atomic-nucleus.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Модель атомного ядра. Ядерні сили. Енергія зв'язку</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="nuclear-chain-reaction.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ланцюгові ядерні реакції та термоядерні реакції</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Відкриття радіоактивності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Фізична природа радіоактивного випромінювання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Правила радіоактивного зміщення</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Основний закон радіоактивного розпаду</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Активність радіонуклідів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Вивчення ядерних реакцій</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Одержання радіоактивних ізотопів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Загальні принципи роботи детекторів іонізуючого випромінювання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

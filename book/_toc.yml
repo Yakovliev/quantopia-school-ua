@@ -10,94 +10,93 @@ options:  # Add these options
 parts:
   - caption: АСТРОНОМІЯ
     chapters:
-      - file: astronomy_content/01_basics/cassini
-      - file: astronomy_content/01_basics/astronomy_science
-      - file: astronomy_content/01_basics/discoveries_inventions
-      # - file: astronomy_content/01_basics/dark_matter_and_energy
-      - file: astronomy_content/01_basics/celestial_sphere
-      - file: astronomy_content/01_basics/angle_dimensions
-      - file: astronomy_content/01_basics/celestial_coordinates
-      - file: astronomy_content/01_basics/distances
-      - file: astronomy_content/01_basics/apparent_and_absolute_magnitude
-      - file: astronomy_content/01_basics/terrestrial_planets # To double-check
-      - file: astronomy_content/01_basics/giant_planets
-      - file: astronomy_content/01_basics/dwarf_planets.ipynb
-      - file: astronomy_content/01_basics/asteroid_comet_meteoroid
-      # - file: astronomy_content/01_basics/last-alert-system
-      - file: astronomy_content/01_basics/space-age
-      - file: astronomy_content/01_basics/sun-basics
-      - file: astronomy_content/01_basics/solar-neutrino
-      - file: astronomy_content/01_basics/solar-activity
-      # - file: astronomy_content/01_basics/time_and_calendar
-      # - file: astronomy_content/01_basics/k2-18b-exoplanet
-      - file: astronomy_content/01_basics/star-classification
-      - file: astronomy_content/01_basics/milky-way
-      - file: astronomy_content/01_basics/galaxies
-      #- file: astronomy_content/01_basics/to_be_published
-      - file: astronomy_content/01_basics/universe
+      - file: astronomy_content/cassini
+      - file: astronomy_content/astronomy_science
+      - file: astronomy_content/discoveries_inventions
+      # - file: astronomy_content/dark_matter_and_energy
+      - file: astronomy_content/celestial_sphere
+      - file: astronomy_content/angle_dimensions
+      - file: astronomy_content/celestial_coordinates
+      - file: astronomy_content/distances
+      - file: astronomy_content/apparent_and_absolute_magnitude
+      - file: astronomy_content/terrestrial_planets # To double-check
+      - file: astronomy_content/giant_planets
+      - file: astronomy_content/dwarf_planets.ipynb
+      - file: astronomy_content/asteroid_comet_meteoroid
+      # - file: astronomy_content/last-alert-system
+      - file: astronomy_content/space-age
+      - file: astronomy_content/sun-basics
+      - file: astronomy_content/solar-neutrino
+      - file: astronomy_content/solar-activity
+      # - file: astronomy_content/time_and_calendar
+      # - file: astronomy_content/k2-18b-exoplanet
+      - file: astronomy_content/star-classification
+      - file: astronomy_content/milky-way
+      - file: astronomy_content/galaxies
+      #- file: astronomy_content/to_be_published
+      - file: astronomy_content/universe
 
   - caption: ФІЗИКА
     chapters: 
-      - file: physics_content/mechanics/kinematics-01
-      - file: physics_content/mechanics/kinematics-02
-      - file: physics_content/mechanics/kinematics-03
-      - file: physics_content/internal_energy
+      - file: physics/mechanics/kinematics-01
+      - file: physics/mechanics/kinematics-02
+      - file: physics/mechanics/kinematics-03
+      - file: physics/internal_energy
         sections:
-          - file: physics_content/heat_transfer
-          - file: physics_content/internal_energy_task_01
-      - file: physics_content/work_thermo
-      - file: physics_content/first_law_thermo
+          - file: physics/heat_transfer
+          - file: physics/internal_energy_task_01
+      - file: physics/work_thermo
+      - file: physics/first_law_thermo
 
   - caption: МЕХАНІЧНІ КОЛИВАННЯ
     chapters:
-      - file: physics_content/oscillations-and-waves/mechanical-oscillations
-      - file: physics_content/oscillations-and-waves/pendulums
-      - file: physics_content/oscillations-and-waves/resonance
-      - file: physics_content/oscillations-and-waves/mechanical-waves
+      - file: physics/oscillations-and-waves/mechanical-oscillations
+      - file: physics/oscillations-and-waves/pendulums
+      - file: physics/oscillations-and-waves/resonance
+      - file: physics/oscillations-and-waves/mechanical-waves
 
   - caption: ЕЛЕКТРОДИНАМІКА
     chapters:
-      - file: physics_content/electrodynamics/charge_01
-      - file: physics_content/electrodynamics/charge_02
-      - file: physics_content/electrodynamics/electric_current
-      - file: physics_content/electrodynamics/series_and_parallel_connection
-      - file: physics_content/electrodynamics/work_power_electric_current
-      - file: physics_content/electrodynamics/electromotive_force
-      - file: physics_content/electrodynamics/electric_current_metals
-      - file: physics_content/electrodynamics/electrolysis
-      - file: physics_content/electrodynamics/ec_gases
-      - file: physics_content/electrodynamics/electric-current-vacuum
-      - file: physics_content/electrodynamics/semiconductor
-      - file: physics_content/electrodynamics/magnetic_field
-      - file: physics_content/electrodynamics/ampere_force_law
-      - file: physics_content/electrodynamics/lorentz-force
-      - file: physics_content/electrodynamics/electromagnetic-induction
-      - file: physics_content/electrodynamics/eddy-current
-      - file: physics_content/electrodynamics/inductance
-      - file: physics_content/electrodynamics/magnetic-properties
-      - file: physics_content/electrodynamics/electromagnetic-field
-      - file: physics_content/electrodynamics/oscillations
+      - file: physics/electrodynamics/charge_01
+      - file: physics/electrodynamics/charge_02
+      - file: physics/electrodynamics/electric_current
+      - file: physics/electrodynamics/series_and_parallel_connection
+      - file: physics/electrodynamics/work_power_electric_current
+      - file: physics/electrodynamics/electromotive_force
+      - file: physics/electrodynamics/electric_current_metals
+      - file: physics/electrodynamics/electrolysis
+      - file: physics/electrodynamics/ec_gases
+      - file: physics/electrodynamics/electric-current-vacuum
+      - file: physics/electrodynamics/semiconductor
+      - file: physics/electrodynamics/magnetic_field
+      - file: physics/electrodynamics/ampere_force_law
+      - file: physics/electrodynamics/lorentz-force
+      - file: physics/electrodynamics/electromagnetic-induction
+      - file: physics/electrodynamics/eddy-current
+      - file: physics/electrodynamics/inductance
+      - file: physics/electrodynamics/magnetic-properties
+      - file: physics/electrodynamics/electromagnetic-field
+      - file: physics/electrodynamics/oscillations
 
   - caption: ОПТИКА
     chapters:
-      - file: physics_content/optics/nature_of_light
-      - file: physics_content/optics/photometric_quantities
-      - file: physics_content/optics/light_reflection
-      - file: physics_content/optics/interference
-      - file: physics_content/optics/diffraction
-      - file: physics_content/optics/electromagnetic_spectrum
-      - file: physics_content/optics/polarization
-      - file: physics_content/optics/quantum_em_field
-      - file: physics_content/optics/photoelectric-effect
+      - file: physics/optics/nature_of_light
+      - file: physics/optics/photometric_quantities
+      - file: physics/optics/light_reflection
+      - file: physics/optics/interference
+      - file: physics/optics/diffraction
+      - file: physics/optics/electromagnetic_spectrum
+      - file: physics/optics/polarization
+      - file: physics/optics/quantum_em_field
+      - file: physics/optics/photoelectric-effect
 
   - caption: АТОМНА І ЯДЕРНА ФІЗИКА
     chapters:
-      - file: physics_content/nuclear-physics/rutherford-bohr
-      #- file: physics_content/nuclear-physics/spectrums
-      - file: physics_content/nuclear-physics/atomic-nucleus
-      - file: physics_content/nuclear-physics/radioactivity
-      - file: physics_content/nuclear-physics/nuclear-chain-reaction
-      
+      - file: physics/nuclear-physics/rutherford-bohr
+      #- file: physics/nuclear-physics/spectrums
+      - file: physics/nuclear-physics/atomic-nucleus
+      - file: physics/nuclear-physics/radioactivity
+      - file: physics/nuclear-physics/nuclear-chain-reaction
 
   # - caption: Розділ Електричне поле
 
