@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Рух під дією сили тяжіння &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/kinematics-04';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Рівноприскорений прямолінійний рух" href="kinematics-03.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mechanics/kinematics-04.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mechanics/kinematics-04.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mechanics/kinematics-04.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Рух під дією сили тяжіння</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Одновимірний рух: Рух тіла по вертикалі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Випадок 1: Вільне падіння без початкової швидкості</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Випадок 2: Рух тіла, кинутого вертикально вгору</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Двовимірний рух: Рух під кутом до горизонту</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Випадок 1: Тіло, кинуте горизонтально</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpha">Випадок 2: Тіло, кинуте під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Підсумок</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Рух під дією сили тяжіння<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Сьогодні ми зануримось в одну з найцікавіших і найпрактичніших тем фізики - рух тіл поблизу поверхні Землі. Щодня ми бачимо, як падає яблуко, як летить кинутий м'яч або як стрибає спортсмен. Усі ці рухи, на перший погляд такі різні, підкоряються одним і тим самим законам.</p>
+<p>Наша головна мета - навчитися описувати та передбачати такий рух. Для цього ми будемо працювати в <strong>інерціальній системі відліку</strong>, пов'язаній із Землею. Це означає, що ми вважаємо Землю нерухомою і всі рухи розглядаємо відносно неї. Примітка: Земля не є ідеальною інерціальною системою (оскільки вона обертається), але для більшості наших задач це наближення є цілком прийнятним.</p>
+<p>Ключовим гравцем у цій темі є <strong>сила тяжіння</strong>. Це сила, з якою Земля притягує до себе всі тіла. Поблизу поверхні Землі цю силу (а отже, і прискорення, яке вона створює) можна вважати незмінною. Рух, що відбувається лише під дією сили тяжіння, називається <strong>вільним падінням</strong>.</p>
+<p>Важливо зробити одне припущення: у всіх наших моделях ми будемо нехтувати опором повітря. Це ідеалізація, але вона дозволяє нам зрозуміти основні принципи руху.</p>
+<p>Ключовою величиною для нашої теми є <strong>прискорення вільного падіння</strong>. Досліди, проведені ще Галілео Галілеєм, показали дивовижну річ: в умовах, де опір повітря незначний, усі тіла - і легка пір'їнка, і важка гиря - падають з однаковим прискоренням. Це прискорення називають <strong>прискоренням вільного падіння</strong>.</p>
+<blockquote>
+<div><p><strong>Прискорення вільного падіння</strong> <span class="math notranslate nohighlight">\(\vec{g}\)</span> - це прискорення, якого набуває тіло, рухаючись лише під дією сили тяжіння Землі.</p>
+</div></blockquote>
+<p>Це векторна величина, яка має:</p>
+<ul>
+<li><p><strong>Напрямок:</strong> Завжди вертикально вниз, до центру Землі.</p></li>
+<li><p><strong>Модуль:</strong> Залежить від географічної широти та висоти над рівнем моря. Для розрахунків у шкільному курсі фізики його модуль зазвичай приймають рівним:</p>
+<div class="math notranslate nohighlight">
+\[g \approx 9.8 \text{ м}/\text{с}^2\]</div>
+<p>Це означає, що швидкість будь-якого тіла, що вільно падає, щосекунди збільшується на 9.8 м/с.</p>
+<p>Часто для спрощення розрахунків використовують значення <span class="math notranslate nohighlight">\(g \approx 10 \text{ м}/\text{с}^2\)</span>.</p>
+</li>
+</ul>
+<p>Оскільки <span class="math notranslate nohighlight">\(\vec{g}\)</span> є сталим вектором (не змінюється ні за модулем, ні за напрямком), то будь-який рух під дією сили тяжіння є <strong>рівноприскореним</strong>. Це чудова новина, бо ми можемо використовувати всі ті формули, які ми вже знаємо для рівноприскореного прямолінійного руху, трохи адаптувавши їх.</p>
+<p>Ми розглянемо два основні випадки: рух по вертикалі та рух по кривій траєкторії.</p>
+<hr class="docutils" />
+<section id="id2">
+<h2>Одновимірний рух: Рух тіла по вертикалі<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Це найпростіший випадок. Тіло рухається лише вгору або вниз уздовж прямої лінії. Наприклад, це падіння предмета або підкидання м'яча вертикально вгору.</p>
+<p>Для опису цього руху ми введемо вісь координат OY, напрямлену вертикально вгору. Початок координат (нульову позначку) зазвичай розміщують на поверхні Землі або в початковій точці руху (для різних задач обирають по різному із точки зору зручності)</p>
+<p>Оскільки вектор <span class="math notranslate nohighlight">\(\vec{g}\)</span> напрямлений вниз, а вісь OY - вгору, то проекція прискорення на цю вісь буде від'ємною:</p>
+<div class="math notranslate nohighlight">
+\[
+a_y = -g
+\]</div>
+<p>Тепер давайте адаптуємо відомі нам рівняння рівноприскореного руху для цього випадку. Ми просто замінюємо <span class="math notranslate nohighlight">\(x\)</span> на <span class="math notranslate nohighlight">\(y\)</span> і <span class="math notranslate nohighlight">\(a_x\)</span> на <span class="math notranslate nohighlight">\(g_y = -g\)</span>.</p>
+<ul>
+<li><p>Рівняння проекції швидкості: <span class="math notranslate nohighlight">\(v_y(t) = v_{0y} + a_y t\)</span> перетворюється на:</p>
+<div class="math notranslate nohighlight">
+\[
+    v_y(t) = v_{0y} - gt
+    \]</div>
+</li>
+<li><p>Рівняння координати: <span class="math notranslate nohighlight">\(y(t) = y_0 + v_{0y} t + \frac{a_y t^2}{2}\)</span> перетворюється на:</p>
+<div class="math notranslate nohighlight">
+\[
+    y(t) = y_0 + v_{0y} t - \frac{gt^2}{2}
+    \]</div>
+</li>
+<li><p>Формула для переміщення (висоти) без часу: <span class="math notranslate nohighlight">\(s_y = \frac{v_y^2 - v_{0y}^2}{2a_y}\)</span> перетворюється на:</p>
+<div class="math notranslate nohighlight">
+\[
+    h_y = \frac{v_y^2 - v_{0y}^2}{-2g} = \frac{v_{0y}^2 - v_y^2}{2g}
+    \]</div>
+<p>Тут <span class="math notranslate nohighlight">\(h_y = y - y_0\)</span> - це переміщення по вертикалі, яке ми часто називаємо висотою.</p>
+</li>
+</ul>
+<section id="id3">
+<h3>Випадок 1: Вільне падіння без початкової швидкості<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Уявімо, що ми просто відпускаємо тіло з певної висоти <span class="math notranslate nohighlight">\(h\)</span>.
+У цьому випадку:</p>
+<ul class="simple">
+<li><p>Початкова висота <span class="math notranslate nohighlight">\(y_0 = h\)</span>.</p></li>
+<li><p>Початкова швидкість <span class="math notranslate nohighlight">\(v_{0y} = 0\)</span>.</p></li>
+</ul>
+<p>Наші рівняння спрощуються:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_y(t) = -gt\)</span> (знак &quot;мінус&quot; показує, що швидкість напрямлена вниз).</p></li>
+<li><p><span class="math notranslate nohighlight">\(y(t) = h - \frac{gt^2}{2}\)</span>.</p></li>
+</ul>
+<p>З рівняння для координати ми можемо знайти час падіння. Тіло досягне землі, коли його координата стане рівною нулю, <span class="math notranslate nohighlight">\(y(t) = 0\)</span>.
+$<span class="math notranslate nohighlight">\(
+0 = h - \frac{gt_{пад}^2}{2} \implies \frac{gt_{пад}^2}{2} = h \implies t_{пад} = \sqrt{\frac{2h}{g}}
+\)</span><span class="math notranslate nohighlight">\(
+А модуль швидкості в момент падіння буде:
+\)</span><span class="math notranslate nohighlight">\(
+v_{кінц} = |-gt_{пад}| = g \sqrt{\frac{2h}{g}} = \sqrt{\frac{2h g^2}{g}} = \sqrt{2gh}
+\)</span>$</p>
+<p><strong>Цікава властивість:</strong></p>
+<p>При вільному падінні без початкової швидкості шляхи, пройдені тілом за послідовні рівні проміжки часу, відносяться як ряд непарних чисел.
+$<span class="math notranslate nohighlight">\(
+s_1 : s_2 : s_3 : \dots = 1 : 3 : 5 : \dots
+\)</span><span class="math notranslate nohighlight">\(
+Давайте перевіримо це. Шлях за час \)</span>t<span class="math notranslate nohighlight">\( дорівнює \)</span>s(t) = \frac{gt^2}{2}$.</p>
+<ul class="simple">
+<li><p>Шлях за першу секунду (<span class="math notranslate nohighlight">\(t=1\)</span> c): <span class="math notranslate nohighlight">\(s_1 = s(1) - s(0) = \frac{g \cdot 1^2}{2} = \frac{g}{2}\)</span>.</p></li>
+<li><p>Шлях за другу секунду (<span class="math notranslate nohighlight">\(t=2\)</span> c): <span class="math notranslate nohighlight">\(s_2 = s(2) - s(1) = \frac{g \cdot 2^2}{2} - \frac{g \cdot 1^2}{2} = \frac{4g}{2} - \frac{g}{2} = 3 \cdot \frac{g}{2}\)</span>.</p></li>
+<li><p>Шлях за третю секунду (<span class="math notranslate nohighlight">\(t=3\)</span> c): <span class="math notranslate nohighlight">\(s_3 = s(3) - s(2) = \frac{g \cdot 3^2}{2} - \frac{g \cdot 2^2}{2} = \frac{9g}{2} - \frac{4g}{2} = 5 \cdot \frac{g}{2}\)</span>.</p></li>
+<li><p>І так далі...</p></li>
+<li><p>Як бачимо, співвідношення <span class="math notranslate nohighlight">\(s_1 : s_2 : s_3\)</span> дійсно дорівнює <span class="math notranslate nohighlight">\(1:3:5\)</span>.</p></li>
+</ul>
+<p>Ця властивість справедлива не лише для вільного падіння без початкової швидкості, але й для будь-якого рівноприскореного руху без початкової швидкості.</p>
+</section>
+<section id="id4">
+<h3>Випадок 2: Рух тіла, кинутого вертикально вгору<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Тепер ми кидаємо тіло з початковою швидкістю <span class="math notranslate nohighlight">\(v_0\)</span> з поверхні землі (<span class="math notranslate nohighlight">\(y_0 = 0\)</span>).</p>
+<ul class="simple">
+<li><p>Початкова швидкість <span class="math notranslate nohighlight">\(v_{0y} = v_0\)</span> (додатна, бо напрямлена вгору).</p></li>
+</ul>
+<p>Рівняння руху:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_y(t) = v_0 - gt\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y(t) = v_0 t - \frac{gt^2}{2}\)</span></p></li>
+</ul>
+<p><strong>Що відбувається з тілом?</strong></p>
+<ol class="arabic simple">
+<li><p>Тіло летить вгору, його швидкість зменшується (<span class="math notranslate nohighlight">\(v_y &gt; 0\)</span>, але зменшується).</p></li>
+<li><p>У найвищій точці траєкторії тіло на мить зупиняється. Це ключовий момент! <strong>У точці максимального підйому миттєва швидкість дорівнює нулю</strong> <span class="math notranslate nohighlight">\(v_y = 0\)</span>.</p></li>
+<li><p>Після цього тіло починає падати вниз, його швидкість стає від'ємною і зростає за модулем.</p></li>
+</ol>
+<p>Тіло буде підніматися, поки його швидкість не стане рівною нулю. Цей момент відповідає <strong>максимальній висоті підйому</strong> <span class="math notranslate nohighlight">\(h_{\max}\)</span>.
+Знайдемо час підйому <span class="math notranslate nohighlight">\(t_{під}\)</span> з умови <span class="math notranslate nohighlight">\(v_y(t_{під}) = 0\)</span>:
+$<span class="math notranslate nohighlight">\(
+0 = v_0 - gt_{під} \implies t_{під} = \frac{v_0}{g}
+\)</span><span class="math notranslate nohighlight">\(
+Тепер підставимо цей час у рівняння координати, щоб знайти \)</span>h_{\max}<span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\(
+h_{\max} = y(t_{під}) = v_0 \left(\frac{v_0}{g}\right) - \frac{g}{2}\left(\frac{v_0}{g}\right)^2 = \frac{v_0^2}{g} - \frac{g v_0^2}{2g^2} = \frac{v_0^2}{g} - \frac{v_0^2}{2g} = \frac{v_0^2}{2g}
+\)</span><span class="math notranslate nohighlight">\(
+Ми могли б отримати цю ж формулу швидше, використовуючи рівняння без часу, поклавши \)</span>v_y=0<span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\(
+h_{\max} = \frac{v_{0y}^2 - v_y^2}{2g} = \frac{v_0^2 - 0^2}{2g} = \frac{v_0^2}{2g}
+\)</span><span class="math notranslate nohighlight">\(
+Час падіння з максимальної висоти буде таким же, як і час підйому (якщо нехтувати опором повітря). Отже, загальний час польоту \)</span>t_{пол}<span class="math notranslate nohighlight">\( дорівнює:
+\)</span><span class="math notranslate nohighlight">\(
+t_{пол} = 2 t_{під} = \frac{2v_0}{g}
+\)</span>$</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Двовимірний рух: Рух під кутом до горизонту<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>А що, як ми кинемо тіло не строго вгору чи вниз, а, наприклад, горизонтально зі скелі або під кутом до горизонту, як футбольний м'яч? Такий рух буде <strong>криволінійним</strong>. Його траєкторія - не пряма лінія.</p>
+<p>Тут нам на допомогу приходить фундаментальний <strong>принцип незалежності рухів</strong>:</p>
+<blockquote>
+<div><p>Рух тіла можна розкласти на незалежні рухи вздовж осей прямокутної системи координат. Рух тіла вздовж однієї осі не впливає на його рух вздовж іншої.</p>
+</div></blockquote>
+<p>Це означає, що наш складний криволінійний рух ми можемо розглядати як суму двох набагато простіших рухів:</p>
+<ol class="arabic simple">
+<li><p><strong>Горизонтальний рух (вздовж осі OX):</strong> Оскільки сила тяжіння діє вертикально, по горизонталі на тіло не діють жодні сили (ми ж нехтуємо опором повітря). Це означає, що прискорення в цьому напрямку дорівнює нулю (<span class="math notranslate nohighlight">\(a_x = 0\)</span>). Отже, горизонтальний рух є <strong>рівномірним прямолінійним</strong>.</p></li>
+<li><p><strong>Вертикальний рух (вздовж осі OY):</strong> У цьому напрямку діє сила тяжіння, яка надає тілу стале прискорення <span class="math notranslate nohighlight">\(\vec{g}\)</span>. Отже, вертикальний рух є <strong>рівноприскореним прямолінійним</strong> (таким самим, який ми щойно розглянули).</p></li>
+</ol>
+<p><strong>Аналогія:</strong> Уявіть, що ви одночасно відпускаєте один камінь, щоб він вільно падав, і кидаєте другий горизонтально з тієї ж висоти. Вони впадуть на землю одночасно! Тому що їхній вертикальний рух абсолютно однаковий і не залежить від того, чи рухаються вони по горизонталі.</p>
+<section id="id6">
+<h3>Випадок 1: Тіло, кинуте горизонтально<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Припустимо, ми кидаємо тіло з висоти <span class="math notranslate nohighlight">\(h\)</span> з початковою швидкістю <span class="math notranslate nohighlight">\(v_0\)</span>, напрямленою горизонтально.
+Розмістимо початок координат у точці кидка. Вісь OX напрямимо горизонтально, а вісь OY - вертикально вниз для зручності.</p>
+<p><strong>Початкові умови:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_0 = 0\)</span>, <span class="math notranslate nohighlight">\(y_0 = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_{0x} = v_0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_{0y} = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(a_x = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(a_y = g\)</span> (додатне, бо вісь OY напрямлена вниз, як і прискорення вільного падіння).</p></li>
+</ul>
+<p>Запишемо рівняння руху для кожної осі:</p>
+<p><strong>Рух по осі OX (рівномірний):</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_x(t) = v_{0x} = v_0\)</span> (швидкість незмінна)</p></li>
+<li><p><span class="math notranslate nohighlight">\(x(t) = v_{0x} t = v_0 t\)</span></p></li>
+</ul>
+<p><strong>Рух по осі OY (рівноприскорений, вільне падіння):</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_y(t) = v_{0y} + a_y t = gt\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y(t) = v_{0y} t + \frac{a_y t^2}{2} = \frac{gt^2}{2}\)</span></p></li>
+</ul>
+<p><strong>Час польоту:</strong> Тіло летить, поки не пролетить по вертикалі відстань <span class="math notranslate nohighlight">\(h\)</span>. Знайдемо час з рівняння для <span class="math notranslate nohighlight">\(y(t)\)</span>:
+$<span class="math notranslate nohighlight">\(
+h = \frac{g t^2}{2} \implies t = \sqrt{\frac{2h}{g}}
+\)</span><span class="math notranslate nohighlight">\(
+**Дальність польоту \)</span>L<span class="math notranslate nohighlight">\(:** Це максимальна відстань, яку тіло пролетіло по горизонталі. Знайдемо її, підставивши час польоту в рівняння для \)</span>x(t)<span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\(
+L = x(t) = v_0 t = v_0 \sqrt{\frac{2h}{g}}
+\)</span>$</p>
+</section>
+<section id="alpha">
+<h3>Випадок 2: Тіло, кинуте під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту<a class="headerlink" href="#alpha" title="Link to this heading">#</a></h3>
+<p>Це найбільш загальний випадок. Тіло кидають з поверхні землі (<span class="math notranslate nohighlight">\(y_0 = 0\)</span>) зі швидкістю <span class="math notranslate nohighlight">\(v_0\)</span> під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту.</p>
+<p>Спочатку нам потрібно розкласти початкову швидкість <span class="math notranslate nohighlight">\(\vec{v_0}\)</span> на компоненти вздовж осей OX та OY. Вісь OX - горизонтальна, OY - вертикальна, напрямлена вгору.
+З прямокутного трикутника маємо:</p>
+<ul class="simple">
+<li><p>Проекція на вісь OX: <span class="math notranslate nohighlight">\(v_{0x} = v_0 \cos \alpha\)</span></p></li>
+<li><p>Проекція на вісь OY: <span class="math notranslate nohighlight">\(v_{0y} = v_0 \sin \alpha\)</span></p></li>
+</ul>
+<p><strong>Початкові умови та прискорення:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_0 = 0\)</span>, <span class="math notranslate nohighlight">\(y_0 = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_{0x} = v_0 \cos \alpha\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_{0y} = v_0 \sin \alpha\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(a_x = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(a_y = -g\)</span>.</p></li>
+</ul>
+<p>Запишемо рівняння руху:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Вісь OX (рівномірний рух)</p></th>
+<th class="head"><p>Вісь OY (рівноприскорений рух)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v_x(t) = v_0 \cos \alpha\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(v_y(t) = v_0 \sin \alpha - gt\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(x(t) = (v_0 \cos \alpha) \cdot t\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y(t) = (v_0 \sin \alpha) \cdot t - \frac{gt^2}{2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Тепер ми можемо знайти всі основні характеристики польоту.</p>
+<p><strong>1. Час польоту <span class="math notranslate nohighlight">\(t\)</span></strong>
+Політ закінчується, коли тіло повертається на землю, тобто <span class="math notranslate nohighlight">\(y(t) = 0\)</span>.
+$<span class="math notranslate nohighlight">\(
+(v_0 \sin \alpha) \cdot t - \frac{gt^2}{2} = 0
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+t \cdot \left(v_0 \sin \alpha - \frac{gt}{2}\right) = 0
+\)</span><span class="math notranslate nohighlight">\(
+Це рівняння має два розв'язки: \)</span>t=0<span class="math notranslate nohighlight">\( (момент кидка) і \)</span>v_0 \sin \alpha - \frac{gt}{2} = 0<span class="math notranslate nohighlight">\(. Нас цікавить другий:
+\)</span><span class="math notranslate nohighlight">\(
+v_0 \sin \alpha - \frac{gt}{2} = 0 \implies \frac{gt}{2} = v_0 \sin \alpha \implies t = \frac{2v_0 \sin \alpha}{g}
+\)</span><span class="math notranslate nohighlight">\(
+Зауважте, що це та сама формула, що й \)</span>t_{пол} = \frac{2v_{0y}}{g}$ для вертикального кидка.</p>
+<p><strong>2. Максимальна висота підйому <span class="math notranslate nohighlight">\(h_{\max}\)</span></strong>
+Підйом досягає максимуму, коли вертикальна складова швидкості стає нульовою, <span class="math notranslate nohighlight">\(v_y = 0\)</span>. Час підйому <span class="math notranslate nohighlight">\(t_{під}\)</span> дорівнює половині всього часу польоту: <span class="math notranslate nohighlight">\(t_{під} = \frac{v_0 \sin \alpha}{g}\)</span>.
+Для знаходження <span class="math notranslate nohighlight">\(h_{\max}\)</span> використаємо формулу без часу для вертикального руху, де початкова швидкість <span class="math notranslate nohighlight">\(v_{0y} = v_0 \sin \alpha\)</span>, а кінцева <span class="math notranslate nohighlight">\(v_y = 0\)</span>:
+$<span class="math notranslate nohighlight">\(
+h_{\max} = \frac{v_{0y}^2 - v_y^2}{2g} = \frac{(v_0 \sin \alpha)^2 - 0^2}{2g} = \frac{v_0^2 \sin^2 \alpha}{2g}
+\)</span><span class="math notranslate nohighlight">\(
+Ту ж саму формулу можна отримати, якщо підставити формулу для \)</span>t_{під}<span class="math notranslate nohighlight">\( у формулу \)</span>y(t) = (v_0 \sin \alpha) \cdot t - \frac{gt^2}{2}$.</p>
+<p><strong>3. Дальність польоту <span class="math notranslate nohighlight">\(L\)</span></strong>
+Це горизонтальна відстань, пройдена за весь час польоту <span class="math notranslate nohighlight">\(t\)</span>.
+$<span class="math notranslate nohighlight">\(
+L = x(t) = (v_0 \cos \alpha) \cdot t = (v_0 \cos \alpha) \cdot \left(\frac{2v_0 \sin \alpha}{g}\right)
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+L = \frac{v_0^2 \cdot (2 \sin \alpha \cos \alpha)}{g}
+\)</span><span class="math notranslate nohighlight">\(
+З тригонометрії ми знаємо формулу подвійного кута: \)</span>\sin(2\alpha) = 2 \sin \alpha \cos \alpha<span class="math notranslate nohighlight">\(. Використаємо її для спрощення:
+\)</span><span class="math notranslate nohighlight">\(
+L = \frac{v_0^2 \sin(2\alpha)}{g}
+\)</span><span class="math notranslate nohighlight">\(
+З цієї формули випливає цікавий висновок: максимальна дальність польоту при заданій початковій швидкості \)</span>v_0<span class="math notranslate nohighlight">\( досягається тоді, коли \)</span>\sin(2\alpha)<span class="math notranslate nohighlight">\( є максимальним, тобто дорівнює 1. Це відбувається при \)</span>2\alpha = 90^\circ<span class="math notranslate nohighlight">\(, отже, при \)</span>\alpha = 45^\circ$.</p>
+<p>Інший важливий наслідок, із формули для <span class="math notranslate nohighlight">\(L\)</span> це те, що якщо кинути тіло під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту, а потім під кутом <span class="math notranslate nohighlight">\(90^\circ - \alpha\)</span>, то дальність польоту не зміниться, хоча траєкторії польоту будуть різними. Наприклад, дальність польоту буде однакова, якщо кинути тіло під кутами <span class="math notranslate nohighlight">\(30^\circ\)</span> та <span class="math notranslate nohighlight">\(60^\circ\)</span>.</p>
+<p><strong>Траєкторія руху:</strong>
+Давайте виведемо рівняння траєкторії, тобто залежність <span class="math notranslate nohighlight">\(y(x)\)</span>. Для цього з рівняння <span class="math notranslate nohighlight">\(x(t)\)</span> виразимо час <span class="math notranslate nohighlight">\(t = \frac{x}{v_0 \cos \alpha}\)</span> і підставимо його в рівняння <span class="math notranslate nohighlight">\(y(t)\)</span>:
+$<span class="math notranslate nohighlight">\(
+y = (v_0 \sin \alpha) \left(\frac{x}{v_0 \cos \alpha}\right) - \frac{g}{2}\left(\frac{x}{v_0 \cos \alpha}\right)^2
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+y = (\text{tg} \alpha) \cdot x - \left(\frac{g}{2v_0^2 \cos^2 \alpha}\right) \cdot x^2
+\)</span><span class="math notranslate nohighlight">\(
+Це рівняння виду \)</span>y = Ax - Bx^2$, що є рівнянням <strong>параболи</strong>, вітки якої напрямлені вниз.</p>
+<p><strong>Миттєва швидкість:</strong>
+У будь-який момент часу вектор швидкості <span class="math notranslate nohighlight">\(\vec{v}\)</span> має дві компоненти: <span class="math notranslate nohighlight">\(v_x\)</span> і <span class="math notranslate nohighlight">\(v_y\)</span>. Його модуль (числове значення) можна знайти за теоремою Піфагора:
+$<span class="math notranslate nohighlight">\(
+v = \sqrt{v_x^2 + v_y^2}
+\)</span><span class="math notranslate nohighlight">\(
+А напрямок (кут \)</span>\beta<span class="math notranslate nohighlight">\(, який він утворює з горизонтом) можна знайти так:
+\)</span><span class="math notranslate nohighlight">\(
+\text{tg} \beta = \frac{v_y}{v_x}
+\)</span>$</p>
+</section>
+<section id="id7">
+<h3>Підсумок<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Ми з вами розібрали, як рух під дією сили тяжіння, що здається складним, можна описати за допомогою простих принципів.</p>
+<ul class="simple">
+<li><p><strong>Головне - це стале прискорення <span class="math notranslate nohighlight">\(\vec{g}\)</span></strong>, напрямлене вниз.</p></li>
+<li><p><strong>Рух по вертикалі</strong> - це звичайний рівноприскорений рух.</p></li>
+<li><p><strong>Криволінійний рух</strong> - це сума двох незалежних рухів: рівномірного по горизонталі та рівноприскореного по вертикалі.</p></li>
+</ul>
+<p>Ці знання дозволяють нам не просто спостерігати за польотом тіл, а й точно розраховувати їхні траєкторії, час польоту та дальність, що є основою для багатьох галузей, від спорту до космонавтики.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="kinematics-03.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Рівноприскорений прямолінійний рух</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../internal_energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Одновимірний рух: Рух тіла по вертикалі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Випадок 1: Вільне падіння без початкової швидкості</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Випадок 2: Рух тіла, кинутого вертикально вгору</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Двовимірний рух: Рух під кутом до горизонту</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Випадок 1: Тіло, кинуте горизонтально</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpha">Випадок 2: Тіло, кинуте під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Підсумок</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
