@@ -488,9 +488,9 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Двовимірний рух: Рух під кутом до горизонту</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Випадок 1: Тіло, кинуте горизонтально</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpha">Випадок 2: Тіло, кинуте під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Підсумок</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Підсумок</a></li>
 </ul>
             </nav>
         </div>
@@ -569,20 +569,23 @@ a_y = -g
 <li><p><span class="math notranslate nohighlight">\(v_y(t) = -gt\)</span> (знак &quot;мінус&quot; показує, що швидкість напрямлена вниз).</p></li>
 <li><p><span class="math notranslate nohighlight">\(y(t) = h - \frac{gt^2}{2}\)</span>.</p></li>
 </ul>
-<p>З рівняння для координати ми можемо знайти час падіння. Тіло досягне землі, коли його координата стане рівною нулю, <span class="math notranslate nohighlight">\(y(t) = 0\)</span>.
-$<span class="math notranslate nohighlight">\(
+<p>З рівняння для координати ми можемо знайти час падіння. Тіло досягне землі, коли його координата стане рівною нулю, <span class="math notranslate nohighlight">\(y(t) = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
 0 = h - \frac{gt_{пад}^2}{2} \implies \frac{gt_{пад}^2}{2} = h \implies t_{пад} = \sqrt{\frac{2h}{g}}
-\)</span><span class="math notranslate nohighlight">\(
-А модуль швидкості в момент падіння буде:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>А модуль швидкості в момент падіння буде:</p>
+<div class="math notranslate nohighlight">
+\[
 v_{кінц} = |-gt_{пад}| = g \sqrt{\frac{2h}{g}} = \sqrt{\frac{2h g^2}{g}} = \sqrt{2gh}
-\)</span>$</p>
+\]</div>
 <p><strong>Цікава властивість:</strong></p>
-<p>При вільному падінні без початкової швидкості шляхи, пройдені тілом за послідовні рівні проміжки часу, відносяться як ряд непарних чисел.
-$<span class="math notranslate nohighlight">\(
+<p>При вільному падінні без початкової швидкості шляхи, пройдені тілом за послідовні рівні проміжки часу, відносяться як ряд непарних чисел.</p>
+<div class="math notranslate nohighlight">
+\[
 s_1 : s_2 : s_3 : \dots = 1 : 3 : 5 : \dots
-\)</span><span class="math notranslate nohighlight">\(
-Давайте перевіримо це. Шлях за час \)</span>t<span class="math notranslate nohighlight">\( дорівнює \)</span>s(t) = \frac{gt^2}{2}$.</p>
+\]</div>
+<p>Давайте перевіримо це. Шлях за час <span class="math notranslate nohighlight">\(t\)</span> дорівнює <span class="math notranslate nohighlight">\(s(t) = \frac{gt^2}{2}\)</span>.</p>
 <ul class="simple">
 <li><p>Шлях за першу секунду (<span class="math notranslate nohighlight">\(t=1\)</span> c): <span class="math notranslate nohighlight">\(s_1 = s(1) - s(0) = \frac{g \cdot 1^2}{2} = \frac{g}{2}\)</span>.</p></li>
 <li><p>Шлях за другу секунду (<span class="math notranslate nohighlight">\(t=2\)</span> c): <span class="math notranslate nohighlight">\(s_2 = s(2) - s(1) = \frac{g \cdot 2^2}{2} - \frac{g \cdot 1^2}{2} = \frac{4g}{2} - \frac{g}{2} = 3 \cdot \frac{g}{2}\)</span>.</p></li>
@@ -610,22 +613,26 @@ s_1 : s_2 : s_3 : \dots = 1 : 3 : 5 : \dots
 <li><p>Після цього тіло починає падати вниз, його швидкість стає від'ємною і зростає за модулем.</p></li>
 </ol>
 <p>Тіло буде підніматися, поки його швидкість не стане рівною нулю. Цей момент відповідає <strong>максимальній висоті підйому</strong> <span class="math notranslate nohighlight">\(h_{\max}\)</span>.
-Знайдемо час підйому <span class="math notranslate nohighlight">\(t_{під}\)</span> з умови <span class="math notranslate nohighlight">\(v_y(t_{під}) = 0\)</span>:
-$<span class="math notranslate nohighlight">\(
+Знайдемо час підйому <span class="math notranslate nohighlight">\(t_{під}\)</span> з умови <span class="math notranslate nohighlight">\(v_y(t_{під}) = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 0 = v_0 - gt_{під} \implies t_{під} = \frac{v_0}{g}
-\)</span><span class="math notranslate nohighlight">\(
-Тепер підставимо цей час у рівняння координати, щоб знайти \)</span>h_{\max}<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Тепер підставимо цей час у рівняння координати, щоб знайти <span class="math notranslate nohighlight">\(h_{\max}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 h_{\max} = y(t_{під}) = v_0 \left(\frac{v_0}{g}\right) - \frac{g}{2}\left(\frac{v_0}{g}\right)^2 = \frac{v_0^2}{g} - \frac{g v_0^2}{2g^2} = \frac{v_0^2}{g} - \frac{v_0^2}{2g} = \frac{v_0^2}{2g}
-\)</span><span class="math notranslate nohighlight">\(
-Ми могли б отримати цю ж формулу швидше, використовуючи рівняння без часу, поклавши \)</span>v_y=0<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Ми могли б отримати цю ж формулу швидше, використовуючи рівняння без часу, поклавши <span class="math notranslate nohighlight">\(v_y=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 h_{\max} = \frac{v_{0y}^2 - v_y^2}{2g} = \frac{v_0^2 - 0^2}{2g} = \frac{v_0^2}{2g}
-\)</span><span class="math notranslate nohighlight">\(
-Час падіння з максимальної висоти буде таким же, як і час підйому (якщо нехтувати опором повітря). Отже, загальний час польоту \)</span>t_{пол}<span class="math notranslate nohighlight">\( дорівнює:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Час падіння з максимальної висоти буде таким же, як і час підйому (якщо нехтувати опором повітря). Отже, загальний час польоту <span class="math notranslate nohighlight">\(t_{пол}\)</span> дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[
 t_{пол} = 2 t_{під} = \frac{2v_0}{g}
-\)</span>$</p>
+\]</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -665,14 +672,16 @@ t_{пол} = 2 t_{під} = \frac{2v_0}{g}
 <li><p><span class="math notranslate nohighlight">\(v_y(t) = v_{0y} + a_y t = gt\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(y(t) = v_{0y} t + \frac{a_y t^2}{2} = \frac{gt^2}{2}\)</span></p></li>
 </ul>
-<p><strong>Час польоту:</strong> Тіло летить, поки не пролетить по вертикалі відстань <span class="math notranslate nohighlight">\(h\)</span>. Знайдемо час з рівняння для <span class="math notranslate nohighlight">\(y(t)\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p><strong>Час польоту:</strong> Тіло летить, поки не пролетить по вертикалі відстань <span class="math notranslate nohighlight">\(h\)</span>. Знайдемо час з рівняння для <span class="math notranslate nohighlight">\(y(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 h = \frac{g t^2}{2} \implies t = \sqrt{\frac{2h}{g}}
-\)</span><span class="math notranslate nohighlight">\(
-**Дальність польоту \)</span>L<span class="math notranslate nohighlight">\(:** Це максимальна відстань, яку тіло пролетіло по горизонталі. Знайдемо її, підставивши час польоту в рівняння для \)</span>x(t)<span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Дальність польоту <span class="math notranslate nohighlight">\(L\)</span>:</strong> Це максимальна відстань, яку тіло пролетіло по горизонталі. Знайдемо її, підставивши час польоту в рівняння для <span class="math notranslate nohighlight">\(x(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 L = x(t) = v_0 t = v_0 \sqrt{\frac{2h}{g}}
-\)</span>$</p>
+\]</div>
 </section>
 <section id="alpha">
 <h3>Випадок 2: Тіло, кинуте під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту<a class="headerlink" href="#alpha" title="Link to this heading">#</a></h3>
@@ -709,61 +718,73 @@ L = x(t) = v_0 t = v_0 \sqrt{\frac{2h}{g}}
 </table>
 </div>
 <p>Тепер ми можемо знайти всі основні характеристики польоту.</p>
-<p><strong>1. Час польоту <span class="math notranslate nohighlight">\(t\)</span></strong>
-Політ закінчується, коли тіло повертається на землю, тобто <span class="math notranslate nohighlight">\(y(t) = 0\)</span>.
-$<span class="math notranslate nohighlight">\(
+<p><strong>1. Час польоту <span class="math notranslate nohighlight">\(t\)</span></strong></p>
+<p>Політ закінчується, коли тіло повертається на землю, тобто <span class="math notranslate nohighlight">\(y(t) = 0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
 (v_0 \sin \alpha) \cdot t - \frac{gt^2}{2} = 0
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 t \cdot \left(v_0 \sin \alpha - \frac{gt}{2}\right) = 0
-\)</span><span class="math notranslate nohighlight">\(
-Це рівняння має два розв'язки: \)</span>t=0<span class="math notranslate nohighlight">\( (момент кидка) і \)</span>v_0 \sin \alpha - \frac{gt}{2} = 0<span class="math notranslate nohighlight">\(. Нас цікавить другий:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Це рівняння має два розв'язки: <span class="math notranslate nohighlight">\(t=0\)</span> (момент кидка) і <span class="math notranslate nohighlight">\(v_0 \sin \alpha - \frac{gt}{2} = 0\)</span>. Нас цікавить другий:</p>
+<div class="math notranslate nohighlight">
+\[
 v_0 \sin \alpha - \frac{gt}{2} = 0 \implies \frac{gt}{2} = v_0 \sin \alpha \implies t = \frac{2v_0 \sin \alpha}{g}
-\)</span><span class="math notranslate nohighlight">\(
-Зауважте, що це та сама формула, що й \)</span>t_{пол} = \frac{2v_{0y}}{g}$ для вертикального кидка.</p>
-<p><strong>2. Максимальна висота підйому <span class="math notranslate nohighlight">\(h_{\max}\)</span></strong>
-Підйом досягає максимуму, коли вертикальна складова швидкості стає нульовою, <span class="math notranslate nohighlight">\(v_y = 0\)</span>. Час підйому <span class="math notranslate nohighlight">\(t_{під}\)</span> дорівнює половині всього часу польоту: <span class="math notranslate nohighlight">\(t_{під} = \frac{v_0 \sin \alpha}{g}\)</span>.
-Для знаходження <span class="math notranslate nohighlight">\(h_{\max}\)</span> використаємо формулу без часу для вертикального руху, де початкова швидкість <span class="math notranslate nohighlight">\(v_{0y} = v_0 \sin \alpha\)</span>, а кінцева <span class="math notranslate nohighlight">\(v_y = 0\)</span>:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Зауважте, що це та сама формула, що й <span class="math notranslate nohighlight">\(t_{пол} = \frac{2v_{0y}}{g}\)</span> для вертикального кидка.</p>
+<p><strong>2. Максимальна висота підйому <span class="math notranslate nohighlight">\(h_{\max}\)</span></strong></p>
+<p>Підйом досягає максимуму, коли вертикальна складова швидкості стає нульовою, <span class="math notranslate nohighlight">\(v_y = 0\)</span>. Час підйому <span class="math notranslate nohighlight">\(t_{під}\)</span> дорівнює половині всього часу польоту: <span class="math notranslate nohighlight">\(t_{під} = \frac{v_0 \sin \alpha}{g}\)</span>.</p>
+<p>Для знаходження <span class="math notranslate nohighlight">\(h_{\max}\)</span> використаємо формулу без часу для вертикального руху, де початкова швидкість <span class="math notranslate nohighlight">\(v_{0y} = v_0 \sin \alpha\)</span>, а кінцева <span class="math notranslate nohighlight">\(v_y = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 h_{\max} = \frac{v_{0y}^2 - v_y^2}{2g} = \frac{(v_0 \sin \alpha)^2 - 0^2}{2g} = \frac{v_0^2 \sin^2 \alpha}{2g}
-\)</span><span class="math notranslate nohighlight">\(
-Ту ж саму формулу можна отримати, якщо підставити формулу для \)</span>t_{під}<span class="math notranslate nohighlight">\( у формулу \)</span>y(t) = (v_0 \sin \alpha) \cdot t - \frac{gt^2}{2}$.</p>
-<p><strong>3. Дальність польоту <span class="math notranslate nohighlight">\(L\)</span></strong>
-Це горизонтальна відстань, пройдена за весь час польоту <span class="math notranslate nohighlight">\(t\)</span>.
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Ту ж саму формулу можна отримати, якщо підставити формулу для <span class="math notranslate nohighlight">\(t_{під}\)</span> у формулу <span class="math notranslate nohighlight">\(y(t) = (v_0 \sin \alpha) \cdot t - \frac{gt^2}{2}\)</span>.</p>
+<p><strong>3. Дальність польоту <span class="math notranslate nohighlight">\(L\)</span></strong></p>
+<p>Це горизонтальна відстань, пройдена за весь час польоту <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
 L = x(t) = (v_0 \cos \alpha) \cdot t = (v_0 \cos \alpha) \cdot \left(\frac{2v_0 \sin \alpha}{g}\right)
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 L = \frac{v_0^2 \cdot (2 \sin \alpha \cos \alpha)}{g}
-\)</span><span class="math notranslate nohighlight">\(
-З тригонометрії ми знаємо формулу подвійного кута: \)</span>\sin(2\alpha) = 2 \sin \alpha \cos \alpha<span class="math notranslate nohighlight">\(. Використаємо її для спрощення:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>З тригонометрії ми знаємо формулу подвійного кута: <span class="math notranslate nohighlight">\(\sin(2\alpha) = 2 \sin \alpha \cos \alpha\)</span>. Використаємо її для спрощення:</p>
+<div class="math notranslate nohighlight">
+\[
 L = \frac{v_0^2 \sin(2\alpha)}{g}
-\)</span><span class="math notranslate nohighlight">\(
-З цієї формули випливає цікавий висновок: максимальна дальність польоту при заданій початковій швидкості \)</span>v_0<span class="math notranslate nohighlight">\( досягається тоді, коли \)</span>\sin(2\alpha)<span class="math notranslate nohighlight">\( є максимальним, тобто дорівнює 1. Це відбувається при \)</span>2\alpha = 90^\circ<span class="math notranslate nohighlight">\(, отже, при \)</span>\alpha = 45^\circ$.</p>
+\]</div>
+<p>З цієї формули випливає цікавий висновок: максимальна дальність польоту при заданій початковій швидкості <span class="math notranslate nohighlight">\(v_0\)</span> досягається тоді, коли <span class="math notranslate nohighlight">\(\sin(2\alpha)\)</span> є максимальним, тобто дорівнює 1. Це відбувається при <span class="math notranslate nohighlight">\(2\alpha = 90^\circ\)</span>, отже, при <span class="math notranslate nohighlight">\(\alpha = 45^\circ\)</span>.</p>
 <p>Інший важливий наслідок, із формули для <span class="math notranslate nohighlight">\(L\)</span> це те, що якщо кинути тіло під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту, а потім під кутом <span class="math notranslate nohighlight">\(90^\circ - \alpha\)</span>, то дальність польоту не зміниться, хоча траєкторії польоту будуть різними. Наприклад, дальність польоту буде однакова, якщо кинути тіло під кутами <span class="math notranslate nohighlight">\(30^\circ\)</span> та <span class="math notranslate nohighlight">\(60^\circ\)</span>.</p>
-<p><strong>Траєкторія руху:</strong>
-Давайте виведемо рівняння траєкторії, тобто залежність <span class="math notranslate nohighlight">\(y(x)\)</span>. Для цього з рівняння <span class="math notranslate nohighlight">\(x(t)\)</span> виразимо час <span class="math notranslate nohighlight">\(t = \frac{x}{v_0 \cos \alpha}\)</span> і підставимо його в рівняння <span class="math notranslate nohighlight">\(y(t)\)</span>:
-$<span class="math notranslate nohighlight">\(
+<p><strong>Траєкторія руху:</strong></p>
+<p>Давайте виведемо рівняння траєкторії, тобто залежність <span class="math notranslate nohighlight">\(y(x)\)</span>. Для цього з рівняння <span class="math notranslate nohighlight">\(x(t)\)</span> виразимо час <span class="math notranslate nohighlight">\(t = \frac{x}{v_0 \cos \alpha}\)</span> і підставимо його в рівняння <span class="math notranslate nohighlight">\(y(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 y = (v_0 \sin \alpha) \left(\frac{x}{v_0 \cos \alpha}\right) - \frac{g}{2}\left(\frac{x}{v_0 \cos \alpha}\right)^2
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<div class="math notranslate nohighlight">
+\[
 y = (\text{tg} \alpha) \cdot x - \left(\frac{g}{2v_0^2 \cos^2 \alpha}\right) \cdot x^2
-\)</span><span class="math notranslate nohighlight">\(
-Це рівняння виду \)</span>y = Ax - Bx^2$, що є рівнянням <strong>параболи</strong>, вітки якої напрямлені вниз.</p>
-<p><strong>Миттєва швидкість:</strong>
-У будь-який момент часу вектор швидкості <span class="math notranslate nohighlight">\(\vec{v}\)</span> має дві компоненти: <span class="math notranslate nohighlight">\(v_x\)</span> і <span class="math notranslate nohighlight">\(v_y\)</span>. Його модуль (числове значення) можна знайти за теоремою Піфагора:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Це рівняння виду <span class="math notranslate nohighlight">\(y = Ax - Bx^2\)</span>, що є рівнянням <strong>параболи</strong>, вітки якої напрямлені вниз.</p>
+<p><strong>Миттєва швидкість:</strong></p>
+<p>У будь-який момент часу вектор швидкості <span class="math notranslate nohighlight">\(\vec{v}\)</span> має дві компоненти: <span class="math notranslate nohighlight">\(v_x\)</span> і <span class="math notranslate nohighlight">\(v_y\)</span>. Його модуль (числове значення) можна знайти за теоремою Піфагора:</p>
+<div class="math notranslate nohighlight">
+\[
 v = \sqrt{v_x^2 + v_y^2}
-\)</span><span class="math notranslate nohighlight">\(
-А напрямок (кут \)</span>\beta<span class="math notranslate nohighlight">\(, який він утворює з горизонтом) можна знайти так:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>А напрямок (кут <span class="math notranslate nohighlight">\(\beta\)</span>, який він утворює з горизонтом) можна знайти так:</p>
+<div class="math notranslate nohighlight">
+\[
 \text{tg} \beta = \frac{v_y}{v_x}
-\)</span>$</p>
+\]</div>
+</section>
 </section>
 <section id="id7">
-<h3>Підсумок<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<h2>Підсумок<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Ми з вами розібрали, як рух під дією сили тяжіння, що здається складним, можна описати за допомогою простих принципів.</p>
 <ul class="simple">
 <li><p><strong>Головне - це стале прискорення <span class="math notranslate nohighlight">\(\vec{g}\)</span></strong>, напрямлене вниз.</p></li>
@@ -771,7 +792,6 @@ v = \sqrt{v_x^2 + v_y^2}
 <li><p><strong>Криволінійний рух</strong> - це сума двох незалежних рухів: рівномірного по горизонталі та рівноприскореного по вертикалі.</p></li>
 </ul>
 <p>Ці знання дозволяють нам не просто спостерігати за польотом тіл, а й точно розраховувати їхні траєкторії, час польоту та дальність, що є основою для багатьох галузей, від спорту до космонавтики.</p>
-</section>
 </section>
 </section>
 
@@ -848,9 +868,9 @@ v = \sqrt{v_x^2 + v_y^2}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Двовимірний рух: Рух під кутом до горизонту</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Випадок 1: Тіло, кинуте горизонтально</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpha">Випадок 2: Тіло, кинуте під кутом <span class="math notranslate nohighlight">\(\alpha\)</span> до горизонту</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Підсумок</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Підсумок</a></li>
 </ul>
   </nav></div>
 
