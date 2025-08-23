@@ -10,31 +10,31 @@ options:  # Add these options
 parts:
   - caption: АСТРОНОМІЯ
     chapters:
-      - file: astronomy_content/cassini
-      - file: astronomy_content/astronomy_science
-      - file: astronomy_content/discoveries_inventions
-      # - file: astronomy_content/dark_matter_and_energy
-      - file: astronomy_content/celestial_sphere
-      - file: astronomy_content/angle_dimensions
-      - file: astronomy_content/celestial_coordinates
-      - file: astronomy_content/distances
-      - file: astronomy_content/apparent_and_absolute_magnitude
-      - file: astronomy_content/terrestrial_planets # To double-check
-      - file: astronomy_content/giant_planets
-      - file: astronomy_content/dwarf_planets.ipynb
-      - file: astronomy_content/asteroid_comet_meteoroid
-      # - file: astronomy_content/last-alert-system
-      - file: astronomy_content/space-age
-      - file: astronomy_content/sun-basics
-      - file: astronomy_content/solar-neutrino
-      - file: astronomy_content/solar-activity
-      # - file: astronomy_content/time_and_calendar
-      # - file: astronomy_content/k2-18b-exoplanet
-      - file: astronomy_content/star-classification
-      - file: astronomy_content/milky-way
-      - file: astronomy_content/galaxies
-      #- file: astronomy_content/to_be_published
-      - file: astronomy_content/universe
+      - file: astronomy/cassini
+      - file: astronomy/astronomy_science
+      - file: astronomy/discoveries_inventions
+      # - file: astronomy/dark_matter_and_energy
+      - file: astronomy/celestial_sphere
+      - file: astronomy/angle_dimensions
+      - file: astronomy/celestial_coordinates
+      - file: astronomy/distances
+      - file: astronomy/apparent_and_absolute_magnitude
+      - file: astronomy/terrestrial_planets # To double-check
+      - file: astronomy/giant_planets
+      - file: astronomy/dwarf_planets.ipynb
+      - file: astronomy/asteroid_comet_meteoroid
+      # - file: astronomy/last-alert-system
+      - file: astronomy/space-age
+      - file: astronomy/sun-basics
+      - file: astronomy/solar-neutrino
+      - file: astronomy/solar-activity
+      # - file: astronomy/time_and_calendar
+      # - file: astronomy/k2-18b-exoplanet
+      - file: astronomy/star-classification
+      - file: astronomy/milky-way
+      - file: astronomy/galaxies
+      #- file: astronomy/to_be_published
+      - file: astronomy/universe
 
   - caption: ФІЗИКА
     chapters: 
