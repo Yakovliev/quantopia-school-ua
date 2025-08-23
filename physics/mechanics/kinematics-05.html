@@ -1,0 +1,948 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Рівномірний рух по колу &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/kinematics-05';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Рух під дією сили тяжіння" href="kinematics-04.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Рівномірний рух по колу</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mechanics/kinematics-05.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mechanics/kinematics-05.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mechanics/kinematics-05.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Рівномірний рух по колу</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Криволінійний рух та рух по колу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Лінійна швидкість</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Період обертання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Обертова частота</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Зв'язок періоду та частоти</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Кутові характеристики руху</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Кутова швидкість</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Кутова швидкість через період та частоту</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Зв'язок між лінійними та кутовими характеристиками</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Доцентрове прискорення</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-frac-v-2-r">Виведення формули доцентрового прискорення <span class="math notranslate nohighlight">\(a_{дц} = \frac{v^2}{r}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Формула доцентрового прискорення через кутову швидкість</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Рівномірний рух по колу<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Уявімо собі, що ми їдемо на автомобілі. Поки дорога пряма, наш рух називається прямолінійним. Але щойно ми починаємо повертати, траєкторія нашого руху стає кривою лінією. Такий рух називається <strong>криволінійним</strong>.</p>
+<p>Прикладами криволінійного руху є рух планет навколо Сонця, політ кинутого каменя, або рух кінчика стрілки годинника. Важливою особливістю такого руху є те, що напрямок швидкості тіла постійно змінюється.</p>
+<section id="id2">
+<h2>Криволінійний рух та рух по колу<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Коли ми говоримо про швидкість криволінійного руху, ми зазвичай маємо на увазі <strong>миттєву швидкість</strong>. Це швидкість тіла в даний момент часу і в даній точці траєкторії.</p>
+<p>Уявімо знову наш автомобіль на повороті. Якщо в якийсь момент часу з відкритого вікна випаде невеликий предмет, він полетить не вбік, а прямо, вздовж напрямку руху автомобіля в той самий момент.</p>
+<blockquote>
+<div><p><strong>Миттєва швидкість</strong> <span class="math notranslate nohighlight">\(\vec{v}\)</span> - це векторна величина, яка в будь-якій точці криволінійної траєкторії напрямлена по дотичній до неї.</p>
+</div></blockquote>
+<p>Оскільки напрямок миттєвої швидкості постійно змінюється, криволінійний рух <strong>завжди</strong> є рухом з прискоренням, навіть якщо модуль швидкості залишається незмінним. Ми детальніше поговоримо про це трохи згодом.</p>
+<p>Найпростішим прикладом криволінійного руху є <strong>рівномірний рух матеріальної точки по колу</strong>. Це такий рух, при якому тіло (матеріальна точка) рухається по коловій траєкторії з незмінною за модулем швидкістю.</p>
+<ul class="simple">
+<li><p><strong>Рівномірний</strong>, бо модуль швидкості не змінюється.</p></li>
+<li><p><strong>По колу</strong>, бо траєкторією є коло.</p></li>
+</ul>
+<p>Прикладами можуть бути: рух кабінки оглядового колеса, рух супутника по круговій орбіті або рух точки на краю диска, що обертається.</p>
+<p>Давайте розглянемо основні кінематичні характеристики, що описують цей рух.</p>
+<section id="id3">
+<h3>Лінійна швидкість<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Перша характеристика, з якою ми познайомимось, - це лінійна швидкість.</p>
+<blockquote>
+<div><p><strong>Лінійна швидкість</strong> <span class="math notranslate nohighlight">\(v\)</span> - це фізична величина, яка показує, який шлях проходить тіло вздовж дуги кола за одиницю часу.</p>
+</div></blockquote>
+<p>Якщо тіло за час <span class="math notranslate nohighlight">\(t\)</span> проходить по дузі кола шлях <span class="math notranslate nohighlight">\(l\)</span>, то модуль лінійної швидкості можна знайти за формулою:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \frac{l}{t}
+\]</div>
+<p>При рівномірному русі по колу модуль лінійної швидкості є величиною сталою <span class="math notranslate nohighlight">\(v = \text{const}\)</span>, але її напрямок, як ми пам'ятаємо, постійно змінюється, залишаючись дотичним до кола в кожній точці.</p>
+<p>Одиниця вимірювання в системі СІ: <strong>метр за секунду (м/с)</strong>.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Uniform_circular_motion.svg" alt="Uniform circular motion.svg" height="558" width="495"></p>
+</p>Автор: <a href="https://commons.wikimedia.org/wiki/User:Brews_ohare" title="User:Brews ohare">User:Brews_ohare</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=6451338">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Коловий_рух">Wiki</a></p>
+<p>Рис. 1. Швидкість <span class="math notranslate nohighlight">\(v\)</span> і прискорення <span class="math notranslate nohighlight">\(a\)</span> при рівномірному русі по колу з кутовою швидкістю <span class="math notranslate nohighlight">\(\omega\)</span>; швидкість постійна, але завжди дотична до орбіти; прискорення має постійну величину і завжди спрямоване до центру обертання.</p>
+</section>
+<section id="id4">
+<h3>Період обертання<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Уявімо, що ми спостерігаємо за точкою на ободі колеса. Час, за який ця точка зробить один повний оберт і повернеться у вихідне положення, має особливу назву.</p>
+<blockquote>
+<div><p><strong>Період обертання</strong> <span class="math notranslate nohighlight">\(T\)</span> - це фізична величина, що дорівнює часу, протягом якого тіло здійснює один повний оберт по колу.</p>
+</div></blockquote>
+<p>Якщо за час <span class="math notranslate nohighlight">\(t\)</span> тіло здійснило <span class="math notranslate nohighlight">\(N\)</span> повних обертів, то період можна обчислити так:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{t}{N}
+\]</div>
+<p>Наприклад, якщо секундна стрілка годинника робить один повний оберт за 60 секунд, то її період обертання дорівнює 60 с.</p>
+<p>Одиниця вимірювання в системі СІ: <strong>секунда (с)</strong>.</p>
+</section>
+<section id="id5">
+<h3>Обертова частота<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Щільно пов'язаною з періодом є інша характеристика - обертова частота.</p>
+<blockquote>
+<div><p><strong>Обертова частота</strong> <span class="math notranslate nohighlight">\(n\)</span> (іноді позначається як <span class="math notranslate nohighlight">\(\nu\)</span>) - це фізична величина, яка дорівнює кількості повних обертів, що здійснює тіло по колу за одиницю часу.</p>
+</div></blockquote>
+<p>Формула для її обчислення виглядає наступним чином:</p>
+<div class="math notranslate nohighlight">
+\[
+n = \frac{N}{t}
+\]</div>
+<p>Одиниця вимірювання в системі СІ: <strong>оберт за секунду (об/с)</strong> або <strong>Герц (Гц)</strong>. 1 Гц = 1 <span class="math notranslate nohighlight">\(\text{с}^{-1}\)</span>.</p>
+</section>
+<section id="id6">
+<h3>Зв'язок періоду та частоти<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Давайте подивимось на формули для періоду та частоти:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{t}{N} \quad \text{та} \quad n = \frac{N}{t}
+\]</div>
+<p>Легко помітити, що це взаємно обернені величини. Якщо ми перемножимо їх, отримаємо:</p>
+<div class="math notranslate nohighlight">
+\[
+T \cdot n = \frac{t}{N} \cdot \frac{N}{t} = 1
+\]</div>
+<p>Звідси випливає важливий зв'язок:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{1}{n} \quad \text{та} \quad n = \frac{1}{T}
+\]</div>
+<p>Чим більший період (тіло обертається повільно), тим менша частота, і навпаки.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Кутові характеристики руху<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Окрім лінійних величин, для опису руху по колу дуже зручно використовувати кутові характеристики.</p>
+<section id="id8">
+<h3>Кутова швидкість<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Коли тіло рухається по колу, його радіус-вектор (вектор, проведений від центра кола до точки) повертається на певний кут. Швидкість зміни цього кута і є кутовою швидкістю.</p>
+<blockquote>
+<div><p><strong>Кутова швидкість</strong> <span class="math notranslate nohighlight">\(\omega\)</span> - це фізична величина, яка дорівнює відношенню кута повороту радіус-вектора <span class="math notranslate nohighlight">\(\varphi\)</span> до проміжку часу <span class="math notranslate nohighlight">\(t\)</span>, за який цей поворот відбувся.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+\omega = \frac{\varphi}{t}
+\]</div>
+<p>Одиниця вимірювання в системі СІ: <strong>радіан за секунду (рад/с)</strong>.</p>
+<p>Нагадаємо, що кути у фізиці частіше вимірюють в радіанах. Один повний оберт відповідає куту <span class="math notranslate nohighlight">\(2\pi\)</span> радіан (або 360°).</p>
+</section>
+<section id="id9">
+<h3>Кутова швидкість через період та частоту<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Давайте знайдемо, як пов'язана кутова швидкість з періодом. За час, що дорівнює одному періоду <span class="math notranslate nohighlight">\(T\)</span>, тіло робить повний оберт, тобто радіус-вектор повертається на кут <span class="math notranslate nohighlight">\(\varphi = 2\pi\)</span> радіан. Підставимо ці значення у формулу кутової швидкості:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega = \frac{2\pi}{T}
+\]</div>
+<p>Оскільки ми знаємо, що <span class="math notranslate nohighlight">\(n = \frac{1}{T}\)</span>, то можемо також виразити кутову швидкість через обертову частоту:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega = 2\pi n
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Зв'язок між лінійними та кутовими характеристиками<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>А тепер давайте встановимо зв'язок між лінійною та кутовою швидкостями. Це одна з ключових ідей у вивченні руху по колу.</p>
+<p>Ми знаємо, що <span class="math notranslate nohighlight">\(v = \frac{l}{t}\)</span>. За час одного періоду <span class="math notranslate nohighlight">\(t=T\)</span> тіло проходить шлях, що дорівнює довжині кола <span class="math notranslate nohighlight">\(l = 2\pi r\)</span>, де <span class="math notranslate nohighlight">\(r\)</span> - радіус кола. Підставимо ці значення:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \frac{2\pi r}{T}
+\]</div>
+<p>Ця формула дозволяє обчислити лінійну швидкість, знаючи радіус кола та період обертання.</p>
+<p>А тепер найцікавіше! Ми маємо дві формули:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(v = \frac{2\pi r}{T}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega = \frac{2\pi}{T}\)</span></p></li>
+</ol>
+<p>Подивімося уважно на першу формулу. Ми можемо її переписати так:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \left(\frac{2\pi}{T}\right) \cdot r
+\]</div>
+<p>Вираз у дужках - це не що інше, як наша формула для кутової швидкості <span class="math notranslate nohighlight">\(\omega\)</span>. Замінивши його, ми отримуємо елегантну і дуже важливу формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \omega r
+\]</div>
+<p>Ця формула показує прямий зв'язок між лінійною та кутовою швидкостями: лінійна швидкість дорівнює добутку кутової швидкості на радіус кола, по якому рухається тіло.</p>
+<p><strong>Аналогія:</strong> Уявіть собі карусель. Дві людини сидять на ній: одна ближче до центру, інша - далі. Карусель обертається як єдине ціле, тому <strong>кутова швидкість</strong> <span class="math notranslate nohighlight">\(\omega\)</span> для обох людей однакова (вони повертаються на однаковий кут за однаковий час). Але людина, що сидить далі від центру (на більшому радіусі <span class="math notranslate nohighlight">\(r\)</span>), за той самий час проходить більший шлях по дузі кола. Отже, її <strong>лінійна швидкість</strong> <span class="math notranslate nohighlight">\(v\)</span> є більшою.</p>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>Доцентрове прискорення<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Як ми вже згадували на початку, будь-який криволінійний рух - це рух із прискоренням. Навіть якщо модуль швидкості сталий (рівномірний рух), її напрямок змінюється, а зміна вектора швидкості - це і є прискорення.</p>
+<p>При рівномірному русі по колу вектор прискорення завжди напрямлений до центра кола. Тому його називають <strong>доцентровим прискоренням</strong>.</p>
+<blockquote>
+<div><p><strong>Доцентрове (нормальне) прискорення</strong> <span class="math notranslate nohighlight">\(a_{дц}\)</span> - це складова прискорення, яка характеризує зміну напрямку вектора швидкості і напрямлена по радіусу до центра кола.</p>
+</div></blockquote>
+<p>Вектор доцентрового прискорення завжди перпендикулярний вектору лінійної швидкості тіла, що рухається по колу.</p>
+<section id="a-frac-v-2-r">
+<h3>Виведення формули доцентрового прискорення <span class="math notranslate nohighlight">\(a_{дц} = \frac{v^2}{r}\)</span><a class="headerlink" href="#a-frac-v-2-r" title="Link to this heading">#</a></h3>
+<p>Це виведення є класичним і дуже красивим. Розглянемо його крок за кроком.</p>
+<ol class="arabic">
+<li><p>Нехай тіло за невеликий проміжок часу <span class="math notranslate nohighlight">\(\Delta t\)</span> перемістилося з точки A в точку B, пройшовши дугу <span class="math notranslate nohighlight">\(\Delta l\)</span>. Його швидкість змінила напрямок з <span class="math notranslate nohighlight">\(\vec{v}_A\)</span> на <span class="math notranslate nohighlight">\(\vec{v}_B\)</span>. Модулі швидкостей однакові: <span class="math notranslate nohighlight">\(|\vec{v}_A| = |\vec{v}_B| = v\)</span>.</p></li>
+<li><p>За означенням, прискорення <span class="math notranslate nohighlight">\(\vec{a} = \frac{\Delta\vec{v}}{\Delta t}\)</span>, де <span class="math notranslate nohighlight">\(\Delta\vec{v} = \vec{v}_B - \vec{v}_A\)</span> - це зміна вектора швидкості.</p></li>
+<li><p>Побудуємо трикутник векторів швидкостей. Перенесемо вектор <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> так, щоб його початок збігався з початком вектора <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>. Вектор <span class="math notranslate nohighlight">\(\Delta\vec{v}\)</span> з'єднає їхні кінці.</p></li>
+<li><p>Тепер розглянемо трикутник OAB, де O - центр кола. Цей трикутник є рівнобедреним (OA = OB = r). Трикутник, утворений векторами <span class="math notranslate nohighlight">\(\vec{v}_A\)</span>, <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> і <span class="math notranslate nohighlight">\(\Delta\vec{v}\)</span>, також є рівнобедреним (<span class="math notranslate nohighlight">\(|\vec{v}_A| = |\vec{v}_B|\)</span>).</p></li>
+<li><p>Кут <span class="math notranslate nohighlight">\(\Delta\varphi\)</span> між радіусами OA і OB дорівнює куту між векторами швидкостей <span class="math notranslate nohighlight">\(\vec{v}_A\)</span> і <span class="math notranslate nohighlight">\(\vec{v}_B\)</span> (оскільки вектори швидкості перпендикулярні до радіусів).</p></li>
+<li><p>Отже, трикутник OAB і трикутник векторів швидкостей є <strong>подібними</strong>.</p></li>
+<li><p>З подібності трикутників ми можемо записати відношення відповідних сторін:</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{|\Delta\vec{v}|}{v} = \frac{\text{AB}}{r}
+    \]</div>
+<p>Для малих кутів <span class="math notranslate nohighlight">\(\Delta\varphi\)</span> довжину хорди AB можна вважати приблизно рівною довжині дуги <span class="math notranslate nohighlight">\(\Delta l\)</span>. Тобто, <span class="math notranslate nohighlight">\(\text{AB} \approx \Delta l\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{\Delta v}{v} \approx \frac{\Delta l}{r}
+    \]</div>
+</li>
+<li><p>Звідси виразимо модуль зміни швидкості: <span class="math notranslate nohighlight">\(\Delta v \approx \frac{v \cdot \Delta l}{r}\)</span>.</p></li>
+<li><p>Тепер підставимо це у формулу прискорення <span class="math notranslate nohighlight">\(a = \frac{\Delta v}{\Delta t}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    a \approx \frac{v \cdot \Delta l}{r \cdot \Delta t} = \frac{v}{r} \cdot \frac{\Delta l}{\Delta t}
+    \]</div>
+</li>
+<li><p>Величина <span class="math notranslate nohighlight">\(\frac{\Delta l}{\Delta t}\)</span> - це і є модуль лінійної швидкості <span class="math notranslate nohighlight">\(v\)</span>. Коли <span class="math notranslate nohighlight">\(\Delta t \to 0\)</span>, ця рівність стає точною.</p></li>
+<li><p>Таким чином, ми отримуємо кінцеву формулу для доцентрового прискорення:</p>
+<div class="math notranslate nohighlight">
+\[
+    a_{дц} = \frac{v^2}{r}
+    \]</div>
+</li>
+</ol>
+<p>Одиниця вимірювання в системі СІ: <strong>метр на секунду в квадраті (<span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>)</strong>.</p>
+</section>
+<section id="id12">
+<h3>Формула доцентрового прискорення через кутову швидкість<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Ми можемо легко отримати ще одну корисну формулу, використавши зв'язок <span class="math notranslate nohighlight">\(v = \omega r\)</span>. Підставимо цей вираз у щойно виведену формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+a_{дц} = \frac{(\omega r)^2}{r} = \frac{\omega^2 r^2}{r}
+\]</div>
+<p>Скоротивши на <span class="math notranslate nohighlight">\(r\)</span>, отримаємо:</p>
+<div class="math notranslate nohighlight">
+\[
+a_{дц} = \omega^2 r
+\]</div>
+<p>Ця формула дуже зручна, коли відома кутова швидкість обертання. Вона показує, що доцентрове прискорення прямо пропорційне квадрату кутової швидкості. Саме тому при швидкому обертанні на каруселі нас так сильно &quot;притискає&quot; до сидіння.</p>
+</section>
+</section>
+<section id="id13">
+<h2>Підсумок<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p><strong>Характеристика</strong></p></th>
+<th class="head text-left"><p><strong>Опис / Визначення</strong></p></th>
+<th class="head text-left"><p><strong>Формула / Одиниця вимірювання(СІ)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Вступні поняття</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Криволінійний рух</p></td>
+<td class="text-left"><p>Рух, траєкторія якого є кривою лінією. Напрямок швидкості постійно змінюється.</p></td>
+<td class="text-left"><p>Завжди рух із прискоренням.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Миттєва швидкість <span class="math notranslate nohighlight">\(\vec{v}\)</span></p></td>
+<td class="text-left"><p>Векторна величина, напрямлена по дотичній до траєкторії в даний момент часу.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Рівномірний рух по колу</p></td>
+<td class="text-left"><p>Рух матеріальної точки по коловій траєкторії з незмінною за модулем швидкістю.</p></td>
+<td class="text-left"><p>Модуль лінійної швидкості <span class="math notranslate nohighlight">\(v = \text{const}\)</span>, напрямок <span class="math notranslate nohighlight">\(\vec{v}\)</span> змінюється.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Лінійні характеристики</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Лінійна швидкість <span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td class="text-left"><p>Фізична величина, що показує, який шлях <span class="math notranslate nohighlight">\(l\)</span> проходить тіло вздовж дуги за час <span class="math notranslate nohighlight">\(t\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(v = \frac{l}{t}\)</span>, м/с</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Період обертання <span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td class="text-left"><p>Час, протягом якого тіло здійснює один повний оберт <span class="math notranslate nohighlight">\(N=1\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T = \frac{t}{N}\)</span>, с</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Обертова частота <span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td class="text-left"><p>Кількість повних обертів <span class="math notranslate nohighlight">\(N\)</span>, що здійснює тіло за одиницю часу <span class="math notranslate nohighlight">\(t\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(n = \frac{N}{t}\)</span>, об/с або Гц (<span class="math notranslate nohighlight">\(\text{с}^{-1}\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Зв'язок <span class="math notranslate nohighlight">\(T\)</span> та <span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td class="text-left"><p>Період та частота є взаємно оберненими величинами.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T = \frac{1}{n}\)</span>, <span class="math notranslate nohighlight">\(n = \frac{1}{T}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Кутові характеристики</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Кутова швидкість <span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<td class="text-left"><p>Відношення кута повороту радіус-вектора <span class="math notranslate nohighlight">\(\varphi\)</span> до проміжку часу <span class="math notranslate nohighlight">\(t\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\omega = \frac{\varphi}{t}\)</span>, рад/с</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Кутова швидкість через <span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td class="text-left"><p>Кутова швидкість через період обертання (повний оберт <span class="math notranslate nohighlight">\(\varphi = 2\pi\)</span> рад).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\omega = \frac{2\pi}{T}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Кутова швидкість через <span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td class="text-left"><p>Кутова швидкість через обертову частоту.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\omega = 2\pi n\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Зв'язок лінійних та кутових</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Зв'язок <span class="math notranslate nohighlight">\(v\)</span> та <span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<td class="text-left"><p>Лінійна швидкість дорівнює добутку кутової швидкості на радіус кола <span class="math notranslate nohighlight">\(r\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(v = \omega r\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Прискорення</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Доцентрове прискорення <span class="math notranslate nohighlight">\(a_{дц}\)</span></p></td>
+<td class="text-left"><p>Складова прискорення, що характеризує зміну напрямку швидкості. Напрямлена до центра кола, перпендикулярно <span class="math notranslate nohighlight">\(\vec{v}\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(a_{дц} = \frac{v^2}{r}\)</span>, <span class="math notranslate nohighlight">\(a_{дц} = \omega^2 r\)</span>, од. м/с<span class="math notranslate nohighlight">\(^2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id14">
+<h2>Додаткові матеріали<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%B9_%D1%80%D1%83%D1%85">https://uk.wikipedia.org/wiki/Коловий_рух</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="kinematics-04.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Рух під дією сили тяжіння</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../internal_energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Криволінійний рух та рух по колу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Лінійна швидкість</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Період обертання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Обертова частота</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Зв'язок періоду та частоти</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Кутові характеристики руху</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Кутова швидкість</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Кутова швидкість через період та частоту</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Зв'язок між лінійними та кутовими характеристиками</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Доцентрове прискорення</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-frac-v-2-r">Виведення формули доцентрового прискорення <span class="math notranslate nohighlight">\(a_{дц} = \frac{v^2}{r}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Формула доцентрового прискорення через кутову швидкість</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
