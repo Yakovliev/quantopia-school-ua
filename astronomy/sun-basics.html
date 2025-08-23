@@ -1,0 +1,832 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Сонце - найближча зоря &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'astronomy/sun-basics';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Сонячне нейтрино" href="solar-neutrino.html" />
+    <link rel="prev" title="Початок космічної ери" href="space-age.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../physics/internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/astronomy/sun-basics.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fastronomy/sun-basics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/astronomy/sun-basics.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Сонце - найближча зоря</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Фізичні характеристики Сонця. Будова Сонця та джерела його енергії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Будова Сонця</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Сучасне дослідження Сонця</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Сонце - найближча зоря<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Фізичні характеристики Сонця. Будова Сонця та джерела його енергії<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Сонце представляє собою одну з численних зір нашої Галактики, яка виконує роль центрального світила Сонячної системи. Його вік оцінюється приблизно в 4.6 мільярдів років. Завдяки сонячному теплу та світлу на нашій планеті існує життя. Відстань між Сонцем і Землею складає лише 150 мільйонів кілометрів, що дозволяє нам спостерігати його як яскравий диск на небосхилі. Дослідження Сонця відіграє надзвичайно важливу роль у розвитку людської цивілізації та має значне практичне застосування.</p>
+<p>Визначення температури Сонця базується на застосуванні законів випромінювання &quot;абсолютно чорного тіла&quot;. Сонячне випромінювання містить електромагнітні хвилі різноманітних довжин, які людське око інтерпретує як біле світло. Насправді це світло є комбінацією всього спектра електромагнітних хвиль, що охоплює діапазон від червоного до фіолетового. При цьому максимум енергії сонячного випромінювання припадає на жовто-зелену частину спектра, через що астрономи класифікують наше Сонце як жовту зорю, хоча воно випромінює біле світло, а значить і колір має білий. На фотосфері - видимій поверхні Сонця - температура сягає 5780 К.</p>
+<p>Світність Сонця <span class="math notranslate nohighlight">\((Ls)\)</span> характеризує загальну потужність його випромінювання, тобто кількість енергії, яку випромінює сонячна поверхня в усіх напрямках за одиницю часу. Щоб обчислити світність, необхідно виміряти сонячну сталу <span class="math notranslate nohighlight">\(q\)</span> - це енергія, яку отримує 1 квадратний метр земної поверхні за 1 секунду при розташуванні Сонця в зеніті. Світність Сонця розраховується множенням значення сонячної сталої на площу сфери з радіусом <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[Ls = 4πR^2 \cdot q = 4 \cdot 10^{26} \text{ Вт}\]</div>
+<p>де <span class="math notranslate nohighlight">\(R = 1.5 \cdot 10^{11}\)</span> м відповідає відстані від Землі до Сонця.</p>
+<blockquote>
+<div><p><strong>Сонячна стала <span class="math notranslate nohighlight">\(q\)</span></strong> - кількість енергії, що надходить на 1 м² земної поверхні за 1 секунду, коли сонячні промені падають перпендикулярно до поверхні. Сучасні вимірювання на межі верхніх шарів атмосфери Землі показують значення сонячної сталої <span class="math notranslate nohighlight">\(q = 1.4\)</span> кВт/м².</p>
+</div></blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/83/The_Sun_in_white_light.jpg" alt="White glowing ball with black sunspots" height="550" width="550">
+<br>
+Рис. 1. Сонце через прозорий сонячний фільтр.
+<a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=94650721">Link</a>. <a href="https://en.wikipedia.org/wiki/Sun">Wiki</a></p></section>
+<section id="id3">
+<h2>Будова Сонця<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Сонце являє собою гігантську розжарену кулю плазми зі складною структурою зовнішніх та внутрішніх шарів. Внаслідок фізичних процесів у глибинах Сонця постійно генерується енергія, яка передається до зовнішніх шарів і розподіляється на дедалі більшу площу. Це призводить до поступового зниження температури сонячної плазми в напрямку від центру до поверхні. Виходячи з температурних характеристик і особливостей фізичних процесів, структуру Сонця умовно поділяють на кілька основних областей з різним фізичним станом речовини та механізмами передачі енергії: ядро, зона радіації, конвективна зона та фотосфера.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Sun_poster_uk.svg" alt="Sun poster uk.svg" height="550" width="833">
+<br>
+Рис. 1. Сонце у розрізі. Ядро Сонця є джерелом нейтрино.
+Автор: <a class="external free" href="https://commons.wikimedia.org/wiki/User:Kelvinsong">https://commons.wikimedia.org/wiki/User:Kelvinsong</a> - <a href="https://commons.wikimedia.org/wiki/File:Sun_poster.svg" title="File:Sun poster.svg">File:Sun_poster.svg</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=34651935">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Сонце">Wiki</a></p><div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Середня відстань до Землі</p></th>
+<th class="head"><p>1.5 · 10¹¹ м</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Радіус</p></td>
+<td><p>696340 км (109 земних радіуса)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Середній діаметр</p></td>
+<td><p>1.39 · 10⁹ м</p></td>
+</tr>
+<tr class="row-even"><td><p>Маса</p></td>
+<td><p>1.98855 · 10³⁰ кг (330000 мас Землі)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Середня густина</p></td>
+<td><p>1408 кг/м³</p></td>
+</tr>
+<tr class="row-even"><td><p>Прискорення вільного падіння на екваторі</p></td>
+<td><p>274 м/с²</p></td>
+</tr>
+<tr class="row-odd"><td><p>Температура ядра</p></td>
+<td><p>1.5 · 10⁷ K</p></td>
+</tr>
+<tr class="row-even"><td><p>Температура корони</p></td>
+<td><p>від 1 до 3 млн К</p></td>
+</tr>
+<tr class="row-odd"><td><p>Температура фотосфери</p></td>
+<td><p>5800 K</p></td>
+</tr>
+<tr class="row-even"><td><p>Світність</p></td>
+<td><p>3.846 · 10²⁶ Вт</p></td>
+</tr>
+<tr class="row-odd"><td><p>Хімічний склад за масою,%</p></td>
+<td><p>H₂ - 73.46, He - 24.85</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p><strong>Ядро</strong> - центральна область Сонця, де відбуваються термоядерні реакції, які є джерелом сонячної енергії. Саме в ядрі відбувається термоядерний синтез, за якого гідроген перетворюється на гелій, що утворює величезну кількість енергії. Ядро, попри відносно малий об'єм, містить значну частину сонячної маси завдяки надзвичайно високій густині, яка зростає в напрямку до центру. Колосальний тиск у поєднанні з надвисокою температурою створюють умови для протікання термоядерних реакцій. Ядро простягається приблизно на 20-25% радіуса Сонця (139000-175000 км). Така розбіжність в оцінці радіуса ядра пояснюється тим, що воно не має чіткої межі і різні фізичні моделі (а якщо точніше сказати, то різні критерії) оцінюють радіус ядра по різному. Температура ядра Сонця в його центрі становить близько 15 000 000 К і зменшується при віддаленні від центра ядра.</p>
+</div></blockquote>
+<p>Середня густина Сонця нижча, ніж у Землі, але в його ядрі щільність досягає надзвичайно високих значень (150 000 кг/м³).</p>
+<blockquote>
+<div><p><strong>Зона радіації</strong> або <strong>зона променистого переносу</strong> оточує ядро і простягається на відстань починаючи від зовнішньої межі ядра Сонця і до 70% радіуса Сонця. У цій області енергія передається через механізм променистого переносу - послідовне поглинання та перевипромінювання квантів електромагнітної енергії речовиною. Перевипромінений фотон/квант має напрямок, що не залежить від напрямку поглинутого фотону/кванту і може як потрапити в наступний шар плазми, так і повернутися назад, у нижні шари. Через це проміжок часу, за який багатократно перевипромінений фотон (що початково виник в ядрі) досягає конвективної зони, може становити мільйони років. Для Сонця цей час становить близько 170 тисяч років (у середньому). Температура зони променистого переносу падає від 7 000 000 К до 2 000 000 К від внутрішньої до зовнішньої межі цієї зони.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Тахоклин</strong> - перехідна область в Сонці (та інших зорях з масою більше за 0.3 маси Сонця) між зоною променистого переносу та конвективною зоною, що диференціально обертається. Диференціальне обертання - це тип обертання, за якого різні частини об'єкта обертаються навколо спільної осі обертання з різною кутовою швидкістю.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Конвективна зона</strong> - шар Сонця, в якому енергія передається через механізм конвекції: гарячі потоки речовини піднімаються вгору, а охолоджені опускаються донизу. Цей шар розташований між верхньою межею зони радіації та видимою поверхнею Сонця (фотосферою). Товщина цієї зони становить близько 200 000 км. У нижній частині конвекційної зони температура становить близько 2 000 000° C. Це достатньо «холодно», щоб важчі іони (такі як вуглець, азот, кисень, кальцій і залізо) могли утримати частину своїх електронів. Це робить матеріал більш непрозорим, через що випромінювання важче проникає. Це затримує тепло, що зрештою робить рідину нестабільною, і вона починає «кипіти» і переміщуватись за рахунок конвекції. На зовнішній частині конвективної зони, температура падає до близько 5800 К.</p>
+</div></blockquote>
+<p>Гаряча речовина у конвективній зоні піднімається до поверхні, віддає енергію, охолоджується і опускається назад. Така циркуляція створює характерну грануляційну структуру фотосфери, яку можна спостерігати з Землі.</p>
+<p><strong>Атмосфера</strong> Сонця складається з трьох основних шарів.</p>
+<blockquote>
+<div><p>Найнижчий шар атмосфери - <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Photosphere">фотосфера</a></strong> - має товщину близько 100-400 км і сприймається нами як видима поверхня Сонця. Густина газів у фотосфері мільйони разів менша за густину земної атмосфери біля поверхні, а температура зменшується з висотою. Середні шари фотосфери, випромінювання яких переважно досягає Землі, мають температуру 5800 К.</p>
+</div></blockquote>
+<p>Примітка: температура фотосфери змінюється від 4400 К до 6600 К, а середня температура становить 5772 К, тобто близько 5800 К, як і зазначено вище.</p>
+<p>Фотосфера практично повністю поглинає й перевипромінює енергію, що йде з глибини зорі, тобто практично все світло Сонця, яке ми бачимо, приходить саме з фотосфери. Зазвичай саме фотосферу використовують для визначення радіуса зорі. Оскільки товщина фотосфери для більшості зір набагато менша за сам радіус, ми бачимо край Сонця чітким, а радіус виявляється досить точно визначеним, попри відсутність у зір твердої поверхні.</p>
+<p>За допомогою сонячного телескопа у фотосфері можна спостерігати специфічну зернисту структуру - грануляцію, яка є прямим проявом конвективних процесів.</p>
+<p>На фотосфері можна спостерігати сонячні плями - темніші області з сильним магнітним полем і нижчою температурою (близько 4 000 К). Сонячні плями часто супроводжуються спалахами та викидами коронарної маси.</p>
+<blockquote>
+<div><p>Хромосфера («сфера кольору», від давньогрецьких слів χρῶμα (khrôma) «колір» і σφαῖρα (sphaîra) «сфера») - другий шар атмосфери зірки, розташований над фотосферою та нижче сонячної корони. В атмосфері Сонця хромосфера має висоту приблизно від 3000 до 5000 кілометрів, або трохи більше 1% радіуса Сонця при максимальній товщині. Температура хромосфери коливається від 4000 К прямо над фотосферою до 25 000 К (по деяким джерелам, 35 000 К) у верхній частині хромосфери.</p>
+</div></blockquote>
+<p>Назва була запропонована англійським астрономом Норманом Лок'єром після проведення систематичних спостережень за Сонцем, щоб відрізнити шар від фотосфери, що випромінює біле світло. Хромосфера (&quot;сфера кольору&quot;) отримала свою назву через червонуватий відтінок, який можна спостерігати під час повних сонячних затемнень.</p>
+<p>Хромосфера має характерний червоний колір через електромагнітне випромінювання в спектральній лінії гідрогену <span class="math notranslate nohighlight">\(H_{\alpha}\)</span> (<a class="reference external" href="https://en.wikipedia.org/wiki/Hydrogen-alpha">Wiki</a>). Інформація про хромосферу в основному отримана шляхом аналізу випромінюваного нею електромагнітного випромінювання.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Today%27s_Ha_Sun_-_Flickr_-_upsidedown_astronomer.png" alt="Today's Ha Sun - Flickr - upsidedown astronomer.png" height="500" width="500">
+<br>
+Рис. Спостереження Сонця через оптичний телескоп з Н-альфа-фільтром.
+By <a rel="nofollow" class="external text" href="https://www.flickr.com/people/106648653@N05">Paul Stewart</a> from Timaru, New Zealand - <a rel="nofollow" class="external text" href="https://www.flickr.com/photos/astrostew/24930153209/">Today's Ha Sun</a>, <a href="https://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=92837572">Link</a>. <a href="https://en.wikipedia.org/wiki/Hydrogen-alpha">Wiki</a></p><blockquote>
+<div><p><strong>Сонячний перехідний шар</strong> розташовується безпосередньо над хромосферою і під надзвичайно гарячою короною. Його товщина оцінюється в декілька сотень кілометрів (цей шар надзвичайно вузький порівняно із шарами, які він розділяє). Різкий стрибок температури - це його найбільш визначальна риса перехідного шару. Температура неймовірно швидко зростає, підвищуючись приблизно від 25 000 К у верхній частині хромосфери до понад 1 мільйона Кельвінів у основі корони.</p>
+</div></blockquote>
+<p>Різкий стрибок температури перехідного шару досі залишається предметом наукових досліджень.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Temperature-height_graph_for_solar_atmosphere.jpg" alt="Temperature-height graph for solar atmosphere.jpg" height="487" width="483">
+<br>
+Рис. Приблизна температура в сонячній атмосфері відносно висоти над поверхнею Сонця.
+By Andrew Fraknoi, David Morrison, Sidney C. Wolff - <a rel="nofollow" class="external free" href="https://openstax.org/books/astronomy/pages/15-1-the-structure-and-composition-of-the-sun">https://openstax.org/books/astronomy/pages/15-1-the-structure-and-composition-of-the-sun</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=110961545">Link</a>. <a href="https://en.wikipedia.org/wiki/Solar_transition_region">Wiki</a></p><blockquote>
+<div><p>Найвіддаленіший і найбільший шар сонячної атмосфери - <strong>сонячна корона</strong> - характеризується надзвичайно високою температурою, яка сягає від 1 до 3 млн градусів Кельвіна. Товщина сонячної корони Cонця оцінюється від 1 до 3 радіусів Сонця (це оцінка розмірів корони під час Сонячних затемнень), однак немає якоїсь чіткої межі, де закінчується корона, оскільки вона плавно перетікає в сонячний вітер.</p>
+</div></blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Total_Solar_Eclipse_8-21-17.jpg" alt="Total Solar Eclipse 8-21-17.jpg" height="550" width="413">
+<br>
+Рис. Сонячна корона під час повного сонячного затемнення 21 серпня 2017 року.
+By <a href="https://commons.wikimedia.org/wiki/User:Msadler13" title="User:Msadler13">Michael S Adler</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=74328931">Link</a>. <a href="https://en.wikipedia.org/wiki/Stellar_corona">Wiki</a></p><blockquote>
+<div><p><strong>Геліосфера</strong> — зона у космічному просторі навколо Сонця, оточена міжзоряним простором, що перебуває під впливом сонячного вітру. Майже вся речовина в межах геліосфери походить із Сонця.</p>
+</div></blockquote>
+<p>Межею геліосфери вважають геліопаузу, де потік сонячної плазми врівноважується гідродинамічним та магнітним тиском міжзоряного газу. За сучасними даними ця межа розташована на відстані близько 100 а.о. і деякою мірою залежить від сонячної активності. Форма геліосфери несиметрична, що зумовлено рухом Сонця відносно навколишнього середовища.</p>
+<p>На відстані 60–70 а.о. (10 млрд км) від Сонця сонячний вітер рухається зі швидкістю понад 200 км/с, але внаслідок взаємодії з міжзоряним простором дуже швидко гальмується. Межа, на якій відбувається гальмування сонячного вітру міжзоряним простором, має назву головної ударної хвилі (англ. termination shock). Цієї межі, яка розташована на відстані близько 90 а.о. від Сонця, досягли 2003 року космічні апарати Вояджер-1 та Вояджер-2 та у інших роках космічні апарати &quot; Піонер 10&quot; й &quot;Піонер 11&quot;.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Voyager_1_entering_heliosheath_region.jpg" alt="Voyager 1 entering heliosheath region.jpg" height="500" width="741">
+<br>
+Рис. Умовне зображення геліосфери та розташування у ній космічних апаратів Вояджер-1 та Вояджер-2.
+Автор: NASA/Walt Feimer, Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=165239">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Геліосфера">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/72408main_ACD97-0036-1.jpg" alt="72408main ACD97-0036-1.jpg" height="500" width="656">
+<br>
+Рис. Діаграма структури геліосфери, форми приблизні та засновуються на даних апарата Interstellar Boundary Explorer.
+Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=138894">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Геліосфера">Wiki</a></p><p>Активність Сонця змінюється циклічно приблизно кожні 11 років. Ці цикли впливають на кількість сонячних плям, інтенсивність сонячного випромінювання та інші магнітні явища.</p>
+<p>Цікаво зауважити, що питома потужність енергогенерації Сонця досить незначна: один кілограм сонячної речовини генерує лише близько 0,001 Вт енергії. Для порівняння, людське тіло випромінює в середньому 100 Вт, що приблизно в тисячу разів перевищує питому потужність сонячної речовини такої ж маси. Проте унікальність Сонця полягає в тому, що воно підтримує цей рівень випромінювання протягом мільярдів років, забезпечуючи стабільну енергетичну підтримку Землі та інших тіл Сонячної системи.</p>
+</section>
+<section id="id4">
+<h2>Сучасне дослідження Сонця<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p><strong><a class="reference external" href="https://soho.nascom.nasa.gov/">SOHO (Solar and Heliospheric Observatory)</a></strong></p>
+<p>Місія спільного проекту NASA та ESA, спрямована на безперервне спостереження сонячної активності, вивчення корони, сонячного вітру та внутрішніх процесів в Сонці. Космічний апарат для спостереження за Сонцем був запущений 1995 року, а розпочав роботу у травні 1996 року. Розроблений NASA та ESA. Найбільша за своєю функціональністю космічна обсерваторія спостереження за Сонцем на початку XXI ст. Перебуває на геліоцентричній орбіті в точці Лагранжа L1 між Землею та Сонцем.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/NASA_SOHO_spacecraft.png" alt="NASA SOHO spacecraft.png" height="500" width="476">
+<br>
+Рис. Супутник SOHO.
+<a rel="nofollow" class="external free" href="https://sohowww.nascom.nasa.gov/gallery/images/SOHOLower2.html">http://sohowww.nascom.nasa.gov/gallery/images/SOHOLower2.html</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=28983655">Link</a>. <a href="https://uk.wikipedia.org/wiki/SOHO">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Lagrange_points.jpg" alt="Зображення" height="500" width="571">
+<br>
+Рис. Точки Лагранжа та стабільність у Лагранжевих точках системи двох тіл зі значною різницею мас (напр. Сонце - Земля). Стабільні орбіти навколо точок L4 та L5 позначено синіми трикутниками.
+Автор: NASA - <a rel="nofollow" class="external free" href="https://map.gsfc.nasa.gov/m_mm/ob_techorbit1.html">http://map.gsfc.nasa.gov/m_mm/ob_techorbit1.html</a>, Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=672579">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Точки_Лагранжа">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Lagrangian_points_equipotential.gif" alt="Відео" height="384" width="512">
+<br>
+Рис. Точки Лагранжа
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Cmglee" title="User:Cmglee">cmglee</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=24680025">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Точки_Лагранжа">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Big_Splash_Theia.gif" alt="Big Splash Theia.gif" height="501" width="600">
+<br>
+Рис. Ілюстрація зіткнення Теї з Землею, та утворення Місяця.
+<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=338893">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Тея_(планета)">Wiki</a></p><p><strong><a class="reference external" href="https://sdo.gsfc.nasa.gov/">SDO (Solar Dynamics Observatory)</a></strong></p>
+<p>Забезпечує високоточну і часту зйомку Сонця в різних діапазонах хвиль, що дозволяє дослідникам в реальному часі аналізувати змінність сонячної активності. Початкова запланована тривалість місії становила 5 років, але зараз (станом на 2025 рік) становить уже більше 15 років.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Solar_Dynamics_Observatory_1.jpg" alt="Solar Dynamics Observatory 1.jpg" height="500" width="888">
+<br>
+Рис. Супутник Solar Dynamics Observatory.
+By NASA, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=4475835">Link</a>. <a href="https://uk.wikipedia.org/wiki/Solar_Dynamics_Observatory">Wiki</a></p><p><strong>Parker Solar Probe</strong></p>
+<p>Місія NASA, яка зближується із Сонцем, щоб збирати дані про його зовнішнє середовище, структуру корони та процеси, що відбуваються в надгарячому плазмовому середовищі. Апарат було запущено 12 серпня 2018 року.</p>
+<p>5 листопада 2018 року зонд Parker Solar Probe пролетів на відстані 24 млн км від світила, рухаючись зі швидкістю 343112 км/год. Зонд зібрав наукові дані і встановив рекорди серед штучних об'єктів: зі швидкості руху та наближення до Сонця.</p>
+<p>30 червня 2024 року, згідно повідомлення NASA, зонд Parker Solar Probe здійснив свій 20-й близький проліт повз Сонце. Зонд підлетів до нашої зірки на менш ніж 5 % відстані від Землі до Сонця та встановив новий рекорд швидкості, адже він рухався зі швидкістю 635266 км/год.</p>
+<p>24 грудня 2024 року, об 11:53 за Гринвічем (13:53 за Києвом), зонд Parker Solar Probe наблизився до Сонця на рекордно близьку відстань - 6.1 млн км. Швидкість апарата при цьому склала 690 тис км/год.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Parker_Solar_Probe_spacecraft_model.png" alt="Digital model of a spacecraft with a bus attached to a larger sun-shield. Two small solar panels are attached to the side of the bus, along with four rear-facing antennas." height="500" width="720">
+<br>
+Рис. Модель апарату Parker Solar Probe.
+By <a href="https://en.wikipedia.org/wiki/NASA" class="extiw" title="w:NASA">National Aeronautics and Space Administration (NASA)</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=59476892">Link</a>. <a href="https://en.wikipedia.org/wiki/Parker_Solar_Probe">Wiki</a></p><div class="full-width docutils">
+<iframe width="100%", height="600" src="https://eyes.nasa.gov/apps/solar-system/#/sc_parker_solar_probe" allowfullscreen ></iframe>
+<p>3Д мапа від NASA. Поточне положення Parker Solar Probe на орбіті навколо Сонця.</p>
+</div>
+<p><strong><a class="reference external" href="https://uk.wikipedia.org/wiki/PROBA-3">PROBA-3</a></strong></p>
+<p>PROBA-3 - це космічна технологічна демонстраційна місія з подвійним зондом, що розроблена і проводиться Європейським космічним агентством (ЄКА/ESA). Вона присвячена високоточному польоту супутників у формації для досягнення наукової коронографії. PROBA-3 є частиною серії супутників PROBA, які використовуються для перевірки нових технологій і концепцій космічних кораблів, а також мають наукові інструменти. Місія була успішно запущена 5 грудня 2024 року ракетою ISRO PSLV-XL з космічного центру Сатіша Дхавана в Шріхарікоті, Індія</p>
+<p>PROBA-3 складається з двох незалежних космічних апаратів із стабілізацією по трьох осях: космічного апарата Coronagraph (CSC) і космічного апарата Occulter (OSC). Політ космічних апаратів відбувається близько один до одного на високоеліптичній орбіті навколо Землі з апогеєм на висоті 60 500 км.</p>
+<p>Літаючи в щільній формації на відстані близько 150 метрів один від одного, Occulter буде точно відкидати свою тінь на телескоп Coronagraph, блокуючи пряме світло Сонця. Це дозволить Coronagraph знімати слабку сонячну корону у видимому, ультрафіолетовому та поляризованому світлі протягом багатьох годин поспіль і при цьому не бути засліпленим фотосферою Сонця. Наукова мета полягає в спостереженні корони приблизно до 1.1 сонячного радіуса у видимому діапазоні довжин хвиль.</p>
+<p><img alt="proba-3-esa.png" src="../_images/proba-3-esa.png" /></p>
+<p>Рис. PROBA-3 місія. Credit: ESA - European Space Agency</p>
+</section>
+<section id="id5">
+<h2>Додаткові матеріали (українською)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%86%D0%B5">Сонце</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%AF%D0%B4%D1%80%D0%BE_%D0%A1%D0%BE%D0%BD%D1%86%D1%8F">Ядро Сонця</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%BE%D0%BD%D0%B0_%D0%BF%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D0%B8%D1%81%D1%82%D0%BE%D0%B3%D0%BE_%D0%BF%D0%B5%D1%80%D0%B5%D0%BD%D0%BE%D1%81%D1%83">Зона променистого переносу</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B0%D1%85%D0%BE%D0%BA%D0%BB%D0%B8%D0%BD">Тахоклин</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A4%D0%BE%D1%82%D0%BE%D1%81%D1%84%D0%B5%D1%80%D0%B0">Фотосфера</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A5%D1%80%D0%BE%D0%BC%D0%BE%D1%81%D1%84%D0%B5%D1%80%D0%B0">Хромосфера</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BD%D1%8F%D1%87%D0%BD%D0%B0_%D0%BA%D0%BE%D1%80%D0%BE%D0%BD%D0%B0">Сонячна корона</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D0%B5%D0%BB%D1%96%D0%BE%D1%81%D1%84%D0%B5%D1%80%D0%B0">Геліосфера</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/SOHO">SOHO</a></p></li>
+<li><p><a class="reference external" href="https://soho.nascom.nasa.gov/sunspots/">Веб-сайт місії SOHO</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%87%D0%BA%D0%B8_%D0%9B%D0%B0%D0%B3%D1%80%D0%B0%D0%BD%D0%B6%D0%B0">Точки Лагранжа</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D1%8F_(%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0)">Тея (планета)</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/Solar_Dynamics_Observatory">Solar Dynamics Observatory</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/Parker_Solar_Probe#2024">Parker Solar Probe</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/PROBA-3">PROBA-3</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/Interstellar_Boundary_Explorer">Interstellar Boundary Explorer</a></p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sun">Wiki. Sun</a></p></li>
+<li><p><a class="reference external" href="https://science.nasa.gov/sun/facts/">NASA. Our Sun: Facts</a></p></li>
+<li><p><a class="reference external" href="https://science.nasa.gov/sun/">NASA. Sun</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_core">Solar Core</a></p></li>
+<li><p><a class="reference external" href="https://solarscience.msfc.nasa.gov/interior.shtml">The Solar Interior</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Photosphere">Photosphere</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Chromosphere">Chromosphere</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_transition_region">Solar transition region</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_corona">Stellar corona</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Heliosphere">Heliosphere</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stellar_classification">Stellar classification</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_and_Heliospheric_Observatory">SOHO (Solar and Heliospheric Observatory)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Solar_Dynamics_Observatory">Solar Dynamics Observatory</a></p></li>
+<li><p><a class="reference external" href="https://sdo.gsfc.nasa.gov/">Official website Solar Dynamics Observatory</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Parker_Solar_Probe">Parker Solar Probe</a></p></li>
+<li><p><a class="reference external" href="https://parkersolarprobe.jhuapl.edu/The-Mission/index.php#introduction">Parker Solar Probe Mission</a></p></li>
+<li><p><a class="reference external" href="https://science.nasa.gov/mission/parker-solar-probe/">Parker Solar Probe NASA</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/PROBA-3">PROBA-3</a></p></li>
+<li><p><a class="reference external" href="https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Proba-3">PROBA-3 ESA</a></p></li>
+<li><p><a class="reference external" href="https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Proba_Missions/Proba-3_Mission3">PROBA-3 Mission ESA</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hydrogen-alpha">Hydrogen-alpha</a></p></li>
+<li><p><a class="reference external" href="https://openstax.org/books/astronomy/pages/15-1-the-structure-and-composition-of-the-sun">The Structure and Composition of the Sun</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./astronomy"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="space-age.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Початок космічної ери</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="solar-neutrino.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Сонячне нейтрино</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Фізичні характеристики Сонця. Будова Сонця та джерела його енергії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Будова Сонця</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Сучасне дослідження Сонця</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали (українською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

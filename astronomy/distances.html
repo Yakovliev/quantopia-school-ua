@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Вимірювання відстаней в астрономії &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'astronomy/distances';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Видима та абсолютна зоряна величина" href="apparent_and_absolute_magnitude.html" />
+    <link rel="prev" title="Системи небесних координат" href="celestial_coordinates.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../physics/internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../physics/heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../physics/internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/astronomy/distances.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fastronomy/distances.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/astronomy/distances.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Вимірювання відстаней в астрономії</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Астрономічна одиниця (а.о.)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Світловий рік (св. р.)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Парсек (пк)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Паралакс в астрономії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Добовий паралакс та горизонтальний паралакс</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Річний паралакс</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Зв'язок річного паралакса з парсеком</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Межі застосування паралактичного методу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Радіолокаційний метод</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Вимірювання відстаней в астрономії<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Астрономічна одиниця (а.о.)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D1%81%D1%82%D1%80%D0%BE%D0%BD%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B0_%D0%BE%D0%B4%D0%B8%D0%BD%D0%B8%D1%86%D1%8F">Астрономічна одиниця</a> (astronomical unit, AU) - це середня відстань між Землею та Сонцем. Вона дорівнює 149 597 870 700 метрів або приблизно 149.5 млн км (мільйонів кілометрів).</p>
+</div></blockquote>
+<p>Ця одиниця вимірювання особливо зручна для опису відстаней у межах Сонячної системи. Наприклад:</p>
+<ul class="simple">
+<li><p>Середня відстань між Землею та Місяцем 0.0026 ± 0.0001 а. о.</p></li>
+<li><p>Середня відстань між Марсом і Сонцем 1.52 ± 0.14 а. о.</p></li>
+<li><p>Середня відстань між Юпітером та Сонцем 5.20 ± 0.05 а. о.</p></li>
+</ul>
+<p>Астрономічну одиницю здебільшого застосовують для вимірювання відстаней між об'єктами Сонячної системи, а також між компонентами подвійних зір. Світло долає цю відстань за 8 хвилин і 19,8718281653569 секунд.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Astronomical unit in meters</span>
+<span class="n">AU</span> <span class="o">=</span> <span class="mi">149_597_870_700</span> 
+
+<span class="c1"># Distance from Earth to Moon is 0.0026 AU</span>
+<span class="n">distance_1</span> <span class="o">=</span> <span class="mf">0.0026</span> <span class="o">*</span> <span class="n">AU</span>
+
+<span class="c1"># Distance from Sun to Mars is 1.52 AU</span>
+<span class="n">distance_2</span> <span class="o">=</span> <span class="mf">1.52</span> <span class="o">*</span> <span class="n">AU</span>
+
+<span class="c1"># Distance from Sun to Jupiter is 5.2 AU</span>
+<span class="n">distance_3</span> <span class="o">=</span> <span class="mf">5.2</span> <span class="o">*</span> <span class="n">AU</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance from Earth to Moon is </span><span class="si">{</span><span class="n">distance_1</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> meters&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance from Sun to Mars is </span><span class="si">{</span><span class="n">distance_2</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> meters&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance from Sun to Jupiter is </span><span class="si">{</span><span class="n">distance_3</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> meters&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distance from Earth to Moon is 388,954,463.82 meters
+Distance from Sun to Mars is 227,388,763,464.00 meters
+Distance from Sun to Jupiter is 777,908,927,640.00 meters
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Світловий рік (св. р.)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%B2%D1%96%D1%82%D0%BB%D0%BE%D0%B2%D0%B8%D0%B9_%D1%80%D1%96%D0%BA">Світловий рік</a> - це відстань, яку світло проходить за один рік, рухаючись у вакуумі зі швидкістю <span class="math notranslate nohighlight">\(c = 299 792 458\)</span> м/с. Згідно з рекомендаціями Міжнародного астрономічного союзу як чисельне значення року, якщо не вказано інше, застосовується юліанський рік, що становить 365.25 діб або 31 557 600 секунд (365.25×24×60×60). Світловий рік становить 9 460 730 472 580 800 м ≈ <span class="math notranslate nohighlight">\(9.46 \cdot 10^{15}\)</span> м.</p>
+</div></blockquote>
+<p>Світловий рік, очевидно, більший за астрономічну одиницю. 1 св. рік (світловий рік) становить 63240.18 а.о. (астрономічних одициць)</p>
+<p>Перевіримо вищевказані значення за допомогою Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speed_of_light</span> <span class="o">=</span> <span class="mi">299_792_458</span> <span class="c1"># meters per second</span>
+
+<span class="n">number_of_days_in_a_year</span> <span class="o">=</span> <span class="mf">365.25</span> <span class="c1"># days</span>
+
+<span class="n">time</span> <span class="o">=</span> <span class="n">number_of_days_in_a_year</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="c1"># seconds</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of seconds in a year is </span><span class="si">{</span><span class="n">time</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">light_year_in_meters</span> <span class="o">=</span> <span class="n">speed_of_light</span> <span class="o">*</span> <span class="n">time</span> <span class="c1"># meters</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance light travels in a year is </span><span class="si">{</span><span class="n">light_year_in_meters</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> meters&quot;</span><span class="p">)</span>
+
+<span class="n">light_year_in_AU</span> <span class="o">=</span> <span class="n">light_year_in_meters</span> <span class="o">/</span> <span class="n">AU</span> <span class="c1"># AU</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance light travels in a year is </span><span class="si">{</span><span class="n">light_year_in_AU</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> astronomical units&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of seconds in a year is 31557600
+Distance light travels in a year is 9,460,730,472,580,800.00 meters
+Distance light travels in a year is 63,241.08 astronomical units
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Парсек (пк)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D1%81%D0%B5%D0%BA">Парсек</a> (назва є скороченням від паралакс-секунда, англійською parallax second) - це відстань, з якої середній радіус земної орбіти (рівний 1 а.о.), перпендикулярний до променя зору, видно під кутом 1'' (одна кутова секунда).</p>
+</div></blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Parsec-uk.svg" alt="Parsec-uk.svg" height="575" width="500"><br>Рис. 1. Означення парсека</p><p>Спробуємо тепер порахувати, яке значення має 1 парсек.</p>
+<p>За означенням, тангенс кута прямокутного трикутника дорівнює відношенню протилежного катета до прилеглого катета. Таким чином, з вищевказаного рисунку 1 маємо:</p>
+<div class="math notranslate nohighlight">
+\[\text{tg}(1'') = \frac{1 \text{ а.о.}}{1 \text{ пк}}\]</div>
+<p>Для кутів, що виражаються у радіанах, справедливе наступне наближення (хоча вам це наближення може здаватись чимось новим і незрозумілим, однак це наближчення дуже часто застосовується у фізиці для спрощення багатьох виведень та запису формул):</p>
+<div class="math notranslate nohighlight">
+\[\text{tg} \alpha \approx \alpha\]</div>
+<p>Одна кутова секунда в радіанах:</p>
+<div class="math notranslate nohighlight">
+\[1'' = \frac{1 ^\circ}{3600} = \frac{1}{3600} \cdot \frac{\pi}{180} \text{ рад} \approx 4.848137 \cdot 10^{-6} \text{ рад}\]</div>
+<p>Як результат</p>
+<div class="math notranslate nohighlight">
+\[\text{tg}(4.848137 \cdot 10^{-6}) \approx 4.848137 \cdot 10^{-6}\]</div>
+<p>Підставимо отримане значення у рівняння:</p>
+<div class="math notranslate nohighlight">
+\[4.848137 \cdot 10^{-6} = \frac{1 \text{ а.о.}}{1 \text{ пк}}\]</div>
+<p>Тепер виразимо значення парсека:</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ пк} = \frac{1 \text{ а.о.}}{4.848137 \cdot 10^{-6}} = 206264.806 \text{ а.о.} \approx 206268 \text{ а.о.}\]</div>
+<p>Підставимо значення астрономічної одиниці в метрах:</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ пк} = 206 264.806 \cdot 149 597 870 700 \text{ м} \approx 3.0856 \cdot 10^{16} \text{ м}\]</div>
+<p>Щоб отримати значення парсека у світлових роках, поділимо отримане значення на довжину світлового року:</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ пк} = \frac{3.0856 \cdot 10^{16} \text{ м}}{9.460730 \cdot 10^{15} \text{ м / св. р.}} \approx 3.2618 \text{ св. р.}\]</div>
+<p>Таким чином, ми отримали всі основні співвідношення для парсека:</p>
+<ul class="simple">
+<li><p>1 пк = 206264.806 а.о.</p></li>
+<li><p>1 пк = <span class="math notranslate nohighlight">\(3.0856 \cdot 10^{16}\)</span> м</p></li>
+<li><p>1 пк = 3.2618 св. р.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">arcsec_in_radians</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3600</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span> <span class="c1"># radians</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 кутова секунда в радіанах: </span><span class="si">{</span><span class="n">arcsec_in_radians</span><span class="si">:</span><span class="s2">.6e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 кутова секунда в радіанах: 4.848137e-06
+</pre></div>
+</div>
+</div>
+</div>
+<p>Примітка: значення &quot;4.848137e-06&quot; - це так звана експоненційна нотація, з якою ви можете часто зустрічатись в програмуванні або коли ви працюєте із розрахунками таблиць Excel. По суті, це значення означає <span class="math notranslate nohighlight">\(4.848137 \cdot 10^{-6}\)</span> у науковій нотації, до якої ми більше звикли.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parsec_in_astronomical_units</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">arcsec_in_radians</span> <span class="c1"># parsecs</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 парсек дорівнює </span><span class="si">{</span><span class="n">parsec_in_astronomical_units</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> а.о.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 парсек дорівнює 206264.806 а.о.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Астрономічна одиниця в метрах</span>
+<span class="n">AU</span> <span class="o">=</span> <span class="mi">149_597_870_700</span>
+
+<span class="n">parsec_in_meters</span> <span class="o">=</span> <span class="n">parsec_in_astronomical_units</span> <span class="o">*</span> <span class="n">AU</span> <span class="c1"># meters</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 парсек дорівнює </span><span class="si">{</span><span class="n">parsec_in_meters</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> метрів&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 парсек дорівнює </span><span class="si">{</span><span class="n">parsec_in_meters</span><span class="si">:</span><span class="s2">,.10e</span><span class="si">}</span><span class="s2"> метрів (записано в експоненціальній формі)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 парсек дорівнює 30,856,775,814,913,672.00 метрів
+1 парсек дорівнює 3.0856775815e+16 метрів (записано в експоненціальній формі)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parsec_in_light_years</span> <span class="o">=</span> <span class="n">parsec_in_meters</span> <span class="o">/</span> <span class="n">light_year_in_meters</span> <span class="c1"># light years</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1 парсек дорівнює </span><span class="si">{</span><span class="n">parsec_in_light_years</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> світлових років&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 парсек дорівнює 3.2616 світлових років
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Паралакс в астрономії<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D0%B0%D0%BB%D0%B0%D0%BA%D1%81"><strong>Паралакс</strong></a> - це видиме зміщення або різниця у видимому положенні об'єкта при спостереженні з двох різних ліній зору. Що менша відстань до об'єкта або що більша відстань між точками спостереження (<strong>базис</strong>), то більший паралакс. Паралакс вимірюється кутом або напівкутом нахилу між цими двома лініями. Завдяки ракурсу найближчі об’єкти демонструють більший паралакс, ніж дальні об’єкти, тому паралакс можна використовувати для визначення відстані (особливо на фоні дуже далеких зір). Залежно від того чи беремо ми кут чи напівкут у якості паралаксу, формули для визначення відстані до об'єкта будуть відрізнятися позначеннями/параметрами (але загальний вигляд формули буде ідентичним для обох випадків). У астрономії паралакс зазвичай беруть у якості напівкута нахилу між двома лініями зору.</p>
+</div></blockquote>
+<p>Це явище можна легко помітити в повсякденному житті: якщо по черзі дивитися на який-небудь предмет то лівим, то правим оком, то він буде здаватися зміщеним відносно більш віддалених предметів. Що далі розташований об'єкт, то менше змінюється його візуальна позиція.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Parallax.gif" alt="Parallax.gif" height="150" width="200"><br>Рис. 2. Ілюстрація паралаксу. При зміщенні суб'єкта, візуально зміщуються об'єкт/об'єкти. Автор: Nathaniel Domek, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=5061516">Посилання</a></p><p>Явище паралаксу широко використовується в природі. Майже всі ссавці й птахи мають хоча б вузьку зону бінокулярного зору. Це дає їм можливість вимірювати відстань до об'єктів у полі зору. Висока бінокулярність зору характерна для тварин, яким важливо точно визначати відстані. Наприклад у людей цей кут становить до 150°. Відповідно, два ока дають два трохи різні зображення, які майже повністю перекриваються. Мозок, аналізуючи дані з двох точок спостереження, будує об'ємне зображення.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Parallax.png" alt="Parallax.png" height="380" width="720"><br>Рис. 3. P - паралакс; a, b - точки спостереження; А, В - положення спостережуваного об'єкта O на фоні. Автор: Thaisk - Власна робота, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=2665017">Посилання</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Stellarparallax_parsec1.svg" alt="Stellarparallax parsec1.svg" height="870" width="555"><br>Рис. 4. Означення парсека через паралакс (паралакс на цьому рисунку становить одна кутова секунда 1'', що відповідає означенню парсека, яке ви бачили вище). Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=4196613">Link</a></p></section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Добовий паралакс та горизонтальний паралакс<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Добовий паралакс</strong> - це кут між напрямком на небесне тіло з центра Землі і напрямком на небесне тіло з якої-небудь точки на поверхні Землі. Очевидно, що добовий паралакс може змінюватися залежно від часу (точніше, обертання Землі) та точки спостереження на поверхні Землі. Добовий паралакс раніше використовувався для визначення відстаней до об'єктів в Сонячній системі, однак зараз цей метод витіснений більш точними методами.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Горизонтальний паралакс</strong> - це максимальне значення добового паралаксу, яке спостерігається, коли небесне тіло знаходиться на горизонті.</p>
+</div></blockquote>
+<p><img alt="horizontal parallax" src="../_images/parallax_1.jpg" /></p>
+<p>Рис. 5. Добовий <span class="math notranslate nohighlight">\(\angle BPO\)</span> та горизонтальний паралакс <span class="math notranslate nohighlight">\(\angle APO\)</span></p>
+<p>Відстані до небесних тіл в Сонячній системі зазвичай обчислюються за допомогою їх горизонтальних паралаксів.</p>
+<p>Нехай <span class="math notranslate nohighlight">\(L\)</span> - відстань до небесного тіла від центру Землі, а <span class="math notranslate nohighlight">\(R_0\)</span> - радіус Землі. Радіус Землі дорівнює 6378 км. Позначимо горизонтальний паралакс (це кут <span class="math notranslate nohighlight">\(\angle APO\)</span> на Рис. 5) символом <span class="math notranslate nohighlight">\(p_0\)</span>.</p>
+<p>Тоді за означенням синуса кута прямокутного трикутника із Рис. 5 маємо:</p>
+<div class="math notranslate nohighlight">
+\[\sin p_0 = \frac{R_0}{L}\]</div>
+<p>Звідси</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[L = \frac{R_0}{\sin p_0}\]</div>
+</div></blockquote>
+<p>Оскільки паралакси <span class="math notranslate nohighlight">\(p_0\)</span> дуже малі для усіх небесних тіл, окрім Місяця, то це дозволяє замість синусів кутів брати значення самих кутів, але потрібно, щоб кути були виражені в радіанах. Тобто для дуже малих кутів, що виражені в радіанах, справджується наступне наближення (це наближення дуже часто використовується у фізиці, тому рекомендую його запам'ятати):</p>
+<div class="math notranslate nohighlight">
+\[ \sin p_0 \approx p_0 \]</div>
+<p>Як результат, маємо:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[L = \frac{R_0}{p_0}\]</div>
+</div></blockquote>
+<p>де <span class="math notranslate nohighlight">\(p_0\)</span> виражений в радіанах.</p>
+<p>Отримаємо також формулу для випадку, коли <span class="math notranslate nohighlight">\(p_0\)</span> виражається в кутових секундах як <span class="math notranslate nohighlight">\(p_0''\)</span>, а не в радіанах.</p>
+<p>Одна кутова секунда в радіанах:</p>
+<div class="math notranslate nohighlight">
+\[1'' = \frac{1^\circ}{3600} = \frac{1}{3600} \cdot \frac{\pi}{180} \text{ рад} = \frac{\pi}{648000} \text{ рад} = \frac{1}{\frac{648000}{\pi}} \text{ рад} = \frac{1}{206265} \text{ рад}\]</div>
+<p>Звідси  <span class="math notranslate nohighlight">\(p_0''\)</span> кутових секунд в радіанах дорівнює</p>
+<div class="math notranslate nohighlight">
+\[p_0'' = \frac{p_0''}{206265} \text{ рад}\]</div>
+<p>Примітка: вищевказаний вираз має зміст лише, коли ми використовуємо розмірності (зліва у нас розмірність в кутових секундах, а справа розмірність в радіанах). Тепер, ми можемо повернутись до позначення <span class="math notranslate nohighlight">\(p_0\)</span> паралакса в радіанах:</p>
+<div class="math notranslate nohighlight">
+\[p_0 = \frac{p_0''}{206265} \text{ рад}\]</div>
+<p>Як результат, маємо:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[L = \frac{206265 \cdot R_0}{p_0''}\]</div>
+</div></blockquote>
+<p>де <span class="math notranslate nohighlight">\(p_0''\)</span> виражений у кутових секундах.</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Річний паралакс<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Річний (геліоцентричний) паралакс <span class="math notranslate nohighlight">\(p\)</span> - це кут, під яким із зорі видно велику піввісь земної орбіти (1 а.о.), перпендикулярну до променя зору.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Stellarparallax3.png" alt="Stellarparallax3.png" height="448" width="220"><br>Рис. 6. Річний паралакс. Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=40052335">Посилання на рисунок</a></p><p><img alt="Measuring_stellar_distances_by_parallax" src="../_images/Measuring_stellar_distances_by_parallax.jpg" /></p>
+<p>Рис. 7. Вимірювання зоряних відстаней за допомогою паралакса. Credit: ©ESA/ATG medialab. <a class="reference external" href="https://www.esa.int/Science_Exploration/Space_Science/Gaia/How_does_Gaia_study_the_Milky_Way">Source</a></p>
+<p>Важливі характеристики річного паралаксу:</p>
+<ol class="arabic simple">
+<li><p>Чим більша відстань до зорі, тим менший її річний паралакс</p></li>
+<li><p>Річний паралакс завжди менший за <span class="math notranslate nohighlight">\(1''\)</span> для всіх зір (навіть для найближчої зоряної системи α Центавра <span class="math notranslate nohighlight">\(\pi = 0.75''\)</span>)</p></li>
+<li><p>Кут річного паралаксу є основою для визначення відстаней до зір у парсеках</p></li>
+</ol>
+<p>Завдяки річному паралаксу визначають відстані до небесних тіл від Сонця, а не від Землі. Формула виводиться так само, як і для горизонтального паралаксу, і, відповідно, має той же вигляд, але з іншими параметрами:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[L = \frac{1 \text{ a.o.}}{p}\]</div>
+</div></blockquote>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[L = \frac{206265 \cdot 1 \text{ a.o.}}{p''}\]</div>
+</div></blockquote>
+<p>де <span class="math notranslate nohighlight">\(L\)</span> - відстань від Сонця до небесного світила, <span class="math notranslate nohighlight">\(p\)</span> - річний паралакс, що виражений в радіанах, <span class="math notranslate nohighlight">\(p''\)</span> - річний паралакс, що виражений в кутових секундах.</p>
+<p>Спостерігаючи одну й ту саму зорю з інтервалом у півроку, визначають зміщення зорі на тлі далеких &quot;нерухомих&quot; зір, і таким чином визначають річний паралакс, який потім використовується в розрахунках.</p>
+</section>
+<section id="id8">
+<h2>Зв'язок річного паралакса з парсеком<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Перетворимо вираз для відстані, що ми записали вище:</p>
+<div class="math notranslate nohighlight">
+\[L = \frac{206265 \cdot 1 \text{ a.o.}}{p''} = \frac{206265 \text{ a.o.}}{p''}\]</div>
+<p>Врахуємо, що 1 пк = 206265 а.о., тому</p>
+<div class="math notranslate nohighlight">
+\[L = \frac{206265 \text{ a.o.}}{p''} = \frac{1 \text{ пк}}{p''} = \frac{1}{p''} \text{ пк} \]</div>
+<p>Як результат, маємо:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[L = \frac{1}{p''} \text{ пк} \]</div>
+</div></blockquote>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(L\)</span> - відстань від Сонця до небесного тіла у парсеках</p></li>
+<li><p><span class="math notranslate nohighlight">\(p''\)</span> - річний паралакс у кутових секундах</p></li>
+</ul>
+<p>Це дуже зручна формула для астрономічних обчислень! Наприклад:</p>
+<ul class="simple">
+<li><p>Якщо річний паралакс зорі 0.5″, то відстань до неї 2 пк</p></li>
+<li><p>Якщо річний паралакс 0.1″, то відстань 10 пк</p></li>
+<li><p>Якщо 0.01″, то 100 пк</p></li>
+</ul>
+<p>Це одна з причин, чому парсек став такою популярною одиницею вимірювання в астрономії - він природним чином пов'язаний з методом вимірювання відстаней через річний паралакс.</p>
+</section>
+<section id="id9">
+<h2>Межі застосування паралактичного методу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Метод паралаксу має свої обмеження:</p>
+<ol class="arabic simple">
+<li><p>Для горизонтального паралаксу - застосовується для тіл Сонячної системи</p></li>
+<li><p>Для річного паралаксу</p>
+<ul class="simple">
+<li><p>Наземні телескопи: можуть вимірювати паралакси до ~0.01″ (100 пк)</p></li>
+<li><p>Космічний телескоп Hipparcos (1989-1993): до ~0.002″ (500 пк)</p></li>
+<li><p>Космічний телескоп Gaia (запущений 2013, завершує свою місію у березні 2025 року): до ~0.00001″ (100000 пк), однак похибка на відстанях більших за 10000 пк може зростати до 20% залежно від яскравості зір</p></li>
+</ul>
+</li>
+</ol>
+<p>Для порівняння:</p>
+<ul class="simple">
+<li><p>Відстань до центру нашої Галактики: близько 8000 пк</p></li>
+<li><p>Діаметр Чумацького Шляху: близько 30000 пк</p></li>
+</ul>
+<p>Тобто паралактичний метод дозволяє вимірювати відстані в межах нашої Галактики, але вже для найближчих галактик (наприклад, Туманність Андромеди, яка є найближчою до Чумацького Шляху великою галактикою, розташована на відстані ~772000 пк або 2.52 млн світлових років) він не дуже придатний.</p>
+<p>Для більших відстаней астрономи використовують інші методи: цефеїди, наднові типу Ia, закон Габбла-Леметра тощо.</p>
+</section>
+<section id="id10">
+<h2>Радіолокаційний метод<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Для більш точного визначення відстаней у межах Сонячної системи застосовується радіолокаційний метод. Принцип методу полягає у вимірюванні часу <span class="math notranslate nohighlight">\(t\)</span>, за який радіолокаційний імпульс досягає небесного тіла і повертається на Землю. Відстань <span class="math notranslate nohighlight">\(L\)</span> обчислюється за формулою:</p>
+<div class="math notranslate nohighlight">
+\[L = c\frac{t}{2}\]</div>
+<p>де <span class="math notranslate nohighlight">\(c\)</span> - швидкість світла (≈ 3·10⁸ м/с), а <span class="math notranslate nohighlight">\(t\)</span> - час проходження радіосигналу до об'єкта і назад.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./astronomy"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="celestial_coordinates.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Системи небесних координат</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="apparent_and_absolute_magnitude.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Видима та абсолютна зоряна величина</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Астрономічна одиниця (а.о.)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Світловий рік (св. р.)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Парсек (пк)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Паралакс в астрономії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Добовий паралакс та горизонтальний паралакс</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Річний паралакс</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Зв'язок річного паралакса з парсеком</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Межі застосування паралактичного методу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Радіолокаційний метод</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
