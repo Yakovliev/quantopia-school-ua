@@ -43,6 +43,7 @@ parts:
       - file: physics/mechanics/kinematics-03
       - file: physics/mechanics/kinematics-04
       - file: physics/mechanics/kinematics-05
+      - file: physics/mechanics/newton_first_law
       - file: physics/internal_energy
         sections:
           - file: physics/heat_transfer
