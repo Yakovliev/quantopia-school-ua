@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 wip/*pts.txt
+wip/tasks/*pts.txt
 
 # C extensions
 *.so
