@@ -1,0 +1,758 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Задачі. Кінематика &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/tasks/kinematics-classroom';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Самостійна робота. Кінематика" href="kinematics-test.html" />
+    <link rel="prev" title="Ланцюгові ядерні реакції та термоядерні реакції" href="../nuclear-physics/nuclear-chain-reaction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton_first_law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Задачі. Кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-test.html">Самостійна робота. Кінематика</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/tasks/kinematics-classroom.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/tasks/kinematics-classroom.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/tasks/kinematics-classroom.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Задачі. Кінематика</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Рівномірний рух</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рівноприскорений прямолінійний рух</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Задачі. Кінематика<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Рівномірний рух<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong>: Дрон-кур'єр</p>
+<p>Квадрокоптер вилетів з бази, доставив пакунок на відстань 1.2 км по прямій і повернувся назад на базу. Визначте шлях, пройдений дроном, та модуль його переміщення за весь час польоту.</p>
+<p><strong>Задача 2</strong></p>
+<p>Автомобіль проїхав по прямій дорозі 3 км на схід, а потім повернув і проїхав 4 км на північ. Визначити пройдену відстань (шлях) та модуль переміщення.</p>
+<p><strong>Задача 3</strong></p>
+<p>Перевести км/год в м/с або навпаки:</p>
+<ul class="simple">
+<li><p>10 м/с</p></li>
+<li><p>30 м/с</p></li>
+<li><p>36 км/год</p></li>
+<li><p>72 км/год</p></li>
+<li><p>18 км/год</p></li>
+<li><p>54 км/год</p></li>
+<li><p>перша космічна швидкість: 28 440 км/год</p></li>
+</ul>
+<p><strong>Задача 4</strong>: Квадрокоптер і доставка</p>
+<p>Квадрокоптер служби доставки вилетів зі складу, пролетів по прямій 800 метрів до будинку клієнта, передав посилку і тим самим маршрутом повернувся назад на склад. Весь політ тривав 4 хвилини. Визначте:</p>
+<ol class="arabic simple">
+<li><p>Шлях, який подолав квадрокоптер.</p></li>
+<li><p>Модуль його переміщення за весь час польоту.</p></li>
+<li><p>Середню швидкість польоту (на основі шляху).</p></li>
+</ol>
+<p><strong>Задача 5</strong>: Автопілот у Tesla</p>
+<p>Автомобіль Tesla, рухаючись на автопілоті по прямому відрізку шосе зі сталою швидкістю 90 км/год, перебував у точці з координатою <span class="math notranslate nohighlight">\(x_0 = 10\)</span> км (відносно початку відліку - міста). Якою буде його координата через 2 години руху в тому ж напрямку? Запишіть рівняння руху автомобіля.</p>
+<p><strong>Задача 6</strong>: Рух на травелаторі в аеропорту</p>
+<p>Пасажир іде по рухомій доріжці (травелаторі) в аеропорту. Його швидкість відносно доріжки становить 1 м/с, а швидкість самої доріжки відносно підлоги термінала - 1.5 м/с. Який шлях подолає пасажир відносно підлоги термінала за 2 хвилини, якщо він рухається:</p>
+<ol class="arabic simple">
+<li><p>У напрямку руху доріжки?</p></li>
+<li><p>Проти напрямку руху доріжки?</p></li>
+</ol>
+<p><strong>Задача 7</strong>: Хто швидший: дрон чи велосипедист?</p>
+<p>Спортивний дрон летить зі швидкістю 20 м/с. Професійний велогонщик їде зі швидкістю 75 км/год. Порівняйте їхні швидкості, попередньо перевівши одну з них в одиниці іншої. Хто з них рухається швидше?</p>
+<p><strong>Задача 8</strong>: GPS-трекер кур'єра</p>
+<p>Кур'єр на велосипеді виїхав з офісу і, згідно з даними GPS-трекера, проїхав 400 метрів на схід, а потім повернув і проїхав 300 метрів на північ до першого пункту доставки.</p>
+<ol class="arabic simple">
+<li><p>Зобразіть на малюнку траєкторію руху та вектор переміщення.</p></li>
+<li><p>Обчисліть шлях, який подолав кур'єр.</p></li>
+<li><p>Обчисліть модуль переміщення кур'єра (тобто, на якій відстані по прямій від офісу він опинився).</p></li>
+</ol>
+<p><strong>Задача 9</strong>: Зустріч роботів на складі Amazon</p>
+<p>Два автоматизовані роботи-візки рухаються назустріч один одному по прямому довгому коридору складу довжиною 200 м. Перший робот стартує з нульової позначки зі швидкістю 2 м/с. Другий робот стартує одночасно з ним з позначки 200 м зі швидкістю 3 м/с.</p>
+<ol class="arabic simple">
+<li><p>Напишіть рівняння руху для кожного робота (взявши за напрямок осі ОХ рух першого робота).</p></li>
+<li><p>Знайдіть час, через який роботи зустрінуться.</p></li>
+<li><p>Знайдіть координату їхньої зустрічі.</p></li>
+</ol>
+<p><strong>Задача 10</strong>: Маневри міського дрона</p>
+<p>Дрон-розвідник для моніторингу трафіку злетів з даху хмарочоса, пролетів 600 м на схід, потім 400 м на північ, після чого розвернувся і пролетів 300 м на захід, де й завис над перехрестям.</p>
+<ol class="arabic simple">
+<li><p>Який загальний шлях подолав дрон?</p></li>
+<li><p>Знайдіть модуль кінцевого переміщення дрона відносно точки старту.</p></li>
+</ol>
+<p><strong>Задача 11</strong></p>
+<p>Людина їде на електросамокаті до університету. Відстань у 1.8 км вона долає за 5 хвилин. Вважаючи рух рівномірним, визначте швидкість самоката в м/с.</p>
+<p><strong>Задача 12</strong></p>
+<p>Автомобіль, рухаючись рівномірно і прямолінійно по шосе, знаходився в точці з координатою <span class="math notranslate nohighlight">\(x_0 = 15\)</span> км. Через 10 хвилин його координата стала x = 35 км. Напишіть рівняння руху автомобіля <span class="math notranslate nohighlight">\(x(t)\)</span> і визначте, де він буде через пів години після початку спостереження. (Вісь ОХ спрямована вздовж шосе).</p>
+<p><strong>Задача 13</strong>: Рух на ескалаторі</p>
+<p>Людина йде по ескалатору в торговому центрі. Швидкість руху ескалатора відносно підлоги становить 0.5 м/с, а швидкість людини відносно ескалатора - 1 м/с. Знайдіть швидкість людини відносно підлоги у двох випадках:</p>
+<ol class="arabic simple">
+<li><p>Людина йде у напрямку руху ескалатора.</p></li>
+<li><p>Людина йде проти руху ескалатора.</p></li>
+</ol>
+<p><strong>Задача 14</strong>: Фітнес-трекер і пробіжка</p>
+<p>Спортсмен пробіг 5 кіл на стандартному 400-метровому стадіоні за 10 хвилин, повернувшись у точку старту. Його фітнес-трекер зафіксував усі дані. Визначте:</p>
+<ol class="arabic simple">
+<li><p>Пройдений шлях спортсмена.</p></li>
+<li><p>Його переміщення за весь час бігу.</p></li>
+<li><p>Середню шляхову швидкість спортсмена в м/с.</p></li>
+<li><p>Середню векторну швидкість (швидкість переміщення).</p></li>
+</ol>
+<p><strong>Задача 15</strong>: Доставка за допомогою дрона</p>
+<p>Дрон-кур'єр доставляє посилку. Перші 2 км шляху він пролетів зі швидкістю 15 м/с, після чого через сильний вітер знизив швидкість до 10 м/с і дрон пролетів ще 1 км. Знайдіть середню шляхову швидкість дрона на всьому шляху.</p>
+<p><strong>Задача 16</strong>: Зустріч роботів-кур'єрів</p>
+<p>З двох складів, відстань між якими 600 м, одночасно назустріч один одному виїхали два роботи-кур'єри. Рівняння руху першого робота <span class="math notranslate nohighlight">\(x_1(t) = 1.5t\)</span>, а другого - <span class="math notranslate nohighlight">\(x_2(t) = 600 - 2.5t\)</span>. (Вісь ОХ спрямована від першого складу до другого).</p>
+<ol class="arabic simple">
+<li><p>Опишіть рух кожного робота (початкова координата, швидкість, напрямок).</p></li>
+<li><p>Знайдіть час і місце їхньої зустрічі.</p></li>
+<li><p>Побудуйте графіки руху <span class="math notranslate nohighlight">\(x(t)\)</span> для обох роботів в одній системі координат.</p></li>
+</ol>
+<p><strong>Задача 17</strong>: Обгін на автостраді</p>
+<p>Два автомобілі їдуть по прямій автостраді в одному напрямку. Швидкість першого автомобіля 90 км/год, а другого - 108 км/год. Яка відносна швидкість другого автомобіля відносно першого? Якщо в початковий момент часу відстань між ними була 200 м, через який час другий автомобіль наздожене перший?</p>
+<p><strong>Задача 18</strong>: Марсохід &quot;Perseverance&quot;</p>
+<p>Марсохід рухається по поверхні Марса. Рівняння його руху вздовж осі ОХ має вигляд <span class="math notranslate nohighlight">\(x(t) = 10 - 0.2t\)</span>, а вздовж осі OY - <span class="math notranslate nohighlight">\(y(t) = -5 + 0.15t\)</span> (усі величини в СІ).</p>
+<ol class="arabic simple">
+<li><p>Визначте початкові координати марсохода.</p></li>
+<li><p>Знайдіть проекції його швидкості <span class="math notranslate nohighlight">\(v_x\)</span> та <span class="math notranslate nohighlight">\(v_y\)</span>.</p></li>
+<li><p>Знайдіть модуль його миттєвої швидкості (підказка: використовуйте теорему Піфагора для проекцій швидкості).</p></li>
+<li><p>Напишіть рівняння траєкторії руху <span class="math notranslate nohighlight">\(y(x)\)</span>.</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>Рівноприскорений прямолінійний рух<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Електросамокат рушає з місця і, рухаючись прямолінійно, за 4 секунди розвиває швидкість 7 м/с. З яким прискоренням рухався електросамокат?</p>
+<p><strong>Задача 2</strong></p>
+<p>Відео-блогер запускає свій квадрокоптер вертикально вгору зі стану спокою. Прискорення дрона становить 2 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>. Яку висоту набере дрон за перші 5 секунд польоту?</p>
+<p><strong>Задача 3</strong></p>
+<p>Під час тест-драйву електромобіль розганяється зі стану спокою з постійним прискоренням 4 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>. Яку швидкість матиме автомобіль, проїхавши перші 50 метрів?</p>
+<p><strong>Задача 4</strong></p>
+<p>Квадрокоптер, що доставляє посилку, летів горизонтально зі швидкістю 10 м/с. Оператор дав команду на прискорення, і дрон почав рухатись із прискоренням 0.5 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>. Якою буде швидкість дрона через 10 секунд після початку прискорення?</p>
+<p><strong>Задача 5</strong>
+Система екстреного гальмування безпілотного автомобіля, що рухався зі швидкістю 72 км/год, спрацювала, і автомобіль зупинився, пройшовши шлях 40 метрів. Визначте прискорення автомобіля під час гальмування та час, який для цього знадобився.</p>
+<p><strong>Задача 6</strong>
+Космічний апарат, що рухається у відкритому космосі зі швидкістю 200 м/с, вмикає на 1 хвилину маневрові двигуни, які створюють прискорення 0.2 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span> у напрямку руху. Який шлях подолає апарат за час роботи двигунів?</p>
+<p><strong>Задача 7</strong></p>
+<p>Швидкісний ліфт у хмарочосі починає рух з першого поверху і перші 3 секунди рухається з прискоренням 2 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>, після чого їде з постійною швидкістю. На якій висоті буде ліфт через 3 секунди після старту, і якої швидкості він досягне? На якій висоті буде ліфт через 5 секунд після старту.</p>
+<p><strong>Задача 8</strong>
+Зі складу, розташованого на прямому шосе, виїжджає перший робот-кур'єр зі швидкістю 3 м/с. Через 10 секунд слідом за ним зі складу виїжджає другий робот, який рухається з прискоренням 0.4 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>. Через який час і на якій відстані від складу другий робот наздожене першого?</p>
+<p><strong>Задача 9</strong></p>
+<p>Посадковий модуль входить в атмосферу Марса і починає гальмувати. На останній ділянці гальмування довжиною 120 м його швидкість зменшилася з 50 м/с до 10 м/с. Вважаючи рух на цій ділянці рівносповільненим, знайдіть прискорення модуля та час, за який він пройшов цю ділянку.</p>
+<p><strong>Задача 10</strong></p>
+<p>Автомобіль, оснащений антиблокувальною системою (ABS), рухається по прямій дорозі зі швидкістю 72 км/год. Водій помічає перешкоду і починає екстрене гальмування. Гальмівний шлях автомобіля склав 20 метрів.</p>
+<ol class="arabic simple">
+<li><p>З яким прискоренням (за модулем) гальмував автомобіль?</p></li>
+<li><p>Скільки часу тривало гальмування?</p></li>
+</ol>
+<p><strong>Задача 11</strong></p>
+<p>Зі складу, що знаходиться в точці з координатою x=0, виїжджає робот-кур'єр і рухається рівноприскорено з прискоренням 0.4 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>. Одночасно з ним із пункту видачі з координатою <span class="math notranslate nohighlight">\(x=150\)</span> м назустріч виїжджає інший робот-кур'єр, який рухається рівномірно зі швидкістю 5 м/с.</p>
+<ol class="arabic simple">
+<li><p>Запишіть рівняння руху <span class="math notranslate nohighlight">\(x(t)\)</span> для обох роботів.</p></li>
+<li><p>Знайдіть час та координату їхньої зустрічі.</p></li>
+</ol>
+<p><strong>Задача 12</strong></p>
+<p>Безпілотний автомобіль рухається зі швидкістю 20 м/с. Бортовий комп'ютер виявляє перешкоду на відстані 55 м і через 0.5 секунди (час на обробку даних) активує гальмівну систему, яка забезпечує прискорення -5 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>.
+Запитання: Чи встигне автомобіль зупинитися перед перешкодою? Підтвердьте розрахунками. (Підказка: загальний гальмівний шлях складається зі шляху, пройденого за час реакції, та шляху, пройденого під час гальмування).</p>
+<p><strong>Задача 13</strong></p>
+<p>Смартфон випадково випадає з балкона 10-го поверху, що знаходиться на висоті 30 метрів. Скільки часу триватиме падіння і якою буде швидкість смартфона в момент удару об землю? Опором повітря знехтувати, прискорення вільного падіння вважати рівним 9.8 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\tasks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../nuclear-physics/nuclear-chain-reaction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ланцюгові ядерні реакції та термоядерні реакції</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="kinematics-test.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Самостійна робота. Кінематика</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Рівномірний рух</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Рівноприскорений прямолінійний рух</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

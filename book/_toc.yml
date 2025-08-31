@@ -101,6 +101,12 @@ parts:
       - file: physics/nuclear-physics/radioactivity
       - file: physics/nuclear-physics/nuclear-chain-reaction
 
+  - caption: ЗАДАЧІ
+    chapters:
+      - file: physics/tasks/kinematics-classroom
+      - file: physics/tasks/kinematics-test
+
+
   # - caption: Розділ Електричне поле
 
   # - caption: МАТЕМАТИЧНИЙ МІНІМУМ
