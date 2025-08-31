@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/tasks/oscillations-test';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -463,7 +465,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -479,6 +483,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Механічні коливання</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -490,6 +502,63 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Механічні коливання. Самостійна робота<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Механічні коливання<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Варіант 1. Механічний годинник для своєї роботи використовує коливання маятника, який здійснює 1800 коливань за 15 хвилин. Визначте період та частоту цих коливань.</p>
+<p>Варіант 2. Крила комара під час польоту здійснюють 12000 коливань за 20 секунд. Визначте період та частоту цих коливань.</p>
+<p>Варіант 3. Під час шторму невеличкий човен на хвилях здійснив 90 коливань вгору-вниз за 3 хвилини. Визначте період та частоту коливань човна.</p>
+<hr class="docutils" />
+<p><strong>Задача 2</strong></p>
+<p>Варіант 1. Комаха, що летить, робить 1200 змахів крилами за 4 секунди. Визначте період та частоту цих коливань.</p>
+<p>Варіант 2. Гойдалка в парку атракціонів здійснює 45 повних коливань за 90 секунд. Визначте період та частоту цих коливань.</p>
+<p>Варіант 3. Маятник настінного годинника здійснив 900 коливань за 15 хвилин. Визначте період та частоту цих коливань.</p>
+<hr class="docutils" />
+<p><strong>Задача 3</strong></p>
+<p>Варіант 1. Гілка дерева під дією вітру за 40 секунд здійснює 20 повних коливань. Амплітуда цих коливань становить 30 см. Визначте частоту та період коливань гілки.</p>
+<p>Варіант 2. Поршень у двигуні автомобіля на холостих обертах здійснює 200 повних коливань (вгору-вниз) за 10 секунд. Амплітуда його руху становить 4 см. Визначте частоту та період коливань поршня.</p>
+<p>Варіант 3. Струна гітари після щипка здійснює 880 повних коливань за 2 секунди. Амплітуда початкового коливання становить 3 мм. Визначте частоту та період коливань струни.</p>
+<hr class="docutils" />
+<p><strong>Задача 4</strong></p>
+<p>Варіант 1. Коливання точки на поверхні води описуються рівнянням: <span class="math notranslate nohighlight">\(x = 0.05 \cos(10\pi t)\)</span>, де всі величини вказані в СІ.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює амплітуда коливань?</p></li>
+<li><p>Визначте циклічну частоту.</p></li>
+<li><p>Обчисліть період та частоту коливань.</p></li>
+</ol>
+<p>Варіант 2. Коливання вантажу, підвішеного на пружині, описуються рівнянням: <span class="math notranslate nohighlight">\(x = 0.1 \cos(5\pi t)\)</span>, де всі величини вказані в СІ.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює амплітуда коливань?</p></li>
+<li><p>Визначте циклічну частоту.</p></li>
+<li><p>Обчисліть період та частоту коливань.</p></li>
+</ol>
+<p>Варіант 3. Рівняння коливань струни музичного інструменту має вигляд: <span class="math notranslate nohighlight">\(x = 0.001 \cos(880\pi t)\)</span>, де всі величини вказані в СІ.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює амплітуда коливань?</p></li>
+<li><p>Визначте циклічну частоту.</p></li>
+<li><p>Обчисліть період та частоту звуку, який видає струна.</p></li>
+</ol>
+<hr class="docutils" />
+<p><strong>Задача 5</strong></p>
+<p>Варіант 1. Коливання вантажу, підвішеного на пружині, описуються рівнянням: <span class="math notranslate nohighlight">\(x = 0.05 \cos(20\pi t)\)</span>, де всі величини вказані в СІ.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює амплітуда коливань?</p></li>
+<li><p>Визначте циклічну частоту.</p></li>
+<li><p>Обчисліть період та частоту коливань вантажу.</p></li>
+</ol>
+<p>Варіант 2. Коливання напруги в побутовій електричній мережі описуються рівнянням, що має вигляд: <span class="math notranslate nohighlight">\(U = 311 \cos(100\pi t)\)</span>, де всі величини вказані в СІ.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює амплітуда коливань напруги?</p></li>
+<li><p>Визначте циклічну частоту.</p></li>
+<li><p>Обчисліть період та частоту змінного струму.</p></li>
+</ol>
+<p>Варіант 3. Коливання точки на поверхні води описуються рівнянням: <span class="math notranslate nohighlight">\(x = 0.01 \cos(20\pi t)\)</span>, де всі величини вказані в СІ.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює амплітуда коливань?</p></li>
+<li><p>Визначте циклічну частоту.</p></li>
+<li><p>Обчисліть період та частоту коливань точки на поверхні води.</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -537,6 +606,22 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Механічні коливання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
