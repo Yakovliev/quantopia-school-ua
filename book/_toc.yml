@@ -105,6 +105,8 @@ parts:
     chapters:
       - file: physics/tasks/kinematics-classroom
       - file: physics/tasks/kinematics-test
+      - file: physics/tasks/oscillations-classroom
+      - file: physics/tasks/oscillations-test
 
 
   # - caption: Розділ Електричне поле
