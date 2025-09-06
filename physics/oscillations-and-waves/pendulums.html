@@ -491,13 +491,15 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Коливання пружинного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як визначити період коливань пружинного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Що називають математичним маятником</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Коливання математичного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Як обчислити період коливань математичного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Задача</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Додаткові матеріали (українською)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Виведення формули періоду коливань пружинного маятника</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Перетворення енергії в пружинному маятнику</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Математичний маятник</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Динаміка коливань математичного маятника</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Виведення формули періоду: наближення малих кутів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Перетворення енергії в математичному маятнику</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Підсумок: Пружинний та Математичний маятники</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -511,152 +513,301 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Математичний і пружинний маятники<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Перш ніж ми почнемо, важливо зрозуміти, що таке <strong>фізична модель</strong>. У реальному світі процеси надзвичайно складні. Наприклад, коливання кульки на пружині залежить від маси, форми та розмірів кульки, властивостей пружини, опору повітря, температури і навіть від того, як обертається Земля. Врахувати все це дуже складно.</p>
+<p>Тому у фізиці створюють <strong>ідеалізовані моделі</strong> - спрощені версії реальних об'єктів або явищ, в яких ми нехтуємо несуттєвими на даному етапі факторами. Це дозволяє виділити головні закономірності. Пружинний та математичний маятники - це саме такі моделі.</p>
 <section id="id2">
 <h2>Коливання пружинного маятника<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Пружинний маятник представляє собою коливальну систему, в якій тіло з'єднане з пружиною та здійснює періодичні коливання.</p>
-<p>Дослідимо <em>горизонтальний пружинний маятник</em>, що складається з візка масою <span class="math notranslate nohighlight">\(m\)</span>, прикріпленого пружиною з жорсткістю <span class="math notranslate nohighlight">\(k\)</span> до вертикальної стіни. За умови, що тертя в системі настільки мале, що ним можна знехтувати, коливання відбуватимуться без затухання - їхня амплітуда залишатиметься незмінною з часом, а повна механічна енергія зберігатиметься. У процесі коливань спостерігається постійне взаємне перетворення потенціальної енергії деформованої пружини в кінетичну енергію руху візка і навпаки.</p>
+<blockquote>
+<div><p><strong>Пружинний маятник</strong> - це фізична модель коливальної системи, що складається з тіла масою <span class="math notranslate nohighlight">\(m\)</span>, підвішеного на абсолютно пружній пружині жорсткістю <span class="math notranslate nohighlight">\(k\)</span>, коливання в якій відбуваються без тертя.</p>
+</div></blockquote>
+<p>&quot;Абсолютно пружна&quot; означає, що пружина ідеально підкоряється закону Гука. &quot;Без тертя&quot; означає, що ми нехтуємо опором повітря та внутрішнім тертям в пружині. Тобто, ми розглядаємо ідеальні, незатухаючі коливання.</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Harmonic_oscillator.svg" alt="Harmonic oscillator.svg" height="550" width="283">
 <br>
 Рис. 1. Горизонтальний пружинний маятник. Пружина знаходиться в рівноважному стані (А), стиснутому стані (В) і розтягнутому стані (С).
-Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=1569063">Link</a>. <a href="https://en.wikipedia.org/wiki/Harmonic_oscillator">Wiki</a></p><p><strong>1. Стан максимального відхилення від положення рівноваги</strong></p>
-<p>Коли візок відхилений на максимальну відстань <span class="math notranslate nohighlight">\(x_{max}\)</span> від положення рівноваги вправо, пружина розтягнута максимально. У цьому положенні діє найбільша сила пружності, спрямована до положення рівноваги (вліво):
-<span class="math notranslate nohighlight">\(F_{пруж} = kx_{max}\)</span></p>
-<p>Оскільки візок у цей момент нерухомий, його кінетична енергія дорівнює нулю: <span class="math notranslate nohighlight">\(E_k = 0\)</span>.
-Потенціальна енергія пружини досягає максимального значення і становить:
-<span class="math notranslate nohighlight">\(E_p = \frac{kx^2_{max}}{2}\)</span></p>
-<p><strong>2. Прискорений рух візка, швидкість руху збільшується</strong></p>
-<p>Якщо відпустити візок, він почне рухатися вліво під дією сили пружності. Оскільки вектор сили <span class="math notranslate nohighlight">\(\vec{F}_{пруж}\)</span> спрямований у напрямку руху візка, швидкість руху зростає. Одночасно з цим деформація пружини зменшується, що призводить до зменшення сили пружності, а отже, й до зменшення прискорення візка.</p>
-<p>При цьому відбувається перетворення енергії: кінетична енергія візка збільшується: <span class="math notranslate nohighlight">\(E_k = \frac{mv^2}{2}\)</span>, а потенціальна енергія деформованої пружини зменшується: <span class="math notranslate nohighlight">\(E_p = \frac{kx^2}{2}\)</span>.
-Загальна енергія системи залишається сталою і дорівнює сумі <span class="math notranslate nohighlight">\(E = E_k + E_p\)</span>.</p>
-<p><strong>3. Стан рівноваги</strong></p>
-<p>Через проміжок часу, рівний чверті періоду коливань <span class="math notranslate nohighlight">\((t = T/4)\)</span>, візок досягає положення рівноваги. В цей момент сила пружності та прискорення дорівнюють нулю, а швидкість візка сягає свого максимального значення.</p>
-<p>У положенні рівноваги потенціальна енергія дорівнює нулю: <span class="math notranslate nohighlight">\(E_p = 0\)</span>,
-а кінетична енергія максимальна:
-<span class="math notranslate nohighlight">\(E_k = \frac{mv^2_{max}}{2}\)</span>, що дорівнює повній енергії системи.</p>
-<p><strong>4. Сповільнений рух візка, швидкість руху зменшується</strong></p>
-<p>Проходячи положення рівноваги, візок продовжує рух вліво за інерцією. Пружина починає стискатися, виникає і збільшується сила пружності, що напрямлена проти руху візка, гальмуючи його.</p>
-<p>У цій фазі кінетична енергія візка поступово зменшується: <span class="math notranslate nohighlight">\(E_k = \frac{mv^2}{2}\)</span>,
-а потенціальна енергія стисненої пружини збільшується: <span class="math notranslate nohighlight">\(E_p = \frac{kx^2}{2}\)</span>.
-Сума цих енергій залишається незмінною.</p>
-<p><strong>5. Стан максимального відхилення від положення рівноваги</strong></p>
-<p>Коли візок досягає крайнього лівого положення (точки максимального відхилення), він на мить зупиняється. Сила пружності в цей момент досягає максимального значення, але в протилежному напрямку порівняно з початковим положенням. Від початку руху минає половина періоду коливань <span class="math notranslate nohighlight">\((t = T/2)\)</span>.</p>
-<p>У цьому положенні візок не рухається, тому кінетична енергія дорівнює нулю: <span class="math notranslate nohighlight">\(E_k = 0\)</span>.
-Потенціальна енергія стисненої пружини максимальна:
-<span class="math notranslate nohighlight">\(E_p = \frac{kx^2_{max}}{2}\)</span></p>
-<p>У другій половині періоду процес повторюється в зворотному напрямку: візок рухається вправо, проходить положення рівноваги в момент часу <span class="math notranslate nohighlight">\(t = \frac{3T}{4}\)</span> і досягає початкового положення максимального відхилення вправо при <span class="math notranslate nohighlight">\(t = T\)</span>, завершуючи повний цикл коливання. Після цього процес повторюється.</p>
-<blockquote>
-<div><p><strong>Важливо зазначити!</strong> Протягом усього процесу коливання сила пружності завжди спрямована до положення рівноваги, протидіючи зміщенню візка від цього положення.</p>
-</div></blockquote>
-<p>Таким чином, вільні коливання пружинного маятника виникають завдяки двом ключовим факторам:</p>
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=1569063">Link</a>. <a href="https://en.wikipedia.org/wiki/Harmonic_oscillator">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Simple_harmonic_oscillator.gif" alt="Simple harmonic oscillator.gif" height="359" width="116">
+<br>
+Рис. 2. Вертикальний пружинний маятник.
+<a href="https://commons.wikimedia.org/w/index.php?curid=2292351">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Коливання">Wiki</a></p><p>Давайте з'ясуємо, чому взагалі виникають коливання. Розглянемо вантаж масою <span class="math notranslate nohighlight">\(m\)</span> на горизонтальній пружині, що прикріплений пружиною з жорсткістю <span class="math notranslate nohighlight">\(k\)</span> до вертикальної стіни. Це модель <strong>горизонтального пружинного маятника</strong>.</p>
 <ol class="arabic simple">
-<li><p>наявність сили, яка завжди спрямована до положення рівноваги;</p></li>
-<li><p>інертність тіла, що коливається, через яку воно не зупиняється в положенні рівноваги (коли результуюча сила стає нульовою), а продовжує рух за інерцією.</p></li>
+<li><p><strong>Положення рівноваги.</strong> У положенні <span class="math notranslate nohighlight">\(x=0\)</span> пружина не деформована, жодних сил в горизонтальній площині на тіло не діє, і воно може перебувати в стані спокою. Це і є положення рівноваги.</p></li>
+<li><p><strong>Виведення з рівноваги.</strong> Відхилимо тіло праворуч на відстань <span class="math notranslate nohighlight">\(x\)</span>. Пружина розтягнеться, і виникне <strong>сила пружності</strong> <span class="math notranslate nohighlight">\(F_{пруж}\)</span>, яка, згідно із законом Гука, намагатиметься повернути тіло назад до положення рівноваги.</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Сила пружності</strong> <span class="math notranslate nohighlight">\(F_{пруж}\)</span> - це сила, що виникає в тілі при його деформації і напрямлена в бік, протилежний зміщенню частинок тіла. Вона визначається законом Гука:</p>
+<div class="math notranslate nohighlight">
+\[F_{пруж} = -kx\]</div>
+<p>де <span class="math notranslate nohighlight">\(k\)</span> - це <strong>жорсткість пружини</strong>, а <span class="math notranslate nohighlight">\(x\)</span> - видовження (деформація) пружини. Знак &quot;мінус&quot; вказує на те, що сила пружності завжди напрямлена протилежно до зміщення. <strong>Жорсткість пружини</strong> <span class="math notranslate nohighlight">\(k\)</span> показує, яку силу треба прикласти, щоб розтягнути (або стиснути) пружину на одиницю довжини. <strong>Одиниця в СІ:</strong> ньютон на метр (Н/м).</p>
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><p><strong>Виникнення коливань.</strong> Ця повертаюча сила надає тілу прискорення, спрямованого до положення рівноваги. За другим законом Ньютона</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_{пруж} + m\vec{g} + \vec{N} = m\vec{a}\]</div>
+<p>Оскільки сила тяжіння <span class="math notranslate nohighlight">\(m\vec{g}\)</span> і сила нормальної реакції опори <span class="math notranslate nohighlight">\(\vec{N}\)</span> взаємно компенсуються, то</p>
+<div class="math notranslate nohighlight">
+\[\vec{F}_{пруж} = m\vec{a}\]</div>
+<p>При проектуванні цього рівняння на горизонтальну вісь ОХ отримуємо</p>
+<div class="math notranslate nohighlight">
+\[ma_x = -kx\]</div>
+<p>Звідси ми можемо виразити прискорення:</p>
+<div class="math notranslate nohighlight">
+\[a_x = -\frac{k}{m}x\]</div>
+</li>
 </ol>
 </section>
 <section id="id3">
-<h2>Як визначити період коливань пружинного маятника<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p>Для визначення періоду коливань пружинного маятника проаналізуємо рух візка на горизонтальній пружині з позиції другого закону Ньютона. Векторна форма другого закону Ньютона має вигляд: <span class="math notranslate nohighlight">\(\vec{F}_{пруж} + m\vec{g} + \vec{N} = m\vec{a}\)</span>.</p>
-<p>Оскільки сила тяжіння <span class="math notranslate nohighlight">\(m\vec{g}\)</span> і сила нормальної реакції опори <span class="math notranslate nohighlight">\(\vec{N}\)</span> взаємно компенсуються, то <span class="math notranslate nohighlight">\(\vec{F}_{пруж} = m\vec{a}\)</span>. При проектуванні цього рівняння на горизонтальну вісь ОХ отримуємо <span class="math notranslate nohighlight">\(\left(F_{пруж.x} = ma_x\right)\)</span>. Використовуючи закон Гука <span class="math notranslate nohighlight">\(\left(F_{пруж.x} = -kx\right)\)</span>, приходимо до рівняння:</p>
+<h2>Виведення формули періоду коливань пружинного маятника<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>А тепер згадаємо матеріал попередньої сторінки. Ми встановили, що <strong>динамічною ознакою гармонічних коливань</strong> є рівняння:</p>
 <div class="math notranslate nohighlight">
-\[a_x = -\frac{k}{m} \cdot x\]</div>
-<p>Це рівняння можна подати у формі</p>
+\[a_x = -\omega^2x\]</div>
+<p>Це рівняння говорить, що рух є гармонічним коливанням, якщо прискорення тіла прямо пропорційне його зміщенню і напрямлене в протилежний бік.</p>
+<p>Порівняємо два отримані рівняння:</p>
 <div class="math notranslate nohighlight">
-\[a_x = -\omega^2 x\]</div>
-<p>що є характерним для гармонічних коливань. Тут циклічна частота коливань визначається як:</p>
+\[a_x = -\frac{k}{m}x \quad \text{та} \quad a_x = -\omega^2x\]</div>
+<p>Ми бачимо, що вони мають абсолютно ідентичну структуру! Це доводить, що <strong>вільні коливання пружинного маятника є гармонічними</strong>. Зіставивши ці два вирази, ми легко знаходимо квадрат циклічної частоти:</p>
 <div class="math notranslate nohighlight">
-\[\omega = \sqrt{\frac{k}{m}}\]</div>
-<p>Враховуючи зв'язок між періодом і циклічною частотою <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\omega}\)</span>, отримуємо <strong>формулу для розрахунку періоду коливань пружинного маятника</strong>:</p>
+\[\omega^2 = \frac{k}{m}\]</div>
+<p>Отже, <strong>циклічна частота</strong> коливань пружинного маятника дорівнює:</p>
 <div class="math notranslate nohighlight">
-\[T = 2\pi\sqrt{\frac{m}{k}}\]</div>
+\[
+\omega = \sqrt{\frac{k}{m}}
+\]</div>
+<p>А знаючи циклічну частоту, ми можемо вивести формулу для <strong>періоду коливань</strong> <span class="math notranslate nohighlight">\(T\)</span>. Зв'язок між ними нам відомий: <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\omega}\)</span>. Підставимо наш вираз для <span class="math notranslate nohighlight">\(\omega\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{2\pi}{\sqrt{\frac{k}{m}}}
+\]</div>
+<p>Після спрощення отримуємо остаточну формулу для періоду коливань пружинного маятника:</p>
+<div class="math notranslate nohighlight">
+\[
+T = 2\pi\sqrt{\frac{m}{k}}
+\]</div>
+<p><strong>Аналіз формули:</strong></p>
+<ul class="simple">
+<li><p>Період коливань тим більший, чим більша маса вантажу <span class="math notranslate nohighlight">\(m\)</span> (більш інертне тіло важче &quot;розгойдати&quot;).</p></li>
+<li><p>Період коливань тим менший, чим більша жорсткість пружини <span class="math notranslate nohighlight">\(k\)</span> (більш жорстка пружина швидше повертає тіло до положення рівноваги).</p></li>
+<li><p>Важливо: Період коливань пружинного маятника залежить тільки від маси тіла <span class="math notranslate nohighlight">\(m\)</span> та жорсткості пружини <span class="math notranslate nohighlight">\(k\)</span>, і не залежить від амплітуди коливань (при пружних коливаннях) або гравітаційних умов (на Землі, в космосі, на Місяці тощо). Цю властивість можна використати для визначення маси об'єктів у невагомості, коли звичайні ваги не функціонують: знаючи жорсткість пружини <span class="math notranslate nohighlight">\(k\)</span> і вимірявши період коливань <span class="math notranslate nohighlight">\(T\)</span>, можна обчислити масу <span class="math notranslate nohighlight">\(m\)</span>.</p></li>
+<li><p>Властивість незалежності від амплітуди називають <em>ізохронністю</em> коливань.</p></li>
+</ul>
+<p>Примітка: для вертикального маятника (Рис. 2) положення рівноваги зміщується вниз під дією сили тяжіння, однак сила тяжіння є сталою, тому вона не впливає на характер коливань навколо нового положення рівноваги, і формула періоду коливань залишається тією ж самою.</p>
+</section>
+<section id="id4">
+<h2>Перетворення енергії в пружинному маятнику<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Під час коливань відбувається безперервне перетворення енергії. В ідеальній системі без тертя повна механічна енергія <span class="math notranslate nohighlight">\(E\)</span> залишається сталою. Вона складається з кінетичної та потенціальної енергій.</p>
 <blockquote>
-<div><p><strong>Важливо!</strong> Період коливань пружинного маятника залежить тільки від маси тіла <span class="math notranslate nohighlight">\(m\)</span> та жорсткості пружини <span class="math notranslate nohighlight">\(k\)</span>, і не залежить від амплітуди коливань або гравітаційних умов (на Землі, в космосі, на Місяці тощо). Цю властивість можна використати для визначення маси об'єктів у невагомості, коли звичайні ваги не функціонують: знаючи жорсткість пружини <span class="math notranslate nohighlight">\(k\)</span> і вимірявши період коливань <span class="math notranslate nohighlight">\(T\)</span>, можна обчислити масу <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<div><p><strong>Кінетична енергія</strong> <span class="math notranslate nohighlight">\(E_k\)</span> - це енергія руху.</p>
+<div class="math notranslate nohighlight">
+\[E_k = \frac{mv^2}{2}\]</div>
+<p><strong>Одиниця в СІ:</strong> джоуль (Дж).</p>
 </div></blockquote>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Simple_harmonic_oscillator.gif" alt="Simple harmonic oscillator.gif" height="359" width="116">
-<br>
-Рис. 2. Вертикальний пружинний маятник.
-<a href="https://commons.wikimedia.org/w/index.php?curid=2292351">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Коливання">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Simple_Harmonic_Motion_Orbit.gif" alt="Simple Harmonic Motion Orbit.gif" height="343" width="443">
+<blockquote>
+<div><p><strong>Потенціальна енергія</strong> <span class="math notranslate nohighlight">\(E_p\)</span> пружно деформованого тіла - це енергія, накопичена в пружині.</p>
+<div class="math notranslate nohighlight">
+\[E_p = \frac{kx^2}{2}\]</div>
+<p><strong>Одиниця в СІ:</strong> джоуль (Дж).</p>
+</div></blockquote>
+<p>Таким чином, повна механічна енергія системи:</p>
+<div class="math notranslate nohighlight">
+\[E = E_k + E_p = \frac{mv^2}{2} + \frac{kx^2}{2} = \text{const}\]</div>
+<p>Давайте прослідкуємо за перетвореннями енергії протягом одного коливання:</p>
+<ol class="arabic simple">
+<li><p><strong>В крайньому положенні (<span class="math notranslate nohighlight">\(x = A\)</span>)</strong>: Тіло на мить зупиняється (<span class="math notranslate nohighlight">\(v=0\)</span>), отже, кінетична енергія <span class="math notranslate nohighlight">\(E_k=0\)</span>. Пружина максимально розтягнута (або стиснута), тому потенціальна енергія максимальна: <span class="math notranslate nohighlight">\(E_p = \frac{kA^2}{2}\)</span>. Вся енергія системи - потенціальна: <span class="math notranslate nohighlight">\(E = \frac{kA^2}{2}\)</span>.</p></li>
+<li><p><strong>Рух до положення рівноваги</strong>: Пружина стискається, повертаючи тіло. Її потенціальна енергія зменшується, а швидкість тіла зростає, тобто <span class="math notranslate nohighlight">\(E_p\)</span> перетворюється на <span class="math notranslate nohighlight">\(E_k\)</span>.</p></li>
+<li><p><strong>В положенні рівноваги (<span class="math notranslate nohighlight">\(x = 0\)</span>)</strong>: Пружина не деформована, отже <span class="math notranslate nohighlight">\(E_p=0\)</span>. Швидкість тіла максимальна (<span class="math notranslate nohighlight">\(v = v_{max}\)</span>), тому кінетична енергія теж максимальна: <span class="math notranslate nohighlight">\(E_k = \frac{mv_{max}^2}{2}\)</span>. Вся енергія системи - кінетична: <span class="math notranslate nohighlight">\(E = \frac{mv_{max}^2}{2}\)</span>. Якщо початок відліку <span class="math notranslate nohighlight">\(t=0\)</span> вести від моменту, коли зміщення тіла <span class="math notranslate nohighlight">\(x = A\)</span>, то положення рівноваги досягається в момент часу <span class="math notranslate nohighlight">\(t = T/4\)</span>.</p></li>
+<li><p><strong>Рух до іншого крайнього положення</strong>: Тіло за інерцією продовжує рух, стискаючи (або розтягуючи) пружину. Швидкість зменшується, а деформація зростає. <span class="math notranslate nohighlight">\(E_k\)</span> перетворюється назад на <span class="math notranslate nohighlight">\(E_p\)</span>.</p></li>
+<li><p><strong>В іншому крайньому положенні (<span class="math notranslate nohighlight">\(x = -A\)</span>)</strong>: Процес повторюється, тіло знову зупиняється (<span class="math notranslate nohighlight">\(E_k=0\)</span>), а потенціальна енергія знову максимальна (<span class="math notranslate nohighlight">\(E_p = \frac{k(-A)^2}{2} = \frac{kA^2}{2}\)</span>). Якщо початок відліку <span class="math notranslate nohighlight">\(t=0\)</span> вести від моменту, коли зміщення тіла <span class="math notranslate nohighlight">\(x = A\)</span>, то зміщення <span class="math notranslate nohighlight">\(x = -A\)</span> досягається в момент часу <span class="math notranslate nohighlight">\(t = T/2\)</span>, що якраз відповідає половині одного коливання.</p></li>
+</ol>
+<p>У другій половині періоду процес повторюється в зворотному напрямку: візок рухається вправо, проходить положення рівноваги в момент часу <span class="math notranslate nohighlight">\(t = \frac{3T}{4}\)</span> і досягає початкового положення максимального відхилення вправо при <span class="math notranslate nohighlight">\(t = T\)</span>, завершуючи повний цикл коливання. Після цього процес повторюється.</p>
+<p>Ці перетворення відбуваються безперервно, підтримуючи коливальний рух.</p>
+<hr class="docutils" />
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Simple_Harmonic_Motion_Orbit.gif" alt="Simple Harmonic Motion Orbit.gif" height="343" width="443">
 <br>
 Рис. 3. Гармонічний рух, показаний як у реальному просторі, так і в фазовому просторі (орбіта періодична).
 Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=5803197">Link</a>. <a href="https://en.wikipedia.org/wiki/Simple_harmonic_motion">Wiki</a></p></section>
-<section id="id4">
-<h2>Що називають математичним маятником<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<p>Тверде тіло, яке може коливатися відносно осі, що проходить через точку підвісу, називають <em>фізичним маятником</em>. Прикладом може бути підвішена на нитці іграшка в салоні автомобіля. При виведенні з рівноваги вона починає коливатися. Однак аналіз таких коливань є складним, оскільки на них впливають розміри та форма тіла, властивості нитки та інші фактори.</p>
-<p>Для спрощення дослідження коливань використовують ідеалізовану модель - математичний маятник. Щоб створити таку модель, необхідно:</p>
+<section id="id5">
+<h2>Математичний маятник<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Тверде тіло, яке може коливатися відносно осі, що проходить через точку підвісу, називають <strong>фізичним маятником</strong>. Наприклад, гойдалка, вантаж на мотузці, маятник годинника. Ще одним прикладом є люстра, що висить на стелі. При виведенні з рівноваги вона починає коливатися. Однак аналіз таких коливань є складним, оскільки на них впливають розміри та форма тіла, властивості провода, на якому підвішена люстра та інші фактори.</p>
+<p>Для спрощення дослідження коливань використовують ідеалізовану модель - математичний маятник.</p>
+<p>Щоб створити таку модель, необхідно:</p>
 <ol class="arabic simple">
 <li><p>використати нитку, довжина якої значно перевищує розміри підвішеного тіла;</p></li>
 <li><p>забезпечити, щоб маса нитки була набагато меншою за масу тіла, що дозволяє розглядати тіло як матеріальну точку;</p></li>
 <li><p>нитка має бути нерозтяжною, щоб відстань від тіла до точки підвісу залишалася сталою.</p></li>
 </ol>
 <blockquote>
-<div><p><strong>Математичний маятник</strong> - це фізична модель, що складається з матеріальної точки, підвішеної на невагомій нерозтяжній нитці в полі сили тяжіння.</p>
+<div><p><strong>Математичний маятник</strong> - це ідеалізована коливальна система, що складається з матеріальної точки масою <span class="math notranslate nohighlight">\(m\)</span>, підвішеної на невагомій та нерозтяжній нитці довжиною <span class="math notranslate nohighlight">\(l\)</span>, яка коливається в полі тяжіння без тертя.</p>
 </div></blockquote>
-</section>
-<section id="id5">
-<h2>Коливання математичного маятника<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
-<p>Якщо взяти невелику, але досить важку кульку і підвісити її на довгій тонкій нитці, то отримаємо систему, яку можна розглядати як математичний маятник. При відхиленні кульки від положення рівноваги та її відпусканні, під дією сили тяжіння та сили натягу нитки, вона почне коливатися.</p>
-<p>За умови, що опір повітря незначний, а діями сили є консервативними, повна механічна енергія системи зберігатиметься. Під час коливань відбуватиметься взаємне перетворення потенціальної енергії піднятої кульки в кінетичну енергію її руху і навпаки.</p>
-<p>Спостерігаючи за рухом такого маятника, можна аналізувати причини його руху та енергетичні перетворення, що відбуваються в різних фазах коливання.</p>
+<ul class="simple">
+<li><p><strong>Матеріальна точка</strong> - тіло, розмірами якого можна знехтувати в умовах даної задачі.</p></li>
+<li><p><strong>Невагома і нерозтяжна нитка</strong> - ідеалізація, що означає, що маса та деформація нитки не впливають на рух.</p></li>
+</ul>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Simple_pendulum_height.svg" alt="Simple pendulum height.svg" height="501" width="512">
 <br>
 Рис. 4. Математичний маятник (виконує гармонічний рух в умовах відсутності затухання і малої амплітуди).
-By <a href="https://commons.wikimedia.org/wiki/User:Krishnavedala" title="User:Krishnavedala">Krishnavedala</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=20334344">Link</a>. <a href="placehohttps://en.wikipedia.org/wiki/Harmonic_oscillatorlder">Wiki</a></p></section>
+By <a href="https://commons.wikimedia.org/wiki/User:Krishnavedala" title="User:Krishnavedala">Krishnavedala</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=20334344">Link</a>. <a href="https://en.wikipedia.org/wiki/Harmonic_oscillator">Wiki</a></p></section>
 <section id="id6">
-<h2>Як обчислити період коливань математичного маятника<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
-<p>Математичний аналіз показує, що при малих кутах відхилення (приблизно 3–5°) математичний маятник здійснює гармонічні коливання. Це означає, що прискорення руху кульки пропорційне її зміщенню від положення рівноваги і спрямоване в протилежний бік: <span class="math notranslate nohighlight">\(a_x = -\omega^2 x\)</span>.</p>
-<p>Для математичного маятника циклічна частота визначається як</p>
-<div class="math notranslate nohighlight">
-\[\omega = \sqrt{\frac{g}{l}}\]</div>
-<p>де <span class="math notranslate nohighlight">\(g\)</span> - прискорення вільного падіння, а <span class="math notranslate nohighlight">\(l\)</span> - довжина маятника.</p>
-<p>Отже, <strong>період коливань математичного маятника</strong> обчислюється за формулою:</p>
-<div class="math notranslate nohighlight">
-\[T = 2\pi\sqrt{\frac{l}{g}}\]</div>
-<p>Ця формула була вперше виведена в XVII столітті нідерландським фізиком Крістіаном Гюйгенсом і відома як <strong>формула Гюйгенса</strong>.</p>
-<p>Важливо відзначити, що період коливань математичного маятника не залежить від маси підвішеного тіла, а визначається лише довжиною нитки та прискоренням вільного падіння в місці розташування маятника. Ця властивість дозволяє використовувати математичний маятник для визначення прискорення вільного падіння: вимірявши довжину нитки і період коливань, можна обчислити значення <span class="math notranslate nohighlight">\(g\)</span> у даній місцевості.</p>
+<h2>Динаміка коливань математичного маятника<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Розглянемо кульку на нитці, відхилену від положення рівноваги на невеликий кут <span class="math notranslate nohighlight">\(\alpha\)</span>. Які сили на неї діють?</p>
+<ol class="arabic simple">
+<li><p><strong>Сила тяжіння</strong> <span class="math notranslate nohighlight">\(F_т = mg\)</span>, напрямлена вертикально вниз.</p></li>
+<li><p><strong>Сила натягу нитки</strong> <span class="math notranslate nohighlight">\(T_н\)</span>, напрямлена вздовж нитки.</p></li>
+</ol>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/PenduloTmg.gif" alt="PenduloTmg.gif" height="410" width="228">
 <br>
 Рис. 5. Анімація математичного маятника, що демонструє сили, що діють на кульку: натяг T у стрижні та гравітаційна сила mg.
 By <a href="https://commons.wikimedia.org/wiki/User:Ruryk" title="User:Ruryk">Ruryk</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=14960932">Link</a>. <a href="https://en.wikipedia.org/wiki/Pendulum">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Oscillating_pendulum.gif" alt="Oscillating pendulum.gif" height="320" width="341">
 <br>
 Рис. 6. Анімація математичного маятника, що показує вектори швидкості та прискорення.
-By <a href="https://commons.wikimedia.org/wiki/User:Ruryk" title="User:Ruryk">Ruryk</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=14960900">Link</a>. <a href="https://en.wikipedia.org/wiki/Pendulum">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pendulum_gravity.svg" alt="Pendulum gravity.svg" height="550" width="314">
+By <a href="https://commons.wikimedia.org/wiki/User:Ruryk" title="User:Ruryk">Ruryk</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=14960900">Link</a>. <a href="https://en.wikipedia.org/wiki/Pendulum">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Coordinates_of_a_simple_gravity_pendulum.png" alt="Coordinates of a simple gravity pendulum." height="550" width="416">
 <br>
-Рис. 7. Діаграма сил для математичного маятника.
-By <a href="https://commons.wikimedia.org/wiki/User:Krishnavedala" title="User:Krishnavedala">Krishnavedala</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=24185988">Link</a>. <a href="https://en.wikipedia.org/wiki/Pendulum_(mechanics)">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Coordinates_of_a_simple_gravity_pendulum.png" alt="Coordinates of a simple gravity pendulum." height="550" width="416">
-<br>
-Рис. 8. Тригонометрія математичного маятника.
-<a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=151685258">Link</a>. <a href="https://en.wikipedia.org/wiki/Pendulum_(mechanics)">Wiki</a></p></section>
-<section id="id7">
-<h2>Задача<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
-<p>Тягар на пружині здійснює коливання за рівнянням: <span class="math notranslate nohighlight">\(x = 20\cos(2\pi t)\)</span> (см). Визначити повну механічну енергію системи, максимальну швидкість руху тягаря, а також кінетичну та потенціальну енергії через <span class="math notranslate nohighlight">\(\frac{1}{6}\)</span> с після початку коливань. Маса тягаря становить 1 кг. Систему вважати замкненою.</p>
-<p><strong>Вихідні дані:</strong></p>
+Рис. 7. Тригонометрія математичного маятника.
+<a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=151685258">Link</a>. <a href="https://en.wikipedia.org/wiki/Pendulum_(mechanics)">Wiki</a></p><p>Рівнодійна цих сил і змушує маятник коливатися. Щоб проаналізувати рух, розкладемо силу тяжіння на дві складові:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(x = 0.20\cos2\pi t\)</span> (м)</p></li>
-<li><p><span class="math notranslate nohighlight">\(t = \frac{1}{6}\)</span> с</p></li>
-<li><p><span class="math notranslate nohighlight">\(m = 1.0\)</span> кг</p></li>
-<li><p>Знайти: <span class="math notranslate nohighlight">\(E\)</span>, <span class="math notranslate nohighlight">\(v_{max}\)</span>, <span class="math notranslate nohighlight">\(E_k\)</span>, <span class="math notranslate nohighlight">\(E_p\)</span></p></li>
+<li><p><strong>Нормальна складова</strong> <span class="math notranslate nohighlight">\(F_n = mg \cos\alpha\)</span>, напрямлена вздовж нитки. Вона зрівноважується силою натягу нитки: <span class="math notranslate nohighlight">\(T_н = F_n\)</span>.</p></li>
+<li><p><strong>Тангенціальна (дотична) складова</strong> <span class="math notranslate nohighlight">\(F_{\tau} = mg \sin\alpha\)</span>. Вона напрямлена по дотичній до траєкторії руху (дуги кола) і завжди спрямована до положення рівноваги.</p></li>
 </ul>
-<p><strong>Аналіз та розв'язання:</strong></p>
-<p>У замкненій системі виконується закон збереження повної механічної енергії:</p>
-<p><span class="math notranslate nohighlight">\(E = \frac{kA^2}{2} = \frac{mv^2_{max}}{2} = E_k + E_p\)</span>.</p>
-<p>Порівнюючи рівняння коливань у загальному вигляді <span class="math notranslate nohighlight">\(x = A\cos\omega t\)</span> з рівнянням у задачі <span class="math notranslate nohighlight">\(x = 0.2\cos(2\pi t)\)</span>, знаходимо:</p>
-<p><span class="math notranslate nohighlight">\(A = 0.2\)</span> м – амплітуда коливань</p>
-<p><span class="math notranslate nohighlight">\(\omega = 2\pi\)</span> с<span class="math notranslate nohighlight">\(^{-1}\)</span> – циклічна частота</p>
-<p>Із співвідношення <span class="math notranslate nohighlight">\(\omega = \sqrt{\frac{k}{m}}\)</span> визначаємо жорсткість пружини:</p>
-<p><span class="math notranslate nohighlight">\(k = \omega^2m = 4\pi^2 \cdot 1 \approx 40\)</span> Н/м</p>
-<p>Повна механічна енергія системи:</p>
-<p><span class="math notranslate nohighlight">\(E = \frac{kA^2}{2} = \frac{40 \cdot (0.2)^2}{2} = 0.8\)</span> Дж</p>
-<p>Максимальна швидкість руху тягаря:</p>
-<p><span class="math notranslate nohighlight">\(v_{max} = A\omega = 0.2 \cdot 2\pi = 1.26\)</span> м/с</p>
-<p>Для визначення кінетичної та потенціальної енергій у момент часу <span class="math notranslate nohighlight">\(t = \frac{1}{6}\)</span> с знаходимо зміщення тягаря:</p>
-<p><span class="math notranslate nohighlight">\(x = 0.2\cos\left(2\pi \cdot \frac{1}{6}\right) = 0.2\cos\frac{\pi}{3} = 0.2 \cdot 0.5 = 0.1\)</span> м</p>
-<p>Потенціальна енергія пружини в цей момент:</p>
-<p><span class="math notranslate nohighlight">\(E_p = \frac{kx^2}{2} = \frac{40 \cdot (0.1)^2}{2} = 0.2\)</span> Дж</p>
-<p>Кінетична енергія:</p>
-<p><span class="math notranslate nohighlight">\(E_k = E - E_p = 0.8 - 0.2 = 0.6\)</span> Дж</p>
-<p><strong>Відповідь:</strong> <span class="math notranslate nohighlight">\(E = 0.8\)</span> Дж; <span class="math notranslate nohighlight">\(v_{max} = 1.26\)</span> м/с; <span class="math notranslate nohighlight">\(E_k = 0.6\)</span> Дж; <span class="math notranslate nohighlight">\(E_p = 0.2\)</span> Дж.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Pendulum_gravity.svg" alt="Pendulum gravity.svg" height="550" width="314">
+<br>
+Рис. 8. Діаграма сил для математичного маятника.
+By <a href="https://commons.wikimedia.org/wiki/User:Krishnavedala" title="User:Krishnavedala">Krishnavedala</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=24185988">Link</a>. <a href="https://en.wikipedia.org/wiki/Pendulum_(mechanics)">Wiki</a></p><p>Саме тангенціальна складова є <strong>повертаючою силою</strong>. Отже, рівняння руху вздовж траєкторії має вигляд:</p>
+<div class="math notranslate nohighlight">
+\[ma = -F_{\tau} = -mg \sin\alpha\]</div>
+<div class="math notranslate nohighlight">
+\[a = -g \sin\alpha\]</div>
+<p>Знак &quot;мінус&quot; знову вказує, що сила є повертаючою.</p>
+</section>
+<section id="id7">
+<h2>Виведення формули періоду: наближення малих кутів<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Рівняння <span class="math notranslate nohighlight">\(a = -g \sin\alpha\)</span> є складним, і такий рух, строго кажучи, не є гармонічним. Однак, якщо кут відхилення <span class="math notranslate nohighlight">\(\alpha\)</span> є малим (зазвичай до 5-10 градусів), ми можемо зробити дуже влучне спрощення. Для малих кутів, виражених в радіанах, виконується наближена рівність (хоча вам це наближення може здаватись чимось новим і незрозумілим, однак це наближчення дуже часто застосовується у фізиці для спрощення багатьох виведень та запису формул):</p>
+<div class="math notranslate nohighlight">
+\[\sin\alpha \approx \alpha\]</div>
+<p>Для того, щоб переконатися у справедливості цього наближення, можна виконати наступні кроки:</p>
+<ol class="arabic">
+<li><p>Візьмемо довільний малий кут, наприклад, 5 градусів.</p></li>
+<li><p>Переведемо цей кут в радіани:</p>
+<div class="math notranslate nohighlight">
+\[\text{радіани} = \text{градуси} \times \frac{\pi}{180}\]</div>
+<p>Ця формула походить від того, що повне коло становить <span class="math notranslate nohighlight">\(360^\circ\)</span>, або <span class="math notranslate nohighlight">\(2 \pi\)</span> радіан. Відповідно, <span class="math notranslate nohighlight">\(180^\circ\)</span> дорівнює <span class="math notranslate nohighlight">\(\pi\)</span> радіан.</p>
+<p>Підставимо <span class="math notranslate nohighlight">\(5^\circ\)</span> у формулу:</p>
+<div class="math notranslate nohighlight">
+\[\text{радіани} = 5 \times \frac{\pi}{180} = \frac{5\pi}{180} = \frac{\pi}{36} \approx 0.087266\]</div>
+</li>
+<li><p>Розрахуємо синус 5 градусів (можете використати для цього будь-який калькулятор). Результат буде приблизно 0.087156, що доволі близько до значення 5 градусів, що виражені в радіанах. Для менших кутів точність буде ще більшою.</p></li>
+</ol>
+<p>Для малих кутів горизонтальне зміщення <span class="math notranslate nohighlight">\(x\)</span> від положення рівноваги майже дорівнює довжині дуги <span class="math notranslate nohighlight">\(s\)</span>. А довжина дуги пов'язана з кутом як <span class="math notranslate nohighlight">\(s \approx l \sin\alpha \approx l \alpha\)</span>, де <span class="math notranslate nohighlight">\(l\)</span> - довжина нитки. Отже, ми можемо записати <span class="math notranslate nohighlight">\(x \approx l\alpha\)</span>, звідки</p>
+<div class="math notranslate nohighlight">
+\[\alpha \approx \frac{x}{l}\]</div>
+<p>Підставимо ці наближення в наше рівняння для повертаючої сили:</p>
+<div class="math notranslate nohighlight">
+\[F_{\tau} = m g \sin\alpha \approx mg\alpha \approx mg\frac{x}{l}\]</div>
+<p>Тепер знову застосуємо другий закон Ньютона <span class="math notranslate nohighlight">\(F = ma_x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ma_x = -\frac{mg}{l}x\]</div>
+<p>Скоротивши масу <span class="math notranslate nohighlight">\(m\)</span> з обох боків, отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[a_x = - \frac{g}{l}x\]</div>
+<p>Ми знову отримали рівняння, яке є <strong>динамічною ознакою гармонічних коливань</strong> <span class="math notranslate nohighlight">\(a_x = -\omega^2x\)</span>. Це означає, що <strong>при малих кутах відхилення коливання математичного маятника є гармонічними</strong>.</p>
+<p>Порівнюючи два рівняння, знаходимо квадрат циклічної частоти:</p>
+<div class="math notranslate nohighlight">
+\[\omega^2 = \frac{g}{l}\]</div>
+<p>Звідки <strong>циклічна частота</strong> коливань математичного маятника:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega = \sqrt{\frac{g}{l}}
+\]</div>
+<p>І, нарешті, використовуючи зв'язок <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\omega}\)</span>, виводимо формулу для періоду коливань математичного маятника, відому як <strong>формула Гюйгенса</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{2\pi}{\sqrt{\frac{g}{l}}}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+T = 2\pi\sqrt{\frac{l}{g}}
+\]</div>
+<p><strong>Аналіз формули:</strong></p>
+<ul class="simple">
+<li><p>Період коливань залежить від <strong>довжини нитки</strong> <span class="math notranslate nohighlight">\(l\)</span> та <strong>прискорення вільного падіння</strong> <span class="math notranslate nohighlight">\(g\)</span>. Чим довша нитка, тим більший період.</p></li>
+<li><p>Період коливань <strong>не залежить від маси</strong> підвішеного тіла та (для малих кутів) від <strong>амплітуди</strong> коливань. Цю властивість незалежності від амплітуди називають <em>ізохронністю</em> коливань. Саме завдяки їй маятники стали основою для створення точних годинників.</p></li>
+</ul>
+<p>Формула Гюйгенса дозволяє використовувати математичний маятник для визначення прискорення вільного падіння: вимірявши довжину нитки і період коливань, можна обчислити значення <span class="math notranslate nohighlight">\(g\)</span> у даній місцевості:</p>
+<div class="math notranslate nohighlight">
+\[
+T = 2\pi\sqrt{\frac{l}{g}}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+T^2 = 4\pi^2 \frac{l}{g}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+g = \frac{4\pi^2 l}{T^2}
+\]</div>
 </section>
 <section id="id8">
-<h2>Додаткові матеріали (українською)<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<h2>Перетворення енергії в математичному маятнику<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Як і у пружинного маятника, тут теж відбувається перетворення енергії. Повна механічна енергія <span class="math notranslate nohighlight">\(E = E_k + E_p\)</span> зберігається. Але тепер потенціальна енергія - це <strong>гравітаційна потенціальна енергія</strong>.</p>
+<div class="math notranslate nohighlight">
+\[E_p = mgh\]</div>
+<p>де <span class="math notranslate nohighlight">\(h\)</span> - висота тіла над найнижчим положенням (положенням рівноваги).</p>
+<p><strong>В крайньому положенні (максимальне відхилення)</strong>: Тіло на мить зупиняється (<span class="math notranslate nohighlight">\(v=0\)</span>), тому <span class="math notranslate nohighlight">\(E_k=0\)</span>. Воно знаходиться на максимальній висоті <span class="math notranslate nohighlight">\(h_{max}\)</span>, отже потенціальна енергія максимальна: <span class="math notranslate nohighlight">\(E_p = mgh_{max}\)</span>.</p>
+<p><strong>В положенні рівноваги (найнижча точка)</strong>: Висота <span class="math notranslate nohighlight">\(h=0\)</span>, тому <span class="math notranslate nohighlight">\(E_p=0\)</span>. Швидкість тіла максимальна (<span class="math notranslate nohighlight">\(v = v_{max}\)</span>), отже кінетична енергія максимальна: <span class="math notranslate nohighlight">\(E_k = \frac{mv_{max}^2}{2}\)</span>.</p>
+<p>Протягом коливань потенціальна енергія висоти перетворюється на кінетичну енергію руху і навпаки, забезпечуючи неперервний рух.</p>
+</section>
+<section id="id9">
+<h2>Підсумок: Пружинний та Математичний маятники<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Характеристика</p></th>
+<th class="head text-left"><p>Пружинний маятник</p></th>
+<th class="head text-left"><p>Математичний маятник</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Визначення</strong></p></td>
+<td class="text-left"><p>Фізична модель, що складається з тіла масою <span class="math notranslate nohighlight">\(m\)</span> на абсолютно пружній пружині жорсткістю <span class="math notranslate nohighlight">\(k\)</span>.</p></td>
+<td class="text-left"><p>Ідеалізована система, що складається з матеріальної точки масою <span class="math notranslate nohighlight">\(m\)</span> на невагомій, нерозтяжній нитці довжиною <span class="math notranslate nohighlight">\(l\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Повертаюча сила</strong></p></td>
+<td class="text-left"><p>Сила пружності, що підкоряється закону Гука <span class="math notranslate nohighlight">\(F_{пруж} = -kx\)</span>.</p></td>
+<td class="text-left"><p>Тангенціальна складова сили тяжіння <span class="math notranslate nohighlight">\(F_{\tau} = -mg \sin\alpha\)</span>. Для малих кутів <span class="math notranslate nohighlight">\(F_{\tau} \approx -mg\frac{x}{l}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Рівняння руху (для гармонічних коливань)</strong></p></td>
+<td class="text-left"><p>Прискорення прямо пропорційне зміщенню <span class="math notranslate nohighlight">\(a_x = -\frac{k}{m}x\)</span>.</p></td>
+<td class="text-left"><p>При малих кутах відхилення прискорення пропорційне зміщенню <span class="math notranslate nohighlight">\(a_x = -\frac{g}{l}x\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Циклічна частота</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\omega = \sqrt{\frac{k}{m}}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\omega = \sqrt{\frac{g}{l}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Період коливань</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T = 2\pi\sqrt{\frac{m}{k}}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T = 2\pi\sqrt{\frac{l}{g}}\)</span> (формула Гюйгенса)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Залежність періоду</strong></p></td>
+<td class="text-left"><p>Залежить від <strong>маси тіла</strong> <span class="math notranslate nohighlight">\(m\)</span> та <strong>жорсткості пружини</strong> <span class="math notranslate nohighlight">\(k\)</span>.</p></td>
+<td class="text-left"><p>Залежить від <strong>довжини нитки</strong> <span class="math notranslate nohighlight">\(l\)</span> та <strong>прискорення вільного падіння</strong> <span class="math notranslate nohighlight">\(g\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Незалежність періоду (Ізохронність)</strong></p></td>
+<td class="text-left"><p>Не залежить від амплітуди коливань (при пружних деформаціях) та від <span class="math notranslate nohighlight">\(g\)</span>.</p></td>
+<td class="text-left"><p>Не залежить від <strong>маси тіла</strong> <span class="math notranslate nohighlight">\(m\)</span> та (при малих кутах) від <strong>амплітуди</strong>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Повна механічна енергія</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(E = \frac{mv^2}{2} + \frac{kx^2}{2} = \text{const}\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(E = \frac{mv^2}{2} + mgh = \text{const}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Енергія в крайніх точках (<span class="math notranslate nohighlight">\(x=\pm A\)</span>)</strong></p></td>
+<td class="text-left"><p>Швидкість <span class="math notranslate nohighlight">\(v=0\)</span>. Кінетична енергія <span class="math notranslate nohighlight">\(E_k = 0\)</span>. Потенціальна енергія максимальна <span class="math notranslate nohighlight">\(E_p = \frac{kA^2}{2}\)</span>.</p></td>
+<td class="text-left"><p>Швидкість <span class="math notranslate nohighlight">\(v=0\)</span>. Кінетична енергія <span class="math notranslate nohighlight">\(E_k = 0\)</span>. Потенціальна енергія максимальна <span class="math notranslate nohighlight">\(E_p = mgh_{max}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Енергія в положенні рівноваги (<span class="math notranslate nohighlight">\(x=0\)</span>)</strong></p></td>
+<td class="text-left"><p>Швидкість максимальна <span class="math notranslate nohighlight">\(v=v_{max}\)</span>. Потенціальна енергія <span class="math notranslate nohighlight">\(E_p=0\)</span>. Кінетична енергія максимальна <span class="math notranslate nohighlight">\(E_k = \frac{mv_{max}^2}{2}\)</span>.</p></td>
+<td class="text-left"><p>Швидкість максимальна <span class="math notranslate nohighlight">\(v=v_{max}\)</span>. Потенціальна енергія <span class="math notranslate nohighlight">\(E_p=0\)</span> (при <span class="math notranslate nohighlight">\(h=0\)</span>). Кінетична енергія максимальна <span class="math notranslate nohighlight">\(E_k = \frac{mv_{max}^2}{2}\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id10">
+<h2>Додаткові матеріали<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%B8%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F">Коливання</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%85%D0%B0%D0%BD%D1%96%D1%87%D0%BD%D1%96_%D0%BA%D0%BE%D0%BB%D0%B8%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F">Механічні коливання</a></p></li>
@@ -664,8 +815,8 @@ By <a href="https://commons.wikimedia.org/wiki/User:Krishnavedala" title="User:K
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D0%BC%D0%B0%D1%8F%D1%82%D0%BD%D0%B8%D0%BA">Математичний маятник</a></p></li>
 </ul>
 </section>
-<section id="id9">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Oscillation">Oscillation</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Harmonic_oscillator">Harmonic oscillator</a></p></li>
@@ -742,13 +893,15 @@ By <a href="https://commons.wikimedia.org/wiki/User:Krishnavedala" title="User:K
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Коливання пружинного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як визначити період коливань пружинного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Що називають математичним маятником</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Коливання математичного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Як обчислити період коливань математичного маятника</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Задача</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Додаткові матеріали (українською)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Виведення формули періоду коливань пружинного маятника</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Перетворення енергії в пружинному маятнику</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Математичний маятник</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Динаміка коливань математичного маятника</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Виведення формули періоду: наближення малих кутів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Перетворення енергії в математичному маятнику</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Підсумок: Пружинний та Математичний маятники</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
