@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Другий та третій закони Ньютона &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/newton-second-third-laws';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Закон всесвітнього тяжіння" href="newtons-law-of-universal-gravitation.html" />
+    <link rel="prev" title="Перший закон Ньютона" href="newton-first-law.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mechanics/newton-second-third-laws.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mechanics/newton-second-third-laws.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mechanics/newton-second-third-laws.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Другий та третій закони Ньютона</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vec-f">Сила <span class="math notranslate nohighlight">\(\vec{F}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m">Маса <span class="math notranslate nohighlight">\(m\)</span> та інертність</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Інертна та гравітаційна маса</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як виміряти масу?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Властивості маси</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Другий Закон Ньютона</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Експериментальний підхід</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Дослід 1: Залежність прискорення від маси (при сталій силі)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дослід 2: Залежність прискорення від сили (при сталій масі)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Об'єднання Результатів та Формулювання Закону</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Третій закон Ньютона</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Внутрішні та Зовнішні Сили</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Співвідношення мас та прискорень: виведення формули</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Другий та третій закони Ньютона<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Для початку давайте розберемося з двома ключовими поняттями, без яких неможливо уявити динаміку - силою та масою.</p>
+<section id="vec-f">
+<h2>Сила <span class="math notranslate nohighlight">\(\vec{F}\)</span><a class="headerlink" href="#vec-f" title="Link to this heading">#</a></h2>
+<p>У повсякденному житті ми постійно стикаємося з поняттям сили: сила вітру, сила м'язів, сила тяжіння. У фізиці це поняття має чітке визначення.</p>
+<blockquote>
+<div><p><strong>Сила</strong> <span class="math notranslate nohighlight">\(\vec{F}\)</span> - це векторна фізична величина, яка є мірою дії одного тіла на інше. Саме сила є причиною зміни швидкості руху тіла, тобто причиною його прискорення, а також причиною його деформації.</p>
+</div></blockquote>
+<p>Оскільки сила є векторною величиною, вона характеризується не тільки числовим значенням (модулем), але й напрямком.</p>
+<p>В Міжнародній системі одиниць (СІ) одиницею вимірювання сили є <strong>ньютон (Н)</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+1 \text{ Н} = 1 \frac{\text{кг} \cdot \text{м}}{\text{с}^2}
+\]</div>
+<p>Один ньютон - це сила, яка, діючи на тіло масою 1 кг, надає йому прискорення 1 м/с² у напрямку дії сили.</p>
+</section>
+<section id="m">
+<h2>Маса <span class="math notranslate nohighlight">\(m\)</span> та інертність<a class="headerlink" href="#m" title="Link to this heading">#</a></h2>
+<p>Уявімо, що перед нами два візки: один порожній, а інший - навантажений цеглою. Щоб зрушити їх з місця і надати їм однакової швидкості за однаковий час (тобто однакового прискорення), нам доведеться докласти різних зусиль. Навантажений візок зрушити буде значно важче. Це відбувається тому, що він має більшу <strong>інертність</strong>. Ми вже згадували поняття інертності, коли розглядали перший закон Ньютона. Наводимо це поняття знову, щоб нагадати.</p>
+<blockquote>
+<div><p><strong>Інертність</strong> - це властивість тіла опиратися спробам змінити його швидкість. Тобто, будь-яке тіло &quot;воліє&quot; зберігати свою поточну швидкість (і напрямок руху) незмінною.</p>
+</div></blockquote>
+<p>Фізичною величиною, яка є кількісною мірою інертності тіла, є <strong>маса</strong>.</p>
+<blockquote>
+<div><p><strong>Маса</strong> <span class="math notranslate nohighlight">\(m\)</span> - це скалярна фізична величина, яка є мірою інертних та гравітаційних властивостей тіла. Чим більша маса тіла, тим воно &quot;інертніше&quot;, і тим важче змінити його швидкість.</p>
+</div></blockquote>
+<p>Одиницею вимірювання маси в системі СІ є <strong>кілограм (кг)</strong>.</p>
+<section id="id2">
+<h3>Інертна та гравітаційна маса<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Для кращої обізнаності ми розглянемо різні прояви маси, однак занурюватись у деталі ми будемо поступово (на наступних сторінках). Нижче наведені доволі базові поняття, задача яких лише продемонструвати, що не все так просто. Згодом, як познайомимось із законом всесвітнього тяжіння Ньютона, ми розберемо тему інертної та гравітаційної мас детальніше.</p>
+<p>Отже, є два прояви маси:</p>
+<ul class="simple">
+<li><p><strong>Інертна маса</strong> <span class="math notranslate nohighlight">\(m_i\)</span> характеризує здатність тіла протидіяти зміні його швидкості (тобто інертність). Вона фігурує у другому законі Ньютона, який ми розглядаємо нижче.</p></li>
+<li><p><strong>Гравітаційна маса</strong> <span class="math notranslate nohighlight">\(m_g\)</span> визначає силу, з якою тіло притягується до інших тіл (наприклад, до Землі) відповідно до закону всесвітнього тяжіння.</p></li>
+</ul>
+<p>Численні експерименти, починаючи з дослідів Галілея, який спостерігав за вільним падінням тіл, показали, що інертна та гравітаційна маси пропорційні одна одній. Це дозволяє в сучасній фізиці вважати їх еквівалентними та використовувати єдине поняття &quot;маса&quot; і не розрізняти окремо інертну та гравітаційну маси (технічно це відбувається за рахунок вибору відповідних розмірностей фізичних величин). Цей фундаментальний факт називається <strong>принципом еквівалентності</strong>. Тому надалі ми будемо говорити просто про &quot;масу&quot;, а до розгляду інертної та гравітаційної маси і до їх фізичного аналізу, який зрештою привів до того, що для цих двох мас почав використовуватись єдиний термін &quot;маса&quot;, повернемось пізніше.</p>
+</section>
+<section id="id3">
+<h3>Як виміряти масу?<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Існує два основних способи вимірювання маси, що базуються на її різних проявах:</p>
+<ol class="arabic">
+<li><p><strong>Зважування</strong>: Цей метод ґрунтується на гравітаційних властивостях маси. За допомогою терезів ми порівнюємо силу тяжіння, що діє на тіло, із силою тяжіння, що діє на еталонні гирі.</p></li>
+<li><p><strong>Взаємодія тіл</strong>: Цей метод ґрунтується на інертних властивостях маси. Якщо привести у взаємодію два тіла і мінімізувати сили тертя (в ідеальному випадку тертя не розглядається взагалі) (наприклад, два візки на гладкій поверхні, з'єднані стиснутою пружиною), то після вивільнення пружини вони роз'їдуться в різні боки. Досліди показують, що відношення їхніх мас обернено пропорційне відношенню модулів їхніх прискорень:</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{m_1}{m_2} = \frac{a_2}{a_1}
+    \]</div>
+<p>Таким чином, знаючи масу одного тіла (еталона), ми можемо визначити масу іншого. Ми виведемо цю формулу нижче.</p>
+</li>
+</ol>
+</section>
+<section id="id4">
+<h3>Властивості маси<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Інваріантність</strong>: У класичній механіці маса тіла вважається сталою величиною, яка не залежить від швидкості його руху. Варто зазначити, що в релятивістській фізиці маса залежить від швидкості, але для швидкостей, значно менших за швидкість світла, цією зміною можна знехтувати. Поки що ми розглядаємо лише класичну механіку, тому надалі будемо використовувати властивість інваріантності без жодних застережень.</p></li>
+<li><p><strong>Адитивність</strong>: У класичній механіці маса системи тіл дорівнює сумі мас тіл, що входять до цієї системи. Наприклад, маса автомобіля з пасажирами дорівнює сумі маси самого автомобіля та мас усіх пасажирів.</p></li>
+<li><p><strong>Закон збереження маси</strong>: У класичній механіці маса ізольованої системи тіл залишається сталою при будь-яких процесах, що відбуваються в цій системі.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Другий Закон Ньютона<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h3>Експериментальний підхід<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Щоб встановити зв'язок між трьома величинами - силою, масою та прискоренням - нам потрібно провести серію дослідів. Ідея полягає в тому, щоб змінювати один параметр, тримаючи інший постійним, і дивитися, як при цьому змінюється третій. Уявімо, що ми маємо горизонтальну поверхню, по якій може майже без тертя рухатись візок. До візка прикріплено пружину або нитку, перекинуту через блок, на якій підвішено вантаж.</p>
+<p>Силу, що діє на візок, ми можемо вимірювати за розтягненням пружини або визначати за вагою вантажу. Масу системи ми можемо змінювати, додаючи на візок додаткові тягарці. А прискорення можна розрахувати, вимірявши відстань, яку проходить візок, і час, за який він її долає, за формулою для рівноприскореного руху:</p>
+<div class="math notranslate nohighlight">
+\[
+a = \frac{2s}{t^2}
+\]</div>
+<p>Тепер розглянемо два ключові експерименти.</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h3>Дослід 1: Залежність прискорення від маси (при сталій силі)<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Наша мета - з'ясувати, як маса тіла впливає на його прискорення, якщо сила, що діє на нього, залишається незмінною.</p>
+<ol class="arabic simple">
+<li><p><strong>Крок 1.</strong> Беремо візок масою <span class="math notranslate nohighlight">\(m\)</span>. Діємо на нього певною сталою силою <span class="math notranslate nohighlight">\(\vec{F}\)</span> (наприклад, забезпечуємо однакове розтягнення пружини в усіх дослідах цієї серії). Вимірюємо час руху і розраховуємо прискорення, яке позначимо як <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p></li>
+<li><p><strong>Крок 2.</strong> Тепер збільшимо масу системи вдвічі. Для цього на візок ставимо ще один такий самий візок або тягарець такої ж маси. Загальна маса тепер становить <span class="math notranslate nohighlight">\(2m\)</span>. Знову діємо на систему тією ж самою силою <span class="math notranslate nohighlight">\(\vec{F}\)</span>. Проведені виміри покажуть, що прискорення системи тепер стало вдвічі меншим: <span class="math notranslate nohighlight">\(\frac{1}{2}\vec{a}\)</span>.</p></li>
+<li><p><strong>Крок 3.</strong> Збільшимо масу системи втричі, до <span class="math notranslate nohighlight">\(3m\)</span>, і знову подіємо тією ж силою <span class="math notranslate nohighlight">\(\vec{F}\)</span>. Експеримент покаже, що прискорення зменшилося втричі й стало дорівнювати <span class="math notranslate nohighlight">\(\frac{1}{3}\vec{a}\)</span>.</p></li>
+</ol>
+<p><strong>Результат досліду:</strong> При сталій силі прискорення, якого набуває тіло, обернено пропорційне його масі.</p>
+<div class="math notranslate nohighlight">
+\[
+a \sim \frac{1}{m}
+\]</div>
+<p>Це інтуїтивно зрозуміло: чим &quot;важче&quot; (масивніше) тіло, тим складніше його &quot;розігнати&quot;.</p>
+</section>
+<hr class="docutils" />
+<section id="id8">
+<h3>Дослід 2: Залежність прискорення від сили (при сталій масі)<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Тепер наше завдання - дослідити, як змінюється прискорення тіла, якщо змінювати прикладену до нього силу, але залишати його масу незмінною.</p>
+<ol class="arabic simple">
+<li><p><strong>Крок 1.</strong> Візьмемо візок масою <span class="math notranslate nohighlight">\(m\)</span> і подіємо на нього силою <span class="math notranslate nohighlight">\(\vec{F}\)</span>. Виміряємо прискорення, яке він набув, і позначимо його <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p></li>
+<li><p><strong>Крок 2.</strong> Не змінюючи маси візка, збільшимо силу, що діє на нього, вдвічі, до <span class="math notranslate nohighlight">\(2\vec{F}\)</span> (наприклад, підвісимо два однакових вантажі замість одного). Виміри покажуть, що і прискорення візка збільшилося рівно вдвічі й стало <span class="math notranslate nohighlight">\(2\vec{a}\)</span>.</p></li>
+<li><p><strong>Крок 3.</strong> Збільшимо силу втричі, до <span class="math notranslate nohighlight">\(3\vec{F}\)</span>. Експеримент покаже, що прискорення також зросло втричі й стало <span class="math notranslate nohighlight">\(3\vec{a}\)</span>.</p></li>
+</ol>
+<p><strong>Результат досліду:</strong> При сталій масі прискорення, якого набуває тіло, прямо пропорційне силі, прикладеній до нього.</p>
+<div class="math notranslate nohighlight">
+\[
+a \sim F
+\]</div>
+<p>Це також логічно: чим сильніше ми штовхаємо тіло, тим швидше воно розганяється.</p>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h3>Об'єднання Результатів та Формулювання Закону<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Тепер ми маємо два важливі експериментальні факти:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a \sim \frac{1}{m}\)</span> (при <span class="math notranslate nohighlight">\(F = \text{const}\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(a \sim F\)</span> (при <span class="math notranslate nohighlight">\(m = \text{const}\)</span>)</p></li>
+</ul>
+<p>Об'єднавши ці дві пропорційності, ми можемо записати загальну залежність прискорення одночасно і від сили, і від маси:</p>
+<div class="math notranslate nohighlight">
+\[
+a \sim \frac{F}{m}
+\]</div>
+<p>Щоб перейти від пропорційності до точної рівності, потрібно ввести коефіцієнт пропорційності <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+a = k \frac{F}{m}
+\]</div>
+<p>Але тут фізики зробили дуже елегантний крок. Вони домовились обрати одиницю вимірювання сили - ньютон - таким чином, щоб цей коефіцієнт <span class="math notranslate nohighlight">\(k\)</span> дорівнював одиниці. Тобто, як ми вже казали, 1 ньютон - це саме така сила, яка тілу масою 1 кг надає прискорення 1 <span class="math notranslate nohighlight">\(\text{м}/\text{с}^2\)</span>. За такого вибору одиниць коефіцієнт <span class="math notranslate nohighlight">\(k\)</span> стає безрозмірною одиницею, і формула набуває свого знаменитого простого вигляду:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a} = \frac{\vec{F}}{m}
+\]</div>
+<p>Таким чином, ми бачимо, що другий закон Ньютона - це не просто умоглядна ідея, а результат, що безпосередньо випливає з ретельно поставлених експериментів, які вивчають, як світ навколо нас реагує на взаємодії.</p>
+<p>Другий закон Ньютона є центральним законом динаміки. Він встановлює зв'язок між силою, що діє на тіло, його масою та прискоренням, яке воно набуває.</p>
+<p>Щоб ще точніше сформулювати другий закон Ньютона, введемо поняття <strong>рівнодійної сили</strong>. Дуже рідко на тіло діє лише одна сила. Зазвичай їх декілька. Наприклад, на книгу, що лежить на столі, діє сила тяжіння (спрямована вниз) і сила реакції опори з боку столу (спрямована вгору). Якщо на тіло діє декілька сил, то їхній сукупний ефект еквівалентний дії однієї сили, яку називають рівнодійною.</p>
+<blockquote>
+<div><p><strong>Рівнодійна сила</strong> <span class="math notranslate nohighlight">\(\vec{F}\)</span> - це векторна сума всіх сил, що діють на тіло.</p>
+<div class="math notranslate nohighlight">
+\[\vec{F} = \vec{F_1} + \vec{F_2} + ... + \vec{F_n}\]</div>
+</div></blockquote>
+<p><strong>Приклад:</strong> Якщо дві сили <span class="math notranslate nohighlight">\(F_1 = 10 \text{ Н}\)</span> і <span class="math notranslate nohighlight">\(F_2 = 15 \text{ Н}\)</span> діють на тіло в одному напрямку, то їхня рівнодійна <span class="math notranslate nohighlight">\(R = 10 + 15 = 25 \text{ Н}\)</span> і спрямована в той же бік. Якщо ж вони діють у протилежних напрямках, то модуль рівнодійної <span class="math notranslate nohighlight">\(R = |15 - 10| = 5 \text{ Н}\)</span>, і вона буде спрямована в бік більшої сили.</p>
+<blockquote>
+<div><p><strong>Другий закон Ньютона</strong>: Прискорення <span class="math notranslate nohighlight">\(\vec{a}\)</span>, якого набуває тіло внаслідок дії сили, прямо пропорційне цій силі та обернено пропорційне масі тіла і не залежить від природи сили.</p>
+</div></blockquote>
+<p>Математично цей закон записується у вигляді формули:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{a} = \frac{\vec{F}}{m}
+\]</div>
+<p>Звідси випливає найпоширеніший запис другого закону Ньютона:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F} = m\vec{a}
+\]</div>
+<p>Або, якщо на тіло діє кілька сил і ми детально розписуємо рівнодійну сил:</p>
+<div class="math notranslate nohighlight">
+\[
+m\vec{a} = \vec{F_1} + \vec{F_2} + ... + \vec{F_n}
+\]</div>
+<p>З формули видно, що напрямок вектора прискорення завжди збігається з напрямком вектора рівнодійної сили.</p>
+<p>Важливо наголосити, що закони Ньютона (і другий зокрема) виконуються не в будь-якій системі відліку. Вони справедливі лише в <strong>інерціальних системах відліку (ІСВ)</strong>, які ми вже розглядали під час вивчення першого закону Ньютона.</p>
+<p>З високою точністю інерціальною можна вважати геліоцентричну систему відліку, пов'язану із Сонцем та віддаленими зірками. Будь-яка інша система відліку, що рухається відносно інерціальної рівномірно і прямолінійно, також є інерціальною. Система відліку, пов'язана із Землею, є наближено інерціальною, і для багатьох задач її можна вважати такою.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Третій закон Ньютона<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Третій закон Ньютона описує фундаментальну властивість будь-якої взаємодії. Він пояснює, що сили завжди виникають парами.</p>
+<blockquote>
+<div><p><strong>Третій закон Ньютона</strong> стверджує: тіла діють одне на одне з силами, рівними за модулем і протилежними за напрямком.</p>
+</div></blockquote>
+<p>Математично це записується так:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F_{12}} = -\vec{F_{21}}
+\]</div>
+<p>де <span class="math notranslate nohighlight">\(\vec{F_{12}}\)</span> - сила, з якою перше тіло діє на друге, а <span class="math notranslate nohighlight">\(\vec{F_{21}}\)</span> - сила, з якою друге тіло діє на перше.</p>
+<p>Ключові особливості сил у третьому законі Ньютона:</p>
+<ol class="arabic simple">
+<li><p><strong>Сили завжди виникають парами</strong>: Не існує сили, яка б діяла сама по собі. Якщо ви штовхаєте стіну, стіна з такою ж силою штовхає вас.</p></li>
+<li><p><strong>Сили прикладені до різних тіл</strong>: Це дуже важливий момент! Сила <span class="math notranslate nohighlight">\(\vec{F}_{12}\)</span> прикладена до другого тіла, а сила <span class="math notranslate nohighlight">\(\vec{F}_{21}\)</span> - до першого. Оскільки ці сили прикладені до різних тіл, вони <strong>ніколи</strong> не компенсують і не врівноважують одна одну.</p></li>
+<li><p><strong>Сили мають однакову фізичну природу</strong>: Якщо ви притягуєтесь до Землі з гравітаційною силою, то й Земля притягується до вас з такою ж за модулем гравітаційною силою. Якщо електрон відштовхує інший електрон з електростатичною силою, то й другий електрон відштовхує перший з такою ж електростатичною силою.</p></li>
+</ol>
+<p>Приклади дії третього закону Ньютона:</p>
+<ul class="simple">
+<li><p><strong>Ходьба:</strong> Коли людина йде, вона відштовхується ногами від землі (діє на землю із силою, спрямованою назад). За третім законом Ньютона, земля діє на людину з рівною за модулем, але протилежно спрямованою силою (силою тертя спокою, спрямованою вперед), яка, власне, і рухає людину.</p></li>
+<li><p><strong>Плавання:</strong> Плавець відштовхує воду руками та ногами назад, а вода штовхає плавця вперед.</p></li>
+<li><p><strong>Яблуко і Земля:</strong> Яблуко падає, бо Земля притягує його. Але згідно з третім законом, яблуко так само притягує Землю. Просто через величезну масу Землі її прискорення мізерно мале і непомітне.</p></li>
+</ul>
+<section id="id11">
+<h3>Внутрішні та Зовнішні Сили<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>При розгляді системи, що складається з кількох тіл, зручно поділяти всі сили на дві категорії.</p>
+<ul class="simple">
+<li><p><strong>Внутрішні сили</strong> - це сили, з якими тіла, що входять до складу системи, взаємодіють одне з одним. Наприклад, сили притягання між Сонцем та планетами є внутрішніми для Сонячної системи.</p></li>
+<li><p><strong>Зовнішні сили</strong> - це сили, що діють на тіла системи з боку тіл, які не належать до цієї системи. Наприклад, сила притягання з боку сусідньої зірки буде зовнішньою для Сонячної системи.</p></li>
+</ul>
+<p>Цей поділ є надзвичайно важливим для законів збереження. За третім законом Ньютона, векторна сума всіх внутрішніх сил у будь-якій системі завжди дорівнює нулю, оскільки для кожної внутрішньої сили є рівна за модулем і протилежна за напрямком сила протидії. Саме тому змінити рух системи як цілого (тобто її центру мас) можуть лише зовнішні сили.</p>
+</section>
+<section id="id12">
+<h3>Співвідношення мас та прискорень: виведення формули<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Розглянемо два тіла з масами <span class="math notranslate nohighlight">\(m_1\)</span> та <span class="math notranslate nohighlight">\(m_2\)</span>, що взаємодіють одне з одним (наприклад, відштовхуються). Згідно з третім законом Ньютона, сили, з якими вони діють одне на одного, рівні за модулем і протилежні за напрямком: <span class="math notranslate nohighlight">\(F_1 = F_2 = F\)</span> (у цій останній формулі ми розглядаємо саме модулі сил).</p>
+<p>Згідно з другим законом Ньютона, кожне з тіл набуде прискорення:</p>
+<div class="math notranslate nohighlight">
+\[
+F = m_1 a_1
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F = m_2 a_2
+\]</div>
+<p>Оскільки ліві частини цих рівнянь рівні, то рівні й праві:</p>
+<div class="math notranslate nohighlight">
+\[
+m_1 a_1 = m_2 a_2
+\]</div>
+<p>Звідси ми можемо отримати важливе співвідношення, яке дозволяє порівнювати маси тіл за їхніми прискореннями під час взаємодії:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{m_1}{m_2} = \frac{a_2}{a_1}
+\]</div>
+<p>Це співвідношення показує, що при взаємодії двох тіл відношення їхніх мас обернено пропорційне відношенню модулів їхніх прискорень. Тіло з більшою масою набуде меншого прискорення, і навпаки.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id13">
+<h2>Підсумок<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Закон</p></th>
+<th class="head text-left"><p>Визначення та ключові властивості</p></th>
+<th class="head text-left"><p>Формула / Математичний вираз</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Сила</strong></p></td>
+<td class="text-left"><p>Векторна величина, що є мірою дії одного тіла на інше та причиною зміни швидкості.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{F}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><em>Одиниця вимірювання сили</em></p></td>
+<td class="text-left"><p>Ньютон (Н). 1 Н - це сила, що тілу масою 1 кг надає прискорення 1 м/с².</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1 \text{ Н} = 1 \frac{\text{кг} \cdot \text{м}}{\text{с}^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Маса</strong></p></td>
+<td class="text-left"><p>Скалярна величина, що є мірою інертних та гравітаційних властивостей тіла. Одиниця вимірювання - кілограм (кг).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><em>Інертність</em></p></td>
+<td class="text-left"><p>Властивість тіла опиратися спробам змінити його швидкість.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><em>Інертна маса</em></p></td>
+<td class="text-left"><p>Характеризує здатність тіла протидіяти зміні його швидкості.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(m_i\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><em>Гравітаційна маса</em></p></td>
+<td class="text-left"><p>Визначає силу, з якою тіло притягується до інших тіл.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(m_g\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><em>Принцип еквівалентності</em></p></td>
+<td class="text-left"><p>Інертна та гравітаційна маси вважаються еквівалентними.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(m_i = m_g\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><em>Властивості маси</em></p></td>
+<td class="text-left"><p><strong>Інваріантність:</strong> маса не залежить від швидкості (в класичній механіці).<br><strong>Адитивність:</strong> маса системи тіл дорівнює сумі мас її складових (в класичній механіці).</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Рівнодійна сила</strong></p></td>
+<td class="text-left"><p>Векторна сума всіх сил, що діють на тіло.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{F} = \vec{F_1} + \vec{F_2} + ... + \vec{F_n}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Другий закон Ньютона</strong></p></td>
+<td class="text-left"><p>Прискорення, якого набуває тіло, прямо пропорційне рівнодійній силі та обернено пропорційне масі тіла.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{a} = \frac{\vec{F}}{m}\)</span> <br> або <br> <span class="math notranslate nohighlight">\(\vec{F} = m\vec{a}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Третій закон Ньютона</strong></p></td>
+<td class="text-left"><p>Тіла діють одне на одне з силами, рівними за модулем і протилежними за напрямком.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{F_{12}} = -\vec{F_{21}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><em>Особливості сил за 3-м законом</em></p></td>
+<td class="text-left"><p>1. Виникають парами.<br>2. Прикладені до різних тіл.<br>3. Мають однакову фізичну природу.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Внутрішні та зовнішні сили</strong></p></td>
+<td class="text-left"><p><strong>Внутрішні:</strong> сили взаємодії між тілами системи.<br><strong>Зовнішні:</strong> сили, що діють на систему з боку тіл, які до неї не належать.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Співвідношення мас та прискорень</strong></p></td>
+<td class="text-left"><p>При взаємодії двох тіл відношення їхніх мас обернено пропорційне відношенню модулів їхніх прискорень.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\frac{m_1}{m_2} = \frac{a_2}{a_1}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="newton-first-law.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Перший закон Ньютона</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="newtons-law-of-universal-gravitation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Закон всесвітнього тяжіння</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vec-f">Сила <span class="math notranslate nohighlight">\(\vec{F}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#m">Маса <span class="math notranslate nohighlight">\(m\)</span> та інертність</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Інертна та гравітаційна маса</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як виміряти масу?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Властивості маси</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Другий Закон Ньютона</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Експериментальний підхід</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Дослід 1: Залежність прискорення від маси (при сталій силі)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дослід 2: Залежність прискорення від сили (при сталій масі)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Об'єднання Результатів та Формулювання Закону</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Третій закон Ньютона</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Внутрішні та Зовнішні Сили</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Співвідношення мас та прискорень: виведення формули</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

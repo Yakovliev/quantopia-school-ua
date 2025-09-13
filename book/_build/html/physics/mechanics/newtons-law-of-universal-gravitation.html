@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Закон всесвітнього тяжіння &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/newtons-law-of-universal-gravitation';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Другий та третій закони Ньютона" href="newton-second-third-laws.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Закон всесвітнього тяжіння</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mechanics/newtons-law-of-universal-gravitation.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mechanics/newtons-law-of-universal-gravitation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mechanics/newtons-law-of-universal-gravitation.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Закон всесвітнього тяжіння</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Гравітаційна взаємодія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Гравітаційне поле</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Закон всесвітнього тяжіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Встановлення залежностей</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Формулювання та формула</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Гравітаційна стала та її фізичний зміст</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дослід Генрі Кавендіша</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Межі застосування закону</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Сила тяжіння та прискорення вільного падіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Сила тяжіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Прискорення вільного падіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Як ми "зважили" Землю?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Перша космічна швидкість</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Спрощена формула та значення для Землі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Друга та третя космічні швидкості</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Закон всесвітнього тяжіння<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Гравітаційна взаємодія<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>З давніх-давен люди спостерігали, що предмети падають на землю. Але лише Ісаак Ньютон першим усвідомив, що сила, яка змушує яблуко падати на землю, і сила, яка утримує Місяць на орбіті навколо Землі, - це одна й та сама сила.</p>
+<p><strong>Гравітаційна взаємодія</strong> - це універсальна взаємодія, яка існує між будь-якими об'єктами, що мають масу. Простими словами, всі тіла у Всесвіті притягуються одне до одного. Ця сила завжди є силою притягання, вона ніколи не буває силою відштовхування.</p>
+<section id="id3">
+<h3>Гравітаційне поле<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Як же тіла &quot;відчувають&quot; одне одного на відстані? Сонце знаходиться за 150 мільйонів кілометрів, але Земля відчуває його притягання. Для пояснення цього явища ми використовуємо поняття <strong>поля</strong>.</p>
+<p><strong>Гравітаційне поле</strong> - це особливий вид матерії, який створюється будь-яким тілом, що має масу, і проявляється в тому, що діє з певною силою на будь-яке інше тіло, внесене в це поле.</p>
+<p><strong>Аналогія:</strong> Уявіть, що ми натягнули велике гумове полотно. Якщо ми покладемо на нього важку кулю (наприклад, для боулінгу), полотно прогнеться. Це викривлення і є своєрідним аналогом гравітаційного поля. Тепер, якщо ми запустимо поблизу цієї великої кулі маленьку кульку (наприклад, скляну), вона не буде рухатись прямо, а скочуватиметься у викривлену ямку. Саме так масивні тіла &quot;диктують&quot; іншим тілам, як їм рухатись (хоча і менш масивні тіла так само впливають на більш масивні, їхній вплив зазвичай є меншим через меншу масу). Однак варто пам'ятати, що це лише двовимірна аналогія для тривимірного простору. Крім того, в цій аналогії викривлення створюється силою тяжіння Землі чи іншим масивним тілом, тобто ми пояснюємо гравітацію через гравітацію. Проте, як візуальна модель, ця аналогія є надзвичайно ефективною.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Spacetime_lattice_analogy_white.svg" alt="Spacetime curvature schematic" height="380" width="1020">
+<br>
+Рис. 1. Аналогія деформації простору-часу, спричиненої планетарною масою.
+By Original: Mysid Derivative work: Waddie96 - This file was derived from: <a href="https://commons.wikimedia.org/wiki/File:Spacetime_lattice_analogy.svg" title="File:Spacetime lattice analogy.svg">Spacetime lattice analogy.svg</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=174535335">Link</a>. <a href="https://en.wikipedia.org/wiki/Gravity">Wikipedia</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Закон всесвітнього тяжіння<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Встановлення залежностей<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Закон всесвітнього тяжіння - це фундаментальний закон, який кількісно описує гравітаційну взаємодію. Давайте розберемося, як Ньютон дійшов до нього.</p>
+<p>Довгий час люди спостерігали за рухом планет та їх супутників і падінням тіл на Землі, але вважали це абсолютно різними явищами. Геніальність Ісаака Ньютона полягала в тому, що він об'єднав ці два явища одним універсальним законом.</p>
+<p>Легенда про яблуко, що впало на голову Ньютону, є спрощенням, але вона чудово ілюструє хід його думок. Ньютон поставив собі питання: якщо яблуко падає на Землю, то чи &quot;падає&quot; на неї й Місяць? Відповідь - так! Якби на Місяць не діяла сила, він би за першим законом Ньютона рухався прямолінійно і рівномірно і давно полетів би від Землі. Оскільки він рухається по криволінійній (майже коловій) орбіті, це означає, що на нього постійно діє сила, спрямована до центру Землі. Ця сила змушує його постійно &quot;падати&quot; на Землю, але через свою величезну швидкість він ніколи не досягає поверхні, а залишається на орбіті.</p>
+<p>Далі Ньютон почав міркувати математично.</p>
+<ol class="arabic">
+<li><p><strong>Залежність від відстані.</strong> Він порівняв прискорення, з яким падає яблуко на поверхні Землі <span class="math notranslate nohighlight">\(g \approx 9.8 \text{ м/с}^2\)</span>, з доцентровим прискоренням Місяця на його орбіті.</p>
+<ul>
+<li><p>Місяць рухається по коловій орбіті, отже, на нього діє доцентрова сила, яка і створює доцентрове прискорення <span class="math notranslate nohighlight">\(a_{\text{доц}}\)</span>. Це прискорення можна обчислити за формулою:</p>
+<div class="math notranslate nohighlight">
+\[a_{\text{доц}} = \frac{v^2}{R_M}\]</div>
+<p>де <span class="math notranslate nohighlight">\(v\)</span> - швидкість Місяця, а <span class="math notranslate nohighlight">\(R_M\)</span> - радіус його орбіти. Швидкість можна знайти як довжину орбіти, поділену на період обертання <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[v = \frac{2\pi R_M}{T}\]</div>
+<p>Підставивши це у формулу прискорення, отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[a_{\text{доц}} = \frac{(2\pi R_M/T)^2}{R_M} = \frac{4\pi^2 R_M}{T^2}\]</div>
+</li>
+<li><p>Ньютон знав, що радіус орбіти Місяця приблизно в 60 разів більший за радіус Землі <span class="math notranslate nohighlight">\(R_M \approx 60 R_З\)</span>, а період обертання Місяця <span class="math notranslate nohighlight">\(T \approx 27.3\)</span> доби. Провівши розрахунки, він отримав, що доцентрове прискорення Місяця <span class="math notranslate nohighlight">\(a_{\text{доц}} \approx 0.00272 \, \text{м}/\text{с}^2\)</span>.</p></li>
+<li><p>Далі він порівняв це прискорення з прискоренням вільного падіння біля поверхні Землі (тобто з прискоренням вільного падіння на відстані радіусу Землі <span class="math notranslate nohighlight">\(R_З\)</span> від центру Землі):</p>
+<div class="math notranslate nohighlight">
+\[\frac{g}{a_{\text{доц}}} \approx \frac{9.8}{0.00272} \approx 3600\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(3600 = 60^2\)</span>, це означає, що</p>
+<div class="math notranslate nohighlight">
+\[\frac{a_{\text{доц}}}{g} = \frac{1}{60^2} = \left(\frac{R_З}{R_M}\right)^2\]</div>
+<p>тобто прискорення (а отже, і сила) зменшується обернено пропорційно <strong>квадрату відстані</strong> від центру Землі!</p>
+</li>
+<li><p>Підсумовуємо цей результат. Обчисливши доцентрове прискорення Місяця (знаючи радіус його орбіти та період обертання), Ньютон виявив, що воно приблизно в <span class="math notranslate nohighlight">\(3600\)</span> разів менше за прискорення яблука біля поверхні Землі. Він помітив, що <span class="math notranslate nohighlight">\(3600 = 60^2\)</span>. Це привело його до висновку: сила гравітації зменшується обернено пропорційно <strong>квадрату відстані</strong> між тілами:</p>
+<div class="math notranslate nohighlight">
+\[F \propto \frac{1}{r^2}\]</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Залежність від маси.</strong> Згідно з другим законом Ньютона, сила пропорційна масі тіла, на яке вона діє <span class="math notranslate nohighlight">\(F \propto m_1\)</span>. Але згідно з третім законом Ньютона, дія дорівнює протидії. Якщо Земля притягує яблуко, то і яблуко з такою ж силою притягує Землю. Отже, сила має бути пропорційна і масі другого тіла <span class="math notranslate nohighlight">\(F \propto m_2\)</span>.</p>
+<p>Об'єднавши ці два висновки, Ньютон отримав, що сила пропорційна добутку мас і обернено пропорційна квадрату відстані:</p>
+<div class="math notranslate nohighlight">
+\[F \propto \frac{m_1 m_2}{r^2}\]</div>
+<p>Щоб перетворити пропорційність на рівність, ми вводимо коефіцієнт пропорційності - гравітаційну сталу <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h3>Формулювання та формула<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p><strong>Закон всесвітнього тяжіння:</strong> Два будь-які тіла притягуються одне до одного із силою, прямо пропорційною добутку їхніх мас і обернено пропорційною квадрату відстані між ними.</p>
+<p>Математично цей закон записується так:</p>
+<div class="math notranslate nohighlight">
+\[
+F = G \frac{m_1 m_2}{r^2}
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F\)</span> - сила всесвітнього тяжіння. Одиниця вимірювання в СІ: <strong>ньютон (Н)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_1\)</span> та <span class="math notranslate nohighlight">\(m_2\)</span> - маси тіл, що взаємодіють. Одиниця вимірювання в СІ: <strong>кілограм (кг)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(r\)</span> - відстань між центрами мас тіл. Одиниця вимірювання в СІ: <strong>метр (м)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(G\)</span> - гравітаційна стала. Одиниця вимірювання в СІ: <span class="math notranslate nohighlight">\(\frac{\text{Н} \cdot \text{м}^2}{\text{кг}^2}\)</span></p></li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/archive/0/0e/20240528025747%21NewtonsLawOfUniversalGravitation.svg" alt="NewtonsLawOfUniversalGravitation.svg" height="250" width="400">
+<br>
+Рис. 2. Закон всесвітнього тяжіння.
+Автор: <a href="https://commons.wikimedia.org/w/index.php?title=User:Dna-webmaster&amp;action=edit&amp;redlink=1" class="new" title="User:Dna-webmaster (page does not exist)">Dennis Nilsson</a>, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3455682">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Закон_всесвітнього_тяжіння">Wikipedia</a></p></section>
+<section id="id7">
+<h3>Гравітаційна стала та її фізичний зміст<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Гравітаційна стала</strong> <span class="math notranslate nohighlight">\(G\)</span> - це одна з фундаментальних фізичних констант. Її значення було вперше точно виміряно Генрі Кавендішем у 1798 році за допомогою геніального експерименту з крутильними терезами, який дозволив виміряти надзвичайно слабку силу притягання між свинцевими кулями в лабораторії.</p>
+<p>Її числове значення:</p>
+<div class="math notranslate nohighlight">
+\[
+G \approx 6.67 \cdot 10^{-11} \frac{\text{Н} \cdot \text{м}^2}{\text{кг}^2}
+\]</div>
+<p><strong>Фізичний зміст гравітаційної сталої:</strong> гравітаційна стала чисельно дорівнює силі, з якою притягуються два тіла масою 1 кг кожне, перебуваючи на відстані 1 м одне від одного.</p>
+<p>Маленьке значення <span class="math notranslate nohighlight">\(G\)</span> пояснює, чому ми не помічаємо гравітаційного притягання між повсякденними предметами (наприклад, між двома людьми або між вами та вашим столом). Ця сила надзвичайно мала. Вона стає значною лише тоді, коли хоча б одне з тіл має астрономічну масу (як планета чи зірка).</p>
+</section>
+<section id="id8">
+<h3>Дослід Генрі Кавендіша<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Значення гравітаційної сталої було вперше експериментально визначено англійським вченим Генрі Кавендішем у 1798 році. Він використав для цього дуже чутливий прилад - крутильні терези. У його експерименті дві маленькі свинцеві кульки, закріплені на коромислі, підвішеному на тонкій нитці, притягувалися до двох великих нерухомих свинцевих куль. За кутом закручування нитки Кавендіш зміг обчислити силу притягання і, знаючи маси куль та відстань між ними, визначити значення <span class="math notranslate nohighlight">\(G\)</span>. Цей експеримент часто називають &quot;зважуванням Землі&quot;, оскільки, знаючи <span class="math notranslate nohighlight">\(G\)</span>, стало можливим обчислити масу нашої планети.</p>
+</section>
+<section id="id9">
+<h3>Межі застосування закону<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Закон всесвітнього тяжіння працює з неймовірною точністю в більшості випадків, але має свої межі:</p>
+<ol class="arabic simple">
+<li><p>Закон сформульовано для <strong>матеріальних точок</strong>. Він також є точним для тіл, що мають форму кулі з рівномірним розподілом маси (або розподілом, що залежить лише від радіуса). У такому випадку <span class="math notranslate nohighlight">\(r\)</span> - це відстань між центрами цих куль. Саме тому він добре описує рух планет.</p></li>
+<li><p>Закон всесвітнього тяжіння Ньютона є частинним випадком більш загальної теорії - <strong>загальної теорії відносності</strong> Альберта Ейнштейна. Теорія Ейнштейна описує гравітацію не як силу, а як викривлення простору-часу масивними об'єктами. Однак в умовах слабких гравітаційних полів і швидкостей, набагато менших за швидкість світла (тобто в майже всіх ситуаціях, з якими ми стикаємось), закон Ньютона дає надзвичайно точні результати.</p></li>
+<li><p>У дуже сильних гравітаційних полях (біля чорних дір або поблизу масивних зір) або при швидкостях, близьких до швидкості світла, розрахунки за законом Ньютона стають неточними. У таких випадках використовується <strong>Загальна теорія відносності</strong> Альберта Ейнштейна.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Сила тяжіння та прискорення вільного падіння<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Давайте тепер розглянемо найближчий до нас прояв закону всесвітнього тяжіння.</p>
+<section id="id11">
+<h3>Сила тяжіння<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p><strong>Сила тяжіння</strong> <span class="math notranslate nohighlight">\(\vec{F}_{\text{тяж}}\)</span> - це сила, з якою планета (або інше масивне небесне тіло) притягує до себе тіла, що знаходяться на її поверхні або поблизу неї.</p>
+<p>По суті, це просто окремий випадок закону всесвітнього тяжіння. Давайте виведемо формулу.</p>
+<p>Нехай маємо тіло масою <span class="math notranslate nohighlight">\(m\)</span>, яке знаходиться на висоті <span class="math notranslate nohighlight">\(h\)</span> над поверхнею Землі. Маса Землі - <span class="math notranslate nohighlight">\(M_З\)</span>, а її радіус - <span class="math notranslate nohighlight">\(R_З\)</span>. Відстань від центру Землі до тіла буде <span class="math notranslate nohighlight">\(r = R_З + h\)</span>.</p>
+<p>Підставимо ці значення в закон всесвітнього тяжіння:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\text{тяж}} = G \frac{m M_З}{(R_З + h)^2}
+\]</div>
+<p>Це і є формула для розрахунку сили тяжіння, що діє на тіло на будь-якій висоті <span class="math notranslate nohighlight">\(h\)</span> над поверхнею Землі.</p>
+</section>
+<section id="id12">
+<h3>Прискорення вільного падіння<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>З другого закону Ньютона ми знаємо, що сила надає тілу прискорення <span class="math notranslate nohighlight">\(F = ma\)</span>. Сила тяжіння також надає тілу прискорення. Це прискорення називається <strong>прискоренням вільного падіння</strong> і позначається як <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p><strong>Прискорення вільного падіння</strong> <span class="math notranslate nohighlight">\(g\)</span> - це прискорення, якого набуває тіло, рухаючись під дією лише сили тяжіння. Одиниця вимірювання в СІ: <strong>метр на секунду в квадраті (<span class="math notranslate nohighlight">\(\text{м}\text{с}^2\)</span>)</strong>.</p>
+<p>Отже, ми можемо записати <span class="math notranslate nohighlight">\(F_{\text{тяж}} = mg\)</span>. Тепер прирівняємо два вирази для сили тяжіння:</p>
+<div class="math notranslate nohighlight">
+\[
+mg = G \frac{M_З m}{(R_З + h)^2}
+\]</div>
+<p>Як ми бачимо, маса тіла <span class="math notranslate nohighlight">\(m\)</span> скорочується! Це надзвичайно важливий висновок: <strong>прискорення вільного падіння не залежить від маси падаючого тіла</strong>. Це означає, що в вакуумі (де немає опору повітря) і пір'їнка, і камінь падатимуть з однаковим прискоренням.</p>
+<p>Після скорочення маси <span class="math notranslate nohighlight">\(m\)</span> ми отримуємо формулу для прискорення вільного падіння на висоті <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+g = G \frac{M_З}{(R_З + h)^2}
+\]</div>
+<p>Якщо тіло знаходиться поблизу поверхні Землі, то висота <span class="math notranslate nohighlight">\(h\)</span> є дуже малою в порівнянні з радіусом Землі <span class="math notranslate nohighlight">\(R_З\)</span> (<span class="math notranslate nohighlight">\(R_З \approx 6370 \text{ км}\)</span>), тому ми можемо знехтувати <span class="math notranslate nohighlight">\(h\)</span> і вважати <span class="math notranslate nohighlight">\(h \approx 0\)</span>. Тоді формула спрощується:</p>
+<div class="math notranslate nohighlight">
+\[
+g_0 = G \frac{M_З}{R_З^2}
+\]</div>
+<p>Це формула для прискорення вільного падіння біля поверхні Землі. Підставивши значення <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(M_З\)</span> та <span class="math notranslate nohighlight">\(R_З\)</span>, ми отримаємо добре відоме нам значення:</p>
+<div class="math notranslate nohighlight">
+\[g_0 \approx 9.8 \text{ м/с}^2\]</div>
+<p>Примітка: значення <span class="math notranslate nohighlight">\(9.8 \text{ м/с}^2\)</span> є усередненим. У конкретній точці Землі прискорення вільного падіння може трохи відрізнятись від цього значення.</p>
+<p>Аналогічно отримується формула для прискорення вільного падіння для довільної планети:</p>
+<div class="math notranslate nohighlight">
+\[
+g_0 = G \frac{M}{(R + h)^2}
+\]</div>
+<p>або за умови <span class="math notranslate nohighlight">\(h \approx 0\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+g_0 = G \frac{M}{R^2}
+\]</div>
+<p>де <span class="math notranslate nohighlight">\(M\)</span> - маса планети та <span class="math notranslate nohighlight">\(R\)</span> - радіус планети.</p>
+</section>
+<section id="id13">
+<h3>Як ми &quot;зважили&quot; Землю?<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>А тепер цікавий наслідок. Подивіться на останню формулу. Ми можемо виміряти <span class="math notranslate nohighlight">\(g_0\)</span>, ми можемо виміряти радіус Землі <span class="math notranslate nohighlight">\(R_З = 6370 \text{ км}\)</span> (це зробили ще в давнину), а <span class="math notranslate nohighlight">\(G\)</span> ми знаємо з досліду Кавендіша. Отже, ми можемо обчислити масу Землі, не ставлячи її на ваги!</p>
+<p>З формули <span class="math notranslate nohighlight">\(g_0 = G \frac{M_З}{R_З^2}\)</span> виразимо масу Землі <span class="math notranslate nohighlight">\(M_З\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+M_З = \frac{g_0 R_З^2}{G}
+\]</div>
+<p>Саме тому дослід Кавендіша часто називають &quot;зважуванням Землі&quot;.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Earth-moon-field.svg" alt="Earth-moon-field.svg" height="420" width="640">
+<br>
+Рис. 3. Зображення гравітаційного поля Землі та Місяця разом (не в масштабі). Векторне поле (синє) та пов'язане з ним скалярне потенційне поле (червоне). Точка P між Землею та Місяцем є точкою рівноваги.
+By <a href="https://commons.wikimedia.org/w/index.php?title=User:MikeRun&amp;action=edit&amp;redlink=1" class="new" title="User:MikeRun (page does not exist)">MikeRun</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=74091748">Link</a>. <a href="https://en.wikipedia.org/wiki/Gravitational_field">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Cavendish_Torsion_Balance_Diagram.svg" alt="Cavendish Torsion Balance Diagram.svg" height="500" width="457">
+<br>
+Рис. 4. Схема крутильних терезів, що використовувалися в експерименті Кавендіша, проведеному Генрі Кавендішем у 1798 році для вимірювання гравітаційної сталої G. Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=2660162">Link</a>. <a href="https://uk.wikipedia.org/wiki/Експеримент_Кавендіша">Wikipedia</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h2>Перша космічна швидкість<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>Гравітація не тільки змушує тіла падати, але й дозволяє їм літати - по орбіті. Давайте розберемося, як це можливо. Уявимо собі високу гору і гармату на її вершині (це уявний експеримент Ньютона).</p>
+<ul class="simple">
+<li><p>Якщо вистрілити з невеликою швидкістю, ядро пролетить невелику відстань і впаде на Землю.</p></li>
+<li><p>Якщо збільшити швидкість, воно полетить далі.</p></li>
+<li><p>При досягненні певної швидкості, ядро полетить так далеко, що траєкторія його падіння &quot;повторить&quot; кривизну земної поверхні. Воно почне падати, але поверхня Землі буде &quot;втікати&quot; від нього з тією ж швидкістю. Ядро вийде на колову орбіту і стане штучним супутником Землі.</p></li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Newton_Cannon.svg" alt="Newton Cannon.svg" height="240" width="240">
+<br>
+Рис. 5. Траєкторії тіл, запущених з різними початковими швидкостями. Тіла A та B падають на Землю. Тіло C виходить на колову орбіту (перша космічна швидкість), D - на еліптичну орбіту. Тіло E, запущене з другою космічною швидкістю, покидає гравітаційне поле планети по параболі.
+Автор: <a href="https://commons.wikimedia.org/w/index.php?title=User:Brian_Brondel&amp;action=edit&amp;redlink=1" class="new" title="User:Brian Brondel (page does not exist)">user:Brian Brondel</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1657849">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Друга_космічна_швидкість">Wikipedia</a></p><blockquote>
+<div><p><strong>Перша космічна швидкість</strong> <span class="math notranslate nohighlight">\(v\)</span> - це мінімальна швидкість, яку необхідно надати тілу на певній висоті над поверхнею планети, щоб воно стало її супутником, рухаючись по коловій орбіті.</p>
+</div></blockquote>
+<p>Щоб тіло рухалось по колу, на нього має діяти доцентрова сила. У випадку супутника на орбіті роль доцентрової сили виконує сила тяжіння. Доцентрова сила визначається як добуток маси тіла <span class="math notranslate nohighlight">\(m\)</span> та доцентрового прискорення <span class="math notranslate nohighlight">\(a = v^2 / r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[F_{доц} = \frac{mv^2}{r}\]</div>
+<p>Сила тяжіння на висоті <span class="math notranslate nohighlight">\(h\)</span> (де <span class="math notranslate nohighlight">\(r = R + h\)</span>) визначається як</p>
+<div class="math notranslate nohighlight">
+\[F_{\text{тяж}} = G \frac{m M}{(R + h)^2}\]</div>
+<p>де <span class="math notranslate nohighlight">\(M\)</span> - маса планети та <span class="math notranslate nohighlight">\(R\)</span> - радіус планети.</p>
+<p>Прирівняємо ці дві сили:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{mv^2}{R + h} = G \frac{m M}{(R + h)^2}
+\]</div>
+<p>Скорочуємо масу супутника <span class="math notranslate nohighlight">\(m\)</span> і один раз скорочуємо <span class="math notranslate nohighlight">\((R + h)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 = G \frac{M}{R + h}
+\]</div>
+<p>Звідси отримуємо формулу для першої космічної швидкості на висоті <span class="math notranslate nohighlight">\(h\)</span> над поверхнею планети (довільної планети, не обов'язково Землі):</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{G \frac{M}{R + h}}
+\]</div>
+<p>Для випадків руху поблизу поверхні планети <span class="math notranslate nohighlight">\(h \approx 0\)</span> формула для першої космічної швидкості набуває вигляду:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{G \frac{M}{R}}
+\]</div>
+<section id="id15">
+<h3>Спрощена формула та значення для Землі<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>Ми можемо зробити ще одне перетворення. Згадаймо, що прискорення вільного падіння біля поверхні планети <span class="math notranslate nohighlight">\(g_0 = G \frac{M}{R^2}\)</span>. Звідси <span class="math notranslate nohighlight">\(GM = g_0 R^2\)</span>. Підставимо це в нашу формулу для першої космічної швидкості <span class="math notranslate nohighlight">\(v\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{\frac{g_0 R^2}{R}} = \sqrt{g_0 R}
+\]</div>
+<p>Це дуже зручна формула для обчислень. Давайте розрахуємо першу космічну швидкість для Землі:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{g_0 R_З}
+\]</div>
+<div class="math notranslate nohighlight">
+\[v = \sqrt{9.8 \text{ м}/\text{с}^2 \cdot 6.37 \cdot 10^6 \text{ м}} \approx 7900 \text{ м/с} \approx 28440 \text{ км/год}\]</div>
+<p>Отже, перша космічна швидкість для Землі становить приблизно <strong>7.9 км/с</strong>.</p>
+</section>
+</section>
+<section id="id16">
+<h2>Друга та третя космічні швидкості<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<p>Якщо ми будемо збільшувати швидкість тіла, його орбіта з колової стане еліптичною. При досягненні певної швидкості тіло зможе подолати гравітаційне тяжіння планети і назавжди покинути її, перетворившись на супутник Сонця.</p>
+<blockquote>
+<div><p><strong>Друга космічна швидкість</strong> <span class="math notranslate nohighlight">\(v_2\)</span> - це найменша швидкість, яку необхідно надати тілу, щоб воно подолало гравітаційне поле планети.</p>
+</div></blockquote>
+<p>Вона пов'язана з першою космічною швидкістю простою формулою:</p>
+<div class="math notranslate nohighlight">
+\[
+v_2 = \sqrt{2} \cdot v_1
+\]</div>
+<p>де <span class="math notranslate nohighlight">\(v_1\)</span> - перша космічна швидкість. Ця формула виводиться із закону збереження енергії, за яким кінетична енергія тіла має бути достатньою для подолання гравітаційної потенціальної енергії планети (на наступних сторінках ми розглянемо, що таке кінетична та потенціальна енергії).</p>
+<p>Для Землі значення другої космічної швидкості становить</p>
+<div class="math notranslate nohighlight">
+\[v_2 \approx 1.4142 \cdot 7.9 \text{ км/с} \approx \textbf{11.2 км/с}\]</div>
+<p>А що, якщо ми хочемо покинути не тільки Землю, але і всю Сонячну систему? Для цього потрібно подолати тяжіння Сонця.</p>
+<blockquote>
+<div><p><strong>Третя космічна швидкість</strong> <span class="math notranslate nohighlight">\(v_3\)</span> - це мінімальна швидкість, яку необхідно надати тілу біля поверхні Землі, щоб воно покинуло Сонячну систему.</p>
+</div></blockquote>
+<p>Її значення залежить від напрямку запуску тіла з планети. При оптимальному запуску тіла із Землі значення третьої космічної швидкості становить приблизно <strong>16.7 км/с</strong>.</p>
+</section>
+<section id="id17">
+<h2>Підсумок<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Закон</p></th>
+<th class="head text-left"><p>Визначення / Опис</p></th>
+<th class="head text-left"><p>Формула / Значення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Гравітаційна взаємодія</strong></p></td>
+<td class="text-left"><p>Універсальна взаємодія між будь-якими тілами, що мають масу. Завжди є силою притягання.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Гравітаційне поле</strong></p></td>
+<td class="text-left"><p>Вид матерії, що створюється об'єктами, що мають масу, і діє на інші тіла, що вносяться в це поле.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Закон всесвітнього тяжіння</strong></p></td>
+<td class="text-left"><p>Два тіла притягуються одне до одного із силою, прямо пропорційною добутку їхніх мас і обернено пропорційною квадрату відстані між ними.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(F = G \frac{m_1 m_2}{r^2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Гравітаційна стала</strong> <span class="math notranslate nohighlight">\(G\)</span></p></td>
+<td class="text-left"><p>Фундаментальна фізична константа, що визначає інтенсивність гравітаційної взаємодії.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(G \approx 6.67 \cdot 10^{-11} \frac{\text{Н} \cdot \text{м}^2}{\text{кг}^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Сила тяжіння</strong> <span class="math notranslate nohighlight">\(F_{\text{тяж}}\)</span></p></td>
+<td class="text-left"><p>Окремий випадок сили всесвітнього тяжіння; сила, з якою планета притягує тіла поблизу своєї поверхні.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(F_{\text{тяж}} = G \frac{m M}{(R + h)^2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Прискорення вільного падіння</strong> <span class="math notranslate nohighlight">\(g\)</span></p></td>
+<td class="text-left"><p>Прискорення, якого набуває тіло під дією лише сили тяжіння. Не залежить від маси тіла.</p></td>
+<td class="text-left"><p>На висоті <span class="math notranslate nohighlight">\(h\)</span>: <span class="math notranslate nohighlight">\(g = G \frac{M}{(R + h)^2}\)</span> <br> Поблизу поверхні: <span class="math notranslate nohighlight">\(g_0 = G \frac{M}{R^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Значення <span class="math notranslate nohighlight">\(g\)</span> для Землі</strong></p></td>
+<td class="text-left"><p>Усереднене значення прискорення вільного падіння на поверхні Землі.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(g_0 \approx 9.8 \text{ м/с}^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Обчислення маси планети</strong> <span class="math notranslate nohighlight">\(M\)</span></p></td>
+<td class="text-left"><p>Масу планети можна знайти, знаючи її радіус, <span class="math notranslate nohighlight">\(g\)</span> на поверхні та гравітаційну сталу.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(M = \frac{g_0 R^2}{G}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Перша космічна швидкість</strong> <span class="math notranslate nohighlight">\(v_1\)</span></p></td>
+<td class="text-left"><p>Мінімальна швидкість, яку потрібно надати тілу, щоб воно стало супутником планети, рухаючись по коловій орбіті.</p></td>
+<td class="text-left"><p>На висоті <span class="math notranslate nohighlight">\(h\)</span>: <span class="math notranslate nohighlight">\(v_1 = \sqrt{G \frac{M}{R + h}}\)</span> <br> Поблизу поверхні: <span class="math notranslate nohighlight">\(v_1 = \sqrt{g_0 R}\)</span> <br> Для Землі: <span class="math notranslate nohighlight">\(\approx 7.9 \text{ км/с}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Друга космічна швидкість</strong> <span class="math notranslate nohighlight">\(v_2\)</span></p></td>
+<td class="text-left"><p>Найменша швидкість, необхідна тілу, щоб подолати гравітаційне поле планети та стати супутником Сонця.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(v_2 = \sqrt{2} \cdot v_1\)</span> <br> Для Землі: <span class="math notranslate nohighlight">\(\approx 11.2 \text{ км/с}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Третя космічна швидкість</strong> <span class="math notranslate nohighlight">\(v_3\)</span></p></td>
+<td class="text-left"><p>Мінімальна швидкість, необхідна тілу біля поверхні Землі, щоб покинути Сонячну систему.</p></td>
+<td class="text-left"><p>Для Землі: <span class="math notranslate nohighlight">\(\approx 16.7 \text{ км/с}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id18">
+<h2>Додаткові матеріали<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%B2%D1%81%D0%B5%D1%81%D0%B2%D1%96%D1%82%D0%BD%D1%8C%D0%BE%D0%B3%D0%BE_%D1%82%D1%8F%D0%B6%D1%96%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Закон_всесвітнього_тяжіння</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BB%D0%B0_%D1%82%D1%8F%D0%B6%D1%96%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Сила_тяжіння</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B2%D1%96%D1%82%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D0%B5_%D0%BF%D0%BE%D0%BB%D0%B5">https://uk.wikipedia.org/wiki/Гравітаційне_поле</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B2%D1%96%D1%82%D0%B0%D1%86%D1%96%D0%B9%D0%BD%D0%B0_%D1%81%D1%82%D0%B0%D0%BB%D0%B0">https://uk.wikipedia.org/wiki/Гравітаційна_стала</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82_%D0%9A%D0%B0%D0%B2%D0%B5%D0%BD%D0%B4%D1%96%D1%88%D0%B0">https://uk.wikipedia.org/wiki/Експеримент_Кавендіша</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%88%D0%B0_%D0%BA%D0%BE%D1%81%D0%BC%D1%96%D1%87%D0%BD%D0%B0_%D1%88%D0%B2%D0%B8%D0%B4%D0%BA%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Перша_космічна_швидкість</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D1%80%D1%83%D0%B3%D0%B0_%D0%BA%D0%BE%D1%81%D0%BC%D1%96%D1%87%D0%BD%D0%B0_%D1%88%D0%B2%D0%B8%D0%B4%D0%BA%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Друга_космічна_швидкість</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D0%B5%D1%82%D1%8F_%D0%BA%D0%BE%D1%81%D0%BC%D1%96%D1%87%D0%BD%D0%B0_%D1%88%D0%B2%D0%B8%D0%B4%D0%BA%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Третя_космічна_швидкість</a></p></li>
+</ul>
+</section>
+<section id="id19">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation">https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gravity">https://en.wikipedia.org/wiki/Gravity</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gravitational_field">https://en.wikipedia.org/wiki/Gravitational_field</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gravitational_constant">https://en.wikipedia.org/wiki/Gravitational_constant</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cavendish_experiment">https://en.wikipedia.org/wiki/Cavendish_experiment</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Henry_Cavendish">https://en.wikipedia.org/wiki/Henry_Cavendish</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gravitational_acceleration">https://en.wikipedia.org/wiki/Gravitational_acceleration</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Escape_velocity">https://en.wikipedia.org/wiki/Escape_velocity</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="newton-second-third-laws.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Другий та третій закони Ньютона</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../internal_energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Гравітаційна взаємодія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Гравітаційне поле</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Закон всесвітнього тяжіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Встановлення залежностей</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Формулювання та формула</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Гравітаційна стала та її фізичний зміст</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дослід Генрі Кавендіша</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Межі застосування закону</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Сила тяжіння та прискорення вільного падіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Сила тяжіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Прискорення вільного падіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Як ми "зважили" Землю?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Перша космічна швидкість</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Спрощена формула та значення для Землі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Друга та третя космічні швидкості</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

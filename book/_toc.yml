@@ -36,15 +36,19 @@ parts:
       #- file: astronomy/to_be_published
       - file: astronomy/universe
 
-  - caption: ФІЗИКА
+  - caption: ФІЗИКА. МЕХАНІКА
     chapters: 
       - file: physics/mechanics/kinematics-01
       - file: physics/mechanics/kinematics-02
       - file: physics/mechanics/kinematics-03
       - file: physics/mechanics/kinematics-04
       - file: physics/mechanics/kinematics-05
-      - file: physics/mechanics/newton_first_law
-      - file: physics/mechanics/newton_second_third_laws
+      - file: physics/mechanics/newton-first-law
+      - file: physics/mechanics/newton-second-third-laws
+      - file: physics/mechanics/newtons-law-of-universal-gravitation
+
+  - caption: ТЕРМОДИНАМІКА
+    chapters:   
       - file: physics/internal_energy
         sections:
           - file: physics/heat_transfer
