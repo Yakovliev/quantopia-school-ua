@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/newtons-law-of-universal-gravitation';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -489,8 +491,31 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Гравітаційна взаємодія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Гравітаційне поле</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Закон всесвітнього тяжіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Встановлення залежностей</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Формулювання та формула</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Гравітаційна стала та її фізичний зміст</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дослід Г. Кавендіша</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Межі застосування закону</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Сила тяжіння та прискорення вільного падіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Сила тяжіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Прискорення вільного падіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Як ми "зважили" Землю?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Перша космічна швидкість</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Спрощена формула та значення для Землі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Друга та третя космічні швидкості</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -505,10 +530,238 @@
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Закон всесвітнього тяжіння<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Додаткові матеріали<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-</section>
+<h2>Гравітаційна взаємодія<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>З давніх-давен люди спостерігали, що предмети падають на землю. Але лише Ісаак Ньютон першим усвідомив, що сила, яка змушує яблуко падати на землю, і сила, яка утримує Місяць на орбіті навколо Землі, - це одна й та сама сила.</p>
+<p><strong>Гравітаційна взаємодія</strong> - це універсальна взаємодія, яка існує між будь-якими об'єктами, що мають масу. Простими словами, всі тіла у Всесвіті притягуються одне до одного. Ця сила завжди є силою притягання, вона ніколи не буває силою відштовхування.</p>
 <section id="id3">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<h3>Гравітаційне поле<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Як же тіла &quot;відчувають&quot; одне одного на відстані? Сонце знаходиться за 150 мільйонів кілометрів, але Земля відчуває його притягання. Для пояснення цього явища ми використовуємо поняття <strong>поля</strong>.</p>
+<p><strong>Гравітаційне поле</strong> - це особливий вид матерії, який створюється будь-яким тілом, що має масу, і проявляється в тому, що діє з певною силою на будь-яке інше тіло, внесене в це поле.</p>
+<p><strong>Аналогія:</strong> Уявіть, що ми натягнули велике гумове полотно. Якщо ми покладемо на нього важку кулю (наприклад, для боулінгу), полотно прогнеться. Це викривлення і є своєрідним аналогом гравітаційного поля. Тепер, якщо ми запустимо поблизу цієї великої кулі маленьку кульку (наприклад, скляну), вона не буде рухатись прямо, а скочуватиметься у викривлену ямку. Саме так масивні тіла &quot;диктують&quot; іншим тілам, як їм рухатись (аналогічно менш масивні тіла &quot;диктують&quot; рух більш масивним тілам).</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Закон всесвітнього тяжіння<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Встановлення залежностей<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Закон всесвітнього тяжіння - це фундаментальний закон, який кількісно описує гравітаційну взаємодію. Давайте розберемося, як Ньютон дійшов до нього.</p>
+<p>Довгий час люди спостерігали за рухом планет та їх супутників і падінням тіл на Землі, але вважали це абсолютно різними явищами. Геніальність Ісаака Ньютона полягала в тому, що він об'єднав ці два явища одним універсальним законом.</p>
+<p>Легенда про яблуко, що впало на голову Ньютону, є спрощенням, але вона чудово ілюструє хід його думок. Ньютон поставив собі питання: якщо яблуко падає на Землю, то чи &quot;падає&quot; на неї й Місяць? Відповідь - так! Якби на Місяць не діяла сила, він би за першим законом Ньютона рухався прямолінійно і рівномірно і давно полетів би від Землі. Оскільки він рухається по криволінійній (майже коловій) орбіті, це означає, що на нього постійно діє сила, спрямована до центру Землі. Ця сила змушує його постійно &quot;падати&quot; на Землю, але через свою величезну швидкість він ніколи не досягає поверхні, а залишається на орбіті.</p>
+<p>Далі Ньютон почав міркувати математично.</p>
+<ol class="arabic">
+<li><p><strong>Залежність від відстані.</strong> Він порівняв прискорення, з яким падає яблуко на поверхні Землі <span class="math notranslate nohighlight">\(g \approx 9.8 \text{ м/с}^2\)</span>, з доцентровим прискоренням Місяця на його орбіті.</p>
+<ul>
+<li><p>Місяць рухається по коловій орбіті, отже, на нього діє доцентрова сила, яка і створює доцентрове прискорення <span class="math notranslate nohighlight">\(a_{\text{доц}}\)</span>. Це прискорення можна обчислити за формулою:</p>
+<div class="math notranslate nohighlight">
+\[a_{\text{доц}} = \frac{v^2}{R_M}\]</div>
+<p>де <span class="math notranslate nohighlight">\(v\)</span> - швидкість Місяця, а <span class="math notranslate nohighlight">\(R_M\)</span> - радіус його орбіти. Швидкість можна знайти як довжину орбіти, поділену на період обертання <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[v = \frac{2\pi R_M}{T}\]</div>
+<p>Підставивши це у формулу прискорення, отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[a_{\text{доц}} = \frac{(2\pi R_M/T)^2}{R_M} = \frac{4\pi^2 R_M}{T^2}\]</div>
+</li>
+<li><p>Ньютон знав, що радіус орбіти Місяця приблизно в 60 разів більший за радіус Землі <span class="math notranslate nohighlight">\(R_M \approx 60 R_З\)</span>, а період обертання Місяця <span class="math notranslate nohighlight">\(T \approx 27.3\)</span> доби. Провівши розрахунки, він отримав, що доцентрове прискорення Місяця <span class="math notranslate nohighlight">\(a_{\text{доц}} \approx 0.00272 \, \text{м}/\text{с}^2\)</span>.</p></li>
+<li><p>Далі він порівняв це прискорення з прискоренням вільного падіння біля поверхні Землі (тобто з прискоренням вільного падіння на відстані радіусу Землі <span class="math notranslate nohighlight">\(R_З\)</span> від центру Землі):</p>
+<div class="math notranslate nohighlight">
+\[\frac{g}{a_{\text{доц}}} \approx \frac{9.8}{0.00272} \approx 3600\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(3600 = 60^2\)</span>, це означає, що</p>
+<div class="math notranslate nohighlight">
+\[\frac{a_{\text{доц}}}{g} = \frac{1}{60^2} = \left(\frac{R_З}{R_M}\right)^2\]</div>
+<p>тобто прискорення (а отже, і сила) зменшується обернено пропорційно <strong>квадрату відстані</strong> від центру Землі!</p>
+</li>
+<li><p>Підсумовуємо цей результат. Обчисливши доцентрове прискорення Місяця (знаючи радіус його орбіти та період обертання), Ньютон виявив, що воно приблизно в <span class="math notranslate nohighlight">\(3600\)</span> разів менше за прискорення яблука біля поверхні Землі. Він помітив, що <span class="math notranslate nohighlight">\(3600 = 60^2\)</span>. Це привело його до висновку: сила гравітації зменшується обернено пропорційно <strong>квадрату відстані</strong> між тілами:</p>
+<div class="math notranslate nohighlight">
+\[F \propto \frac{1}{r^2}\]</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Залежність від маси.</strong> Згідно з другим законом Ньютона, сила пропорційна масі тіла, на яке вона діє <span class="math notranslate nohighlight">\(F \propto m_1\)</span>. Але згідно з третім законом Ньютона, дія дорівнює протидії. Якщо Земля притягує яблуко, то і яблуко з такою ж силою притягує Землю. Отже, сила має бути пропорційна і масі другого тіла <span class="math notranslate nohighlight">\(F \propto m_2\)</span>.</p>
+<p>Об'єднавши ці два висновки, Ньютон отримав, що сила пропорційна добутку мас і обернено пропорційна квадрату відстані:</p>
+<div class="math notranslate nohighlight">
+\[F \propto \frac{m_1 m_2}{r^2}\]</div>
+<p>Щоб перетворити пропорційність на рівність, ми вводимо коефіцієнт пропорційності - гравітаційну сталу <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h3>Формулювання та формула<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p><strong>Закон всесвітнього тяжіння:</strong> Два будь-які тіла притягуються одне до одного із силою, прямо пропорційною добутку їхніх мас і обернено пропорційною квадрату відстані між ними.</p>
+<p>Математично цей закон записується так:</p>
+<div class="math notranslate nohighlight">
+\[
+F = G \frac{m_1 m_2}{r^2}
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F\)</span> - сила всесвітнього тяжіння. Одиниця вимірювання в СІ: <strong>ньютон (Н)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_1\)</span> та <span class="math notranslate nohighlight">\(m_2\)</span> - маси тіл, що взаємодіють. Одиниця вимірювання в СІ: <strong>кілограм (кг)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(r\)</span> - відстань між центрами мас тіл. Одиниця вимірювання в СІ: <strong>метр (м)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(G\)</span> - гравітаційна стала. Одиниця вимірювання в СІ: <span class="math notranslate nohighlight">\(\frac{\text{Н} \cdot \text{м}^2}{\text{кг}^2}\)</span></p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Гравітаційна стала та її фізичний зміст<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Гравітаційна стала</strong> <span class="math notranslate nohighlight">\(G\)</span> - це одна з фундаментальних фізичних констант. Її значення було вперше точно виміряно Генрі Кавендішем у 1798 році за допомогою геніального експерименту з крутильними терезами, який дозволив виміряти надзвичайно слабку силу притягання між свинцевими кулями в лабораторії.</p>
+<p>Її числове значення:</p>
+<div class="math notranslate nohighlight">
+\[
+G \approx 6.67 \cdot 10^{-11} \frac{\text{Н} \cdot \text{м}^2}{\text{кг}^2}
+\]</div>
+<p><strong>Фізичний зміст гравітаційної сталої:</strong> гравітаційна стала чисельно дорівнює силі, з якою притягуються два тіла масою 1 кг кожне, перебуваючи на відстані 1 м одне від одного.</p>
+<p>Маленьке значення <span class="math notranslate nohighlight">\(G\)</span> пояснює, чому ми не помічаємо гравітаційного притягання між повсякденними предметами (наприклад, між двома людьми або між вами та вашим столом). Ця сила надзвичайно мала. Вона стає значною лише тоді, коли хоча б одне з тіл має астрономічну масу (як планета чи зірка).</p>
+</section>
+<section id="id8">
+<h3>Дослід Г. Кавендіша<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Значення гравітаційної сталої було вперше експериментально визначено англійським вченим Генрі Кавендішем у 1798 році. Він використав для цього дуже чутливий прилад - крутильні терези. У його експерименті дві маленькі свинцеві кульки, закріплені на коромислі, підвішеному на тонкій нитці, притягувалися до двох великих нерухомих свинцевих куль. За кутом закручування нитки Кавендіш зміг обчислити силу притягання і, знаючи маси куль та відстань між ними, визначити значення <span class="math notranslate nohighlight">\(G\)</span>. Цей експеримент часто називають &quot;зважуванням Землі&quot;, оскільки, знаючи <span class="math notranslate nohighlight">\(G\)</span>, стало можливим обчислити масу нашої планети.</p>
+</section>
+<section id="id9">
+<h3>Межі застосування закону<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Закон всесвітнього тяжіння працює з неймовірною точністю в більшості випадків, але має свої межі:</p>
+<ol class="arabic simple">
+<li><p>Закон сформульовано для <strong>матеріальних точок</strong>. Він також є точним для тіл, що мають форму кулі з рівномірним розподілом маси (або розподілом, що залежить лише від радіуса). У такому випадку <span class="math notranslate nohighlight">\(r\)</span> - це відстань між центрами цих куль. Саме тому він добре описує рух планет.</p></li>
+<li><p>Закон Закон всесвітнього тяжіння Ньютона є частинним випадком більш загальної теорії - <strong>загальної теорії відносності</strong> Альберта Ейнштейна. Теорія Ейнштейна описує гравітацію не як силу, а як викривлення простору-часу масивними об'єктами. Однак в умовах слабких гравітаційних полів і швидкостей, набагато менших за швидкість світла (тобто в майже всіх ситуаціях, з якими ми стикаємось), закон Ньютона дає надзвичайно точні результати.</p></li>
+<li><p>У дуже сильних гравітаційних полях (біля чорних дір або поблизу масивних зір) або при швидкостях, близьких до швидкості світла, розрахунки за законом Ньютона стають неточними. У таких випадках використовується <strong>Загальна теорія відносності</strong> Альберта Ейнштейна.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Сила тяжіння та прискорення вільного падіння<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Давайте тепер розглянемо найближчий до нас прояв закону всесвітнього тяжіння.</p>
+<section id="id11">
+<h3>Сила тяжіння<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p><strong>Сила тяжіння</strong> <span class="math notranslate nohighlight">\(\vec{F}_{\text{тяж}}\)</span> - це сила, з якою планета (або інше масивне небесне тіло) притягує до себе тіла, що знаходяться на її поверхні або поблизу неї.</p>
+<p>По суті, це просто окремий випадок закону всесвітнього тяжіння. Давайте виведемо формулу.</p>
+<p>Нехай маємо тіло масою <span class="math notranslate nohighlight">\(m\)</span>, яке знаходиться на висоті <span class="math notranslate nohighlight">\(h\)</span> над поверхнею Землі. Маса Землі - <span class="math notranslate nohighlight">\(M_З\)</span>, а її радіус - <span class="math notranslate nohighlight">\(R_З\)</span>. Відстань від центру Землі до тіла буде <span class="math notranslate nohighlight">\(r = R_З + h\)</span>.</p>
+<p>Підставимо ці значення в закон всесвітнього тяжіння:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\text{тяж}} = G \frac{m M_З}{(R_З + h)^2}
+\]</div>
+<p>Це і є формула для розрахунку сили тяжіння, що діє на тіло на будь-якій висоті <span class="math notranslate nohighlight">\(h\)</span> над поверхнею Землі.</p>
+</section>
+<section id="id12">
+<h3>Прискорення вільного падіння<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>З другого закону Ньютона ми знаємо, що сила надає тілу прискорення <span class="math notranslate nohighlight">\(F = ma\)</span>. Сила тяжіння також надає тілу прискорення. Це прискорення називається <strong>прискоренням вільного падіння</strong> і позначається як <span class="math notranslate nohighlight">\(g\)</span>.</p>
+<p><strong>Прискорення вільного падіння</strong> <span class="math notranslate nohighlight">\(g\)</span> - це прискорення, якого набуває тіло, рухаючись під дією лише сили тяжіння. Одиниця вимірювання в СІ: <strong>метр на секунду в квадраті (<span class="math notranslate nohighlight">\(\text{м}\text{с}^2\)</span>)</strong>.</p>
+<p>Отже, ми можемо записати <span class="math notranslate nohighlight">\(F_{\text{тяж}} = mg\)</span>. Тепер прирівняємо два вирази для сили тяжіння:</p>
+<div class="math notranslate nohighlight">
+\[
+mg = G \frac{M_З m}{(R_З + h)^2}
+\]</div>
+<p>Як ми бачимо, маса тіла <span class="math notranslate nohighlight">\(m\)</span> скорочується! Це надзвичайно важливий висновок: <strong>прискорення вільного падіння не залежить від маси падаючого тіла</strong>. Це означає, що в вакуумі (де немає опору повітря) і пір'їнка, і камінь падатимуть з однаковим прискоренням.</p>
+<p>Після скорочення маси <span class="math notranslate nohighlight">\(m\)</span> ми отримуємо формулу для прискорення вільного падіння на висоті <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+g = G \frac{M_З}{(R_З + h)^2}
+\]</div>
+<p>Якщо тіло знаходиться поблизу поверхні Землі, то висота <span class="math notranslate nohighlight">\(h\)</span> є дуже малою в порівнянні з радіусом Землі <span class="math notranslate nohighlight">\(R_З\)</span> (<span class="math notranslate nohighlight">\(R_З \approx 6370 \text{ км}\)</span>), тому ми можемо знехтувати <span class="math notranslate nohighlight">\(h\)</span> і вважати <span class="math notranslate nohighlight">\(h \approx 0\)</span>. Тоді формула спрощується:</p>
+<div class="math notranslate nohighlight">
+\[
+g_0 = G \frac{M_З}{R_З^2}
+\]</div>
+<p>Це формула для прискорення вільного падіння біля поверхні Землі. Підставивши значення <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(M_З\)</span> та <span class="math notranslate nohighlight">\(R_З\)</span>, ми отримаємо добре відоме нам значення:</p>
+<p><span class="math notranslate nohighlight">\(g_0 \approx 9.8 \text{ м/с}^2\)</span>.</p>
+<p>Аналогічно отримується формула для прискорення вільного падіння для довільної планети:</p>
+<div class="math notranslate nohighlight">
+\[
+g_0 = G \frac{M}{R^2}
+\]</div>
+<p>де <span class="math notranslate nohighlight">\(M\)</span> - маса планети та <span class="math notranslate nohighlight">\(R\)</span> - радіус планети.</p>
+</section>
+<section id="id13">
+<h3>Як ми &quot;зважили&quot; Землю?<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>А тепер цікавий наслідок. Подивіться на останню формулу. Ми можемо виміряти <span class="math notranslate nohighlight">\(g_0\)</span>, ми можемо виміряти радіус Землі <span class="math notranslate nohighlight">\(R_З = 6370 \text{ км}\)</span> (це зробили ще в давнину), а <span class="math notranslate nohighlight">\(G\)</span> ми знаємо з досліду Кавендіша. Отже, ми можемо обчислити масу Землі, не ставлячи її на ваги!</p>
+<p>З формули <span class="math notranslate nohighlight">\(g_0 = G \frac{M_З}{R_З^2}\)</span> виразимо масу Землі <span class="math notranslate nohighlight">\(M_З\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+M_З = \frac{g_0 R_З^2}{G}
+\]</div>
+<p>Саме тому дослід Кавендіша часто називають &quot;зважуванням Землі&quot;.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h2>Перша космічна швидкість<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>Гравітація не тільки змушує тіла падати, але й дозволяє їм літати - по орбіті. Давайте розберемося, як це можливо. Уявимо собі високу гору і гармату на її вершині (це уявний експеримент Ньютона).</p>
+<ul class="simple">
+<li><p>Якщо вистрілити з невеликою швидкістю, ядро пролетить невелику відстань і впаде на Землю.</p></li>
+<li><p>Якщо збільшити швидкість, воно полетить далі.</p></li>
+<li><p>При досягненні певної швидкості, ядро полетить так далеко, що траєкторія його падіння &quot;повторить&quot; кривизну земної поверхні. Воно почне падати, але поверхня Землі буде &quot;втікати&quot; від нього з тією ж швидкістю. Ядро вийде на колову орбіту і стане штучним супутником Землі.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Перша космічна швидкість</strong> <span class="math notranslate nohighlight">\(v\)</span> - це мінімальна швидкість, яку необхідно надати тілу на певній висоті над поверхнею планети, щоб воно стало її супутником, рухаючись по коловій орбіті.</p>
+</div></blockquote>
+<p>Щоб тіло рухалось по колу, на нього має діяти доцентрова сила. У випадку супутника на орбіті роль доцентрової сили виконує сила тяжіння. Доцентрова сила визначається як добуток маси тіла <span class="math notranslate nohighlight">\(m\)</span> та доцентрового прискорення <span class="math notranslate nohighlight">\(a = v^2 / r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[F_д = \frac{mv^2}{r}\]</div>
+<p>Сила тяжіння на висоті <span class="math notranslate nohighlight">\(h\)</span> (де <span class="math notranslate nohighlight">\(r = R_З + h\)</span>) визначається як</p>
+<div class="math notranslate nohighlight">
+\[F_{\text{тяж}} = G \frac{m M}{(R + h)^2}\]</div>
+<p>де <span class="math notranslate nohighlight">\(M\)</span> - маса планети та <span class="math notranslate nohighlight">\(R\)</span> - радіус планети.</p>
+<p>Прирівняємо ці дві сили:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{mv^2}{R + h} = G \frac{m M}{(R + h)^2}
+\]</div>
+<p>Скорочуємо масу супутника <span class="math notranslate nohighlight">\(m\)</span> і один раз скорочуємо <span class="math notranslate nohighlight">\((R + h)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 = G \frac{M}{R + h}
+\]</div>
+<p>Звідси отримуємо формулу для першої космічної швидкості на висоті <span class="math notranslate nohighlight">\(h\)</span> над поверхнею планети (довільної планети, не обов'язково Землі):</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{G \frac{M}{R + h}}
+\]</div>
+<p>Для випадків руху поблизу поверхні планети <span class="math notranslate nohighlight">\(h \approx 0\)</span> формула для першої космічної швидкості набуває вигляду:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{G \frac{M}{R}}
+\]</div>
+<section id="id15">
+<h3>Спрощена формула та значення для Землі<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>Ми можемо зробити ще одне перетворення. Згадаймо, що прискорення вільного падіння біля поверхні планети <span class="math notranslate nohighlight">\(g_0 = G \frac{M}{R^2}\)</span>. Звідси <span class="math notranslate nohighlight">\(GM = g_0 R^2\)</span>. Підставимо це в нашу формулу для першої космічної швидкості <span class="math notranslate nohighlight">\(v\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{\frac{g_0 R^2}{R}} = \sqrt{g_0 R}
+\]</div>
+<p>Це дуже зручна формула для обчислень. Давайте розрахуємо першу космічну швидкість для Землі:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{g_0 R_З}
+\]</div>
+<div class="math notranslate nohighlight">
+\[v = \sqrt{9.8 \text{ м}/\text{с}^2 \cdot 6.37 \cdot 10^6 \text{ м}} \approx 7900 \text{ м/с} \approx 28440 \text{ км/год}\]</div>
+<p>Отже, перша космічна швидкість для Землі становить приблизно <strong>7.9 км/с</strong>.</p>
+</section>
+</section>
+<section id="id16">
+<h2>Друга та третя космічні швидкості<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<p>Якщо ми будемо збільшувати швидкість тіла, його орбіта з колової стане еліптичною. При досягненні певної швидкості тіло зможе подолати гравітаційне тяжіння планети і назавжди покинути її, перетворившись на супутник Сонця.</p>
+<blockquote>
+<div><p><strong>Друга космічна швидкість</strong> <span class="math notranslate nohighlight">\(v_2\)</span> - це найменша швидкість, яку необхідно надати тілу, щоб воно подолало гравітаційне поле планети.</p>
+</div></blockquote>
+<p>Вона пов'язана з першою космічною швидкістю простою формулою:</p>
+<div class="math notranslate nohighlight">
+\[
+v_2 = \sqrt{2} \cdot v_1
+\]</div>
+<p>де <span class="math notranslate nohighlight">\(v_1\)</span> - перша космічна швидкість. Ця формула визначається із закону збереження енергії і в цьому матеріали ми не розглядаємо її виведення.</p>
+<p>Для Землі значення другої космічної швидкості становить <span class="math notranslate nohighlight">\(v_2 \approx 1.4142 \cdot 7.9 \text{ км/с} \approx \textbf{11.2 км/с}\)</span>.</p>
+<p>А що, якщо ми хочемо покинути не тільки Землю, але і всю Сонячну систему? Для цього потрібно подолати тяжіння Сонця.</p>
+<blockquote>
+<div><p><strong>Третя космічна швидкість</strong> <span class="math notranslate nohighlight">\(v_3\)</span> - це мінімальна швидкість, яку необхідно надати тілу біля поверхні Землі, щоб воно покинуло Сонячну систему.</p>
+</div></blockquote>
+<p>Її значення залежить від напрямку запуску тіла з планети. При оптимальному запуску тіла із Землі значення третьої космічної швидкості становить приблизно <strong>16.7 км/с</strong>.</p>
+</section>
+<section id="id17">
+<h2>Додаткові матеріали<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+</section>
+<section id="id18">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation">https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation</a></p></li>
 </ul>
@@ -580,8 +833,31 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Гравітаційна взаємодія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Гравітаційне поле</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Закон всесвітнього тяжіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Встановлення залежностей</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Формулювання та формула</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Гравітаційна стала та її фізичний зміст</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дослід Г. Кавендіша</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Межі застосування закону</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Сила тяжіння та прискорення вільного падіння</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Сила тяжіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Прискорення вільного падіння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Як ми "зважили" Землю?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Перша космічна швидкість</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Спрощена формула та значення для Землі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Друга та третя космічні швидкості</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
