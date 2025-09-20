@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Сила пружності &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/elasticity';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Вага тіла" href="weight.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weight.html">Вага тіла</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Сила пружності</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mechanics/elasticity.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mechanics/elasticity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mechanics/elasticity.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Сила пружності</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Якою буває деформація?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Види деформацій за характером дії сили</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Як виміряти деформацію? Сила пружності</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Абсолютне видовження</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сила пружності</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Закон Гука</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Природа сили пружності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">З'єднання пружин</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Послідовне з'єднання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Паралельне з'єднання</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Сила пружності<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Уявімо, що ми взяли до рук звичайну пружинку від ручки. Якщо ми її трохи розтягнемо, її довжина збільшиться. Якщо стиснемо - зменшиться. Ця зміна форми або розмірів тіла під дією зовнішніх сил і називається <strong>деформацією</strong>.</p>
+<section id="id2">
+<h2>Якою буває деформація?<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Не всі деформації однакові. Головна відмінність полягає в тому, чи повертається тіло до своєї початкової форми. За цією ознакою ми виділяємо два основні типи деформацій.</p>
+<blockquote>
+<div><p><strong>Пружна деформація</strong> - це така деформація, яка повністю зникає після припинення дії зовнішньої сили. Тіло повертається до своїх початкових розмірів і форми.</p>
+</div></blockquote>
+<p><strong>Приклад:</strong> Уявіть гумовий м'яч. Коли він вдаряється об підлогу, він на мить сплющується (деформується), але одразу ж відновлює свою сферичну форму. Це і є пружна деформація. Те саме відбувається з пружинами, батутом, струнами гітари.</p>
+<blockquote>
+<div><p><strong>Пластична деформація</strong> - це деформація, яка не зникає після припинення дії зовнішньої сили. Тіло назавжди змінює свою форму.</p>
+</div></blockquote>
+<p><strong>Приклад:</strong> Візьмемо шматок пластиліну. Коли ми його стискаємо, він змінює форму. Але якщо ми приберемо руку, він так і залишиться сплющеним. Те саме станеться, якщо зігнути металеву скріпку - вона не розігнеться сама по собі.</p>
+<p>Важливо розуміти, що одне й те саме тіло може зазнавати як пружної, так і пластичної деформації. Якщо ми ледь-ледь розтягнемо пружину, вона повернеться у вихідне положення (пружна деформація). Але якщо ми потягнемо її з усієї сили, вона може розтягнутися і вже ніколи не стиснутися назад (пластична деформація). Межа, за якою пружна деформація переходить у пластичну, називається <strong>межею пружності</strong>.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/uk/1/1d/Stress-strain1u.png" alt="Stress-strain1u.png" height="361" width="553">
+<br>
+Рис. 1. Типова крива залежності напруження від деформації розтягу.
+Автор: <a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B8%D1%81%D1%82%D1%83%D0%B2%D0%B0%D1%87:Holigor" title="Користувач:Holigor">Holigor</a> - Власна робота, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-ShareAlike 3.00&nbsp;Unported">CC BY-SA 3.0</a>, <a href="https://uk.wikipedia.org/w/index.php?curid=209273">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Пластичність_матеріалу">Wikipedia</a></p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Види деформацій за характером дії сили<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Залежно від того, як саме прикладена сила, ми можемо класифікувати деформації на декілька основних видів.</p>
+<ul class="simple">
+<li><p><strong>Деформація розтягнення та стиснення:</strong> Виникають, коли сили діють уздовж однієї прямої, намагаючись або збільшити (розтягнення), або зменшити (стиснення) довжину тіла. Приклади: розтягнення троса під вагою вантажу, стиснення колон будівлі.</p></li>
+<li><p><strong>Деформація згину:</strong> Це складніший вид деформації. Уявіть, що ми кладемо дошку між двома стільцями і стаємо на неї посередині. Верхні шари дошки стискаються, а нижні - розтягуються. Це і є згин.</p></li>
+<li><p><strong>Деформація кручення:</strong> Виникає, коли до тіла прикладають сили, що намагаються його &quot;скрутити&quot; навколо своєї осі. Класичний приклад - викручування мокрої ганчірки. Вали двигунів, свердла - всі вони зазнають деформації кручення.</p></li>
+<li><p><strong>Деформація зсуву:</strong> Виникає, коли шари тіла зміщуються один відносно одного. Уявіть колоду карт: якщо ми натиснемо на верхню карту збоку, вся колода перекоситься - це наочна деформація зсуву. Заклепки та болти, що з'єднують металеві листи, працюють саме на зсув.</p></li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Eprouvette_traction_force_elongation.svg" alt="Eprouvette traction force elongation.svg" height="384" width="204">
+<br>
+Рис. 2. Деформація розтягу зразка.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Cdang" title="User:Cdang">Cdang</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=6039338">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Розтяг">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Beam_bending.png" alt="Beam bending.png" height="380" width="701">
+<br>
+Рис. 3. Схематичне зображення деформації згину.
+Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=397597">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Деформація_згину">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twisted_bar.png" alt="Twisted bar.png" height="187" width="424">
+<br>
+Рис. 4. Деформація стрижня прямокутного перерізу при крученні.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Orion_8" title="User:Orion 8">Orion 8</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=14609855">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Деформація_кручення">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Shear_scherung.svg" alt="Shear scherung.svg" height="354" width="602">
+<br>
+Рис. 5. Деформація зсуву.
+Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=4354169">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Деформація_зсуву">Wikipedia</a></p>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Як виміряти деформацію? Сила пружності<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Тепер, коли ми знаємо, що таке деформація, давайте навчимося її вимірювати і зрозуміємо, яка сила їй протидіє. Для простоти ми будемо розглядати найпростіший випадок - деформацію розтягнення або стиснення.</p>
+<section id="id5">
+<h3>Абсолютне видовження<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Кількісною мірою деформації розтягнення/стиснення є <strong>абсолютне видовження</strong>.</p>
+<blockquote>
+<div><p><strong>Абсолютне видовження</strong> - це фізична величина, що показує, наскільки змінилася довжина тіла.</p>
+</div></blockquote>
+<p>Позначається вона зазвичай літерою <span class="math notranslate nohighlight">\(x\)</span> або <span class="math notranslate nohighlight">\(\Delta l\)</span> (читається &quot;дельта ель&quot;). У різних джерелах можуть позначати по різному.</p>
+<p>Якщо початкова довжина тіла (наприклад, нерозтягнутої пружини) була <span class="math notranslate nohighlight">\(l_0\)</span>, а після розтягнення стала <span class="math notranslate nohighlight">\(l\)</span>, то абсолютне видовження обчислюється за формулою:</p>
+<div class="math notranslate nohighlight">
+\[
+x = \Delta l = l - l_0
+\]</div>
+<p><strong>Одиниці вимірювання в СІ:</strong> метр (м).</p>
+<p>Якщо тіло розтягують, то <span class="math notranslate nohighlight">\(l &gt; l_0\)</span> і видовження <span class="math notranslate nohighlight">\(x\)</span> буде додатним. Якщо тіло стискають, то <span class="math notranslate nohighlight">\(l &lt; l_0\)</span> і видовження буде від'ємним.</p>
+</section>
+<section id="id6">
+<h3>Сила пружності<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Коли ми намагаємося деформувати пружне тіло, ми відчуваємо опір. Цей опір створює внутрішня сила, яка виникає в тілі й намагається повернути його до початкового стану.</p>
+<blockquote>
+<div><p><strong>Сила пружності</strong> <span class="math notranslate nohighlight">\(\vec{F}_{\text{пруж}}\)</span> - це сила, що виникає всередині тіла під час його деформації і напрямлена в бік, протилежний напрямку зміщення частинок тіла.</p>
+</div></blockquote>
+<p><strong>Одиниці вимірювання в СІ:</strong> Ньютон (Н).</p>
+<p>Якщо ми розтягуємо пружину вправо, то сила пружності буде тягнути її вліво. Якщо стискаємо пружину вліво, сила пружності буде штовхати її вправо. Вона завжди прагне відновити початковий стан і повернути все, як було.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Spring-mass2.svg" alt="Spring-mass2.svg" height="350" width="240">
+<br>
+Рис. 6. Тіло, підвішене на пружині. Тут сила пружності спрямована протилежно до зміщення викликаного силою тяжіння.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:BillC" class="mw-redirect" title="User:BillC">BillC</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3333721">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Сила_пружності">Wikipedia</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Закон Гука<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Ще в 17 столітті англійський вчений Роберт Гук експериментально встановив дивовижно простий зв'язок між силою пружності та величиною деформації. Цей зв'язок відомий нам як <strong>закон Гука</strong>.</p>
+<blockquote>
+<div><p><strong>Закон Гука:</strong> Для малих пружних деформацій сила пружності прямо пропорційна видовженню тіла і напрямлена протилежно до нього.</p>
+</div></blockquote>
+<p>Математично цей закон записується у векторній формі так:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F}_{\text{пруж}} = -k\vec{x}
+\]</div>
+<p>Давайте розберемо цю формулу:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{F}_{\text{пруж}}\)</span> - вектор сили пружності.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{x}\)</span> - вектор видовження (зміщення від положення рівноваги).</p></li>
+<li><p>Знак &quot;мінус&quot; - найважливіша частина! Він математично показує те, про що ми говорили: сила пружності <strong>завжди</strong> напрямлена в протилежний бік до деформації. Якщо <span class="math notranslate nohighlight">\(\vec{x}\)</span> напрямлений вправо, то <span class="math notranslate nohighlight">\(\vec{F}_{\text{пруж}}\)</span> - вліво.</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> - коефіцієнт пропорційності, який називається <strong>жорсткістю</strong> тіла.</p></li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Hookes-law-springs.png" alt="Hookes-law-springs.png" height="660" width="635">
+<br>
+Рис. 7. Закон Гука. Сила пропорційна видовженню.
+Автор: <a href="https://commons.wikimedia.org/w/index.php?title=User:Svjo&amp;action=edit&amp;redlink=1" class="new" title="User:Svjo (page does not exist)">Svjo</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=25398333">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Закон_Гука">Wikipedia</a></p><p>Для розв'язування задач, де нам важлива лише величина (модуль) сили, ми можемо записати закон Гука в скалярній формі, без векторів та мінуса:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\text{пруж}} = k|x|
+\]</div>
+<p>Тут <span class="math notranslate nohighlight">\(|x|\)</span> - це модуль видовження, тобто абсолютна зміна довжини.</p>
+<blockquote>
+<div><p><strong>Жорсткість</strong> <span class="math notranslate nohighlight">\(k\)</span> - це фізична величина, яка характеризує пружні властивості тіла. Вона показує, яку силу потрібно прикласти до тіла, щоб змінити його довжину на одиницю.</p>
+</div></blockquote>
+<p>З формули закону Гука ми можемо виразити жорсткість:</p>
+<div class="math notranslate nohighlight">
+\[
+k = \frac{F_{\text{пруж}}}{|x|}
+\]</div>
+<p><strong>Одиниця вимірювання в СІ:</strong> Ньютон на метр (Н/м).</p>
+<p><strong>Аналогія:</strong> Уявіть дві пружини. Одна - від підвіски вантажівки, а інша - від кулькової ручки. Щоб розтягнути пружину від вантажівки на 1 см, потрібна величезна сила. А пружину від ручки можна розтягнути на той самий 1 см легким рухом пальців. Це означає, що жорсткість пружини вантажівки (її значення <span class="math notranslate nohighlight">\(k\)</span>) у багато разів більша, ніж жорсткість пружини від ручки.</p>
+<p>Жорсткість залежить від матеріалу, з якого виготовлено тіло, його форми та геометричних розмірів (наприклад, для дротини - від її довжини та площі перерізу).</p>
+</section>
+<section id="id8">
+<h2>Природа сили пружності<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>А звідки ж узагалі береться ця сила? Чому тіло хоче повернутись до початкової форми? Відповідь криється на мікроскопічному рівні.</p>
+<p>Всі тіла складаються з атомів і молекул, які перебувають на певних відстанях один від одного і взаємодіють між собою. Цю взаємодію можна уявити як мільярди крихітних пружинок, що з'єднують сусідні частинки. Це, звісно, аналогія, але вона добре пояснює суть. Насправді ця взаємодія має <strong>електромагнітну природу</strong>. Атоми та молекули в речовині одночасно притягуються і одночасно відштовхуються, але між цим притяганням та відштовхуванням встановлюється рівновага. Однак рівновага порушується, коли ми починаємо деформувати тіло:</p>
+<ul class="simple">
+<li><p>Коли ми <strong>розтягуємо</strong> тіло, ми збільшуємо відстань між атомами/молекулами. Сили притягання між ними стають сильнішими за сили відштовхування й намагаються повернути їх на місце. Сума всіх цих мікроскопічних сил притягання і створює макроскопічну силу пружності.</p></li>
+<li><p>Коли ми <strong>стискаємо</strong> тіло, ми зближуємо атоми. На малих відстанях починають домінувати сили відштовхування між їхніми електронними оболонками. Ці сили намагаються &quot;розштовхати&quot; атоми назад. Сума цих сил відштовхування також створює силу пружності.</p></li>
+</ul>
+<p>Отже, сила пружності - це не якась окрема фундаментальна сила природи, а прояв електромагнітної взаємодії між частинками речовини.</p>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>З'єднання пружин<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>На практиці часто доводиться використовувати не одну, а кілька пружин, з'єднаних разом. Розглянемо два основні способи з'єднання та виведемо формули для загальної жорсткості системи.</p>
+<section id="id10">
+<h3>Послідовне з'єднання<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Пружини з'єднані послідовно, якщо вони прикріплені одна до одної &quot;ланцюжком&quot;.</p>
+<p>Давайте проаналізуємо цю систему.</p>
+<ol class="arabic simple">
+<li><p><strong>Сила:</strong> Якщо ми потягнемо за кінець другої пружини з силою <span class="math notranslate nohighlight">\(F\)</span>, то така сама сила діятиме на кожну пружину в ланцюжку. Це схоже на натяг мотузки - він однаковий по всій довжині. Отже, <span class="math notranslate nohighlight">\(F_{\text{пруж}} = F_1 = F_2\)</span>.</p></li>
+<li><p><strong>Видовження:</strong> Загальне видовження всієї системи дорівнює сумі видовжень кожної окремої пружини. <span class="math notranslate nohighlight">\(x = x_1 + x_2\)</span>.</p></li>
+</ol>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/SpringsInSeries.svg" alt="SpringsInSeries.svg" height="178" width="417">
+<br>
+Рис. 8. Послідовне з'єднання пружин.
+By <a href="https://commons.wikimedia.org/wiki/User:Stannered" title="User:Stannered">User:Stannered</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1873053">Link</a>. <a href="https://en.wikipedia.org/wiki/Series_and_parallel_springs">Wikipedia</a></p><p>Тепер використаємо ці два факти для виведення формули загальної жорсткості <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>Із закону Гука ми знаємо, що <span class="math notranslate nohighlight">\(x = \frac{F}{k}\)</span>. Підставимо це у формулу для видовження:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{F_{\text{пруж}}}{k} = \frac{F_1}{k_1} + \frac{F_2}{k_2}
+\]</div>
+<p>Оскільки всі сили однакові (<span class="math notranslate nohighlight">\(F_{\text{пруж}} = F_1 = F_2\)</span>), ми можемо скоротити їх:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{k} = \frac{1}{k_1} + \frac{1}{k_2}
+\]</div>
+<p>Зводимо до спільного знаменника і отримуємо фінальну формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{k} = \frac{k_2}{k_1 k_2} + \frac{k_1}{k_1 k_2} = \frac{k_1 + k_2}{k_1 k_2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+k = \frac{k_1 k_2}{k_1 + k_2}
+\]</div>
+<p>Це і є формула для розрахунку загальної жорсткості при послідовному з'єднанні. Із цієї формули можна зробити висновок, що при послідовному з'єднанні загальна жорсткість системи <strong>зменшується</strong> і стає меншою за жорсткість найменш жорсткої пружини. Системі стає &quot;легше&quot; розтягуватися.</p>
+</section>
+<section id="id11">
+<h3>Паралельне з'єднання<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>При паралельному з'єднанні пружини кріпляться до спільної основи та спільного вантажу. Вони працюють разом, &quot;пліч-о-пліч&quot;.</p>
+<p>Проаналізуємо цю систему:</p>
+<ol class="arabic simple">
+<li><p><strong>Видовження:</strong> Оскільки пружини закріплені між тими самими основою та вантажем, вони розтягуються на однакову величину. <span class="math notranslate nohighlight">\(x = x_1 = x_2\)</span>.</p></li>
+<li><p><strong>Сила:</strong> Загальна сила, що розтягує систему, розподіляється між пружинами. Кожна пружина робить свій &quot;внесок&quot;. Тому загальна сила пружності дорівнює сумі сил пружності кожної пружини. <span class="math notranslate nohighlight">\(F_{\text{пруж}} = F_1 + F_2\)</span>.</p></li>
+</ol>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/SpringsInParallel.svg" alt="SpringsInParallel.svg" height="178" width="289">
+<br>
+Рис. 9. Паралельне з'єднання пружин.
+By <a href="https://commons.wikimedia.org/wiki/User:Stannered" title="User:Stannered">User:Stannered</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1873031">Link</a>. <a href="https://en.wikipedia.org/wiki/Series_and_parallel_springs">Wikipedia</a></p><p>Використаємо ці факти для виведення формули. Із закону Гука <span class="math notranslate nohighlight">\(F = k x\)</span>. Підставимо це у формулу для сил:</p>
+<div class="math notranslate nohighlight">
+\[
+k x = k_1 x_1 + k_2 x_2
+\]</div>
+<p>Оскільки всі видовження однакові (<span class="math notranslate nohighlight">\(x_{\text{заг}} = x_1 = x_2\)</span>), ми можемо скоротити їх:</p>
+<div class="math notranslate nohighlight">
+\[
+k = k_1 + k_2
+\]</div>
+<p><strong>Висновок:</strong> При паралельному з'єднанні загальна жорсткість системи <strong>збільшується</strong> і дорівнює сумі жорсткостей окремих пружин і завжди є більшою за найбільшу з них. Система стає значно &quot;жорсткішою&quot;.</p>
+</section>
+</section>
+<section id="id12">
+<h2>Підсумок<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Термін</p></th>
+<th class="head text-left"><p>Визначення / Опис</p></th>
+<th class="head text-left"><p>Формула / Позначення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Деформація</strong></p></td>
+<td class="text-left"><p>Зміна форми або розмірів тіла під дією зовнішніх сил.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Пружна деформація</strong></p></td>
+<td class="text-left"><p>Деформація, яка повністю зникає після припинення дії зовнішньої сили.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Пластична деформація</strong></p></td>
+<td class="text-left"><p>Деформація, яка не зникає після припинення дії зовнішньої сили.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Види деформацій</strong></p></td>
+<td class="text-left"><p>Залежно від характеру дії сили: розтягнення, стиснення, згин, кручення, зсув.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Абсолютне видовження</strong></p></td>
+<td class="text-left"><p>Фізична величина, що показує, наскільки змінилася довжина тіла.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(x = \Delta l = l - l_0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Сила пружності</strong></p></td>
+<td class="text-left"><p>Сила, що виникає в тілі під час деформації і напрямлена протилежно до зміщення частинок тіла.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{F}_{\text{пруж}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Закон Гука</strong></p></td>
+<td class="text-left"><p>Сила пружності, що виникає при малих пружних деформаціях, прямо пропорційна видовженню тіла.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{F}_{\text{пруж}} = -k\vec{x}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Жорсткість</strong></p></td>
+<td class="text-left"><p>Фізична величина, що характеризує пружні властивості тіла та показує, яку силу треба прикласти для зміни довжини на одиницю.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(k\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Природа сили пружності</strong></p></td>
+<td class="text-left"><p>Є проявом електромагнітної взаємодії між атомами та молекулами речовини.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Послідовне з'єднання пружин</strong></p></td>
+<td class="text-left"><p>Сили в пружинах однакові, а загальне видовження дорівнює сумі видовжень.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(F_1 = F_2\)</span> <br> <span class="math notranslate nohighlight">\(x = x_1 + x_2\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Жорсткість (послідовне з'єднання)</strong></p></td>
+<td class="text-left"><p>Загальна жорсткість системи зменшується.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\frac{1}{k} = \frac{1}{k_1} + \frac{1}{k_2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Паралельне з'єднання пружин</strong></p></td>
+<td class="text-left"><p>Видовження пружин однакове, а загальна сила дорівнює сумі сил.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(x_1 = x_2\)</span> <br> <span class="math notranslate nohighlight">\(F = F_1 + F_2\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Жорсткість (паралельне з'єднання)</strong></p></td>
+<td class="text-left"><p>Загальна жорсткість системи збільшується і дорівнює сумі жорсткостей.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(k = k_1 + k_2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id13">
+<h2>Додаткові матеріали<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Деформація</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D1%83%D0%B6%D0%BD%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Пружність</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D1%83">https://uk.wikipedia.org/wiki/Пластичність_матеріалу</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B7%D1%82%D1%8F%D0%B3">https://uk.wikipedia.org/wiki/Розтяг</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D1%96%D1%8F_%D0%B7%D0%B3%D0%B8%D0%BD%D1%83">https://uk.wikipedia.org/wiki/Деформація_згину</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D1%96%D1%8F_%D0%BA%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Деформація_кручення</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D1%96%D1%8F_%D0%B7%D1%81%D1%83%D0%B2%D1%83">https://uk.wikipedia.org/wiki/Деформація_зсуву</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BB%D0%B0_%D0%BF%D1%80%D1%83%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%96">https://uk.wikipedia.org/wiki/Сила_пружності</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%93%D1%83%D0%BA%D0%B0">https://uk.wikipedia.org/wiki/Закон_Гука</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B5%D1%85%D0%B0%D0%BD%D1%96%D1%87%D0%BD%D0%B0_%D0%B6%D0%BE%D1%80%D1%81%D1%82%D0%BA%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Механічна_жорсткість</a></p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Elasticity_(physics)">https://en.wikipedia.org/wiki/Elasticity_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Plasticity_(physics)">https://en.wikipedia.org/wiki/Plasticity_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tension_(physics)">https://en.wikipedia.org/wiki/Tension_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Compression_(physics)">https://en.wikipedia.org/wiki/Compression_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bending">https://en.wikipedia.org/wiki/Bending</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Torsion_(mechanics)">https://en.wikipedia.org/wiki/Torsion_(mechanics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Shear_stress">https://en.wikipedia.org/wiki/Shear_stress</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hooke%27s_law">https://en.wikipedia.org/wiki/Hooke's_law</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stiffness">https://en.wikipedia.org/wiki/Stiffness</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Series_and_parallel_springs">https://en.wikipedia.org/wiki/Series_and_parallel_springs</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="weight.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Вага тіла</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../internal_energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Якою буває деформація?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Види деформацій за характером дії сили</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Як виміряти деформацію? Сила пружності</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Абсолютне видовження</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Сила пружності</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Закон Гука</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Природа сили пружності</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">З'єднання пружин</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Послідовне з'єднання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Паралельне з'єднання</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

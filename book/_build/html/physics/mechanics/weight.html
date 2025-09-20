@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Вага тіла &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/weight';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Сила пружності" href="elasticity.html" />
+    <link rel="prev" title="Закон всесвітнього тяжіння" href="newtons-law-of-universal-gravitation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elasticity.html">Сила пружності</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mechanics/weight.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mechanics/weight.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mechanics/weight.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Вага тіла</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке вага тіла?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Вага у стані спокою: причина плутанини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ключова відмінність і природа сил</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Вага в русі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Випадок 1: Ліфт прискорюється вгору (Перевантаження)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Випадок 2: Ліфт прискорюється вниз</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Випадок 3: Невагомість</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Загальна векторна формула для ваги</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Вага тіла<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Після вивчення всесвітнього тяжіння та сили тяжіння, саме час перейти до поняття ваги. На перший погляд, вага і сила тяжіння - це одне й те саме, але насправді між ними є принципова різниця. Сьогодні ми детально розберемо, що таке вага, яка її фізична природа, і як вона може змінюватись, створюючи такі явища, як невагомість та перевантаження.</p>
+<p>У повсякденному житті ми часто плутаємо поняття &quot;маса&quot; та &quot;вага&quot;, кажучи, наприклад, &quot;моя вага 60 кілограмів&quot;. З точки зору фізики це некоректно, адже маса вимірюється в кілограмах, а вага, як і будь-яка інша сила, - в ньютонах. Але ще важливіша плутанина виникає між вагою та силою тяжіння. Давайте розставимо все по місцях.</p>
+<section id="id2">
+<h2>Що таке вага тіла?<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уявімо, що на столі лежить книжка. Ми вже знаємо, що на неї діє <strong>сила тяжіння</strong> <span class="math notranslate nohighlight">\(m\vec{g}\)</span> - це сила, з якою Земля притягує книжку до себе. Ця сила прикладена до центру мас книжки і напрямлена вертикально вниз.</p>
+<p>Але чому книжка не падає крізь стіл? Тому що стіл чинить опір. Згідно з третім законом Ньютона, якщо книжка тисне на стіл, то і стіл тисне на книжку. Сила, з якою опора (стіл) діє на тіло (книжку), називається <strong>силою нормальної реакції опори</strong> <span class="math notranslate nohighlight">\(\vec{N}\)</span>. Вона напрямлена перпендикулярно (нормально) до поверхні опори, тобто в нашому випадку - вертикально вгору.</p>
+<blockquote>
+<div><p><strong>Сила нормальної реакції опори</strong> <span class="math notranslate nohighlight">\(\vec{N}\)</span> - це сила, що діє на тіло з боку опори і напрямлена перпендикулярно до поверхні дотику. Одиниця вимірювання в СІ: <strong>ньютон (Н)</strong>.</p>
+</div></blockquote>
+<p>Тепер найголовніше. Книжка, внаслідок притягання до Землі, тисне на стіл. Ось ця сила і є вагою.</p>
+<blockquote>
+<div><p><strong>Вага тіла</strong> <span class="math notranslate nohighlight">\(\vec{P}\)</span> - це сила, з якою тіло внаслідок гравітаційного притягання діє на горизонтальну опору або вертикальний підвіс. Одиниця вимірювання в СІ: <strong>ньютон (Н)</strong>.</p>
+</div></blockquote>
+<p>Аналогічно, якщо ми підвісимо на нитці якийсь вантаж, на нього діятиме сила тяжіння <span class="math notranslate nohighlight">\(m\vec{g}\)</span> (вниз) і <strong>сила натягу підвісу</strong> <span class="math notranslate nohighlight">\(\vec{T}\)</span> (вгору). Вагою в цьому випадку буде сила, з якою вантаж розтягує нитку.</p>
+<blockquote>
+<div><p><strong>Сила натягу підвісу</strong> <span class="math notranslate nohighlight">\(\vec{T}\)</span> - це сила, що діє на тіло з боку підвісу (нитки, троса) і напрямлена вздовж нього. Одиниця вимірювання в СІ: <strong>ньютон (Н)</strong>.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Incline.svg" alt="Incline.svg" height="320" width="524">
+<br>
+Рис. 1. Сила нормальної реакції опори.
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=1981387">Link</a>. <a href="https://en.wikipedia.org/wiki/Normal_force">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/WeightNormal.svg" alt="WeightNormal.svg" height="400" width="865">
+<br>
+Рис. 2. Схема сил, що діють на тіло масою m, що перебуває у стані спокою на горизонтальній поверхні.
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=14827190">Link</a>. <a href="https://en.wikipedia.org/wiki/Weight">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Free_body.svg" alt="Free body.svg" height="282" width="412">
+<br>
+Рис. 3. Схема сил, що діють на тіло масою m, що перебуває на похилій поверхні. N - сила нормальної реакції опори, f - сила тертя спокою.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Mets501" title="User:Mets501">Mets501</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=2160904">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Сила_нормальної_реакції">Wikipedia</a></p></section>
+<section id="id3">
+<h2>Вага у стані спокою: причина плутанини<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Давайте розглянемо тіло (наприклад, нашу книжку на столі), що перебуває у стані спокою. Прискорення тіла дорівнює нулю <span class="math notranslate nohighlight">\(\vec{a} = 0\)</span>. Запишемо для нього другий закон Ньютона у векторній формі:</p>
+<div class="math notranslate nohighlight">
+\[
+m\vec{a} = \vec{F}_{\text{тяж}} + \vec{N}
+\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(\vec{a} = 0\)</span>, то <span class="math notranslate nohighlight">\(\vec{F}_{\text{тяж}} + \vec{N} = 0\)</span>, звідки випливає, що</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{N} = - \vec{F}_{\text{тяж}} = -m\vec{g}
+\]</div>
+<p>Це означає, що сила нормальної реакції опори за модулем дорівнює силі тяжіння, але напрямлена в протилежний бік.</p>
+<p>А що ж таке вага? Вага <span class="math notranslate nohighlight">\(\vec{P}\)</span> - це сила, з якою <em>тіло діє на опору</em>. Сила нормальної реакції <span class="math notranslate nohighlight">\(\vec{N}\)</span> - це сила, з якою <em>опора діє на тіло</em>. Згідно з третім законом Ньютона, ці дві сили рівні за модулем і протилежні за напрямком:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = -\vec{N}
+\]</div>
+<p>Тепер об'єднаємо ці два результати. Якщо <span class="math notranslate nohighlight">\(\vec{N} = -m\vec{g}\)</span>, то:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = -(-m\vec{g}) = m\vec{g}
+\]</div>
+<p>Отже, для нерухомого тіла (або тіла, що рухається рівномірно і прямолінійно) його вага <span class="math notranslate nohighlight">\(\vec{P}\)</span> чисельно дорівнює силі тяжіння <span class="math notranslate nohighlight">\(m\vec{g}\)</span>. Саме тому ці поняття часто плутають.</p>
+<p>Аналогічна ситуація виникає, коли тіло підвішене на нитці, тросі або пружині. Тіло розтягує підвіс (це його вага), а підвіс, у свою чергу, тягне тіло вгору. За третім законом Ньютона, сила, з якою тіло тягне підвіс (вага <span class="math notranslate nohighlight">\(\vec{P}\)</span>), і сила, з якою підвіс тягне тіло (сила натягу <span class="math notranslate nohighlight">\(\vec{T}\)</span>), є парою &quot;дія-протидія&quot;. Тому</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = -\vec{T}
+\]</div>
+<p><strong>Важливий висновок:</strong> Щоб знайти вагу тіла <span class="math notranslate nohighlight">\(\vec{P}\)</span>, нам потрібно знайти силу реакції опори <span class="math notranslate nohighlight">\(\vec{N}\)</span> або силу натягу підвісу <span class="math notranslate nohighlight">\(\vec{T}\)</span>, що діє на саме тіло. Модуль ваги буде дорівнювати модулю цих сил <span class="math notranslate nohighlight">\(P = N\)</span> або <span class="math notranslate nohighlight">\(P = T\)</span>.</p>
+<section id="id4">
+<h3>Ключова відмінність і природа сил<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Незважаючи на рівність у стані спокою, вага і сила тяжіння - це принципово різні сили. Давайте підсумуємо їхні відмінності.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Характеристика</p></th>
+<th class="head text-left"><p>Сила тяжіння <span class="math notranslate nohighlight">\(\vec{F}_{\text{тяж}} = m\vec{g}\)</span></p></th>
+<th class="head text-left"><p>Вага тіла <span class="math notranslate nohighlight">\(\vec{P}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Точка прикладання</strong></p></td>
+<td class="text-left"><p>Прикладена до <strong>центру мас тіла</strong> (Земля притягує тіло).</p></td>
+<td class="text-left"><p>Прикладена до <strong>опори або підвісу</strong> (тіло діє на опору).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Фізична природа</strong></p></td>
+<td class="text-left"><p><strong>Гравітаційна</strong>. Це прояв закону всесвітнього тяжіння.</p></td>
+<td class="text-left"><p><strong>Електромагнітна</strong>. Це сила, що виникає через деформацію опори/підвісу на атомному рівні. Наприклад, коли тіло тисне на опору, атоми тіла та опори зближуються, і виникають сили відштовхування між їхніми електронними оболонками.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Умова існування</strong></p></td>
+<td class="text-left"><p>Діє на будь-яке тіло поблизу планети, незалежно від його стану руху.</p></td>
+<td class="text-left"><p>Виникає лише тоді, коли є опора або підвіс, тобто є контакт.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Аналогія</strong>: Уявіть, що ви тиснете рукою на стіну. Сила, з якою ви тиснете на стіну, - це аналог ваги. Сила, з якою стіна тисне у відповідь на вашу руку, - це аналог сили реакції опори. А сила тяжіння - це щось зовсім інше, наприклад, невидима мотузка, що тягне вас до центру Землі, незалежно від того, чи торкаєтесь ви стіни.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Вага в русі<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Найцікавіше починається, коли тіло рухається з прискоренням. Розглянемо найкласичніший приклад: людина масою <span class="math notranslate nohighlight">\(m\)</span> стоїть у ліфті, що рухається з прискоренням <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p>
+<p>Запишемо другий закон Ньютона для людини. На неї діють дві сили: сила тяжіння <span class="math notranslate nohighlight">\(m\vec{g}\)</span> (завжди вниз) і сила нормальної реакції з боку підлоги ліфта <span class="math notranslate nohighlight">\(\vec{N}\)</span> (завжди вгору).</p>
+<div class="math notranslate nohighlight">
+\[
+m\vec{a} = m\vec{g} + \vec{N}
+\]</div>
+<p>Для зручності оберемо вісь OY, напрямлену вертикально вгору. Тоді проекції сил і прискорення на цю вісь будуть:</p>
+<ul class="simple">
+<li><p>Проекція прискорення: <span class="math notranslate nohighlight">\(a_y = a\)</span> (якщо прискорення напрямлене вгору) або <span class="math notranslate nohighlight">\(a_y = -a\)</span> (якщо вниз).</p></li>
+<li><p>Проекція сили нормальної реакції: <span class="math notranslate nohighlight">\(N_y = N\)</span>.</p></li>
+<li><p>Проекція сили тяжіння: <span class="math notranslate nohighlight">\(F_{\text{тяж},y} = -mg\)</span>.</p></li>
+</ul>
+<p>Рівняння другого закону Ньютона в проекціях набуває вигляду:</p>
+<div class="math notranslate nohighlight">
+\[
+ma_y = N - mg
+\]</div>
+<p>Звідси ми можемо виразити силу нормальної реакції опори:</p>
+<div class="math notranslate nohighlight">
+\[
+N = mg + ma_y = m(g + a_y)
+\]</div>
+<p>Оскільки вага за модулем дорівнює силі нормальної реакції <span class="math notranslate nohighlight">\(P = N\)</span>, ми отримуємо загальну формулу для ваги тіла, що рухається з прискоренням по вертикалі:</p>
+<div class="math notranslate nohighlight">
+\[
+P = m(g + a_y)
+\]</div>
+<p>А тепер проаналізуємо різні випадки.</p>
+<section id="id6">
+<h3>Випадок 1: Ліфт прискорюється вгору (Перевантаження)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Ліфт починає рух вгору або гальмує під час руху вниз. У будь-якому з цих випадків вектор прискорення <span class="math notranslate nohighlight">\(\vec{a}\)</span> напрямлений вгору. Тому його проекція на вісь OY є додатною: <span class="math notranslate nohighlight">\(a_y = a &gt; 0\)</span>.</p>
+<p>Підставляємо це в нашу формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+P = m(g + a)
+\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(a &gt; 0\)</span>, то <span class="math notranslate nohighlight">\((g + a) &gt; g\)</span>, а отже, <span class="math notranslate nohighlight">\(P &gt; mg\)</span>.</p>
+<p><strong>Висновок:</strong> Вага людини збільшилася. Цей стан називається <strong>перевантаженням</strong>.</p>
+<p>Перевантаження відчувають пілоти та космонавти під час старту ракети, тільки набагато сильніше, ніж людина у ліфті.</p>
+<p>Для характеристики перевантаження використовують коефіцієнт перевантаження <span class="math notranslate nohighlight">\(n\)</span>, який показує, у скільки разів вага тіла перевищує &quot;нормальну&quot; вагу (силу тяжіння):</p>
+<div class="math notranslate nohighlight">
+\[
+n = \frac{P}{mg} = \frac{m(g+a)}{mg} = 1 + \frac{a}{g}
+\]</div>
+<p>Якщо кажуть &quot;пілот зазнав перевантаження 5g&quot;, це означає, що його вага в 5 разів перевищувала звичайну.</p>
+</section>
+<section id="id7">
+<h3>Випадок 2: Ліфт прискорюється вниз<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Ліфт починає рух вниз або гальмує під час руху вгору. Тепер вектор прискорення <span class="math notranslate nohighlight">\(\vec{a}\)</span> напрямлений вниз.</p>
+<p>Його проекція на вісь OY (яка напрямлена вгору) є від'ємною: <span class="math notranslate nohighlight">\(a_y = -a &lt; 0\)</span>.</p>
+<p>Підставляємо у формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+P = m(g + (-a)) = m(g - a)
+\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(a &gt; 0\)</span>, то <span class="math notranslate nohighlight">\((g - a) &lt; g\)</span>, а отже, <span class="math notranslate nohighlight">\(P &lt; mg\)</span>.</p>
+<p><strong>Висновок:</strong> Вага людини зменшилася. Коли ви в ліфті починаєте спускатись, ви відчуваєте короткочасне відчуття легкості.</p>
+</section>
+<section id="id8">
+<h3>Випадок 3: Невагомість<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Якщо трос ліфта обірветься, ліфт і всі тіла в ньому будуть падати вільно. Людина всередині не буде тиснути на підлогу, а предмети будуть &quot;літати&quot; по кабіні. Це і є невагомість. У такому випадку ліфт і все, що в ньому, почне <strong>вільне падіння</strong>. Прискорення ліфта буде дорівнювати прискоренню вільного падіння: <span class="math notranslate nohighlight">\(\vec{a} = \vec{g}\)</span>.</p>
+<p>Вектор прискорення <span class="math notranslate nohighlight">\(\vec{a}\)</span> напрямлений вниз, і його модуль дорівнює <span class="math notranslate nohighlight">\(g\)</span>. Проекція на вісь OY буде <span class="math notranslate nohighlight">\(a_y = -g\)</span>. Підставимо це значення в нашу формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+P = m(g + (-g)) = m(g - g) = 0
+\]</div>
+<p><strong>Висновок:</strong> Вага людини дорівнює нулю! Цей стан називається <strong>невагомістю</strong>.</p>
+<blockquote>
+<div><p><strong>Невагомість</strong> - це стан, за якого вага тіла дорівнює нулю. Тіло перебуває в стані невагомості, коли воно рухається під дією лише сили тяжіння (тобто вільно падає).</p>
+</div></blockquote>
+<p><strong>Важливо:</strong> У стані невагомості сила тяжіння нікуди не зникає! Вона продовжує діяти. Саме вона і надає тілу прискорення <span class="math notranslate nohighlight">\(\vec{g}\)</span>. Просто тіло і його опора (кабіна ліфта, космічний корабель) падають разом, з однаковим прискоренням. Через це тіло не тисне на опору, і його вага стає нульовою. Космічні станції на орбіті також перебувають у стані постійного вільного падіння на Землю (вони постійно &quot;падають&quot; і &quot;промахуються&quot; повз неї через свою величезну горизонтальну швидкість), тому всередині них і панує невагомість.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Загальна векторна формула для ваги<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Ми можемо узагальнити всі наші міркування в одній елегантній векторній формулі. Повернімося до другого закону Ньютона:</p>
+<div class="math notranslate nohighlight">
+\[
+m\vec{a} = m\vec{g} + \vec{N}
+\]</div>
+<p>Виразимо звідси силу нормальної реакції опори:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{N} = m\vec{a} - m\vec{g}
+\]</div>
+<p>Оскільки вага <span class="math notranslate nohighlight">\(\vec{P}\)</span> пов'язана з силою реакції співвідношенням <span class="math notranslate nohighlight">\(\vec{P} = -\vec{N}\)</span>, то:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = -(m\vec{a} - m\vec{g}) = m\vec{g} - m\vec{a}
+\]</div>
+<p>Таким чином, ми отримали загальну векторну формулу для ваги:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{P} = m(\vec{g} - \vec{a})
+\]</div>
+<p>Ця формула працює для будь-якого напрямку прискорення. Давайте перевіримо:</p>
+<ul class="simple">
+<li><p><strong>Спокій (<span class="math notranslate nohighlight">\(\vec{a}=0\)</span>):</strong> <span class="math notranslate nohighlight">\(\vec{P} = m(\vec{g} - 0) = m\vec{g}\)</span>.</p></li>
+<li><p><strong>Прискорення вгору:</strong> вектор <span class="math notranslate nohighlight">\(\vec{a}\)</span> протилежний до <span class="math notranslate nohighlight">\(\vec{g}\)</span>. Різниця векторів <span class="math notranslate nohighlight">\((\vec{g} - \vec{a})\)</span> дасть вектор, більший за модулем, ніж <span class="math notranslate nohighlight">\(\vec{g}\)</span>. Вага збільшується.</p></li>
+<li><p><strong>Прискорення вниз:</strong> вектор <span class="math notranslate nohighlight">\(\vec{a}\)</span> співнапрямлений з <span class="math notranslate nohighlight">\(\vec{g}\)</span>. Різниця векторів <span class="math notranslate nohighlight">\((\vec{g} - \vec{a})\)</span> дасть вектор, менший за модулем, ніж <span class="math notranslate nohighlight">\(\vec{g}\)</span>. Вага зменшується.</p></li>
+<li><p><strong>Вільне падіння (<span class="math notranslate nohighlight">\(\vec{a}=\vec{g}\)</span>):</strong> <span class="math notranslate nohighlight">\(\vec{P} = m(\vec{g} - \vec{g}) = 0\)</span>. Невагомість.</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>Підсумок<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Ситуація</p></th>
+<th class="head text-left"><p>Опис / Характеристика</p></th>
+<th class="head text-left"><p>Формула</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Сила тяжіння</strong></p></td>
+<td class="text-left"><p>Сила, з якою Земля притягує тіло. Прикладена до центру мас тіла, має гравітаційну природу.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{F}_{\text{тяж}} = m\vec{g}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Вага тіла</strong></p></td>
+<td class="text-left"><p>Сила, з якою тіло діє на опору або підвіс. Прикладена до опори/підвісу, має електромагнітну природу.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{P}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Зв'язок ваги та реакції опори</strong></p></td>
+<td class="text-left"><p>За третім законом Ньютона, вага <span class="math notranslate nohighlight">\(\vec{P}\)</span> і сила реакції опори <span class="math notranslate nohighlight">\(\vec{N}\)</span> (або сила натягу <span class="math notranslate nohighlight">\(\vec{T}\)</span>) рівні за модулем і протилежні за напрямком.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{P} = -\vec{N}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Стан спокою або рівномірного руху</strong></p></td>
+<td class="text-left"><p>Прискорення дорівнює нулю <span class="math notranslate nohighlight">\(\vec{a} = 0\)</span>. Вага тіла за модулем дорівнює силі тяжіння.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(P = mg\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Рух з прискоренням (загальний випадок)</strong></p></td>
+<td class="text-left"><p>Узагальнена векторна формула, що працює для будь-якого напрямку прискорення <span class="math notranslate nohighlight">\(\vec{a}\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{P} = m(\vec{g} - \vec{a})\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Перевантаження (рух вгору з прискоренням)</strong></p></td>
+<td class="text-left"><p>Вага тіла більша за силу тяжіння. Виникає, коли вектор прискорення <span class="math notranslate nohighlight">\(\vec{a}\)</span> напрямлений протилежно до <span class="math notranslate nohighlight">\(\vec{g}\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(P = m(g + a)\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Зменшення ваги (рух вниз з прискоренням)</strong></p></td>
+<td class="text-left"><p>Вага тіла менша за силу тяжіння. Виникає, коли вектор прискорення <span class="math notranslate nohighlight">\(\vec{a}\)</span> співнапрямлений з <span class="math notranslate nohighlight">\(\vec{g}\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(P = m(g - a)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Невагомість (вільне падіння)</strong></p></td>
+<td class="text-left"><p>Стан, за якого вага тіла дорівнює нулю. Настає, коли тіло рухається лише під дією сили тяжіння.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\vec{a} = \vec{g} \implies P = 0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id11">
+<h2>Додаткові матеріали<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D0%B0%D0%B3%D0%B0">https://uk.wikipedia.org/wiki/Вага</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BB%D0%B0_%D1%82%D1%8F%D0%B6%D1%96%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Сила_тяжіння</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B2%D0%B0%D0%B3%D0%BE%D0%BC%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Невагомість</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BB%D0%B0_%D0%BD%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%97_%D1%80%D0%B5%D0%B0%D0%BA%D1%86%D1%96%D1%97">https://uk.wikipedia.org/wiki/Сила_нормальної_реакції</a></p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Weight">https://en.wikipedia.org/wiki/Weight</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gravity">https://en.wikipedia.org/wiki/Gravity</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Weightlessness">https://en.wikipedia.org/wiki/Weightlessness</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tension_(physics)">https://en.wikipedia.org/wiki/Tension_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Normal_force">https://en.wikipedia.org/wiki/Normal_force</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="newtons-law-of-universal-gravitation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Закон всесвітнього тяжіння</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="elasticity.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Сила пружності</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке вага тіла?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Вага у стані спокою: причина плутанини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ключова відмінність і природа сил</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Вага в русі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Випадок 1: Ліфт прискорюється вгору (Перевантаження)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Випадок 2: Ліфт прискорюється вниз</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Випадок 3: Невагомість</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Загальна векторна формула для ваги</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

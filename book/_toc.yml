@@ -46,6 +46,8 @@ parts:
       - file: physics/mechanics/newton-first-law
       - file: physics/mechanics/newton-second-third-laws
       - file: physics/mechanics/newtons-law-of-universal-gravitation
+      - file: physics/mechanics/weight
+      - file: physics/mechanics/elasticity
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
@@ -62,6 +64,7 @@ parts:
       - file: physics/oscillations-and-waves/pendulums
       - file: physics/oscillations-and-waves/resonance
       - file: physics/oscillations-and-waves/mechanical-waves
+      - file: physics/oscillations-and-waves/interference-diffraction
 
   - caption: ЕЛЕКТРОДИНАМІКА
     chapters:
