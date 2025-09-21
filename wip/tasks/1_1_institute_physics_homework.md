@@ -63,3 +63,16 @@
 **Завдання 5**:
 
 Лопать квадрокоптера має довжину 15 см. Під час польоту вона обертається з частотою 120 Гц. Знайдіть лінійну швидкість точки, що знаходиться на самому кінці лопаті.
+
+
+## Домашнє завдання 4
+
+**Теоретичний матеріал**:
+- Підручник Бар'яхтар 10 клас рівень стандарту: параграфи 9, 10, 11
+- https://yakovliev.github.io/quantopia-school-ua/physics/mechanics/newton-first-law.html
+- https://yakovliev.github.io/quantopia-school-ua/physics/mechanics/kinematics-05.html
+- https://yakovliev.github.io/quantopia-school-ua/physics/mechanics/newtons-law-of-universal-gravitation.html
+
+**Завдання 1**:
+- Записати наступні означення/формули в конспект: інертність, інерціальна система відліку, неінерціальна система відліку, перший закон Ньютона, другий закон Ньютона, третій закон Ньютона, закон всесвітнього тяжіння
+
