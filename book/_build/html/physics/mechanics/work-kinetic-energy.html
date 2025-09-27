@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Механічна робота, кінетична енергія та потужність &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/work-kinetic-energy';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Потенціальна енергія та закон збереження енергії" href="potential-energy-and-conservation.html" />
+    <link rel="prev" title="Сила пружності" href="elasticity.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mechanics/work-kinetic-energy.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mechanics/work-kinetic-energy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mechanics/work-kinetic-energy.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Механічна робота, кінетична енергія та потужність</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Механічна робота</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Що таке механічна робота?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Коли робота додатна, від'ємна або дорівнює нулю?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Геометричний зміст роботи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Кінетична енергія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Кінетична енергія – енергія руху</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Виведення формули кінетичної енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Теорема про кінетичну енергію</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Потужність</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Механічна робота, кінетична енергія та потужність<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Уявіть, що ми хочемо описати, як сили впливають на рух тіл. Ми вже знаємо про закони Ньютона, які пов'язують силу, масу та прискорення. Але є й інший, надзвичайно потужний підхід для опису руху - через поняття <strong>роботи</strong> та <strong>енергії</strong>. Цей підхід дозволяє нам не враховувати час або конкретний вид руху (наприклад, чи він був рівноприскореним), а дивитися на &quot;початковий&quot; та &quot;кінцевий&quot; стани системи.</p>
+<p>Давайте почнемо з першого ключового поняття.</p>
+<section id="id2">
+<h2>Механічна робота<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У повсякденному житті ми називаємо &quot;роботою&quot; будь-яку діяльність, що вимагає зусиль - розумових чи фізичних. Однак у фізиці це поняття має дуже чітке визначення.</p>
+<section id="id3">
+<h3>Що таке механічна робота?<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Механічна робота <span class="math notranslate nohighlight">\(A\)</span></strong> - це скалярна фізична величина, яка характеризує зміну стану тіла, що відбувається під дією сили і дорівнює скалярному добутку вектора сили <span class="math notranslate nohighlight">\(\vec{F}\)</span> на вектор переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span> точки прикладання цієї сили.</p>
+</div></blockquote>
+<p>Якщо ви штовхаєте стіну, ви докладаєте силу, втомлюєтеся, але стіна не рухається. З точки зору фізики, ви не виконуєте жодної роботи, оскільки немає переміщення. А от якщо ви штовхаєте візок, і він котиться, ваша сила виконує роботу.</p>
+<p>Робота залежить від трьох речей: величини прикладеної сили <span class="math notranslate nohighlight">\(F\)</span>, величини переміщення тіла <span class="math notranslate nohighlight">\(s\)</span>, кута <span class="math notranslate nohighlight">\(\alpha\)</span> між напрямком сили та напрямком переміщення. Формула для роботи постійної сили виглядає так:</p>
+<div class="math notranslate nohighlight">
+\[A = \vec{F} \cdot \vec{s}\]</div>
+<p>або, якщо розписати скалярний добуток, ця формула набуває вигляду</p>
+<div class="math notranslate nohighlight">
+\[
+A = Fs\cos\alpha
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> - механічна робота.</p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span> - модуль сили, що діє на тіло.</p></li>
+<li><p><span class="math notranslate nohighlight">\(s\)</span> - модуль переміщення тіла.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> - кут між вектором сили <span class="math notranslate nohighlight">\(\vec{F}\)</span> та вектором переміщення <span class="math notranslate nohighlight">\(\vec{s}\)</span>.</p></li>
+</ul>
+<p>Іншими словами, робота залежить не від усієї величини сили, а лише від тієї її частини (проєкції), яка спрямована вздовж руху тіла.</p>
+<p>Одиницею вимірювання роботи в системі СІ є <strong>Джоуль (Дж)</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+1 \text{ Дж} = 1 \text{ Н} \cdot \text{м}
+\]</div>
+<p>Один джоуль - це робота, яку виконує сила в 1 Ньютон, переміщуючи тіло на 1 метр у напрямку дії сили.</p>
+</section>
+<section id="id4">
+<h3>Коли робота додатна, від'ємна або дорівнює нулю?<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Значення косинуса визначає знак роботи, що має глибокий фізичний зміст. Розглянемо три випадки.</p>
+<p><strong>Додатна робота <span class="math notranslate nohighlight">\(A &gt; 0\)</span></strong></p>
+<p>Робота є додатною, коли кут <span class="math notranslate nohighlight">\(\alpha\)</span> є гострим (<span class="math notranslate nohighlight">\(0^\circ \le \alpha &lt; 90^\circ\)</span>). У цьому випадку <span class="math notranslate nohighlight">\(\cos\alpha &gt; 0\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Фізичний зміст</strong>: Сила &quot;допомагає&quot; руху, спрямована в ту ж сторону, що й переміщення. Вона сприяє збільшенню швидкості тіла.</p></li>
+<li><p><strong>Приклад</strong>: Коли ми тягнемо санчата за мотузку, сила натягу мотузки виконує додатну роботу.</p></li>
+</ul>
+<p><strong>Від'ємна робота <span class="math notranslate nohighlight">\(A &lt; 0\)</span></strong></p>
+<p>Робота є від'ємною, коли кут <span class="math notranslate nohighlight">\(\alpha\)</span> є тупим (<span class="math notranslate nohighlight">\(90^\circ &lt; \alpha \le 180^\circ\)</span>). У цьому випадку <span class="math notranslate nohighlight">\(\cos\alpha &lt; 0\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Фізичний зміст</strong>: Сила &quot;заважає&quot; руху, спрямована протилежно до переміщення. Вона гальмує тіло, зменшуючи його швидкість.</p></li>
+<li><p><strong>Приклад</strong>: Сила тертя ковзання завжди спрямована проти руху, тому її робота завжди від'ємна. Вона &quot;забирає&quot; енергію руху.</p></li>
+</ul>
+<p><strong>Робота дорівнює нулю <span class="math notranslate nohighlight">\(A = 0\)</span></strong></p>
+<p>Робота дорівнює нулю у двох основних випадках:</p>
+<ul class="simple">
+<li><p><strong>Кут <span class="math notranslate nohighlight">\(\alpha = 90^\circ\)</span></strong>. У цьому випадку <span class="math notranslate nohighlight">\(\cos90^\circ = 0\)</span>.</p>
+<ul>
+<li><p><strong>Фізичний зміст</strong>: Сила перпендикулярна до переміщення і ніяк не впливає на зміну швидкості.</p></li>
+<li><p><strong>Приклад</strong>: Коли ми несемо сумку, тримаючи її в руці, і йдемо горизонтально. Сила, з якою ми підтримуємо сумку, спрямована вгору, а переміщення - горизонтально. Кут між ними <span class="math notranslate nohighlight">\(90^\circ\)</span>, тому робота цієї сили дорівнює нулю. Сила тяжіння, що діє на супутник на коловій орбіті, також не виконує роботи, бо вона завжди перпендикулярна до вектора швидкості (а отже, і до переміщення).</p></li>
+</ul>
+</li>
+<li><p><strong>Переміщення <span class="math notranslate nohighlight">\(s = 0\)</span></strong>.</p>
+<ul>
+<li><p><strong>Фізичний зміст</strong>: Тіло не рухається.</p></li>
+<li><p><strong>Приклад</strong>: Вже згаданий випадок, коли ми штовхаємо стіну. Сила є, а переміщення немає.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h3>Геометричний зміст роботи<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Давайте поглянемо на формулу <span class="math notranslate nohighlight">\(A = Fs\cos\alpha\)</span> інакше. Вираз <span class="math notranslate nohighlight">\(F\cos\alpha\)</span> є <strong>проекцією вектора сили на напрямок переміщення</strong>. Позначимо цю проекцію як <span class="math notranslate nohighlight">\(F_s\)</span> (або <span class="math notranslate nohighlight">\(F_x\)</span>, якщо рух відбувається вздовж осі Ox).</p>
+<p>Тоді формулу роботи можна записати простіше:</p>
+<div class="math notranslate nohighlight">
+\[
+A = F_s \cdot s
+\]</div>
+<p>Це означає, що роботу виконує лише та складова сили, яка спрямована вздовж переміщення.</p>
+<p>А тепер уявімо, що ми побудували графік залежності цієї проекції сили <span class="math notranslate nohighlight">\(F_s\)</span> від переміщення <span class="math notranslate nohighlight">\(s\)</span>. Для найпростішого випадку, коли сила є сталою, цей графік буде прямою лінією, паралельною осі переміщення.</p>
+<p>Площа прямокутника під цим графіком дорівнює добутку <span class="math notranslate nohighlight">\(F_s \cdot s\)</span>. Але ж це і є наша формула для роботи!</p>
+<p><strong>Геометричний зміст роботи</strong>: робота сили чисельно дорівнює площі фігури під графіком залежності проекції сили на напрямок руху від переміщення.</p>
+<p>Цей висновок є надзвичайно корисним, коли сила не є сталою (наприклад, при розтягуванні пружини). У такому випадку робота все одно буде дорівнювати площі під криволінійним графіком <span class="math notranslate nohighlight">\(F_s(s)\)</span> (див. Рис. 1).</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Force-distance-diagram.svg" alt="Force-distance-diagram.svg" height="500" width="500">
+<br>
+Рис. 1. Площа під кривою чисельно дорівнює роботі сили F(s).
+Автор: <a href="https://commons.wikimedia.org/wiki/User:MartinThoma" title="User:MartinThoma">MartinThoma</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=34701863">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Робота_(фізика)">Wikipedia</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Кінетична енергія<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Ми з'ясували, що виконання роботи над тілом може змінювати його швидкість. Величина, яка пов'язана зі швидкістю тіла, називається енергією.</p>
+<blockquote>
+<div><p><strong>Енергія</strong> - це скалярна фізична величина, яка є загальною мірою руху та взаємодії тіл і характеризує здатність тіла (або системи тіл) виконувати роботу.</p>
+</div></blockquote>
+<p>Енергія буває різних видів: теплова, електрична, ядерна, хімічна. У механіці ми виділяємо два основних види:</p>
+<ul class="simple">
+<li><p><strong>Кінетична енергія</strong> - енергія руху.</p></li>
+<li><p><strong>Потенціальна енергія</strong> - енергія взаємодії.</p></li>
+</ul>
+<p>Зараз ми детально зупинимося на кінетичній енергії.</p>
+<section id="id7">
+<h3>Кінетична енергія – енергія руху<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Кінетична енергія</strong> - це скалярна фізична величина, що є частиною повної енергії системи і характеризує енергію її руху.</p>
+</div></blockquote>
+<p>Будь-яке рухоме тіло має <strong>кінетичну енергію</strong> <span class="math notranslate nohighlight">\(E_k\)</span>. Ця енергія залежить від маси тіла та швидкості його руху. Чим більша маса і чим більша швидкість, тим більша кінетична енергія.</p>
+<p>Одиницею вимірювання енергії в СІ, так само як і роботи, є <strong>Джоуль (Дж)</strong>. Це не випадковість, адже, як ми скоро побачимо, робота і енергія тісно пов'язані.</p>
+</section>
+<section id="id8">
+<h3>Виведення формули кінетичної енергії<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>А звідки ж взялася знаменита формула <span class="math notranslate nohighlight">\(E_k = \frac{mv^2}{2}\)</span>? Її можна отримати, використовуючи поняття роботи. Давайте це зробимо.</p>
+<p>Уявімо тіло масою <span class="math notranslate nohighlight">\(m\)</span>, яке перебуває у стані спокою (початкова швидкість дорівнює нулю <span class="math notranslate nohighlight">\(v_0 = 0\)</span>). На нього починає діяти постійна рівнодійна сила <span class="math notranslate nohighlight">\(F\)</span>, яка змушує його рухатись рівноприскорено вздовж прямої. Нехай під дією цієї сили тіло проходить шлях <span class="math notranslate nohighlight">\(s\)</span> і набуває швидкості <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<ol class="arabic">
+<li><p>Робота, яку виконала сила <span class="math notranslate nohighlight">\(F\)</span>, дорівнює <span class="math notranslate nohighlight">\(A = F \cdot s\)</span> (вважаємо, що сила і переміщення співнапрямлені, тому <span class="math notranslate nohighlight">\(\cos\alpha=1\)</span>).</p></li>
+<li><p>Згідно з другим законом Ньютона, <span class="math notranslate nohighlight">\(F = ma\)</span>. Підставимо це у формулу роботи:</p>
+<div class="math notranslate nohighlight">
+\[
+    A = (ma)s = m(as)
+    \]</div>
+</li>
+<li><p>Нам потрібно позбутися прискорення <span class="math notranslate nohighlight">\(a\)</span> та шляху <span class="math notranslate nohighlight">\(s\)</span> і виразити роботу через швидкість <span class="math notranslate nohighlight">\(v\)</span>. Згадаймо формулу з кінематики для рівноприскореного руху без часу:</p>
+<div class="math notranslate nohighlight">
+\[
+    s = \frac{v^2 - v_0^2}{2a}
+    \]</div>
+</li>
+<li><p>Оскільки початкова швидкість <span class="math notranslate nohighlight">\(v_0 = 0\)</span>, формула спрощується:</p>
+<div class="math notranslate nohighlight">
+\[
+    s = \frac{v^2}{2a} \implies as = \frac{v^2}{2}
+    \]</div>
+</li>
+<li><p>Тепер підставимо вираз для <span class="math notranslate nohighlight">\(as\)</span> у нашу формулу для роботи:</p>
+<div class="math notranslate nohighlight">
+\[
+    A = m \cdot \left(\frac{v^2}{2}\right) = \frac{mv^2}{2}
+    \]</div>
+</li>
+</ol>
+<p>Ми отримали, що робота, виконана для розгону тіла від стану спокою до швидкості <span class="math notranslate nohighlight">\(v\)</span>, дорівнює <span class="math notranslate nohighlight">\(\frac{mv^2}{2}\)</span>. Ця робота &quot;перейшла&quot; в енергію руху тіла. Саме цю величину і називають <strong>кінетичною енергією</strong>.</p>
+<p>Отже, кінетична енергія тіла масою <span class="math notranslate nohighlight">\(m\)</span>, що рухається зі швидкістю <span class="math notranslate nohighlight">\(v\)</span>, визначається формулою</p>
+<div class="math notranslate nohighlight">
+\[
+E_k = \frac{mv^2}{2}
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Теорема про кінетичну енергію<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Ми підійшли до центральної ідеї, яка пов'язує роботу та енергію.</p>
+<blockquote>
+<div><p><strong>Теорема про кінетичну енергію</strong>: Робота рівнодійної всіх сил, що діють на тіло, дорівнює зміні кінетичної енергії цього тіла.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+A = \Delta E_k = E_k - E_{k0}
+\]</div>
+<p>де <span class="math notranslate nohighlight">\(E_k\)</span> - кінцева кінетична енергія, а <span class="math notranslate nohighlight">\(E_{k0}\)</span> - початкова кінетична енергія.</p>
+<p>Давайте доведемо цю теорему. Доведення дуже схоже на виведення формули кінетичної енергії <span class="math notranslate nohighlight">\(E_k\)</span>, але тепер ми розглядаємо загальний випадок, коли початкова швидкість <span class="math notranslate nohighlight">\(v_0\)</span> не дорівнює нулю.</p>
+<ol class="arabic">
+<li><p>Знову розглядаємо тіло масою <span class="math notranslate nohighlight">\(m\)</span>, на яке діє рівнодійна сила <span class="math notranslate nohighlight">\(F\)</span>. Під її дією швидкість тіла змінюється від <span class="math notranslate nohighlight">\(v_0\)</span> до <span class="math notranslate nohighlight">\(v\)</span> на шляху <span class="math notranslate nohighlight">\(s\)</span>.</p></li>
+<li><p>Робота цієї сили дорівнює <span class="math notranslate nohighlight">\(A = Fs\)</span>.</p></li>
+<li><p>За другим законом Ньютона, <span class="math notranslate nohighlight">\(F = ma\)</span>, отже <span class="math notranslate nohighlight">\(A = mas\)</span>.</p></li>
+<li><p>Знову використовуємо кінематичну формулу <span class="math notranslate nohighlight">\(s = \frac{v^2 - v_0^2}{2a}\)</span>. Звідси, <span class="math notranslate nohighlight">\(as = \frac{v^2 - v_0^2}{2}\)</span>.</p></li>
+<li><p>Підставляємо вираз для <span class="math notranslate nohighlight">\(as\)</span> у формулу для роботи:</p>
+<div class="math notranslate nohighlight">
+\[
+    A = m \cdot \left(\frac{v^2 - v_0^2}{2}\right) = \frac{mv^2}{2} - \frac{mv_0^2}{2}
+    \]</div>
+</li>
+<li><p>Ми бачимо, що перший доданок - це кінцева кінетична енергія <span class="math notranslate nohighlight">\(E_k\)</span>, а другий - початкова <span class="math notranslate nohighlight">\(E_{k0}\)</span>. Отже, ми довели теорему:</p>
+<div class="math notranslate nohighlight">
+\[
+    A = E_k - E_{k0} = \Delta E_k
+    \]</div>
+</li>
+</ol>
+<p>Ця теорема є надзвичайно важливою. Вона каже нам:</p>
+<ul class="simple">
+<li><p>Якщо сумарна робота над тілом <strong>додатна</strong> (<span class="math notranslate nohighlight">\(A &gt; 0\)</span>), його кінетична енергія зростає (<span class="math notranslate nohighlight">\(\Delta E_k &gt; 0\)</span>), тобто тіло <strong>розганяється</strong>.</p></li>
+<li><p>Якщо сумарна робота <strong>від'ємна</strong> (<span class="math notranslate nohighlight">\(A &lt; 0\)</span>), його кінетична енергія зменшується (<span class="math notranslate nohighlight">\(\Delta E_k &lt; 0\)</span>), тобто тіло <strong>гальмує</strong>.</p></li>
+<li><p>Якщо сумарна робота <strong>дорівнює нулю</strong> (<span class="math notranslate nohighlight">\(A = 0\)</span>), його кінетична енергія не змінюється (<span class="math notranslate nohighlight">\(\Delta E_k = 0\)</span>), тобто тіло рухається зі <strong>сталою швидкістю</strong>.</p></li>
+</ul>
+<p>Робота - це процес передачі енергії від одного тіла до іншого за допомогою сили.</p>
+<p>Важливо пам'ятати, що в теоремі про кінетичну енергію йдеться саме про роботу рівнодійної (сумарної) сили. Якщо над тілом працюють кілька сил (наприклад, сила тяги та сила тертя), то зміна кінетичної енергії дорівнюватиме алгебраїчній сумі робіт усіх цих сил.</p>
+</section>
+<section id="id10">
+<h2>Потужність<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Ми вже знаємо, як обчислити роботу. Але часто важливо знати не тільки, яка робота виконана, а й <strong>наскільки швидко</strong> вона виконана. Для характеристики швидкості виконання роботи вводять поняття потужності.</p>
+<blockquote>
+<div><p><strong>Потужність</strong> - це фізична величина, яка дорівнює відношенню виконаної роботи до проміжку часу, за який цю роботу було виконано.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Аналогія</strong>: Двоє людей перенесли однакові ящики на один і той самий поверх. Вони виконали однакову роботу. Але якщо один впорався за хвилину, а інший за п'ять, то перший був більш &quot;потужним&quot;.</p></li>
+</ul>
+<p>Формула для середньої потужності <span class="math notranslate nohighlight">\(P\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac{A}{t}
+\]</div>
+<p>де <span class="math notranslate nohighlight">\(A\)</span> - виконана робота, <span class="math notranslate nohighlight">\(t\)</span> - час виконання роботи.</p>
+<p>Одиницею вимірювання потужності в СІ є <strong>Ват (Вт)</strong>, названа на честь Джеймса Ватта.</p>
+<div class="math notranslate nohighlight">
+\[
+1 \text{ Вт} = 1 \frac{\text{Дж}}{\text{с}}
+\]</div>
+<p>Потужність в 1 Вт розвиває механізм, який за 1 секунду виконує роботу в 1 Джоуль.</p>
+<p>На практиці також використовують позасистемну одиницю - <strong>кінську силу (к. с.)</strong>. Її часто застосовують для характеристики потужності двигунів автомобілів.</p>
+<div class="math notranslate nohighlight">
+\[
+1 \text{ к. с.} \approx 735.5 \text{ Вт}
+\]</div>
+<p>Існує ще одна зручна формула для потужності. Давайте її виведемо.</p>
+<ol class="arabic">
+<li><p>Візьмемо основну формулу: <span class="math notranslate nohighlight">\(P = \frac{A}{t}\)</span>.</p></li>
+<li><p>Підставимо формулу роботи <span class="math notranslate nohighlight">\(A = Fs\cos\alpha\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    P = \frac{Fs\cos\alpha}{t}
+    \]</div>
+</li>
+<li><p>Згрупуємо множники інакше:</p>
+<div class="math notranslate nohighlight">
+\[
+    P = (F\cos\alpha) \cdot \frac{s}{t}
+    \]</div>
+</li>
+<li><p>Ми знаємо, що відношення шляху до часу <span class="math notranslate nohighlight">\(\frac{s}{t}\)</span> - це швидкість руху <span class="math notranslate nohighlight">\(v\)</span> (для рівномірного руху).</p></li>
+<li><p>Тоді, якщо сила співнапрямлена з рухом (<span class="math notranslate nohighlight">\(\alpha=0\)</span>, <span class="math notranslate nohighlight">\(\cos\alpha=1\)</span>), отримуємо просту і корисну формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+    P = Fv
+    \]</div>
+</li>
+</ol>
+<p>Ця формула показує, що потужність, яку розвиває, наприклад, двигун автомобіля, дорівнює добутку сили тяги, яку він створює, на швидкість руху автомобіля. Щоб підтримувати високу швидкість, потрібно розвивати велику потужність, щоб долати сили опору (тертя, опір повітря).</p>
+</section>
+<section id="id11">
+<h2>Підсумок<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Термін</p></th>
+<th class="head text-left"><p>Визначення, формула та ключові аспекти</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Механічна робота</strong></p></td>
+<td class="text-left"><p>Скалярна величина, що характеризує зміну стану тіла під дією сили. <br> <strong>Формула (скалярний добуток):</strong> <span class="math notranslate nohighlight">\(A = \vec{F} \cdot \vec{s}\)</span> <br> <strong>Формула (через кут):</strong> <span class="math notranslate nohighlight">\(A = Fs\cos\alpha\)</span> <br> <strong>Одиниця вимірювання:</strong> <strong>Джоуль (Дж)</strong>, <span class="math notranslate nohighlight">\(1 \text{ Дж} = 1 \text{ Н} \cdot \text{м}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Значення роботи</strong></p></td>
+<td class="text-left"><p>• <strong>Додатна робота</strong> <span class="math notranslate nohighlight">\(A &gt; 0\)</span>: Кут <span class="math notranslate nohighlight">\(\alpha\)</span> гострий (<span class="math notranslate nohighlight">\(0^\circ \le \alpha &lt; 90^\circ\)</span>). Сила сприяє руху, розганяє тіло. <br> • <strong>Від'ємна робота</strong> <span class="math notranslate nohighlight">\(A &lt; 0\)</span>: Кут <span class="math notranslate nohighlight">\(\alpha\)</span> тупий (<span class="math notranslate nohighlight">\(90^\circ &lt; \alpha \le 180^\circ\)</span>). Сила протидіє руху, гальмує тіло (напр., сила тертя). <br> • <strong>Робота дорівнює нулю</strong> <span class="math notranslate nohighlight">\(A = 0\)</span>: Сила перпендикулярна до переміщення (<span class="math notranslate nohighlight">\(\alpha=90^\circ\)</span>) або переміщення відсутнє (<span class="math notranslate nohighlight">\(s=0\)</span>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Геометричний зміст роботи</strong></p></td>
+<td class="text-left"><p>Робота чисельно дорівнює площі фігури під графіком залежності проєкції сили на напрямок руху від переміщення <span class="math notranslate nohighlight">\(F_s(s)\)</span>. <br> Для постійної сили <span class="math notranslate nohighlight">\(A = F_s \cdot s\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Кінетична енергія</strong></p></td>
+<td class="text-left"><p>Енергія, якою володіє тіло внаслідок свого руху. Це частина повної енергії системи. <br> <strong>Формула:</strong> <span class="math notranslate nohighlight">\(E_k = \frac{mv^2}{2}\)</span> <br> <strong>Одиниця вимірювання:</strong> <strong>Джоуль (Дж)</strong>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Теорема про кінетичну енергію</strong></p></td>
+<td class="text-left"><p>Робота рівнодійної всіх сил, що діють на тіло, дорівнює зміні його кінетичної енергії. <br> <strong>Формула:</strong> <span class="math notranslate nohighlight">\(A = \Delta E_k = E_k - E_{k0}\)</span> <br> • Якщо <span class="math notranslate nohighlight">\(A &gt; 0\)</span>, то <span class="math notranslate nohighlight">\(\Delta E_k &gt; 0\)</span> (тіло розганяється). <br> • Якщо <span class="math notranslate nohighlight">\(A &lt; 0\)</span>, то <span class="math notranslate nohighlight">\(\Delta E_k &lt; 0\)</span> (тіло гальмує).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Потужність</strong></p></td>
+<td class="text-left"><p>Фізична величина, що характеризує швидкість виконання роботи. <br> <strong>Формула (середня потужність):</strong> <span class="math notranslate nohighlight">\(P = \frac{A}{t}\)</span> <br> <strong>Формула (через швидкість):</strong> <span class="math notranslate nohighlight">\(P = Fv\)</span> (для руху в напрямку сили) <br> <strong>Одиниця вимірювання:</strong> <strong>Ват (Вт)</strong>, <span class="math notranslate nohighlight">\(1 \text{ Вт} = 1 \frac{\text{Дж}}{\text{с}}\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id12">
+<h2>Додаткові матеріали<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%BE%D1%82%D0%B0_(%D1%84%D1%96%D0%B7%D0%B8%D0%BA%D0%B0)">https://uk.wikipedia.org/wiki/Робота_(фізика)</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D0%B5%D0%BD%D0%B5%D1%80%D0%B3%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_енергія</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D0%B0%D1%82">https://uk.wikipedia.org/wiki/Ват</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D1%81%D1%8C%D0%BA%D0%B0_%D1%81%D0%B8%D0%BB%D0%B0">https://uk.wikipedia.org/wiki/Кінська_сила</a></p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Work_(physics)">https://en.wikipedia.org/wiki/Work_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_energy">https://en.wikipedia.org/wiki/Kinetic_energy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Power_(physics)">https://en.wikipedia.org/wiki/Power_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Joule">https://en.wikipedia.org/wiki/Joule</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Watt">https://en.wikipedia.org/wiki/Watt</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Horsepower">https://en.wikipedia.org/wiki/Horsepower</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="elasticity.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Сила пружності</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="potential-energy-and-conservation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Потенціальна енергія та закон збереження енергії</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Механічна робота</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Що таке механічна робота?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Коли робота додатна, від'ємна або дорівнює нулю?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Геометричний зміст роботи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Кінетична енергія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Кінетична енергія – енергія руху</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Виведення формули кінетичної енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Теорема про кінетичну енергію</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Потужність</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
