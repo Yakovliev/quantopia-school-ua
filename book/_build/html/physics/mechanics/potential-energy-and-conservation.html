@@ -60,12 +60,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mechanics/potential-energy-and-conservation';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="next" title="Імпульс тіла" href="momentum.html" />
     <link rel="prev" title="Механічна робота, кінетична енергія та потужність" href="work-kinetic-energy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -207,6 +209,7 @@
 <li class="toctree-l1"><a class="reference internal" href="elasticity.html">Сила пружності</a></li>
 <li class="toctree-l1"><a class="reference internal" href="work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="momentum.html">Імпульс тіла</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
@@ -497,8 +500,29 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Потенціальна енергія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Консервативні (потенціальні) сили</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Потенціальна енергія тіла в полі тяжіння Землі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Траєкторія 1: рух по ламаній АСВ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Траєкторія 2: рух по гіпотенузі АВ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Потенціальна енергія піднятого тіла</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Потенціальна енергія пружно деформованого тіла</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Теорема про потенціальну енергію</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Повна механічна енергія та її збереження</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Закон збереження повної механічної енергії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Виведення закону збереження механічної енергії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Перетворення енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Роль неконсервативних сил: сила тертя</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Загальний закон збереження енергії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -512,19 +536,347 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Потенціальна енергія та закон збереження енергії<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Потенціальна енергія<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уявімо собі яблуко, що висить на гілці. Воно нерухоме, тому його кінетична енергія дорівнює нулю. Але якщо гілка зламається, яблуко почне падати, набираючи швидкість, а отже, і кінетичну енергію. Звідки взялася ця енергія? Вона була &quot;накопичена&quot; в яблуці завдяки його положенню відносно Землі. Або візьмемо стрілу, натягнуту на тятиві лука. Стріла нерухома, але варто відпустити тятиву, і стріла полетить з величезною швидкістю. Енергія була накопичена у вигнутій дузі лука.</p>
+<p>Ця &quot;накопичена&quot; енергія, яка залежить від взаємного розташування тіл або частин одного тіла, і є потенціальною енергією.</p>
+<blockquote>
+<div><p><strong>Потенціальна енергія <span class="math notranslate nohighlight">\(E_p\)</span></strong> - це частина енергії фізичної системи, що виникає завдяки взаємодії між тілами, які складають систему, або внаслідок взаємодії із зовнішніми відносно цієї системи тілами.</p>
+</div></blockquote>
+<p>Як і будь-який інший вид енергії, в системі СІ потенціальна енергія вимірюється в <strong>Джоулях (Дж)</strong>.</p>
+<section id="id3">
+<h3>Консервативні (потенціальні) сили<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Поняття потенціальної енергії має сенс лише для певного класу сил, які називаються <strong>консервативними</strong> або <strong>потенціальними</strong>.</p>
+<blockquote>
+<div><p><strong>Консервативні сили</strong> - це сили, робота яких не залежить від траєкторії руху тіла, а визначається лише його початковим і кінцевим положенням.</p>
+</div></blockquote>
+<p>Ключова властивість таких сил: <strong>робота консервативної сили на будь-якій замкненій траєкторії дорівнює нулю.</strong></p>
+<p><strong>Приклади консервативних сил:</strong></p>
+<ul class="simple">
+<li><p><strong>Сила тяжіння:</strong> Робота, яку виконує сила тяжіння при переміщенні тіла з точки А в точку Б, не залежить від того, чи кинули ми тіло по параболі, чи спустили по похилій площині. Вона залежить лише від різниці висот початковою точкою та кінцевою точкою.</p></li>
+<li><p><strong>Сила пружності:</strong> Робота, яку виконує пружина при розтягуванні чи стисканні, залежить лише від початкової та кінцевої деформації, а не від того, як швидко чи повільно ми її розтягували.</p></li>
+</ul>
+<p><strong>А які сили не є консервативними?</strong></p>
+<p>Найяскравіший приклад - <strong>сила тертя ковзання</strong>. Її робота <em>дуже</em> залежить від пройденого шляху. Якщо ми пересунемо ящик з точки А в точку В по прямій, робота сили тертя буде одна. А якщо ми пересунемо його по довгій звивистій траєкторії, то робота сили тертя буде значно більшою. Робота сили тертя по замкненому шляху ніколи не дорівнює нулю - вона завжди від'ємна, оскільки спрямована проти руху тіла. Для таких неконсервативних сил поняття потенціальної енергії не вводять.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Потенціальна енергія тіла в полі тяжіння Землі<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Давайте розглянемо найпростіший випадок: тіло масою <span class="math notranslate nohighlight">\(m\)</span> переміщується з початкової точки А, що знаходиться на висоті <span class="math notranslate nohighlight">\(h_0\)</span>, до кінцевої точки В, що знаходиться на висоті <span class="math notranslate nohighlight">\(h\)</span> над поверхнею Землі. Ми розглядаємо загальний випадок, тому точка В не обов'язково буде рівно під точкою А, ця точка В може бути трохи в стороні. Таким чином, у нас є безліч різних різних шляхів, якими можна потрапити з точки А в точку В. Ми розглянемо два шляхи і порівняємо для них результат. Нехай маємо прямокутний трикутник АВС, де АВ - це гіпотенуза. Точки В та С знаходяться на одній висоті <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>Перша траєкторія: рух від точки А вертикально вниз до точки С і потім горизонтально до точки В. Друга траєкторія - рух по гіпотенузі АВ з точки А в точку В. На тіло діє стала сила тяжіння <span class="math notranslate nohighlight">\(\vec{F_{\text{т}}}\)</span>, напрямлена вертикально вниз. Знайдемо роботу цієї сили для обох траєкторій.</p>
+<section id="id5">
+<h3>Траєкторія 1: рух по ламаній АСВ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Роботу на цій траєкторії ми можемо розбити на дві частини: роботу на вертикальній ділянці АС та на горизонтальній ділянці СВ.</p>
+<ol class="arabic">
+<li><p><strong>Ділянка АС (вертикальний рух):</strong></p>
+<ul class="simple">
+<li><p>Переміщення <span class="math notranslate nohighlight">\(s_{AC} = h_0 - h\)</span> напрямлене вертикально вниз.</p></li>
+<li><p>Сила тяжіння <span class="math notranslate nohighlight">\(\vec{F_{\text{т}}}\)</span> також напрямлена вертикально вниз.</p></li>
+<li><p>Оскільки напрямки сили і переміщення збігаються, кут <span class="math notranslate nohighlight">\(\alpha = 0^\circ\)</span>, а <span class="math notranslate nohighlight">\(\cos(0^\circ) = 1\)</span>.</p></li>
+<li><p>Робота на цій ділянці: <span class="math notranslate nohighlight">\(A_{AC} = F_{\text{т}} \cdot s_{AC} \cdot \cos(0^\circ) = mg(h_0 - h)\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Ділянка СВ (горизонтальний рух):</strong></p>
+<ul class="simple">
+<li><p>Переміщення <span class="math notranslate nohighlight">\(s_{CB}\)</span> напрямлене горизонтально.</p></li>
+<li><p>Сила тяжіння <span class="math notranslate nohighlight">\(\vec{F_{\text{т}}}\)</span> напрямлена вертикально вниз.</p></li>
+<li><p>Кут між вектором сили і вектором переміщення становить <span class="math notranslate nohighlight">\(\alpha = 90^\circ\)</span>, а <span class="math notranslate nohighlight">\(\cos(90^\circ) = 0\)</span>.</p></li>
+<li><p>Робота на цій ділянці: <span class="math notranslate nohighlight">\(A_{CB} = F_{\text{т}} \cdot s_{CB} \cdot \cos(90^\circ) = 0\)</span>. Сила тяжіння не виконує роботи при горизонтальному русі.</p></li>
+</ul>
+</li>
+<li><p><strong>Повна робота</strong> на траєкторії АСВ дорівнює сумі робіт на ділянках:</p>
+<div class="math notranslate nohighlight">
+\[
+    A_1 = A_{AC} + A_{CB} = mg(h_0 - h) + 0 = mgh_0 - mgh
+    \]</div>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h3>Траєкторія 2: рух по гіпотенузі АВ<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>На цій траєкторії тіло рухається по прямій з точки А в точку В. Довжину цього шляху позначимо як <span class="math notranslate nohighlight">\(s_{AB}\)</span>.</p></li>
+<li><p>Сила тяжіння <span class="math notranslate nohighlight">\(\vec{F_{\text{т}}}\)</span> напрямлена вертикально вниз.</p></li>
+<li><p>Робота сили тяжіння: <span class="math notranslate nohighlight">\(A_2 = F_{\text{т}} \cdot s_{AB} \cdot \cos\alpha\)</span>, де <span class="math notranslate nohighlight">\(\alpha\)</span> - кут між вектором сили тяжіння (вертикаль) і вектором переміщення <span class="math notranslate nohighlight">\(\vec{s}_{AB}\)</span>.</p></li>
+<li><p>З прямокутного трикутника АВС видно, що добуток <span class="math notranslate nohighlight">\(s_{AB} \cdot \cos\alpha\)</span> - це проєкція гіпотенузи АВ на вертикальний катет АС. А довжина цього катета якраз дорівнює різниці висот <span class="math notranslate nohighlight">\(h_0 - h\)</span>.</p></li>
+<li><p>Таким чином, <span class="math notranslate nohighlight">\(s_{AB} \cdot \cos\alpha = h_0 - h\)</span>.</p></li>
+<li><p>Підставимо це у формулу для роботи:
+$<span class="math notranslate nohighlight">\(
+A_2 = mg \cdot (s_{AB} \cos\alpha) = mg(h_0 - h) = mgh_0 - mgh
+\)</span>$</p></li>
+</ol>
+</section>
+<section id="id7">
+<h3>Потенціальна енергія піднятого тіла<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Ми отримали, що <span class="math notranslate nohighlight">\(A_1 = A_2\)</span>. Робота сили тяжіння виявилася однаковою для обох траєкторій. Можна довести, що вона буде такою ж для <strong>будь-якої</strong> траєкторії, що з'єднує точки А і В. Це і є головна ознака <strong>консервативної сили</strong>: її робота залежить лише від початкового та кінцевого положення тіла, а не від форми шляху.</p>
+<p>Формула, яку ми отримали для роботи, надзвичайно важлива:</p>
+<div class="math notranslate nohighlight">
+\[
+A_{\text{т}} = mgh_0 - mgh
+\]</div>
+<p>Вона показує, що робота сили тяжіння дорівнює різниці деякої величини, що залежить від висоти. Цю величину <span class="math notranslate nohighlight">\(mgh\)</span> ми й називаємо <strong>потенціальною енергією тіла, піднятого над Землею</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+E_p = mgh
+\]</div>
+<p>Тепер ми можемо переписати нашу формулу для роботи через потенціальну енергію: <span class="math notranslate nohighlight">\(A_{\text{т}} = E_{p0} - E_p\)</span>. Бачимо, що робота сили тяжіння дорівнює різниці потенціальних енергій у початковому та кінцевому станах. Цей результат є чудовою ілюстрацією загального правила, яке ми сформулюємо трохи згодом.</p>
+<p><strong>Важливий момент:</strong> Формула <span class="math notranslate nohighlight">\(E_p = mgh\)</span> визначає потенціальну енергію відносно певного <strong>нульового рівня</strong>. Це рівень, на якому ми домовились вважати потенціальну енергію рівною нулю (<span class="math notranslate nohighlight">\(h=0\)</span>). Ми можемо обрати цей рівень довільно: поверхня столу, підлога кімнати, поверхня Землі. Сама по собі величина потенціальної енергії не має глибокого фізичного змісту, зміст має лише її <strong>зміна</strong> <span class="math notranslate nohighlight">\(\Delta E_p\)</span>.</p>
+<p>Якщо книга лежить на столі висотою 1 м у кімнаті, її потенціальна енергія відносно підлоги дорівнює <span class="math notranslate nohighlight">\(mg \cdot (1 \text{ м})\)</span>, але відносно поверхні столу - нулю. Фізичний зміст має лише зміна енергії, наприклад, при падінні книги зі столу на підлогу або при підійманні книги зі столу на поличку.</p>
+<p><strong>Важливий момент:</strong> формула <span class="math notranslate nohighlight">\(E_p = mgh\)</span> є точною лише поблизу поверхні планети, де поле тяжіння можна вважати однорідним, а прискорення вільного падіння <span class="math notranslate nohighlight">\(g\)</span> - сталим. Для космічних масштабів або для випадків, коли змінна висоти є суттєвою і поле тяжіння (гравітаційне поле) не можна вважати однорідним, використовується більш загальна формула гравітаційної потенціальної енергії</p>
+<div class="math notranslate nohighlight">
+\[E_p = -G\frac{Mm}{r}\]</div>
+<p>де <span class="math notranslate nohighlight">\(M\)</span> - маса планети, <span class="math notranslate nohighlight">\(m\)</span> - маса досліджуваного тіла, <span class="math notranslate nohighlight">\(r\)</span> - відстань від центру планети до тіла. Цю формулу доволі легко отримати, якщо ви вмієте працювати із визначеними інтегралами і розумієте суть застосування цих інтегралів у фізиці. Виведення цієї формули можна поглянути наприклад ось <a class="reference external" href="https://en.wikipedia.org/wiki/Gravitational_energy">тут</a>.</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Work_of_gravity_F_dot_d_equals_mgh.JPG" alt="Work of gravity F dot d equals mgh.JPG" height="138" width="168">
 <br>
 Рис. 1. Сила тяжіння F = mg виконує роботу A = mgh незалежно від того, якою була траєкторія руху з початкової точки в кінцеву точку.
-Автор: <a href="https://commons.wikimedia.org/wiki/User:Ilevanat" title="User:Ilevanat">Ilevanat</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=14735358">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Робота_(фізика)">Wikipedia</a></p><section id="id2">
-<h2>Додаткові матеріали<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Ilevanat" title="User:Ilevanat">Ilevanat</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=14735358">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Робота_(фізика)">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Conservative_Force_Gravity_Example.svg" alt="Conservative Force Gravity Example.svg" height="500" width="374">
+<br>
+Рис. 2. Робота, яку виконує сила тяжіння над тілом залежить лише від зміни висоти тіла, тому що сила тяжіння є консервативною.
+Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=2837025">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Консервативні_сили">Wikipedia</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id8">
+<h2>Потенціальна енергія пружно деформованого тіла<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Тепер дослідимо іншу фундаментальну взаємодію - пружну деформацію. Уявімо, що ми розтягуємо або стискаємо пружину жорсткістю <span class="math notranslate nohighlight">\(k\)</span> з початкового положення, де її деформація дорівнювала <span class="math notranslate nohighlight">\(x_0\)</span>, до кінцевого положення з деформацією <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>З боку пружини на тіло діє сила пружності, яка за законом Гука дорівнює <span class="math notranslate nohighlight">\(F_{\text{пр}} = -kx\)</span>. Знак &quot;мінус&quot; вказує на те, що сила пружності завжди намагається повернути систему в положення рівноваги (тобто напрямлена протилежно вектору деформації <span class="math notranslate nohighlight">\(\vec{x}\)</span>).</p>
+<p>Оскільки ця сила не є сталою, а лінійно залежить від деформації <span class="math notranslate nohighlight">\(x\)</span>, для знаходження її роботи ми скористаємось уже знайомим нам геометричним методом - знайдемо площу фігури під графіком залежності сили від переміщення.</p>
+<ol class="arabic">
+<li><p>Побудуємо графік залежності проєкції сили пружності <span class="math notranslate nohighlight">\(F_{\text{пр}}\)</span> на вісь Ох від координати (деформації) <span class="math notranslate nohighlight">\(x\)</span>. Це буде пряма похила лінія, що проходить через початок координат.</p></li>
+<li><p>Робота, яку виконує сила пружності при зміні деформації від <span class="math notranslate nohighlight">\(x_0\)</span> до <span class="math notranslate nohighlight">\(x\)</span>, чисельно дорівнює площі фігури, обмеженої графіком сили, віссю Ох та вертикальними лініями <span class="math notranslate nohighlight">\(x=x_0\)</span> та <span class="math notranslate nohighlight">\(x=x\)</span>. Ця фігура є <strong>трапецією</strong>.</p></li>
+<li><p>Площа трапеції обчислюється за формулою: <span class="math notranslate nohighlight">\(S = \frac{a+b}{2} \cdot h\)</span>, де <span class="math notranslate nohighlight">\(a\)</span> і <span class="math notranslate nohighlight">\(b\)</span> - основи, а <span class="math notranslate nohighlight">\(h\)</span> - висота.</p>
+<ul class="simple">
+<li><p>У нашому випадку &quot;основами&quot; трапеції є модулі значень сили пружності в початковій та кінцевій точках: <span class="math notranslate nohighlight">\(a = |F_{\text{пр}}(x_0)| = kx_0\)</span> та <span class="math notranslate nohighlight">\(b = |F_{\text{пр}}(x)| = kx\)</span>.</p></li>
+<li><p>&quot;Висотою&quot; трапеції є модуль зміни деформації: <span class="math notranslate nohighlight">\(h = |x - x_0|\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Важливий момент зі знаком роботи: якщо ми розтягуємо пружину (наприклад, <span class="math notranslate nohighlight">\(x &gt; x_0 &gt; 0\)</span>), то переміщення відбувається в напрямку осі Ох, а сила пружності напрямлена протилежно. Отже, її робота має бути від'ємною, сила пружності у такому випадку заважатиме руху тіла. Робота буде додатною, коли пружина сама стискається, виконуючи роботу над якимось тілом. Об'єднати ці випадки можна, розписавши роботу через інтеграл, але ми можемо отримати результат простіше. Робота сили пружності дорівнює площі трапеції, взятій зі знаком &quot;мінус&quot;, якщо сила і переміщення протилежно напрямлені. Давайте знайдемо загальну формулу, яка врахує всі знаки. Робота сили пружності:</p>
+<div class="math notranslate nohighlight">
+\[
+    A_{\text{пр}} = \text{Площа трапеції під графіком}
+    \]</div>
+<p>Площу трапеції можна знайти як півсуму основ на висоту. Основи - це <span class="math notranslate nohighlight">\(F_{\text{пр}}(x_0) = -kx_0\)</span> та <span class="math notranslate nohighlight">\(F_{\text{пр}}(x) = -kx\)</span>. Висота - це <span class="math notranslate nohighlight">\((x - x_0)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+    A_{\text{пр}} = \frac{F_{\text{пр}}(x_0) + F_{\text{пр}}(x)}{2} \cdot (x-x_0) = \frac{-kx_0 - kx}{2} \cdot (x-x_0)
+    \]</div>
+<div class="math notranslate nohighlight">
+\[
+    A_{\text{пр}} = -\frac{k}{2}(x_0 + x)(x-x_0) = -\frac{k}{2}(x^2 - x_0^2)
+    \]</div>
+<p>Розкривши дужки, ми отримаємо фінальний вигляд:</p>
+<div class="math notranslate nohighlight">
+\[
+    A_{\text{пр}} = \frac{kx_0^2}{2} - \frac{kx^2}{2}
+    \]</div>
+</li>
+</ol>
+<p>Подивімося уважно на результат. Формула для роботи сили пружності залежить <strong>лише від початкової (<span class="math notranslate nohighlight">\(x_0\)</span>) та кінцевої (<span class="math notranslate nohighlight">\(x\)</span>) деформацій</strong>. Вона абсолютно не залежить від того, як саме відбувався перехід між цими двома станами. Це доводить, що <strong>сила пружності є консервативною силою</strong>.</p>
+<p>Ми знову бачимо знайому структуру: робота дорівнює різниці деякої величини. Цю величину, що характеризує &quot;запас&quot; енергії в деформованому тілі, ми називаємо <strong>потенціальною енергією пружно деформованого тіла</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+E_p = \frac{kx^2}{2}
+\]</div>
+<p>І знову ми можемо переписати формулу для роботи через потенціальну енергію: <span class="math notranslate nohighlight">\(A_{\text{пр}} = E_{p0} - E_p\)</span>. Ми вдруге переконалися в існуванні загального зв'язку між роботою консервативної сили та зміною потенціальної енергії.</p>
+<p>Тут за нульовий рівень потенціальної енергії природно вважати стан, коли пружина не деформована (<span class="math notranslate nohighlight">\(x=0\)</span>).</p>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Теорема про потенціальну енергію<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Тепер, розглянувши два конкретні приклади, ми можемо сформулювати загальну теорему, яка їх об'єднує.</p>
+<blockquote>
+<div><p><strong>Теорема про потенціальну енергію:</strong> Робота консервативної сили дорівнює зміні потенціальної енергії системи, взятій з протилежним знаком.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+A = -(E_p - E_{p0}) = E_{p0} - E_p = -\Delta E_p
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> - робота консервативної сили.</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_p\)</span> - кінцева потенціальна енергія.</p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{p0}\)</span> - початкова потенціальна енергія.</p></li>
+</ul>
+<p><strong>Фізичний зміст:</strong> Коли консервативна сила виконує додатну роботу (наприклад, сила тяжіння при падінні тіла), потенціальна енергія системи зменшується. І навпаки, коли консервативна сила виконує від'ємну роботу (ми підіймаємо тіло вгору, а сила тяжіння напрямлена вниз), потенціальна енергія системи зростає. Робота відбувається ніби &quot;за рахунок&quot; накопиченої потенціальної енергії.</p>
+<p>Існує цікава закономірність: будь-яка механічна система прагне зайняти положення, в якому її потенціальна енергія буде мінімальною. Це так званий <strong>принцип мінімуму потенціальної енергії</strong>. Положення, в якому знаходиться тіло при мінімумі потенціальної енергії є положенням <strong>стійкої рівноваги</strong>. Консервативна сила завжди напрямлена в бік зменшення потенціальної енергії.</p>
+<p><strong>Приклад</strong>: Кулька, що лежить на дні сферичної чаші, перебуває в положенні стійкої рівноваги. Її потенціальна енергія мінімальна. Якщо її трохи відхилити, вона повернеться назад.</p>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Повна механічна енергія та її збереження<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Тепер, коли ми знаємо про два види механічної енергії - кінетичну (енергію руху) та потенціальну (енергію взаємодії), - ми можемо ввести поняття повної механічної енергії.</p>
+<blockquote>
+<div><p><strong>Повна механічна енергія <span class="math notranslate nohighlight">\(E\)</span></strong> - це сума кінетичної та потенціальної енергій тіла (або системи тіл)</p>
+<div class="math notranslate nohighlight">
+\[ E = E_k + E_p \]</div>
+</div></blockquote>
+<p>Ця величина є дуже важливою у фізиці, оскільки за певних умов вона залишається незмінною.</p>
+<section id="id11">
+<h3>Закон збереження повної механічної енергії<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Для того, щоб сформулювати цей закон, нам потрібне поняття <strong>замкненої (або ізольованої) системи тіл</strong>.</p>
+<blockquote>
+<div><p><strong>Замкнена система тіл</strong> - це сукупність тіл, які взаємодіють лише між собою і не взаємодіють з іншими тілами, що не входять до цієї системи.</p>
+</div></blockquote>
+<p>На практиці це означає, що зовнішні сили або відсутні, або їхня дія скомпенсована.</p>
+<p>Тепер ми готові сформулювати один з фундаментальних законів природи.</p>
+<blockquote>
+<div><p><strong>Закон збереження повної механічної енергії:</strong> У замкненій системі тіл, де діють лише консервативні сили (сила тяжіння та сила пружності), повна механічна енергія системи залишається сталою.</p>
+<div class="math notranslate nohighlight">
+\[ E = E_k + E_p = \text{const} \]</div>
+</div></blockquote>
+<p>Це означає, що для двох будь-яких моментів часу повна енергія системи однакова:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{k0} + E_{p0} = E_k + E_p
+\]</div>
+</section>
+<section id="id12">
+<h3>Виведення закону збереження механічної енергії<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Цей закон не є постулатом, його можна вивести з уже відомих нам теорем. Давайте зробимо це.</p>
+<ol class="arabic">
+<li><p>Згідно з <strong>теоремою про кінетичну енергію</strong>, робота всіх сил, що діють на тіло, дорівнює зміні його кінетичної енергії: <span class="math notranslate nohighlight">\(A = \Delta E_k = E_k - E_{k0}\)</span>.</p></li>
+<li><p>У нашій системі діють лише консервативні сили, отже згідно з <strong>теоремою про потенціальну енергію</strong>, робота консервативних сил дорівнює: <span class="math notranslate nohighlight">\(A_{\text{конс}} = -\Delta E_p = E_{p0} - E_p\)</span>.</p></li>
+<li><p>Прирівняємо вирази для роботи з пунктів 1 і 2:</p>
+<div class="math notranslate nohighlight">
+\[
+    \Delta E_k = -\Delta E_p
+    \]</div>
+<div class="math notranslate nohighlight">
+\[
+    E_k - E_{k0} = E_{p0} - E_p
+    \]</div>
+</li>
+<li><p>Перегрупуємо доданки: перенесемо всі величини з індексом &quot;0&quot; (початковий стан) в один бік, а без індексу (кінцевий стан) - в інший.</p>
+<div class="math notranslate nohighlight">
+\[
+    E_{k0} + E_{p0} = E_k + E_p
+    \]</div>
+<p>Що й треба було довести.</p>
+</li>
+</ol>
+</section>
+<section id="id13">
+<h3>Перетворення енергії<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Закон збереження енергії не означає, що кінетична та потенціальна енергії не змінюються. Навпаки, вони постійно <strong>перетворюються</strong> одна в одну, але їхня сума залишається незмінною.</p>
+<p><strong>Приклад:</strong> Тіло, кинуте вертикально вгору.</p>
+<p>Уявімо, що ми кидаємо м'яч масою <span class="math notranslate nohighlight">\(m\)</span> вертикально вгору з початковою швидкістю <span class="math notranslate nohighlight">\(v_0\)</span> з поверхні землі (яку ми приймемо за нульовий рівень висоти, <span class="math notranslate nohighlight">\(h=0\)</span>). Нехтуємо опором повітря.</p>
+<ul class="simple">
+<li><p><strong>У момент кидка (точка А, <span class="math notranslate nohighlight">\(h=0\)</span>):</strong></p>
+<ul>
+<li><p>Швидкість м'яча максимальна (<span class="math notranslate nohighlight">\(v_0\)</span>), отже його <strong>кінетична енергія є максимальною</strong>: <span class="math notranslate nohighlight">\(E_k = \frac{mv_0^2}{2}\)</span>.</p></li>
+<li><p>Висота дорівнює нулю, отже <strong>потенціальна енергія дорівнює нулю</strong>: <span class="math notranslate nohighlight">\(E_p = 0\)</span>.</p></li>
+<li><p>Повна механічна енергія системи: <span class="math notranslate nohighlight">\(E_A = E_k + E_p = \frac{mv_0^2}{2} + 0\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Під час польоту вгору (проміжна точка В):</strong></p>
+<ul>
+<li><p>Під дією сили тяжіння м'яч сповільнюється, тому його швидкість <span class="math notranslate nohighlight">\(v\)</span> зменшується, а отже, <strong>зменшується і кінетична енергія</strong>.</p></li>
+<li><p>Одночасно м'яч набирає висоту <span class="math notranslate nohighlight">\(h\)</span>, тому його <strong>потенціальна енергія зростає</strong>.</p></li>
+<li><p>Відбувається перетворення кінетичної енергії в потенціальну: <span class="math notranslate nohighlight">\(E_k \to E_p\)</span>. Повна енергія залишається незмінною: <span class="math notranslate nohighlight">\(E_B = \frac{mv^2}{2} + mgh = E_A\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>У найвищій точці траєкторії (точка С, <span class="math notranslate nohighlight">\(h=h_{max}\)</span>):</strong></p>
+<ul>
+<li><p>М'яч на мить зупиняється, його швидкість дорівнює нулю. Отже, <strong>кінетична енергія дорівнює нулю</strong>: <span class="math notranslate nohighlight">\(E_k = 0\)</span>.</p></li>
+<li><p>Висота є максимальною, отже <strong>потенціальна енергія досягає свого максимуму</strong>: <span class="math notranslate nohighlight">\(E_p = mgh_{max}\)</span>.</p></li>
+<li><p>Вся початкова кінетична енергія повністю перейшла в потенціальну: <span class="math notranslate nohighlight">\(E_C = 0 + mgh_{max} = E_A\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Під час падіння вниз:</strong></p>
+<ul>
+<li><p>Процес відбувається у зворотному напрямку. Висота зменшується, швидкість зростає. <strong>Потенціальна енергія перетворюється назад на кінетичну</strong>: <span class="math notranslate nohighlight">\(E_p \to E_k\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p>У будь-якій точці траєкторії сума <span class="math notranslate nohighlight">\(E = E_k + E_p\)</span> залишатиметься сталою і дорівнюватиме початковому значенню <span class="math notranslate nohighlight">\(\frac{mv_0^2}{2}\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h2>Роль неконсервативних сил: сила тертя<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>А що станеться, якщо в системі діють неконсервативні сили, наприклад, сила тертя? У такому разі повна механічна енергія <strong>не зберігається</strong>. Вона зменшується.</p>
+<p>Робота сили тертя <span class="math notranslate nohighlight">\(A_{\text{тертя}}\)</span> завжди від'ємна. Вона &quot;забирає&quot; механічну енергію з системи. У цьому випадку зв'язок між роботою і зміною енергії виглядає так:</p>
+<blockquote>
+<div><p>Робота всіх неконсервативних сил (наприклад, сили тертя), що діють у системі, дорівнює зміні повної механічної енергії системи.</p>
+<div class="math notranslate nohighlight">
+\[ A_{\text{тертя}} = \Delta E = E - E_0 = (E_k + E_p) - (E_{k0} + E_{p0}) \]</div>
+</div></blockquote>
+<p>Оскільки <span class="math notranslate nohighlight">\(A_{\text{тертя}} &lt; 0\)</span>, то і <span class="math notranslate nohighlight">\(\Delta E &lt; 0\)</span>, що означає <span class="math notranslate nohighlight">\(E &lt; E_0\)</span> - кінцева механічна енергія менша за початкову.</p>
+</section>
+<section id="id15">
+<h2>Загальний закон збереження енергії<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p>Куди ж зникає механічна енергія, коли діє сила тертя? Чи вона просто зникає? Ні.</p>
+<p><strong>Енергія нікуди не зникає й нізвідки не з'являється, вона лише перетворюється з одного виду на інший або переходить від одного тіла до іншого.</strong></p>
+<p>Це - <strong>загальний закон збереження енергії</strong>, один з найголовніших у всій науці.</p>
+<p>Коли сила тертя виконує роботу, механічна енергія перетворюється в інший вид енергії - <strong>внутрішню енергію</strong>. Це енергія хаотичного руху та взаємодії молекул і атомів, з яких складаються тіла. Простіше кажучи, тіла нагріваються.</p>
+<p><strong>Приклад:</strong> Коли автомобіль гальмує, його величезна кінетична енергія не зникає. Вона перетворюється на внутрішню енергію гальмівних колодок та дисків, які сильно нагріваються. Так само відбувається при <strong>непружному ударі</strong> (наприклад, коли шматок пластиліну падає на підлогу і прилипає до неї) - кінетична енергія частково переходить у нагрівання та деформацію тіл.</p>
+<p>Таким чином, якщо враховувати всі види енергії (механічну, внутрішню, електромагнітну, ядерну тощо), то повна енергія ізольованої системи завжди залишається незмінною. Закон збереження механічної енергії є лише окремим, хоч і дуже важливим, випадком цього всеосяжного закону природи.</p>
+</section>
+<section id="id16">
+<h2>Підсумок<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Основне поняття / Твердження</p></th>
+<th class="head text-left"><p>Визначення, формула та пояснення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Потенціальна енергія</strong> <span class="math notranslate nohighlight">\(E_p\)</span></p></td>
+<td class="text-left"><p>Енергія, що залежить від взаємного розташування тіл або їх частин. Вимірюється в Джоулях (Дж).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Консервативні сили</strong></p></td>
+<td class="text-left"><p>Сили, робота яких не залежить від траєкторії, а лише від початкового та кінцевого положень. Робота на замкненій траєкторії дорівнює нулю <span class="math notranslate nohighlight">\(A_{\text{замк}} = 0\)</span>. Приклади: сила тяжіння, сила пружності.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Неконсервативні сили</strong></p></td>
+<td class="text-left"><p>Сили, робота яких залежить від пройденого шляху. Для них не вводять поняття потенціальної енергії. Приклад: сила тертя.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Потенціальна енергія в полі тяжіння Землі</strong></p></td>
+<td class="text-left"><p>Залежить від висоти <span class="math notranslate nohighlight">\(h\)</span> над обраним нульовим рівнем. <span class="math notranslate nohighlight">\(E_p = mgh\)</span>. Формула точна лише поблизу поверхні планети, де <span class="math notranslate nohighlight">\(g \approx \text{const}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Гравітаційна потенціальна енергія (загальний випадок)</strong></p></td>
+<td class="text-left"><p>Для великих відстаней, де поле тяжіння не є однорідним. <span class="math notranslate nohighlight">\(E_p = -G\frac{Mm}{r}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Потенціальна енергія пружно деформованого тіла</strong></p></td>
+<td class="text-left"><p>Залежить від деформації <span class="math notranslate nohighlight">\(x\)</span> та жорсткості <span class="math notranslate nohighlight">\(k\)</span>. Нульовий рівень - недеформований стан. <span class="math notranslate nohighlight">\(E_p = \frac{kx^2}{2}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Теорема про потенціальну енергію</strong></p></td>
+<td class="text-left"><p>Робота консервативної сили дорівнює зміні потенціальної енергії, взятій з протилежним знаком. <span class="math notranslate nohighlight">\(A_{\text{конс}} = -\Delta E_p = E_{p0} - E_p\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Повна механічна енергія</strong> <span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td class="text-left"><p>Сума кінетичної та потенціальної енергій системи. <span class="math notranslate nohighlight">\(E = E_k + E_p\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Закон збереження повної механічної енергії</strong></p></td>
+<td class="text-left"><p>У замкненій системі, де діють лише консервативні сили, повна механічна енергія зберігається. <span class="math notranslate nohighlight">\(E = E_k + E_p = \text{const}\)</span> або <span class="math notranslate nohighlight">\(E_{k0} + E_{p0} = E_k + E_p\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Робота неконсервативних сил</strong></p></td>
+<td class="text-left"><p>Дорівнює зміні повної механічної енергії системи. <span class="math notranslate nohighlight">\(A_{\text{неконс}} = \Delta E = E - E_0\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Загальний закон збереження енергії</strong></p></td>
+<td class="text-left"><p>Енергія не зникає і не створюється, а лише перетворюється з одного виду в інший. Механічна енергія може переходити у внутрішню (теплову).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id17">
+<h2>Додаткові матеріали<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D0%B1%D0%BE%D1%82%D0%B0_(%D1%84%D1%96%D0%B7%D0%B8%D0%BA%D0%B0)">https://uk.wikipedia.org/wiki/Робота_(фізика)</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D1%82%D0%B5%D0%BD%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0_%D0%B5%D0%BD%D0%B5%D1%80%D0%B3%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Потенціальна_енергія</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%81%D0%B5%D1%80%D0%B2%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%96_%D1%81%D0%B8%D0%BB%D0%B8">https://uk.wikipedia.org/wiki/Консервативні_сили</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F_%D0%B5%D0%BD%D0%B5%D1%80%D0%B3%D1%96%D1%97">https://uk.wikipedia.org/wiki/Закон_збереження_енергії</a></p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id18">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Work_(physics)">https://en.wikipedia.org/wiki/Work_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Potential_energy">https://en.wikipedia.org/wiki/Potential_energy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Conservative_force">https://en.wikipedia.org/wiki/Conservative_force</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Elastic_energy">https://en.wikipedia.org/wiki/Elastic_energy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mechanical_energy">https://en.wikipedia.org/wiki/Mechanical_energy</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Conservation_of_energy">https://en.wikipedia.org/wiki/Conservation_of_energy</a></p></li>
 </ul>
 </section>
 </section>
@@ -569,11 +921,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../internal_energy.html"
+       href="momentum.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Внутрішня енергія</p>
+        <p class="prev-next-title">Імпульс тіла</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -594,8 +946,29 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Потенціальна енергія</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Консервативні (потенціальні) сили</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Потенціальна енергія тіла в полі тяжіння Землі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Траєкторія 1: рух по ламаній АСВ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Траєкторія 2: рух по гіпотенузі АВ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Потенціальна енергія піднятого тіла</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Потенціальна енергія пружно деформованого тіла</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Теорема про потенціальну енергію</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Повна механічна енергія та її збереження</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Закон збереження повної механічної енергії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Виведення закону збереження механічної енергії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Перетворення енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Роль неконсервативних сил: сила тертя</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Загальний закон збереження енергії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 

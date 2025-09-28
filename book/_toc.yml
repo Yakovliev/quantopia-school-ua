@@ -50,6 +50,7 @@ parts:
       - file: physics/mechanics/elasticity
       - file: physics/mechanics/work-kinetic-energy
       - file: physics/mechanics/potential-energy-and-conservation
+      - file: physics/mechanics/momentum
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
