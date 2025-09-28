@@ -116,6 +116,7 @@ parts:
     chapters:
       - file: physics/tasks/kinematics-classroom
       - file: physics/tasks/kinematics-test
+      - file: physics/tasks/dynamics-classroom
       - file: physics/tasks/oscillations-classroom
       - file: physics/tasks/oscillations-test
 

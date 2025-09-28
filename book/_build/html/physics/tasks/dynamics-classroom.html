@@ -1,0 +1,865 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Динаміка. Задачі &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/tasks/dynamics-classroom';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Механічні коливання. Задачі" href="oscillations-classroom.html" />
+    <link rel="prev" title="Кінематика. Самостійна робота" href="kinematics-test.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/tasks/dynamics-classroom.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/tasks/dynamics-classroom.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/tasks/dynamics-classroom.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Динаміка. Задачі</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Закони Ньютона</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Закон всесвітнього тяжіння</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Імпульс тіла</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Динаміка. Задачі<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Закони Ньютона<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Сучасний квадрокоптер для доставки важить 4 кг. Щоб вертикально піднятися вгору, його двигуни повинні створити силу тяги, більшу за силу тяжіння. Припустимо, що сумарна сила тяги двигунів становить 60 Н, а сила тяжіння — 40 Н.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть рівнодійну силу, що діє на квадрокоптер під час зльоту.</p></li>
+<li><p>Обчисліть прискорення, з яким квадрокоптер починає підніматися.</p></li>
+</ol>
+<p><strong>Задача 2</strong></p>
+<p>На краш-тесті автомобіль масою 1500 кг зупиняється, врізавшись у перешкоду. Датчики показують, що в момент удару рівнодійна сила, яка діяла на автомобіль, дорівнювала 300000 Н. Якого прискорення (за модулем) зазнав автомобіль у цей момент?</p>
+<p><strong>Задача 3</strong></p>
+<p>Смартфон масою 200 г випадково падає з ваших рук. Під час падіння він притягується до Землі.</p>
+<ol class="arabic simple">
+<li><p>З якою силою Земля притягує смартфон? (Вважайте, що прискорення вільного падіння дорівнює <span class="math notranslate nohighlight">\(g = 10 \text{ м}/\text{с}^2\)</span>).</p></li>
+<li><p>Згідно з третім законом Ньютона, смартфон також притягує до себе Землю. З якою силою смартфон притягує Землю?</p></li>
+<li><p>Маса Землі приблизно дорівнює <span class="math notranslate nohighlight">\(6 \cdot 10^{24}\)</span> кг. Якого прискорення надає Землі сила притягання смартфона? Порівняйте це прискорення з прискоренням смартфона і поясніть, чому ми не помічаємо руху Землі.</p></li>
+</ol>
+<p><strong>Задача 4</strong></p>
+<p>Ліфт у сучасному хмарочосі масою 800 кг починає рух вгору зі стану спокою і за 3 секунди досягає швидкості 6 м/с. Рух вважайте рівноприскореним.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть прискорення ліфта.</p></li>
+<li><p>Обчисліть рівнодійну силу, яка надає ліфту цього прискорення.</p></li>
+<li><p>Знайдіть силу натягу троса, що піднімає ліфт (сила тяжіння, що діє на ліфт, дорівнює 8000 Н).</p></li>
+</ol>
+<p><strong>Задача 5</strong></p>
+<p>Двоє космонавтів у відкритому космосі, де немає тертя та опору, вирішили перевірити закони фізики. Перший космонавт масою 80 кг відштовхується від другого, масою 100 кг. У момент поштовху перший космонавт набуває прискорення 0.5 <span class="math notranslate nohighlight">\(\text{ м}/\text{с}^2\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Яку силу приклав перший космонавт до другого?</p></li>
+<li><p>Якого прискорення набув другий космонавт?</p></li>
+</ol>
+<p><strong>Задача 6</strong></p>
+<p>Кур'єр на електросамокаті масою 100 кг (разом із самокатом) рухається зі швидкістю 18 км/год. Він помічає перешкоду і починає гальмувати, зупиняючись за 2.5 секунди.</p>
+<ol class="arabic simple">
+<li><p>Переведіть початкову швидкість у м/с.</p></li>
+<li><p>Знайдіть прискорення самоката під час гальмування (не забудьте про його напрямок).</p></li>
+<li><p>Визначте модуль гальмівної сили, що діяла на кур'єра із самокатом.</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Інженер тестує новий іонний двигун для космічного зонда. Зонд масою 500 кг перебуває у глибокому космосі, де зовнішніми силами можна знехтувати.</p>
+<ol class="arabic simple">
+<li><p>Перший тест: двигун працює в номінальному режимі, створюючи тягу 0.5 Н. Якого прискорення набуває зонд? Яку швидкість він набере за 24 години роботи двигуна?</p></li>
+<li><p>Другий тест: інженер вмикає форсажний режим, і прискорення зонда зростає до 0.003 <span class="math notranslate nohighlight">\(\text{ м}/\text{с}^2\)</span>. Яку силу тяги створює двигун у цьому режимі?</p></li>
+<li><p>Уявіть, що для корекції курсу одночасно вмикаються два однакові двигуни, розташовані під кутом 90° один до одного, кожен із силою тяги 0.5 Н. Яким буде модуль рівнодійної сили, що діє на зонд?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Закон всесвітнього тяжіння<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Уявіть, що два новітні електропікапи Tesla Cybertruck, масою 3000 кг кожен, припарковані так, що відстань між їхніми центрами мас становить 4 метри. Обчисліть силу гравітаційного притягання між ними. Порівняйте цю силу із силою, з якою Земля притягує один із цих автомобілів.</p>
+<p><strong>Задача 2</strong>
+Міжнародна космічна станція (МКС) обертається на висоті приблизно 400 км над поверхнею Землі. Маса станції становить близько 450 000 кг.</p>
+<ol class="arabic simple">
+<li><p>Яка сила тяжіння діє на МКС з боку Землі на цій висоті?</p></li>
+<li><p>Чому астронавти на борту перебувають у стані невагомості, якщо сила тяжіння є такою значною?</p></li>
+</ol>
+<p>(Для розрахунків візьміть масу Землі <span class="math notranslate nohighlight">\(M_З = 6 \cdot 10^{24}\)</span> кг, радіус Землі <span class="math notranslate nohighlight">\(R_З = 6400\)</span> км, <span class="math notranslate nohighlight">\(G = 6.67 \cdot 10^{-11} \frac{\text{Н} \cdot \text{м}^2}{\text{кг}^2}\)</span>).</p>
+<p><strong>Задача 3</strong></p>
+<p>Марсохід &quot;Perseverance&quot; працює на поверхні Марса. Використовуючи довідкові дані, обчисліть прискорення вільного падіння на поверхні Марса. Наскільки воно менше за земне? (Маса Марса <span class="math notranslate nohighlight">\(M_M \approx 6.4 \cdot 10^{23}\)</span> кг, радіус Марса <span class="math notranslate nohighlight">\(R_M \approx 3400\)</span> км).</p>
+<p><strong>Задача 4</strong>
+У рамках програми &quot;Артеміда&quot; NASA планує нові місії на Місяць. Щоб вивести супутник на низьку навколомісячну орбіту, йому потрібно надати першу космічну швидкість. Обчисліть, чому дорівнює перша космічна швидкість для Місяця. (Маса Місяця <span class="math notranslate nohighlight">\(M_{Міс} \approx 7.35 \cdot 10^{22}\)</span> кг, радіус Місяця <span class="math notranslate nohighlight">\(R_{Міс} \approx 1740\)</span> км).</p>
+<p><strong>Задача 5</strong></p>
+<p>Супутник зв'язку Starlink рухається по коловій орбіті на висоті 550 км. Згодом, для корекції орбіти, його двигуни переміщують його на вищу орбіту — 1100 км. У скільки разів змінилася сила гравітаційного притягання, що діє на супутник з боку Землі? Сила збільшилася чи зменшилася? (Радіус Землі <span class="math notranslate nohighlight">\(R_З = 6400\)</span> км).</p>
+<p><strong>Задача 6</strong></p>
+<p>Астрономи відкрили екзопланету Kepler-186f, яку вважають однією з найбільш схожих на Землю. Її радіус становить приблизно <span class="math notranslate nohighlight">\(1.1\)</span> радіуса Землі, а маса — <span class="math notranslate nohighlight">\(1.5\)</span> маси Землі.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть прискорення вільного падіння на поверхні Kepler-186f.</p></li>
+<li><p>Якщо ваша маса становить 60 кг, якою буде ваша вага на цій екзопланеті? (Прискорення вільного падіння на Землі вважайте рівним <span class="math notranslate nohighlight">\(g_0 \approx 9.8 \text{ м/с}^2\)</span>).</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Геостаціонарні супутники, які використовуються для телевізійного мовлення, &quot;висять&quot; над однією точкою земної поверхні. Це можливо тому, що вони рухаються по орбіті з періодом, що дорівнює періоду обертання Землі. Прискорення вільного падіння на такій орбіті значно менше, ніж на поверхні. На якій висоті над поверхнею Землі прискорення вільного падіння буде в 4 рази меншим, ніж на її поверхні? (Радіус Землі <span class="math notranslate nohighlight">\(R_З = 6400\)</span> км).</p>
+<p><strong>Задача 8</strong></p>
+<p>Уявіть, що ви астроном, який вивчає Юпітер. За допомогою спостережень за його супутниками ви визначили, що прискорення вільного падіння на умовній &quot;поверхні&quot; хмар Юпітера становить <span class="math notranslate nohighlight">\(g_Ю \approx 24.8 \text{ м/с}^2\)</span>. Радіус Юпітера становить приблизно <span class="math notranslate nohighlight">\(R_Ю \approx 70000\)</span> км. Використовуючи ці дані, виконайте те, що колись зробив Кавендіш для Землі — &quot;зважте&quot; Юпітер, тобто обчисліть його масу.</p>
+<p><strong>Задача 9</strong></p>
+<p>Між Землею та Місяцем існує точка (точка Лагранжа L1), в якій сили гравітаційного притягання від обох небесних тіл зрівноважують одна одну. Космічний апарат, розміщений у цій точці, буде &quot;зависати&quot; між ними. Знайдіть відстань від центру Землі до цієї точки. (Маса Землі <span class="math notranslate nohighlight">\(M_З \approx 81 \cdot M_{Міс}\)</span>, відстань між центрами Землі та Місяця <span class="math notranslate nohighlight">\(r \approx 384000\)</span> км).</p>
+<p><strong>Задача 10</strong></p>
+<p>Супутники системи глобального позиціонування (GPS) обертаються навколо Землі на висоті приблизно 20 200 км.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть швидкість, з якою рухається такий супутник по своїй орбіті.</p></li>
+<li><p>Визначте період обертання супутника навколо Землі (час, за який він робить один повний оберт).
+(Маса Землі <span class="math notranslate nohighlight">\(M_З = 6 \cdot 10^{24}\)</span> кг, радіус Землі <span class="math notranslate nohighlight">\(R_З = 6400\)</span> км).</p></li>
+</ol>
+<p><strong>Задача 11</strong></p>
+<p>Астрономи активно шукають &quot;Супер-Землі&quot; — планети, масивніші за Землю, але легші за газових гігантів. Розглянемо гіпотетичну планету, радіус якої вдвічі більший за радіус Землі (<span class="math notranslate nohighlight">\(R_п = 2R_З\)</span>), а маса — у 10 разів більша за масу Землі (<span class="math notranslate nohighlight">\(M_п = 10M_З\)</span>).</p>
+<ol class="arabic simple">
+<li><p>У скільки разів прискорення вільного падіння на поверхні цієї планети більше, ніж на поверхні Землі?</p></li>
+<li><p>У скільки разів перша космічна швидкість для цієї планети більша за першу космічну швидкість для Землі?</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2>Механічна робота, кінетична енергія та потужність<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Малогабаритний квадрокоптер піднімає вертикально вгору пакунок масою 400 г на висоту 15 м для доставки на балкон. Яку роботу виконує підіймальна сила двигунів квадрокоптера? Вважайте, що пакунок рухається зі сталою швидкістю, а прискорення вільного падіння дорівнює <span class="math notranslate nohighlight">\(g_0 \approx 10 \text{ м/с}^2\)</span>.</p>
+<p><strong>Задача 2</strong></p>
+<p>Електросамокат разом з водієм має масу 90 кг і рухається зі швидкістю 20 км/год. Обчисліть кінетичну енергію самоката.</p>
+<p><strong>Задача 3</strong></p>
+<p>Ліфт у сучасному хмарочосі піднімає кабіну масою 1200 кг на висоту 50 м за 10 секунд. Яку середню потужність розвиває двигун ліфта під час цього підйому? Вважайте рух рівномірним, а прискорення вільного падіння <span class="math notranslate nohighlight">\(g_0 \approx 10 \text{ м/с}^2\)</span>.</p>
+<p><strong>Задача 4</strong></p>
+<p>Велосипедист, що рухався зі швидкістю 18 км/год, починає гальмувати до повної зупинки. Яку роботу виконала сила тертя? Маса велосипедиста разом з велосипедом становить 80 кг.</p>
+<p><strong>Задача 5</strong></p>
+<p>Автомобіль Tesla Model 3 масою 1800 кг рухався зі швидкістю 108 км/год, після чого водій застосував екстрене гальмування до повної зупинки. Яку роботу виконала сумарна сила гальмування (включаючи тертя та опір повітря)?</p>
+<p><strong>Задача 6</strong></p>
+<p>Робот-доставник тягне за собою по горизонтальній поверхні контейнер з посилками, прикладаючи силу 100 Н під кутом 30° до горизонту. Контейнер переміщується на відстань 20 метрів. Сила тертя, що діє на контейнер, становить 30 Н. Обчисліть:</p>
+<ol class="arabic simple">
+<li><p>Роботу, яку виконує робот.</p></li>
+<li><p>Роботу, яку виконує сила тертя.</p></li>
+<li><p>Роботу рівнодійної сили.</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Високошвидкісний потяг &quot;Інтерсіті+&quot; масою 450 тонн рухається зі швидкістю 144 км/год. У разі виникнення перешкоди на колії, автоматична система вмикає гальмування із середньою силою 300 кН. На якій мінімальній відстані до перешкоди має спрацювати система, щоб потяг встиг зупинитися?</p>
+<p><strong>Задача 8</strong></p>
+<p>Електромобіль, рухаючись рівномірно і прямолінійно зі швидкістю 90 км/год, долає силу опору повітря та тертя, сумарна величина якої становить 800 Н. Яку потужність розвиває двигун електромобіля в цей момент? Відповідь дайте у Ватах та кінських силах.</p>
+<p><strong>Задача 9</strong></p>
+<p>Професійний бігун масою 75 кг біжить зі швидкістю 6 м/с. Водночас він тримає в руці смартфон масою 200 г. У скільки разів кінетична енергія бігуна більша за кінетичну енергію смартфона, що рухається разом з ним?</p>
+<p><strong>Задача 10</strong></p>
+<p>Міжпланетний зонд масою 500 кг рухається у відкритому космосі зі швидкістю 8 км/с відносно Сонця. Для корекції траєкторії на короткий час вмикаються іонні двигуни, які виконують роботу в <span class="math notranslate nohighlight">\(2.25 \cdot 10^9\)</span> Дж у напрямку руху зонда. Якою стане швидкість зонда після завершення роботи двигунів?</p>
+<p><strong>Задача 11</strong></p>
+<p>Лопаті сучасної вітрової турбіни за 1 секунду перехоплюють потік повітря масою 12 000 кг, що рухається зі швидкістю 15 м/с.</p>
+<ol class="arabic simple">
+<li><p>Яка кінетична енергія цього об'єму повітря?</p></li>
+<li><p>Яку максимальну потужність міг би розвивати вітрогенератор, якби вся кінетична енергія повітря перетворювалася на електричну?</p></li>
+<li><p>Обчисліть реальну електричну потужність турбіни, якщо її коефіцієнт корисної дії (ККД) становить 45%.</p></li>
+</ol>
+<p><strong>Задача 12</strong></p>
+<p>Електромобіль Rivian R1T масою 3200 кг розганяється з місця до швидкості 108 км/год за 4 секунди. Середня сила опору руху під час розгону становить 1000 Н.</p>
+<ol class="arabic simple">
+<li><p>Яку силу тяги повинен розвивати двигун, щоб забезпечити такий розгін?</p></li>
+<li><p>Яку миттєву потужність розвиває двигун в кінці розгону (при швидкості 108 км/год)?</p></li>
+</ol>
+<p><strong>Задача 13</strong></p>
+<p>Турист везе валізу масою 20 кг на коліщатках по горизонтальній підлозі аеропорту, прикладаючи силу 50 Н за допомогою ручки, нахиленої під кутом 60° до горизонту.</p>
+<ol class="arabic simple">
+<li><p>Яку роботу виконав турист, перемістивши валізу на відстань 30 м?</p></li>
+<li><p>Яку роботу виконала сила тяжіння на цьому шляху?</p></li>
+</ol>
+<p><strong>Задача 14</strong></p>
+<p>Електромобіль Tesla Model S масою 2200 кг розганяється від 0 до 100 км/год за 3,2 секунди.</p>
+<ol class="arabic simple">
+<li><p>Яку роботу виконала рівнодійна всіх сил, що діяли на автомобіль під час розгону?</p></li>
+<li><p>Яку середню потужність розвивали двигуни автомобіля під час цього розгону? (Силами опору знехтувати).</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Потенціальна енергія та закон збереження енергії<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Сучасний квадрокоптер для аерофотозйомки масою 1.2 кг завис у нерухомому положенні на висоті 150 метрів над точкою зльоту. Обчисліть його потенціальну енергію відносно поверхні землі. Прискорення вільного падіння вважайте рівним <span class="math notranslate nohighlight">\(g_0 \approx 9.8 \text{ м/с}^2\)</span>.</p>
+<p><strong>Задача 2</strong></p>
+<p>Для тестування системи автоматичного паркування автомобіль масою 1500 кг підіймають на спеціальному гідравлічному підйомнику на висоту 2 метри. На скільки при цьому збільшується потенціальна енергія автомобіля? Прискорення вільного падіння вважайте рівним <span class="math notranslate nohighlight">\(g_0 \approx 9.8 \text{ м/с}^2\)</span>.</p>
+<p><strong>Задача 3</strong></p>
+<p>Амортизатор у підвісці гірського велосипеда стиснувся на 4 см під вагою спортсмена. Визначте потенціальну енергію стиснутої пружини амортизатора, якщо її жорсткість становить 50 000 Н/м.</p>
+<p><strong>Задача 4</strong></p>
+<p>Іграшковий лук, який використовується у дитячих наборах для стрільби, має жорсткість 200 Н/м. Дитина, граючись, відтягнула тятиву на 20 см. Яку потенціальну енергію вона надала вигнутій дузі лука?</p>
+<p><strong>Задача 5</strong></p>
+<p>Скейтбордист масою 60 кг з'їжджає з рампи у скейт-парку з висоти 3 метри, починаючи рух зі стану спокою. Нехтуючи силами тертя та опору повітря, визначте:</p>
+<ol class="arabic simple">
+<li><p>Якою буде швидкість скейтбордиста біля основи рампи (на нульовій висоті)?</p></li>
+<li><p>На яку максимальну висоту він зможе піднятися на протилежному боці рампи?</p></li>
+</ol>
+<p><strong>Задача 6</strong></p>
+<p>Атракціон &quot;банджі-джампінг&quot; використовує еластичний трос довжиною 30 м і жорсткістю 60 Н/м. Людина масою 75 кг стрибає з платформи, що знаходиться на висоті 100 м над землею.</p>
+<ol class="arabic simple">
+<li><p>Якою буде швидкість людини в момент, коли трос повністю випрямиться, але ще не почне розтягуватись? (Тобто, після вільного падіння на 30 м).</p></li>
+<li><p>Яка потенціальна енергія пружної деформації буде накопичена в тросі, коли він розтягнеться на 25 м?</p></li>
+</ol>
+<p><em>Взаємодією з повітрям знехтувати.</em></p>
+<p><strong>Задача 7</strong></p>
+<p>Під час краш-тесту автомобіль масою 1200 кг, що рухався зі швидкістю 54 км/год, вдаряється в перешкоду. Його передній бампер, що діє як пружний демпфер, стискається до повної зупинки автомобіля.</p>
+<ol class="arabic simple">
+<li><p>Яка кінетична енергія автомобіля була безпосередньо перед ударом?</p></li>
+<li><p>Яка потенціальна енергія була накопичена в деформованому бампері в момент повної зупинки?</p></li>
+<li><p>Розрахуйте максимальне стиснення бампера, якщо його ефективна жорсткість дорівнює <span class="math notranslate nohighlight">\(5.88 \cdot 10^5\)</span> Н/м.</p></li>
+</ol>
+<p><strong>Задача 8</strong></p>
+<p>Система &quot;гравітаційного акумулятора&quot; працює так: у періоди надлишку енергії (наприклад, від сонячних панелей вдень) масивний вантаж масою 20 тонн підіймають на висоту 100 м. У періоди пікового навантаження вантаж опускають, і він обертає електрогенератор.</p>
+<ol class="arabic simple">
+<li><p>Яку максимальну потенціальну енергію може &quot;запасти&quot; такий акумулятор?</p></li>
+<li><p>Якщо вантаж опускається зі сталою швидкістю 2 м/с, яку роботу виконує сила тяжіння за 10 секунд?</p></li>
+<li><p>Чому кінетична енергія вантажу не зростає, хоча сила тяжіння виконує додатну роботу? Яка сила врівноважує дію сили тяжіння?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Імпульс тіла<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Сучасний комерційний квадрокоптер масою 900 г летить горизонтально зі швидкістю 54 км/год для аерозйомки. Визначте імпульс квадрокоптера.</p>
+<p><strong>Задача 2</strong></p>
+<p>Під час краш-тесту автомобіль масою 1.5 тонни, що рухався зі швидкістю 54 км/год, зіткнувся з перешкодою і зупинився. Знайдіть зміну імпульсу автомобіля.</p>
+<p><strong>Задача 3</strong></p>
+<p>Маневровий робот на автоматизованому складі штовхає контейнер масою 200 кг протягом 5 секунд із постійною силою 40 Н. Якого імпульсу набуває контейнер за цей час?</p>
+<p><strong>Задача 4</strong></p>
+<p>Космічний корабель Crew Dragon компанії SpaceX масою 9500 кг, рухаючись зі швидкістю 0.2 м/с, виконує стикування з Міжнародною космічною станцією (МКС), маса якої 450 000 кг. Вважаючи, що до стикування МКС була нерухомою відносно корабля, знайдіть швидкість їхнього спільного руху після абсолютно непружного зіткнення (стикування).</p>
+<p><strong>Задача 5</strong></p>
+<p>Що має більший імпульс: куля масою 9 г, що летить зі швидкістю 400 м/с, чи вантажівка масою 10 тонн, що рухається зі швидкістю 3.6 км/год? Відповідь обґрунтуйте розрахунками.</p>
+<p><strong>Задача 6</strong></p>
+<p>Під час тестування нового захисного чохла для смартфона, телефон масою 200 г падає на тверду поверхню і зупиняється. Швидкість телефону в момент удару становила 4 м/с.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть зміну імпульсу смартфона під час удару.</p></li>
+<li><p>Якщо тривалість удару склала 0.005 с, визначте середню силу, з якою чохол і поверхня подіяли на смартфон.</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Космонавт у відкритому космосі масою 80 кг, перебуваючи у стані спокою відносно корабля, кидає від себе інструмент масою 2 кг зі швидкістю 10 м/с. Якої швидкості набуває космонавт відносно корабля? В якому напрямку він почне рухатися?</p>
+<p><strong>Задача 8</strong></p>
+<p>Два роботи-пилососи рухаються назустріч один одному. Маса першого робота 3 кг, його швидкість 1 м/с. Маса другого - 2 кг, його швидкість 2 м/с. Після зіткнення вони зчіплюються і рухаються як єдине ціле. Знайдіть швидкість та напрямок їхнього спільного руху.</p>
+<p><strong>Задача 9</strong></p>
+<p>Супутник зв'язку масою 600 кг, рухаючись орбітою, відокремлює від себе несправний модуль масою 50 кг. Швидкість супутника до відокремлення становила 3000 м/с. Після відокремлення модуль рухається в тому ж напрямку, що й супутник, але з меншою швидкістю - 2900 м/с відносно Землі. Знайдіть швидкість супутника після виконання цього маневру.</p>
+<p><strong>Задача 10</strong></p>
+<p>У Великому адронному колайдері протон, що рухається з величезною швидкістю, зазнає центрального пружного зіткнення з іншим протоном, який до зіткнення перебував у стані спокою. Маси протонів однакові. Опишіть, що станеться зі швидкостями обох частинок після зіткнення. Використайте для доведення закони збереження імпульсу та механічної енергії.</p>
+<p><strong>Задача 11</strong></p>
+<p>Метеорит масою 1000 кг летить у космосі зі швидкістю 500 м/с і влучає у нерухомий космічний сміттєвий об'єкт масою 4000 кг. Відбувається абсолютно непружне зіткнення.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть швидкість, з якою об'єкти продовжать рухатися разом.</p></li>
+<li><p>Обчисліть кінетичну енергію системи до зіткнення.</p></li>
+<li><p>Обчисліть кінетичну енергію системи після зіткнення.</p></li>
+<li><p>Знайдіть, яка частина початкової кінетичної енергії перетворилася на інші види енергії (наприклад, теплову) внаслідок зіткнення. Виразіть цю частку у відсотках.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\tasks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="kinematics-test.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Кінематика. Самостійна робота</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="oscillations-classroom.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Механічні коливання. Задачі</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Закони Ньютона</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Закон всесвітнього тяжіння</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Імпульс тіла</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
