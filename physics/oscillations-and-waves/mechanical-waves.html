@@ -500,12 +500,22 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Механізм поширення механічної хвилі</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Характеристики хвильового руху</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Параметри, що описують хвилю</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Види механічних хвиль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Класифікація механічних хвиль</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Поперечні хвилі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Поздовжні хвилі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Хвилі змішаного типу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Основні характеристики хвилі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Зв'язок між швидкістю, довжиною та періодом (частотою) хвилі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Періодичність хвилі в часі та просторі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Рівняння плоскої гармонічної хвилі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Фронт хвилі та хвильові поверхні</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Відбивання механічних хвиль та стоячі хвилі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -519,75 +529,172 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Механічні хвилі<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>Коли в певній точці простору виникає коливальний процес, він може розповсюджуватися на сусідні області, створюючи хвильовий рух, або хвилі. Наприклад, підземні поштовхи спричиняють появу сейсмічних хвиль, які викликають землетруси та цунамі; вібрації дифузора динаміка породжують звукові хвилі, що дозволяють нам чути звуки; ритмічні скорочення серця передаються стінкам артерій, створюючи пульс.</p>
-<section id="id2">
-<h2>Механізм поширення механічної хвилі<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уявімо собі спокійну поверхню озера. Якщо кинути у воду камінь, від місця його падіння побіжать кола, що розширюються. Це і є хвилі. Або згадаємо, як на стадіоні вболівальники запускають &quot;хвилю&quot;: кожен з них лише встає і сідає, але по трибунах біжить видимий рух. В обох випадках ми спостерігаємо поширення коливань, але сама речовина (вода чи люди) не переміщується на великі відстані. Це і є ключова ідея хвильового руху.</p>
 <blockquote>
-<div><p><strong>Хвилею</strong> називають процес розповсюдження коливань речовини або поля в просторі.</p>
+<div><p><strong>Хвиля</strong> - це процес поширення коливань у просторі з плином часу.</p>
 </div></blockquote>
-<p>Згідно з фізичною природою хвилі поділяють на <strong>електромагнітні</strong> (такі як радіохвилі чи світло) та <strong>механічні</strong>.</p>
+<p>За своєю фізичною природою хвилі бувають різними. Найбільш відомими є <strong>електромагнітні хвилі</strong> (світло, радіохвилі, рентгенівські промені), які можуть поширюватися навіть у вакуумі. Але ми зосередимося на <strong>механічних хвилях</strong>.</p>
 <blockquote>
-<div><p><strong>Механічною хвилею</strong> називають процес розповсюдження коливального руху в пружному середовищі.</p>
+<div><p><strong>Механічною хвилею</strong> називають процес поширення механічних коливань у пружному середовищі.</p>
 </div></blockquote>
-<p>Середовище вважається <strong>пружним</strong>, коли в результаті його деформації з'являються сили, що чинять опір цій деформації - сили пружності.</p>
-<p>Якщо привести в коливальний рух один кінець гімнастичної стрічки, рух поступово передаватиметься дедалі віддаленішим ділянкам стрічки, утворюючи хвилю, що біжить вздовж неї.</p>
-<p><em>Під частинками в механічних хвилях розуміємо не окремі молекули, атоми чи йони, а малі фрагменти (ділянки) середовища.</em></p>
-</section>
-<section id="id3">
-<h2>Характеристики хвильового руху<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Для існування та поширення механічної хвилі необхідні дві ключові умови:</p>
 <ol class="arabic simple">
-<li><p><strong>Скінченна швидкість розповсюдження хвиль у середовищі:</strong> передача коливального руху від однієї ділянки середовища до іншої відбувається не одразу, а з певною затримкою.</p></li>
-<li><p><strong>Джерелом механічних хвиль служить тіло, що здійснює коливанняЖ</strong> у процесі розповсюдження хвилі коливання частинок середовища є вимушеними, отже, їхня частота збігається з частотою джерела хвилі.</p></li>
-<li><p><strong>Механічні хвилі не здатні розповсюджуватися у вакуумі.</strong></p></li>
-<li><p><strong>При хвильовому русі не відбувається переносу речовини</strong> - елементи середовища лише здійснюють коливання навколо своїх положень рівноваги.</p></li>
-<li><p>У момент проходження хвилі частинки середовища набувають кінетичної енергії та починають рухатися. Це свідчить про те, що разом з хвилею відбувається перенесення енергії. <strong>Здатність переносити енергію без переміщення речовини - фундаментальна властивість усіх хвиль.</strong></p></li>
+<li><p><strong>Джерело хвилі:</strong> Це тіло, що коливається і створює початкову деформацію або збурення у середовищі. Наприклад, камінь, що впав у воду, або голосові зв'язки, що коливаються і створюють звук.</p></li>
+<li><p><strong>Пружне середовище:</strong> Це середовище, в якому виникають сили пружності при його деформації. Частинки цього середовища пов'язані між собою (наприклад, молекули води або атоми у твердому тілі). Саме завдяки цим зв'язкам коливання від однієї частинки передаються до сусідньої, і так далі. Без середовища (у вакуумі) механічна хвиля поширюватися не може.</p></li>
 </ol>
+<p>Отже, <strong>хвильовий рух</strong> - це процес передачі <strong>пружних коливань</strong> від одних частинок середовища до інших.</p>
+<p>Найважливіша властивість будь-якої хвилі полягає в тому, що <strong>хвилі переносять енергію без перенесення речовини</strong>. Вболівальник на стадіоні залишається на своєму місці, але енергія руху (і сам рух) передається далі. Частинки води в озері у найпростішому випадку лише коливаються вгору-вниз, але енергія від падіння каменя поширюється по всій поверхні.</p>
+<section id="id2">
+<h2>Класифікація механічних хвиль<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Залежно від напрямку коливань частинок середовища відносно напрямку поширення хвилі, розрізняють два основних типи хвиль.</p>
+<section id="id3">
+<h3>Поперечні хвилі<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Поперечна хвиля</strong> - це хвиля, у якій частинки середовища коливаються в напрямку, перпендикулярному до напрямку її поширення.</p>
+</div></blockquote>
+<p>Класичний приклад - хвиля, що біжить по натягнутій мотузці, якщо один її кінець смикнути вгору-вниз. Кожна точка мотузки рухається лише вертикально, а сама хвиля (горб) біжить горизонтально.</p>
+<p>Поперечні хвилі можуть поширюватися лише в середовищах, де виникає пружність при деформації зсуву. Це характерно для <strong>твердих тіл</strong>. У рідинах та газах поперечні хвилі, як правило, не виникають, оскільки шари рідини чи газу легко зсуваються один відносно одного.</p>
 </section>
 <section id="id4">
-<h2>Параметри, що описують хвилю<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
-<p>Оскільки хвиля - це розповсюдження коливань, фізичні параметри коливань (частота <span class="math notranslate nohighlight">\(\nu\)</span>, період <span class="math notranslate nohighlight">\(Т\)</span>, амплітуда <span class="math notranslate nohighlight">\(А\)</span>) характеризують також і хвилю. Додатково важливими характеристиками хвилі є довжина <span class="math notranslate nohighlight">\(\lambda\)</span> та швидкість <span class="math notranslate nohighlight">\(v\)</span> її поширення.</p>
-<p>Під швидкістю розповсюдження хвилі розуміють швидкість руху точок з однаковою фазою коливань (наприклад, швидкість переміщення гребеня хвилі). Ця швидкість відрізняється від швидкості коливального руху самих частинок середовища: частинки лише коливаються біля своїх положень рівноваги, тоді як хвиля рухається в певному напрямку.</p>
+<h3>Поздовжні хвилі<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <blockquote>
-<div><p><strong>Довжиною хвилі <span class="math notranslate nohighlight">\(\lambda\)</span></strong> називають відстань між двома найближчими точками, що коливаються в однаковій фазі; або відстань, на яку поширюється хвиля протягом одного періоду <span class="math notranslate nohighlight">\(T\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\lambda = v T\]</div>
+<div><p><strong>Поздовжня хвиля</strong> - це хвиля, у якій частинки середовища коливаються вздовж напрямку її поширення.</p>
 </div></blockquote>
-<p>Одиницею вимірювання довжини хвилі в СІ є метр: [<span class="math notranslate nohighlight">\(\lambda\)</span>] = 1 м (m).</p>
-<p>Враховуючи зв'язок <span class="math notranslate nohighlight">\(T = 1/\nu\)</span>, можна вивести співвідношення між довжиною, частотою та швидкістю поширення хвилі - <strong>хвильове рівняння:</strong></p>
-<div class="math notranslate nohighlight">
-\[v = \lambda \nu\]</div>
-<p>Важливо зауважити! Швидкість поширення хвилі переважно залежить від пружних властивостей середовища, де вона поширюється. При переході хвилі з одного середовища в інше її швидкість змінюється, але частота залишається сталою, оскільки визначається частотою джерела коливань. Згідно з хвильовим рівнянням, при переході в інше середовище змінюється довжина хвилі.</p>
-<p><strong>Хвиля має періодичну природу як у часі, так і в просторі.</strong></p>
-<p>Кожна частинка середовища, де поширюється хвиля, здійснює періодичний рух: через певний часовий інтервал <span class="math notranslate nohighlight">\(T\)</span> її коливання повторюються.</p>
-<p>Період <span class="math notranslate nohighlight">\(T\)</span> характеризує часову періодичність хвилі.</p>
-<p>У фіксований момент часу через відстань, що дорівнює довжині хвилі <span class="math notranslate nohighlight">\(\lambda\)</span>, форма хвилі повторюється. Частинки, розташовані на відстані <span class="math notranslate nohighlight">\(\lambda\)</span> одна від одної, коливаються однаково (синхронно).</p>
-<p>Довжина хвилі <span class="math notranslate nohighlight">\(\lambda\)</span> характеризує просторову періодичність хвилі.</p>
+<p>Найкращою аналогією є стиснення та розтягнення пружини. Ми побачимо, як по пружині біжать області згущення та розрідження витків. Кожен виток при цьому коливається лише вперед-назад, вздовж пружини.</p>
+<p>Поздовжні хвилі пов'язані з деформаціями стиску та розтягу. Оскільки такі деформації викликають появу сил пружності у <strong>всіх середовищах - твердих, рідких та газоподібних</strong>, поздовжні хвилі можуть поширюватися в них усіх. <strong>Звук є важливим прикладом поздовжньої хвилі</strong>.</p>
 </section>
 <section id="id5">
-<h2>Види механічних хвиль<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
-<p>За напрямком коливань частинок середовища відносно напрямку поширення хвилі розрізняють поздовжні та поперечні хвилі.</p>
-<blockquote>
-<div><p><strong>Поперечною хвилею</strong> називають таку, де частинки середовища коливаються перпендикулярно до напрямку поширення хвилі.</p>
-</div></blockquote>
-<blockquote>
-<div><p><strong>Поздовжньою хвилею</strong> називають таку, де частинки середовища коливаються вздовж напрямку поширення хвилі.</p>
-</div></blockquote>
-<p>При поширенні поперечної хвилі спостерігається послідовний зсув шарів середовища один відносно одного. <strong>Оскільки деформація зсуву викликає пружні сили лише в твердих тілах, поперечні хвилі здатні розповсюджуватися виключно в твердих середовищах.</strong></p>
-<p>При поширенні поздовжньої хвилі відбувається чергування зон стиснення та розрідження середовища. Такий тип деформації призводить до виникнення пружних сил у будь-якому середовищі, тому <strong>поздовжні хвилі можуть існувати в усіх середовищах</strong> (твердих, рідких, газоподібних).</p>
-<p>Хвилі на водній поверхні не належать ні до поздовжніх, ні до поперечних. Це змішаний тип хвиль, де частинки води рухаються як вздовж, так і перпендикулярно до напрямку поширення хвилі, описуючи еліптичні траєкторії.</p>
+<h3>Хвилі змішаного типу<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Існують і більш складні випадки. Наприклад, хвилі на поверхні рідини є змішаними: частинки води в них рухаються по колах або еліпсах, тобто в їхньому русі є як поперечна, так і поздовжня складові.</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Deep_water_wave.gif" alt="Deep water wave.gif" height="256" width="390">
 <br>
-Рис. Траєкторії руху частинок у поверхневій хвилі на воді.
-Автор: <a href="https://commons.wikimedia.org/wiki/User:Kraaiennest" title="User:Kraaiennest">Kraaiennest</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3374567">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Хвиля">Wiki</a></p><p>Хвилі, що розповсюджуються шнуром, стрічкою чи пружиною, можуть рухатися лише в двох напрямках - вздовж цих об'єктів. Натомість, якщо джерело коливань розташоване всередині середовища, хвиля поширюється в усіх напрямках, утворюючи просторову хвилю. З часом коливання досягають дедалі більшої кількості точок простору, формуючи певну поверхню. <strong>Поверхня, якої досягли коливання на даний момент часу, називається фронтом хвилі.</strong></p>
-<p>Усі точки фронту хвилі коливаються в однаковій фазі. <strong>Поверхні однакової фази називають хвильовими поверхнями.</strong> Таким чином, фронт хвилі є найвіддаленішою від джерела хвильовою поверхнею. За формою хвильових поверхонь розрізняють сферичні, циліндричні та плоскі хвилі.</p>
-<p><strong>Сферична хвиля</strong> утворюється, коли джерелом є точкове джерело або сфера, що здійснює коливання. У цьому випадку енергія, отримана від джерела, розподіляється на дедалі більшу площу, тому амплітуда хвилі зменшується з відстанню від джерела. Аналогічна закономірність спостерігається для <strong>циліндричної хвилі</strong> (яку створює, наприклад, стрижень, що вібрує).</p>
+Рис. 1. Траєкторії руху частинок у поверхневій хвилі на воді.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Kraaiennest" title="User:Kraaiennest">Kraaiennest</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3374567">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Хвиля">Wiki</a></p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Основні характеристики хвилі<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Як і коливання, хвилі мають набір фізичних величин, що їх описують. Частота та період хвилі визначаються частотою та періодом коливань джерела, тому ці поняття нам вже знайомі. Розглянемо нові, специфічні для хвиль характеристики.</p>
+<blockquote>
+<div><p><strong>Швидкість поширення хвилі</strong> <span class="math notranslate nohighlight">\(v\)</span> - це швидкість, з якою в просторі переміщується певна фаза коливань (наприклад, гребінь хвилі). Вона залежить виключно від властивостей середовища (його пружності, густини, температури). <strong>Одиниця в СІ:</strong> метр за секунду (м/с).</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Довжина хвилі</strong> <span class="math notranslate nohighlight">\(\lambda\)</span> - це просторова характеристика хвилі. Це відстань, на яку поширюється хвиля за час, що дорівнює одному періоду коливань <span class="math notranslate nohighlight">\(T\)</span>. Іншими словами, це відстань між двома найближчими точками середовища, які коливаються в однаковій фазі (наприклад, між двома сусідніми гребенями або западинами). <strong>Одиниця в СІ:</strong> метр (м).</p>
+</div></blockquote>
+<section id="id7">
+<h3>Зв'язок між швидкістю, довжиною та періодом (частотою) хвилі<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Ці три фундаментальні характеристики пов'язані простою і важливою формулою. Виведемо її.</p>
+<p>З означення довжини хвилі випливає, що за час <span class="math notranslate nohighlight">\(T\)</span> (один період) хвиля проходить відстань <span class="math notranslate nohighlight">\(\lambda\)</span>. Використовуючи базову формулу кінематики для рівномірного руху (<span class="math notranslate nohighlight">\(\text{відстань} = \text{швидкість} \cdot \text{час}\)</span>), ми можемо записати:</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = v T \]</div>
+<p>Це і є <strong>формула зв'язку довжини хвилі та періоду</strong>.</p>
+<p>Оскільки період <span class="math notranslate nohighlight">\(T\)</span> і частота <span class="math notranslate nohighlight">\(\nu\)</span> пов'язані співвідношенням <span class="math notranslate nohighlight">\(T = 1/\nu\)</span>, ми можемо підставити це у нашу формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = v \frac{1}{\nu}
+\]</div>
+<p>Звідки отримуємо ще одну, не менш важливу формулу, яку часто називають <strong>формулою хвилі</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \lambda \nu
+\]</div>
+<p>Ця формула показує, що швидкість поширення хвилі дорівнює добутку її довжини на частоту коливань. Вона є універсальною для хвиль будь-якої природи.</p>
+</section>
+</section>
+<section id="id8">
+<h2>Періодичність хвилі в часі та просторі<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Хвиля є процесом, що повторюється як у часі, так і в просторі.</p>
+<ul class="simple">
+<li><p><strong>Періодичність у часі:</strong> Якщо ми будемо спостерігати за однією конкретною точкою середовища (наприклад, за поплавком на воді), ми побачимо, що вона здійснює гармонічні коливання з періодом <span class="math notranslate nohighlight">\(T\)</span>. Її стан повністю повторюється через проміжки часу, кратні <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+<li><p><strong>Періодичність у просторі:</strong> Якщо ми зробимо &quot;миттєвий знімок&quot; хвилі, то побачимо, що її форма (профіль) періодично повторюється у просторі. Відстань, через яку форма хвилі повторюється, і є довжина хвилі <span class="math notranslate nohighlight">\(\lambda\)</span>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Рівняння плоскої гармонічної хвилі<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Давайте спробуємо математично описати хвилю. Розглянемо найпростіший випадок - <strong>плоску гармонічну хвилю</strong>, що поширюється вздовж осі <span class="math notranslate nohighlight">\(x\)</span>. Плоска хвиля - це така хвиля, в якої всі точки на будь-якій площині, перпендикулярній до напрямку поширення, коливаються в однаковій фазі.</p>
+<p>Нехай джерело хвилі знаходиться в точці <span class="math notranslate nohighlight">\(x=0\)</span> і здійснює гармонічні коливання за законом косинуса (припускаємо, що початкова фаза дорівнює нулю для простоти):</p>
+<div class="math notranslate nohighlight">
+\[u(0, t) = A \cos(\omega t)\]</div>
+<p>Тут <span class="math notranslate nohighlight">\(u(0, t)\)</span> - зміщення точки <span class="math notranslate nohighlight">\(x=0\)</span> в момент часу <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(A\)</span> - амплітуда, <span class="math notranslate nohighlight">\(\omega\)</span> - циклічна частота.</p>
+<p>Тепер розглянемо довільну точку середовища з координатою <span class="math notranslate nohighlight">\(x\)</span>. Коливання до неї дійдуть не миттєво. Хвилі потрібен час, щоб подолати відстань <span class="math notranslate nohighlight">\(x\)</span>. Цей час &quot;запізнення&quot; <span class="math notranslate nohighlight">\(\Delta t\)</span> дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[\Delta t = \frac{x}{v}\]</div>
+<p>де <span class="math notranslate nohighlight">\(v\)</span> - швидкість поширення хвилі.</p>
+<p>Це означає, що точка з координатою <span class="math notranslate nohighlight">\(x\)</span> в момент часу <span class="math notranslate nohighlight">\(t\)</span> буде здійснювати точно такі ж коливання, які точка <span class="math notranslate nohighlight">\(x=0\)</span> здійснювала в більш ранній момент часу <span class="math notranslate nohighlight">\(t - \Delta t\)</span>. Щоб знайти зміщення <span class="math notranslate nohighlight">\(u(x, t)\)</span>, нам потрібно просто підставити час <span class="math notranslate nohighlight">\(t - \Delta t\)</span> у рівняння коливань джерела:</p>
+<div class="math notranslate nohighlight">
+\[u(x, t) = u(0, t - \Delta t) = A \cos(\omega(t - \Delta t))\]</div>
+<p>Підставимо вираз для <span class="math notranslate nohighlight">\(\Delta t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+u(x, t) = A \cos\left(\omega\left(t - \frac{x}{v}\right)\right)
+\]</div>
+<p>Розкриємо дужки у фазі коливань:</p>
+<div class="math notranslate nohighlight">
+\[u(x, t) = A \cos\left(\omega t - \frac{\omega}{v}x\right)\]</div>
+<p>Вираз <span class="math notranslate nohighlight">\(\frac{\omega}{v}\)</span> зустрічається настільки часто, що для нього ввели спеціальне позначення і назву - <strong>хвильове число</strong> <span class="math notranslate nohighlight">\(k\)</span>. <strong>Одиниця в СІ:</strong> радіан на метр (рад/м).</p>
+<p>Давайте розберемося з його фізичним змістом. Згадаємо, що <span class="math notranslate nohighlight">\(\omega = \frac{2\pi}{T}\)</span> і <span class="math notranslate nohighlight">\(v = \frac{\lambda}{T}\)</span>. Підставимо це у вираз для <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[k = \frac{\omega}{v} = \frac{2\pi/T}{\lambda/T} = \frac{2\pi}{\lambda}\]</div>
+<p>Отже, хвильове число <span class="math notranslate nohighlight">\(k\)</span> показує, скільки разів фаза коливань змінюється на <span class="math notranslate nohighlight">\(2\pi\)</span> радіан на відрізку довжиною <span class="math notranslate nohighlight">\(\lambda\)</span>. Якщо циклічна частота <span class="math notranslate nohighlight">\(\omega\)</span> характеризує періодичність процесу в часі, то хвильове число <span class="math notranslate nohighlight">\(k\)</span> характеризує його періодичність у просторі.</p>
+<p>Тепер ми можемо записати <strong>рівняння плоскої гармонічної хвилі</strong> в його остаточному, стандартному вигляді:</p>
+<div class="math notranslate nohighlight">
+\[
+u(x, t) = A \cos(\omega t - kx)
+\]</div>
+<p>Це рівняння описує зміщення <span class="math notranslate nohighlight">\(u\)</span> будь-якої точки середовища з координатою <span class="math notranslate nohighlight">\(x\)</span> в будь-який момент часу <span class="math notranslate nohighlight">\(t\)</span>. Знак &quot;мінус&quot; перед <span class="math notranslate nohighlight">\(kx\)</span> вказує, що хвиля поширюється в додатному напрямку осі <span class="math notranslate nohighlight">\(x\)</span>. Для хвилі, що біжить у від'ємному напрямку, рівняння матиме вигляд <span class="math notranslate nohighlight">\(u(x, t) = A \cos(\omega t + kx)\)</span>.</p>
+</section>
+<section id="id10">
+<h2>Фронт хвилі та хвильові поверхні<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Хвильова поверхня</strong> - це поверхня, всі точки якої коливаються в однаковій фазі.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Фронт хвилі</strong> - це хвильова поверхня, що відокремлює частину простору, вже охоплену хвильовим процесом, від тієї, де коливання ще не почалися.</p>
+</div></blockquote>
+<p>Форма хвильових поверхонь залежить від форми джерела.</p>
+<ul class="simple">
+<li><p><strong>Сферична хвиля:</strong> Виникає від точкового джерела. Хвильові поверхні - концентричні сфери.</p></li>
+<li><p><strong>Циліндрична хвиля:</strong> Виникає від джерела у формі лінії (наприклад, нитки, що коливається). Хвильові поверхні - коаксіальні циліндри.</p></li>
+<li><p><strong>Плоска хвиля:</strong> Виникає, коли джерело є нескінченною площиною, або як наближення для сферичної/циліндричної хвилі на дуже великій відстані від джерела. Хвильові поверхні - паралельні площини.</p></li>
+</ul>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Spherical_wave2.gif" alt="Spherical wave2.gif" height="178" width="178">
 <br>
-Рис. Сферичні хвилі, що утворюються точковим джерелом.
-Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3036844">Link</a>. <a href="https://en.wikipedia.org/wiki/Wave_equation">Wiki</a></p><p>Інша ситуація виникає у випадку плоскої хвилі. Плоску хвилю можна отримати, примушуючи коливатися пластину перпендикулярно до її поверхні. При цьому енергія розподіляється по сталій площі, тому за умови малого тертя в середовищі амплітуда хвилі залишається постійною.</p>
+Рис. 2. Сферичні хвилі, що утворюються точковим джерелом.
+Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3036844">Link</a>. <a href="https://en.wikipedia.org/wiki/Wave_equation">Wiki</a></p>
 </section>
-<section id="id6">
-<h2>Додаткові матеріали<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="id11">
+<h2>Відбивання механічних хвиль та стоячі хвилі<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Що станеться, коли хвиля дійде до межі середовища або перешкоди? Вона відіб'ється. Характер відбивання залежить від властивостей перешкоди.</p>
+<ol class="arabic simple">
+<li><p><strong>Відбивання від &quot;більш щільної&quot; (жорстко закріпленої) межі:</strong> Якщо кінець мотузки, по якій біжить хвиля, жорстко закріплений, то відбита хвиля повернеться &quot;догори дриґом&quot;. Кажуть, що її фаза змінюється на протилежну (на <span class="math notranslate nohighlight">\(\pi\)</span> радіан). Гребінь стає западиною, і навпаки.</p></li>
+<li><p><strong>Відбивання від &quot;менш щільної&quot; (вільної) межі:</strong> Якщо кінець мотузки прикріплений до легкого кільця, що може вільно ковзати по стержню, то відбита хвиля повернеться без зміни фази. Гребінь відіб'ється гребенем.</p></li>
+</ol>
+<p>Коли первинна (падаюча) хвиля зустрічається з відбитою, вони накладаються одна на одну. Цей процес називається інтерференцією. В особливому випадку, коли дві однакові за частотою та амплітудою хвилі поширюються назустріч одна одній, виникає унікальне явище.</p>
+<blockquote>
+<div><p><strong>Стояча хвиля</strong> - це коливальний рух, що виникає в результаті накладання двох зустрічних когерентних хвиль, і в якому положення вузлів та пучностей залишається незмінним у просторі.</p>
+</div></blockquote>
+<p>На відміну від біжучої хвилі, стояча хвиля не переносить енергію. Енергія &quot;замикається&quot; між вузлами.</p>
+<p>У стоячій хвилі є точки, які залишаються нерухомими.</p>
+<ul class="simple">
+<li><p><strong>Вузли</strong> - це точки, в яких амплітуда коливань завжди дорівнює нулю.</p></li>
+</ul>
+<p>Також є точки, що коливаються з максимально можливою амплітудою.</p>
+<ul class="simple">
+<li><p><strong>Пучності</strong> (або анти-вузли) - це точки, в яких амплітуда коливань є максимальною (дорівнює <span class="math notranslate nohighlight">\(2A\)</span>).</p></li>
+</ul>
+<p>Математичний аналіз показує (і це можна спостерігати на досліді), що:</p>
+<ul class="simple">
+<li><p>Відстань між двома сусідніми вузлами дорівнює половині довжини хвилі <span class="math notranslate nohighlight">\(\lambda/2\)</span>.</p></li>
+<li><p>Відстань між двома сусідніми пучностями також дорівнює <span class="math notranslate nohighlight">\(\lambda/2\)</span>.</p></li>
+<li><p>Відстань між сусідніми вузлом та пучністю дорівнює <span class="math notranslate nohighlight">\(\lambda/4\)</span>.</p></li>
+</ul>
+<p>Стоячі хвилі є основою звучання всіх струнних та духових музичних інструментів. Коли ми граємо на гітарі, в струні виникає саме стояча хвиля, довжина якої визначає висоту тону.</p>
+</section>
+<section id="id12">
+<h2>Додаткові матеріали<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A5%D0%B2%D0%B8%D0%BB%D1%8F">Хвиля</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D1%83%D0%B6%D0%BD%D1%96_%D1%85%D0%B2%D0%B8%D0%BB%D1%96">Пружні хвилі</a></p></li>
@@ -595,8 +702,8 @@ Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3036844"
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BB%D0%BE%D1%81%D0%BA%D0%B0_%D1%85%D0%B2%D0%B8%D0%BB%D1%8F">Плоска хвиля</a></p></li>
 </ul>
 </section>
-<section id="id7">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Wave">Wave</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Longitudinal_wave">Longitudinal wave</a></p></li>
@@ -672,12 +779,22 @@ Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3036844"
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Механізм поширення механічної хвилі</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Характеристики хвильового руху</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Параметри, що описують хвилю</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Види механічних хвиль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Класифікація механічних хвиль</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Поперечні хвилі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Поздовжні хвилі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Хвилі змішаного типу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Основні характеристики хвилі</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Зв'язок між швидкістю, довжиною та періодом (частотою) хвилі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Періодичність хвилі в часі та просторі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Рівняння плоскої гармонічної хвилі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Фронт хвилі та хвильові поверхні</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Відбивання механічних хвиль та стоячі хвилі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
