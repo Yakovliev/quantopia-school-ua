@@ -1,0 +1,1137 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Молекулярно-кінетична теорія (МКТ) &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/fundamentals-of-mkt';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mkt/fundamentals-of-mkt.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mkt/fundamentals-of-mkt.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mkt/fundamentals-of-mkt.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Молекулярно-кінетична теорія (МКТ)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основні положення МКТ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. Усі речовини мають дискретну будову</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2. Частинки речовини перебувають у безперервному хаотичному русі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3. Частинки речовини взаємодіють одна з одною</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Кількісні характеристики речовини на мікрорівні та макрорівні</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Маса атомів і молекул</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Міст між мікро- та макросвітом: Кількість речовини та стала Авогадро</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Молярна маса</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Виведення формул, пов'язаних з молярною масою</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Чому саме Карбон-12?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Роль ізотопів: Чому відносна атомна маса не завжди є цілим числом?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Помилковий підхід: Просте середнє арифметичне</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Правильний підхід: Середнє зважене значення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Молекулярно-кінетична теорія (МКТ)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p><strong>Молекулярно-кінетична теорія (МКТ)</strong> - це теорія, яка пояснює будову та властивості речовин на основі уявлень про дискретність (роздільність) речовини, хаотичність руху її частинок (молекул, атомів, йонів) та взаємодію між ними.</p>
+</div></blockquote>
+<p>В основі цієї теорії лежать три прості, але дуже потужні ідеї, які ми називаємо <strong>основними положеннями МКТ</strong>.</p>
+<section id="id2">
+<h2>Основні положення МКТ<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>1. Усі речовини мають дискретну будову<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p>Положення 1: Усі речовини мають дискретну будову.</p>
+</div></blockquote>
+<p>Це означає, що будь-яка речовина, чи то шматок заліза, крапля води або повітря, яким ми дихаємо, складається з окремих, дуже маленьких частинок. Між цими частинками існують проміжки.</p>
+<ul class="simple">
+<li><p><strong>Аналогія:</strong> Уявіть собі піщаний пляж. Здалеку він виглядає як суцільна поверхня. Але якщо ми підійдемо ближче, то побачимо, що він складається з мільярдів окремих піщинок. Так само і будь-яка речовина: вона здається нам суцільною, але насправді складається з окремих &quot;піщинок&quot; - атомів, молекул та інших структурних елементів.</p></li>
+</ul>
+<p>Основними структурними елементами речовини є:</p>
+<ul class="simple">
+<li><p><strong>Атом</strong> - найдрібніша, хімічно неподільна частинка елемента. Атоми складаються з ядра (протони та нейтрони) та електронів, що обертаються навколо нього. Приклади: атом Гідрогену (H), атом Оксигену (O), атом Феруму (Fe).</p></li>
+<li><p><strong>Молекула</strong> - це найменша частинка речовини, яка має її основні хімічні властивості та здатна до самостійного існування. Молекули складаються з двох або більше атомів, з'єднаних хімічними зв'язками. Приклади: молекула води (<span class="math notranslate nohighlight">\(H_2O\)</span>) складається з двох атомів Гідрогену та одного атома Оксигену; молекула кисню (<span class="math notranslate nohighlight">\(O_2\)</span>) складається з двох атомів Оксигену.</p></li>
+<li><p><strong>Іон</strong> - це атом або молекула, що втратили або приєднали один чи кілька електронів. Через це іон має електричний заряд.</p>
+<ul>
+<li><p><strong>Позитивний іон (катіон)</strong> утворюється, коли атом втрачає електрони. Приклад: <span class="math notranslate nohighlight">\(Na^+\)</span>.</p></li>
+<li><p><strong>Негативний іон (аніон)</strong> утворюється, коли атом приєднує електрони. Приклад: <span class="math notranslate nohighlight">\(Cl^-\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/30/%D0%94%D1%96%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%B0_%D0%90%D1%82%D0%BE%D0%BC%D0%B0.svg" alt="Діаграма Атома.svg" height="400" width="400">
+<br>
+Рис. 1. Планетарна модель атома.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:UkrainianCossack" title="User:UkrainianCossack">UkrainianCossack</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=89592525">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Атом">Wikipedia</a></p></section>
+<section id="id4">
+<h3>2. Частинки речовини перебувають у безперервному хаотичному русі<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Частинки речовини (атоми, молекули) ніколи не перебувають у стані повного спокою. Вони постійно рухаються: коливаються, обертаються, переміщуються в просторі. Цей рух називається <strong>тепловим рухом</strong>.</p>
+<ul class="simple">
+<li><p><strong>Чому &quot;тепловий&quot;?</strong> Тому що інтенсивність цього руху безпосередньо пов'язана з температурою тіла. Чим вища температура, тим швидше рухаються частинки. Абсолютний нуль температури (0 Кельвінів або -273.15 °C) - це теоретична точка, де тепловий рух частинок припиняється.</p></li>
+<li><p><strong>Аналогія:</strong> Уявіть собі бджолиний рій у закритій скляній банці. Кожна бджола (молекула) летить у випадковому напрямку, стикається з іншими бджолами та стінками банки. Чим &quot;енергійніші&quot; бджоли (вища температура), тим швидше вони літають і тим сильніше вдаряються об стінки.</p></li>
+</ul>
+<p>Експериментальним підтвердженням цього положення є <strong>броунівський рух</strong> - хаотичний рух дуже дрібних частинок, зважених у рідині або газі, під дією ударів молекул середовища. Якщо помістити у воду дрібні частинки пилку, то під мікроскопом можна побачити, як вони безладно &quot;танцюють&quot;. Це відбувається тому, що невидимі нам молекули води з усіх боків штовхають частинки пилку, і ці поштовхи ніколи не врівноважуються повністю. Детальніше про броунівський рух поговоримо в наступних параграфах.</p>
+</section>
+<section id="id5">
+<h3>3. Частинки речовини взаємодіють одна з одною<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Між частинками одночасно діють сили притягання та відштовхування.</p>
+<ul class="simple">
+<li><p><strong>Сили притягання</strong> не дають частинкам розлетітися, утримуючи їх разом, що дозволяє тілам зберігати свою форму та об'єм.</p></li>
+<li><p><strong>Сили відштовхування</strong> стають значними на дуже малих відстанях і не дозволяють частинкам &quot;злипнутися&quot; або проникнути одна в одну.</p></li>
+</ul>
+<p>Характер взаємодії залежить від відстані між частинками. Існує певна рівноважна відстань, на якій сили притягання і відштовхування збалансовані.</p>
+<ul class="simple">
+<li><p><strong>Аналогія:</strong> Уявіть, що частинки - це кульки, з'єднані пружинками.</p>
+<ul>
+<li><p>Якщо ми спробуємо розтягнути кульки (збільшити відстань), пружинки будуть тягнути їх назад (сили притягання).</p></li>
+<li><p>Якщо ми спробуємо стиснути кульки (зменшити відстань), пружинки будуть їх відштовхувати (сили відштовхування).</p></li>
+</ul>
+</li>
+</ul>
+<p>Саме співвідношенням між енергією теплового руху та енергією взаємодії частинок пояснюються три агрегатні стани речовини:</p>
+<ul class="simple">
+<li><p><strong>Гази:</strong> Відстані між молекулами великі, сили притягання слабкі. Енергія руху значно переважає енергію взаємодії. Молекули рухаються хаотично, заповнюючи весь наданий об'єм.</p></li>
+<li><p><strong>Рідини:</strong> Відстані між молекулами малі, сили притягання значні. Енергія руху та енергія взаємодії сумірні. Молекули коливаються біля положень рівноваги і час від часу &quot;перестрибують&quot; на вільні місця. Рідини зберігають об'єм, але не форму.</p></li>
+<li><p><strong>Тверді тіла:</strong> Відстані між частинками малі. Енергія взаємодії значно переважає енергію руху. Частинки сильно притягуються одна до одної і лише коливаються біля фіксованих положень у кристалічній ґратці. Тверді тіла зберігають і форму, і об'єм.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Кількісні характеристики речовини на мікрорівні та макрорівні<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Тепер, коли ми розібралися з основними ідеями, перейдімо до інструментів, які дозволяють нам кількісно описувати світ мікрочастинок.</p>
+<section id="id7">
+<h3>Маса атомів і молекул<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Оперувати масами окремих атомів у кілограмах вкрай незручно - вони надзвичайно малі. Наприклад, маса атома Гідрогену становить приблизно <span class="math notranslate nohighlight">\(1.67 \cdot 10^{-27}\)</span> кг. Оперувати такими числами незручно. Тому вчені домовилися вимірювати маси атомів і молекул, порівнюючи їх з певною еталонною масою.</p>
+<p>За такий еталон було обрано <span class="math notranslate nohighlight">\(\frac{1}{12}\)</span> маси атома Карбону-12 (<span class="math notranslate nohighlight">\(^{12}_6\text{C}\)</span>). Ця одиниця отримала назву <strong>атомна одиниця маси (а.о.м.)</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+1\text{ а.о.м.} = \frac{1}{12} m_0\left(^{12}_6\text{C}\right) \approx 1.66 \cdot 10^{-27}\text{ кг}
+\]</div>
+<p>Більш точне значення: <span class="math notranslate nohighlight">\(1 \text{ а.о.м.} \approx 1.66054 \cdot 10^{-27}\text{ кг}\)</span> (ми це значення використаємо нижче для розрахунків).</p>
+<p>Тут <span class="math notranslate nohighlight">\(m_0\left(^{12}_6\text{C}\right)\)</span> - абсолютна маса (кг) одного атома Карбону-12.</p>
+<p>Тепер ми можемо ввести безрозмірні величини, які показують, у скільки разів маса атома чи молекули більша за 1 а.о.м.</p>
+<ul>
+<li><p><strong>Відносна атомна маса <span class="math notranslate nohighlight">\(A_r\)</span></strong> - це безрозмірна величина, що показує, у скільки разів маса даного атома <span class="math notranslate nohighlight">\(m_0(\text{атома})\)</span> більша за 1 а.о.м.</p>
+<div class="math notranslate nohighlight">
+\[
+    A_r = \frac{m_0(\text{атома})}{\frac{1}{12}m_0\left(^{12}_6\text{C}\right)} = \frac{m_0(\text{атома})}{1 \text{ а.о.м.}}
+    \]</div>
+<p>Ця величина є безрозмірною. Значення відносних атомних мас для всіх хімічних елементів можна знайти в періодичній системі хімічних елементів. Наприклад, для Оксигену <span class="math notranslate nohighlight">\(A_r(O) \approx 16\)</span>. Це означає, що атом Оксигену приблизно в 16 разів важчий за 1 а.о.м.</p>
+</li>
+<li><p><strong>Відносна молекулярна маса <span class="math notranslate nohighlight">\(M_r\)</span></strong> - аналогічна величина для молекул. Вона показує, у скільки разів маса молекули <span class="math notranslate nohighlight">\(m_0(\text{молекули})\)</span> більша за 1 а.о.м. Її можна обчислити як суму відносних атомних мас усіх атомів, що входять до складу молекули.</p>
+<div class="math notranslate nohighlight">
+\[
+    M_r = \frac{m_0(\text{молекули})}{\frac{1}{12}m_0\left(^{12}_6\text{C}\right)} = \frac{m_0(\text{молекули})}{1 \text{ а.о.м.}}
+    \]</div>
+<p>Відносна молекулярна маса дорівнює сумі відносних атомних мас усіх атомів, що входять до складу молекули.</p>
+<p><strong>Приклад:</strong> Знайдемо відносну молекулярну масу води <span class="math notranslate nohighlight">\(\text{H}_2\text{O}\)</span>.</p>
+<ul class="simple">
+<li><p>З таблиці хімічних елементів беремо: <span class="math notranslate nohighlight">\(A_r(\text{H}) \approx 1\)</span>, <span class="math notranslate nohighlight">\(A_r(\text{O}) \approx 16\)</span>.</p></li>
+<li><p>Молекула води складається з двох атомів Гідрогену та одного атома Оксигену.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_r(\text{H}_2\text{O}) = 2 \cdot A_r(\text{H}) + 1 \cdot A_r(\text{O}) = 2 \cdot 1 + 16 = 18\)</span>.</p></li>
+<li><p>Це означає, що молекула води у 18 разів важча за 1 а.о.м.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id8">
+<h3>Міст між мікро- та макросвітом: Кількість речовини та стала Авогадро<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Оскільки атомів і молекул у будь-якому макроскопічному тілі неймовірно багато, рахувати їх поштучно неможливо. Для цього ввели спеціальну фізичну величину - <strong>кількість речовини</strong>.</p>
+<ul class="simple">
+<li><p><strong>Аналогія:</strong> Ми не купуємо цукор по одній крупинці. Ми купуємо його кілограмами. Так само ми не рахуємо молекули поштучно, ми рахуємо їх &quot;порціями&quot;. Такою &quot;порцією&quot; у фізиці та хімії є <strong>моль</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Моль</strong> - це одиниця кількості речовини, що містить стільки ж частинок (атомів, молекул, іонів), скільки атомів міститься у 12 грамах (0.012 кг) Карбону-12.</p>
+</div></blockquote>
+<p>Кількість частинок в одному молі є фундаментальною фізичною сталою і називається <strong>сталою Авогадро <span class="math notranslate nohighlight">\(N_A\)</span></strong> (іноді називають &quot;числом Авогадро&quot;).</p>
+<div class="math notranslate nohighlight">
+\[
+N_A \approx 6.022 \cdot 10^{23} \text{ моль}^{-1}
+\]</div>
+<p>Одиниця вимірювання <span class="math notranslate nohighlight">\(\text{моль}^{-1}\)</span> означає &quot;кількість частинок на моль&quot;. Тобто в 1 молі будь-якої речовини міститься приблизно <span class="math notranslate nohighlight">\(6.022 \cdot 10^{23}\)</span> її структурних частинок. Це і є наша &quot;порція&quot; кількості частинок у мікросвіті.</p>
+<p>Давайте &quot;перевіримо&quot; числове значення сталої Авогадро. Для цього порахуємо кількість частинок в одному молі речовини. Для цього беремо 12 грам (0.012 кг) Карбону-12 і ділимо на масу одного атома Карбону-12. Таким чином, ми за означенням дізнаємось кількість частинок в одному молі речовини (розмірність буде кількість частинок на моль або просто <span class="math notranslate nohighlight">\(\text{моль}^{-1}\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[N_A = \frac{0.012 \text{ кг}}{m_0\left(^{12}_6\text{C}\right)} \text{ моль}^{-1} = \frac{0.012 \text{ кг}}{12 \text{ а.о.м.}} \text{ моль}^{-1} = \frac{0.001 \text{ кг}}{1 \text{ а.о.м.}} \text{ моль}^{-1}\]</div>
+<div class="math notranslate nohighlight">
+\[N_A = \frac{10^{-3} \text{ кг}}{1 \text{ а.о.м.}} \text{ моль}^{-1} = \frac{10^{-3} \text{ кг}}{1.66054 \cdot 10^{-27} \text{ кг} } \text{ моль}^{-1} = \frac{10^{-3}}{1.66054 \cdot 10^{-27} } \text{ моль}^{-1}\]</div>
+<div class="math notranslate nohighlight">
+\[N_A = \frac{10^{-3}}{1.66054 \cdot 10^{-27} } \text{ моль}^{-1} = \frac{1}{1.66054 \cdot 10^{-24} } \text{ моль}^{-1} = \frac{1}{1.66054} \cdot 10^{24} \text{ моль}^{-1}\]</div>
+<div class="math notranslate nohighlight">
+\[N_A = \frac{1}{1.66054} \cdot 10^{24} \text{ моль}^{-1} \approx 6.022 \cdot 10^{23} \text{ моль}^{-1}\]</div>
+<p>У процесі розрахунків ми отримали ось такий вираз:</p>
+<div class="math notranslate nohighlight">
+\[N_A = \frac{0.001 \text{ кг}}{1 \text{ а.о.м.}} \text{ моль}^{-1}\]</div>
+<p>Давайте трохи його перетворимо.</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ а.о.м.} \cdot N_A = 0.001 \text{ кг} \cdot \text{ моль}^{-1}\]</div>
+<div class="math notranslate nohighlight">
+\[1 \text{ а.о.м.} \cdot N_A = 0.001 \frac{\text{кг}}{\text{моль}}\]</div>
+<p>Ми згодом використаємо цей результат в подальших виведеннях.</p>
+<p>Тепер ми можемо ввести нове поняття &quot;кількість речовини&quot;.</p>
+<blockquote>
+<div><p><strong>Кількість речовини <span class="math notranslate nohighlight">\(\nu\)</span></strong> (читається як &quot;ню&quot;) - це фізична величина, що показує відношення числа частинок <span class="math notranslate nohighlight">\(N\)</span> у даному тілі до сталої Авогадро <span class="math notranslate nohighlight">\(N_A\)</span>.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+\nu = \frac{N}{N_A}
+\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\nu\)</span> - кількість речовини. Одиниця в СІ: <strong>моль (англійською mol)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span> - число частинок (атомів, молекул) у тілі (безрозмірна величина).</p></li>
+<li><p><span class="math notranslate nohighlight">\(N_A\)</span> - стала Авогадро (<span class="math notranslate nohighlight">\(моль^{-1}\)</span>).</p></li>
+</ul>
+<p>Фактично, кількість речовини <span class="math notranslate nohighlight">\(\nu\)</span> показує, скільки &quot;порцій&quot;-молів частинок міститься в даному зразку речивини чи тілі.</p>
+</section>
+<section id="id9">
+<h3>Молярна маса<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Ми встановили зв'язок між кількістю частинок та кількістю речовини. Тепер встановимо зв'язок між масою речовини та кількістю речовини. Для цього введемо поняття молярної маси.</p>
+<p><strong>Молярна маса <span class="math notranslate nohighlight">\(M\)</span></strong> - це фізична величина, що дорівнює масі одного моля речовини.</p>
+<p>Одиниця вимірювання молярної маси в СІ - <strong>кілограм на моль</strong> (<span class="math notranslate nohighlight">\(\frac{\text{кг}}{\text{моль}}\)</span>), хоча в хімії часто використовується розмірність <strong>грам на моль</strong> (<span class="math notranslate nohighlight">\(\frac{\text{г}}{\text{моль}}\)</span>).</p>
+</section>
+<section id="id10">
+<h3>Виведення формул, пов'язаних з молярною масою<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Давайте тепер виведемо кілька корисних формул, які пов'язують усі введені нами поняття.</p>
+<p><strong>1. Зв'язок молярної маси з масою однієї частинки</strong></p>
+<p>За означенням, молярна маса <span class="math notranslate nohighlight">\(M\)</span> - це маса <span class="math notranslate nohighlight">\(N_A\)</span> частинок. Якщо маса однієї частинки (молекули) дорівнює <span class="math notranslate nohighlight">\(m_0\)</span>, то маса <span class="math notranslate nohighlight">\(N_A\)</span> частинок буде:</p>
+<div class="math notranslate nohighlight">
+\[
+M = m_0 \cdot N_A
+\]</div>
+<p>Ця формула пов'язує макроскопічну характеристику (молярну масу) з мікроскопічною (масою однієї молекули).</p>
+<p><strong>2. Зв'язок молярної маси з відносною молекулярною масою</strong></p>
+<p>Це дуже важливий і зручний зв'язок. Давайте його виведемо. З означення відносної молекулярної маси ми знаємо, що маса однієї молекули <span class="math notranslate nohighlight">\(m_0\)</span> дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[m_0 = M_r \cdot (1 \text{ а.о.м.})\]</div>
+<p>Тепер підставимо цей вираз у попередню формулу <span class="math notranslate nohighlight">\(M = m_0 \cdot N_A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[M = (M_r \cdot 1 \text{ а.о.м.}) \cdot N_A = M_r \cdot (1 \text{ а.о.м.} \cdot N_A)\]</div>
+<p>Тепер згадаємо результат, який ми отримали вище:</p>
+<div class="math notranslate nohighlight">
+\[1 \text{ а.о.м.} \cdot N_A = 0.001 \frac{\text{кг}}{\text{моль}} = 10^{-3} \frac{\text{кг}}{\text{моль}}\]</div>
+<p>Виконавши заміну, ми отримуємо надзвичайно зручну формулу:</p>
+<div class="math notranslate nohighlight">
+\[
+M = M_r \cdot 10^{-3} \frac{\text{кг}}{\text{моль}} = M_r \frac{\text{г}}{\text{моль}}
+\]</div>
+<p><strong>Що це означає на практиці?</strong> Чисельно молярна маса в <span class="math notranslate nohighlight">\(\frac{\text{г}}{\text{моль}}\)</span> дорівнює відносній молекулярній масі <span class="math notranslate nohighlight">\(M_r\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Приклад:</strong> Ми раніше порахували, що для води <span class="math notranslate nohighlight">\(M_r(\text{H}_2\text{O}) = 18\)</span>. Отже, її молярна маса <span class="math notranslate nohighlight">\(M(\text{H}_2\text{O}) = 18 \frac{\text{г}}{\text{моль}}\)</span>, або в системі СІ <span class="math notranslate nohighlight">\(M(\text{H}_2\text{O}) = 18 \cdot 10^{-3} \frac{\text{кг}}{\text{моль}}\)</span>.</p></li>
+</ul>
+<p><strong>3. Зв'язок кількості речовини з масою</strong></p>
+<p>Давайте знайдемо формулу, яка дозволить обчислювати кількість речовини <span class="math notranslate nohighlight">\(\nu\)</span>, знаючи загальну масу речовини <span class="math notranslate nohighlight">\(m\)</span> та її молярну масу <span class="math notranslate nohighlight">\(M\)</span>.</p>
+<p>Загальна маса речовини <span class="math notranslate nohighlight">\(m\)</span> дорівнює масі однієї частинки <span class="math notranslate nohighlight">\(m_0\)</span>, помноженій на їхню кількість <span class="math notranslate nohighlight">\(N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m = N \cdot m_0\]</div>
+<p>З формул, які ми вже знаємо:</p>
+<div class="math notranslate nohighlight">
+\[N = \nu \cdot N_A\]</div>
+<div class="math notranslate nohighlight">
+\[m_0 = \frac{M}{N_A}\]</div>
+<p>Підставимо ці два вирази у формулу для маси <span class="math notranslate nohighlight">\(m\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m = (\nu \cdot N_A) \cdot \left(\frac{M}{N_A}\right)\]</div>
+<p>Стала Авогадро <span class="math notranslate nohighlight">\(N_A\)</span> скорочується, і ми отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[m = \nu \cdot M\]</div>
+<p>Звідси виражаємо кількість речовини:</p>
+<div class="math notranslate nohighlight">
+\[
+\nu = \frac{m}{M}
+\]</div>
+<p>Це одна з найважливіших формул у молекулярній фізиці та хімії. Вона пов'язує масу речовини з кількістю молів.</p>
+<p><strong>4. Зв'язок числа частинок з масою речовини</strong></p>
+<p>І наостанок, виведемо формулу, яка дозволить нам знаходити загальне число частинок <span class="math notranslate nohighlight">\(N\)</span> у зразку речовини масою <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<p>Ми маємо два вирази для кількості речовини <span class="math notranslate nohighlight">\(\nu\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{N}{N_A}\]</div>
+<p>та</p>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{m}{M}\]</div>
+<p>Оскільки ліві частини цих рівнянь рівні, то рівними мають бути і праві:</p>
+<div class="math notranslate nohighlight">
+\[\frac{N}{N_A} = \frac{m}{M}\]</div>
+<p>Звідси легко виразити число частинок <span class="math notranslate nohighlight">\(N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+N = \frac{m}{M} N_A
+\]</div>
+<p>Ця формула дозволяє, зваживши речовину, визначити, скільки в ній міститься молекул.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>Чому саме Карбон-12?<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Ми вже ввели поняття атомної одиниці маси (а.о.м.) як <span class="math notranslate nohighlight">\(\frac{1}{12}\)</span> маси атома Карбону-12. Але чому був обраний саме цей атом і саме число 12? Чи є в цьому виборі глибший сенс, ніж просто домовленість? Давайте розберемося.</p>
+<p>Для цього зазирнемо всередину самого атома ізотопу Карбон-12 (<span class="math notranslate nohighlight">\(^{12}_6\text{C}\)</span>). Перше, що спадає на думку, це те, що він складається з:</p>
+<ul class="simple">
+<li><p>6 протонів (у ядрі)</p></li>
+<li><p>6 нейтронів (у ядрі)</p></li>
+<li><p>6 електронів (на орбіталях навколо ядра)</p></li>
+</ul>
+<p>Така симетрія будови атома Карбону-12 відносно кількості протонів, нейтронів та електронів уже сама по собі може слугувати основною причиною вибору Карбону-12 для означення атомної одиниці маси.</p>
+<p>Тепер згадаємо про маси цих частинок. Маса електрона приблизно у 1836 разів менша за масу протона. Це настільки мала величина, що при розрахунку маси атома нею можна практично знехтувати. Таким чином, маса атома Карбону-12 з високою точністю дорівнює масі його ядра.</p>
+<div class="math notranslate nohighlight">
+\[m_0\left(^{12}_6\text{C}\right) \approx m_{\text{ядра}}\left(^{12}_6\text{C}\right)\]</div>
+<p>Маси протона (<span class="math notranslate nohighlight">\(m_p\)</span>) та нейтрона (<span class="math notranslate nohighlight">\(m_n\)</span>) дуже близькі, але не однакові. Отже, масу ядра можна приблизно представити як суму мас шести протонів та шести нейтронів.</p>
+<p><em>Примітка: Насправді, маса ядра завжди трохи менша за суму мас його складових через так званий дефект мас, пов'язаний з енергією зв'язку ядра. Ми познайомимось із дефектом мас, коли будемо вивчати ядерну фізику.</em></p>
+<p>Отже, маємо:</p>
+<div class="math notranslate nohighlight">
+\[m_0\left(^{12}_6\text{C}\right) \approx 6 \cdot m_p + 6 \cdot m_n\]</div>
+<p>Тепер підставимо цей вираз в означення атомної одиниці маси:</p>
+<div class="math notranslate nohighlight">
+\[1\text{ а.о.м.} = \frac{1}{12} m_0\left(^{12}_6\text{C}\right) \approx \frac{1}{12} (6 \cdot m_p + 6 \cdot m_n)\]</div>
+<p>Винесемо 6 за дужки та скоротимо:</p>
+<div class="math notranslate nohighlight">
+\[1\text{ а.о.м.} \approx \frac{6 \cdot (m_p + m_n)}{12} = \frac{m_p + m_n}{2}\]</div>
+<p>Отриманий результат має дуже красивий математичний сенс:</p>
+<div class="math notranslate nohighlight">
+\[
+1\text{ а.о.м.} \approx \frac{m_p + m_n}{2}
+\]</div>
+<p>Що може означати цей результат? Математично, це означає те, що одна атомна одиниця маси - це, по суті, середнє арифметичне мас протона і нейтрона, тобто усереднена маса однієї частинки в ядрі атома (такі частинки називають <strong>нуклонами</strong>). Але давайте подивимось на реальні значення:</p>
+<div class="math notranslate nohighlight">
+\[m_p \approx 1.67262 \cdot 10^{-27}\text{ кг}\]</div>
+<div class="math notranslate nohighlight">
+\[m_n \approx 1.67493 \cdot 10^{-27}\text{ кг}\]</div>
+<div class="math notranslate nohighlight">
+\[1 \text{ а.о.м.} \approx 1.66054 \cdot 10^{-27}\text{ кг}\]</div>
+<p>Як бачимо, 1 а.о.м. менша за масу протона та за масу нейтрона, а значить вона є меншою і за масу середнього арифметичного мас протона і нейтрона (якщо бути точним, то вище ми говорили про масу <em>спокою</em> протона та масу <em>спокою</em> нейтрона; це такі маси, коли швидкість протона та нейтрона дорівнюють нулю і коли протон та нейтрон не формують ядро якогось атома, а знаходяться у вільному стані). Основна причина розбіжності між красивою математичною формулою та фізичною реальністю - це дефект мас, про який ми згадували раніше. Через це явище, ядро атома Карбону-12 по масі є трохи меншим за суму мас його складових (6 протонів та 6 нейтронів), тому й виходить, що 1 а.о.м. в середньому менша і за масу протона, і за масу нейтрона, і за середнє арифметичне цих двох мас.</p>
+<p>Перш ніж рухатись далі, давайте познайомимось із новим поняттям.</p>
+<p><strong>Ізотопи</strong> - це різновиди атомів одного хімічного елемента, які мають однакове число протонів у ядрі, але відрізняються кількістю нейтронів. Через це ізотопи мають однаковий заряд ядра, але різну атомну масу. Саме тому ми пишемо чітко Карбон-12, а не просто Карбон. Бо Карбон - це хімічний елемент, але у нього є багато різновидів із різною кількістю нейтронів у ядрі. Більшість цих &quot;різновидів&quot;, тобто ізотопів є радіоактивними, тобто не є стабільними і у великій кількості в природі не зустрічаються. Стабільними є ізотоп Карбон-12 (6 протонів та 6 нейтронів у ядрі), поширеність його на Землі становить близько 98.9% серед усіх різновидів карбону і Карбон-13 (6 протонів та 7 нейтронів у ядрі), поширеність якого становить близько 1.1% (<a class="reference external" href="https://gml.noaa.gov/ccgg/isotopes/chemistry.html">джерело</a>). Усі інші ізотопи карбону мають поширеність меншу за 0.0001% на планеті Земля.</p>
+<p>Визначення атомної одиниці маси еволюціонувало з моменту своєї появи, причому стандарт змістився від Гідрогену-1 до Оксигену-16 і, зрештою, зупинився на Карбоні-12. Перехід до Карбону-12 у 1961 році вирішив давню суперечку між хіміками та фізиками, забезпечивши точніший та єдиний стандарт для вимірювання атомних мас.</p>
+<p>Спочатку як стандарт атомної одиниці маси використовувався найлегший елемент, Гідроген-1. Однак на початку 20 століття Оксиген став кращим еталоном завдяки своїй поширеності та здатності утворювати сполуки з багатьма іншими елементами, що спростило процес визначення атомних мас.</p>
+<p>Ця розбіжність виникла через різні погляди цих двох галузей. Хіміки працювали з елементами як такими, якими вони є в природі, включаючи їх ізотопні суміші (тобто хіміки в означенні 1 а.о.м. враховували фактично три ізотопи оксигену: Оксиген-16, Оксиген-17 та Оксиген-18). Фізики, особливо з появою мас-спектрометрії, зосередилися на властивостях окремих ізотопів (фізики для означення 1 а.о.м. використовували лише Оксиген-16). Існування двох різних шкал атомних мас спричинило плутанину та призвело до появи двох різних таблиць атомних ваг.</p>
+<p>Щоб вирішити цю невідповідність, Міжнародний союз фундаментальної та прикладної хімії (International Union of Pure and Applied Chemistry або скорочено IUPAC) та Міжнародний союз фундаментальної та прикладної фізики (International Union of Pure and Applied Physics або скорочено IUPAP) шукали новий, єдиний стандарт. У 1961 році було досягнуто домовленості про прийняття ізотопу Карбону-12 як остаточного еталона для одиниці атомної маси.</p>
+<p>Існувало кілька ключових причин вибору Карбону-12:</p>
+<ul class="simple">
+<li><p>Чистий ізотоп: Основа стандарту на одному чистому ізотопі (а не на декількох, як це було раніше) задовольняло вимогу фізиків щодо точного та однозначного визначення.</p></li>
+<li><p>Мінімальні зміни для хіміків: Нова шкала, заснована на Карбоні-12, була чисельно дуже близькою до існуючої шкали хіміків, яка використовувала природну суміш кисню. Прийняття стандарту Оксиген-16 фізиками призвело б до значної зміни приблизно на 275 частин на мільйон в атомних масах хіміків. На противагу цьому, шкала Карбону-12 вимагала лише незначного коригування приблизно на 42 частини на мільйон.</p></li>
+<li><p>Стабільність та поширеність: Карбон-12 є стабільним та дуже поширеним ізотопом, який становить близько 98.9% усього природного вуглецю.</p></li>
+<li><p>Практичність у мас-спектрометрії: Карбон-12 вже використовувався як вторинний стандарт у мас-спектрометрії, ключовому методі для визначення атомних мас.</p></li>
+<li><p>Нейтральний компроміс: Вибір нового стандарту, який не стосувався оксигену взагалі, на який у фізиків та хіміків були різні погляди, забезпечив дипломатичне вирішення розбіжностей між двома науковими спільнотами.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id12">
+<h2>Роль ізотопів: Чому відносна атомна маса не завжди є цілим числом?<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>Переглянувши періодичну систему хімічних елементів, ми можемо помітити цікаву закономірність. Відносна атомна маса <span class="math notranslate nohighlight">\(A_r\)</span> деяких елементів дуже близька до цілого числа. Наприклад, для Гідрогену <span class="math notranslate nohighlight">\(A_r(\text{H}) \approx 1.0079\)</span>, для Карбону <span class="math notranslate nohighlight">\(A_r(\text{C}) \approx 12.011\)</span>. Але для деяких елементів значення зовсім не цілі. Яскравий приклад - Хлор, для якого <span class="math notranslate nohighlight">\(A_r(\text{Cl}) \approx 35.45\)</span> (зазвичай, у періодичній системі хімічних елементів це значення записується, як 35.5).</p>
+<p>Чому так відбувається?</p>
+<p>Частково, відповідь полягає в тому, що 1 а.о.м. не дорівнює точно масі протона, чи масі нейтрона, чи середньому арифметичному цих мас, а є меншою за усі перелічені маси. У цьому ми вже пересвідчились вище. Саме тому, для багатьох хімічних елементів атомна маса близька до цілого числа, але не дорівнює цілому числу. Однак є і інша причина. І ця причина криється в існуванні ізотопів та їх поширеності в природі.</p>
+<p>Основне правило: <strong>відносна атомна маса, зазначена в періодичній системі, є середнім зваженим значенням мас усіх стабільних ізотопів даного елемента, з урахуванням їхньої поширеності на Землі.</strong></p>
+<p>Давайте розберемо це на прикладах.</p>
+<section id="id13">
+<h3>Помилковий підхід: Просте середнє арифметичне<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Розглянемо Гідроген. Він має три основні ізотопи:</p>
+<ul class="simple">
+<li><p><strong>Протій</strong> (<span class="math notranslate nohighlight">\(^1_1\text{H}\)</span>): 1 протон, 0 нейтронів. <span class="math notranslate nohighlight">\(A_r \approx 1\)</span>.</p></li>
+<li><p><strong>Дейтерій</strong> (<span class="math notranslate nohighlight">\(^2_1\text{H}\)</span>): 1 протон, 1 нейтрон. <span class="math notranslate nohighlight">\(A_r \approx 2\)</span>.</p></li>
+<li><p><strong>Тритій</strong> (<span class="math notranslate nohighlight">\(^3_1\text{H}\)</span>): 1 протон, 2 нейтрони. <span class="math notranslate nohighlight">\(A_r \approx 3\)</span>.</p></li>
+</ul>
+<p>Якщо ми просто знайдемо середнє арифметичне їхніх мас, то отримаємо:</p>
+<div class="math notranslate nohighlight">
+\[A_r(\text{середнє}) = \frac{1+2+3}{3} = 2\]</div>
+<p>Але в періодичній системі хімічних елементів для Гідрогену стоїть число близьке до 1.0079. Проблема в тому, що наш розрахунок із середнім арифметичним був би правильним лише за умови, якби в природі ми зустрічали однакову кількість атомів Протію, Дейтерію та Тритію. Але це зовсім не так.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Hydrogen_Deuterium_Tritium_Nuclei_Schmatic-en.svg" alt="Hydrogen Deuterium Tritium Nuclei Schmatic-en.svg" height="375" width="750">
+<br>
+Рис. 2. Ізотопи Протію, Дейтерію та Тритію.
+Автор: Dirk Hünniger; Derivative work in english - <a href="https://commons.wikimedia.org/wiki/User:Balajijagadesh" title="User:Balajijagadesh">Balajijagadesh</a> - This file was derived from: <a href="https://commons.wikimedia.org/wiki/File:Hydrogen_Deuterium_Tritium_Nuclei_Schmatic-de.svg" title="File:Hydrogen Deuterium Tritium Nuclei Schmatic-de.svg">Hydrogen Deuterium Tritium Nuclei Schmatic-de.svg</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=46295940">Link</a>. <a href="https://en.wikipedia.org/wiki/Isotope">Wikipedia</a></p></section>
+<section id="id14">
+<h3>Правильний підхід: Середнє зважене значення<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>Щоб правильно розрахувати середню масу, ми маємо врахувати, наскільки поширений кожен ізотоп.</p>
+<ul class="simple">
+<li><p><strong>Аналогія:</strong> Уявіть, що нам треба знайти середній зріст учнів у школі, де є 990 учнів зростом 1.70 м і лише 10 учнів зростом 2.00 м. Якщо ми просто візьмемо середнє арифметичне <span class="math notranslate nohighlight">\(\frac{1.70+2.00}{2} = 1.85\)</span> м, це буде абсолютно неправильно. Правильний підхід - врахувати кількість учнів:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\text{Середній зріст} = \frac{990 \cdot 1.70 + 10 \cdot 2.00}{990+10} = \frac{1683 + 20}{1000} = 1.703 \text{ м}
+\]</div>
+<p>Як бачимо, результат набагато ближчий до зросту переважної більшості учнів.</p>
+<p>Точно так само ми повинні робити і з атомами. Нам потрібно взяти велику &quot;вибірку&quot; атомів (умовно, мільярд атомів Гідрогену з природи) і порахувати їхню загальну масу, а потім поділити на їхню кількість. Цей процес математично описується через <strong>середнє зважене</strong>, де &quot;вагою&quot; кожного ізотопу є його відсоткова поширеність у природі.</p>
+<p><strong>Приклад 1: Гідроген</strong></p>
+<p>Давайте проведемо точний розрахунок для Гідрогену. Поширеність його стабільних ізотопів на Землі така:</p>
+<ul class="simple">
+<li><p>Протій (<span class="math notranslate nohighlight">\(^1_1\text{H}\)</span>): <span class="math notranslate nohighlight">\(A_r \approx 1.0078\)</span>, поширеність <span class="math notranslate nohighlight">\(\approx 99.985\%\)</span>.</p></li>
+<li><p>Дейтерій (<span class="math notranslate nohighlight">\(^2_1\text{H}\)</span>): <span class="math notranslate nohighlight">\(A_r \approx 2.0141\)</span>, поширеність <span class="math notranslate nohighlight">\(\approx 0.015\%\)</span>.</p></li>
+<li><p>Тритій є радіоактивним і його поширеність настільки мізерна, що нею можна знехтувати в розрахунках середньої маси.</p></li>
+</ul>
+<p>Переведемо відсотки в &quot;вагові коефіцієнти&quot; (поділивши на 100):</p>
+<ul class="simple">
+<li><p>Ваговий коефіцієнт Протію <span class="math notranslate nohighlight">\(w_1 = 0.99985\)</span>.</p></li>
+<li><p>Ваговий коефіцієнт Дейтерію <span class="math notranslate nohighlight">\(w_2 = 0.00015\)</span>.</p></li>
+</ul>
+<p>Тепер обчислимо середню зважену відносну атомну масу:</p>
+<div class="math notranslate nohighlight">
+\[A_r(\text{H}) = A_r(^1_1\text{H}) \cdot w_1 + A_r(^2_1\text{H}) \cdot w_2\]</div>
+<div class="math notranslate nohighlight">
+\[A_r(\text{H}) = (1.0078 \cdot 0.99985) + (2.0141 \cdot 0.00015) = 1.00795\]</div>
+<p>Отриманий результат практично збігається зі значенням у періодичній системі (1.0079). Оскільки поширеність Протію величезна, середня маса дуже близька до маси Протію (1.0078).</p>
+<p><strong>Приклад 2: Хлор</strong></p>
+<p>Тепер стає зрозуміло, чому у Хлору таке &quot;дивне&quot; значення <span class="math notranslate nohighlight">\(A_r \approx 35.45\)</span>. У нього є два стабільних ізотопи, поширеність яких є порівнянною:</p>
+<ul class="simple">
+<li><p>Хлор-35 (<span class="math notranslate nohighlight">\(^{35}_{17}\text{Cl}\)</span>): <span class="math notranslate nohighlight">\(A_r \approx 34.969\)</span>, поширеність <span class="math notranslate nohighlight">\(\approx 75.77\%\)</span>.</p></li>
+<li><p>Хлор-37 (<span class="math notranslate nohighlight">\(^{37}_{17}\text{Cl}\)</span>): <span class="math notranslate nohighlight">\(A_r \approx 36.966\)</span>, поширеність <span class="math notranslate nohighlight">\(\approx 24.23\%\)</span>.</p></li>
+</ul>
+<p>Вагові коефіцієнти:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(w_1 = 0.7577\)</span> (для Хлору-35)</p></li>
+<li><p><span class="math notranslate nohighlight">\(w_2 = 0.2423\)</span> (для Хлору-37)</p></li>
+</ul>
+<p>Розрахуємо середню зважену масу:</p>
+<div class="math notranslate nohighlight">
+\[A_r(\text{Cl}) = A_r(^{35}_{17}\text{Cl}) \cdot w_1 + A_r(^{37}_{17}\text{Cl}) \cdot w_2\]</div>
+<div class="math notranslate nohighlight">
+\[A_r(\text{Cl}) = (34.969 \cdot 0.7577) + (36.966 \cdot 0.2423) \approx 35.45\]</div>
+<p>І знову ми отримали значення, яке є дуже близьким до того, що наведено в періодичній системі. Дробове значення 35.5 (округлено) виникає не тому, що існує атом з такою масою, а тому, що в природі ми маємо справу з сумішшю важчих (Хлор-37) і легших (Хлор-35) атомів у пропорції приблизно 1 до 3.</p>
+<p>Отже, <strong>відносна атомна маса в періодичній таблиці хімічних елементів - це не маса якогось конкретного атома, а усереднена характеристика елемента, яка враховує все ізотопне різноманіття, надане нам природою на планеті Земля.</strong></p>
+</section>
+</section>
+<section id="id15">
+<h2>Підсумок<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Концепція / Термін</p></th>
+<th class="head text-left"><p>Пояснення та ключові характеристики</p></th>
+<th class="head text-left"><p>Формули та значення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Молекулярно-кінетична теорія (МКТ)</strong></p></td>
+<td class="text-left"><p>Теорія, що пояснює властивості речовин на основі уявлень про рух та взаємодію її мікроскопічних частинок (атомів, молекул).</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Основні положення МКТ</strong></p></td>
+<td class="text-left"><p>1. <strong>Дискретна будова:</strong> Усі речовини складаються з окремих частинок (атомів, молекул, іонів), між якими є проміжки. <br> 2. <strong>Безперервний рух:</strong> Частинки речовини перебувають у постійному хаотичному русі, який називається тепловим. Інтенсивність руху залежить від температури. <br> 3. <strong>Взаємодія частинок:</strong> Між частинками одночасно діють сили притягання та відштовхування.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Структурні елементи речовини</strong></p></td>
+<td class="text-left"><p><strong>Атом:</strong> найдрібніша, хімічно неподільна частинка елемента. <br> <strong>Молекула:</strong> найменша частинка речовини, що має її хімічні властивості. <br> <strong>Іон:</strong> атом або молекула, що втратили або приєднали електрони.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Атомна одиниця маси (а.о.м.)</strong></p></td>
+<td class="text-left"><p>Еталонна одиниця для вимірювання мас мікрочастинок, що дорівнює 1/12 маси атома Карбону-12.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(1\text{ а.о.м.} = \frac{1}{12} m_0\left(^{12}_6\text{C}\right) \approx 1.66 \cdot 10^{-27}\text{ кг}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Відносна атомна маса <span class="math notranslate nohighlight">\(A_r\)</span></strong></p></td>
+<td class="text-left"><p>Безрозмірна величина, що показує, у скільки разів маса атома більша за 1 а.о.м. Значення беруться з періодичної системи.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(A_r = \frac{m_0(\text{атома})}{1 \text{ а.о.м.}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Відносна молекулярна маса <span class="math notranslate nohighlight">\(M_r\)</span></strong></p></td>
+<td class="text-left"><p>Безрозмірна величина, що показує, у скільки разів маса молекули більша за 1 а.о.м. Дорівнює сумі відносних атомних мас усіх атомів у молекулі.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(M_r = \frac{m_0(\text{молекули})}{1 \text{ а.о.м.}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Кількість речовини <span class="math notranslate nohighlight">\(\nu\)</span> (ню)</strong></p></td>
+<td class="text-left"><p>Фізична величина, що характеризує кількість структурних частинок у тілі. Одиниця вимірювання в СІ - <strong>моль</strong>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\nu = \frac{N}{N_A}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Стала Авогадро <span class="math notranslate nohighlight">\(N_A\)</span></strong></p></td>
+<td class="text-left"><p>Фундаментальна фізична стала, що показує кількість частинок (атомів, молекул) в одному молі будь-якої речовини.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(N_A \approx 6.022 \cdot 10^{23} \text{ моль}^{-1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Молярна маса <span class="math notranslate nohighlight">\(M\)</span></strong></p></td>
+<td class="text-left"><p>Фізична величина, що дорівнює масі одного моля речовини. Одиниця вимірювання в СІ - <strong>кг/моль</strong> (часто використовують <strong>г/моль</strong>).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(M = \frac{m}{\nu}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Зв'язок між масою та кількістю речовини</strong></p></td>
+<td class="text-left"><p>Дозволяє обчислити кількість молів речовини, знаючи її масу та молярну масу.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\nu = \frac{m}{M}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Зв'язок молярної маси та маси молекули</strong></p></td>
+<td class="text-left"><p>Пов'язує макроскопічну характеристику (молярну масу) з мікроскопічною (масою однієї частинки).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(M = m_0 \cdot N_A\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Зв'язок молярної маси та відносної молекулярної маси</strong></p></td>
+<td class="text-left"><p>Чисельно молярна маса, виражена в г/моль, дорівнює відносній молекулярній масі.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(M = M_r \cdot 10^{-3} \frac{\text{кг}}{\text{моль}} = M_r \frac{\text{г}}{\text{моль}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Зв'язок числа частинок з масою</strong></p></td>
+<td class="text-left"><p>Дозволяє знайти загальну кількість частинок у зразку речовини за відомою масою.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(N = \frac{m}{M} N_A\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Ізотопи</strong></p></td>
+<td class="text-left"><p>Різновиди атомів одного хімічного елемента, які мають однакове число протонів, але різну кількість нейтронів у ядрі.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Середня зважена атомна маса</strong></p></td>
+<td class="text-left"><p>Відносна атомна маса в періодичній системі є середнім зваженим значенням мас усіх природних ізотопів елемента з урахуванням їх поширеності.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(A_r(\text{елемента}) = \sum (A_{r}(\text{ізотоп}_i) \cdot w_i)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id16">
+<h2>Додаткові матеріали<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82%D0%BD%D0%B8%D0%B9_%D1%81%D1%82%D0%B0%D0%BD">https://uk.wikipedia.org/wiki/Агрегатний_стан</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D1%82%D0%BE%D0%BC">https://uk.wikipedia.org/wiki/Атом</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%91%D1%80%D0%BE%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%80%D1%83%D1%85">https://uk.wikipedia.org/wiki/Броунівський_рух</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BB%D0%B5%D0%BA%D1%83%D0%BB%D0%B0">https://uk.wikipedia.org/wiki/Молекула</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%BE%D0%BD">https://uk.wikipedia.org/wiki/Іон</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D1%83%D0%BA%D0%BB%D0%BE%D0%BD">https://uk.wikipedia.org/wiki/Нуклон</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D1%82%D0%BE%D0%BC%D0%BD%D0%B0_%D0%BE%D0%B4%D0%B8%D0%BD%D0%B8%D1%86%D1%8F_%D0%BC%D0%B0%D1%81%D0%B8">https://uk.wikipedia.org/wiki/Атомна_одиниця_маси</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D1%96%D0%B4%D0%BD%D0%BE%D1%81%D0%BD%D0%B0_%D0%B0%D1%82%D0%BE%D0%BC%D0%BD%D0%B0_%D0%BC%D0%B0%D1%81%D0%B0">https://uk.wikipedia.org/wiki/Відносна_атомна_маса</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BB%D1%8C">https://uk.wikipedia.org/wiki/Моль</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%90%D0%B2%D0%BE%D0%B3%D0%B0%D0%B4%D1%80%D0%BE">https://uk.wikipedia.org/wiki/Число_Авогадро</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BB%D1%8F%D1%80%D0%BD%D0%B0_%D0%BC%D0%B0%D1%81%D0%B0">https://uk.wikipedia.org/wiki/Молярна_маса</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%84%D0%B5%D0%BA%D1%82_%D0%BC%D0%B0%D1%81%D0%B8">https://uk.wikipedia.org/wiki/Дефект_маси</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%B7%D0%BE%D1%82%D0%BE%D0%BF%D0%B8">https://uk.wikipedia.org/wiki/Ізотопи</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D1%83%D0%B3%D0%BB%D0%B5%D1%86%D1%8C-12">https://uk.wikipedia.org/wiki/Вуглець-12</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D1%96%D0%B9">https://uk.wikipedia.org/wiki/Протій</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D0%B9%D1%82%D0%B5%D1%80%D1%96%D0%B9">https://uk.wikipedia.org/wiki/Дейтерій</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D1%80%D0%B8%D1%82%D1%96%D0%B9">https://uk.wikipedia.org/wiki/Тритій</a></p></li>
+</ul>
+</section>
+<section id="id17">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_theory_of_gases">https://en.wikipedia.org/wiki/Kinetic_theory_of_gases</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/State_of_matter">https://en.wikipedia.org/wiki/State_of_matter</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Atom">https://en.wikipedia.org/wiki/Atom</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Brownian_motion">https://en.wikipedia.org/wiki/Brownian_motion</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Molecule">https://en.wikipedia.org/wiki/Molecule</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ion">https://en.wikipedia.org/wiki/Ion</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Nucleon">https://en.wikipedia.org/wiki/Nucleon</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Dalton_(unit)">https://en.wikipedia.org/wiki/Dalton_(unit)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Relative_atomic_mass">https://en.wikipedia.org/wiki/Relative_atomic_mass</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Mole_(unit)">https://en.wikipedia.org/wiki/Mole_(unit)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Avogadro_constant">https://en.wikipedia.org/wiki/Avogadro_constant</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Molar_mass">https://en.wikipedia.org/wiki/Molar_mass</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Nuclear_binding_energy#Mass_defect">https://en.wikipedia.org/wiki/Nuclear_binding_energy#Mass_defect</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Isotope">https://en.wikipedia.org/wiki/Isotope</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Carbon-12">https://en.wikipedia.org/wiki/Carbon-12</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Isotopes_of_hydrogen#Hydrogen-1_(protium)">https://en.wikipedia.org/wiki/Isotopes_of_hydrogen#Hydrogen-1_(protium)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Deuterium">https://en.wikipedia.org/wiki/Deuterium</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tritium">https://en.wikipedia.org/wiki/Tritium</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mkt"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основні положення МКТ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. Усі речовини мають дискретну будову</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2. Частинки речовини перебувають у безперервному хаотичному русі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3. Частинки речовини взаємодіють одна з одною</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Кількісні характеристики речовини на мікрорівні та макрорівні</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Маса атомів і молекул</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Міст між мікро- та макросвітом: Кількість речовини та стала Авогадро</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Молярна маса</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Виведення формул, пов'язаних з молярною масою</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Чому саме Карбон-12?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Роль ізотопів: Чому відносна атомна маса не завжди є цілим числом?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Помилковий підхід: Просте середнє арифметичне</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Правильний підхід: Середнє зважене значення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
