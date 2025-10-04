@@ -56,6 +56,9 @@ parts:
     chapters:
       - file: physics/mkt/fundamentals-of-mkt
       - file: physics/mkt/molecules-interaction
+      - file: physics/mkt/basic-equation-of-ideal-gas
+      - file: physics/mkt/temperature-basics
+      - file: physics/mkt/ideal-gas-law
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
