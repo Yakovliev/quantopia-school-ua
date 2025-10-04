@@ -51,6 +51,11 @@ parts:
       - file: physics/mechanics/work-kinetic-energy
       - file: physics/mechanics/potential-energy-and-conservation
       - file: physics/mechanics/momentum
+  
+  - caption: МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ
+    chapters:
+      - file: physics/mkt/fundamentals-of-mkt
+      - file: physics/mkt/molecules-interaction
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
