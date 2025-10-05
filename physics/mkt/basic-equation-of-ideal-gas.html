@@ -525,8 +525,9 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Критичний стан: коли ідеальна модель ламається</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -670,7 +671,7 @@ n = \frac{N}{V}
 \[
 N_{\text{ударів}} = \frac{1}{2} N_{\text{в шарі}} = \frac{1}{2} n S v_x \Delta t
 \]</div>
-<p><em>Примітка: Це спрощення. Насправді молекули мають різні швидкості <span class="math notranslate nohighlight">\(v_x\)</span>. Точний розрахунок вимагає інтегрування за розподілом швидкостей, але результат для середніх величин буде таким самим, як у нашому спрощеному виведенні.</em></p>
+<p><em>Примітка: Це спрощення. Насправді молекули мають різні швидкості <span class="math notranslate nohighlight">\(v_x\)</span>. Точний розрахунок вимагає інтегрування за розподілом швидкостей, але результат для середніх величин буде таким самим, як у нашому спрощеному виведенні. Тут ми також зробили ще одне припущення: молекули не зіштовхуються одна з одною на шляху до стінки. У реальності вони зіштовхуються, але через збереження імпульсу загальний результат для тиску не змінюється, що й підтверджують більш строгі статистичні розрахунки.</em></p>
 <p><strong>4. Розрахунок сили тиску та самого тиску</strong></p>
 <p>Знайдемо повний імпульс <span class="math notranslate nohighlight">\(\Delta P_{\text{заг}}\)</span>, переданий стінці за час <span class="math notranslate nohighlight">\(\Delta t\)</span>. Для цього помножимо кількість ударів на імпульс одного удару.
 Тут ми повинні зробити важливий крок: замінити швидкість <span class="math notranslate nohighlight">\(v_x\)</span> конкретної молекули на деяку усереднену характеристику, оскільки молекули мають різні швидкості.
@@ -851,17 +852,79 @@ p = p_1 + p_2 + ... + p_k
 </section>
 </section>
 <section id="id14">
-<h2>Додаткові матеріали<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%91%D1%80%D0%BE%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%80%D1%83%D1%85">https://uk.wikipedia.org/wiki/Броунівський_рух</a></p></li>
-</ul>
+<h2>Підсумок<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Величина</p></th>
+<th class="head text-left"><p>Опис та Основні Формули</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Мікро- та Макропараметри</strong></p></td>
+<td class="text-left"><p><strong>Мікроскопічні:</strong> Характеристики окремих молекул (маса <span class="math notranslate nohighlight">\(m_0\)</span>, швидкість <span class="math notranslate nohighlight">\(\vec{v}\)</span>, енергія <span class="math notranslate nohighlight">\(E_k\)</span>). <br> <strong>Макроскопічні:</strong> Характеристики газу як цілого (тиск <span class="math notranslate nohighlight">\(p\)</span>, об'єм <span class="math notranslate nohighlight">\(V\)</span>, температура <span class="math notranslate nohighlight">\(T\)</span>, густина <span class="math notranslate nohighlight">\(\rho\)</span>).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Модель ідеального газу</strong></p></td>
+<td class="text-left"><p>Теоретична модель, де молекули є матеріальними точками, не взаємодіють на відстані, а їхні зіткнення є абсолютно пружними.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Концентрація молекул</strong> <span class="math notranslate nohighlight">\(n\)</span></p></td>
+<td class="text-left"><p>Кількість молекул в одиниці об'єму. <span class="math notranslate nohighlight">\(n = \frac{N}{V}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Середній квадрат швидкості</strong> <span class="math notranslate nohighlight">\(\overline{v^2}\)</span></p></td>
+<td class="text-left"><p>Середнє арифметичне квадратів швидкостей усіх молекул. <span class="math notranslate nohighlight">\(\overline{v^2} = \frac{v_1^2 + v_2^2 + ... + v_N^2}{N}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Середня квадратична швидкість</strong> <span class="math notranslate nohighlight">\(\overline{v}_{\text{кв}}\)</span></p></td>
+<td class="text-left"><p>Корінь із середнього квадрата швидкості, характеризує енергію теплового руху. <span class="math notranslate nohighlight">\(\overline{v}_{\text{кв}} = \sqrt{\overline{v^2}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Основне рівняння МКТ (форма 1)</strong></p></td>
+<td class="text-left"><p>Пов'язує тиск з мікроскопічними параметрами. <span class="math notranslate nohighlight">\(p = \frac{1}{3} n m_0 \overline{v^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Середня кінетична енергія поступального руху</strong> <span class="math notranslate nohighlight">\(\overline{E}_k\)</span></p></td>
+<td class="text-left"><p>Середнє значення кінетичної енергії однієї молекули. <span class="math notranslate nohighlight">\(\overline{E}_k = \frac{m_0 \overline{v^2}}{2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Основне рівняння МКТ (форма 2)</strong></p></td>
+<td class="text-left"><p>Пов'язує тиск із середньою кінетичною енергією молекул. <span class="math notranslate nohighlight">\(p = \frac{2}{3} n \overline{E}_k\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Густина газу</strong> <span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td class="text-left"><p>Відношення маси газу до його об'єму. Пов'язана з концентрацією через <span class="math notranslate nohighlight">\(\rho = n m_0\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Основне рівняння МКТ (форма 3)</strong></p></td>
+<td class="text-left"><p>Пов'язує тиск з макроскопічною густиною газу. <span class="math notranslate nohighlight">\(p = \frac{1}{3} \rho \overline{v^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Розрахунок середньої квадратичної швидкості</strong></p></td>
+<td class="text-left"><p>Дозволяє знайти швидкість молекул через макропараметри. <span class="math notranslate nohighlight">\(\overline{v}_{\text{кв}} = \sqrt{\frac{3p}{\rho}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Закон Дальтона</strong></p></td>
+<td class="text-left"><p>Тиск суміші хімічно неактивних ідеальних газів дорівнює сумі їхніх парціальних тисків. <span class="math notranslate nohighlight">\(p = p_1 + p_2 + ... + p_k\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Нормальні умови (н. у.)</strong></p></td>
+<td class="text-left"><p>Стандартні значення тиску та температури для порівняння властивостей газів: <span class="math notranslate nohighlight">\(p_0 = 101325 \text{ Па}\)</span>, <span class="math notranslate nohighlight">\(T_0 = 0 \text{ °C}\)</span> (273.15 К).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Межі застосування моделі</strong></p></td>
+<td class="text-left"><p>Модель ідеального газу добре працює за низьких тисків та високих температур. Вона непридатна поблизу критичного стану, коли сили взаємодії та власний об'єм молекул стають значущими.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="id15">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<h2>Додаткові матеріали<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%B3%D0%B0%D0%B7">https://uk.wikipedia.org/wiki/Ідеальний_газ</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D1%82%D0%B8%D1%81%D0%BA">https://uk.wikipedia.org/wiki/Парціальний_тиск</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%B3%D0%B0%D0%B7">https://uk.wikipedia.org/wiki/Реальний_газ</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%96_%D1%83%D0%BC%D0%BE%D0%B2%D0%B8">https://uk.wikipedia.org/wiki/Нормальні_умови</a></p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_theory_of_gases">https://en.wikipedia.org/wiki/Kinetic_theory_of_gases</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Brownian_motion">https://en.wikipedia.org/wiki/Brownian_motion</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ideal_gas">https://en.wikipedia.org/wiki/Ideal_gas</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Partial_pressure">https://en.wikipedia.org/wiki/Partial_pressure</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Dalton%27s_law">https://en.wikipedia.org/wiki/Dalton's_law</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Real_gas">https://en.wikipedia.org/wiki/Real_gas</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Standard_temperature_and_pressure">https://en.wikipedia.org/wiki/Standard_temperature_and_pressure</a></p></li>
 </ul>
 </section>
 </section>
@@ -947,8 +1010,9 @@ p = p_1 + p_2 + ... + p_k
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Критичний стан: коли ідеальна модель ламається</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
