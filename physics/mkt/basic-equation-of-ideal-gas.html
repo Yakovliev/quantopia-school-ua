@@ -215,10 +215,6 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
-
-
-
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Основне рівняння МКТ ідеального газу</a></li>
 <li class="toctree-l1"><a class="reference internal" href="temperature-basics.html">Температура</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
@@ -513,9 +509,24 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Нормальні умови</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Модель ідеального газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Статистичний підхід та середні величини</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Природа тиску газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Виведення основного рівняння МКТ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Інші форми запису основного рівняння МКТ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1. Зв'язок тиску із середньою кінетичною енергією</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2. Зв'язок тиску з густиною газу</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3. Середня квадратична швидкість</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Тиск суміші газів. Закон Дальтона</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Межі застосування: від ідеального до реального</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Нормальні умови (н. у.)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Критичний стан: коли ідеальна модель ламається</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -529,24 +540,320 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Основне рівняння МКТ ідеального газу<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<section id="id2">
-<h2>Нормальні умови<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Часто в задачах, особливо коли йдеться про гази, згадуються <strong>нормальні умови (н.у.)</strong>. Це стандартний набір значень тиску та температури, прийнятий для зручності порівняння властивостей газів.</p>
+<p>Ми вже знаємо, що речовина складається з величезної кількості крихітних частинок, які мають масу і безперервно хаотично рухаються. Це - погляд на речовину з боку <strong>мікросвіту</strong>.</p>
+<p>З іншого боку, у повсякденному житті та в техніці ми маємо справу з &quot;великими&quot; порціями речовини (наприклад, газ у балоні або повітря в кімнаті) і вимірюємо їхні властивості, такі як тиск, об'єм, температура. Це - <strong>макроскопічні параметри</strong>.</p>
 <ul class="simple">
-<li><p>Тиск <span class="math notranslate nohighlight">\(p = 101325 \text{ Па} \approx 10^5 \text{ Па}\)</span> (нормальний атмосферний тиск).</p></li>
-<li><p>Температура <span class="math notranslate nohighlight">\(T = 273.15 \text{ К}\)</span> (що відповідає <span class="math notranslate nohighlight">\(0^\circ\text{C}\)</span>).</p></li>
+<li><p><strong>Мікроскопічні параметри</strong> - це характеристики окремих молекул: їхня маса <span class="math notranslate nohighlight">\(m_0\)</span>, швидкість <span class="math notranslate nohighlight">\(\vec{v}\)</span>, імпульс <span class="math notranslate nohighlight">\(\vec{p}\)</span>, кінетична енергія <span class="math notranslate nohighlight">\(E_k\)</span>.</p></li>
+<li><p><strong>Макроскопічні параметри</strong> - це характеристики газу як цілого тіла: тиск <span class="math notranslate nohighlight">\(p\)</span>, об'єм <span class="math notranslate nohighlight">\(V\)</span>, температура <span class="math notranslate nohighlight">\(T\)</span>, маса газу <span class="math notranslate nohighlight">\(m\)</span>, густина <span class="math notranslate nohighlight">\(\rho\)</span>.</p></li>
 </ul>
-<p>За нормальних умов 1 моль будь-якого ідеального газу займає об'єм <span class="math notranslate nohighlight">\(V_m \approx 22.4 \text{ л/моль} = 22.4 \cdot 10^{-3} \text{ м}^3\text{/моль}\)</span>. Це твердження відоме як закон Авогадро.</p>
+<p>Головне завдання МКТ - побудувати міст між цими двома світами. Ми повинні зрозуміти, як хаотичний рух невидимих молекул перетворюється на величини, які ми можемо виміряти манометром чи термометром.</p>
+<p>Важливим завданням є виведення <strong>основного рівняння МКТ</strong>, яке пов'язує тиск газу (макропараметр) з масою та швидкістю його молекул (мікропараметри).</p>
+<section id="id2">
+<h2>Модель ідеального газу<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Реальні гази - це дуже складні системи. Молекули мають розміри, складну форму, взаємодіють між собою силами притягання та відштовхування (як ми розглядали в попередньому розділі). Врахувати все це одразу в математичних розрахунках неймовірно складно.</p>
+<p>Тому фізики використовують спрощену модель - <strong>ідеальний газ</strong>. Це теоретична модель, яка дозволяє виявити найголовніші закономірності, нехтуючи другорядними деталями.</p>
+<blockquote>
+<div><p><strong>Ідеальний газ</strong> - це фізична модель газу, яка задовольняє наступним умовам:</p>
+<ol class="arabic simple">
+<li><p><strong>Молекули - це матеріальні точки.</strong> Ми нехтуємо розмірами молекул порівняно з відстанями між ними. Власним об'ємом молекул теж нехтуємо.</p></li>
+<li><p><strong>Сили міжмолекулярної взаємодії відсутні.</strong> Ми вважаємо, що молекули не притягуються і не відштовхуються одна від одної на відстані. Потенціальна енергія взаємодії дорівнює нулю (<span class="math notranslate nohighlight">\(E_p = 0\)</span>).</p></li>
+<li><p><strong>Взаємодія відбувається лише при зіткненнях.</strong> Зіткнення молекул між собою та зі стінками посудини є <strong>абсолютно пружними</strong>. Це означає, що при ударі зберігається повна механічна (в даному випадку лише кінетична) енергія та імпульс. Час зіткнення дуже малий і зазвичай ним нехтують.</p></li>
+</ol>
+</div></blockquote>
+<p><strong>Коли ця модель працює?</strong> Реальні гази (повітря, кисень, гелій) поводяться майже як ідеальний газ за умов <strong>малого тиску</strong> (газ розріджений, відстані між молекулами великі, тому розмірами та силами взаємодії можна знехтувати) та <strong>високої температури</strong> (швидкості великі, тому молекули легко долають слабкі сили притягання). За звичайних кімнатних умов модель ідеального газу чудово описує повітря навколо нас.</p>
+<p>Далі, говорячи &quot;газ&quot;, ми матимемо на увазі саме ідеальний газ.</p>
+<p>Ця модель дозволяє нам застосувати закони механіки Ньютона до руху окремих молекул, а потім, за допомогою статистичних методів, узагальнити результат на весь об'єм газу.</p>
 </section>
+<hr class="docutils" />
 <section id="id3">
-<h2>Додаткові матеріали<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<h2>Статистичний підхід та середні величини<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>У будь-якому макроскопічному об'ємі газу міститься неймовірна кількість молекул (згадайте сталу Авогадро - <span class="math notranslate nohighlight">\(6.022 \cdot 10^{23}\)</span>!). Відстежити рух кожної з них неможливо і непотрібно. Внаслідок хаотичного руху та постійних зіткнень швидкості молекул постійно змінюються.</p>
+<p>Проте, коли частинок дуже багато, вступають у дію <strong>статистичні закономірності</strong>. Хоча поведінка однієї молекули випадкова, поведінка величезної сукупності молекул є передбачуваною і сталою.</p>
+<p>Нам не важлива швидкість конкретної молекули №125839. Нам важливі середні характеристики руху всіх молекул.</p>
+<p>Припустімо, ми маємо <span class="math notranslate nohighlight">\(N\)</span> молекул зі швидкостями <span class="math notranslate nohighlight">\(\vec{v_1}, \vec{v_2}, ..., \vec{v_N}\)</span>.</p>
+<ol class="arabic">
+<li><p><strong>Середня швидкість (як вектор):</strong> Оскільки рух хаотичний, всі напрямки рівноправні. Кількість молекул, що летять вгору, приблизно дорівнює кількості молекул, що летять вниз. Тому векторна сума всіх швидкостей дорівнює нулю.
+<span class="math notranslate nohighlight">\(\vec{v}_{\text{сер}} = \frac{\vec{v_1} + \vec{v_2} + ... + \vec{v_N}}{N} = 0\)</span>.
+Це означає, що газ як ціле не рухається.</p></li>
+<li><p><strong>Середнє значення модуля швидкості (середня арифметична швидкість):</strong> Якщо ми візьмемо модулі швидкостей (тобто просто &quot;як швидко&quot;, без урахування напрямку), то середнє значення не буде нульовим:</p>
+<div class="math notranslate nohighlight">
+\[
+    \overline{v} = \frac{v_1 + v_2 + ... + v_N}{N}
+    \]</div>
+<p>Але для розрахунків енергії ця величина не дуже зручна.</p>
+</li>
+<li><p><strong>Середній квадрат швидкості:</strong> Кінетична енергія залежить від квадрата швидкості (<span class="math notranslate nohighlight">\(v^2\)</span>). Знайдемо середнє арифметичне квадратів швидкостей:</p>
+<div class="math notranslate nohighlight">
+\[
+    \overline{v^2} = \frac{v_1^2 + v_2^2 + ... + v_N^2}{N}
+    \]</div>
+<p>Це ключова статистична величина в МКТ.</p>
+<p><em>Зверніть увагу:</em> <span class="math notranslate nohighlight">\(\overline{v^2}\)</span> (середнє квадратів) <strong>не дорівнює</strong> <span class="math notranslate nohighlight">\((\overline{v})^2\)</span> (квадрату середньої арифметичної).</p>
+</li>
+<li><p><strong>Середня квадратична швидкість:</strong> Щоб отримати величину, яка має розмірність швидкості (<span class="math notranslate nohighlight">\(\text{м/с}\)</span>), добудемо корінь із середнього квадрата:</p>
+<div class="math notranslate nohighlight">
+\[
+    \overline{v}_{\text{кв}} = \sqrt{\overline{v^2}}
+    \]</div>
+<p>Саме ця швидкість характеризує середню кінетичну енергію молекул і використовується в основному рівнянні МКТ.</p>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Природа тиску газу<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Що таке тиск газу з точки зору МКТ?</p>
+<p>Ми знаємо макроскопічне означення тиску:</p>
+<blockquote>
+<div><p><strong>Тиск <span class="math notranslate nohighlight">\(p\)</span></strong> - це фізична величина, яка чисельно дорівнює силі <span class="math notranslate nohighlight">\(F\)</span>, що діє перпендикулярно до поверхні, поділеній на площу цієї поверхні <span class="math notranslate nohighlight">\(S\)</span>.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[p = \frac{F}{S}\]</div>
+<p>Одиниця тиску в СІ: <strong>Паскаль (Па)</strong>. <span class="math notranslate nohighlight">\(1 \text{ Па} = 1 \frac{\text{Н}}{\text{м}^2}\)</span>.</p>
+<p>Звідки береться ця сила <span class="math notranslate nohighlight">\(F\)</span> у газі? Газ тисне на стінки посудини (або на будь-яке тіло, занурене в нього) завдяки <strong>ударам молекул</strong>.</p>
+<ul class="simple">
+<li><p><strong>Аналогія:</strong> Уявіть, що ви поливаєте стіну водою зі шланга під сильним напором. Ви бачите, як струмінь води тисне на стіну. Цей тиск виникає через те, що безліч крапель води вдаряються об стіну і передають їй свій імпульс.</p></li>
+</ul>
+<p>Молекули газу - це такі самі &quot;краплі&quot;, тільки їх незрівнянно більше, і удари відбуваються набагато частіше. Кожен окремий удар молекули дуже слабкий, але мільярди ударів щосекунди зливаються в одну постійну силу тиску, яку ми можемо виміряти манометром.</p>
+<p><strong>Отже, завдання виведення основного рівняння МКТ зводиться до того, щоб розрахувати сумарну силу ударів молекул об стінку посудини.</strong></p>
+</section>
+<hr class="docutils" />
+<section id="id5">
+<h2>Виведення основного рівняння МКТ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Давайте пройдемо цей шлях крок за кроком. Ми будемо використовувати другий закон Ньютона в імпульсній формі, який стверджує, що сила дорівнює швидкості зміни імпульсу (<span class="math notranslate nohighlight">\(F = \frac{\Delta p}{\Delta t}\)</span>).</p>
+<p><strong>1. Спрощена модельна ситуація</strong></p>
+<p>Уявимо ідеальний газ, закритий у посудині кубічної форми з ребром <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<ul class="simple">
+<li><p>Об'єм посудини <span class="math notranslate nohighlight">\(V = L^3\)</span>.</p></li>
+<li><p>Площа однієї стінки <span class="math notranslate nohighlight">\(S = L^2\)</span>.</p></li>
+<li><p>У посудині знаходиться <span class="math notranslate nohighlight">\(N\)</span> молекул, маса кожної <span class="math notranslate nohighlight">\(m_0\)</span>.</p></li>
+</ul>
+<p>Для зручності введемо важливу величину - <strong>концентрацію молекул</strong>.</p>
+<blockquote>
+<div><p><strong>Концентрація <span class="math notranslate nohighlight">\(n\)</span></strong> - це фізична величина, що показує кількість молекул в одиниці об'єму.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+n = \frac{N}{V}
+\]</div>
+<p>Одиниця концентрації в СІ: <strong>обернений кубічний метр (<span class="math notranslate nohighlight">\(м^{-3}\)</span>)</strong> (тобто &quot;штук на метр кубічний&quot;).</p>
+<p><strong>2. Розгляд удару однієї молекули</strong></p>
+<p>Виберемо одну молекулу, яка рухається зі швидкістю <span class="math notranslate nohighlight">\(\vec{v}\)</span> і вдаряється об стінку посудини (назвемо її стінка А), перпендикулярну до осі OХ.
+Розкладемо вектор швидкості на проекції: <span class="math notranslate nohighlight">\(\vec{v} = (v_x, v_y, v_z)\)</span>. Квадрат модуля швидкості: <span class="math notranslate nohighlight">\(v^2 = v_x^2 + v_y^2 + v_z^2\)</span>.</p>
+<p>При ударі об стінку А (яка перпендикулярна осі X) змінюється лише проекція швидкості <span class="math notranslate nohighlight">\(v_x\)</span>. Оскільки удар абсолютно пружний, молекула відскакує з тією ж за модулем швидкістю, але в протилежному напрямку.</p>
+<ul class="simple">
+<li><p>Імпульс до удару (проекція на вісь X): <span class="math notranslate nohighlight">\(p_{0x} = m_0 v_x\)</span> (вважаємо, що молекула летіла до стінки в додатному напрямку осі X).</p></li>
+<li><p>Імпульс після удару: <span class="math notranslate nohighlight">\(p_{1x} = m_0 (-v_x) = -m_0 v_x\)</span>.</p></li>
+<li><p><strong>Зміна імпульсу молекули:</strong> <span class="math notranslate nohighlight">\(\Delta p_{\text{мол}} = p_{1x} - p_{0x} = -m_0 v_x - m_0 v_x = -2m_0 v_x\)</span>.</p></li>
+</ul>
+<p>Згідно з третім законом Ньютона, якщо стінка змінила імпульс молекули на <span class="math notranslate nohighlight">\(\Delta p_{\text{мол}}\)</span>, то молекула передала стінці імпульс <span class="math notranslate nohighlight">\(\Delta p_{\text{стінки}}\)</span>, який дорівнює за модулем і протилежний за знаком:</p>
+<p><strong>Імпульс, отриманий стінкою від одного удару:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\Delta p_{\text{1 удар}} = - \Delta p_{\text{мол}} = 2m_0 v_x
+\]</div>
+<p><em>(Ми розглядаємо модуль проекції швидкості <span class="math notranslate nohighlight">\(v_x\)</span> для розрахунку сили, тому знак мінус нас тут не цікавить, нас цікавить величина переданого імпульсу).</em></p>
+<p><strong>3. Скільки молекул вдарить об стінку за певний час?</strong></p>
+<p>Тепер нам треба підрахувати загальний імпульс, переданий стінці всіма молекулами за невеликий проміжок часу <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
+<p>Які молекули встигнуть долетіти до стінки площею <span class="math notranslate nohighlight">\(S\)</span> за час <span class="math notranslate nohighlight">\(\Delta t\)</span>? Лише ті, які:</p>
+<ul class="simple">
+<li><p>Рухаються в бік цієї стінки (мають додатну проекцію <span class="math notranslate nohighlight">\(v_x &gt; 0\)</span>).</p></li>
+<li><p>Знаходяться від стінки на відстані, не більшій за <span class="math notranslate nohighlight">\(l = v_x \Delta t\)</span>.</p></li>
+</ul>
+<p>Уявімо шар газу біля стінки товщиною <span class="math notranslate nohighlight">\(l = v_x \Delta t\)</span>.</p>
+<ul class="simple">
+<li><p>Об'єм цього шару: <span class="math notranslate nohighlight">\(V_{\text{шару}} = S \cdot l = S \cdot v_x \Delta t\)</span>.</p></li>
+<li><p>Кількість молекул у цьому шарі знайдемо через концентрацію: <span class="math notranslate nohighlight">\(N_{\text{в шарі}} = n \cdot V_{\text{шару}} = n S v_x \Delta t\)</span>.</p></li>
+</ul>
+<p>Але ми пам'ятаємо про хаотичність руху (ізотропність). У середньому половина молекул у цьому шарі рухається <em>до</em> стінки, а інша половина - <em>від</em> неї. Тому об стінку вдариться лише половина молекул з шару:</p>
+<div class="math notranslate nohighlight">
+\[
+N_{\text{ударів}} = \frac{1}{2} N_{\text{в шарі}} = \frac{1}{2} n S v_x \Delta t
+\]</div>
+<p><em>Примітка: Це спрощення. Насправді молекули мають різні швидкості <span class="math notranslate nohighlight">\(v_x\)</span>. Точний розрахунок вимагає інтегрування за розподілом швидкостей, але результат для середніх величин буде таким самим, як у нашому спрощеному виведенні.</em></p>
+<p><strong>4. Розрахунок сили тиску та самого тиску</strong></p>
+<p>Знайдемо повний імпульс <span class="math notranslate nohighlight">\(\Delta P_{\text{заг}}\)</span>, переданий стінці за час <span class="math notranslate nohighlight">\(\Delta t\)</span>. Для цього помножимо кількість ударів на імпульс одного удару.
+Тут ми повинні зробити важливий крок: замінити швидкість <span class="math notranslate nohighlight">\(v_x\)</span> конкретної молекули на деяку усереднену характеристику, оскільки молекули мають різні швидкості.
+У формулах вище ми мали справу з <span class="math notranslate nohighlight">\(v_x\)</span> у кількості ударів та <span class="math notranslate nohighlight">\(v_x\)</span> в імпульсі одного удару. При перемноженні отримаємо <span class="math notranslate nohighlight">\(v_x^2\)</span>. Тому коректно буде використовувати <strong>середнє значення квадрата проекції швидкості <span class="math notranslate nohighlight">\(\overline{v_x^2}\)</span></strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta P_{\text{заг}} = N_{\text{ударів}} \cdot \Delta p_{\text{1 удар}}
+\]</div>
+<p>Замінюємо <span class="math notranslate nohighlight">\(v_x \cdot v_x\)</span> на <span class="math notranslate nohighlight">\(\overline{v_x^2}\)</span>, переходячи до середнього по всім молекулам:
+$<span class="math notranslate nohighlight">\(
+\Delta P_{\text{заг}} = \left( \frac{1}{2} n S \Delta t \right) \cdot (2 m_0 ) \cdot \overline{v_x^2}
+\)</span><span class="math notranslate nohighlight">\(
+Двійки скорочуються:
+\)</span><span class="math notranslate nohighlight">\(
+\Delta P_{\text{заг}} = n S \Delta t \cdot m_0 \overline{v_x^2}
+\)</span>$</p>
+<p>Середня сила <span class="math notranslate nohighlight">\(F\)</span>, що діє на стінку, дорівнює зміні імпульсу за одиницю часу:
+$<span class="math notranslate nohighlight">\(
+F = \frac{\Delta P_{\text{заг}}}{\Delta t} = \frac{n S \Delta t m_0 \overline{v_x^2}}{\Delta t} = n S m_0 \overline{v_x^2}
+\)</span>$</p>
+<p>Тепер знаходимо тиск <span class="math notranslate nohighlight">\(p\)</span> на стінку площею <span class="math notranslate nohighlight">\(S\)</span>:
+$<span class="math notranslate nohighlight">\(
+p = \frac{F}{S} = \frac{n S m_0 \overline{v_x^2}}{S} = n m_0 \overline{v_x^2}
+\)</span>$</p>
+<p><strong>5. Врахування хаотичності руху (Фінальний акорд)</strong></p>
+<p>Ми отримали формулу тиску через середній квадрат проекції швидкості на вісь X (<span class="math notranslate nohighlight">\(\overline{v_x^2}\)</span>). Але газ тисне однаково на всі стінки (закон Паскаля). Це наслідок хаотичності руху: молекули не віддають перевагу жодному з напрямків (вліво-вправо, вперед-назад, вгору-вниз).
+Це означає, що середні квадрати проекцій швидкостей на всі три осі однакові:
+<span class="math notranslate nohighlight">\(\overline{v_x^2} = \overline{v_y^2} = \overline{v_z^2}\)</span>.</p>
+<p>Повний квадрат швидкості молекули дорівнює сумі квадратів її проекцій: <span class="math notranslate nohighlight">\(v^2 = v_x^2 + v_y^2 + v_z^2\)</span>.
+Для середніх значень це теж справедливо:
+<span class="math notranslate nohighlight">\(\overline{v^2} = \overline{v_x^2} + \overline{v_y^2} + \overline{v_z^2}\)</span>.</p>
+<p>Оскільки всі три доданки рівні, ми можемо записати:
+<span class="math notranslate nohighlight">\(\overline{v^2} = 3 \overline{v_x^2}\)</span>.</p>
+<p>Звідси знаходимо потрібну нам <span class="math notranslate nohighlight">\(\overline{v_x^2}\)</span>:
+$<span class="math notranslate nohighlight">\(
+\overline{v_x^2} = \frac{1}{3} \overline{v^2}
+\)</span>$</p>
+<p>Підставляємо цей вираз у нашу формулу для тиску і отримуємо <strong>основне рівняння МКТ ідеального газу</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+p = \frac{1}{3} n m_0 \overline{v^2}
+\]</div>
+<p>Проаналізуємо його:</p>
+<ul class="simple">
+<li><p><strong>Зліва:</strong> Макроскопічний параметр - тиск <span class="math notranslate nohighlight">\(p\)</span>.</p></li>
+<li><p><strong>Справа:</strong> Мікроскопічні параметри - маса молекули <span class="math notranslate nohighlight">\(m_0\)</span>, середня квадратична швидкість (у квадраті) <span class="math notranslate nohighlight">\(\overline{v^2}\)</span>, а також концентрація <span class="math notranslate nohighlight">\(n\)</span> (яка є містком між мікро- та макро-, бо <span class="math notranslate nohighlight">\(n=N/V\)</span>).</p></li>
+</ul>
+<p><strong>Фізичний зміст:</strong> Тиск ідеального газу пропорційний масі молекул, їхній концентрації та середньому квадрату їхньої швидкості. Коефіцієнт <span class="math notranslate nohighlight">\(1/3\)</span> відображає тривимірність нашого простору і хаотичність руху (молекули &quot;розподіляють&quot; свої удари між трьома вимірами).</p>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Інші форми запису основного рівняння МКТ<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Отримане рівняння можна записати в інших формах, які розкривають глибший фізичний зміст або зручніші для розв'язування задач.</p>
+<section id="id7">
+<h3>1. Зв'язок тиску із середньою кінетичною енергією<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Згадаймо формулу кінетичної енергії однієї молекули (поступального руху): <span class="math notranslate nohighlight">\(E_{k} = \frac{m_0 v^2}{2}\)</span>.
+Середня кінетична енергія поступального руху молекул <span class="math notranslate nohighlight">\(\overline{E}_k\)</span> визначається через середній квадрат швидкості:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{E}_k = \frac{m_0 \overline{v^2}}{2}
+\]</div>
+<p>Одиниця енергії в СІ: <strong>Джоуль (Дж)</strong>.</p>
+<p>З цієї формули видно, що добуток <span class="math notranslate nohighlight">\(m_0 \overline{v^2}\)</span> дорівнює подвоєній середній кінетичній енергії: <span class="math notranslate nohighlight">\(m_0 \overline{v^2} = 2\overline{E}_k\)</span>.</p>
+<p>Підставимо це в основне рівняння МКТ (<span class="math notranslate nohighlight">\(p = \frac{1}{3} n \underbrace{m_0 \overline{v^2}}_{2\overline{E}_k}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+p = \frac{2}{3} n \overline{E}_k
+\]</div>
+<p><strong>Це надзвичайно важливий результат!</strong> Він дає нам найглибше розуміння природи тиску.</p>
+<blockquote>
+<div><p>Тиск ідеального газу прямо пропорційний концентрації молекул та їхній середній кінетичній енергії поступального руху.</p>
+</div></blockquote>
+</section>
+<section id="id8">
+<h3>2. Зв'язок тиску з густиною газу<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Згадаймо означення густини речовини <span class="math notranslate nohighlight">\(\rho\)</span> (маса одиниці об'єму).</p>
+<p>Маса газу <span class="math notranslate nohighlight">\(m\)</span> - це маса однієї молекули <span class="math notranslate nohighlight">\(m_0\)</span> помножена на їх кількість <span class="math notranslate nohighlight">\(N\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[m = N m_0\]</div>
+<p>Густина</p>
+<div class="math notranslate nohighlight">
+\[\rho = \frac{m}{V} = \frac{N m_0}{V}\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(N/V\)</span> - це концентрація <span class="math notranslate nohighlight">\(n\)</span>, то:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = n m_0
+\]</div>
+<p>Одиниця густини в СІ: <strong>кілограм на метр кубічний (<span class="math notranslate nohighlight">\(\text{кг}/\text{м}^3\)</span>)</strong>.</p>
+<p>Подивимось на основне рівняння:</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{1}{3} \underbrace{n m_0}_{\rho} \overline{v^2}\]</div>
+<p>Замінивши <span class="math notranslate nohighlight">\(n m_0\)</span> на <span class="math notranslate nohighlight">\(\rho\)</span>, отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[
+p = \frac{1}{3} \rho \overline{v^2}
+\]</div>
+<p>Ця формула зручна, коли відомі макроскопічні параметри газу (густина) і потрібно знайти мікроскопічні (швидкість), або навпаки. Наприклад, знаючи тиск і густину повітря, можна легко оцінити середню квадратичну швидкість його молекул: <span class="math notranslate nohighlight">\(\overline{v}_{\text{кв}} = \sqrt{\frac{3p}{\rho}}\)</span>.</p>
+</section>
+<section id="id9">
+<h3>3. Середня квадратична швидкість<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Із щойно виведеної формули <span class="math notranslate nohighlight">\(p = \frac{1}{3} \rho \overline{v^2}\)</span> ми можемо легко виразити середній квадрат швидкості:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{v^2} = \frac{3p}{\rho}
+\]</div>
+<p>Для характеристики теплового руху часто використовують <strong>середню квадратичну швидкість</strong>, яка є коренем з цієї величини.</p>
+<blockquote>
+<div><p><strong>Середня квадратична швидкість <span class="math notranslate nohighlight">\(\overline{v}_{\text{кв}}\)</span></strong> - це корінь квадратний із середнього значення квадратів швидкостей.</p>
+<div class="math notranslate nohighlight">
+\[ \overline{v}_{\text{кв}} = \sqrt{\overline{v^2}} = \sqrt{\frac{3p}{\rho}} \]</div>
+</div></blockquote>
+<p>Ця формула дозволяє, вимірявши тиск і густину газу, обчислити, з якою &quot;типовою&quot; швидкістю рухаються його молекули. Наприклад, для повітря за нормальних умов (<span class="math notranslate nohighlight">\(\approx 10^5\)</span> Па, <span class="math notranslate nohighlight">\(\approx 1.29\)</span> кг/м³) середня квадратична швидкість молекул становить близько 480 м/с - це швидше за швидкість звуку!</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Тиск суміші газів. Закон Дальтона<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Повітря навколо нас - це не один газ, а суміш (азот, кисень, аргон тощо). Як визначається тиск суміші?</p>
+<p>МКТ дає просту відповідь. Тиск - це результат ударів молекул. Молекули ідеального газу не взаємодіють між собою на відстані, тому молекули кисню в повітрі вдаряються об стінки незалежно від молекул азоту. Кожен газ у суміші створює свій власний тиск так, ніби інших газів у посудині взагалі не було.</p>
+<blockquote>
+<div><p><strong>Парціальний тиск</strong> (від лат. <em>partialis</em> - частковий) - це тиск, який створював би один із компонентів газової суміші, якби він сам займав увесь об'єм суміші при тій самій температурі.</p>
+</div></blockquote>
+<p>Якщо в нас є суміш газів 1, 2, 3..., то кожен з них має свою концентрацію (<span class="math notranslate nohighlight">\(n_1, n_2, ...\)</span>) і свою середню кінетичну енергію молекул (<span class="math notranslate nohighlight">\(\overline{E}_{k1}, \overline{E}_{k2}, ...\)</span>).
+Кожен створює свій парціальний тиск:</p>
+<div class="math notranslate nohighlight">
+\[p_1 = \frac{2}{3} n_1 \overline{E}_{k1}\]</div>
+<div class="math notranslate nohighlight">
+\[p_2 = \frac{2}{3} n_2 \overline{E}_{k2}\]</div>
+<p>і т.д.</p>
+<p>Загальний тиск суміші <span class="math notranslate nohighlight">\(p\)</span> визначається сумарною силою ударів усіх молекул, тому він дорівнює сумі парціальних тисків. Це твердження називається <strong>законом Дальтона</strong> (відкритий експериментально англійським фізиком Джоном Дальтоном у 1801 році, згодом теоретично обґрунтований МКТ).</p>
+<blockquote>
+<div><p><strong>Закон Дальтона:</strong> Тиск суміші хімічно неактивних ідеальних газів дорівнює сумі парціальних тисків усіх компонентів суміші.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+p = p_1 + p_2 + ... + p_k
+\]</div>
+<p>Наприклад, атмосферний тиск складається з парціального тиску азоту (близько 78%), кисню (близько 21%) та інших газів.</p>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>Межі застосування: від ідеального до реального<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>На завершення важливо обговорити, де наша ідеальна модель працює, а де дає збій.</p>
+<section id="id12">
+<h3>Нормальні умови (н. у.)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Для порівняння властивостей газів та проведення розрахунків у фізиці та хімії часто використовують так звані <strong>нормальні умови</strong>.</p>
+<blockquote>
+<div><p><strong>Нормальні умови (н. у.)</strong> - це стандартний набір значень тиску і температури. Зазвичай це:</p>
+<ul class="simple">
+<li><p>Тиск <span class="math notranslate nohighlight">\(p_0 = 101325 \text{ Па} \approx 1.013 \cdot 10^5 \text{ Па}\)</span> (що дорівнює 1 атмосфері). Часто округлюють до <span class="math notranslate nohighlight">\(10^5 \text{ Па}\)</span> або <span class="math notranslate nohighlight">\(100 \text{ кПа}\)</span>.</p></li>
+<li><p>Температура <span class="math notranslate nohighlight">\(T_0 = 0 \text{ °C}\)</span> (або <span class="math notranslate nohighlight">\(273.15 \text{ K}\)</span> за абсолютною шкалою, яку ми вивчимо пізніше).</p></li>
+</ul>
+</div></blockquote>
+<p>За нормальних та близьких до них умов більшість реальних газів (повітря, азот, кисень, гелій) поводяться практично як ідеальні, і всі виведені нами формули для них працюють з високою точністю.</p>
+</section>
+<section id="id13">
+<h3>Критичний стан: коли ідеальна модель ламається<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Що станеться, якщо ми почнемо сильно стискати газ (збільшувати тиск і концентрацію) та одночасно його охолоджувати?</p>
+<ol class="arabic simple">
+<li><p><strong>Молекули зблизяться.</strong> Відстані між ними стануть сумірними з їхніми розмірами. Тепер уже не можна нехтувати власним об'ємом молекул.</p></li>
+<li><p><strong>Швидкість молекул зменшиться.</strong> Їхня кінетична енергія стане порівнянною з потенціальною енергією притягання. Тепер уже не можна нехтувати силами взаємодії.</p></li>
+</ol>
+<p>У такому випадку ми вже не можемо використовувати модель ідеального газу і фізикам доводиться вводити певні поправки до отриманих формул.</p>
+<p>Якщо продовжити зменшувати температуру і збільшувати тиск, газ починає перетворюватися на рідину. Проте існує певна <strong>критична температура</strong> <span class="math notranslate nohighlight">\(T_{кр}\)</span> для кожної речовини.</p>
+<ul class="simple">
+<li><p>Якщо температура газу <strong>вища</strong> за критичну, його <strong>неможливо</strong> перетворити на рідину, як би сильно ми його не стискали. Речовина в такому стані називається просто газом.</p></li>
+<li><p>Якщо температура <strong>нижча</strong> за критичну, то при достатньому стисканні газ починає конденсуватися в рідину. Речовина в газоподібному стані нижче критичної температури називається <strong>парою</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Критичний стан</strong> - це стан речовини при критичній температурі <span class="math notranslate nohighlight">\(T_{кр}\)</span> та критичному тиску <span class="math notranslate nohighlight">\(p_{кр}\)</span>, в якому зникає різниця у фізичних властивостях між рідиною та її парою. Густина рідини і пари стає однаковою, і межа поділу між ними зникає.</p>
+</div></blockquote>
+<p>Вивчення реальних газів та критичного стану - це вже наступний, більш глибокий рівень термодинаміки та МКТ, але розуміння його існування допомагає нам чітко окреслити межі застосовності тієї елегантної і простої моделі ідеального газу, яку ми розібрали вище. Модель ідеального газу не передбачає існування критичного стану, оскільки в ній відсутні сили притягання між молекулами, необхідні для утворення рідини. Це нагадування про те, що ідеальний газ - це лише корисна спрощена модель.</p>
+</section>
+</section>
+<section id="id14">
+<h2>Додаткові матеріали<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%91%D1%80%D0%BE%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%80%D1%83%D1%85">https://uk.wikipedia.org/wiki/Броунівський_рух</a></p></li>
 </ul>
 </section>
-<section id="id4">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id15">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_theory_of_gases">https://en.wikipedia.org/wiki/Kinetic_theory_of_gases</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Brownian_motion">https://en.wikipedia.org/wiki/Brownian_motion</a></p></li>
@@ -619,9 +926,24 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Нормальні умови</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Модель ідеального газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Статистичний підхід та середні величини</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Природа тиску газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Виведення основного рівняння МКТ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Інші форми запису основного рівняння МКТ</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1. Зв'язок тиску із середньою кінетичною енергією</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2. Зв'язок тиску з густиною газу</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3. Середня квадратична швидкість</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Тиск суміші газів. Закон Дальтона</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Межі застосування: від ідеального до реального</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Нормальні умови (н. у.)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Критичний стан: коли ідеальна модель ламається</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
