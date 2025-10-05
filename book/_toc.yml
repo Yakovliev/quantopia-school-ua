@@ -52,6 +52,15 @@ parts:
       - file: physics/mechanics/potential-energy-and-conservation
       - file: physics/mechanics/momentum
   
+  - caption: МЕХАНІЧНІ КОЛИВАННЯ
+    chapters:
+      - file: physics/oscillations-and-waves/mechanical-oscillations
+      - file: physics/oscillations-and-waves/pendulums
+      - file: physics/oscillations-and-waves/resonance
+      - file: physics/oscillations-and-waves/mechanical-waves
+      - file: physics/oscillations-and-waves/interference-diffraction
+      - file: physics/oscillations-and-waves/sound-waves
+
   - caption: МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ
     chapters:
       - file: physics/mkt/fundamentals-of-mkt
@@ -68,14 +77,6 @@ parts:
           - file: physics/internal_energy_task_01
       - file: physics/work_thermo
       - file: physics/first_law_thermo
-
-  - caption: МЕХАНІЧНІ КОЛИВАННЯ
-    chapters:
-      - file: physics/oscillations-and-waves/mechanical-oscillations
-      - file: physics/oscillations-and-waves/pendulums
-      - file: physics/oscillations-and-waves/resonance
-      - file: physics/oscillations-and-waves/mechanical-waves
-      - file: physics/oscillations-and-waves/interference-diffraction
 
   - caption: ЕЛЕКТРОДИНАМІКА
     chapters:
@@ -127,6 +128,7 @@ parts:
       - file: physics/tasks/dynamics-classroom
       - file: physics/tasks/oscillations-classroom
       - file: physics/tasks/oscillations-test
+      - file: physics/tasks/mkt-classroom
 
 
   # - caption: Розділ Електричне поле

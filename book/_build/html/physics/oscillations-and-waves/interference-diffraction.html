@@ -60,12 +60,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/oscillations-and-waves/interference-diffraction';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Електричний заряд. Закон Кулона" href="../electrodynamics/charge_01.html" />
+    <link rel="next" title="Звукові хвилі" href="sound-waves.html" />
     <link rel="prev" title="Механічні хвилі" href="mechanical-waves.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -209,17 +211,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sound-waves.html">Звукові хвилі</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../mkt/fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mkt/molecules-interaction.html">Рух та взаємодія молекул</a></li>
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../mkt/basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mkt/temperature-basics.html">Температура</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mkt/ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/ideal-gas-law.html">Рівняння стану ідеального газу (в процесі)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
@@ -230,14 +237,6 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="mechanical-oscillations.html">Механічні коливання</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pendulums.html">Математичний і пружинний маятники</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resonance.html">Резонанс</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mechanical-waves.html">Механічні хвилі</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Інтерференція і дифракція</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
@@ -288,6 +287,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
 </ul>
 
     </div>
@@ -511,10 +511,24 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Інтерференція хвиль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Дифракція хвиль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Принцип суперпозиції хвиль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Інтерференція механічних хвиль</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Умови максимуму та мінімуму інтерференції</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Умова посилення коливань (інтерференційний максимум)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Умова послаблення коливань (інтерференційний мінімум)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Інтерференційна картина та закон збереження енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дифракція механічних хвиль</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Умови спостереження дифракції</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Принцип Гюйгенса-Френеля</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Підсумки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -528,50 +542,209 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Інтерференція і дифракція<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Уявімо, що ми кинули у воду не один, а два камінці одночасно. Від кожного з них побіжать кола хвиль. У тому місці, де ці кола зустрінуться, почнеться щось цікаве: поверхня води стане дуже неспокійною, з'являться ділянки, де вода здіймається дуже високо, та ділянки, де вона залишається майже нерухомою. Це і є візуальний прояв інтерференції.</p>
 <section id="id2">
-<h2>Інтерференція хвиль<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>Для хвиль з невеликими амплітудами виконується <strong>принцип суперпозиції:</strong> коли в певну точку простору приходять хвилі від кількох джерел, вони накладаються одна на одну. Внаслідок цього накладання в деяких точках простору постійно спостерігається підсилення коливань, а в інших - послаблення. Проаналізуємо, за яких умов і чому це відбувається. Припустимо, що в точку M приходять дві когерентні хвилі – це хвилі від джерел S₁ і S₂, які коливаються синхронно, тобто з однаковими фазою та частотою.</p>
-<p>Якщо хвилі досягають точки M у протифазі (коли в певний момент часу одна хвиля «штовхає» точку M вгору, а інша – вниз), вони постійно компенсуватимуть одна одну.</p>
-<p>Коли ж хвилі приходять у точку M в однаковій фазі, то в цій точці постійно спостерігатимуться коливання з підвищеною амплітудою.</p>
+<h2>Принцип суперпозиції хвиль<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>В основі всіх явищ, пов'язаних із накладанням хвиль, лежить фундаментальний <strong>принцип суперпозиції</strong>.</p>
 <blockquote>
-<div><p>Явище накладання хвиль, при якому в певних точках простору спостерігається стійке підсилення чи послаблення результуючих коливань, називають <strong>інтерференцією</strong>.</p>
+<div><p><strong>Принцип суперпозиції (накладання) хвиль:</strong> Якщо в середовищі одночасно поширюється декілька хвиль, то коливання кожної частинки середовища є векторною сумою коливань, які ця частинка здійснювала б, беручи участь у кожному з хвильових процесів окремо.</p>
 </div></blockquote>
+<p>Простими словами, хвилі не &quot;штовхаються&quot; і не заважають одна одній. Вони просто проходять одна крізь одну, і в кожній точці простору їхні зміщення додаються. Після того, як вони розійшлись, кожна хвиля продовжує свій рух так, ніби зустрічі й не було. Саме цей принцип ми вже застосовували, коли розглядали утворення стоячих хвиль.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2.gif" alt="Standing wave 2.gif" height="250" width="750">
+<br>
+Дві хвилі, що поширюються в протилежних напрямках в одному середовищі. На цій анімації наглядно показано принцип суперпозиції.
+By <a href="https://commons.wikimedia.org/wiki/User:LucasVB" title="User:LucasVB">Lucas Vieira</a> - <span class="int-own-work" lang="en">Own work</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=535974">Link</a>. <a href="https://en.wikipedia.org/wiki/Superposition_principle">Wikipedia</a></p></section>
+<section id="id3">
+<h2>Інтерференція механічних хвиль<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Інтерференція</strong> - це явище накладання двох або більше когерентних хвиль, внаслідок якого в одних точках простору спостерігається стійке в часі посилення, а в інших - стійке в часі послаблення результуючих коливань.</p>
+</div></blockquote>
+<p>Ключовим словом тут є &quot;когерентних&quot;. Не будь-які хвилі створять стійку картину, яку ми можемо спостерігати.</p>
+<blockquote>
+<div><p><strong>Когерентні хвилі</strong> - це хвилі, які мають однакову частоту (і, відповідно, довжину хвилі) та незмінну в часі різницю фаз.</p>
+</div></blockquote>
+<p>Джерела, що випромінюють такі хвилі, називаються <strong>когерентними джерелами</strong>. Коливання від таких джерел є синхронними.</p>
+<section id="id4">
+<h3>Умови максимуму та мінімуму інтерференції<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Давайте розберемося, від чого залежить, посилиться хвиля чи послабиться у певній точці. Уявімо два когерентних джерела <span class="math notranslate nohighlight">\(S_1\)</span> та <span class="math notranslate nohighlight">\(S_2\)</span>, що створюють хвилі. Ми будемо спостерігати за деякою точкою <span class="math notranslate nohighlight">\(M\)</span> у просторі.</p>
+<p>До точки <span class="math notranslate nohighlight">\(M\)</span> хвиля від джерела <span class="math notranslate nohighlight">\(S_1\)</span> проходить відстань <span class="math notranslate nohighlight">\(d_1\)</span>, а від джерела <span class="math notranslate nohighlight">\(S_2\)</span> - відстань <span class="math notranslate nohighlight">\(d_2\)</span>.</p>
+<blockquote>
+<div><p><strong>Різниця ходу хвиль</strong> <span class="math notranslate nohighlight">\(\Delta d\)</span> - це різниця відстаней, які проходять дві хвилі від своїх джерел до даної точки простору.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+\Delta d = |d_2 - d_1|
+\]</div>
+<p>Саме від цієї величини і залежить результат інтерференції.</p>
+<section id="id5">
+<h4>Умова посилення коливань (інтерференційний максимум)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p>Щоб у точці <span class="math notranslate nohighlight">\(M\)</span> коливання максимально посилились, необхідно, щоб гребінь однієї хвилі приходив одночасно з гребенем іншої, а западина - одночасно із западиною. Це означає, що хвилі мають прийти в точку <span class="math notranslate nohighlight">\(M\)</span> в однаковій фазі.</p>
+<p>Така ситуація виникає, коли на відрізку, що дорівнює різниці ходу, вкладається ціле число довжин хвиль.</p>
+<blockquote>
+<div><p><strong>Умова інтерференційного максимуму:</strong> різниця ходу хвиль дорівнює цілому числу довжин хвиль.</p>
+</div></blockquote>
+<p>Математично це записується так:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta d = m \lambda
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> - довжина хвилі (в метрах, м).</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> - будь-яке ціле число (<span class="math notranslate nohighlight">\(m = 0, 1, 2, 3, \dots\)</span>), яке називають <strong>порядком максимуму</strong>.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h4>Умова послаблення коливань (інтерференційний мінімум)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<p>Щоб коливання в точці <span class="math notranslate nohighlight">\(M\)</span> максимально послабились (в ідеалі, повністю зникли), необхідно, щоб гребінь однієї хвилі приходив одночасно із западиною іншої. Це означає, що хвилі мають прийти в точку <span class="math notranslate nohighlight">\(M\)</span> у протифазі (різниця фаз дорівнює <span class="math notranslate nohighlight">\(\pi\)</span>, <span class="math notranslate nohighlight">\(3\pi\)</span>, <span class="math notranslate nohighlight">\(5\pi\)</span> і т.д.).</p>
+<p>Така ситуація виникає, коли на відрізку, що дорівнює різниці ходу, вкладається непарне число півхвиль.</p>
+<blockquote>
+<div><p><strong>Умова інтерференційного мінімуму:</strong> різниця ходу хвиль дорівнює непарному числу півхвиль.</p>
+</div></blockquote>
+<p>Математично це можна записати двома еквівалентними способами:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta d = (2m + 1) \frac{\lambda}{2} \quad \text{або} \quad \Delta d = \left(m + \frac{1}{2}\right) \lambda
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> - довжина хвилі (в метрах, м).</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> - будь-яке ціле число (<span class="math notranslate nohighlight">\(m = 0, 1, 2, 3, \dots\)</span>), яке називають <strong>порядком мінімуму</strong>.</p></li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h3>Інтерференційна картина та закон збереження енергії<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Сукупність усіх максимумів і мінімумів у просторі називається <strong>інтерференційною картиною</strong>. Вона має вигляд чергування областей з великою амплітудою коливань та областей, де коливання майже відсутні.</p>
+<p>Тут може виникнути слушне питання: &quot;А куди зникає енергія у точках мінімумів?&quot;. Відповідь криється у <strong>законі збереження енергії</strong>. Інтерференція не знищує і не створює енергію. Вона лише <strong>перерозподіляє</strong> її у просторі. Енергія, яка &quot;зникла&quot; з точок мінімумів, просто перейшла в точки максимумів, роблячи коливання там ще інтенсивнішими. Загальна енергія, що переноситься хвилями, залишається незмінною.</p>
+<hr class="docutils" />
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Interference_of_two_waves.svg" alt="When two or more waves travel through a medium and superpose then the resultant intensity do not distributed uniformly in the space. At some places, it is maximum while at some other places it is minimum. This non uniform distribution of intensity or energy of light is known as interference." height="244" width="730">
 <br>
-Рис. Інтерференція двох хвиль. У фазі: дві нижні хвилі поєднуються (ліва частина), у результаті чого виникає хвиля з підвищеною амплітудою (конструктивна інтерференція). Не у фазі: дві нижні хвилі поєднуються (права частина), у результаті чого виникає хвиля нульової амплітуди (деструктивна інтерференція).
+Рис. 1. Інтерференція двох хвиль. У фазі: дві нижні хвилі поєднуються (ліва частина), у результаті чого виникає хвиля з підвищеною амплітудою (конструктивна інтерференція). Не у фазі: дві нижні хвилі поєднуються (права частина), у результаті чого виникає хвиля нульової амплітуди (деструктивна інтерференція).
 By original version: <a href="https://commons.wikimedia.org/wiki/User:Haade" title="User:Haade">Haade</a>;vectorization: <a href="https://commons.wikimedia.org/wiki/User:Wjh31" title="User:Wjh31">Wjh31</a>, <a href="https://commons.wikimedia.org/wiki/User:Quibik" title="User:Quibik">Quibik</a> - Vecorized from <a href="https://commons.wikimedia.org/wiki/File:Interference_of_two_waves.png" title="File:Interference of two waves.png">File:Interference of two waves.png</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=10073387">Link</a>. <a href="https://en.wikipedia.org/wiki/Wave_interference">Wiki</a></p></section>
-<section id="id3">
-<h2>Дифракція хвиль<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
-<p>Коли судно пливе морем, воно створює на поверхні води хвилю. Якщо на шляху цієї хвилі зустрінеться скеля або гілка, що виступає з води, то за скелею утвориться область, куди хвиля не проникає (тінь), тоді як за гілкою такої тіні не буде - хвиля просто її обігне.</p>
+</section>
+<section id="id8">
+<h2>Дифракція механічних хвиль<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Ми звикли вважати, що хвилі, як і світло, поширюються прямолінійно. Якщо на шляху хвилі стоїть перешкода, за нею має утворитися &quot;тінь&quot;. Однак, ми часто спостерігаємо інше. Наприклад, ми можемо чути звук з-за рогу будинку, хоча джерело звуку не бачимо. Звукова хвиля якимось чином оминула перешкоду.</p>
 <blockquote>
-<div><p>Явище огинання хвилями перешкод називають <strong>дифракцією</strong>.</p>
+<div><p><strong>Дифракція</strong> - це явище огинання хвилями перешкод або відхилення від прямолінійного поширення при проходженні через отвори.</p>
 </div></blockquote>
-<p>У згаданому прикладі дифракція відбувається на гілці, але не на скелі. Проте це не є загальним правилом. На достатній відстані від джерела хвилі навіть за скелею тінь зникне - хвиля здатна обійти й її. Справа в тому, що дифракція проявляється в двох випадках: 1) коли розміри перешкод (або отворів, через які проходить хвиля) співмірні з довжиною хвилі; 2) коли відстань від перешкоди до місця спостереження значно перевищує розміри самої перешкоди.</p>
+<p>Дифракція, як і інтерференція, є фундаментальною властивістю будь-якого хвильового процесу.</p>
+<section id="id9">
+<h3>Умови спостереження дифракції<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Чому ж ми чітко чуємо звук за рогом, але не бачимо світло? Адже світло - це теж хвиля. Виявляється, дифракція проявляється тим яскравіше, чим розміри перешкоди або отвору (<span class="math notranslate nohighlight">\(d\)</span>) ближчі до довжини хвилі (<span class="math notranslate nohighlight">\(\lambda\)</span>).</p>
+<blockquote>
+<div><p>Умова чіткого спостереження дифракції: <span class="math notranslate nohighlight">\(d \approx \lambda\)</span> або <span class="math notranslate nohighlight">\(d &lt; \lambda\)</span>.</p>
+</div></blockquote>
+<p>Довжина звукових хвиль у повітрі становить від сантиметрів до метрів, що є порівнянним з розмірами дверей, будинків, дерев. Тому звук легко їх огинає. Довжина видимого світла надзвичайно мала (близько <span class="math notranslate nohighlight">\(400-700\)</span> нанометрів), тому для спостереження дифракції світла потрібні дуже малі перешкоди або отвори.</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/CGWAVE_Tedious_Creek_MD.jpg" alt="CGWAVE Tedious Creek MD.jpg" height="500" width="754">
 <br>
-Рис. Дифракція і рефракція хвиль на воді.
-Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=14500456">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Дифракція">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Two-Slit_Diffraction.png" alt="Two-Slit Diffraction.png" height="500" width="625">
+Рис. 2. Дифракція і рефракція хвиль на воді.
+Суспільне надбання (Public Domain), <a href="https://commons.wikimedia.org/w/index.php?curid=14500456">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Дифракція">Wiki</a></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Two-Slit_Diffraction.png" alt="Two-Slit Diffraction.png" height="500" width="625">
 <br>
-Рис. Дифракція на двох щілинах.
-<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=477451">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Дифракція">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Doubleslit.gif" alt="Зображення" height="500" width="502">
+Рис. 3. Дифракція на двох щілинах.
+<a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=477451">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Дифракція">Wiki</a></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Doubleslit.gif" alt="Зображення" height="500" width="502">
 <br>
-Рис. Дифракція на двох щілинах.
-Автор: <a href="https://commons.wikimedia.org/w/index.php?title=User:Lookang&amp;action=edit&amp;redlink=1" class="new" title="User:Lookang (page does not exist)">Lookang</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=17003343">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Дифракція">Wiki</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Light_dispersion_conceptual_waves.gif" alt="Light dispersion conceptual waves.gif" height="480" width="640">
-<br>
-Рис. Розсіяння світла призмою і поширення електромагнітних хвиль.
-Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3270145">Link</a>. <a href="https://en.wikipedia.org/wiki/Wave">Wiki</a></p></section>
-<section id="id4">
-<h2>Додаткові матеріали<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+Рис. 4. Дифракція на двох щілинах.
+Автор: <a href="https://commons.wikimedia.org/w/index.php?title=User:Lookang&amp;action=edit&amp;redlink=1" class="new" title="User:Lookang (page does not exist)">Lookang</a> - <span class="int-own-work" lang="uk">Власна робота</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=17003343">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Дифракція">Wiki</a></p></section>
+<section id="id10">
+<h3>Принцип Гюйгенса-Френеля<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Як же пояснити це огинання перешкод? Для цього ми скористаємося потужним інструментом, який називається <strong>принципом Гюйгенса-Френеля</strong>. Він складається з двох частин.</p>
+<ol class="arabic simple">
+<li><p><strong>Принцип Гюйгенса (Хрістіан Гюйгенс, 1678 р.):</strong> Кожна точка середовища, до якої дійшов <strong>фронт хвилі</strong>, сама стає джерелом вторинних сферичних хвиль. Нове положення фронту хвилі в наступний момент часу є огинаючою поверхнею усіх цих вторинних хвиль.</p></li>
+</ol>
+<p>Цей принцип добре пояснює прямолінійне поширення, відбивання та заломлення хвиль, але не саму дифракцію.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Доповнення Френеля (Огюстен Френель, 1815 р.):</strong> Вторинні хвилі, що випромінюються цими джерелами, є <strong>когерентними</strong> і <strong>інтерферують</strong> між собою.</p></li>
+</ol>
+<p>Отже, <strong>принцип Гюйгенса-Френеля</strong> стверджує:</p>
+<blockquote>
+<div><p>Хвильовий рух у будь-якій точці простору є результатом інтерференції вторинних когерентних хвиль, джерелами яких є кожна точка хвильового фронту.</p>
+</div></blockquote>
+<p>Давайте подивимось, як це працює. Уявімо плоску хвилю, що падає на екран з вузькою щілиною.</p>
+<ul class="simple">
+<li><p>Згідно з принципом Гюйгенса, кожна точка фронту хвилі, яка досягла щілини, стає джерелом вторинних сферичних хвиль.</p></li>
+<li><p>Ці вторинні джерела є когерентними.</p></li>
+<li><p>За щілиною ці вторинні хвилі поширюються у всіх напрямках (включаючи область &quot;геометричної тіні&quot;) та інтерферують між собою.</p></li>
+<li><p>Результат цієї інтерференції і є та хвиля, що поширюється за перешкодою.</p></li>
+</ul>
+<p>Таким чином, явище дифракції тісно і нерозривно пов'язане з інтерференцією. Можна сказати, що дифракція - це результат інтерференції когерентних вторинних хвиль. Саме цей процес і призводить до того, що хвиля &quot;затікає&quot; в область тіні, огинаючи перешкоду.</p>
+</section>
+</section>
+<section id="id11">
+<h2>Підсумки<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Принцип</p></th>
+<th class="head text-left"><p>Суть явища</p></th>
+<th class="head text-left"><p>Формула / Умова</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Принцип суперпозиції хвиль</strong></p></td>
+<td class="text-left"><p>Якщо в середовищі поширюється декілька хвиль, коливання кожної частинки є векторною сумою коливань від кожної хвилі окремо.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Інтерференція</strong></p></td>
+<td class="text-left"><p>Явище накладання когерентних хвиль, що призводить до стійкого в часі посилення або послаблення результуючих коливань у просторі.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Когерентні хвилі</strong></p></td>
+<td class="text-left"><p>Хвилі, що мають однакову частоту та незмінну в часі різницю фаз.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Різниця ходу хвиль</strong> <span class="math notranslate nohighlight">\(\Delta d\)</span></p></td>
+<td class="text-left"><p>Різниця відстаней, які проходять дві хвилі від своїх джерел до певної точки простору.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\Delta d = |d_2 - d_1|\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Умова максимуму інтерференції</strong></p></td>
+<td class="text-left"><p>Різниця ходу хвиль дорівнює цілому числу довжин хвиль (коливання посилюються).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\Delta d = m \lambda\)</span> <br> <span class="math notranslate nohighlight">\((m = 0, 1, 2, \dots)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Умова мінімуму інтерференції</strong></p></td>
+<td class="text-left"><p>Різниця ходу хвиль дорівнює непарному числу півхвиль (коливання послаблюються).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\Delta d = (2m + 1) \frac{\lambda}{2}\)</span> <br> <span class="math notranslate nohighlight">\((m = 0, 1, 2, \dots)\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Інтерференційна картина</strong></p></td>
+<td class="text-left"><p>Сукупність максимумів і мінімумів інтерференції, що є результатом перерозподілу енергії хвиль у просторі.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Дифракція</strong></p></td>
+<td class="text-left"><p>Явище огинання хвилями перешкод або відхилення від прямолінійного поширення.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Умова чіткого спостереження дифракції</strong></p></td>
+<td class="text-left"><p>Розміри перешкоди або отвору є порівнянними або меншими за довжину хвилі.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(d \le \lambda\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Принцип Гюйгенса-Френеля</strong></p></td>
+<td class="text-left"><p>Кожна точка фронту хвилі є джерелом вторинних когерентних хвиль, інтерференція яких визначає подальше поширення хвилі.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id12">
+<h2>Додаткові матеріали<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D1%96%D1%8F_%D1%85%D0%B2%D0%B8%D0%BB%D1%8C">Інтерференція хвиль</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B8%D1%84%D1%80%D0%B0%D0%BA%D1%86%D1%96%D1%8F">Дифракція</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF_%D1%81%D1%83%D0%BF%D0%B5%D1%80%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D1%96%D1%97">https://uk.wikipedia.org/wiki/Принцип_суперпозиції</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF_%D0%93%D1%8E%D0%B9%D0%B3%D0%B5%D0%BD%D1%81%D0%B0_%E2%80%94_%D0%A4%D1%80%D0%B5%D0%BD%D0%B5%D0%BB%D1%8F">https://uk.wikipedia.org/wiki/Принцип_Гюйгенса_—_Френеля</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B3%D0%B5%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Когерентність</a></p></li>
 </ul>
 </section>
-<section id="id5">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Wave_interference">Wave interference</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Diffraction">Diffraction</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Superposition_principle">https://en.wikipedia.org/wiki/Superposition_principle</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Coherence_(physics)">https://en.wikipedia.org/wiki/Coherence_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Wavefront">https://en.wikipedia.org/wiki/Wavefront</a></p></li>
 </ul>
 </section>
 </section>
@@ -616,11 +789,11 @@ Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3270145"
       </div>
     </a>
     <a class="right-next"
-       href="../electrodynamics/charge_01.html"
+       href="sound-waves.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Електричний заряд. Закон Кулона</p>
+        <p class="prev-next-title">Звукові хвилі</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -641,10 +814,24 @@ Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3270145"
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Інтерференція хвиль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Дифракція хвиль</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Принцип суперпозиції хвиль</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Інтерференція механічних хвиль</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Умови максимуму та мінімуму інтерференції</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Умова посилення коливань (інтерференційний максимум)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Умова послаблення коливань (інтерференційний мінімум)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Інтерференційна картина та закон збереження енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Дифракція механічних хвиль</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Умови спостереження дифракції</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Принцип Гюйгенса-Френеля</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Підсумки</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 

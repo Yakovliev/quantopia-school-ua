@@ -60,12 +60,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/temperature-basics';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Рівняння стану ідеального газу" href="ideal-gas-law.html" />
+    <link rel="next" title="Рівняння стану ідеального газу (в процесі)" href="ideal-gas-law.html" />
     <link rel="prev" title="Основне рівняння МКТ ідеального газу" href="basic-equation-of-ideal-gas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -209,17 +211,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Температура</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу (в процесі)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
@@ -230,14 +237,6 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
@@ -288,6 +287,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
 </ul>
 
     </div>
@@ -511,8 +511,26 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке теплова рівновага?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як виміряти температуру? Термометри та шкали</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c">Шкала Цельсія (°C)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">Абсолютна шкала температур (шкала Кельвіна, K)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f">Шкала Фаренгейта (°F)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Температура: погляд зсередини (мікроскопічний підхід)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ключовий експеримент: пошук величини, що залежить від температури</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Абсолютна шкала температур та стала Больцмана</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Синтез і наслідки</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Що таке абсолютний нуль з точки зору МКТ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Рівняння стану ідеального газу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -527,17 +545,289 @@
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Температура<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
-<h2>Додаткові матеріали<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>Що таке теплова рівновага?<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Спочатку давайте забудемо про молекули. Уявімо, що ми фізики XIX століття, які можуть лише спостерігати за властивостями тіл як єдиного цілого.</p>
+<p>Уявіть, що ми беремо два тіла: гарячу металеву кульку і склянку з холодною водою. Якщо ми опустимо кульку у воду, що станеться? Ми інтуїтивно знаємо: кулька охолоне, а вода нагріється. Цей процес передачі енергії (який ми називаємо теплообміном) триватиме доти, доки їхні &quot;ступені нагрітості&quot; не зрівняються. Після цього видимих змін більше не відбуватиметься.</p>
+<blockquote>
+<div><p><strong>Стан теплової рівноваги</strong> - це такий стан системи, в якому всі її макроскопічні параметри (тиск, об'єм, густина тощо) залишаються незмінними як завгодно довго за відсутності зовнішніх впливів.</p>
+</div></blockquote>
+<p>Коли кулька і вода досягли теплової рівноваги, вони мають однакову спільну властивість. Саме цю властивість ми й називаємо <strong>температурою</strong>.</p>
+<p>Тобто, з макроскопічної точки зору:</p>
+<blockquote>
+<div><p><strong>Температура</strong> - це фізична величина, яка характеризує стан теплової рівноваги термодинамічної системи. Усі тіла, що перебувають у тепловій рівновазі, мають однакову температуру.</p>
+</div></blockquote>
+<p>Це твердження є настільки фундаментальним, що його називають <strong>нульовим законом термодинаміки</strong>. Воно звучить так:</p>
+<blockquote>
+<div><p><strong>Нульовий закон термодинаміки:</strong> якщо система А перебуває в тепловій рівновазі з системою В, а система В - у тепловій рівновазі з системою С, то системи А і С також перебувають у тепловій рівновазі між собою.</p>
+</div></blockquote>
+<p>Це може здатися очевидним, але саме цей закон обґрунтовує можливість вимірювання температури. Адже якщо &quot;система В&quot; - це наш термометр, то, вимірявши температуру тіл А і С і отримавши однаковий результат, ми можемо бути впевнені, що при контакті ці тіла не будуть обмінюватися теплотою.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Як виміряти температуру? Термометри та шкали<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Щоб виміряти температуру, нам потрібен прилад - <strong>термометр</strong>. Принцип його роботи простий: ми використовуємо <strong>термометричне тіло</strong> (наприклад, ртуть або спирт у скляній колбі), властивість якого (наприклад, об'єм) помітно і передбачувано змінюється з температурою.</p>
+<p>Але просто спостерігати за розширенням ртуті недостатньо. Нам потрібна шкала - система відліку з одиницями вимірювання. Для її створення потрібні <strong>реперні (опорні) точки</strong> - легко відтворювані стани, яким приписують певні значення температури.</p>
+<section id="c">
+<h3>Шкала Цельсія (°C)<a class="headerlink" href="#c" title="Link to this heading">#</a></h3>
+<p>Шкала Цельсія (°C) - це найвідоміша нам шкала, запропонована шведським вченим Андерсом Цельсієм у 1742 році.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%91%D1%80%D0%BE%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%80%D1%83%D1%85">https://uk.wikipedia.org/wiki/Броунівський_рух</a></p></li>
+<li><p><strong>Перша реперна точка:</strong> Температура танення льоду за нормального атмосферного тиску. Цій точці приписали значення <strong>0 °C</strong>.</p></li>
+<li><p><strong>Друга реперна точка:</strong> Температура кипіння води за нормального атмосферного тиску. Їй приписали значення <strong>100 °C</strong>.</p></li>
+<li><p>Інтервал між цими точками на шкалі термометра ділять на 100 рівних поділок. Кожна поділка - це один градус Цельсія.</p></li>
+</ul>
+<p>Шкала Цельсія дуже зручна в побуті, але має один недолік для фізики: вона має від'ємні значення, а нуль на ній вибраний досить довільно.</p>
+</section>
+<section id="k">
+<h3>Абсолютна шкала температур (шкала Кельвіна, K)<a class="headerlink" href="#k" title="Link to this heading">#</a></h3>
+<p>У XIX столітті англійський фізик Вільям Томсон (лорд Кельвін) запропонував ідею <strong>абсолютної температури</strong>. Він зрозумів, що має існувати найнижча можлива температура у Всесвіті, нижче якої охолодити тіло неможливо. Цю температуру назвали <strong>абсолютним нулем</strong>.</p>
+<blockquote>
+<div><p><strong>Абсолютний нуль температури</strong> - це теоретична мінімальна температура, за якої припиняється тепловий рух частинок речовини.</p>
+</div></blockquote>
+<p>Шкала, побудована від цього абсолютного нуля, називається абсолютною шкалою температур, або шкалою Кельвіна.</p>
+<ul class="simple">
+<li><p>Одиниця температури в цій шкалі - <strong>Кельвін (К)</strong>. Це основна одиниця температури в системі СІ.</p></li>
+<li><p>Абсолютний нуль відповідає <strong>0 К</strong>.</p></li>
+<li><p>Ціна поділки в шкалі Кельвіна дорівнює ціні поділки в шкалі Цельсія. Тобто, зміна температури на 1 К дорівнює зміні на 1 °C.</p></li>
+</ul>
+<p>Абсолютний нуль відповідає температурі -273.15 °C. Тому зв'язок між шкалами дуже простий:</p>
+<div class="math notranslate nohighlight">
+\[
+T = t + 273.15
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T\)</span> - абсолютна температура в Кельвінах (К).</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span> - температура в градусах Цельсія (°C).</p></li>
+</ul>
+<p>Для шкільних розрахунків ми часто будемо використовувати округлене значення: <span class="math notranslate nohighlight">\(T = t + 273\)</span>.</p>
+<p><strong>Приклади:</strong></p>
+<ul class="simple">
+<li><p>Температура танення льоду: <span class="math notranslate nohighlight">\(t = 0 \text{ °C} \implies T = 0 + 273 = 273 \text{ K}\)</span>.</p></li>
+<li><p>Температура кипіння води: <span class="math notranslate nohighlight">\(t = 100 \text{ °C} \implies T = 100 + 273 = 373 \text{ K}\)</span>.</p></li>
+<li><p>Кімнатна температура: <span class="math notranslate nohighlight">\(t = 20 \text{ °C} \implies T = 20 + 273 = 293 \text{ K}\)</span>.</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="f">
+<h3>Шкала Фаренгейта (°F)<a class="headerlink" href="#f" title="Link to this heading">#</a></h3>
+<p>Для загального розвитку варто згадати шкалу, яка використовується в США та деяких інших країнах. Вона має інші реперні точки (температура замерзання суміші води, льоду і солі та нормальна температура людського тіла). Зв'язок зі шкалою Цельсія такий:</p>
+<div class="math notranslate nohighlight">
+\[T_F = 1.8t + 32\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Температура: погляд зсередини (мікроскопічний підхід)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Тепер давайте зазирнемо всередину речовини і спробуємо зрозуміти, що таке температура з точки зору молекулярно-кінетичної теорії (МКТ). З попереднього матеріалу ми знаємо, що тиск газу виникає через удари молекул. А що ж таке температура?</p>
+<section id="id5">
+<h3>Ключовий експеримент: пошук величини, що залежить від температури<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Давайте проведемо уявний експеримент, який допоможе нам знайти міст між макро- та мікросвітом. Цей експеримент є узагальненням реальних дослідів, які проводили фізики.</p>
+<p><strong>Установка:</strong></p>
+<p>Візьмемо три герметичні посудини з різними ідеальними газами: воднем (<span class="math notranslate nohighlight">\(\text{H}_2\)</span>), гелієм (<span class="math notranslate nohighlight">\(\text{He}\)</span>) і киснем (<span class="math notranslate nohighlight">\(\text{O}_2\)</span>).</p>
+<ul class="simple">
+<li><p>Об'єми посудин <span class="math notranslate nohighlight">\(V_{\text{H}_2}, V_{\text{He}}, V_{\text{O}_2}\)</span> - різні.</p></li>
+<li><p>Кількість молекул у кожній посудині <span class="math notranslate nohighlight">\(N_{\text{H}_2}, N_{\text{He}}, N_{\text{O}_2}\)</span> - теж різна.</p></li>
+<li><p>Кожна посудина з'єднана з манометром для вимірювання тиску <span class="math notranslate nohighlight">\(p\)</span>.</p></li>
+</ul>
+<p><strong>Хід експерименту:</strong></p>
+<p>Помістимо всі три посудини у велику ємність з льодом, що тане. Зачекаємо деякий час. Тиск у кожній посудині спочатку буде змінюватися, але згодом стабілізується. Це означає, що всі три гази досягли теплової рівноваги з танучим льодом.</p>
+<p>Згідно з макроскопічним визначенням, тепер <strong>усі три гази мають однакову температуру</strong>: <span class="math notranslate nohighlight">\(t = 0 \text{ °C}\)</span> або <span class="math notranslate nohighlight">\(T = 273 \text{ K}\)</span>.</p>
+<p>Тепер виміряємо тиск <span class="math notranslate nohighlight">\(p\)</span> у кожній посудині. Значення <span class="math notranslate nohighlight">\(p, V, N\)</span> для кожного газу будуть абсолютно різними.</p>
+<p><strong>Аналіз результатів:</strong></p>
+<p>Згадаймо основне рівняння МКТ у формі, що пов'язує тиск із середньою кінетичною енергією молекул <span class="math notranslate nohighlight">\(\overline{E_k}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{2}{3} n \overline{E_k}\]</div>
+<p>Оскільки концентрація <span class="math notranslate nohighlight">\(n = \frac{N}{V}\)</span>, підставимо її в рівняння:</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{2}{3} \frac{N}{V} \overline{E_k}\]</div>
+<p>Звідси ми можемо виразити середню кінетичну енергію молекул через макроскопічні параметри, які ми можемо виміряти:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{E_k} = \frac{3pV}{2N}
+\]</div>
+<p>А тепер найцікавіше. Якщо ми розрахуємо за цією формулою середню кінетичну енергію для кожного з наших трьох газів, виявиться, що, незважаючи на різні <span class="math notranslate nohighlight">\(p, V, N\)</span>, <strong>результат буде однаковим</strong>!</p>
+<div class="math notranslate nohighlight">
+\[\frac{3p_{\text{H}_2} V_{\text{H}_2}}{2N_{\text{H}_2}} = \frac{3p_{\text{He}} V_{\text{He}}}{2N_{\text{He}}} = \frac{3p_{\text{O}_2} V_{\text{O}_2}}{2N_{\text{O}_2}}\]</div>
+<p>Оскільки множник <span class="math notranslate nohighlight">\(3/2\)</span> однаковий, то це означає, що однаковою є і величина <span class="math notranslate nohighlight">\(\frac{pV}{N}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_{\text{H}_2} V_{\text{H}_2}}{N_{\text{H}_2}} = \frac{p_{\text{He}} V_{\text{He}}}{N_{\text{He}}} = \frac{p_{\text{O}_2} V_{\text{O}_2}}{N_{\text{O}_2}}\]</div>
+<p><strong>Висновок експерименту:</strong></p>
+<p>Якщо різні гази перебувають у стані теплової рівноваги (тобто мають однакову температуру), то для них однаковою є і середня кінетична енергія поступального руху молекул <span class="math notranslate nohighlight">\(\overline{E_k}\)</span>. Якщо збільшити температуру, то при досягненні теплової рівноваги вищевказані рівності будуть виконуватись, але тепер величина <span class="math notranslate nohighlight">\(\frac{pV}{N}\)</span> для усіх газів буде більшою порівняно зі станом за нижчої температури, а це означає, що більшою буде і кінетична енергія <span class="math notranslate nohighlight">\(\overline{E_k}\)</span>.</p>
+<p>Ще раз: ми збільшили температуру, при цьому змінилися об'єми та тиски газів, і у них із самого початку була різна кількість молекул. Але відношення <span class="math notranslate nohighlight">\(\frac{pV}{N}\)</span> залишається однаковим для усіх газів при заданій температурі. Збільшення температури просто призводить до збільшення цього відношення, і, як результат, до збільшення кінетичної енергії <span class="math notranslate nohighlight">\(\overline{E_k}\)</span>.</p>
+<p>Оскільки величина <span class="math notranslate nohighlight">\(\frac{pV}{N}\)</span> однакова для всіх газів, що перебувають за однакової температури, а <span class="math notranslate nohighlight">\(\overline{E_k}\)</span> прямо пропорційна цій величині, то й <strong>середня кінетична енергія поступального руху молекул <span class="math notranslate nohighlight">\(\overline{E_k}\)</span> є однаковою для всіх газів за однакової температури</strong>.</p>
+<p>Це фундаментальний висновок! Він показує, що температура є прямою мірою середньої кінетичної енергії хаотичного руху частинок речовини.</p>
+<blockquote>
+<div><p><strong>Температура</strong> - це фізична величина, яка характеризує стан теплової рівноваги макроскопічної системи і є мірою середньої кінетичної енергії хаотичного поступального руху частинок, з яких складається система.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Абсолютна шкала температур та стала Больцмана<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Отже, ми встановили, що величина <span class="math notranslate nohighlight">\(\frac{pV}{N}\)</span> є універсальною мірою температури, оскільки вона прямо пропорційна <span class="math notranslate nohighlight">\(\overline{E_k}\)</span>. Давайте позначимо цю &quot;енергетичну температуру&quot; як <span class="math notranslate nohighlight">\(\theta\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\theta = \frac{pV}{N}\]</div>
+<div class="math notranslate nohighlight">
+\[\overline{E_k} = \frac{3}{2}\theta \]</div>
+<p>Одиницею вимірювання такої температури є <strong>Джоуль (Дж)</strong>. Однак у повсякденному житті вимірювати температуру в джоулях незручно. І ми звикли до шкали Цельсія.</p>
+<p>Для зв'язку між звичною нам температурною шкалою і цією енергетичною мірою вводять <strong>абсолютну температуру</strong> <span class="math notranslate nohighlight">\(T\)</span> і коефіцієнт пропорційності - <strong>сталу Больцмана</strong> <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<blockquote>
+<div><p><strong>Стала Больцмана <span class="math notranslate nohighlight">\(k\)</span></strong> - це фундаментальна фізична стала, що пов'язує температуру з енергією. Її значення в СІ:</p>
+<div class="math notranslate nohighlight">
+\[k \approx 1.38 \cdot 10^{-23} \frac{\text{Дж}}{\text{К}}\]</div>
+<p>Стала Больцмана, по суті, є перехідним містком між мікроскопічним світом енергій (Джоулі) і макроскопічним світом температур (Кельвіни).</p>
+</div></blockquote>
+<p>Зв'язок визначається так:</p>
+<div class="math notranslate nohighlight">
+\[ \theta = kT \quad \text{або} \quad \frac{pV}{N} = kT \]</div>
+<p>Одиницею вимірювання абсолютної температури <span class="math notranslate nohighlight">\(T\)</span> є <strong>Кельвін (К)</strong>.</p>
+<p>Тепер ми готові отримати одне з найважливіших рівнянь у всій молекулярній фізиці. Ми просто підставимо вираз <span class="math notranslate nohighlight">\(\theta = kT\)</span> у нашу формулу для середньої кінетичної енергії:</p>
+<div class="math notranslate nohighlight">
+\[
+\overline{E_k} = \frac{3}{2}\theta \implies \overline{E_k} = \frac{3}{2}kT
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\overline{E_k} = \frac{3}{2}kT
+\]</div>
+<p>Це і є мікроскопічне визначення температури!</p>
+<blockquote>
+<div><p><strong>Абсолютна температура <span class="math notranslate nohighlight">\(T\)</span></strong> - це фізична величина, яка є мірою середньої кінетичної енергії хаотичного поступального руху частинок речовини.</p>
+</div></blockquote>
+<p><strong>Важливе уточнення:</strong> Чому ми говоримо саме про <em>поступальний</em> рух? Складні молекули (як кисень <span class="math notranslate nohighlight">\(\text{O}_2\)</span> чи вуглекислий газ <span class="math notranslate nohighlight">\(\text{CO}_2\)</span>) можуть не тільки рухатися як єдине ціле, але й обертатися та коливатися. Ці види руху теж мають свою енергію. Але виявляється, що саме енергія поступального руху, тобто руху центра мас молекули, безпосередньо пов'язана з температурою.</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Синтез і наслідки<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Тепер, коли ми маємо фундаментальний зв'язок <span class="math notranslate nohighlight">\(\overline{E_k} = \frac{3}{2}kT\)</span>, ми можемо по-новому поглянути на деякі поняття.</p>
+<section id="id8">
+<h3>Що таке абсолютний нуль з точки зору МКТ?<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Якщо <span class="math notranslate nohighlight">\(T = 0 \text{ К}\)</span>, то з формули випливає, що <span class="math notranslate nohighlight">\(\overline{E_k} = 0\)</span>. Це означає, що при абсолютному нулі <strong>припиняється поступальний рух молекул</strong>.</p>
+<p><em>Досягти абсолютного нуля на практиці неможливо, але вчені в лабораторіях наближаються до нього на мільйонні частки градуса. Також, згідно з квантовою механікою, навіть при 0 К частинки здійснюють так звані &quot;нульові коливання&quot;, тобто повний спокій неможливий. Але з точки зору класичної фізики, яку ми вивчаємо, 0 К - це повний спокій.</em></p>
+</section>
+<section id="id9">
+<h3>Рівняння стану ідеального газу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Давайте знову візьмемо основне рівняння МКТ:</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{2}{3} n \overline{E_k}\]</div>
+<p>Тепер ми можемо замінити <span class="math notranslate nohighlight">\(\overline{E_k}\)</span> на <span class="math notranslate nohighlight">\(\frac{3}{2}kT\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+p = \frac{2}{3} n \left( \frac{3}{2}kT \right)
+\]</div>
+<p>Множники <span class="math notranslate nohighlight">\(\frac{2}{3}\)</span> і <span class="math notranslate nohighlight">\(\frac{3}{2}\)</span> скорочуються, і ми отримуємо надзвичайно просте й елегантне рівняння:</p>
+<div class="math notranslate nohighlight">
+\[
+p = nkT
+\]</div>
+<p>Це <strong>рівняння стану ідеального газу</strong> (у формі для тиску). Воно пов'язує три макроскопічні параметри газу - тиск <span class="math notranslate nohighlight">\(p\)</span>, концентрацію <span class="math notranslate nohighlight">\(n\)</span> та температуру <span class="math notranslate nohighlight">\(T\)</span> - через фундаментальну константу <span class="math notranslate nohighlight">\(k\)</span>. Це рівняння є одним із наріжних каменів усієї термодинаміки.</p>
+</section>
+</section>
+<section id="id10">
+<h2>Підсумок<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття або Закон</p></th>
+<th class="head text-left"><p>Опис</p></th>
+<th class="head text-left"><p>Формула або Ключовий вираз</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Загальні поняття</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Стан теплової рівноваги</p></td>
+<td class="text-left"><p>Стан системи, в якому її макроскопічні параметри (тиск, об'єм) залишаються незмінними.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Температура (макроскопічно)</p></td>
+<td class="text-left"><p>Фізична величина, яка характеризує стан теплової рівноваги системи.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Нульовий закон термодинаміки</p></td>
+<td class="text-left"><p>Якщо тіло А в рівновазі з тілом В, а В - з тілом С, то А і С перебувають у рівновазі між собою.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Шкали та одиниці</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Шкала Цельсія</p></td>
+<td class="text-left"><p>Заснована на точках замерзання (0 °C) та кипіння (100 °C) води.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(t\)</span> (°C)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Абсолютний нуль</p></td>
+<td class="text-left"><p>Теоретичний мінімум температури, за якого припиняється поступальний рух частинок.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(0 \text{ К} = -273.15 \text{ °C}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Абсолютна шкала (Кельвіна)</p></td>
+<td class="text-left"><p>Шкала, що починається від абсолютного нуля. Є основною в системі СІ.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T\)</span> (К)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Зв'язок Кельвіна і Цельсія</p></td>
+<td class="text-left"><p>Перерахунок температури між шкалами.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T = t + 273.15\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Зв'язок Фаренгейта і Цельсія</p></td>
+<td class="text-left"><p>Перерахунок температури для шкали, що використовується в США та інших країнах.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(T_F = 1.8t + 32\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Мікроскопічний підхід (МКТ)</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Температура (мікроскопічно)</p></td>
+<td class="text-left"><p>Міра середньої кінетичної енергії хаотичного <strong>поступального</strong> руху частинок системи.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Середня кінетична енергія</p></td>
+<td class="text-left"><p>Вираження середньої кінетичної енергії молекул через макропараметри газу (тиск, об'єм, кількість частинок).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\overline{E_k} = \frac{3pV}{2N}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Стала Больцмана</p></td>
+<td class="text-left"><p>Коефіцієнт пропорційності, що пов'язує енергію частинок з абсолютною температурою.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(k \approx 1.38 \cdot 10^{-23} \frac{\text{Дж}}{\text{К}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Зв'язок енергії та температури</p></td>
+<td class="text-left"><p>Фундаментальне рівняння, що напряму пов'язує середню кінетичну енергію поступального руху молекул та абсолютну температуру.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\overline{E_k} = \frac{3}{2}kT\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Рівняння стану ідеального газу</p></td>
+<td class="text-left"><p>Пов'язує тиск, концентрацію молекул та абсолютну температуру ідеального газу.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(p = nkT\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id11">
+<h2>Додаткові матеріали<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0">https://uk.wikipedia.org/wiki/Температура</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B2%D0%BD%D0%BE%D0%B2%D0%B0%D0%B3%D0%B0_%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D1%96%D1%87%D0%BD%D0%BE%D1%97_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B8">https://uk.wikipedia.org/wiki/Рівновага_термодинамічної_системи</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D1%83%D0%BB%D1%8C%D0%BE%D0%B2%D0%B8%D0%B9_%D0%B7%D0%B0%D0%BA%D0%BE%D0%BD_%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D1%96%D0%BA%D0%B8">https://uk.wikipedia.org/wiki/Нульовий_закон_термодинаміки</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%B5%D0%BB%D1%8C%D0%B2%D1%96%D0%BD">https://uk.wikipedia.org/wiki/Кельвін</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D1%80%D0%BC%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D1%96%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0">https://uk.wikipedia.org/wiki/Термодинамічна_температура</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D0%B1%D1%81%D0%BE%D0%BB%D1%8E%D1%82%D0%BD%D0%B8%D0%B9_%D0%BD%D1%83%D0%BB%D1%8C">https://uk.wikipedia.org/wiki/Абсолютний_нуль</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A8%D0%BA%D0%B0%D0%BB%D0%B0_%D0%A4%D0%B0%D1%80%D0%B5%D0%BD%D0%B3%D0%B5%D0%B9%D1%82%D0%B0">https://uk.wikipedia.org/wiki/Шкала_Фаренгейта</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D0%BB%D0%B0_%D0%91%D0%BE%D0%BB%D1%8C%D1%86%D0%BC%D0%B0%D0%BD%D0%B0">https://uk.wikipedia.org/wiki/Стала_Больцмана</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B2%D0%BD%D1%8F%D0%BD%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%83_%D1%96%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B3%D0%B0%D0%B7%D1%83">https://uk.wikipedia.org/wiki/Рівняння_стану_ідеального_газу</a></p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_theory_of_gases">https://en.wikipedia.org/wiki/Kinetic_theory_of_gases</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Brownian_motion">https://en.wikipedia.org/wiki/Brownian_motion</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Temperature">https://en.wikipedia.org/wiki/Temperature</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Thermal_equilibrium">https://en.wikipedia.org/wiki/Thermal_equilibrium</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Zeroth_law_of_thermodynamics">https://en.wikipedia.org/wiki/Zeroth_law_of_thermodynamics</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Scale_of_temperature">https://en.wikipedia.org/wiki/Scale_of_temperature</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kelvin">https://en.wikipedia.org/wiki/Kelvin</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Absolute_zero">https://en.wikipedia.org/wiki/Absolute_zero</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Fahrenheit">https://en.wikipedia.org/wiki/Fahrenheit</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_constant">https://en.wikipedia.org/wiki/Boltzmann_constant</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ideal_gas_law">https://en.wikipedia.org/wiki/Ideal_gas_law</a></p></li>
 </ul>
 </section>
 </section>
@@ -586,7 +876,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Рівняння стану ідеального газу</p>
+        <p class="prev-next-title">Рівняння стану ідеального газу (в процесі)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -607,8 +897,26 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке теплова рівновага?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Як виміряти температуру? Термометри та шкали</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c">Шкала Цельсія (°C)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">Абсолютна шкала температур (шкала Кельвіна, K)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f">Шкала Фаренгейта (°F)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Температура: погляд зсередини (мікроскопічний підхід)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ключовий експеримент: пошук величини, що залежить від температури</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Абсолютна шкала температур та стала Больцмана</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Синтез і наслідки</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Що таке абсолютний нуль з точки зору МКТ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Рівняння стану ідеального газу</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
