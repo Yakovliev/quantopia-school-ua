@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/tasks/mkt-classroom';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -485,7 +487,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -501,6 +505,16 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основи молекулярно кінетичної теорії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Температура</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -512,6 +526,48 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Молекулярно-кінетична теорія. Задачі<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Основи молекулярно кінетичної теорії<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Для приготування кави бариста взяв 180 грамів чистої води (<span class="math notranslate nohighlight">\(H_2O\)</span>). Обчисліть, яку кількість речовини (в молях) він використав. Молярна маса води дорівнює <span class="math notranslate nohighlight">\(18 \cdot 10^{-3} \frac{\text{кг}}{\text{моль}}\)</span>.</p>
+<p><strong>Задача 2</strong></p>
+<p>Кремній (Si) є основою сучасної мікроелектроніки. Для виготовлення одного мікрочипа було використано кристалик чистого кремнію масою 0,056 г.</p>
+<ol class="arabic simple">
+<li><p>Визначте молярну масу Кремнію, скориставшись періодичною таблицею (<span class="math notranslate nohighlight">\(A_r(Si) \approx 28\)</span>).</p></li>
+<li><p>Обчисліть, скільки атомів Кремнію міститься в цьому кристалику.</p></li>
+</ol>
+<p><strong>Задача 3</strong></p>
+<p>Вуглекислий газ (<span class="math notranslate nohighlight">\(CO_2\)</span>) – один із головних парникових газів, що впливає на клімат Землі. Вчені-екологи постійно моніторять його концентрацію в атмосфері. Обчисліть масу однієї молекули вуглекислого газу в кілограмах.</p>
+<p><strong>Задача 4</strong></p>
+<p>Для нормального функціонування організму людині потрібен мікроелемент Ферум (Fe), який входить до складу гемоглобіну. В одній таблетці вітамінного комплексу міститься <span class="math notranslate nohighlight">\(3 \cdot 10^{20}\)</span> атомів Феруму. Яка маса заліза у цій таблетці?</p>
+<p><strong>Задача 5</strong></p>
+<p>У медицині для діагностики використовують магнітно-резонансну томографію (МРТ), де для охолодження надпровідних магнітів застосовують рідкий гелій (He). У контейнері міститься 50 літрів (0,05 <span class="math notranslate nohighlight">\(м^3\)</span>) рідкого гелію. Густина рідкого гелію становить 125 <span class="math notranslate nohighlight">\(\frac{\text{кг}}{м^3}\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть масу гелію в контейнері.</p></li>
+<li><p>Обчисліть кількість атомів гелію в контейнері.</p></li>
+</ol>
+<p><strong>Задача 6</strong></p>
+<p>Вважається, що повітря – це суміш газів, у якій приблизно 78% становить азот (<span class="math notranslate nohighlight">\(N_2\)</span>). Густина повітря за нормальних умов дорівнює 1,29 <span class="math notranslate nohighlight">\(\frac{\text{кг}}{м^3}\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть масу повітря у кімнаті об’ємом 20 <span class="math notranslate nohighlight">\(м^3\)</span>.</p></li>
+<li><p>Враховуючи, що маса азоту становить 78% від маси повітря, обчисліть масу азоту в кімнаті.</p></li>
+<li><p>Скільки молекул азоту знаходиться в цій кімнаті?</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Для охолодження компонентів потужних ігрових комп'ютерів іноді використовують системи з рідким азотом. Знайдіть кількість речовини (в молях), що міститься в 100 г рідкого азоту, формула якого <span class="math notranslate nohighlight">\(N_2\)</span>. Відносна атомна маса Нітрогену <span class="math notranslate nohighlight">\(A_r(N) = 14\)</span>.</p>
+<p><strong>Задача 8</strong></p>
+<p>Літій-іонні акумулятори, які живлять наші смартфони та ноутбуки, використовують графіт (<span class="math notranslate nohighlight">\(C\)</span>) в якості анода. Скільки атомів Карбону міститься в шматочку графіту масою 6 грамів? Відносна атомна маса Карбону <span class="math notranslate nohighlight">\(A_r(C) = 12\)</span>, стала Авогадро <span class="math notranslate nohighlight">\(N_A \approx 6.02 \cdot 10^{23} \text{ моль}^{-1}\)</span>.</p>
+<p><strong>Задача 9</strong></p>
+<p>Для виробництва сонячних панелей використовують кремній (<span class="math notranslate nohighlight">\(Si\)</span>), а для з'єднувальних дротів — мідь (<span class="math notranslate nohighlight">\(Cu\)</span>). Що має більшу кількість атомів: зразок чистого кремнію масою 280 г чи зразок міді масою 320 г? У скільки разів більше? Відповідь обґрунтуйте розрахунками.
+Відносні атомні маси: <span class="math notranslate nohighlight">\(A_r(Si) = 28\)</span>, <span class="math notranslate nohighlight">\(A_r(Cu) = 64\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Основне рівняння МКТ ідеального газу<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+</section>
+<section id="id4">
+<h2>Температура<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -559,6 +615,24 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Основи молекулярно кінетичної теорії</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Температура</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
