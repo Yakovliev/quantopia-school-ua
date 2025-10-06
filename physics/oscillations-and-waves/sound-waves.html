@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/oscillations-and-waves/sound-waves';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -509,8 +511,24 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Природа та поширення звуку</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Швидкість поширення звуку</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Характеристики звуку</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Об'єктивні (фізичні) характеристики</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Суб'єктивні (фізіологічні) характеристики</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Акустичний резонанс</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Пов'язані з звуком явища</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Як ми чуємо? Людське вухо</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Інфразвук та Ультразвук</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Інфразвук</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Ультразвук</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -524,16 +542,302 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>Звукові хвилі<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Кожного дня ми живемо у світі, наповненому звуками: спів птахів, музика, шум міста, голоси людей. Але що таке звук насправді? З точки зору фізики, звук - це механічна хвиля. А розділ фізики, що вивчає звукові явища, їх виникнення, поширення та сприйняття, називається <strong>акустикою</strong>.</p>
+<blockquote>
+<div><p><strong>Звукові (або акустичні) хвилі</strong> - це поздовжні механічні хвилі, що поширюються в пружних середовищах (газах, рідинах, твердих тілах) і сприймаються людським вухом у певному діапазоні частот.</p>
+</div></blockquote>
+<p>Важливо наголосити на трьох ключових моментах цього означення:</p>
+<ol class="arabic simple">
+<li><p><strong>Звук - це механічна хвиля.</strong> Це означає, що для його поширення обов'язково потрібне середовище (повітря, вода, метал тощо). У вакуумі, де немає частинок, звук поширюватися не може. Класичним доказом цього є експеримент із дзвоником під скляним ковпаком, з-під якого викачують повітря: звук дзвоника поступово зникає.</p></li>
+<li><p><strong>Звук - це поздовжня хвиля.</strong> Як ми пам'ятаємо з попередньої теми, у поздовжніх хвилях частинки середовища коливаються вздовж напрямку поширення хвилі.</p></li>
+<li><p><strong>Сприйняття вухом.</strong> Хоча з фізичної точки зору звуком можна назвати будь-яку поздовжню хвилю, зазвичай під цим терміном розуміють саме ті хвилі, які ми можемо почути.</p></li>
+</ol>
+<hr class="docutils" />
 <section id="id2">
-<h2>Додаткові матеріали<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li></li>
-</ul>
+<h2>Природа та поширення звуку<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уявімо собі джерело звуку, наприклад, <strong>камертон</strong> - простий пристрій у вигляді металевої &quot;виделки&quot;, який після удару починає коливатися з певною частотою.</p>
+<blockquote>
+<div><p><strong>Джерело звуку</strong> - це будь-яке тіло, що здійснює вимушені або власні згасаючі коливання з частотою, яка лежить у чутному діапазоні (чутний діапазон відповідає частотам від 20 Гц до 20 кГц).</p>
+</div></blockquote>
+<p>Коли ніжка камертона рухається, наприклад, праворуч, вона стискає прилеглий шар повітря, створюючи в ньому область підвищеного тиску. Ця область називається <strong>згущенням</strong>. Завдяки пружності повітря, це згущення передається сусіднім шарам, поширюючись у просторі.</p>
+<p>Потім ніжка камертона починає рухатися у зворотному напрямку, ліворуч. У просторі, де вона щойно була, тиск повітря стає нижчим за атмосферний. Ця область зниженого тиску називається <strong>розрідженням</strong>. Це розрідження так само поширюється в просторі, слідуючи за згущенням.</p>
+<p>Таким чином, коливання джерела звуку створюють у середовищі послідовність згущень і розріджень, що чергуються і поширюються від джерела. Це і є поздовжня звукова хвиля.</p>
+<p>Коливання тиску в звуковій хвилі відбуваються навколо середнього, атмосферного тиску. Відхилення тиску від атмосферного в даній точці середовища називається <strong>звуковим тиском</strong> <span class="math notranslate nohighlight">\(p\)</span>. <strong>Одиниця в СІ:</strong> паскаль (Па). Саме цей змінний тиск і діє на нашу барабанну перетинку, викликаючи відчуття звуку.</p>
 </section>
 <section id="id3">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<h2>Швидкість поширення звуку<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Швидкість, з якою поширюються ці згущення та розрідження, називається <strong>швидкістю звуку</strong> <span class="math notranslate nohighlight">\(v\)</span>. Вона не залежить від джерела звуку (тобто від гучності чи висоти тону), а визначається виключно властивостями середовища, в якому звук поширюється, а саме його пружністю та густиною.</p>
 <ul class="simple">
-<li></li>
+<li><p><strong>У газах</strong> швидкість звуку відносно невелика, оскільки молекули газу розташовані далеко одна від одної і слабко взаємодіють. Швидкість звуку в повітрі сильно залежить від температури: з її підвищенням швидкість зростає. При температурі 20 °C <strong>швидкість звуку в повітрі</strong> становить приблизно <strong>343 м/с</strong>.</p></li>
+<li><p><strong>У рідинах</strong> частинки знаходяться набагато ближче, а сили взаємодії між ними значно сильніші. Тому рідини є більш пружними, ніж гази. Наприклад, <strong>швидкість звуку у воді</strong> становить близько <strong>1500 м/с</strong>.</p></li>
+<li><p><strong>У твердих тілах</strong> атоми та молекули мають найміцніші зв'язки, що робить їх дуже пружними. Тому в твердих тілах швидкість звуку є найбільшою. Наприклад, у сталі вона може досягати 5000-6000 м/с.</p></li>
+</ul>
+<p>Цікавий факт: почувши грім через кілька секунд після спалаху блискавки, ми можемо оцінити відстань до грози. Оскільки швидкість світла величезна (~300 000 км/с), ми бачимо спалах практично миттєво. Затримка звуку, наприклад, в 3 секунди означає, що гроза знаходиться на відстані приблизно <span class="math notranslate nohighlight">\(3 \text{ с} \cdot 343 \text{ м/с} \approx 1 \text{ км}\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Характеристики звуку<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Звук, як і будь-яку хвилю, можна описати набором об'єктивних фізичних параметрів. Однак наше сприйняття звуку є суб'єктивним. Давайте розберемося, як ці дві сторони однієї медалі пов'язані між собою.</p>
+<section id="id5">
+<h3>Об'єктивні (фізичні) характеристики<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Це параметри самої звукової хвилі, які можна виміряти приладами.</p>
+<ul class="simple">
+<li><p><strong>Частота</strong> <span class="math notranslate nohighlight">\(\nu\)</span> - це кількість коливань у звуковій хвилі за одну секунду. <strong>Одиниця в СІ:</strong> герц (Гц). Частота звуку визначається виключно частотою коливань його джерела. Людське вухо здатне сприймати звукові хвилі з частотами в діапазоні приблизно від 20 Гц до 20 000 Гц (20 кГц).</p></li>
+<li><p><strong>Амплітуда звукової хвилі</strong> <span class="math notranslate nohighlight">\(A\)</span> - це максимальна зміна тиску (тобто максимальний звуковий тиск) або максимальне зміщення частинок середовища від положення рівноваги.</p></li>
+<li><p><strong>Інтенсивність звуку</strong> <span class="math notranslate nohighlight">\(I\)</span> - це фізична величина, що дорівнює енергії, яку звукова хвиля переносить за одиницю часу через одиницю площі поверхні, перпендикулярної до напрямку поширення хвилі. Простими словами, це потужність звуку на одиницю площі. <strong>Одиниця в СІ:</strong> ват на квадратний метр (Вт/м<span class="math notranslate nohighlight">\(^2\)</span>). Інтенсивність звуку пропорційна квадрату його амплітуди (<span class="math notranslate nohighlight">\(I \propto A^2\)</span>).</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Суб'єктивні (фізіологічні) характеристики<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Це характеристики того, як наш слуховий апарат та мозок інтерпретують фізичні параметри звуку.</p>
+<blockquote>
+<div><p><strong>Висота звуку</strong> - це фізіологічна характеристика, що визначається переважно <strong>частотою</strong> звукової хвилі. Дозволяє розрізняти звуки як &quot;високі&quot; та &quot;низькі&quot;.</p>
+</div></blockquote>
+<p>Чим більша частота коливань, тим вищим нам здається звук. Наприклад, писк комара - це звук високої частоти, а гудіння джмеля - низької. У музиці високі ноти відповідають високим частотам, а низькі - низьким.</p>
+<blockquote>
+<div><p><strong>Гучність звуку</strong> - це фізіологічна характеристика, що визначається переважно <strong>амплітудою (або інтенсивністю)</strong> звукової хвилі.</p>
+</div></blockquote>
+<p>Чим більша амплітуда коливань, тим більша інтенсивність звуку і тим гучнішим він нам здається. Окрім амплітуди, на сприйняття гучності впливає і частота: за однакової інтенсивності звуки середніх частот (1-5 кГц) здаються нам гучнішими, ніж звуки дуже низьких або дуже високих частот.</p>
+<p>Наше сприйняття гучності не є лінійним. Воно підпорядковується логарифмічному закону. Це означає, що для того, аби звук здався нам вдвічі гучнішим, його інтенсивність потрібно збільшити приблизно в 10 разів.</p>
+<p>Через таку особливість нашого слуху, для вимірювання гучності використовують не абсолютні значення інтенсивності, а відносну логарифмічну шкалу - <strong>шкалу децибелів (дБ)</strong>.</p>
+<blockquote>
+<div><p><strong>Рівень інтенсивності звуку</strong> <span class="math notranslate nohighlight">\(L\)</span> (який ми сприймаємо як гучність) вимірюється в <strong>децибелах</strong> (дБ).</p>
+</div></blockquote>
+<p>За нульовий рівень (0 дБ) прийнято <strong>поріг чутності</strong> - мінімальну інтенсивність звуку, яку може почути людина (<span class="math notranslate nohighlight">\(I_0 = 10^{-12}\)</span> Вт/м²). Рівень інтенсивності звуку обчислюється за формулою:</p>
+<div class="math notranslate nohighlight">
+\[
+L = 10 \lg\left(\frac{I}{I_0}\right)
+\]</div>
+<p>Ось кілька прикладів рівнів гучності:</p>
+<ul class="simple">
+<li><p>Шелест листя: 10 дБ</p></li>
+<li><p>Тиха розмова: 40 дБ</p></li>
+<li><p>Гучна розмова, шум у класі: 60-70 дБ</p></li>
+<li><p>Шум потяга в метро: 100 дБ</p></li>
+<li><p>Рок-концерт, реактивний двигун: 120 дБ</p></li>
+</ul>
+<p>Звук з рівнем інтенсивності близько 120-130 дБ викликає больові відчуття і називається <strong>больовим порогом</strong>. Тривалий вплив звуку гучністю понад 85 дБ може призвести до незворотного пошкодження слуху.</p>
+<blockquote>
+<div><p><strong>Тембр звуку</strong> - це &quot;забарвлення&quot; або &quot;якість&quot; звуку, яка дозволяє нам відрізняти звуки однакової висоти та гучності, створені різними джерелами (наприклад, скрипкою та фортепіано, що грають одну й ту ж ноту, або голос двох різних людей).</p>
+</div></blockquote>
+<p>Чим же визначається тембр? Виявляється, будь-який звук, що видається реальним джерелом (голосом, музичним інструментом), не є простою гармонічною хвилею з однією частотою. Він є складною сумішшю кількох коливань.</p>
+<ul class="simple">
+<li><p><strong>Основний тон</strong> - це найнижча частота у цьому складному звуці. Саме вона визначає висоту звуку, яку ми сприймаємо.</p></li>
+<li><p><strong>Обертони</strong> - це всі інші, вищі частоти, що присутні у звуці. Зазвичай їхні частоти є кратними частоті основного тону (в такому випадку їх називають гармоніками).</p></li>
+</ul>
+<p>Сукупність частот основного тону та обертонів, а також їхніх відносних інтенсивностей, називається <strong>спектром звукової хвилі</strong>.</p>
+<blockquote>
+<div><p><strong>Тембр</strong> звуку визначається його <strong>спектром</strong>, тобто набором і відносною інтенсивністю різних обертонів. Чим багатший спектр обертонів, тим &quot;соковитішим&quot;, &quot;насиченішим&quot; є тембр.</p>
+</div></blockquote>
+<p>Саме унікальний набір обертонів надає неповторного звучання кожному музичному інструменту та людському голосу.</p>
+<ul class="simple">
+<li><p><strong>Музичний звук (або музичний тон)</strong> - це звук, що має чітко виражений основний тон та набір гармонійних обертонів. Його коливання є періодичними.</p></li>
+<li><p><strong>Шум</strong> - це звук, що є хаотичною сумішшю величезної кількості різних частот, без чітко вираженого основного тону та гармонік. Його коливання є неперіодичними (наприклад, шурхіт, скрип, шипіння).</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Акустичний резонанс<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Ми вже знайомі з явищем резонансу як різкого зростання амплітуди вимушених коливань. В акустиці це явище відіграє надзвичайно важливу роль.</p>
+<blockquote>
+<div><p><strong>Акустичний резонанс</strong> - це явище різкого зростання амплітуди коливань тіла (або об'єму повітря) під дією звукової хвилі, частота якої збігається з однією з власних частот коливань цього тіла.</p>
+</div></blockquote>
+<p>Будь-яке тіло має свою <strong>частоту власних коливань</strong>. Якщо на нього діє звукова хвиля з такою ж частотою, тіло починає активно поглинати енергію цієї хвилі і коливатися з великою амплітудою.</p>
+<p>Пристрої, призначені для підсилення звуку за допомогою резонансу, називаються <strong>резонаторами</strong>.</p>
+<p>Класичний приклад - <strong>камертон</strong> на <strong>резонансному ящику</strong>. Сам по собі камертон видає дуже тихий звук, бо його тонкі ніжки погано передають коливання повітрю. Але якщо поставити його на дерев'яний ящик, відкритий з одного боку, звук стає набагато гучнішим. Чому? Тому що розміри ящика підібрані так, щоб власна частота коливань повітря всередині нього збігалася з частотою камертона. Повітряний стовп у ящику починає резонувати, і тепер коливається великий об'єм повітря, що створює гучний звук.</p>
+<p>Саме цей принцип лежить в основі всіх струнних та духових музичних інструментів. Корпус гітари чи скрипки, труба саксофона - все це складні <strong>резонатори</strong>, які підсилюють слабкі коливання струни або губ музиканта і формують унікальний тембр інструмента.</p>
+</section>
+<section id="id8">
+<h2>Пов'язані з звуком явища<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Інтерференція звуку.</strong> Оскільки звук - це хвиля, він може інтерферувати. Якщо дві звукові хвилі від когерентних джерел (наприклад, двох динаміків, що відтворюють той самий тон) накладаються, то в просторі виникають точки, де звук посилюється (максимуми), і точки, де він послаблюється (мінімуми). Цей ефект використовується, наприклад, у системах активного шумозаглушення в навушниках.</p></li>
+<li><p><strong>Дифракція звуку.</strong> Звукові хвилі здатні огинати перешкоди. Довжина звукових хвиль, які ми чуємо, становить від кількох сантиметрів до кількох метрів. Це порівнянно з розмірами повсякденних об'єктів (двері, меблі, будівлі). Тому звук легко огинає ці перешкоди. Саме завдяки дифракції ми можемо чути розмову людей в сусідній кімнаті, навіть якщо двері відчинені лише трохи.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Як ми чуємо? Людське вухо<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Наше вухо - це дивовижний біологічний прилад для сприйняття звукових хвиль. Процес слуху можна розділити на кілька етапів:</p>
+<ol class="arabic simple">
+<li><p><strong>Зовнішнє вухо</strong> (вушна раковина та слуховий прохід) вловлює звукові хвилі і спрямовує їх до <strong>барабанної перетинки</strong>.</p></li>
+<li><p><strong>Середнє вухо.</strong> Під дією звукового тиску <strong>барабанна перетинка</strong> починає коливатися. Ці коливання передаються на систему з трьох кісточок (молоточок, коваделко та стремінце), які діють як важіль, підсилюючи коливання приблизно у 20 разів.</p></li>
+<li><p><strong>Внутрішнє вухо.</strong> Підсилені коливання передаються до <strong>завитки</strong> - спірального, заповненого рідиною органу.</p></li>
+<li><p>Всередині завитки коливання рідини змушують вібрувати основну мембрану. Уздовж цієї мембрани розташовані тисячі чутливих <strong>волоскових клітин</strong>. Різні ділянки мембрани резонують на різні частоти: високі частоти змушують коливатися ділянки біля основи завитки, а низькі - біля її вершини.</p></li>
+<li><p>Коливання <strong>волоскових клітин</strong> перетворюються на електричні імпульси, які по слуховому нерву надходять у мозок, де й формується остаточне відчуття звуку з його висотою, гучністю та тембром.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id10">
+<h2>Інфразвук та Ультразвук<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Діапазон частот, який ми чуємо, - лише мала частина всього спектру механічних хвиль.</p>
+<section id="id11">
+<h3>Інфразвук<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Інфразвук</strong> - це механічні хвилі з частотою, нижчою за поріг людського слуху, тобто <strong>частота інфразвуку</strong> &lt; 20 Гц.</p>
+</div></blockquote>
+<p>Ми не чуємо інфразвук, але він може впливати на наш організм, викликаючи відчуття тривоги, втоми або навіть паніки. Інфразвукові хвилі мають велику довжину, слабо поглинаються середовищем і можуть поширюватися на сотні й тисячі кілометрів.</p>
+<p>Джерелами інфразвуку є землетруси, виверження вулканів, сильний вітер, океанські шторми, а також працюючі двигуни, промислові вібрації. Деякі тварини, наприклад, слони та кити, використовують інфразвук для спілкування на великих відстанях.</p>
+</section>
+<section id="id12">
+<h3>Ультразвук<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Ультразвук</strong> - це механічні хвилі з частотою, вищою за поріг людського слуху, тобто <strong>частота ультразвуку</strong> &gt; 20 000 Гц (20 кГц).</p>
+</div></blockquote>
+<p>На відміну від інфразвуку, ультразвук має дуже коротку довжину хвилі. Це надає йому ряд корисних властивостей: він добре відбивається від перешкод і його можна сфокусувати у вузький пучок. Ці властивості знайшли широке застосування в науці, техніці та медицині.</p>
+<p>В основі більшості застосувань ультразвуку лежить <strong>ультразвукова локація</strong> (або ехолокація) - метод виявлення та визначення положення об'єктів за допомогою відбитих від них ультразвукових хвиль.</p>
+<ul class="simple">
+<li><p><strong>У природі:</strong> Кажани та дельфіни використовують ехолокацію для орієнтації в просторі та полювання. Вони випромінюють короткі ультразвукові імпульси і, аналізуючи час затримки та характеристики відлуння, створюють детальну &quot;звукову картину&quot; навколишнього світу.</p></li>
+<li><p><strong>У техніці:</strong></p>
+<ul>
+<li><p><strong>Сонар</strong> (або <strong>ехолот</strong>) - пристрій, що використовується на кораблях для вимірювання глибини, дослідження рельєфу морського дна, пошуку косяків риби чи підводних човнів.</p></li>
+<li><p><strong>Дефектоскоп</strong> - прилад для виявлення дефектів (тріщин, порожнин) всередині непрозорих виробів, наприклад, у металевих деталях або рейках. Ультразвуковий імпульс, відбившись від дефекту, повертається назад і фіксується приладом.</p></li>
+</ul>
+</li>
+<li><p><strong>У медицині:</strong> Ультразвукове дослідження (УЗД) є безпечним і поширеним методом діагностики, що дозволяє отримувати зображення внутрішніх органів.</p></li>
+</ul>
+</section>
+</section>
+<section id="id13">
+<h2>Підсумок<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Характеристика</p></th>
+<th class="head text-left"><p>Опис та ключові властивості</p></th>
+<th class="head text-left"><p>Формула / Позначення / Приклади</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Акустика</strong></p></td>
+<td class="text-left"><p>Розділ фізики, що вивчає звукові явища.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Звукова хвиля</strong></p></td>
+<td class="text-left"><p>Поздовжня механічна хвиля, що поширюється в пружному середовищі та сприймається вухом.</p></td>
+<td class="text-left"><p>Потребує середовища, не поширюється у вакуумі.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Джерело звуку</strong></p></td>
+<td class="text-left"><p>Будь-яке тіло, що коливається з частотою в чутному діапазоні.</p></td>
+<td class="text-left"><p>Чутний діапазон: 20 Гц – 20 кГц</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Поширення звуку</strong></p></td>
+<td class="text-left"><p>Чергування згущень (підвищений тиск) і розріджень (знижений тиск) середовища.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Звуковий тиск</strong> <span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td class="text-left"><p>Відхилення тиску від атмосферного у точці середовища.</p></td>
+<td class="text-left"><p>Одиниця в СІ: паскаль (Па)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Швидкість звуку</strong> <span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td class="text-left"><p>Швидкість поширення звукової хвилі. Залежить від середовища, а не від джерела.</p></td>
+<td class="text-left"><p>У повітрі: ≈343 м/с; у воді: ≈1500 м/с; у сталі: ≈5000-6000 м/с</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>---</p></td>
+<td class="text-left"><p>---</p></td>
+<td class="text-left"><p>---</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Об'єктивні характеристики</strong></p></td>
+<td class="text-left"><p>Параметри, що вимірюються приладами.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Частота</strong> <span class="math notranslate nohighlight">\(\nu\)</span></p></td>
+<td class="text-left"><p>Кількість коливань за одиницю часу. Визначає висоту звуку.</p></td>
+<td class="text-left"><p>Одиниця в СІ: герц (Гц)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Інтенсивність звуку</strong> <span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td class="text-left"><p>Енергія, що її переносить хвиля за одиницю часу через одиницю площі. Визначає гучність.</p></td>
+<td class="text-left"><p>Одиниця в СІ: Вт/м². <span class="math notranslate nohighlight">\(I \propto A^2\)</span> (де <span class="math notranslate nohighlight">\(A\)</span> - амплітуда)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Спектр звуку</strong></p></td>
+<td class="text-left"><p>Сукупність частот основного тону та обертонів, а також їх відносних інтенсивностей. Визначає тембр.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>---</p></td>
+<td class="text-left"><p>---</p></td>
+<td class="text-left"><p>---</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Суб'єктивні характеристики</strong></p></td>
+<td class="text-left"><p>Характеристики сприйняття звуку людиною.</p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Висота звуку</strong></p></td>
+<td class="text-left"><p>Суб'єктивна оцінка частоти звуку (&quot;високі&quot; та &quot;низькі&quot; звуки).</p></td>
+<td class="text-left"><p>Визначається частотою <span class="math notranslate nohighlight">\(\nu\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Гучність звуку</strong></p></td>
+<td class="text-left"><p>Суб'єктивна оцінка інтенсивності звуку. Сприйняття підпорядковується логарифмічному закону.</p></td>
+<td class="text-left"><p>Визначається інтенсивністю <span class="math notranslate nohighlight">\(I\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Рівень інтенсивності</strong> <span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td class="text-left"><p>Логарифмічна міра гучності звуку.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(L = 10 \lg\left(\frac{I}{I_0}\right)\)</span>, де <span class="math notranslate nohighlight">\(I_0 = 10^{-12}\)</span> Вт/м² (поріг чутності). Одиниця: децибел (дБ)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Тембр звуку</strong></p></td>
+<td class="text-left"><p>&quot;Забарвлення&quot; звуку, що дозволяє відрізняти джерела з однаковою гучністю та висотою.</p></td>
+<td class="text-left"><p>Визначається спектром (набором обертонів)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>---</p></td>
+<td class="text-left"><p>---</p></td>
+<td class="text-left"><p>---</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Акустичний резонанс</strong></p></td>
+<td class="text-left"><p>Явище різкого зростання амплітуди коливань, коли частота звукової хвилі збігається з власною частотою тіла.</p></td>
+<td class="text-left"><p>Приклади: резонаторний ящик камертона, корпус гітари.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Інфразвук</strong></p></td>
+<td class="text-left"><p>Механічні хвилі з частотою, нижчою за поріг людського слуху.</p></td>
+<td class="text-left"><p>Частота &lt; 20 Гц</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Ультразвук</strong></p></td>
+<td class="text-left"><p>Механічні хвилі з частотою, вищою за поріг людського слуху.</p></td>
+<td class="text-left"><p>Частота &gt; 20 кГц</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Ехолокація</strong></p></td>
+<td class="text-left"><p>Метод визначення положення об'єктів за допомогою відбитих від них (ультра)звукових хвиль.</p></td>
+<td class="text-left"><p>Приклади: сонар (ехолот), УЗД, дефектоскопія, орієнтація кажанів та дельфінів.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id14">
+<h2>Додаткові матеріали<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B2%D1%83%D0%BA">https://uk.wikipedia.org/wiki/Звук</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A8%D0%B2%D0%B8%D0%B4%D0%BA%D1%96%D1%81%D1%82%D1%8C_%D0%B7%D0%B2%D1%83%D0%BA%D1%83">https://uk.wikipedia.org/wiki/Швидкість_звуку</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D1%82%D0%B5%D0%BD%D1%81%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%B7%D0%B2%D1%83%D0%BA%D1%83">https://uk.wikipedia.org/wiki/Інтенсивність_звуку</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D1%83%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%B7%D0%B2%D1%83%D0%BA%D1%83">https://uk.wikipedia.org/wiki/Гучність_звуку</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%86%D0%B8%D0%B1%D0%B5%D0%BB">https://uk.wikipedia.org/wiki/Децибел</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D1%81%D0%BE%D1%82%D0%B0_%D0%B7%D0%B2%D1%83%D0%BA%D1%83">https://uk.wikipedia.org/wiki/Висота_звуку</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BC%D0%B1%D1%80">https://uk.wikipedia.org/wiki/Тембр</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0_%D1%87%D0%B0%D1%81%D1%82%D0%BE%D1%82%D0%B0">https://uk.wikipedia.org/wiki/Основна_частота</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9E%D0%B1%D0%B5%D1%80%D1%82%D0%BE%D0%BD">https://uk.wikipedia.org/wiki/Обертон</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%D0%B5%D1%80%D1%82%D0%BE%D0%BD">https://uk.wikipedia.org/wiki/Камертон</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D0%BA%D1%83%D1%81%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D1%80%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%D0%BD%D1%81">https://uk.wikipedia.org/wiki/Акустичний_резонанс</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D1%84%D1%80%D0%B0%D0%B7%D0%B2%D1%83%D0%BA">https://uk.wikipedia.org/wiki/Інфразвук</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A3%D0%BB%D1%8C%D1%82%D1%80%D0%B0%D0%B7%D0%B2%D1%83%D0%BA">https://uk.wikipedia.org/wiki/Ультразвук</a></p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sound">https://en.wikipedia.org/wiki/Sound</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Speed_of_sound">https://en.wikipedia.org/wiki/Speed_of_sound</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sound_intensity">https://en.wikipedia.org/wiki/Sound_intensity</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Loudness">https://en.wikipedia.org/wiki/Loudness</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Decibel">https://en.wikipedia.org/wiki/Decibel</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Absolute_threshold_of_hearing">https://en.wikipedia.org/wiki/Absolute_threshold_of_hearing</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Pitch_(music)">https://en.wikipedia.org/wiki/Pitch_(music)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Timbre">https://en.wikipedia.org/wiki/Timbre</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Fundamental_frequency">https://en.wikipedia.org/wiki/Fundamental_frequency</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Overtone">https://en.wikipedia.org/wiki/Overtone</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tuning_fork">https://en.wikipedia.org/wiki/Tuning_fork</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Acoustic_resonance">https://en.wikipedia.org/wiki/Acoustic_resonance</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Infrasound">https://en.wikipedia.org/wiki/Infrasound</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ultrasound">https://en.wikipedia.org/wiki/Ultrasound</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sonar">https://en.wikipedia.org/wiki/Sonar</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Echo_sounding">https://en.wikipedia.org/wiki/Echo_sounding</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Medical_ultrasound">https://en.wikipedia.org/wiki/Medical_ultrasound</a></p></li>
 </ul>
 </section>
 </section>
@@ -603,8 +907,24 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Природа та поширення звуку</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Швидкість поширення звуку</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Характеристики звуку</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Об'єктивні (фізичні) характеристики</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Суб'єктивні (фізіологічні) характеристики</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Акустичний резонанс</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Пов'язані з звуком явища</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Як ми чуємо? Людське вухо</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Інфразвук та Ультразвук</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Інфразвук</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Ультразвук</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
