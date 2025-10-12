@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Рівняння стану ідеального газу (в процесі) &#8212; Quantopia School UA</title>
+    <title>Рівняння стану ідеального газу &#8212; Quantopia School UA</title>
   
   
   
@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/ideal-gas-law';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -224,7 +226,7 @@
 <li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
 <li class="toctree-l1"><a class="reference internal" href="temperature-basics.html">Температура</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Рівняння стану ідеального газу (в процесі)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Рівняння стану ідеального газу</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
@@ -499,7 +501,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Рівняння стану ідеального газу (в процесі)</h1>
+    <h1>Рівняння стану ідеального газу</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -509,8 +511,21 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Виведення різних форм рівняння стану ідеального газу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-nkt">1. Форма <span class="math notranslate nohighlight">\(pV = NkT\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-nu-rt">2. Форма <span class="math notranslate nohighlight">\(pV = \nu RT\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-frac-m-m-rt">3. Форма <span class="math notranslate nohighlight">\(pV = \frac{m}{M}RT\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Об'єднаний газовий закон (Рівняння Клапейрона)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ізопроцеси: Газові закони</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-text-const">1. Ізотермічний процес <span class="math notranslate nohighlight">\(T = \text{const}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-text-const">2. Ізобарний процес <span class="math notranslate nohighlight">\(p = \text{const}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v-text-const">3. Ізохорний процес <span class="math notranslate nohighlight">\(V = \text{const}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -523,16 +538,212 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Рівняння стану ідеального газу (в процесі)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>Рівняння стану ідеального газу<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>У попередніх розділах ми встановили два надзвичайно важливі зв'язки.</p>
+<ol class="arabic">
+<li><p><strong>Основне рівняння МКТ</strong> пов'язало тиск <span class="math notranslate nohighlight">\(p\)</span> з мікроскопічними параметрами:</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{2}{3} n \overline{E_k}\]</div>
+</li>
+<li><p><strong>Мікроскопічне визначення температури</strong> показало, що абсолютна температура <span class="math notranslate nohighlight">\(T\)</span> є мірою середньої кінетичної енергії молекул:</p>
+<div class="math notranslate nohighlight">
+\[\overline{E_k} = \frac{3}{2}kT\]</div>
+</li>
+</ol>
+<p>Тепер настав час об'єднати ці два результати. Якщо ми підставимо вираз для середньої кінетичної енергії <span class="math notranslate nohighlight">\(\overline{E_k}\)</span> в основне рівняння МКТ, ми отримаємо щось справді елегантне.</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{2}{3} n \left( \frac{3}{2}kT \right)\]</div>
+<p>Множники <span class="math notranslate nohighlight">\(\frac{2}{3}\)</span> та <span class="math notranslate nohighlight">\(\frac{3}{2}\)</span> взаємно скорочуються, і ми отримуємо першу, дуже важливу форму рівняння стану ідеального газу:</p>
+<div class="math notranslate nohighlight">
+\[ p = nkT \]</div>
+<p>Це рівняння вже пов'язує три основні макроскопічні параметри газу: тиск <span class="math notranslate nohighlight">\(p\)</span>, температуру <span class="math notranslate nohighlight">\(T\)</span> та концентрацію <span class="math notranslate nohighlight">\(n\)</span>. Однак на практиці вимірювати концентрацію (кількість молекул в кубічному метрі) не завжди зручно. Набагато частіше ми маємо справу з об'ємом <span class="math notranslate nohighlight">\(V\)</span> та кількістю речовини <span class="math notranslate nohighlight">\(\nu\)</span>. Давайте перетворимо наше рівняння до більш звичного вигляду.</p>
 <section id="id2">
-<h2>Додаткові матеріали<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>Виведення різних форм рівняння стану ідеального газу<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="pv-nkt">
+<h3>1. Форма <span class="math notranslate nohighlight">\(pV = NkT\)</span><a class="headerlink" href="#pv-nkt" title="Link to this heading">#</a></h3>
+<p>Згадаймо, що концентрація <span class="math notranslate nohighlight">\(n\)</span> - це кількість частинок <span class="math notranslate nohighlight">\(N\)</span> в об'ємі <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[n = \frac{N}{V}\]</div>
+<p>Підставимо цей вираз у рівняння <span class="math notranslate nohighlight">\(p = nkT\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{N}{V} kT\]</div>
+<p>Тепер просто помножимо обидві частини рівняння на об'єм <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[pV = NkT\]</div>
+<p>Ця форма рівняння стану пов'язує тиск, об'єм і температуру з <strong>кількістю частинок</strong> <span class="math notranslate nohighlight">\(N\)</span> у системі через фундаментальну сталу Больцмана <span class="math notranslate nohighlight">\(k\)</span>.</p>
+</section>
+<section id="pv-nu-rt">
+<h3>2. Форма <span class="math notranslate nohighlight">\(pV = \nu RT\)</span><a class="headerlink" href="#pv-nu-rt" title="Link to this heading">#</a></h3>
+<p>У макросвіті ми оперуємо не кількістю окремих частинок, а <strong>кількістю речовини <span class="math notranslate nohighlight">\(\nu\)</span></strong> в молях. Давайте перейдемо від мікроскопічних сталих (<span class="math notranslate nohighlight">\(N, k\)</span>) до макроскопічних (<span class="math notranslate nohighlight">\(\nu, R\)</span>).</p>
+<p>Для цього нам знадобляться два співвідношення, які ми вже знаємо:</p>
+<ul>
+<li><p>Зв'язок між кількістю частинок <span class="math notranslate nohighlight">\(N\)</span> та кількістю речовини <span class="math notranslate nohighlight">\(\nu\)</span> через сталу Авогадро <span class="math notranslate nohighlight">\(N_A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[N = \nu N_A\]</div>
+</li>
+<li><p>Визначення універсальної газової сталої <span class="math notranslate nohighlight">\(R\)</span> через сталу Больцмана <span class="math notranslate nohighlight">\(k\)</span> та сталу Авогадро <span class="math notranslate nohighlight">\(N_A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R = k N_A \approx 8.314 \frac{\text{Дж}}{\text{моль} \cdot \text{К}}\]</div>
+</li>
+</ul>
+<p>Тепер виконаємо підстановку у рівняння <span class="math notranslate nohighlight">\(pV = NkT\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[pV = (\nu N_A) k T\]</div>
+<p>Змінимо порядок множників:</p>
+<div class="math notranslate nohighlight">
+\[pV = \nu (N_A k) T\]</div>
+<p>Вираз у дужках - це і є універсальна газова стала <span class="math notranslate nohighlight">\(R\)</span>. Отже, ми отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[pV = \nu RT\]</div>
+<p>Це рівняння і є однією з найпоширеніших форм запису рівняння стану ідеального газу. Воно показує, що для <span class="math notranslate nohighlight">\(\nu\)</span> молів ідеального газу добуток тиску на об'єм пропорційний абсолютній температурі.</p>
+</section>
+<section id="pv-frac-m-m-rt">
+<h3>3. Форма <span class="math notranslate nohighlight">\(pV = \frac{m}{M}RT\)</span><a class="headerlink" href="#pv-frac-m-m-rt" title="Link to this heading">#</a></h3>
+<p>Найчастіше на практиці ми можемо легко виміряти не кількість молів, а <strong>масу газу <span class="math notranslate nohighlight">\(m\)</span></strong>. Зв'язок між масою <span class="math notranslate nohighlight">\(m\)</span>, кількістю речовини <span class="math notranslate nohighlight">\(\nu\)</span> та молярною масою <span class="math notranslate nohighlight">\(M\)</span> нам відомий:</p>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{m}{M}\]</div>
+<p>Підставивши цей вираз у рівняння, ми отримаємо найбільш універсальну форму запису:</p>
+<div class="math notranslate nohighlight">
+\[pV = \frac{m}{M}RT\]</div>
+<p>Це рівняння пов'язує всі три макроскопічні параметри стану газу (<span class="math notranslate nohighlight">\(p, V, T\)</span>) з його масою <span class="math notranslate nohighlight">\(m\)</span> та родом газу (через молярну масу <span class="math notranslate nohighlight">\(M\)</span>). Воно є фундаментальним законом, що описує поведінку ідеальних газів.</p>
+<blockquote>
+<div><p><strong>Рівняння стану ідеального газу</strong> - це рівняння, що встановлює зв'язок між тиском, об'ємом і температурою даної маси газу.</p>
+</div></blockquote>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Об'єднаний газовий закон (Рівняння Клапейрона)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Розглянемо ситуацію, коли ми маємо справу з певною <strong>незмінною масою газу</strong> (<span class="math notranslate nohighlight">\(m = \text{const}\)</span>), який може переходити з одного стану в інший (наприклад, газ нагрівають або стискають).</p>
+<p>Візьмемо рівняння стану ідеального газу:</p>
+<div class="math notranslate nohighlight">
+\[pV = \frac{m}{M}RT\]</div>
+<p>Перенесемо температуру <span class="math notranslate nohighlight">\(T\)</span> у ліву частину рівняння:</p>
+<div class="math notranslate nohighlight">
+\[\frac{pV}{T} = \frac{m}{M}R\]</div>
+<p>Проаналізуємо праву частину цього рівняння:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m\)</span> - маса газу, вона незмінна за умовою.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> - молярна маса, вона залежить від роду газу і теж є сталою.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> - універсальна газова стала, фундаментальна константа.</p></li>
+</ul>
+<p>Отже, вся права частина рівняння є сталою величиною для даної маси даного газу.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{pV}{T} = \text{const} \]</div>
+<p>Цей вираз називається <strong>об'єднаним газовим законом</strong>. Він говорить, що для довільної незмінної маси газу відношення добутку тиску на об'єм до абсолютної температури є величиною сталою.</p>
+<p>Цей закон надзвичайно зручний для розв'язування задач. Якщо газ переходить зі стану 1 (з параметрами <span class="math notranslate nohighlight">\(p_1, V_1, T_1\)</span>) у стан 2 (з параметрами <span class="math notranslate nohighlight">\(p_2, V_2, T_2\)</span>), то ми можемо записати:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{p_1V_1}{T_1} = \frac{p_2V_2}{T_2}
+\]</div>
+<p>Цю форму запису також часто називають <strong>рівнянням Клапейрона</strong>. З нього, як ми зараз побачимо, випливають усі інші, більш частинні газові закони.</p>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Ізопроцеси: Газові закони<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Ізопроцес</strong> - це процес переходу термодинамічної системи з одного стану в інший, під час якого один із макроскопічних параметрів (<span class="math notranslate nohighlight">\(p, V\)</span> або <span class="math notranslate nohighlight">\(T\)</span>) залишається незмінним, за умови, що маса газу та його хімічний склад не змінюються (<span class="math notranslate nohighlight">\(m = \text{const}\)</span>).</p>
+</div></blockquote>
+<p>Існує три основні ізопроцеси.</p>
+<section id="t-text-const">
+<h3>1. Ізотермічний процес <span class="math notranslate nohighlight">\(T = \text{const}\)</span><a class="headerlink" href="#t-text-const" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Ізотермічним</strong> називають процес, що відбувається за сталої температури (<span class="math notranslate nohighlight">\(T = \text{const}\)</span>) при незмінній масі газу.</p>
+</div></blockquote>
+<p>Для того, щоб температура газу не змінювалася під час стиснення або розширення, він повинен мати можливість обмінюватися теплотою з навколишнім середовищем. Тому ізотермічний процес має відбуватися <strong>дуже повільно</strong>.</p>
+<ul class="simple">
+<li><p><strong>Приклад:</strong> Повільне стиснення повітря у шприці, отвір якого закритий пальцем. Якщо стискати повільно, надлишок тепла встигає віддаватися в довкілля, і температура повітря майже не змінюється.</p></li>
+</ul>
+<p><strong>Закон Бойля-Маріотта</strong></p>
+<p>Давайте візьмемо об'єднаний газовий закон:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1V_1}{T_1} = \frac{p_2V_2}{T_2}\]</div>
+<p>Оскільки процес ізотермічний, то <span class="math notranslate nohighlight">\(T_1 = T_2\)</span>. Ми можемо скоротити температуру в знаменниках. В результаті ми отримуємо закон, експериментально встановлений англо-ірландським фізиком Робертом Бойлем та французьким фізиком Едмом Маріоттом:</p>
+<blockquote>
+<div><p><strong>Закон Бойля-Маріотта:</strong> Для даної маси газу за сталої температури добуток тиску газу на його об'єм є величиною сталою.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[p_1V_1 = p_2V_2 \quad \text{або} \quad pV = \text{const}\]</div>
+<p>З цього закону випливає, що при ізотермічному процесі тиск газу <strong>обернено пропорційний</strong> його об'єму</p>
+<div class="math notranslate nohighlight">
+\[p = \frac{\text{const}}{V}\]</div>
+<p>Якщо ми зменшимо об'єм у 2 рази, тиск зросте у 2 рази.</p>
+<p><strong>Графік ізотермічного процесу</strong></p>
+<p>Графік залежності між параметрами стану газу при ізотермічному процесі називається <strong>ізотермою</strong>.</p>
+<ul class="simple">
+<li><p><strong>У координатах p-V:</strong> Залежність <span class="math notranslate nohighlight">\(p(V)\)</span> є гіперболою. Чим вище розташована ізотерма, тим вищій температурі вона відповідає.</p></li>
+<li><p><strong>У координатах p-T та V-T:</strong> Оскільки температура стала, графіки будуть прямими лініями, перпендикулярними до осі T.</p></li>
+</ul>
+</section>
+<section id="p-text-const">
+<h3>2. Ізобарний процес <span class="math notranslate nohighlight">\(p = \text{const}\)</span><a class="headerlink" href="#p-text-const" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Ізобарним</strong> називають процес, що відбувається за сталого тиску (<span class="math notranslate nohighlight">\(p = \text{const}\)</span>) при незмінній масі газу.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Приклад:</strong> Нагрівання повітря в колбі, закритій рухомим поршнем. При нагріванні повітря розширюється і штовхає поршень вгору. Об'єм збільшується, але тиск усередині колби залишається рівним зовнішньому атмосферному тиску.</p></li>
+</ul>
+<p><strong>Закон Гей-Люссака</strong></p>
+<p>Знову звернемося до об'єднаного газового закону:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1V_1}{T_1} = \frac{p_2V_2}{T_2}\]</div>
+<p>Оскільки процес ізобарний, <span class="math notranslate nohighlight">\(p_1 = p_2\)</span>. Скоротивши тиск, отримуємо закон, встановлений французьким фізиком Жозефом Луї Гей-Люссаком:</p>
+<blockquote>
+<div><p><strong>Закон Гей-Люссака:</strong> Для даної маси газу за сталого тиску відношення об'єму до абсолютної температури є величиною сталою.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[
+\frac{V_1}{T_1} = \frac{V_2}{T_2} \quad \text{або} \quad \frac{V}{T} = \text{const}
+\]</div>
+<p>Звідси випливає, що при ізобарному процесі об'єм газу <strong>прямо пропорційний</strong> його абсолютній температурі</p>
+<div class="math notranslate nohighlight">
+\[V = \text{const} \cdot T\]</div>
+<p>Якщо ми збільшимо абсолютну температуру (в Кельвінах!) у 2 рази, об'єм також зросте у 2 рази.</p>
+<p><strong>Графік ізобарного процесу</strong></p>
+<p>Графік ізобарного процесу називається <strong>ізобарою</strong>.</p>
+<ul class="simple">
+<li><p><strong>У координатах V-T:</strong> Залежність <span class="math notranslate nohighlight">\(V(T)\)</span> є прямою лінією, що проходить через початок координат (адже при <span class="math notranslate nohighlight">\(T=0 \text{ K}\)</span> об'єм ідеального газу дорівнював би нулю).</p></li>
+<li><p><strong>У координатах p-V та p-T:</strong> Оскільки тиск сталий, графіки будуть прямими лініями, перпендикулярними до осі p.</p></li>
+</ul>
+</section>
+<section id="v-text-const">
+<h3>3. Ізохорний процес <span class="math notranslate nohighlight">\(V = \text{const}\)</span><a class="headerlink" href="#v-text-const" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Ізохорним</strong> називають процес, що відбувається за сталого об'єму (<span class="math notranslate nohighlight">\(V = \text{const}\)</span>) при незмінній масі газу.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Приклад:</strong> Нагрівання газу в закритому балоні. Об'єм балона не змінюється, але при нагріванні молекули починають рухатися швидше, сильніше і частіше вдаряються об стінки, тому тиск зростає.</p></li>
+</ul>
+<p><strong>Закон Шарля</strong></p>
+<p>І втретє скористаємося об'єднаним газовим законом:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p_1V_1}{T_1} = \frac{p_2V_2}{T_2}\]</div>
+<p>Оскільки процес ізохорний, <span class="math notranslate nohighlight">\(V_1 = V_2\)</span>. Скорочуємо об'єми і отримуємо закон, встановлений французьким фізиком Жаком Шарлем:</p>
+<blockquote>
+<div><p><strong>Закон Шарля:</strong> Для даної маси газу за сталого об'єму відношення тиску до абсолютної температури є величиною сталою.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\frac{p_1}{T_1} = \frac{p_2}{T_2} \quad \text{або} \quad \frac{p}{T} = \text{const}\]</div>
+<p>Із цього закону випливає, що при ізохорному процесі тиск газу <strong>прямо пропорційний</strong> його абсолютній температурі</p>
+<div class="math notranslate nohighlight">
+\[p = \text{const} \cdot T\]</div>
+<p><strong>Графік ізохорного процесу</strong></p>
+<p>Графік ізохорного процесу називається <strong>ізохорою</strong>.</p>
+<ul class="simple">
+<li><p><strong>У координатах p-T:</strong> Залежність <span class="math notranslate nohighlight">\(p(T)\)</span> є прямою лінією, що проходить через початок координат.</p></li>
+<li><p><strong>У координатах p-V та V-T:</strong> Оскільки об'єм сталий, графіки будуть прямими лініями, перпендикулярними до осі V.</p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>Додаткові матеріали<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B2%D0%BD%D1%8F%D0%BD%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%83_%D1%96%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B3%D0%B0%D0%B7%D1%83">https://uk.wikipedia.org/wiki/Рівняння_стану_ідеального_газу</a></p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_theory_of_gases">https://en.wikipedia.org/wiki/Kinetic_theory_of_gases</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ideal_gas_law">https://en.wikipedia.org/wiki/Ideal_gas_law</a></p></li>
@@ -605,8 +816,21 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Виведення різних форм рівняння стану ідеального газу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-nkt">1. Форма <span class="math notranslate nohighlight">\(pV = NkT\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-nu-rt">2. Форма <span class="math notranslate nohighlight">\(pV = \nu RT\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-frac-m-m-rt">3. Форма <span class="math notranslate nohighlight">\(pV = \frac{m}{M}RT\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Об'єднаний газовий закон (Рівняння Клапейрона)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Ізопроцеси: Газові закони</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-text-const">1. Ізотермічний процес <span class="math notranslate nohighlight">\(T = \text{const}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-text-const">2. Ізобарний процес <span class="math notranslate nohighlight">\(p = \text{const}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v-text-const">3. Ізохорний процес <span class="math notranslate nohighlight">\(V = \text{const}\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
