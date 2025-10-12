@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Вільні електромагнітні коливання та коливальний контур &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/electromagnetic-waves/electromagnetic-oscillations';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Природа світла" href="../optics/nature_of_light.html" />
+    <link rel="prev" title="Коливання" href="../electrodynamics/oscillations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mkt/fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/humidity.html">Вологість повітря (в процесі)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища (в процесі)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Вільні електромагнітні коливання та коливальний контур</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/electromagnetic-waves/electromagnetic-oscillations.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/electromagnetic-waves/electromagnetic-oscillations.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/electromagnetic-waves/electromagnetic-oscillations.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Вільні електромагнітні коливання та коливальний контур</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Коливальний контур</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Процес перетворення енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Математичний опис коливань</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Формула Томсона</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Закони зміни заряду, напруги та струму</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Аналогія з механічними коливаннями</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Вільні електромагнітні коливання та коливальний контур<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Уявіть собі гойдалку. Якщо її раз штовхнути, вона почне коливатися туди-сюди. Це приклад <strong>вільних коливань</strong> - коливань, що відбуваються в системі після того, як її вивели зі стану рівноваги, без подальшого впливу зовнішніх сил.</p>
+<p>А тепер уявіть ідеальну гойдалку в вакуумі, без тертя. Вона коливатиметься вічно, не зупиняючись. Це - <strong>незатухаючі коливання</strong>.</p>
+<p>В світі електрики і магнетизму теж існують такі процеси. <strong>Вільні незатухаючі електромагнітні коливання</strong> - це періодичні зміни електричного заряду, сили струму та напруги в електричному колі, які відбуваються без споживання енергії і без зовнішніх джерел. Систему, в якій можуть відбуватися такі коливання, називають <strong>коливальним контуром</strong>.</p>
+<hr class="docutils" />
+<section id="id2">
+<h2>Коливальний контур<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Щоб отримати вільні електромагнітні коливання, нам потрібна спеціальна система, яка називається <strong>коливальним контуром</strong>.</p>
+<p>Найпростіший коливальний контур, який ми будемо розглядати, складається з двох основних елементів: конденсатора та котушки індуктивності. Такий контур часто позначають як <strong>LC-контур</strong>.</p>
+<blockquote>
+<div><p><strong>Коливальний контур</strong> (або LC-контур) - це електричне коло, що складається з'єднаних між собою конденсатора та котушки індуктивності.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Ідеальний коливальний контур</strong> - це модель, яка складається з ідеального конденсатора та ідеальної котушки індуктивності, з'єднаних послідовно. В такій моделі ми нехтуємо електричним опором дротів та котушки (<span class="math notranslate nohighlight">\(R=0\)</span>), а також будь-якими іншими втратами енергії.</p>
+</div></blockquote>
+<p>Давайте познайомимося з його елементами:</p>
+<ul>
+<li><p><strong>Конденсатор</strong> - це пристрій, здатний накопичувати електричний заряд, а разом з ним і енергію електричного поля. Найпростіший конденсатор складається з двох металевих пластин (обкладок), розділених шаром діелектрика. Його основна характеристика - <strong>електроємність</strong>.</p>
+<ul>
+<li><p><strong>Електроємність</strong> <span class="math notranslate nohighlight">\(C\)</span> - це фізична величина, що характеризує здатність провідника або системи провідників накопичувати електричний заряд.</p></li>
+<li><p>Одиниця вимірювання електроємності в СІ: <strong>Фарад (Ф)</strong>.</p></li>
+<li><p>Електроємність визначається як відношення заряду <span class="math notranslate nohighlight">\(q\)</span>, накопиченого на одній з обкладок конденсатора, до напруги <span class="math notranslate nohighlight">\(U\)</span> між обкладками:</p>
+<div class="math notranslate nohighlight">
+\[C = \frac{q}{U}\]</div>
+</li>
+<li><p><strong>Енергія електричного поля конденсатора</strong> <span class="math notranslate nohighlight">\(W_{\text{ел}}\)</span> розраховується за формулами:</p>
+<div class="math notranslate nohighlight">
+\[W_{\text{ел}} = \frac{CU^2}{2} = \frac{q^2}{2C}\]</div>
+<p>Одиниця вимірювання енергії в СІ: <strong>Джоуль (Дж)</strong>.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Котушка індуктивності</strong> - це пристрій (зазвичай, дріт, намотаний на каркас), що здатен накопичувати енергію магнітного поля, коли в ньому протікає електричний струм. Її основна характеристика - <strong>індуктивність</strong>.</p>
+<ul>
+<li><p><strong>Індуктивність</strong> <span class="math notranslate nohighlight">\(L\)</span> - це фізична величина, що характеризує здатність провідника створювати магнітне поле при протіканні через нього електричного струму. Індуктивність, кажучи простою мовою, є мірою &quot;інертності&quot; котушки до зміни струму. Вона протидіє будь-якій зміні сили струму в ній.</p>
+<p>Одиниця вимірювання індуктивності в СІ: <strong>Генрі (Гн)</strong>.</p>
+<p>Коли в котушці тече струм, вона має енергію, зосереджену в її магнітному полі.</p>
+</li>
+<li><p><strong>Енергія магнітного поля котушки</strong> <span class="math notranslate nohighlight">\(W_{м}\)</span> розраховується за формулою:</p>
+<div class="math notranslate nohighlight">
+\[W_{м} = \frac{Li^2}{2}\]</div>
+<p>де <span class="math notranslate nohighlight">\(i\)</span> - сила струму в котушці (одиниця вимірювання в СІ: <strong>Ампер (А)</strong>). Як і для будь-якої енергії, одиниця вимірювання енергії магнітного поля в СІ: <strong>Джоуль (Дж)</strong>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/LC_parallel_simple.svg" alt="LC parallel simple.svg" height="220" width="300">
+<br>
+Рис. 1. LC-контур (коливальний контур).
+By <a href="https://commons.wikimedia.org/w/index.php?title=User:First_Harmonic&action=edit&redlink=1" class="new" title="User:First Harmonic (page does not exist)">First Harmonic</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=21991221">Link</a>. <a href="https://en.wikipedia.org/wiki/LC_circuit">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Tuned_circuit_animation_3_300ms.gif" alt="Tuned circuit animation 3 300ms.gif" height="335" width="408">
+<br>
+Анімована діаграма, що показує роботу коливального контуру (LC-контур). Конденсатор C накопичує енергію у своєму електричному полі E, а котушка індуктивності L накопичує енергію у своєму магнітному полі B (зелений колір).
+By <a href="https://commons.wikimedia.org/w/index.php?title=User:Chetvorno&action=edit&redlink=1" class="new" title="User:Chetvorno (page does not exist)">Chetvorno</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=26859039">Link</a>. <a href="https://en.wikipedia.org/wiki/LC_circuit">Wikipedia</a></p><section id="id3">
+<h3>Процес перетворення енергії<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Найцікавіше в коливальному контурі - це безперервне перетворення енергії електричного поля в енергію магнітного поля і навпаки. Давайте розберемо цей процес поетапно, починаючи з моменту, коли ми надали контуру початковий запас енергії.</p>
+<p><strong>Крок 1: Максимум електричної енергії (t = 0)</strong></p>
+<ol class="arabic">
+<li><p>Уявімо, що ми зарядили конденсатор до максимальної напруги <span class="math notranslate nohighlight">\(U_{\text{max}}\)</span>, надавши його обкладкам максимальний заряд <span class="math notranslate nohighlight">\(q_{\text{max}}\)</span>.</p></li>
+<li><p>У цей момент вся енергія контуру зосереджена в електричному полі між обкладками конденсатора. Ця енергія є максимальною.</p>
+<ul>
+<li><p><strong>Енергія електричного поля конденсатора</strong> <span class="math notranslate nohighlight">\(W_{\text{ел}}\)</span> обчислюється за формулами:</p>
+<div class="math notranslate nohighlight">
+\[W_{\text{ел}} = \frac{q^2}{2C} = \frac{CU^2}{2}\]</div>
+</li>
+<li><p>У початковий момент часу: <span class="math notranslate nohighlight">\(W_{\text{ел.max}} = \frac{q_{\text{max}}^2}{2C} = \frac{CU_{\text{max}}^2}{2}\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Струму в колі ще немає (<span class="math notranslate nohighlight">\(i = 0\)</span>), тому енергія магнітного поля котушки дорівнює нулю.</p></li>
+</ol>
+<p><strong>Крок 2: Перезаряджання конденсатора (0 &lt; t &lt; T/4)</strong></p>
+<ol class="arabic">
+<li><p>Конденсатор починає розряджатися через котушку. В колі виникає електричний струм <span class="math notranslate nohighlight">\(i\)</span>, який поступово зростає.</p></li>
+<li><p>Зі зменшенням заряду <span class="math notranslate nohighlight">\(q\)</span> на конденсаторі, енергія його електричного поля <span class="math notranslate nohighlight">\(W_{\text{ел}}\)</span> зменшується.</p></li>
+<li><p>Навколо котушки зі струмом виникає магнітне поле. Його енергія <span class="math notranslate nohighlight">\(W_{м}\)</span> зростає.</p>
+<ul>
+<li><p><strong>Енергія магнітного поля котушки</strong> <span class="math notranslate nohighlight">\(W_{м}\)</span> обчислюється за формулою:</p>
+<div class="math notranslate nohighlight">
+\[W_{м} = \frac{Li^2}{2}\]</div>
+</li>
+</ul>
+</li>
+<li><p>Отже, енергія електричного поля перетворюється в енергію магнітного.</p></li>
+</ol>
+<p><strong>Крок 3: Максимум магнітної енергії (t = T/4)</strong></p>
+<ol class="arabic simple">
+<li><p>Конденсатор повністю розрядився (<span class="math notranslate nohighlight">\(q = 0\)</span>, <span class="math notranslate nohighlight">\(U = 0\)</span>). Енергія електричного поля дорівнює нулю.</p></li>
+<li><p>У цей момент сила струму в колі досягає свого максимального (амплітудного) значення <span class="math notranslate nohighlight">\(I_{\text{max}}\)</span>.</p></li>
+<li><p>Вся енергія контуру тепер зосереджена в магнітному полі котушки.</p>
+<ul class="simple">
+<li><p>Максимальна енергія магнітного поля: <span class="math notranslate nohighlight">\(W_{м.max} = \frac{LI_{\text{max}}^2}{2}\)</span>.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Крок 4: Перезаряджання у зворотному напрямку (T/4 &lt; t &lt; T/2)</strong></p>
+<ol class="arabic simple">
+<li><p>Хоча конденсатор розрядився, струм не зникає миттєво. Завдяки явищу самоіндукції, котушка &quot;підтримує&quot; струм, який тепер починає заряджати конденсатор знову, але вже в зворотному напрямку (полярність обкладок змінюється).</p></li>
+<li><p>Сила струму <span class="math notranslate nohighlight">\(i\)</span> починає зменшуватися, а отже, зменшується і енергія магнітного поля <span class="math notranslate nohighlight">\(W_{м}\)</span>.</p></li>
+<li><p>Заряд <span class="math notranslate nohighlight">\(q\)</span> на обкладках конденсатора зростає, а разом з ним і енергія електричного поля <span class="math notranslate nohighlight">\(W_{\text{ел}}\)</span>.</p></li>
+</ol>
+<p><strong>Крок 5: Знову максимум електричної енергії (t = T/2)</strong></p>
+<ol class="arabic simple">
+<li><p>Струм в колі спадає до нуля (<span class="math notranslate nohighlight">\(i = 0\)</span>). Енергія магнітного поля знову нульова.</p></li>
+<li><p>Конденсатор повністю перезарядився. Заряд на його обкладках знову максимальний за модулем <span class="math notranslate nohighlight">\(q_{\text{max}}\)</span>, але протилежного знаку.</p></li>
+<li><p>Вся енергія контуру знову зосереджена в електричному полі конденсатора.</p></li>
+</ol>
+<p>Далі процес повторюється у зворотному напрямку, і система повертається у вихідний стан за час, що дорівнює одному <strong>періоду коливань</strong> <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Оскільки ми розглядаємо ідеальний контур без втрат енергії, повна електромагнітна енергія <span class="math notranslate nohighlight">\(W\)</span> контуру залишається сталою в будь-який момент часу. Вона дорівнює сумі енергій електричного та магнітного полів.</p>
+<p><strong>Закон збереження енергії в коливальному контурі</strong>:</p>
+<p>W = W_{\text{ел}} + W_{м} = \frac{q^2}{2C} + \frac{Li^2}{2} = \text{const}</p>
+<p>Це означає, що в моменти, коли одна енергія максимальна, інша дорівнює нулю. Тому ми можемо записати:</p>
+<div class="math notranslate nohighlight">
+\[W = \frac{q_{\text{max}}^2}{2C} = \frac{LI_{\text{max}}^2}{2}\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Математичний опис коливань<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Коливання в ідеальному контурі є <strong>гармонічними</strong>, тобто величини (заряд, напруга, струм) змінюються за законом синуса або косинуса. Щоб довести це і знайти параметри цих коливань, ми використаємо два потужні інструменти: закон збереження енергії та поняття похідної.</p>
+<p>Ми знаємо, що повна енергія ідеального контуру є сталою:</p>
+<div class="math notranslate nohighlight">
+\[W = \frac{q^2}{2C} + \frac{Li^2}{2} = \text{const}\]</div>
+<p>Якщо величина стала, її значення не змінюється з часом. А швидкість зміни будь-якої величини - це її похідна по часу. Отже, похідна від повної енергії по часу дорівнює нулю. Запишемо це математично, використовуючи штрих для позначення похідної по часу (наприклад, <span class="math notranslate nohighlight">\(q'\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[\left( \frac{q^2}{2C} + \frac{Li^2}{2} \right)' = 0\]</div>
+<p>Тепер візьмемо похідну від кожного доданка, пам'ятаючи, що <span class="math notranslate nohighlight">\(q\)</span> та <span class="math notranslate nohighlight">\(i\)</span> є функціями часу, а <span class="math notranslate nohighlight">\(L\)</span> та <span class="math notranslate nohighlight">\(C\)</span> - константи. Ми будемо використовувати правило взяття похідної від складеної функції:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2C} (q^2)' + \frac{L}{2} (i^2)' = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2C} \cdot (2q \cdot q') + \frac{L}{2} \cdot (2i \cdot i') = 0\]</div>
+<p>Після спрощення отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[\frac{q}{C} \cdot q' + L \cdot i \cdot i' = 0\]</div>
+<p>Тепер згадаймо фізичний зміст наших величин. Сила струму <span class="math notranslate nohighlight">\(i\)</span> - це швидкість зміни заряду, тобто <span class="math notranslate nohighlight">\(i = q'\)</span>. А <span class="math notranslate nohighlight">\(i'\)</span> - це швидкість зміни струму, або ж друга похідна від заряду <span class="math notranslate nohighlight">\(i' = q''\)</span>.</p>
+<p>Підставимо ці співвідношення в наше рівняння:</p>
+<div class="math notranslate nohighlight">
+\[\frac{q}{C} \cdot q' + L \cdot q' \cdot q'' = 0\]</div>
+<p>Ми можемо винести спільний множник <span class="math notranslate nohighlight">\(q'\)</span> за дужки:</p>
+<div class="math notranslate nohighlight">
+\[q' \left( \frac{q}{C} + L q'' \right) = 0\]</div>
+<p>Це рівняння має виконуватися в будь-який момент часу. Множник <span class="math notranslate nohighlight">\(q'\)</span> - це сила струму <span class="math notranslate nohighlight">\(i\)</span>. Вона дорівнює нулю лише в моменти, коли конденсатор повністю заряджений, а в інші моменти відмінна від нуля. Щоб рівняння виконувалося завжди, вираз у дужках має дорівнювати нулю:</p>
+<div class="math notranslate nohighlight">
+\[\frac{q}{C} + L q'' = 0\]</div>
+<p>Перепишемо це рівняння у стандартному вигляді, виразивши другу похідну <span class="math notranslate nohighlight">\(q''\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[q'' + \frac{1}{LC} \cdot q = 0\]</div>
+<p>Це і є <strong>диференціальне рівняння гармонічних коливань</strong> для заряду в коливальному контурі. Воно показує, що &quot;прискорення&quot; заряду (<span class="math notranslate nohighlight">\(q''\)</span>) є пропорційним до самого заряду (<span class="math notranslate nohighlight">\(q\)</span>) і напрямлене в протилежний бік (через знак мінус, якщо перенести доданок вправо). Це є головною ознакою гармонічних коливань.</p>
+<p>Аналогічне рівняння в механіці <span class="math notranslate nohighlight">\(x'' + \omega^2 x = 0\)</span> описує коливання пружинного маятника, де <span class="math notranslate nohighlight">\(\omega\)</span> - циклічна частота. Порівнюючи наше рівняння з цим стандартом, ми бачимо, що квадрат циклічної частоти для коливального контуру дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[\omega^2 = \frac{1}{LC}\]</div>
+<p>Звідси ми знаходимо <strong>циклічну частоту власних коливань</strong> контуру:</p>
+<div class="math notranslate nohighlight">
+\[\omega = \frac{1}{\sqrt{LC}}\]</div>
+<section id="id5">
+<h3>Формула Томсона<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Тепер, знаючи циклічну частоту, ми можемо знайти період коливань <span class="math notranslate nohighlight">\(T\)</span> - час одного повного коливання. Зв'язок між ними простий: <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\omega}\)</span>. Підставивши наше значення для <span class="math notranslate nohighlight">\(\omega\)</span>, ми отримуємо знамениту <strong>формулу Томсона</strong>:</p>
+<div class="math notranslate nohighlight">
+\[T = 2\pi\sqrt{LC}\]</div>
+<p>Отримана формула була виведена англійським фізиком Вільямом Томсоном (лордом Кельвіном) у 1853 році і є наріжним каменем теорії електромагнітних коливань. Вона показує, що період власних коливань в ідеальному контурі залежить <strong>лише від параметрів самого контуру</strong> - його індуктивності <span class="math notranslate nohighlight">\(L\)</span> та ємності <span class="math notranslate nohighlight">\(C\)</span>. Він не залежить від того, як сильно ми зарядили конденсатор на початку.</p>
+<p>З періодом тісно пов'язана <strong>частота коливань</strong> <span class="math notranslate nohighlight">\(\nu\)</span>.</p>
+<p><strong>Частота коливань</strong> <span class="math notranslate nohighlight">\(\nu\)</span> - це кількість коливань за одну секунду. Одиниця вимірювання в СІ: <strong>Герц (Гц)</strong>.</p>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{1}{T}\]</div>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{1}{2\pi\sqrt{LC}}\]</div>
+</section>
+<section id="id6">
+<h3>Закони зміни заряду, напруги та струму<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Розв'язком рівняння <span class="math notranslate nohighlight">\(q'' + \omega^2 q = 0\)</span> є гармонічна функція (синус або косинус). У загальному вигляді її можна записати так:</p>
+<div class="math notranslate nohighlight">
+\[q(t) = q_{max} \cos(\omega t + \varphi_0)\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(q_{max}\)</span> - <strong>амплітуда коливань заряду</strong> (максимальне значення заряду).</p></li>
+<li><p><span class="math notranslate nohighlight">\((\omega t + \varphi_0)\)</span> - <strong>фаза коливань</strong>, яка визначає стан системи (значення та знак величини) в будь-який момент часу.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_0\)</span> - <strong>початкова фаза</strong>, яка визначає стан системи в момент <span class="math notranslate nohighlight">\(t=0\)</span>.</p></li>
+</ul>
+<p>Примітка: усі деталі, як був отриманий цей розв'язок, ми не наводимо, оскільки це виходить за рамки тих математичних операцій, з якими ми тут працюємо. Однак ви можете самостійно пересвідчитись, що ця формула (або аналогічна їй тільки із синусом) дійсно є розв'язок рівняння <span class="math notranslate nohighlight">\(q'' + \omega^2 q = 0\)</span>. Треба лише підставити цю формулу в рівняння і переконатись в тому, що в кінці після усіх виведень та скорочень у вас вийде тотожність &quot;нуль дорівнює нулю&quot;.</p>
+<p>Давайте виберемо початкові умови, як ми розглядали в нашому фізичному описі: в момент <span class="math notranslate nohighlight">\(t=0\)</span> конденсатор повністю заряджений, тобто <span class="math notranslate nohighlight">\(q = q_{max}\)</span>. Підставимо ці значення в рівняння:</p>
+<p><span class="math notranslate nohighlight">\(q_{max} = q_{max} \cos(\omega \cdot 0 + \varphi_0) \implies 1 = \cos(\varphi_0)\)</span>.</p>
+<p>Це означає, що початкова фаза <span class="math notranslate nohighlight">\(\varphi_0 = 0\)</span>.</p>
+<p>Таким чином, для нашого випадку рівняння спрощуються:</p>
+<ul>
+<li><p><strong>Рівняння коливань заряду:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+    q(t) = q_{max} \cos(\omega t)
+    \]</div>
+</li>
+<li><p><strong>Рівняння коливань напруги:</strong></p>
+<p>Оскільки <span class="math notranslate nohighlight">\(u = q/C\)</span>, то:</p>
+<div class="math notranslate nohighlight">
+\[
+    u(t) = \frac{q_{max}}{C} \cos(\omega t) = U_{max} \cos(\omega t)
+    \]</div>
+<p>де <strong>амплітуда напруги</strong> <span class="math notranslate nohighlight">\(U_{max} = \frac{q_{max}}{C}\)</span>. Напруга коливається в одній фазі з зарядом (синфазно).</p>
+</li>
+<li><p><strong>Рівняння коливань сили струму:</strong></p>
+<p>Щоб знайти струм, візьмемо похідну від заряду по часу:</p>
+<div class="math notranslate nohighlight">
+\[i(t) = q'(t) = (q_{max} \cos(\omega t))' = q_{max} \cdot (-\sin(\omega t) \cdot \omega) = -q_{max} \omega \sin(\omega t)\]</div>
+<div class="math notranslate nohighlight">
+\[i(t) = -I_{max} \sin(\omega t)\]</div>
+<p>де <strong>амплітуда сили струму</strong> <span class="math notranslate nohighlight">\(I_{max} = q_{max} \omega\)</span>.</p>
+<p>Зверніть увагу на важливий результат:</p>
+<ol class="arabic simple">
+<li><p>Використання функції синуса замість косинуса та знак &quot;мінус&quot; вказують на зсув фаз. Можна показати (використовуючи тригонометричні формули, наприклад <span class="math notranslate nohighlight">\(-\sin(x) = \cos(x+\pi/2)\)</span>), що <strong>коливання сили струму випереджають коливання заряду за фазою на <span class="math notranslate nohighlight">\(\pi/2\)</span> (або 90°)</strong>.</p></li>
+<li><p>Це повністю відповідає нашому фізичному опису: коли заряд максимальний (<span class="math notranslate nohighlight">\(t=0, \cos(0)=1\)</span>), струм дорівнює нулю (<span class="math notranslate nohighlight">\(\sin(0)=0\)</span>). Коли заряд стає нулем (<span class="math notranslate nohighlight">\(t=T/4, \cos(\pi/2)=0\)</span>), сила струму досягає максимального значення (<span class="math notranslate nohighlight">\(\sin(\pi/2)=1\)</span>).</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h2>Аналогія з механічними коливаннями<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Процеси в коливальному контурі дуже схожі на коливання пружинного маятника. Ця аналогія допомагає краще зрозуміти суть електромагнітних коливань.</p>
+<p>Давайте порівняємо ці дві системи.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p><strong>Пружинний маятник (Механічна система)</strong></p></th>
+<th class="head text-left"><p><strong>Коливальний контур (Електромагнітна система)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Координата</strong> <span class="math notranslate nohighlight">\(x\)</span> (відхилення від положення рівноваги)</p></td>
+<td class="text-left"><p><strong>Заряд</strong> <span class="math notranslate nohighlight">\(q\)</span> на конденсаторі</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Швидкість</strong> <span class="math notranslate nohighlight">\(v = x'\)</span></p></td>
+<td class="text-left"><p><strong>Сила струму</strong> <span class="math notranslate nohighlight">\(i = q'\)</span> (швидкість зміни заряду)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Маса</strong> <span class="math notranslate nohighlight">\(m\)</span> (міра інертності)</p></td>
+<td class="text-left"><p><strong>Індуктивність</strong> <span class="math notranslate nohighlight">\(L\)</span> (міра &quot;електромагнітної інерції&quot;)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Жорсткість пружини</strong> <span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td class="text-left"><p><strong>Величина, обернена до ємності</strong> <span class="math notranslate nohighlight">\(\frac{1}{C}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Кінетична енергія</strong> <span class="math notranslate nohighlight">\(W_k = \frac{mv^2}{2}\)</span></p></td>
+<td class="text-left"><p><strong>Енергія магнітного поля</strong> <span class="math notranslate nohighlight">\(W_м = \frac{Li^2}{2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Потенціальна енергія</strong> <span class="math notranslate nohighlight">\(W_p = \frac{kx^2}{2}\)</span></p></td>
+<td class="text-left"><p><strong>Енергія електричного поля</strong> <span class="math notranslate nohighlight">\(W_{\text{ел}} = \frac{q^2}{2C}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Закон збереження енергії:</strong> <span class="math notranslate nohighlight">\(\frac{kx^2}{2} + \frac{mv^2}{2} = const\)</span></p></td>
+<td class="text-left"><p><strong>Закон збереження енергії:</strong> <span class="math notranslate nohighlight">\(\frac{q^2}{2C} + \frac{Li^2}{2} = const\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Період коливань:</strong> <span class="math notranslate nohighlight">\(T = 2\pi\sqrt{\frac{m}{k}}\)</span></p></td>
+<td class="text-left"><p><strong>Період коливань (формула Томсона):</strong> <span class="math notranslate nohighlight">\(T = 2\pi\sqrt{LC}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>Заряджений конденсатор (<span class="math notranslate nohighlight">\(q_{\text{max}}\)</span>)</strong> - це як <strong>максимально розтягнута пружина (<span class="math notranslate nohighlight">\(x_{\text{max}}\)</span>)</strong>. Вся енергія потенціальна (електрична).</p></li>
+<li><p><strong>Розрядка конденсатора, максимальний струм (<span class="math notranslate nohighlight">\(I_{\text{max}}\)</span>)</strong> - це як <strong>проходження вантажем положення рівноваги (<span class="math notranslate nohighlight">\(v_{\text{max}}\)</span>)</strong>. Вся енергія кінетична (магнітна).</p></li>
+<li><p><strong>Перезаряджений конденсатор (<span class="math notranslate nohighlight">\(-q_{\text{max}}\)</span>)</strong> - це як <strong>максимально стиснута пружина (<span class="math notranslate nohighlight">\(-x_{\text{max}}\)</span>)</strong>.</p></li>
+</ul>
+<p>Як бачимо, індуктивність <span class="math notranslate nohighlight">\(L\)</span> відіграє роль &quot;електромагнітної маси&quot;: подібно до того, як масивне тіло не може миттєво змінити свою швидкість, котушка з великою індуктивністю протидіє миттєвій зміні струму. Величина <span class="math notranslate nohighlight">\(1/C\)</span> є аналогом жорсткості: конденсатор малої ємності &quot;неохоче&quot; накопичує заряд, подібно до жорсткої пружини, яку важко розтягнути.</p>
+</section>
+<section id="id8">
+<h2>Додаткові матеріали<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%84%D0%BC%D0%BD%D1%96%D1%81%D1%82%D1%8C_(%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D0%BA%D0%B0)">https://uk.wikipedia.org/wiki/Ємність_(електрика)</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D1%82%D1%83%D1%88%D0%BA%D0%B0_%D1%96%D0%BD%D0%B4%D1%83%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%96">https://uk.wikipedia.org/wiki/Котушка_індуктивності</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D0%B4%D1%83%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Індуктивність</a></p></li>
+</ul>
+</section>
+<section id="id9">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/LC_circuit">https://en.wikipedia.org/wiki/LC_circuit</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Capacitor">https://en.wikipedia.org/wiki/Capacitor</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Capacitance">https://en.wikipedia.org/wiki/Capacitance</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Inductor">https://en.wikipedia.org/wiki/Inductor</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Inductance">https://en.wikipedia.org/wiki/Inductance</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electromagnetic_induction">https://en.wikipedia.org/wiki/Electromagnetic_induction</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electric_potential_energy">https://en.wikipedia.org/wiki/Electric_potential_energy</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\electromagnetic-waves"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../electrodynamics/oscillations.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Коливання</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../optics/nature_of_light.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Природа світла</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Коливальний контур</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Процес перетворення енергії</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Математичний опис коливань</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Формула Томсона</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Закони зміни заряду, напруги та струму</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Аналогія з механічними коливаннями</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
