@@ -67,7 +67,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Рівняння стану ідеального газу (в процесі)" href="ideal-gas-law.html" />
+    <link rel="next" title="Рівняння стану ідеального газу" href="ideal-gas-law.html" />
     <link rel="prev" title="Основне рівняння МКТ ідеального газу" href="basic-equation-of-ideal-gas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -226,7 +226,10 @@
 <li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Температура</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу (в процесі)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="humidity.html">Вологість повітря (в процесі)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища (в процесі)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
 <ul class="nav bd-sidenav">
@@ -260,6 +263,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -523,14 +530,11 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Абсолютна шкала температур та стала Больцмана</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Синтез і наслідки</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Що таке абсолютний нуль з точки зору МКТ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Рівняння стану ідеального газу</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Підсумок</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Рівняння стану ідеального газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Середня квадратична швидкість та її зв'язок з температурою</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -694,18 +698,14 @@ T = t + 273.15
 <div><p><strong>Абсолютна температура <span class="math notranslate nohighlight">\(T\)</span></strong> - це фізична величина, яка є мірою середньої кінетичної енергії хаотичного поступального руху частинок речовини.</p>
 </div></blockquote>
 <p><strong>Важливе уточнення:</strong> Чому ми говоримо саме про <em>поступальний</em> рух? Складні молекули (як кисень <span class="math notranslate nohighlight">\(\text{O}_2\)</span> чи вуглекислий газ <span class="math notranslate nohighlight">\(\text{CO}_2\)</span>) можуть не тільки рухатися як єдине ціле, але й обертатися та коливатися. Ці види руху теж мають свою енергію. Але виявляється, що саме енергія поступального руху, тобто руху центра мас молекули, безпосередньо пов'язана з температурою.</p>
-</section>
-<hr class="docutils" />
-<section id="id7">
-<h2>Синтез і наслідки<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Тепер, коли ми маємо фундаментальний зв'язок <span class="math notranslate nohighlight">\(\overline{E_k} = \frac{3}{2}kT\)</span>, ми можемо по-новому поглянути на деякі поняття.</p>
-<section id="id8">
-<h3>Що таке абсолютний нуль з точки зору МКТ?<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p><strong>Що таке абсолютний нуль з точки зору МКТ?</strong></p>
 <p>Якщо <span class="math notranslate nohighlight">\(T = 0 \text{ К}\)</span>, то з формули випливає, що <span class="math notranslate nohighlight">\(\overline{E_k} = 0\)</span>. Це означає, що при абсолютному нулі <strong>припиняється поступальний рух молекул</strong>.</p>
 <p><em>Досягти абсолютного нуля на практиці неможливо, але вчені в лабораторіях наближаються до нього на мільйонні частки градуса. Також, згідно з квантовою механікою, навіть при 0 К частинки здійснюють так звані &quot;нульові коливання&quot;, тобто повний спокій неможливий. Але з точки зору класичної фізики, яку ми вивчаємо, 0 К - це повний спокій.</em></p>
 </section>
-<section id="id9">
-<h3>Рівняння стану ідеального газу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
+<section id="id7">
+<h2>Рівняння стану ідеального газу<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Давайте знову візьмемо основне рівняння МКТ:</p>
 <div class="math notranslate nohighlight">
 \[p = \frac{2}{3} n \overline{E_k}\]</div>
@@ -721,9 +721,57 @@ p = nkT
 \]</div>
 <p>Це <strong>рівняння стану ідеального газу</strong> (у формі для тиску). Воно пов'язує три макроскопічні параметри газу - тиск <span class="math notranslate nohighlight">\(p\)</span>, концентрацію <span class="math notranslate nohighlight">\(n\)</span> та температуру <span class="math notranslate nohighlight">\(T\)</span> - через фундаментальну константу <span class="math notranslate nohighlight">\(k\)</span>. Це рівняння є одним із наріжних каменів усієї термодинаміки.</p>
 </section>
+<hr class="docutils" />
+<section id="id8">
+<h2>Середня квадратична швидкість та її зв'язок з температурою<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Ми вже розглянули дві надзвичайно важливі залежності для середньої кінетичної енергії молекул ідеального газу:</p>
+<div class="math notranslate nohighlight">
+\[\overline{E}_k = \frac{m_0 \overline{v^2}}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[\overline{E}_k = \frac{3}{2}kT\]</div>
+<p>Прирівнявши праві частиниц цих виразів, ми отримуємо прямий зв'язок між температурою (макропараметр) та швидкістю руху молекул (мікропараметр):</p>
+<div class="math notranslate nohighlight">
+\[ \frac{m_0 \overline{v^2}}{2} = \frac{3}{2}kT \]</div>
+<p>Скоротивши на 2, отримуємо: <span class="math notranslate nohighlight">\(m_0 \overline{v^2} = 3kT\)</span>.</p>
+<p>Звідси легко виразити середній квадрат швидкості, а потім і саму середню квадратичну швидкість:</p>
+<div class="math notranslate nohighlight">
+\[ \overline{v^2} = \frac{3kT}{m_0} \]</div>
+<div class="math notranslate nohighlight">
+\[ \overline{v}_{\text{кв}} = \sqrt{\overline{v^2}} = \sqrt{\frac{3kT}{m_0}} \]</div>
+<p>Ця формула чудово демонструє фізичний зміст температури: середня квадратична швидкість молекул прямо пропорційна кореню квадратному з абсолютної температури. Чим гарячіший газ, тим швидше рухаються його молекули. Формула також показує, що за однакової температури легші молекули (менша <span class="math notranslate nohighlight">\(m_0\)</span>) рухаються швидше, ніж важчі.</p>
+<p>Проте, на практиці набагато зручніше оперувати не масою однієї молекули (<span class="math notranslate nohighlight">\(m_0\)</span>) і сталою Больцмана (<span class="math notranslate nohighlight">\(k\)</span>), а макроскопічними величинами: <strong>молярною масою (<span class="math notranslate nohighlight">\(M\)</span>)</strong> та <strong>універсальною газовою сталою (<span class="math notranslate nohighlight">\(R\)</span>)</strong>.</p>
+<p>Зв'язок між ними встановлюється через сталу Авогадро <span class="math notranslate nohighlight">\(N_A \approx 6.0221 \cdot 10^{23} \text{ моль}^{-1}\)</span>:</p>
+<ul class="simple">
+<li><p><strong>Молярна маса <span class="math notranslate nohighlight">\(M\)</span></strong> - це маса одного моля речовини. Вона дорівнює масі однієї молекули, помноженій на кількість молекул в одному молі: <span class="math notranslate nohighlight">\(M = m_0 N_A\)</span>. Звідси <span class="math notranslate nohighlight">\(m_0 = \frac{M}{N_A}\)</span>.</p></li>
+<li><p><strong>Універсальна газова стала <span class="math notranslate nohighlight">\(R\)</span></strong> - це, по суті, стала Больцмана, але розрахована не на одну молекулу, а на один моль речовини. Вона поєднує в собі дві фундаментальні константи.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Універсальна газова стала <span class="math notranslate nohighlight">\(R\)</span></strong> дорівнює добутку сталої Больцмана <span class="math notranslate nohighlight">\(k\)</span> та сталої Авогадро <span class="math notranslate nohighlight">\(N_A\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ R = k N_A \]</div>
+<div class="math notranslate nohighlight">
+\[ R \approx (1.3806 \cdot 10^{-23} \frac{\text{Дж}}{\text{К}}) \cdot (6.0221 \cdot 10^{23} \text{ моль}^{-1}) \]</div>
+<div class="math notranslate nohighlight">
+\[ R \approx 8.314 \frac{\text{Дж}}{\text{моль} \cdot \text{К}} \]</div>
+</div></blockquote>
+<p>Тепер зробимо заміну у нашій формулі для швидкості <span class="math notranslate nohighlight">\(\overline{v}_{\text{кв}} = \sqrt{\frac{3kT}{m_0}}\)</span>. Підставимо вирази для <span class="math notranslate nohighlight">\(k\)</span> та <span class="math notranslate nohighlight">\(m_0\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(k = \frac{R}{N_A}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(m_0 = \frac{M}{N_A}\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \overline{v}_{\text{кв}} = \sqrt{\frac{3 \cdot \frac{R}{N_A} \cdot T}{\frac{M}{N_A}}} = \sqrt{\frac{3RT}{N_A} \cdot \frac{N_A}{M}} \]</div>
+<p>Стала Авогадро <span class="math notranslate nohighlight">\(N_A\)</span> скорочується, і ми отримуємо фінальну, дуже зручну для розрахунків формулу:</p>
+<div class="math notranslate nohighlight">
+\[\bar{v}_{\text{кв}} = \sqrt{\frac{3RT}{M}}\]</div>
+<p>Ця формула пов'язує середню квадратичну швидкість молекул з макроскопічними параметрами газу: його абсолютною температурою <span class="math notranslate nohighlight">\(T\)</span> та молярною масою <span class="math notranslate nohighlight">\(M\)</span>. Із формули бачимо:</p>
+<ol class="arabic simple">
+<li><p>Швидкість руху молекул залежить лише від температури та роду газу (його молярної маси).</p></li>
+<li><p>При однаковій температурі молекули легшого газу рухаються значно швидше за молекули важчого газу. Саме тому легкі гази, такі як водень та гелій, швидше &quot;витікають&quot; з атмосфери Землі у космос.</p></li>
+</ol>
 </section>
-<section id="id10">
-<h2>Підсумок<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h2>Підсумок<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Поняття або Закон</p></th>
@@ -796,12 +844,32 @@ p = nkT
 <td class="text-left"><p>Пов'язує тиск, концентрацію молекул та абсолютну температуру ідеального газу.</p></td>
 <td class="text-left"><p><span class="math notranslate nohighlight">\(p = nkT\)</span></p></td>
 </tr>
+<tr class="row-even"><td class="text-left"><p><strong>Середня квадратична швидкість</strong></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Зв'язок швидкості та температури</p></td>
+<td class="text-left"><p>Вираження зв'язку між середнім квадратом швидкості молекул та абсолютною температурою.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\frac{m_0 \overline{v^2}}{2} = \frac{3}{2}kT\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Середня квадратична швидкість (через масу молекули)</p></td>
+<td class="text-left"><p>Формула для розрахунку середньої квадратичної швидкості через масу однієї молекули та сталу Больцмана.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\overline{v}_{\text{кв}} = \sqrt{\frac{3kT}{m_0}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Універсальна газова стала</p></td>
+<td class="text-left"><p>Фундаментальна стала, що дорівнює добутку сталої Больцмана на сталу Авогадро.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(R = k N_A \approx 8.314 \frac{\text{Дж}}{\text{моль} \cdot \text{К}}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Середня квадратична швидкість (через молярну масу)</p></td>
+<td class="text-left"><p>Розрахункова формула, що пов'язує середню квадратичну швидкість молекул з молярною масою газу та універсальною газовою сталою.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\bar{v}_{\text{кв}} = \sqrt{\frac{3RT}{M}}\)</span></p></td>
+</tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="id11">
-<h2>Додаткові матеріали<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id10">
+<h2>Додаткові матеріали<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D0%BD%D0%B5%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Кінетична_теорія</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0">https://uk.wikipedia.org/wiki/Температура</a></p></li>
@@ -815,8 +883,8 @@ p = nkT
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B2%D0%BD%D1%8F%D0%BD%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%83_%D1%96%D0%B4%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B3%D0%B0%D0%B7%D1%83">https://uk.wikipedia.org/wiki/Рівняння_стану_ідеального_газу</a></p></li>
 </ul>
 </section>
-<section id="id12">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kinetic_theory_of_gases">https://en.wikipedia.org/wiki/Kinetic_theory_of_gases</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Temperature">https://en.wikipedia.org/wiki/Temperature</a></p></li>
@@ -876,7 +944,7 @@ p = nkT
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Рівняння стану ідеального газу (в процесі)</p>
+        <p class="prev-next-title">Рівняння стану ідеального газу</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -909,14 +977,11 @@ p = nkT
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Абсолютна шкала температур та стала Больцмана</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Синтез і наслідки</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Що таке абсолютний нуль з точки зору МКТ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Рівняння стану ідеального газу</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Підсумок</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Рівняння стану ідеального газу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Середня квадратична швидкість та її зв'язок з температурою</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 

@@ -68,6 +68,9 @@ parts:
       - file: physics/mkt/basic-equation-of-ideal-gas
       - file: physics/mkt/temperature-basics
       - file: physics/mkt/ideal-gas-law
+      - file: physics/mkt/evaporation-and-condensation
+      - file: physics/mkt/humidity
+      - file: physics/mkt/liquid-surface-tension
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
@@ -100,6 +103,10 @@ parts:
       - file: physics/electrodynamics/magnetic-properties
       - file: physics/electrodynamics/electromagnetic-field
       - file: physics/electrodynamics/oscillations
+
+  - caption: ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ
+    chapters:
+      - file: physics/electromagnetic-waves/electromagnetic-oscillations
 
   - caption: ОПТИКА
     chapters:
