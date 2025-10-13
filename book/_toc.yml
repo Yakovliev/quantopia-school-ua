@@ -136,6 +136,7 @@ parts:
       - file: physics/tasks/oscillations-classroom
       - file: physics/tasks/oscillations-test
       - file: physics/tasks/mkt-classroom
+      - file: physics/tasks/electromagnetic-waves-classroom
 
 
   # - caption: Розділ Електричне поле
