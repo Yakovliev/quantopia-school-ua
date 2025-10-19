@@ -6,6 +6,8 @@ __pycache__/
 wip/*pts.txt
 wip/tasks/*pts.txt
 
+.crossnote/
+
 # C extensions
 *.so
 
