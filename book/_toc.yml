@@ -70,6 +70,7 @@ parts:
       - file: physics/mkt/ideal-gas-law
       - file: physics/mkt/evaporation-and-condensation
       - file: physics/mkt/humidity
+      - file: physics/mkt/phase-transitions
       - file: physics/mkt/liquid-surface-tension
 
   - caption: ТЕРМОДИНАМІКА

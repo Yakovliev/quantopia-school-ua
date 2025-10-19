@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Вологість повітря (в процесі) &#8212; Quantopia School UA</title>
+    <title>Вологість повітря &#8212; Quantopia School UA</title>
   
   
   
@@ -60,12 +60,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/humidity';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Поверхневий натяг рідини та капілярні явища (в процесі)" href="liquid-surface-tension.html" />
+    <link rel="next" title="Фазові переходи (в процесі)" href="phase-transitions.html" />
     <link rel="prev" title="Пароутворення і конденсація" href="evaporation-and-condensation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -226,7 +228,8 @@
 <li class="toctree-l1"><a class="reference internal" href="temperature-basics.html">Температура</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
 <li class="toctree-l1"><a class="reference internal" href="evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Вологість повітря (в процесі)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase-transitions.html">Фазові переходи (в процесі)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища (в процесі)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
@@ -507,7 +510,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Вологість повітря (в процесі)</h1>
+    <h1>Вологість повітря</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -517,8 +520,27 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Абсолютна вологість: Скільки води в повітрі?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Насичена пара та "місткість" повітря</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Відносна вологість: Наскільки повітря "повне"?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Інші формули для відносної вологості</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Точка роси: Межа конденсації</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Прилади для вимірювання вологості</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Конденсаційний гігрометр</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Волосяний гігрометр</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Психрометр</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Вплив вологості на людину та навколишнє середовище</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Вплив на людину</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Вплив на природу та техніку</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -531,17 +553,366 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Вологість повітря (в процесі)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>Вологість повітря<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Коли ми говоримо про повітря, ми зазвичай уявляємо собі суміш газів: азоту (близько 78%), кисню (близько 21%), аргону та інших. Але в цій суміші майже завжди присутній ще один дуже важливий компонент, хоч і в невеликій кількості - <strong>водяна пара</strong>. Це вода у газоподібному стані.</p>
+<blockquote>
+<div><p><strong>Вологість повітря</strong> - це фізична величина, що характеризує вміст водяної пари в атмосфері.</p>
+</div></blockquote>
+<p>Саме від кількості цієї невидимої пари залежить, чи утвориться вранці роса, чи з'явиться туман, наскільки комфортно ми почуватимемося в спекотний день і чи швидко висохне випрана білизна.</p>
+<p>Щоб кількісно описати вологість, фізики використовують два основні поняття: абсолютну та відносну вологість. Давайте розберемося з кожним із них.</p>
+<hr class="docutils" />
 <section id="id2">
-<h2>Додаткові матеріали<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>Абсолютна вологість: Скільки води в повітрі?<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уявімо, що ми можемо &quot;виловити&quot; всю водяну пару з одного кубічного метра повітря і зважити її. Маса, яку ми отримаємо, і буде абсолютною вологістю.</p>
+<blockquote>
+<div><p><strong>Абсолютна вологість</strong> <span class="math notranslate nohighlight">\(\rho_a\)</span> - це фізична величина, що показує, яка маса водяної пари міститься в одиниці об'єму повітря. По суті, це густина водяної пари в повітрі.</p>
+</div></blockquote>
+<p>Формула для її розрахунку дуже проста:</p>
+<div class="math notranslate nohighlight">
+\[\rho_a = \frac{m_{\text{H}_2\text{O}}}{V}\]</div>
+<p>де:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B7%D0%BE%D0%B2%D0%B8%D0%B9_%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D1%96%D0%B4">https://uk.wikipedia.org/wiki/Фазовий_перехід</a></p></li>
+<li><p><span class="math notranslate nohighlight">\(m_{\text{H}_2\text{O}}\)</span> - маса водяної пари в повітрі. Одиниця в СІ: <strong>кілограм (кг)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> - об'єм повітря, в якому міститься ця пара. Одиниця в СІ: <strong>метр кубічний (<span class="math notranslate nohighlight">\(\text{м}^3\)</span>)</strong>.</p></li>
+</ul>
+<p>Таким чином, одиницею вимірювання абсолютної вологості в СІ є <strong>кілограм на метр кубічний</strong> (<span class="math notranslate nohighlight">\(\text{кг}/\text{м}^3\)</span>). Однак на практиці маса пари в кубометрі повітря досить мала, тому значно зручніше використовувати одиницю <strong>грам на метр кубічний</strong> (<span class="math notranslate nohighlight">\(\text{г}/\text{м}^3\)</span>).</p>
+<p><strong>Приклад:</strong> Якщо ми кажемо, що абсолютна вологість повітря становить 15 <span class="math notranslate nohighlight">\(\text{г}/\text{м}^3\)</span>, це означає, що в кожному кубічному метрі цього повітря міститься 15 грамів води у вигляді пари.</p>
+<p>Але абсолютна вологість не дає нам повного уявлення про те, наскільки повітря &quot;вологе&quot; з точки зору нашого сприйняття або природних явищ. Наприклад, 10 <span class="math notranslate nohighlight">\(\text{г}/\text{м}^3\)</span> води в повітрі при температурі +30 °C будуть відчуватися як сухе повітря, а ті ж 10 <span class="math notranslate nohighlight">\(\text{г}/\text{м}^3\)</span> при +10 °C - як дуже вологе і сире. Чому так? Щоб відповісти на це питання, нам потрібно ввести поняття насиченої пари.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Насичена пара та &quot;місткість&quot; повітря<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Ми вже знаємо, що для кожної температури існує певна межа, скільки водяної пари може &quot;утримати&quot; повітря. Коли ця межа досягнута, пара стає <strong>насиченою</strong>.</p>
+<blockquote>
+<div><p><strong>Насичена водяна пара</strong> - це пара, що перебуває в стані динамічної рівноваги зі своєю рідиною (в даному випадку, з поверхнею води на Землі).</p>
+</div></blockquote>
+<p>Для нас зараз важливо запам'ятати ключову властивість насиченої пари:</p>
+<blockquote>
+<div><p>Густина насиченої водяної пари <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}\)</span> та тиск насиченої водяної пари <span class="math notranslate nohighlight">\(p_{\text{н.п}}\)</span> <strong>залежать тільки від температури</strong>.</p>
+</div></blockquote>
+<p>Чим вища температура, тим більша &quot;місткість&quot; повітря, тобто тим більша густина пари, необхідна для насичення.</p>
+<ul class="simple">
+<li><p><strong>Аналогія:</strong> Уявіть собі губку. Вона може увібрати певну кількість води. Це її максимальна місткість. Тепле повітря - це ніби велика губка, яка може увібрати багато води. Холодне повітря - це ніби маленька губка з невеликою місткістю.</p></li>
+<li><p>Однак, строго кажучи, повітря насправді не &quot;тримає&quot; водяну пару, як губка. Водяна пара - це такий самий газ, як азот чи кисень, і він просто змішується з ними. Поняття &quot;насичення&quot; пов'язане не з місткістю повітря, а з динамічною рівновагою: за певної температури швидкість випаровування води зрівнюється зі швидкістю її конденсації.</p></li>
+</ul>
+<p>Значення густини та тиску насиченої пари для різних температур давно виміряні і зведені в спеціальні таблиці. Ось невеликий уривок такої таблиці:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Температура, °C</p></th>
+<th class="head text-center"><p>Густина насиченої пари <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}\)</span>, <span class="math notranslate nohighlight">\(\text{г}/\text{м}^3\)</span></p></th>
+<th class="head text-center"><p>Тиск насиченої пари <span class="math notranslate nohighlight">\(p_{\text{н.п}}\)</span>, кПа</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>4.85</p></td>
+<td class="text-center"><p>0.60</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>10</p></td>
+<td class="text-center"><p>9.40</p></td>
+<td class="text-center"><p>1.21</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>20</p></td>
+<td class="text-center"><p>17.3</p></td>
+<td class="text-center"><p>2.31</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>30</p></td>
+<td class="text-center"><p>30.4</p></td>
+<td class="text-center"><p>4.20</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>100</p></td>
+<td class="text-center"><p>598</p></td>
+<td class="text-center"><p>100.4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Тепер ми готові зрозуміти, що таке відносна вологість.</p>
+</section>
+<section id="id4">
+<h2>Відносна вологість: Наскільки повітря &quot;повне&quot;?<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Відносна вологість - це саме та величина, яку ми чуємо в прогнозах погоди. Вона показує не те, <em>скільки</em> пари в повітрі, а те, <em>наскільки</em> повітря близьке до стану насичення.</p>
+<blockquote>
+<div><p><strong>Відносна вологість</strong> <span class="math notranslate nohighlight">\(\varphi\)</span> - це фізична величина, що показує відношення абсолютної вологості <span class="math notranslate nohighlight">\(\rho_a\)</span> до густини насиченої водяної пари <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}\)</span> за тієї самої температури, виражене у відсотках.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\varphi = \frac{\rho_a}{\rho_{\text{н.п}}} \cdot 100\%\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varphi\)</span> (фі) - відносна вологість. Вимірюється у <strong>відсотках (%)</strong>.</p></li>
+</ul>
+<p><strong>Що означає це число?</strong></p>
+<ul class="simple">
+<li><p>Якщо <span class="math notranslate nohighlight">\(\varphi = 100\%\)</span>, це означає, що <span class="math notranslate nohighlight">\(\rho_a = \rho_{\text{н.п}}\)</span>. Повітря повністю насичене водяною парою. Будь-яке додаткове надходження пари або невелике охолодження призведе до її конденсації (утворення туману, роси).</p></li>
+<li><p>Якщо <span class="math notranslate nohighlight">\(\varphi = 50\%\)</span>, це означає, що повітря містить лише половину тієї кількості пари, яку могло б містити за даної температури.</p></li>
+<li><p>Якщо <span class="math notranslate nohighlight">\(\varphi = 0\%\)</span>, повітря абсолютно сухе (такого в природі практично не буває).</p></li>
+</ul>
+<p>Тепер стає зрозумілим наш попередній приклад.</p>
+<ul>
+<li><p><strong>Ситуація 1:</strong> Температура +30 °C, абсолютна вологість <span class="math notranslate nohighlight">\(\rho_a = 10 \text{ г/м}^3\)</span>. З таблиці бачимо, що за цієї температури для насичення потрібно <span class="math notranslate nohighlight">\(\rho_{\text{н.п}} \approx 30.4 \text{ г/м}^3\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \frac{10}{30.4} \cdot 100\% \approx 33\%\]</div>
+<p>Це досить сухе повітря, в якому випаровування відбувається інтенсивно.</p>
+</li>
+<li><p><strong>Ситуація 2:</strong> Температура +10 °C, абсолютна вологість та ж сама <span class="math notranslate nohighlight">\(\rho_a = 10 \text{ г/м}^3\)</span>. Але тепер для насичення потрібно всього <span class="math notranslate nohighlight">\(\rho_{\text{н.п}} \approx 9.4 \text{ г/м}^3\)</span>.</p>
+<p>Оскільки <span class="math notranslate nohighlight">\(\rho_a &gt; \rho_{\text{н.п}}\)</span>, це означає, що &quot;надлишок&quot; пари (10 - 9.4 = 0.6 <span class="math notranslate nohighlight">\(\text{г}/\text{м}^3\)</span>) вже сконденсувався б у вигляді туману. Повітря буде мати 100% відносну вологість.</p>
+</li>
+</ul>
+<section id="id5">
+<h3>Інші формули для відносної вологості<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Відносну вологість можна виразити не тільки через густину, а й через <strong>парціальний тиск</strong> водяної пари.</p>
+<blockquote>
+<div><p><strong>Парціальний тиск водяної пари</strong> <span class="math notranslate nohighlight">\(p\)</span> - це тиск, який створювала б лише водяна пара, якби вона сама займала весь об'єм, який займає повітря.</p>
+</div></blockquote>
+<p>Давайте виведемо, як пов'язані ці формули. З рівняння стану ідеального газу ми знаємо, що <span class="math notranslate nohighlight">\(p = nkT\)</span>. Також ми знаємо, що густина <span class="math notranslate nohighlight">\(\rho = nm_0\)</span>, де <span class="math notranslate nohighlight">\(m_0\)</span> - маса однієї молекули. Звідси <span class="math notranslate nohighlight">\(n = \rho / m_0\)</span>. Підставимо це в перше рівняння:</p>
+<div class="math notranslate nohighlight">
+\[p = \left(\frac{\rho}{m_0}\right)kT = \rho \frac{kT}{m_0}\]</div>
+<p>За фіксованої температури <span class="math notranslate nohighlight">\(T\)</span> дріб <span class="math notranslate nohighlight">\(\frac{kT}{m_0}\)</span> є сталою величиною. Отже, тиск пари прямо пропорційний її густині: <span class="math notranslate nohighlight">\(p \sim \rho\)</span>.</p>
+<p>Це означає, що відношення тисків дорівнює відношенню густин:</p>
+<div class="math notranslate nohighlight">
+\[\frac{p}{p_{\text{н.п}}} = \frac{\rho_a}{\rho_{\text{н.п}}}\]</div>
+<p>Тому ми можемо записати ще одну формулу для відносної вологості:</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \frac{p}{p_{\text{н.п}}} \cdot 100\%\]</div>
+<p>де <span class="math notranslate nohighlight">\(p\)</span> - парціальний тиск водяної пари в повітрі, а <span class="math notranslate nohighlight">\(p_{\text{н.п}}\)</span> - тиск насиченої пари за тієї ж температури (береться з таблиць).</p>
+<p>Аналогічно, оскільки <span class="math notranslate nohighlight">\(p = nkT\)</span>, а <span class="math notranslate nohighlight">\(T\)</span> є однаковим для ненасиченої та насиченої пари, то співвідношення тисків дорівнює співвідношенню концентрацій.</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \frac{n_a}{n_{\text{н.п}}} \cdot 100\%\]</div>
+<p>де <span class="math notranslate nohighlight">\(n_a\)</span> - концентрація молекул водяної пари в повітрі, а <span class="math notranslate nohighlight">\(n_{\text{н.п}}\)</span> - концентрація молекул насиченої пари.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Точка роси: Межа конденсації<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Уявіть собі літній вечір. Повітря тепле і містить певну кількість водяної пари. Вночі поверхня землі та предмети на ній (трава, листя) охолоджуються. Повітря, що контактує з ними, теж охолоджується.</p>
+<p>Що відбувається з відносною вологістю при охолодженні?</p>
+<ol class="arabic simple">
+<li><p>Абсолютна вологість <span class="math notranslate nohighlight">\(\rho_a\)</span> (кількість пари в 1 <span class="math notranslate nohighlight">\(\text{м}^3\)</span>) залишається незмінною.</p></li>
+<li><p>При зниженні температури &quot;місткість&quot; повітря, тобто густина насиченої пари <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}\)</span>, зменшується.</p></li>
+<li><p>Оскільки в формулі <span class="math notranslate nohighlight">\(\varphi = \frac{\rho_a}{\rho_{\text{н.п}}} \cdot 100\%\)</span> знаменник зменшується, а чисельник сталий, то відносна вологість <strong>зростає</strong>.</p></li>
+</ol>
+<p>Нарешті, повітря охолоне до такої температури, за якої його &quot;місткість&quot; <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}\)</span> зрівняється з реальною абсолютною вологістю <span class="math notranslate nohighlight">\(\rho_a\)</span>. У цей момент відносна вологість досягне 100%. Ця температура і є точкою роси.</p>
+<blockquote>
+<div><p><strong>Точка роси</strong> <span class="math notranslate nohighlight">\(t_p\)</span> - це температура, до якої необхідно охолодити повітря за сталого тиску, щоб водяна пара, що міститься в ньому, стала насиченою.</p>
+</div></blockquote>
+<p>Якщо температура продовжить падати нижче точки роси, &quot;надлишкова&quot; пара почне <strong>конденсуватися</strong> - перетворюватися на крапельки води. Саме так утворюється <strong>роса</strong> на поверхнях або <strong>туман</strong> в об'ємі повітря.</p>
+<p><strong>Приклади з життя:</strong></p>
+<ul class="simple">
+<li><p><strong>Запотівання окулярів:</strong> Коли ви з морозу заходите в тепле приміщення, поверхня ваших холодних окулярів має температуру, нижчу за точку роси повітря в кімнаті. Тому пара з повітря конденсується на них.</p></li>
+<li><p><strong>Краплі на холодній пляшці:</strong> Коли ви дістаєте пляшку з холодильника, на її поверхні утворюються краплі води з тієї ж причини.</p></li>
+</ul>
+<p>Знаючи точку роси, можна визначити абсолютну вологість повітря. Адже за визначенням, при температурі, що дорівнює точці роси <span class="math notranslate nohighlight">\(t_p\)</span>, пара стає насиченою. Отже, абсолютна вологість повітря <span class="math notranslate nohighlight">\(\rho_a\)</span> дорівнює густині насиченої пари при температурі точки роси: <span class="math notranslate nohighlight">\(\rho_a = \rho_{\text{н.п}}(t_p)\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Прилади для вимірювання вологості<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Прилади для вимірювання вологості називаються <strong>гігрометрами</strong>. Розглянемо найпоширеніші з них.</p>
+<section id="id8">
+<h3>Конденсаційний гігрометр<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Це найпростіший для розуміння прилад, який безпосередньо вимірює <strong>точку роси</strong>. Він складається з металевої коробочки з блискучою дзеркальною поверхнею.</p>
+<ol class="arabic simple">
+<li><p>У коробочку наливають легковипаровувану рідину (наприклад, ефір).</p></li>
+<li><p>Продуваючи повітря через ефір, викликають його інтенсивне випаровування, що призводить до охолодження коробочки та дзеркальця.</p></li>
+<li><p>Вбудований термометр вимірює температуру дзеркальця.</p></li>
+<li><p>У той момент, коли на дзеркальці з'являться перші крапельки роси (поверхня запітніє), фіксують температуру. Це і є <strong>точка роси <span class="math notranslate nohighlight">\(t_p\)</span></strong>.</p></li>
+</ol>
+<p>Далі, за допомогою таблиці знаходять густину насиченої пари для цієї температури <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}(t_p)\)</span>, яка і дорівнює абсолютній вологості повітря <span class="math notranslate nohighlight">\(\rho_a\)</span>. Щоб знайти відносну вологість, потрібно ще виміряти температуру повітря в кімнаті <span class="math notranslate nohighlight">\(t\)</span>, знайти за таблицею <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}(t)\)</span> і скористатися формулою <span class="math notranslate nohighlight">\(\varphi = \frac{\rho_a}{\rho_{\text{н.п}}(t)} \cdot 100\%\)</span>.</p>
+</section>
+<section id="id9">
+<h3>Волосяний гігрометр<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Принцип його дії ґрунтується на властивості знежиреної людської волосини (або кінського волоса) змінювати свою довжину залежно від вологості повітря.</p>
+<ul class="simple">
+<li><p>При збільшенні вологості волосина видовжується.</p></li>
+<li><p>При зменшенні вологості - коротшає.</p></li>
+</ul>
+<p>Ця зміна довжини через систему важелів передається на стрілку, яка рухається по шкалі, проградуйованій у відсотках відносної вологості. Це простий, але не дуже точний прилад.</p>
+</section>
+<section id="id10">
+<h3>Психрометр<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Це найпоширеніший і найточніший прилад для вимірювання вологості.</p>
+<p><strong>Будова:</strong> Психрометр складається з двох однакових термометрів, закріплених на одній основі.</p>
+<ol class="arabic simple">
+<li><p><strong>Сухий термометр</strong> - звичайний термометр, який вимірює температуру повітря <span class="math notranslate nohighlight">\(t_{сух}\)</span>.</p></li>
+<li><p><strong>Вологий термометр</strong> - його резервуар обгорнутий тканиною, кінець якої занурений у ємність з водою.</p></li>
+</ol>
+<p><strong>Принцип дії:</strong></p>
+<p>Вода з тканини вологого термометра постійно випаровується. Як ми знаємо, випаровування призводить до охолодження. Тому вологий термометр завжди показуватиме температуру, <strong>нижчу</strong> за температуру сухого, або таку ж саму.</p>
+<p>Наскільки сильно він охолоне? Це залежить від <strong>відносної вологості</strong> повітря.</p>
+<ul class="simple">
+<li><p><strong>Якщо повітря сухе</strong> (низька <span class="math notranslate nohighlight">\(\varphi\)</span>), випаровування відбувається інтенсивно. Вологий термометр сильно охолоджується, і різниця показів <span class="math notranslate nohighlight">\(\Delta t = t_{сух} - t_{вол}\)</span> буде великою.</p></li>
+<li><p><strong>Якщо повітря вологе</strong> (висока <span class="math notranslate nohighlight">\(\varphi\)</span>), випаровування сповільнюється. Охолодження слабке, і різниця показів <span class="math notranslate nohighlight">\(\Delta t\)</span> буде малою.</p></li>
+<li><p><strong>Якщо повітря насичене</strong> (<span class="math notranslate nohighlight">\(\varphi=100\%\)</span>), випаровування повністю припиняється. Охолодження не відбувається, і покази обох термометрів будуть однаковими (<span class="math notranslate nohighlight">\(\Delta t = 0\)</span>).</p></li>
+</ul>
+<p><strong>Як користуватися психрометром?</strong></p>
+<p>Для визначення відносної вологості використовують спеціальну <strong>психрометричну таблицю</strong>.</p>
+<ol class="arabic simple">
+<li><p>Знімають покази сухого (<span class="math notranslate nohighlight">\(t_{сух}\)</span>) та вологого (<span class="math notranslate nohighlight">\(t_{вол}\)</span>) термометрів.</p></li>
+<li><p>Обчислюють різницю їхніх показів <span class="math notranslate nohighlight">\(\Delta t = t_{сух} - t_{вол}\)</span>.</p></li>
+<li><p>У першому стовпці таблиці знаходять рядок, що відповідає температурі сухого термометра.</p></li>
+<li><p>У верхньому рядку таблиці знаходять стовпець, що відповідає різниці температур <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p></li>
+<li><p>На перетині цього рядка і стовпця знаходиться значення відносної вологості у відсотках.</p></li>
+</ol>
+<p><strong>Приклад використання психрометричної таблиці:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p><span class="math notranslate nohighlight">\(t\)</span> сухого, °C</p></th>
+<th class="head text-center"><p>0</p></th>
+<th class="head text-center"><p>1</p></th>
+<th class="head text-center"><p>2</p></th>
+<th class="head text-center"><p>3</p></th>
+<th class="head text-center"><p>4</p></th>
+<th class="head text-center"><p>5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><strong>18</strong></p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>91</p></td>
+<td class="text-center"><p>82</p></td>
+<td class="text-center"><p>73</p></td>
+<td class="text-center"><p>65</p></td>
+<td class="text-center"><p>56</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>19</strong></p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>91</p></td>
+<td class="text-center"><p>82</p></td>
+<td class="text-center"><p>74</p></td>
+<td class="text-center"><p>65</p></td>
+<td class="text-center"><p>58</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>20</strong></p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>91</p></td>
+<td class="text-center"><p>83</p></td>
+<td class="text-center"><p>74</p></td>
+<td class="text-center"><p>66</p></td>
+<td class="text-center"><p>59</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><strong>21</strong></p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>91</p></td>
+<td class="text-center"><p>83</p></td>
+<td class="text-center"><p>75</p></td>
+<td class="text-center"><p>67</p></td>
+<td class="text-center"><p>60</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><strong>22</strong></p></td>
+<td class="text-center"><p>100</p></td>
+<td class="text-center"><p>92</p></td>
+<td class="text-center"><p>83</p></td>
+<td class="text-center"><p>76</p></td>
+<td class="text-center"><p>68</p></td>
+<td class="text-center"><p>61</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Верхній рядок - різниця показів сухого та вологого термометрів <span class="math notranslate nohighlight">\(\Delta t = t_{сух} - t_{вол}\)</span>, °C</em></p>
+<p>Нехай сухий термометр показує <strong>20 °C</strong>, а вологий - <strong>16 °C</strong>.</p>
+<ol class="arabic simple">
+<li><p>Температура сухого термометра <span class="math notranslate nohighlight">\(t_{сух} = 20 \text{ °C}\)</span>.</p></li>
+<li><p>Різниця показів <span class="math notranslate nohighlight">\(\Delta t = 20 - 16 = 4 \text{ °C}\)</span>.</p></li>
+<li><p>Знаходимо в таблиці рядок &quot;20&quot; і стовпець &quot;4&quot;. На їхньому перетині стоїть число <strong>66</strong>.</p></li>
+<li><p>Отже, відносна вологість повітря становить 66%.</p></li>
+</ol>
+<p>Наведений приклад таблиці є спрощеним. У довідниках та на метеостанціях використовують більш детальні психрометричні таблиці або спеціальні діаграми, що враховують також і атмосферний тиск для максимально точних вимірювань.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>Вплив вологості на людину та навколишнє середовище<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Вологість повітря є одним із найважливіших кліматичних факторів.</p>
+<section id="id12">
+<h3>Вплив на людину<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Наш організм постійно виділяє вологу через шкіру та дихання для терморегуляції. Комфортне самопочуття людини значною мірою залежить від того, наскільки ефективно відбувається цей процес. Оптимальною для людини вважається відносна вологість <strong>40-60%</strong>.</p>
+<ul class="simple">
+<li><p><strong>Висока вологість (особливо при високій температурі):</strong> Випаровування вологи з поверхні шкіри різко сповільнюється. Організм не може ефективно охолоджуватися, що призводить до перегріву. Ми відчуваємо задуху, &quot;липкість&quot;. Саме тому спека +30 °C у вологому кліматі (наприклад, біля моря) переноситься набагато важче, ніж така ж спека у сухому степовому кліматі.</p></li>
+<li><p><strong>Низька вологість (особливо в опалюваних приміщеннях взимку):</strong> Випаровування відбувається занадто інтенсивно. Це призводить до пересихання слизових оболонок носа, горла, очей. Вони стають більш вразливими до вірусів та бактерій. Також страждає шкіра, вона стає сухою і лущиться.</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h3>Вплив на природу та техніку<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phase_transition">https://en.wikipedia.org/wiki/Phase_transition</a></p></li>
+<li><p><strong>Погода:</strong> Вологість є ключовим фактором у формуванні хмар, туману, опадів (дощу, снігу), роси.</p></li>
+<li><p><strong>Рослини:</strong> Рослини регулюють випаровування води через листя. Вологість повітря впливає на цей процес і, відповідно, на їхній ріст і розвиток.</p></li>
+<li><p><strong>Матеріали:</strong> Багато матеріалів є <strong>гігроскопічними</strong>, тобто здатними поглинати вологу з повітря. Деревина при високій вологості розбухає, а при низькій - зсихається і може тріскатися. Метали швидше піддаються корозії у вологому повітрі.</p></li>
+<li><p><strong>Зберігання:</strong> Зерно, борошно, цукор, сіль потрібно зберігати в сухому місці, інакше вони відсиріють. Твори мистецтва (картини, старовинні книги) вимагають суворого контролю вологості.</p></li>
+<li><p><strong>Технології:</strong> У деяких виробництвах (наприклад, у ткацькій промисловості) підтримують високу вологість, щоб нитки не рвалися. В електроніці, навпаки, надмірна вологість може призвести до коротких замикань, а надто низька - до накопичення статичної електрики.</p></li>
+</ul>
+</section>
+</section>
+<section id="id14">
+<h2>Підсумок<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Термін</p></th>
+<th class="head text-left"><p>Визначення та Формули</p></th>
+<th class="head text-left"><p>Ключові особливості / Примітки</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Вологість повітря</strong></p></td>
+<td class="text-left"><p>Фізична величина, що характеризує вміст водяної пари в атмосфері.</p></td>
+<td class="text-left"><p>Визначає погоду, комфорт людини та природні явища, такі як роса і туман.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Абсолютна вологість</strong> <span class="math notranslate nohighlight">\(\rho_a\)</span></p></td>
+<td class="text-left"><p>Маса водяної пари, що міститься в одиниці об'єму повітря (по суті, густина пари).<br><span class="math notranslate nohighlight">\(\rho_a = \frac{m_{\text{H}_2\text{O}}}{V}\)</span></p></td>
+<td class="text-left"><p>Одиниці вимірювання: <span class="math notranslate nohighlight">\(\text{кг}/\text{м}^3\)</span> або частіше <span class="math notranslate nohighlight">\(\text{г}/\text{м}^3\)</span>. Не дає повного уявлення про відчуття &quot;вологості&quot;.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Насичена водяна пара</strong></p></td>
+<td class="text-left"><p>Пара, що перебуває в динамічній рівновазі зі своєю рідиною.</p></td>
+<td class="text-left"><p>Густина <span class="math notranslate nohighlight">\(\rho_{\text{н.п}}\)</span> та тиск <span class="math notranslate nohighlight">\(p_{\text{н.п}}\)</span> насиченої пари залежать <strong>лише від температури</strong>. Чим вища температура, тим більше пари може міститись у повітрі до насичення.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Відносна вологість</strong> <span class="math notranslate nohighlight">\(\varphi\)</span></p></td>
+<td class="text-left"><p>Показує, наскільки повітря близьке до стану насичення.<br><span class="math notranslate nohighlight">\(\varphi = \frac{\rho_a}{\rho_{\text{н.п}}} \cdot 100\%\)</span><br>або<br><span class="math notranslate nohighlight">\(\varphi = \frac{p}{p_{\text{н.п}}} \cdot 100\%\)</span></p></td>
+<td class="text-left"><p>Вимірюється у відсотках (%). Значення 100% означає, що повітря повністю насичене. Комфортний рівень для людини становить 40-60%.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Точка роси</strong> <span class="math notranslate nohighlight">\(t_p\)</span></p></td>
+<td class="text-left"><p>Температура, до якої потрібно охолодити повітря, щоб водяна пара в ньому стала насиченою (<span class="math notranslate nohighlight">\(\varphi = 100\%\)</span>).</p></td>
+<td class="text-left"><p>При подальшому охолодженні починається конденсація пари (утворення роси, туману). Знаючи <span class="math notranslate nohighlight">\(t_p\)</span>, можна визначити абсолютну вологість: <span class="math notranslate nohighlight">\(\rho_a = \rho_{\text{н.п}}(t_p)\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Конденсаційний гігрометр</strong></p></td>
+<td class="text-left"><p>Прилад, що безпосередньо вимірює <strong>точку роси</strong> <span class="math notranslate nohighlight">\(t_p\)</span>.</p></td>
+<td class="text-left"><p>Принцип дії: охолодження дзеркальної поверхні до моменту появи на ній конденсату.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Волосяний гігрометр</strong></p></td>
+<td class="text-left"><p>Прилад для вимірювання відносної вологості.</p></td>
+<td class="text-left"><p>Принцип дії: властивість знежиреної волосини змінювати свою довжину залежно від вологості повітря. Вважається не дуже точним.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Психрометр</strong></p></td>
+<td class="text-left"><p>Прилад для вимірювання відносної вологості, що складається з сухого та вологого термометрів.</p></td>
+<td class="text-left"><p>Принцип дії: вологий термометр охолоджується через випаровування води. Різниця температур <span class="math notranslate nohighlight">\(\Delta t = t_{сух} - t_{вол}\)</span> тим більша, чим нижча відносна вологість. Вологість визначається за психрометричною таблицею.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id15">
+<h2>Додаткові матеріали<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%81%D1%82%D1%8C_%D0%BF%D0%BE%D0%B2%D1%96%D1%82%D1%80%D1%8F">https://uk.wikipedia.org/wiki/Вологість_повітря</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D1%8F%D0%BD%D0%B0_%D0%BF%D0%B0%D1%80%D0%B0">https://uk.wikipedia.org/wiki/Водяна_пара</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D1%96%D0%B4%D0%BD%D0%BE%D1%81%D0%BD%D0%B0_%D0%B2%D0%BE%D0%BB%D0%BE%D0%B3%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Відносна_вологість</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D1%81%D0%B8%D1%87%D0%B5%D0%BD%D0%B0_%D0%BF%D0%B0%D1%80%D0%B0">https://uk.wikipedia.org/wiki/Насичена_пара</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D1%80%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D1%82%D0%B8%D1%81%D0%BA">https://uk.wikipedia.org/wiki/Парціальний_тиск</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%BE%D1%87%D0%BA%D0%B0_%D1%80%D0%BE%D1%81%D0%B8">https://uk.wikipedia.org/wiki/Точка_роси</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D0%B0">https://uk.wikipedia.org/wiki/Роса</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D1%83%D0%BC%D0%B0%D0%BD">https://uk.wikipedia.org/wiki/Туман</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D1%96%D0%B3%D1%80%D0%BE%D0%BC%D0%B5%D1%82%D1%80">https://uk.wikipedia.org/wiki/Гігрометр</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%81%D0%B8%D1%85%D1%80%D0%BE%D0%BC%D0%B5%D1%82%D1%80">https://uk.wikipedia.org/wiki/Психрометр</a></p></li>
+</ul>
+</section>
+<section id="id16">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Humidity">https://en.wikipedia.org/wiki/Humidity</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Water_vapor">https://en.wikipedia.org/wiki/Water_vapor</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Partial_pressure">https://en.wikipedia.org/wiki/Partial_pressure</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Dew_point">https://en.wikipedia.org/wiki/Dew_point</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Dew">https://en.wikipedia.org/wiki/Dew</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Fog">https://en.wikipedia.org/wiki/Fog</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hygrometer">https://en.wikipedia.org/wiki/Hygrometer</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Psychrometrics">https://en.wikipedia.org/wiki/Psychrometrics</a></p></li>
 </ul>
 </section>
 </section>
@@ -586,11 +957,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="liquid-surface-tension.html"
+       href="phase-transitions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Поверхневий натяг рідини та капілярні явища (в процесі)</p>
+        <p class="prev-next-title">Фазові переходи (в процесі)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -611,8 +982,27 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Абсолютна вологість: Скільки води в повітрі?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Насичена пара та "місткість" повітря</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Відносна вологість: Наскільки повітря "повне"?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Інші формули для відносної вологості</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Точка роси: Межа конденсації</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Прилади для вимірювання вологості</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Конденсаційний гігрометр</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Волосяний гігрометр</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Психрометр</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Вплив вологості на людину та навколишнє середовище</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Вплив на людину</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Вплив на природу та техніку</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
