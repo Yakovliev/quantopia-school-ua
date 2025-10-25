@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Електродинаміка. Задачі. Частина 1 &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/tasks/electrodynamics-classroom-01';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Електромагнітні коливання та хвилі. Задачі" href="electromagnetic-waves-classroom.html" />
+    <link rel="prev" title="Молекулярно-кінетична теорія. Задачі" href="mkt-classroom.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mkt/fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/humidity.html">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/phase-transitions.html">Фазові переходи (в процесі)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища (в процесі)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Електродинаміка. Задачі. Частина 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electromagnetic-waves-classroom.html">Електромагнітні коливання та хвилі. Задачі</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/tasks/electrodynamics-classroom-01.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/tasks/electrodynamics-classroom-01.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/tasks/electrodynamics-classroom-01.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Електродинаміка. Задачі. Частина 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Електричний заряд. Закон Кулона</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Напруженість електричного поля</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Електричний струм та закон Ома</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Робота та потужність постійного струму</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Електродинаміка. Задачі. Частина 1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Електричний заряд. Закон Кулона<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Уявіть, що ви працюєте в лабораторії, яка досліджує властивості нових матеріалів для акумуляторів. Ви маєте дві однакові маленькі металеві кульки. Після контакту з катодом та анодом одна кулька набула заряду +32 нКл, а інша -14 нКл. Згодом ці кульки випадково торкнулися одна одної. Яким стане заряд кожної кульки після дотику?</p>
+<p><strong>Задача 2</strong></p>
+<p>Під час роботи лазерного принтера крихітні частинки тонера (порошкової фарби) отримують електричний заряд, щоб потім притягнутися до паперу в потрібних місцях. Припустимо, що дві однакові частинки тонера, що знаходяться у вакуумі на відстані 1 мм одна від одної, мають однакові негативні заряди. Сила їх взаємного відштовхування дорівнює <span class="math notranslate nohighlight">\(8.1 \cdot 10^{-10}\)</span> Н.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть заряд кожної частинки тонера.</p></li>
+<li><p>Скільком елементарним зарядам відповідає заряд однієї частинки?</p></li>
+</ol>
+<p><strong>Задача 3</strong></p>
+<p>Два квадрокоптери під час нічного шоу з дронами зблизились на мінімальну відстань у 5 метрів. Корпус одного з них внаслідок тертя об повітря набув заряду +2 мкКл, а іншого - заряду -3 мкКл. З якою силою вони взаємодіяли в цей момент? Ця сила була силою притягання чи відштовхування?</p>
+<p><strong>Задача 4</strong></p>
+<p>У сучасних смартфонах використовуються сенсорні екрани, робота яких базується на зміні електричного поля. Уявіть, що два точкові заряди, які моделюють взаємодію пальця з екраном, знаходяться на відстані 3 см один від одного у вакуумі. Заряд першого становить +4·10⁻⁸ Кл, а другого +1·10⁻⁸ Кл. Знайдіть силу, з якою перший заряд діє на другий.</p>
+<p><strong>Задача 5</strong></p>
+<p>В одній з моделей іонного двигуна для космічних апаратів два іони аргону, що втратили по одному електрону, рухаються паралельно один одному. Знайдіть силу електричного відштовхування між цими іонами, коли відстань між ними становить 10 нм. Вважайте, що іони є точковими зарядами.</p>
+<p><strong>Задача 6</strong></p>
+<p>Електростатичні фільтри використовуються для очищення повітря від пилу та алергенів. У такому фільтрі частинка пилу масою 10⁻⁹ г і зарядом +1000e потрапляє в область між двома точковими зарядами. Перший заряд, +1.6 нКл, знаходиться ліворуч від частинки на відстані 2 см. Другий заряд, -1.6 нКл, знаходиться праворуч від частинки на відстані 4 см. Знайдіть модуль і напрямок результуючої сили, що діє на частинку пилу.</p>
+<p><strong>Задача 7</strong></p>
+<p>У дослідженнях з нанотехнологій маніпулюють окремими атомами за допомогою електричного поля. Два точкові заряди, <span class="math notranslate nohighlight">\(q_1 = +4e\)</span> та <span class="math notranslate nohighlight">\(q_2 = +9e\)</span>, закріплені на відстані 20 см один від одного. Де між ними потрібно розмістити третій точковий заряд <span class="math notranslate nohighlight">\(q_3\)</span>, щоб він перебував у рівновазі? Чи залежить положення цього заряду від його знаку та величини?</p>
+<p><strong>Задача 8</strong></p>
+<p>Під час електростатичного фарбування автомобіля краплі фарби заряджають, щоб вони рівномірно осідали на металевій поверхні кузова. Розглянемо дві краплі фарби, що мають однакові заряди. Коли вони знаходяться на відстані 2 см одна від одної, сила відштовхування між ними становить <span class="math notranslate nohighlight">\(F\)</span>. Якою має стати відстань між краплями, щоб сила взаємодії зменшилася в 16 разів?</p>
+<p><strong>Задача 9</strong></p>
+<p>В основі деяких медичних діагностичних методів лежить взаємодія заряджених біологічних молекул. Уявіть, що три точкові заряди розташовані у вершинах рівностороннього трикутника зі стороною 10 см. Заряди <span class="math notranslate nohighlight">\(q_A = +1\)</span> мкКл і <span class="math notranslate nohighlight">\(q_B = +1\)</span> мкКл знаходяться у вершинах A і B відповідно, а заряд <span class="math notranslate nohighlight">\(q_C = -1\)</span> мкКл - у вершині C. Знайдіть модуль і напрямок сили, що діє на заряд у вершині C.</p>
+<p><strong>Задача 10</strong></p>
+<p>Сонячне вітрило - це технологія для руху космічних апаратів, що використовує тиск сонячного світла. Уявіть спрощену модель, де тиск створюється відштовхуванням заряджених частинок сонячного вітру від зарядженої поверхні вітрила. Нехай точкова частинка сонячного вітру із зарядом <span class="math notranslate nohighlight">\(q_1 = +e\)</span> наближається до вітрила. Вітрило можна змоделювати двома нерухомими точковими зарядами <span class="math notranslate nohighlight">\(q_2 = +1000e\)</span> та <span class="math notranslate nohighlight">\(q_3 = +1000e\)</span>, що знаходяться на відстані 2 мкм один від одного. Частинка сонячного вітру рухається вздовж перпендикуляра, проведеного через середину відрізка, що з'єднує заряди <span class="math notranslate nohighlight">\(q_2\)</span> та <span class="math notranslate nohighlight">\(q_3\)</span>. Знайдіть силу, що діє на частинку, коли вона знаходиться на відстані 1 мкм від цього відрізка.</p>
+</section>
+<section id="id3">
+<h2>Напруженість електричного поля<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>У сучасному очищувачі повітря використовується електростатичний фільтр. Пилинка, що пролітає через нього, отримує заряд <span class="math notranslate nohighlight">\(q = 3.2 \cdot 10^{-19}\)</span> Кл. З якою силою електричне поле фільтра з напруженістю <span class="math notranslate nohighlight">\(E = 5000\)</span> Н/Кл діє на цю пилинку?</p>
+<p><strong>Задача 2</strong></p>
+<p>Під час роботи мікросхеми смартфона на одному з її мікроскопічних елементів може накопичуватися статичний заряд, що дорівнює приблизно <span class="math notranslate nohighlight">\(q = -5\)</span> нКл (<span class="math notranslate nohighlight">\(5 \cdot 10^{-9}\)</span> Кл).</p>
+<ol class="arabic simple">
+<li><p>Знайдіть модуль напруженості електричного поля, яке створює цей заряд на відстані <span class="math notranslate nohighlight">\(r = 2\)</span> см від нього.</p></li>
+<li><p>Який напрямок матиме вектор напруженості в цій точці?</p></li>
+</ol>
+<p><strong>Задача 3</strong></p>
+<p>Уявіть датчик, що складається з двох точкових зарядів: позитивного <span class="math notranslate nohighlight">\(+q\)</span> та негативного <span class="math notranslate nohighlight">\(-q\)</span>, розташованих на невеликій відстані один від одного. Як буде напрямлений вектор напруженості <span class="math notranslate nohighlight">\(\vec{E}\)</span> у точці, що лежить точно посередині між цими зарядами? Зробіть схематичний малюнок силових ліній для цієї системи.</p>
+<p><strong>Задача 4</strong></p>
+<p>Медичний прилад для фізіотерапії створює електричне поле за допомогою зарядженого аплікатора, який можна вважати точковим зарядом <span class="math notranslate nohighlight">\(q = 20\)</span> мкКл (<span class="math notranslate nohighlight">\(2 \cdot 10^{-5}\)</span> Кл). На якій відстані від аплікатора напруженість електричного поля дорівнюватиме безпечному для певних процедур значенню <span class="math notranslate nohighlight">\(E = 2000\)</span> Н/Кл?</p>
+<p><strong>Задача 5</strong></p>
+<p>У струменевому принтері краплина чорнила масою <span class="math notranslate nohighlight">\(m = 1.3 \cdot 10^{-10}\)</span> кг і зарядом <span class="math notranslate nohighlight">\(q = -1.5 \cdot 10^{-13}\)</span> Кл влітає в область, де існує однорідне електричне поле з напруженістю <span class="math notranslate nohighlight">\(E = 1.2 \cdot 10^6\)</span> Н/Кл, спрямованою вертикально вгору.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть силу, що діє на краплину з боку електричного поля, та вкажіть її напрямок.</p></li>
+<li><p>Обчисліть прискорення, якого набуває краплина під дією цієї сили.</p></li>
+</ol>
+<p><strong>Задача 6</strong></p>
+<p>Дослідницький дрон вимірює електричне поле грозової хмари, яку можна умовно вважати точковим зарядом. На відстані 500 м від центру хмари прилад зафіксував напруженість <span class="math notranslate nohighlight">\(E_1 = 3000\)</span> Н/Кл.</p>
+<ol class="arabic simple">
+<li><p>Як зміниться напруженість поля, якщо дрон підніметься вище і опиниться на відстані 1.5 км від центру хмари?</p></li>
+<li><p>Обчисліть нове значення напруженості <span class="math notranslate nohighlight">\(E_2\)</span>.</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Два статичних заряди, що виникли на компонентах електронної плати, <span class="math notranslate nohighlight">\(q_1 = +1\)</span> нКл та <span class="math notranslate nohighlight">\(q_2 = +4\)</span> нКл, знаходяться на відстані 30 см один від одного. Знайдіть точку на лінії, що з'єднує ці заряди, в якій напруженість сумарного електричного поля дорівнює нулю.</p>
+<p><strong>Задача 8</strong></p>
+<p>Генератор Ван де Граафа, що використовується в наукових експериментах для прискорення частинок, має металеву сферу радіусом <span class="math notranslate nohighlight">\(R = 20\)</span> см, на якій накопичено заряд <span class="math notranslate nohighlight">\(q = -10\)</span> мкКл (<span class="math notranslate nohighlight">\( -1 \cdot 10^{-5}\)</span> Кл).</p>
+<ol class="arabic simple">
+<li><p>Яка напруженість електричного поля на поверхні сфери?</p></li>
+<li><p>Якою буде напруженість на відстані 1 м від центру сфери?</p></li>
+</ol>
+<p><strong>Задача 9</strong></p>
+<p>У лабораторії для дослідження властивостей аерозолів мікроскопічну кульку масою <span class="math notranslate nohighlight">\(m = 10\)</span> мг (<span class="math notranslate nohighlight">\(10^{-5}\)</span> кг) із зарядом <span class="math notranslate nohighlight">\(q = -2 \cdot 10^{-8}\)</span> Кл утримують у нерухомому стані за допомогою однорідного електричного поля.</p>
+<ol class="arabic simple">
+<li><p>Визначте модуль напруженості <span class="math notranslate nohighlight">\(\vec{E}\)</span> цього електричного поля.</p></li>
+<li><p>Який напрямок має вектор напруженості <span class="math notranslate nohighlight">\(\vec{E}\)</span>?</p></li>
+</ol>
+<p><strong>Задача 10</strong></p>
+<p>Уявіть модель іонної пастки, яка використовується в мас-спектрометрах. Чотири однакові позитивні заряди <span class="math notranslate nohighlight">\(+q\)</span> розташовані у вершинах квадрата.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює напруженість електричного поля в центрі цього квадрата? Поясніть свою відповідь, спираючись на властивості силових ліній та принцип симетрії.</p></li>
+<li><p>Як зміниться ситуація, якщо один із зарядів прибрати? Визначте напрямок та модуль напруженості поля в центрі квадрата, якщо сторона квадрата дорівнює <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2>Електричний струм та закон Ома<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Акумулятор сучасного смартфона має ємність 4500 мА·год. Зарядний пристрій забезпечує силу струму 2 А.</p>
+<ol class="arabic simple">
+<li><p>Який електричний заряд (в кулонах) накопичує повністю заряджений акумулятор?</p></li>
+<li><p>Скільки часу (в годинах) потрібно для повної зарядки цього смартфона, якщо вважати процес зарядки рівномірним?</p></li>
+</ol>
+<p><strong>Задача 2</strong></p>
+<p>Для освітлення рекламної вивіски використовують світлодіодну стрічку, яка підключена до блоку живлення з напругою 12 В. Визначте силу струму, що протікає через стрічку, якщо її загальний опір становить 60 Ом.</p>
+<p><strong>Задача 3</strong></p>
+<p>Ви вирішили підключити потужні аудіоколонки до підсилювача за допомогою мідного дроту.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть опір мідного дроту довжиною 15 м з площею поперечного перерізу 2.5 мм². Питомий опір міді становить 0.017 Ом·мм²/м.</p></li>
+<li><p>Як зміниться опір, якщо для економії ви використаєте дріт такої ж довжини, але з площею перерізу 1.5 мм²?</p></li>
+</ol>
+<p><strong>Задача 4</strong></p>
+<p>Через USB-порт комп'ютера, який використовується для живлення настільного вентилятора, проходить струм силою 500 мА.</p>
+<ol class="arabic simple">
+<li><p>Який заряд пройде через порт за 10 хвилин роботи вентилятора?</p></li>
+<li><p>Скільки електронів пройде через поперечний переріз провідника за цей час? (Заряд електрона <span class="math notranslate nohighlight">\(e \approx 1.6 \cdot 10^{-19}\)</span> Кл).</p></li>
+</ol>
+<p><strong>Задача 5</strong></p>
+<p>Нагрівальний елемент в сучасному 3D-принтері виготовлений з ніхромового дроту довжиною 80 см і площею поперечного перерізу 0.2 мм². Елемент підключений до напруги 24 В. Питомий опір ніхрому становить 1.1 Ом·мм²/м.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть опір нагрівального елемента.</p></li>
+<li><p>Знайдіть силу струму, що проходить через нього під час роботи принтера.</p></li>
+</ol>
+<p><strong>Задача 6</strong></p>
+<p>Для зарядки ноутбука використовується кабель USB Type-C довжиною 2 метри. Кабель складається з двох мідних провідників (для струму), кожен довжиною 2 м. Сила струму під час зарядки досягає 3 А. Площа поперечного перерізу кожного провідника становить 0.34 мм². (Питомий опір міді <span class="math notranslate nohighlight">\(\rho \approx 0.017\)</span> Ом·мм²/м).</p>
+<ol class="arabic simple">
+<li><p>Знайдіть загальний опір струмопровідних ліній у кабелі (враховуйте шлях струму &quot;туди&quot; і &quot;назад&quot;).</p></li>
+<li><p>Обчисліть, яка частина напруги &quot;втрачається&quot; на самому кабелі під час зарядки.</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Акумуляторна батарея електричного самоката має напругу 36 В. Двигун самоката під час рівномірного руху можна розглядати як споживач з постійним опором 4.5 Ом.</p>
+<ol class="arabic simple">
+<li><p>Яка сила струму живить двигун самоката під час руху?</p></li>
+<li><p>Якщо ємність батареї становить 10 А·год, на який час безперервної роботи вистачить її заряду за таких умов?</p></li>
+</ol>
+<p><strong>Задача 8</strong></p>
+<p>Невелика сонячна панель на туристичному рюкзаку в сонячний день генерує напругу 6 В. Її використовують для живлення портативного ліхтарика, опір лампи якого становить 30 Ом.</p>
+<ol class="arabic simple">
+<li><p>Яку силу струму забезпечує сонячна панель при підключенні ліхтарика?</p></li>
+<li><p>Який загальний заряд виробить панель за 4 години безперервної роботи в таких умовах?</p></li>
+</ol>
+<p><strong>Задача 9</strong></p>
+<p>Ви розробляєте простий електронний пристрій, в якому потрібно використати світлодіод. Згідно з його технічними характеристиками, для нормальної роботи через нього має протікати струм 20 мА, а падіння напруги на ньому становить 2 В. Джерелом живлення слугує батарейка на 9 В. Щоб світлодіод не згорів, послідовно з ним потрібно підключити резистор, який &quot;забере&quot; на себе надлишок напруги.</p>
+<ol class="arabic simple">
+<li><p>Яка напруга має бути на резисторі?</p></li>
+<li><p>Обчисліть опір цього резистора.</p></li>
+</ol>
+<p><strong>Задача 10</strong></p>
+<p>Сучасні фітнес-браслети можуть вимірювати склад тіла (відсоток жиру та м'язів), пропускаючи через тіло дуже слабкий, безпечний струм (біоімпедансний аналіз). Уявімо спрощену модель: пристрій прикладає до двох точок на руці напругу 0.5 В і вимірює струм.</p>
+<ol class="arabic simple">
+<li><p>Якщо виміряний струм дорівнює 125 мкА, який електричний опір ділянки тіла між електродами?</p></li>
+<li><p>Після інтенсивного тренування опір тіла зменшився на 10% через потовиділення. Який струм зафіксує пристрій при тій самій напрузі?</p></li>
+</ol>
+</section>
+<section id="id5">
+<h2>Послідовне та паралельне з'єднання провідників<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Для декорування кімнати використовують світлодіодну стрічку, що складається з 50 маленьких світлодіодів, з'єднаних послідовно. Опір кожного світлодіода становить 40 Ом. Визначте загальний опір усієї стрічки.</p>
+<p><strong>Задача 2</strong></p>
+<p>Два ігрові пристрої, підключені до портативного зарядного пристрою (power bank), можна розглядати як два паралельно з'єднані резистори. Опір першого пристрою в режимі зарядки становить 25 Ом, а другого - 30 Ом.</p>
+<ol class="arabic simple">
+<li><p>Який із пристроїв споживає більший струм?</p></li>
+<li><p>Знайдіть загальний опір обох пристроїв.</p></li>
+</ol>
+<p><strong>Задача 3</strong></p>
+<p>Новорічна гірлянда складається з 20 лампочок, з'єднаних послідовно. Гірлянда підключена до мережі з напругою 220 В.</p>
+<ol class="arabic simple">
+<li><p>Яка напруга припадає на кожну окрему лампочку?</p></li>
+<li><p>Якщо опір кожної лампочки 22 Ом, яка сила струму протікає в гірлянді?</p></li>
+</ol>
+<p><strong>Задача 4</strong></p>
+<p>У сучасних автомобілях для освітлення панелі приладів використовують декілька світлодіодів, що підключені паралельно до бортової мережі (12 В). Припустімо, що для підсвітки кнопок клімат-контролю паралельно підключено 3 світлодіоди з однаковим опором 150 Ом кожен. Знайдіть загальний опір цієї ділянки кола.</p>
+<p><strong>Задача 5</strong></p>
+<p>Квадрокоптер має чотири безколекторні двигуни, які для стабільної роботи з'єднані послідовно з платою контролера польоту. Під час польоту через усі двигуни проходить однаковий струм 5 А. Загальна напруга, що подається на ланцюг двигунів, становить 16 В.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть загальний опір усіх чотирьох двигунів.</p></li>
+<li><p>Яка напруга припадає на кожен окремий двигун, якщо їхні опори однакові?</p></li>
+</ol>
+<p><strong>Задача 6</strong></p>
+<p>Дві галогенні лампи в фарах автомобіля підключені паралельно до акумулятора, напруга якого 12 В. Опір однієї лампи становить 4 Ом.</p>
+<ol class="arabic simple">
+<li><p>Визначте загальну силу струму, що споживають обидві лампи.</p></li>
+<li><p>Під час руху одна з ламп перегоріла (коло розімкнулося). Як змінилася загальна сила струму, що йде від акумулятора?</p></li>
+</ol>
+<p><strong>Задача 7</strong></p>
+<p>Для живлення потужного ігрового ноутбука використовується блок живлення, який створює на виході напругу 20 В. Усередині ноутбука система живлення містить два модулі пам'яті, з'єднані паралельно. Перший модуль споживає струм 0.5 А, а другий - 0.7 А.</p>
+<ol class="arabic simple">
+<li><p>Яка напруга подається на кожен із модулів пам'яті?</p></li>
+<li><p>Який загальний струм споживають обидва модулі?</p></li>
+<li><p>Обчисліть опір кожного модуля.</p></li>
+</ol>
+<p><strong>Задача 8</strong></p>
+<p>У сучасній квартирі освітлення на кухні (2 лампи) та у ванній кімнаті (1 лампа) підключено паралельно до загальної мережі 220 В. Опір кожної лампи становить 484 Ом.</p>
+<ol class="arabic simple">
+<li><p>Яка сила струму протікає через кожну з трьох ламп?</p></li>
+<li><p>Який загальний струм споживає освітлення кухні та ванної кімнати, коли всі лампи увімкнені?</p></li>
+</ol>
+<p><strong>Задача 9</strong></p>
+<p>У материнській платі комп'ютера є ділянка кола для живлення процесора. Вона складається з резистора опором <span class="math notranslate nohighlight">\(R_1 = 2\)</span> Ом, який з'єднаний послідовно з двома іншими резисторами <span class="math notranslate nohighlight">\(R_2 = 10\)</span> Ом і <span class="math notranslate nohighlight">\(R_3 = 15\)</span> Ом, що з'єднані між собою паралельно. На всю цю ділянку кола подається напруга 12 В.</p>
+<ol class="arabic simple">
+<li><p>Накресліть схему цієї ділянки кола.</p></li>
+<li><p>Знайдіть загальний опір ділянки.</p></li>
+<li><p>Обчисліть загальну силу струму в ділянці.</p></li>
+<li><p>Знайдіть силу струму, що протікає через резистор <span class="math notranslate nohighlight">\(R_2\)</span>.</p></li>
+</ol>
+<p><strong>Задача 10</strong></p>
+<p>Інженер розробляє систему автоматичного поливу для розумного будинку. Система складається з двох датчиків вологості ґрунту, з'єднаних паралельно (<span class="math notranslate nohighlight">\(R_1 = 300\)</span> Ом, <span class="math notranslate nohighlight">\(R_2 = 300\)</span> Ом), та насоса (<span class="math notranslate nohighlight">\(R_3 = 50\)</span> Ом), який підключений до них послідовно. Система живиться від джерела напругою 24 В.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть еквівалентний опір паралельно з'єднаних датчиків.</p></li>
+<li><p>Знайдіть загальний опір усього кола.</p></li>
+<li><p>Яка напруга буде на затискачах насоса під час роботи?</p></li>
+</ol>
+</section>
+<section id="id6">
+<h2>Робота та потужність постійного струму<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Зарядний пристрій для смартфона працює з напругою 5 В і створює силу струму 2 А. Яку роботу виконає електричний струм за 30 хвилин роботи пристрою? Відповідь надайте у джоулях (Дж).</p>
+<p><strong>Задача 2</strong></p>
+<p>Світлодіодна стрічка, що використовується для декоративного освітлення, розрахована на напругу 12 В. Визначте її потужність, якщо сила струму в стрічці становить 1.5 А.</p>
+<p><strong>Задача 3</strong></p>
+<p>Під час інтенсивної роботи, наприклад, у відеогрі, опір одного з блоків процесора комп'ютера становить 0.5 Ом, а сила струму, що проходить через нього, досягає 20 А. Яка кількість теплоти виділиться в цьому блоці за 1 хвилину роботи?</p>
+<p><strong>Задача 4</strong></p>
+<p>Двигун електросамоката під час рівномірного руху споживає потужність 350 Вт. Яку роботу виконує струм у двигуні за 10 хвилин поїздки? Відповідь виразіть у кілоджоулях (кДж).</p>
+<p><strong>Задача 5</strong></p>
+<p>Електричний чайник потужністю 2200 Вт повинен закип'ятити 1.5 л води, початкова температура якої 20 °C (температура кипіння 100 °C).</p>
+<ol class="arabic simple">
+<li><p>Скільки енергії (теплоти) для цього потрібно? Питома теплоємність води - 4200 Дж/(кг·°C), густина води - 1000 кг/м³.</p></li>
+<li><p>Скільки часу триватиме нагрівання, якщо ККД (коефіцієнт корисної дії) чайника становить 90% (тобто 10% енергії втрачається)?</p></li>
+</ol>
+<p><strong>Задача 6</strong></p>
+<p>Портативна сонячна панель у ясний день генерує потужність 20 Вт. За який час вона зможе повністю зарядити повербанк ємністю 10 000 мА·год (або 10 А·год), якщо напруга зарядки становить 5 В? Втратами енергії знехтуйте.
+<em>Підказка:</em> спочатку знайдіть повну роботу (енергію), яку необхідно виконати для зарядки повербанка за формулою <span class="math notranslate nohighlight">\(A = qU\)</span>.</p>
+<p><strong>Задача 7</strong></p>
+<p>Ігровий комп'ютер під час гри споживає від свого блоку живлення потужність 500 Вт. ККД самого блоку живлення становить 85%.</p>
+<ol class="arabic simple">
+<li><p>Яку потужність комп'ютер насправді споживає від розетки?</p></li>
+<li><p>Яка потужність перетворюється на тепло всередині самого блоку живлення?</p></li>
+</ol>
+<p><strong>Задача 8</strong></p>
+<p>В освітлювальній мережі квартири (напруга 220 В) паралельно підключені дві лампи: одна потужністю 60 Вт, а інша - 100 Вт.</p>
+<ol class="arabic simple">
+<li><p>Знайдіть опір кожної лампи в робочому стані.</p></li>
+<li><p>Яка загальна сила струму в підвідних проводах, коли обидві лампи увімкнені?</p></li>
+</ol>
+<p><strong>Задача 9</strong></p>
+<p>Електрична мережа на кухні розрахована на напругу 220 В і захищена автоматичним вимикачем (запобіжником) на 16 А. Чи спрацює захист, якщо одночасно увімкнути електрочайник потужністю 2200 Вт, мікрохвильову піч потужністю 1100 Вт та тостер потужністю 880 Вт? Відповідь обґрунтуйте розрахунками.</p>
+<p><strong>Задача 10</strong></p>
+<p>Електростанція повинна передати споживачам потужність 110 МВт (мегават). Опір лінії електропередачі становить 5 Ом. Визначте потужність, що втрачається у вигляді тепла в проводах, якщо передача здійснюється під напругою:</p>
+<ol class="arabic simple">
+<li><p>220 кВ (кіловольт).</p></li>
+<li><p>550 кВ (кіловольт).</p></li>
+<li><p>Зробіть висновок, чому для передачі електроенергії на великі відстані використовують високу напругу.</p></li>
+</ol>
+<p><strong>Задача 11</strong></p>
+<p>Нагрівальний елемент 3D-принтера має опір 6 Ом і живиться від джерела напругою 24 В.</p>
+<ol class="arabic simple">
+<li><p>Яку максимальну потужність він може виділяти?</p></li>
+<li><p>Для підтримки стабільної температури друку електроніка принтера швидко вмикає та вимикає нагрівач. Який відсоток часу нагрівач має бути увімкненим, щоб середня потужність, що виділяється, становила 32 Вт?</p></li>
+</ol>
+<p><strong>Задача 12</strong></p>
+<p>Серверна стійка в дата-центрі споживає потужність 15 кВт. Практично вся ця електрична енергія перетворюється на тепло, яке має постійно відводити система кондиціонування.</p>
+<ol class="arabic simple">
+<li><p>Яку кількість теплоти (в МДж, мегаджоулях) виділяє стійка за 24 години безперервної роботи?</p></li>
+<li><p>Якою буде вартість спожитої стійкою електроенергії за одну добу, якщо ціна 1 кВт·год становить 4.32 грн?</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\tasks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="mkt-classroom.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Молекулярно-кінетична теорія. Задачі</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="electromagnetic-waves-classroom.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Електромагнітні коливання та хвилі. Задачі</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Електричний заряд. Закон Кулона</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Напруженість електричного поля</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Електричний струм та закон Ома</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Робота та потужність постійного струму</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
