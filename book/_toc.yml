@@ -108,6 +108,8 @@ parts:
   - caption: ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ
     chapters:
       - file: physics/electromagnetic-waves/electromagnetic-oscillations
+      - file: physics/electromagnetic-waves/damped-electromagnetic-oscillations
+      - file: physics/electromagnetic-waves/self-oscillations
 
   - caption: ОПТИКА
     chapters:

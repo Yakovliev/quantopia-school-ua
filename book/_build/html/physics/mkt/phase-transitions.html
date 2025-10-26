@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Фазові переходи (в процесі) &#8212; Quantopia School UA</title>
+    <title>Фазові переходи &#8212; Quantopia School UA</title>
   
   
   
@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/phase-transitions';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -227,7 +229,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
 <li class="toctree-l1"><a class="reference internal" href="evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
 <li class="toctree-l1"><a class="reference internal" href="humidity.html">Вологість повітря</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Фазові переходи (в процесі)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Фазові переходи</a></li>
 <li class="toctree-l1"><a class="reference internal" href="liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища (в процесі)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
@@ -266,6 +268,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/self-oscillations.html">Автоколивання</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -509,7 +513,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Фазові переходи (в процесі)</h1>
+    <h1>Фазові переходи</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -519,8 +523,25 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке фаза та рівноважний стан?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Термодинаміка фазових переходів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Плавлення та кристалізація (тверде тіло - рідина)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Пароутворення та конденсація (рідина - газ)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Фазова діаграма: карта станів речовини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ключові елементи фазової діаграми</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Особливі точки на діаграмі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Особливі фазові стани та переходи</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Рідкі кристали (РК)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Інші фазові переходи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -533,17 +554,265 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Фазові переходи (в процесі)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>Фазові переходи<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>У попередніх темах ми детально розібрали, що речовина складається з частинок, які безперервно рухаються та взаємодіють. Саме співвідношення між енергією їхнього руху (кінетичною) та енергією взаємодії (потенціальною) визначає агрегатний стан речовини: твердий, рідкий чи газоподібний.</p>
+<p>Сьогодні ми розглянемо ці стани більш формально і, що найголовніше, дослідимо процеси переходу між ними.</p>
 <section id="id2">
-<h2>Додаткові матеріали<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h2>Що таке фаза та рівноважний стан?<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У фізиці поняття &quot;агрегатний стан&quot; є частиною більш загального поняття &quot;фаза&quot;.</p>
+<blockquote>
+<div><p><strong>Фаза</strong> - це однорідна за своїми фізичними властивостями частина системи, відокремлена від інших частин поверхнею поділу.</p>
+</div></blockquote>
+<p>Простими словами, якщо ми бачимо чітку межу, яка розділяє речовину на частини з різними властивостями, то ми маємо справу з різними фазами.</p>
+<ul class="simple">
+<li><p>Лід, що плаває у воді, - це система з двох фаз: твердої (лід) та рідкої (вода).</p></li>
+<li><p>Вода та її насичена пара в закритій посудині - це також система з двох фаз.</p></li>
+<li><p>Суміш води та олії - теж двофазна система, оскільки вони не змішуються і мають чітку межу поділу.</p></li>
+<li><p>А от суміш азоту та кисню в повітрі - це одна газова фаза, бо гази повністю змішуються і система є однорідною.</p></li>
+</ul>
+<p>Ми будемо розглядати <strong>рівноважні стани</strong>, тобто такі стани, в яких макроскопічні параметри системи (тиск <span class="math notranslate nohighlight">\(p\)</span>, об'єм <span class="math notranslate nohighlight">\(V\)</span>, температура <span class="math notranslate nohighlight">\(T\)</span>) залишаються незмінними як завгодно довго за відсутності зовнішніх впливів. Перехід з одного такого рівноважного стану в інший називається <strong>фазовим переходом</strong>.</p>
+<blockquote>
+<div><p><strong>Фазовий перехід</strong> - це процес переходу речовини з однієї фази в іншу при зміні зовнішніх умов (зазвичай температури або тиску).</p>
+</div></blockquote>
+<p>Примітка: поняття &quot;агрегатний стан&quot; є дещо вужчим за поняття &quot;фаза&quot;, як зазначено вище. Наприклад, алмаз і графіт - це дві різні тверді фази однієї й тієї ж речовини (вуглецю), хоча обидві перебувають в одному агрегатному стані.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Термодинаміка фазових переходів<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Розглянемо найважливіші фазові переходи, пов'язані зі зміною агрегатного стану. Ключовим моментом тут є робота з енергією.</p>
+<section id="id4">
+<h3>Плавлення та кристалізація (тверде тіло - рідина)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Уявімо, що ми взяли шматок льоду і почали його повільно нагрівати.</p>
+<ol class="arabic simple">
+<li><p>Спочатку температура льоду зростає. Ми надаємо тепло, і воно йде на збільшення кінетичної енергії молекул води - вони починають коливатися сильніше у вузлах кристалічної ґратки.</p></li>
+<li><p>Коли температура досягає 0 °C (за нормального тиску), лід починає плавитися. І тут відбувається найцікавіше: ми продовжуємо підводити тепло, але температура суміші льоду та води <strong>не змінюється</strong>! Вона залишається 0 °C, доки весь лід не розплавиться.</p></li>
+</ol>
+<p><strong>Куди ж дівається енергія?</strong></p>
+<p>З точки зору МКТ, плавлення - це процес руйнування кристалічної ґратки. Енергія, яку ми підводимо, йде не на збільшення швидкості руху молекул (тобто не на збільшення їхньої кінетичної енергії), а на <strong>збільшення їхньої потенціальної енергії</strong>. Ця енергія потрібна, щоб подолати сили притягання між молекулами і &quot;вирвати&quot; їх із жорстких вузлів ґратки, давши їм свободу переміщатися одна відносно одної, як у рідині.</p>
+<blockquote>
+<div><p><strong>Температура плавлення</strong> - це температура, за якої тверда кристалічна речовина переходить у рідкий стан. Під час плавлення температура речовини не змінюється.</p>
+</div></blockquote>
+<p>Для кількісного опису цього процесу вводиться спеціальна фізична величина.</p>
+<blockquote>
+<div><p><strong>Питома теплота плавлення</strong> <span class="math notranslate nohighlight">\(\lambda\)</span> (лямбда) - це фізична величина, що показує, яку кількість теплоти необхідно надати 1 кг кристалічної речовини, щоб за температури плавлення повністю перетворити її на рідину.</p>
+</div></blockquote>
+<p>Одиниця в СІ: <strong>Джоуль на кілограм (Дж/кг)</strong>.</p>
+<p>Кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span>, необхідна для плавлення тіла масою <span class="math notranslate nohighlight">\(m\)</span>, розраховується за формулою:</p>
+<div class="math notranslate nohighlight">
+\[Q = \lambda m\]</div>
+<p><strong>Кристалізація (тверднення)</strong> - це зворотний процес переходу з рідкого стану в твердий. Він відбувається за тієї ж температури, що й плавлення. При кристалізації, навпаки, <strong>виділяється</strong> точно така ж кількість теплоти. Молекули, &quot;шикуючись&quot; у кристалічну ґратку, зменшують свою потенціальну енергію, і цей надлишок виділяється у вигляді тепла.</p>
+</section>
+<section id="id5">
+<h3>Пароутворення та конденсація (рідина - газ)<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Ці процеси ми вже детально обговорювали, коли розглядали насичену пару та вологість. Давайте тепер зосередимось на енергетичному аспекті.</p>
+<p>Як і при плавленні, при кипінні рідини вся енергія, що підводиться, йде не на нагрівання, а на сам фазовий перехід.</p>
+<blockquote>
+<div><p><strong>Температура кипіння</strong> - це температура, за якої рідина інтенсивно перетворюється на пару по всьому об'єму. Під час кипіння температура рідини не змінюється.</p>
+</div></blockquote>
+<p>Енергія, що підводиться під час кипіння, йде на:</p>
+<ol class="arabic simple">
+<li><p>Подолання сил міжмолекулярного притягання в рідині, щоб &quot;відірвати&quot; молекули одна від одної.</p></li>
+<li><p>Виконання роботи проти сил зовнішнього тиску, оскільки пара займає значно більший об'єм, ніж рідина.</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Питома теплота пароутворення</strong> <span class="math notranslate nohighlight">\(L\)</span> - це фізична величина, що показує, яку кількість теплоти необхідно надати 1 кг рідини, щоб за температури кипіння повністю перетворити її на пару.</p>
+</div></blockquote>
+<p>Одиниця в СІ: <strong>Джоуль на кілограм (Дж/кг)</strong>.</p>
+<p>Кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span>, необхідна для перетворення на пару рідини масою <span class="math notranslate nohighlight">\(m\)</span>, розраховується за формулою:</p>
+<div class="math notranslate nohighlight">
+\[Q = L m\]</div>
+<p><strong>Конденсація</strong> - це зворотний процес. При конденсації пара виділяє точно таку ж кількість теплоти.</p>
+<p><strong>Цікавий факт:</strong> Питома теплота пароутворення води (<span class="math notranslate nohighlight">\(L \approx 2.3 \cdot 10^6\)</span> Дж/кг) набагато більша за питому теплоту плавлення льоду (<span class="math notranslate nohighlight">\(\lambda \approx 3.3 \cdot 10^5\)</span> Дж/кг). Чому?</p>
+<ul class="simple">
+<li><p><strong>Аналогія:</strong> Уявіть собі театр, повний глядачів на своїх місцях (тверде тіло).</p>
+<ul>
+<li><p><strong>Плавлення:</strong> Щоб глядачі могли вільно ходити по залу, але не виходити з нього, потрібно подолати &quot;порядок&quot; сидіння. Це вимагає певної енергії (<span class="math notranslate nohighlight">\(\lambda\)</span>).</p></li>
+<li><p><strong>Пароутворення:</strong> Щоб глядачі не просто ходили по залу, а повністю покинули будівлю театру і розійшлися по місту, потрібно набагато більше енергії (<span class="math notranslate nohighlight">\(L\)</span>).</p></li>
+</ul>
+</li>
+</ul>
+<p>Так само і з молекулами: при плавленні ми лише руйнуємо дальній порядок, але молекули залишаються близько одна до одної. При пароутворенні ми практично повністю розриваємо зв'язки між ними, розводячи їх на великі відстані. Це вимагає значно більше енергії.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Фазова діаграма: карта станів речовини<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Ми звикли думати, що вода замерзає при 0 °C і кипить при 100 °C. Але ми вже знаємо, що температура кипіння залежить від тиску. Виявляється, температура плавлення також залежить від тиску, хоч і значно слабше.</p>
+<p>Щоб наочно представити, в якому фазовому стані буде знаходитись речовина за певних умов, використовують <strong>фазові діаграми</strong>.</p>
+<blockquote>
+<div><p><strong>Фазова діаграма</strong> - це графік, що показує рівноважні стани речовини (фази) залежно від макроскопічних параметрів, зазвичай тиску <span class="math notranslate nohighlight">\(p\)</span> та температури <span class="math notranslate nohighlight">\(T\)</span>.</p>
+</div></blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Phase-diag_uk.svg" alt="Phase-diag uk.svg" height="443" width="575">
+<br>
+Рис. 1. Типова фазова діаграма для однокомпонентного матеріалу, що включає тверду, рідку та газоподібну фази. Суцільна зелена лінія показує звичайну форму кривої плавлення. Пунктірна зелена лінія показує аномальну поведінку води (це також крива плавлення, але для води).
+Автор: <a href="https://commons.wikimedia.org/w/index.php?title=User:Bogdan8249&action=edit&redlink=1" class="new" title="User:Bogdan8249 (page does not exist)">Bogdan8249</a> - translation from <a href="https://commons.wikimedia.org/wiki/File:Phase-diag.svg" title="File:Phase-diag.svg">Image:Phase-diag.svg</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=158215519">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Фазовий_перехід">Wikipedia</a></p><p>Давайте детально розберемо фазову діаграму на прикладі води, яка має деякі унікальні особливості.</p>
+<section id="id7">
+<h3>Ключові елементи фазової діаграми<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Осі координат:</strong> По вертикалі відкладено тиск <span class="math notranslate nohighlight">\(p\)</span>, по горизонталі - абсолютну температуру <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>На діаграмі ми бачимо три області, що відповідають трьом фазам: <strong>Тверда (Лід)</strong>, <strong>Рідка (Вода)</strong>, <strong>Газоподібна (Пара)</strong>. Якщо точка з координатами (<span class="math notranslate nohighlight">\(T, p\)</span>) лежить всередині однієї з цих областей, то при таких умовах речовина існуватиме саме в цій фазі. Ці області розділені трьома кривими.</p>
+<ol class="arabic simple">
+<li><p><strong>Крива плавлення:</strong> Ця лінія розділяє тверду та рідку фази (Рис. 1). Будь-яка точка на цій кривій відповідає умовам (тиску та температурі), за яких лід і вода можуть співіснувати в рівновазі.</p>
+<ul class="simple">
+<li><p><strong>Особливість води:</strong> Зверніть увагу, що крива AB для води має <strong>від'ємний нахил</strong>. Це означає, що <strong>зі збільшенням тиску температура плавлення льоду зменшується!</strong> Це аномальна властивість (у більшості речовин навпаки). Саме завдяки цьому ковзани легко ковзають по льоду: під великим тиском леза ковзана лід плавиться, утворюючи тонкий шар води, який зменшує силу тертя.</p></li>
+</ul>
+</li>
+<li><p><strong>Крива пароутворення:</strong> Ця лінія розділяє рідку та газоподібну фази (Рис. 1). Точки на цій кривій показують, за якої температури кипить вода при заданому тиску (або, що те ж саме, який тиск має насичена пара при заданій температурі).</p></li>
+<li><p><strong>Крива сублімації:</strong> Ця лінія розділяє тверду та газоподібну фази (Рис. 1). Вона показує умови, за яких тверде тіло може переходити безпосередньо в газ, минаючи рідку фазу. Цей процес називається <strong>сублімацією</strong> (або <strong>випаровуванням твердих тіл</strong>).</p>
+<ul class="simple">
+<li><p><strong>Приклад:</strong> Сухий лід (твердий вуглекислий газ) за звичайного тиску не плавиться, а одразу випаровується. Мокра білизна висихає на морозі - це теж сублімація льоду.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id8">
+<h3>Особливі точки на діаграмі<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>На фазовій діаграмі є дві унікальні точки.</p>
+<p><strong>Потрійна точка</strong></p>
+<blockquote>
+<div><p><strong>Потрійна точка</strong> - це унікальна для кожної речовини точка на фазовій діаграмі, що відповідає таким значенням тиску і температури, за яких у рівновазі можуть одночасно існувати всі три фази: тверда, рідка і газоподібна.</p>
+</div></blockquote>
+<p>Для води потрійна точка має координати:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T \approx 273.16 \text{ K}\)</span> (або +0.01 °C)</p></li>
+<li><p><span class="math notranslate nohighlight">\(p \approx 611.657 \text{ Па}\)</span> (це дуже низький тиск, приблизно в 165 разів менший за нормальний атмосферний).</p></li>
+</ul>
+<p><strong>Критична точка</strong></p>
+<p>Рухаючись по кривій пароутворення BC вгору, ми бачимо, що зі зростанням температури і тиску густина рідини зменшується (вона розширюється), а густина насиченої пари зростає. У точці C густини рідини і пари стають однаковими.</p>
+<blockquote>
+<div><p><strong>Критична точка</strong> - це точка на фазовій діаграмі, в якій зникає різниця у фізичних властивостях між рідиною та її насиченою парою. Межа поділу між ними зникає.</p>
+</div></blockquote>
+<p>Параметри, що відповідають цій точці, називаються критичними:</p>
+<ul class="simple">
+<li><p><strong>Критична температура (<span class="math notranslate nohighlight">\(T_{\text{кр}}\)</span>)</strong> - це температура, вище якої речовина не може існувати в рідкому стані, яким би високим не був тиск.</p></li>
+<li><p><strong>Критичний тиск (<span class="math notranslate nohighlight">\(p_{\text{кр}}\)</span>)</strong> - максимальний тиск, при якому може спостерігатися фазова границя між рідиною та газом.</p></li>
+</ul>
+<p>Для води <span class="math notranslate nohighlight">\(T_{\text{кр}} \approx 647 \text{ K}\)</span> (374 °C), <span class="math notranslate nohighlight">\(p_{\text{кр}} \approx 22.1 \text{ МПа}\)</span> (у 218 разів більше атмосферного).</p>
+<p>Стан речовини при <span class="math notranslate nohighlight">\(T &gt; T_{\text{кр}}\)</span> і <span class="math notranslate nohighlight">\(p &gt; p_{\text{кр}}\)</span> називається <strong>надкритичною рідиною (надкритичним флюїдом)</strong>. Це особливий стан, який має густину, як у рідини, але в'язкість і здатність до дифузії, як у газу.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Особливі фазові стани та переходи<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Окрім класичних трьох станів, існують і інші, не менш цікаві фазові стани.</p>
+<section id="id10">
+<h3>Рідкі кристали (РК)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Це особливий проміжний стан (фаза), в якому деякі речовини перебувають між твердим кристалічним та рідким станами.</p>
+<blockquote>
+<div><p><strong>Рідкі кристали</strong> - це фазовий стан, що поєднує в собі властивості як рідини, так і кристала.</p>
+</div></blockquote>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/LiquidCrystal-MesogenOrder-Nematic.jpg" alt="LiquidCrystal-MesogenOrder-Nematic.jpg" height="513" width="328">
+<br>
+Рис. 2. Приклад нематичного рідкого кристалу. Вирівнювання в нематичній фазі.
+By <a href="https://commons.wikimedia.org/w/index.php?title=User:Kebes&action=edit&redlink=1" class="new" title="User:Kebes (page does not exist)">Kebes</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=4170779">Link</a>. <a href="https://en.wikipedia.org/wiki/Liquid_crystal">Wikipedia</a></p><ul class="simple">
+<li><p>Від рідин вони взяли <strong>плинність</strong> - здатність текти і приймати форму посудини.</p></li>
+<li><p>Від кристалів - <strong>анізотропію</strong>, тобто залежність фізичних властивостей (оптичних, електричних) від напрямку. Примітка: звичайна рідина є <strong>ізотропною</strong> - її властивості однакові в усіх напрямках.</p></li>
+</ul>
+<p>Як це можливо? Молекули рідких кристалів зазвичай мають видовжену, паличкоподібну форму.</p>
+<ul class="simple">
+<li><p>У твердому стані вони впорядковані і за положенням (утворюють кристалічну ґратку), і за орієнтацією.</p></li>
+<li><p>У рідкому стані вони рухаються хаотично і не мають жодного порядку.</p></li>
+<li><p>У рідкокристалічному стані молекули втрачають порядок у розташуванні (немає ґратки, вони можуть вільно переміщатися), але зберігають <strong>дальній орієнтаційний порядок</strong>. Це означає, що осі більшості молекул у всьому об'ємі напрямлені переважно в один бік.</p></li>
+</ul>
+<p><strong>Аналогія:</strong> Уявіть коробку, наповнену олівцями.</p>
+<ul class="simple">
+<li><p><strong>Твердий кристал:</strong> Олівці акуратно складені в ряди, нерухомі.</p></li>
+<li><p><strong>Рідина:</strong> Олівці хаотично накидані і перемішані.</p></li>
+<li><p><strong>Рідкий кристал:</strong> Олівці можуть вільно ковзати один відносно одного, але всі вони орієнтовані в одному напрямку.</p></li>
+</ul>
+<p>Найбільш поширеними є <strong>нематичні рідкі кристали</strong> (нематики). У них молекули хаотично розташовані в просторі, але їхні довгі осі здебільшого орієнтовані вздовж одного напрямку. Кажуть, що в них є <strong>дальній орієнтаційний порядок</strong>.</p>
+<p>Найвідоміше застосування рідких кристалів - це <strong>РК-екрани (рідкокристалічні екрани)</strong> (LCD - Liquid Crystal Display) в моніторах, телевізорах, калькуляторах. Принцип їхньої роботи ґрунтується на тому, що під дією електричного поля молекули РК можуть змінювати свою орієнтацію. Це, в свою чергу, змінює їхні оптичні властивості - вони можуть або пропускати поляризоване світло, або блокувати його. Керуючи електричним полем у кожній комірці (пікселі), можна створювати зображення.</p>
+</section>
+<section id="id11">
+<h3>Інші фазові переходи<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Поняття фазового переходу є набагато ширшим, ніж просто зміна агрегатного стану.</p>
+<p>Деякі матеріали, як-от залізо, кобальт, нікель, є <strong>феромагнетиками</strong>. Вони можуть сильно намагнічуватися і створювати власне магнітне поле. Ця властивість пов'язана з упорядкованою орієнтацією мікроскопічних магнітних моментів атомів.</p>
+<p>Якщо нагрівати феромагнетик, то при досягненні певної температури, яка називається <strong>точкою Кюрі</strong>, тепловий рух руйнує цей порядок. Речовина втрачає свої феромагнітні властивості і переходить в іншу магнітну фазу - <strong>парамагнітну</strong> (здатна лише дуже слабо намагнічуватися). Цей перехід також є фазовим.</p>
+<p>При дуже низьких температурах деякі метали та сплави переходять у <strong>надпровідний стан</strong>. Це також фазовий перехід. Нижче певної критичної температури електричний опір матеріалу стрибком падає до нуля. Це означає, що одного разу запущений в такому надпровідному кільці електричний струм може циркулювати в ньому практично вічно без втрат.</p>
+<p>Переходи феромагнетик-парамагнетик та перехід у надпровідний стан є прикладами <strong>фазових переходів другого роду</strong>. На відміну від <strong>фазових переходів першого роду</strong> (плавлення, кипіння), вони відбуваються без поглинання чи виділення прихованої теплоти, але зі стрибкоподібною зміною таких властивостей, як теплоємність або магнітна сприйнятливість.</p>
+</section>
+</section>
+<section id="id12">
+<h2>Підсумок<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Поняття / Процес</p></th>
+<th class="head"><p>Опис та ключові формули</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Фаза</strong></p></td>
+<td><p>Однорідна за фізичними властивостями частина системи, відокремлена від інших частин поверхнею поділу.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Фазовий перехід</strong></p></td>
+<td><p>Процес переходу речовини з однієї фази в іншу при зміні зовнішніх умов (тиску <span class="math notranslate nohighlight">\(p\)</span> або температури <span class="math notranslate nohighlight">\(T\)</span>).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Плавлення та Кристалізація</strong></p></td>
+<td><p>Перехід <strong>тверде тіло ↔ рідина</strong>. Відбувається за сталої температури плавлення.<br> • <strong>Плавлення</strong>: поглинання тепла.<br> • <strong>Кристалізація</strong>: виділення тепла.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Питома теплота плавлення</strong> <span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+<td><p>Енергія, необхідна для плавлення 1 кг речовини за температури плавлення.<br>Кількість теплоти для плавлення: <span class="math notranslate nohighlight">\(Q = \lambda m\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Пароутворення та Конденсація</strong></p></td>
+<td><p>Перехід <strong>рідина ↔ газ</strong>. Кипіння відбувається за сталої температури кипіння.<br> • <strong>Пароутворення</strong>: поглинання тепла.<br> • <strong>Конденсація</strong>: виділення тепла.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Питома теплота пароутворення</strong> <span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td><p>Енергія, необхідна для перетворення на пару 1 кг рідини за температури кипіння.<br>Кількість теплоти для пароутворення: <span class="math notranslate nohighlight">\(Q = L m\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Сублімація</strong></p></td>
+<td><p>Прямий перехід речовини з твердого стану в газоподібний, минаючи рідку фазу.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Фазова діаграма</strong></p></td>
+<td><p>Графік, що показує рівноважні фазові стани речовини залежно від тиску <span class="math notranslate nohighlight">\(p\)</span> та температури <span class="math notranslate nohighlight">\(T\)</span>. Складається з областей (фаз) та кривих (умов співіснування фаз).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Потрійна точка</strong></p></td>
+<td><p>Унікальні значення <span class="math notranslate nohighlight">\(p\)</span> і <span class="math notranslate nohighlight">\(T\)</span>, за яких у рівновазі одночасно існують тверда, рідка і газоподібна фази.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Критична точка</strong></p></td>
+<td><p>Точка на фазовій діаграмі (<span class="math notranslate nohighlight">\(p_{\text{кр}}, T_{\text{кр}}\)</span>), в якій зникає різниця у властивостях між рідиною та її насиченою парою. Вище критичної температури <span class="math notranslate nohighlight">\(T_{\text{кр}}\)</span> речовина не може існувати в рідкому стані.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Рідкі кристали (РК)</strong></p></td>
+<td><p>Проміжний фазовий стан, що поєднує <strong>плинність</strong> (як рідина) та <strong>анізотропію</strong> властивостей (як кристал).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Фазові переходи I роду</strong></p></td>
+<td><p>Супроводжуються поглинанням або виділенням прихованої теплоти (теплоти переходу).<br><em>Приклади: плавлення, кипіння, сублімація.</em></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Фазові переходи II роду</strong></p></td>
+<td><p>Відбуваються <strong>без</strong> виділення чи поглинання теплоти, але зі стрибкоподібною зміною інших властивостей.<br><em>Приклади: перехід феромагнетик-парамагнетик, перехід у надпровідний стан.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id13">
+<h2>Додаткові матеріали<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B7%D0%BE%D0%B2%D0%B8%D0%B9_%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D1%96%D0%B4">https://uk.wikipedia.org/wiki/Фазовий_перехід</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%90%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82%D0%BD%D0%B8%D0%B9_%D1%81%D1%82%D0%B0%D0%BD">https://uk.wikipedia.org/wiki/Агрегатний_стан</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0_%D0%B4%D1%96%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%B0">https://uk.wikipedia.org/wiki/Фазова_діаграма</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D1%83%D0%B1%D0%BB%D1%96%D0%BC%D0%B0%D1%86%D1%96%D1%8F_(%D1%84%D1%96%D0%B7%D0%B8%D0%BA%D0%B0)">https://uk.wikipedia.org/wiki/Сублімація_(фізика)</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D1%82%D1%80%D1%96%D0%B9%D0%BD%D0%B0_%D1%82%D0%BE%D1%87%D0%BA%D0%B0">https://uk.wikipedia.org/wiki/Потрійна_точка</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B4%D0%BA%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%80%D1%96%D0%B4%D0%B8%D0%BD%D0%B0">https://uk.wikipedia.org/wiki/Надкритична_рідина</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B4%D0%BA%D1%96_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%B8">https://uk.wikipedia.org/wiki/Рідкі_кристали</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0_%D0%9A%D1%8E%D1%80%D1%96">https://uk.wikipedia.org/wiki/Температура_Кюрі</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B4%D0%BF%D1%80%D0%BE%D0%B2%D1%96%D0%B4%D0%BD%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Надпровідність</a></p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phase_transition">https://en.wikipedia.org/wiki/Phase_transition</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phase_(matter)">https://en.wikipedia.org/wiki/Phase_(matter)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/State_of_matter">https://en.wikipedia.org/wiki/State_of_matter</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Enthalpy_of_fusion">https://en.wikipedia.org/wiki/Enthalpy_of_fusion</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phase_diagram">https://en.wikipedia.org/wiki/Phase_diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sublimation_(phase_transition)">https://en.wikipedia.org/wiki/Sublimation_(phase_transition)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Triple_point">https://en.wikipedia.org/wiki/Triple_point</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Critical_point_(thermodynamics)">https://en.wikipedia.org/wiki/Critical_point_(thermodynamics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Supercritical_fluid">https://en.wikipedia.org/wiki/Supercritical_fluid</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Liquid_crystal">https://en.wikipedia.org/wiki/Liquid_crystal</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Liquid-crystal_display">https://en.wikipedia.org/wiki/Liquid-crystal_display</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Curie_temperature">https://en.wikipedia.org/wiki/Curie_temperature</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Superconductivity">https://en.wikipedia.org/wiki/Superconductivity</a></p></li>
 </ul>
 </section>
 </section>
@@ -613,8 +882,25 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Що таке фаза та рівноважний стан?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Термодинаміка фазових переходів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Плавлення та кристалізація (тверде тіло - рідина)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Пароутворення та конденсація (рідина - газ)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Фазова діаграма: карта станів речовини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Ключові елементи фазової діаграми</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Особливі точки на діаграмі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Особливі фазові стани та переходи</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Рідкі кристали (РК)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Інші фазові переходи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 

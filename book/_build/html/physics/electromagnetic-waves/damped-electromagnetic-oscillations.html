@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Затухаючі електромагнітні коливання в реальному контурі &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/electromagnetic-waves/damped-electromagnetic-oscillations';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Автоколивання" href="self-oscillations.html" />
+    <link rel="prev" title="Вільні електромагнітні коливання та коливальний контур" href="electromagnetic-oscillations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mkt/fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/humidity.html">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/phase-transitions.html">Фазові переходи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища (в процесі)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Затухаючі електромагнітні коливання в реальному контурі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="self-oscillations.html">Автоколивання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-01.html">Електродинаміка. Задачі. Частина 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electromagnetic-waves-classroom.html">Електромагнітні коливання та хвилі. Задачі</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/electromagnetic-waves/damped-electromagnetic-oscillations.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/electromagnetic-waves/damped-electromagnetic-oscillations.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/electromagnetic-waves/damped-electromagnetic-oscillations.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Затухаючі електромагнітні коливання в реальному контурі</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlc">Реальний коливальний контур (RLC-контур)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Диференціальне рівняння затухаючих коливань</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Нові параметри: коефіцієнт затухання та власна частота</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Розв'язок рівняння: як змінюється заряд?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Період та частота затухаючих коливань</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Умови виникнення коливань</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Режими роботи RLC-контуру</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Характеристики затухання</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Логарифмічний декремент затухання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Добротність коливального контуру</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Затухаючі електромагнітні коливання в реальному контурі<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>У попередньому матеріалі ми розглядали ідеальний LC-контур. Ми уявляли, що дроти, якими з'єднані конденсатор і котушка, не мають опору. Але в будь-якому реальному провіднику є <strong>активний опір</strong>. Котушка індуктивності, яка є довгою мідною дротиною, також має свій власний опір.</p>
+<blockquote>
+<div><p><strong>Активний опір</strong> <span class="math notranslate nohighlight">\(R\)</span> - це фізична величина, що характеризує властивість провідника протидіяти проходженню електричного струму, перетворюючи електричну енергію на теплову. Одиниця вимірювання в СІ: <strong>Ом (<span class="math notranslate nohighlight">\(\Omega\)</span>)</strong>.</p>
+</div></blockquote>
+<p>Цей опір діє подібно до тертя в механічних системах. Якщо ми штовхнемо гойдалку, тертя в підвісі та опір повітря поступово &quot;з'їдять&quot; її енергію, і зрештою вона зупиниться. Так само і в коливальному контурі: активний опір призводить до того, що при протіканні струму частина електромагнітної енергії безповоротно перетворюється на тепло (за законом Джоуля-Ленца, <span class="math notranslate nohighlight">\(Q = I^2Rt\)</span>).</p>
+<p>Внаслідок цих втрат енергії амплітуда коливань заряду, напруги та струму з часом зменшується. Такі коливання називаються <strong>затухаючими</strong>.</p>
+<blockquote>
+<div><p><strong>Затухаючі коливання</strong> - це коливання, амплітуда яких з часом зменшується через втрати енергії в системі.</p>
+</div></blockquote>
+<section id="rlc">
+<h2>Реальний коливальний контур (RLC-контур)<a class="headerlink" href="#rlc" title="Link to this heading">#</a></h2>
+<p>Тепер наш коливальний контур складається з трьох елементів, з'єднаних послідовно: конденсатора (C), котушки індуктивності (L) та резистора (R). Такий контур називають <strong>RLC-контуром</strong>.</p>
+<p>Давайте виведемо рівняння, яке описує процеси в такому контурі. Цього разу ми не можемо використати закон збереження енергії, бо енергія не зберігається. Замість цього ми скористаємося <strong>узагальненим законом Ома для замкненого кола</strong> (який є наслідком другого правила Кірхгофа). Він говорить, що сума всіх спадів напруги на елементах кола дорівнює сумі електрорушійних сил (ЕРС), що діють у цьому колі.</p>
+<p>У нашому замкненому RLC-контурі єдиним джерелом ЕРС є сама котушка, в якій виникає <strong>ЕРС самоіндукції</strong> <span class="math notranslate nohighlight">\(\mathcal{E}_L\)</span> при зміні струму.</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}_L = -L \frac{\Delta I}{\Delta t}\]</div>
+<p>Спадами напруги є:</p>
+<ol class="arabic simple">
+<li><p>Спад напруги на активному опорі: <span class="math notranslate nohighlight">\(U_R = I R\)</span></p></li>
+<li><p>Спад напруги на конденсаторі: <span class="math notranslate nohighlight">\(U_C = \frac{q}{C}\)</span></p></li>
+</ol>
+<p>Запишемо узагальнений закон Ома для нашого контуру: cума спадів напруги = ЕРС.</p>
+<div class="math notranslate nohighlight">
+\[U_R + U_C = \mathcal{E}_L\]</div>
+<p>Підставимо вирази для кожної величини:</p>
+<div class="math notranslate nohighlight">
+\[IR + \frac{q}{C} = -L \frac{\Delta I}{\Delta t}\]</div>
+<p>Це і є основне рівняння, що описує процеси в RLC-контурі. Тепер, як і минулого разу, переведемо його на мову похідних, щоб отримати диференціальне рівняння.</p>
+<hr class="docutils" />
+<section id="id2">
+<h3>Диференціальне рівняння затухаючих коливань<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Згадаймо зв'язок між зарядом та струмом:</p>
+<ul class="simple">
+<li><p>Сила струму <span class="math notranslate nohighlight">\(I\)</span> - це швидкість зміни заряду: <span class="math notranslate nohighlight">\(I = \frac{\Delta q}{\Delta t}\)</span>. У наших позначеннях <span class="math notranslate nohighlight">\(I = q'\)</span>.</p></li>
+<li><p>Швидкість зміни сили струму <span class="math notranslate nohighlight">\(\frac{\Delta I}{\Delta t}\)</span> - це &quot;прискорення&quot; заряду, або його друга похідна: <span class="math notranslate nohighlight">\(\frac{\Delta I}{\Delta t} = I' = q''\)</span>.</p></li>
+<li><p>Напруга на конденсаторі: <span class="math notranslate nohighlight">\(U = \frac{q}{C}\)</span>.</p></li>
+</ul>
+<p>Підставимо ці вирази в наше рівняння <span class="math notranslate nohighlight">\(IR + \frac{q}{C} = -L \frac{\Delta I}{\Delta t}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+q'R + \frac{1}{C}q = -Lq''
+\]</div>
+<p>Тепер перенесемо всі доданки в один бік вліво і розташуємо їх у порядку спадання похідних (від другої до нульової):</p>
+<div class="math notranslate nohighlight">
+\[
+Lq'' + Rq' + \frac{1}{C}q = 0
+\]</div>
+<p>Щоб привести рівняння до стандартного вигляду, поділимо всі його члени на індуктивність <span class="math notranslate nohighlight">\(L\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+q'' + \frac{R}{L}q' + \frac{1}{LC}q = 0
+\]</div>
+<p>Це і є <strong>диференціальне рівняння затухаючих електромагнітних коливань</strong>. Давайте порівняємо його з рівнянням для ідеального контуру, яке ми отримали раніше: <span class="math notranslate nohighlight">\(q'' + \frac{1}{LC}q = 0\)</span>. Ми бачимо, що з'явився новий доданок <span class="math notranslate nohighlight">\(\frac{R}{L}q'\)</span>, який містить активний опір <span class="math notranslate nohighlight">\(R\)</span> та першу похідну заряду <span class="math notranslate nohighlight">\(q'\)</span> (тобто силу струму). Саме цей член описує &quot;тертя&quot; в системі, яке призводить до затухання.</p>
+</section>
+<section id="id3">
+<h3>Нові параметри: коефіцієнт затухання та власна частота<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Щоб зробити наше рівняння більш компактним і зрозумілим, введемо два нових параметри.</p>
+<ol class="arabic">
+<li><p>Величину <span class="math notranslate nohighlight">\(\frac{1}{LC}\)</span> ми вже зустрічали. Це квадрат <strong>власної циклічної частоти</strong> <span class="math notranslate nohighlight">\(\omega_0\)</span> - частоти, з якою відбувалися б коливання в цьому ж контурі, якби в ньому не було опору (<span class="math notranslate nohighlight">\(R=0\)</span>).</p>
+<blockquote>
+<div><p><strong>Власна циклічна частота</strong> <span class="math notranslate nohighlight">\(\omega_0\)</span> - це циклічна частота коливань в ідеальному LC-контурі (без опору).</p>
+<div class="math notranslate nohighlight">
+\[ \omega_0 = \frac{1}{\sqrt{LC}} \quad \text{або} \quad \omega_0^2 = \frac{1}{LC} \]</div>
+<p>Одиниця вимірювання в СІ: <strong>радіан за секунду (рад/с)</strong>.</p>
+</div></blockquote>
+</li>
+<li><p>Весь новий &quot;затухаючий&quot; ефект міститься у множнику <span class="math notranslate nohighlight">\(\frac{R}{L}\)</span>. Введемо величину, яка називається <strong>коефіцієнтом затухання</strong>.</p>
+<blockquote>
+<div><p><strong>Коефіцієнт затухання</strong> <span class="math notranslate nohighlight">\(\beta\)</span> - це величина, що характеризує швидкість зменшення амплітуди коливань. Він визначається як:</p>
+<div class="math notranslate nohighlight">
+\[\beta = \frac{R}{2L}\]</div>
+<p>Одиниця вимірювання в СІ: <strong>одиниця на секунду (<span class="math notranslate nohighlight">\(1/c\)</span> або <span class="math notranslate nohighlight">\(c^{-1}\)</span>)</strong>.</p>
+<p><em>Примітка: множник 2 у знаменнику вводиться для зручності подальших математичних перетворень.</em></p>
+</div></blockquote>
+</li>
+</ol>
+<p>Тепер наше диференціальне рівняння набуває елегантного і стандартного вигляду:</p>
+<div class="math notranslate nohighlight">
+\[q'' + 2\beta q' + \omega_0^2 q = 0\]</div>
+<p>Це рівняння дуже схоже на рівняння затухаючих механічних коливань.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Розв'язок рівняння: як змінюється заряд?<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Розв'язання такого диференціального рівняння є складнішою задачею, ніж для ідеального контуру, і виходить за межі шкільного курсу математики. Тому ми приймемо його розв'язок як готовий факт, але детально проаналізуємо його фізичний зміст.</p>
+<p>Розв'язком цього рівняння (за умови, що затухання не надто велике) є функція:</p>
+<div class="math notranslate nohighlight">
+\[q(t) = q_{m0} e^{-\beta t} \cos(\omega t + \varphi_0)\]</div>
+<p>Давайте розберемо цю формулу на частини:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(q_{m0} e^{-\beta t}\)</span> - це <strong>амплітуда затухаючих коливань</strong>. Вона не є сталою, як у ідеальному контурі, а зменшується з часом за експоненціальним законом.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(q_{m0}\)</span> - амплітуда в початковий момент часу (<span class="math notranslate nohighlight">\(t=0\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(e = 2.718...\)</span> - експонента, основа натурального логарифма.</p></li>
+<li><p><span class="math notranslate nohighlight">\(e^{-\beta t}\)</span> - експоненціальна функція, яка швидко спадає з часом. Чим більший коефіцієнт затухання <span class="math notranslate nohighlight">\(\beta\)</span>, тим швидше спадає амплітуда.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\cos(\omega t + \varphi_0)\)</span> - це <strong>коливальна частина</strong>. Вона показує, що заряд все ще змінюється за гармонічним законом, але &quot;вписаний&quot; у спадаючу експоненту.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> - це <strong>циклічна частота затухаючих коливань</strong>. Важливо: це вже <strong>не</strong> власна частота <span class="math notranslate nohighlight">\(\omega_0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varphi_0\)</span> - початкова фаза коливань.</p></li>
+</ul>
+<p>Отже, ми можемо сказати, що амплітуда затухаючих коливань <span class="math notranslate nohighlight">\(A(t)\)</span> змінюється за законом:</p>
+<div class="math notranslate nohighlight">
+\[A(t) = q_0 e^{-\beta t}\]</div>
+<p>Графік функції <span class="math notranslate nohighlight">\(q(t)\)</span> виглядає як косинусоїда, амплітуда якої обмежена двома кривими <span class="math notranslate nohighlight">\(A_1(t) = q_{m0} e^{-\beta t}\)</span> та <span class="math notranslate nohighlight">\(A_2(t) = -q_{m0} e^{-\beta t}\)</span>.</p>
+</section>
+<section id="id5">
+<h2>Період та частота затухаючих коливань<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Виявляється, що наявність опору не лише зменшує амплітуду, але й трохи &quot;сповільнює&quot; самі коливання. Циклічна частота затухаючих коливань <span class="math notranslate nohighlight">\(\omega\)</span> менша за власну частоту <span class="math notranslate nohighlight">\(\omega_0\)</span> і пов'язана з нею наступним співвідношенням:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega = \sqrt{\omega_0^2 - \beta^2}
+\]</div>
+<p>З цієї формули видно, що <span class="math notranslate nohighlight">\(\omega &lt; \omega_0\)</span>. Це логічно: &quot;тертя&quot; в системі заважає їй коливатися так само швидко, як і без нього.</p>
+<p>Тепер ми можемо легко знайти <strong>період затухаючих коливань</strong> <span class="math notranslate nohighlight">\(T\)</span>. За означенням, <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\omega}\)</span>. Підставимо наш вираз для <span class="math notranslate nohighlight">\(\omega\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{2\pi}{\sqrt{\omega_0^2 - \beta^2}}
+\]</div>
+<p>А тепер повернемося до початкових параметрів контуру <span class="math notranslate nohighlight">\(R, L, C\)</span>, підставивши <span class="math notranslate nohighlight">\(\omega_0^2 = \frac{1}{LC}\)</span> та <span class="math notranslate nohighlight">\(\beta = \frac{R}{2L}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{2\pi}{\sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}} = \frac{2\pi}{\sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}}
+\]</div>
+<p>Ця формула є узагальненням формули Томсона для реального контуру. Ми бачимо, що період затухаючих коливань залежить не тільки від <span class="math notranslate nohighlight">\(L\)</span> та <span class="math notranslate nohighlight">\(C\)</span>, але й від активного опору <span class="math notranslate nohighlight">\(R\)</span>. Чим більший опір, тим більший період коливань.</p>
+<p>Якщо ж опір <span class="math notranslate nohighlight">\(R\)</span> дорівнює нулю (ідеальний контур), то <span class="math notranslate nohighlight">\(\beta = 0\)</span>, і ця формула перетворюється на знайому нам формулу Томсона:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{2\pi}{\sqrt{\frac{1}{LC}}} = 2\pi\sqrt{LC}
+\]</div>
+<p><strong>Висновок:</strong> активний опір в коливальному контурі призводить до двох наслідків:</p>
+<ol class="arabic simple">
+<li><p>Амплітуда коливань експоненціально зменшується з часом.</p></li>
+<li><p>Період коливань збільшується (частота зменшується).</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Умови виникнення коливань<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>А чи завжди в RLC-контурі будуть виникати коливання? Подивімось ще раз на формулу для частоти: <span class="math notranslate nohighlight">\(\omega = \sqrt{\omega_0^2 - \beta^2}\)</span>.</p>
+<p>Коливання (зміна знаку величини) можливі лише тоді, коли частота <span class="math notranslate nohighlight">\(\omega\)</span> є дійсним числом. Для цього вираз під коренем має бути додатним:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega_0^2 - \beta^2 &gt; 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\omega_0^2 &gt; \beta^2
+\]</div>
+<p>Підставимо визначення <span class="math notranslate nohighlight">\(\omega_0\)</span> і <span class="math notranslate nohighlight">\(\beta\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{LC} &gt; \left(\frac{R}{2L}\right)^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{LC} &gt; \frac{R^2}{4L^2}
+\]</div>
+<p>Давайте виразимо звідси умову для опору <span class="math notranslate nohighlight">\(R\)</span>. Помножимо обидві частини на <span class="math notranslate nohighlight">\(4L^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{4L^2}{LC} &gt; R^2 \implies \frac{4L}{C} &gt; R^2
+\]</div>
+<p>Звідси отримуємо <strong>умову виникнення коливального процесу</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+R &lt; 2\sqrt{\frac{L}{C}}
+\]</div>
+<p>Тобто, коливання в контурі виникатимуть лише тоді, коли активний опір є достатньо малим.</p>
+<p>А що станеться, якщо ця умова не виконується?</p>
+<section id="id7">
+<h3>Режими роботи RLC-контуру<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Розглянемо граничний випадок, коли <span class="math notranslate nohighlight">\(\omega_0^2 = \beta^2\)</span>. Це відбувається при певному значенні опору, яке називають <strong>критичним опором</strong>.</p>
+<blockquote>
+<div><p><strong>Критичний опір</strong> <span class="math notranslate nohighlight">\(R_{кр}\)</span> - це найменше значення активного опору, за якого вільні коливання в контурі стають неможливими.</p>
+<div class="math notranslate nohighlight">
+\[ R_{кр} = 2\sqrt{\frac{L}{C}} \]</div>
+</div></blockquote>
+<p>Залежно від співвідношення між <span class="math notranslate nohighlight">\(R, L\)</span> та <span class="math notranslate nohighlight">\(C\)</span> можливі три режими роботи контуру.</p>
+<ol class="arabic">
+<li><p><strong>Коливальний (слабке затухання)</strong>: <span class="math notranslate nohighlight">\(R &lt; 2\sqrt{\frac{L}{C}}\)</span>.</p>
+<p>Це випадок, який ми щойно детально розглянули. У контурі відбуваються затухаючі коливання. Енергія поступово розсіюється, але система встигає зробити кілька коливань, перш ніж зупинитись.</p>
+</li>
+<li><p><strong>Критичний</strong>: <span class="math notranslate nohighlight">\(R = R_{кр} = 2\sqrt{\frac{L}{C}}\)</span>.</p>
+<p>Якщо опір дорівнює цьому <strong>критичному значенню</strong>, то вираз під коренем для частоти стає рівним нулю. Коливань як таких уже немає. Система повертається до стану рівноваги (конденсатор розряджається) <strong>найшвидшим можливим способом</strong>, не переходячи через нуль (тобто не перезаряджаючись). Такий режим важливий у системах, де потрібно швидко погасити коливання, наприклад, у стрілочних амперметрах або автомобільних амортизаторах.</p>
+</li>
+<li><p><strong>Аперіодичний (сильне затухання)</strong>: <span class="math notranslate nohighlight">\(R &gt; 2\sqrt{\frac{L}{C}}\)</span>.</p>
+<p>Якщо опір дуже великий, &quot;тертя&quot; в системі настільки сильне, що коливання не можуть виникнути в принципі. Конденсатор просто повільно розряджається через котушку та резистор, і заряд плавно спадає до нуля. Цей процес називається <strong>аперіодичним</strong>. Чим більший опір, тим повільніше відбувається розрядка. Вся початкова енергія дуже швидко перетворюється на тепло, &quot;не встигаючи&quot; перейти в енергію магнітного поля і назад.</p>
+</li>
+</ol>
+</section>
+</section>
+<section id="id8">
+<h2>Характеристики затухання<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Для кількісної оцінки швидкості затухання коливань використовують дві важливі характеристики.</p>
+<section id="id9">
+<h3>Логарифмічний декремент затухання<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Наскільки сильно зменшується амплітуда за один період? Щоб відповісти на це питання, вводять поняття логарифмічного декремента затухання.</p>
+<blockquote>
+<div><p><strong>Логарифмічний декремент затухання</strong> <span class="math notranslate nohighlight">\(\lambda\)</span> (лямбда) - це натуральний логарифм відношення двох послідовних амплітуд коливань, моменти часу яких відрізняються на один період.</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = \ln \frac{A(t)}{A(t+T)} \]</div>
+</div></blockquote>
+<p>Давайте виведемо, чому він дорівнює. Ми знаємо, що <span class="math notranslate nohighlight">\(A(t) = q_0 e^{-\beta t}\)</span> і <span class="math notranslate nohighlight">\(A(t+T) = q_0 e^{-\beta (t+T)}\)</span>. Підставимо це у формулу:</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \ln \frac{q_0 e^{-\beta t}}{q_0 e^{-\beta (t+T)}} = \ln \frac{e^{-\beta t}}{e^{-\beta t} \cdot e^{-\beta T}} = \ln \frac{1}{e^{-\beta T}} = \ln(e^{\beta T})\]</div>
+<p>Оскільки натуральний логарифм і експонента є взаємно оберненими функціями, ми отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[\lambda = \beta T\]</div>
+<p>Логарифмічний декремент є безрозмірнісною величиною і показує, у скільки разів (за експоненційною шкалою <span class="math notranslate nohighlight">\(e\)</span>) зменшується амплітуда за один період. Чим він більший, тим швидше затухають коливання.</p>
+</section>
+<section id="id10">
+<h3>Добротність коливального контуру<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Інша, ще більш поширена характеристика, - це добротність. Вона показує, наскільки &quot;якісною&quot; є коливальна система, тобто наскільки повільно вона втрачає енергію.</p>
+<blockquote>
+<div><p><strong>Добротність</strong> <span class="math notranslate nohighlight">\(Q\)</span> (або Q-фактор) - це величина, що характеризує резонансні властивості системи та показує, у скільки разів енергія, накопичена в контурі, більша за втрати енергії за одне коливання. Висока добротність означає низькі втрати та велику кількість коливань до повного затухання.</p>
+</div></blockquote>
+<p>Для слабкого затухання (коли <span class="math notranslate nohighlight">\(\beta \ll \omega_0\)</span>, що виконується для більшості радіотехнічних контурів) добротність пов'язана з логарифмічним декрементом простим співвідношенням:</p>
+<div class="math notranslate nohighlight">
+\[Q \approx \frac{\pi}{\lambda}\]</div>
+<p>Підставивши <span class="math notranslate nohighlight">\(\lambda = \beta T\)</span> і <span class="math notranslate nohighlight">\(T \approx T_0 = \frac{2\pi}{\omega_0}\)</span>, отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[
+Q = \frac{\pi}{\beta \cdot \frac{2\pi}{\omega_0}} = \frac{\omega_0}{2\beta}
+\]</div>
+<p>Тепер підставимо вирази для <span class="math notranslate nohighlight">\(\omega_0\)</span> і <span class="math notranslate nohighlight">\(\beta\)</span>:
+$<span class="math notranslate nohighlight">\(
+Q = \frac{1/\sqrt{LC}}{2 \cdot (R/2L)} = \frac{1/\sqrt{LC}}{R/L} = \frac{L}{R\sqrt{LC}} = \frac{\sqrt{L^2}}{R\sqrt{LC}} = \frac{1}{R}\sqrt{\frac{L}{C}}
+\)</span>$</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[ Q = \frac{1}{R}\sqrt{\frac{L}{C}} \]</div>
+</div></blockquote>
+<p>Добротність - безрозмірнісна величина.</p>
+<ul class="simple">
+<li><p><strong>Висока добротність (<span class="math notranslate nohighlight">\(Q \gg 1\)</span>)</strong> означає малий опір <span class="math notranslate nohighlight">\(R\)</span>, повільне затухання і гострий резонанс. Такі контури добре &quot;відгукуються&quot; на коливання лише на одній певній частоті, що є критично важливим для радіоприймачів.</p></li>
+<li><p><strong>Низька добротність (<span class="math notranslate nohighlight">\(Q \approx 1\)</span>)</strong> означає сильне затухання, коливання зникають дуже швидко.</p></li>
+</ul>
+<p>Добротність показує, скільки приблизно коливань здійснить система, перш ніж її амплітуда зменшиться в <span class="math notranslate nohighlight">\(e^\pi \approx 23\)</span> рази.</p>
+</section>
+</section>
+<section id="id11">
+<h2>Додаткові матеріали<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>ПРИМІТКА: ЦЯ СТОРІНКА ЩЕ В РОБОТІ, ДЕЯКІ ПІДСУМКОВІ МАТЕРІАЛИ ЩЕ БУДУТЬ ДОДАНІ, А ІСНУЮЧИЙ МАТЕРІАЛ МОЖЕ БУТИ ВІДКОРЕГОВАНИМ.</p>
+<ul class="simple">
+<li></li>
+</ul>
+</section>
+<section id="id12">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\electromagnetic-waves"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="electromagnetic-oscillations.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Вільні електромагнітні коливання та коливальний контур</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="self-oscillations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Автоколивання</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlc">Реальний коливальний контур (RLC-контур)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Диференціальне рівняння затухаючих коливань</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Нові параметри: коефіцієнт затухання та власна частота</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Розв'язок рівняння: як змінюється заряд?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Період та частота затухаючих коливань</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Умови виникнення коливань</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Режими роботи RLC-контуру</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Характеристики затухання</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Логарифмічний декремент затухання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Добротність коливального контуру</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
