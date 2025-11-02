@@ -539,8 +539,9 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Добротність коливального контуру</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -566,7 +567,10 @@
 <section id="rlc">
 <h2>Реальний коливальний контур (RLC-контур)<a class="headerlink" href="#rlc" title="Link to this heading">#</a></h2>
 <p>Тепер наш коливальний контур складається з трьох елементів, з'єднаних послідовно: конденсатора (C), котушки індуктивності (L) та резистора (R). Такий контур називають <strong>RLC-контуром</strong>.</p>
-<p>Давайте виведемо рівняння, яке описує процеси в такому контурі. Цього разу ми не можемо використати закон збереження енергії, бо енергія не зберігається. Замість цього ми скористаємося <strong>узагальненим законом Ома для замкненого кола</strong> (який є наслідком другого правила Кірхгофа). Він говорить, що сума всіх спадів напруги на елементах кола дорівнює сумі електрорушійних сил (ЕРС), що діють у цьому колі.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/RLC_series_circuit_v1.svg" alt="RLC series circuit v1.svg" height="374" width="270">
+<br>
+Рис. 1. Послідовний RLC-коливальний контур: V - джерело напруги в контурі, І - сила струму в контурі, R - резистор, L - котушка індуктивності, C - конденсатор.
+Автор <a href="https://commons.wikimedia.org/wiki/User:V4711" title="User:V4711">V4711</a> <span typeof="mw:File">, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=29120181">Link</a>. <a href="https://en.wikipedia.org/wiki/RLC_circuit">Wikipedia</a></p><p>Давайте виведемо рівняння, яке описує процеси в такому контурі. Цього разу ми не можемо використати закон збереження енергії, бо енергія не зберігається. Замість цього ми скористаємося <strong>узагальненим законом Ома для замкненого кола</strong> (який є наслідком другого правила Кірхгофа). Він говорить, що сума всіх спадів напруги на елементах кола дорівнює сумі електрорушійних сил (ЕРС), що діють у цьому колі.</p>
 <p>У нашому замкненому RLC-контурі єдиним джерелом ЕРС є сама котушка, в якій виникає <strong>ЕРС самоіндукції</strong> <span class="math notranslate nohighlight">\(\mathcal{E}_L\)</span> при зміні струму.</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{E}_L = -L \frac{\Delta I}{\Delta t}\]</div>
@@ -660,6 +664,10 @@ q'' + \frac{R}{L}q' + \frac{1}{LC}q = 0
 <div class="math notranslate nohighlight">
 \[A(t) = q_0 e^{-\beta t}\]</div>
 <p>Графік функції <span class="math notranslate nohighlight">\(q(t)\)</span> виглядає як косинусоїда, амплітуда якої обмежена двома кривими <span class="math notranslate nohighlight">\(A_1(t) = q_{m0} e^{-\beta t}\)</span> та <span class="math notranslate nohighlight">\(A_2(t) = -q_{m0} e^{-\beta t}\)</span>.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/DampedCosine.svg" alt="DampedCosine.svg" height="432" width="576">
+<br></p>
+<p>Рис. 2. Графік затухаючої косинусоїдальної хвилі (гармонічної хвилі), представленої як функція <span class="math notranslate nohighlight">\(y(t) = e^{-t} \cos (2\pi t)\)</span>.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Nicoguaro" title="User:Nicoguaro">Nicoguaro</a>, <a href="https://creativecommons.org/licenses/by/4.0" title="Creative Commons Attribution 4.0">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=115559546">Link</a>. <a href="https://en.wikipedia.org/wiki/Damping">Wikipedia</a></p>
 </section>
 <section id="id5">
 <h2>Період та частота затухаючих коливань<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
@@ -765,6 +773,10 @@ R &lt; 2\sqrt{\frac{L}{C}}
 <div class="math notranslate nohighlight">
 \[\lambda = \beta T\]</div>
 <p>Логарифмічний декремент є безрозмірнісною величиною і показує, у скільки разів (за експоненційною шкалою <span class="math notranslate nohighlight">\(e\)</span>) зменшується амплітуда за один період. Чим він більший, тим швидше затухають коливання.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Dampingratio111.svg" alt="Dampingratio111.svg" height="500" width="807.4">
+<br></p>
+<p>Рис. 3. Логарифмічний декремент затухання може бути отриманий як <span class="math notranslate nohighlight">\(\ln (x_1/x_3)\)</span>.
+Автор <a href="https://commons.wikimedia.org/w/index.php?title=User:Vietnamgeometer&amp;action=edit&amp;redlink=1" class="new" title="User:Vietnamgeometer (page does not exist)">Vietnamgeometer</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=100008111">Link</a>. <a href="https://en.wikipedia.org/wiki/Logarithmic_decrement">Wikipedia</a></p>
 </section>
 <section id="id10">
 <h3>Добротність коливального контуру<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
@@ -794,19 +806,117 @@ Q = \frac{1/\sqrt{LC}}{2 \cdot (R/2L)} = \frac{1/\sqrt{LC}}{R/L} = \frac{L}{R\sq
 <li><p><strong>Низька добротність (<span class="math notranslate nohighlight">\(Q \approx 1\)</span>)</strong> означає сильне затухання, коливання зникають дуже швидко.</p></li>
 </ul>
 <p>Добротність показує, скільки приблизно коливань здійснить система, перш ніж її амплітуда зменшиться в <span class="math notranslate nohighlight">\(e^\pi \approx 23\)</span> рази.</p>
-</section>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Damped_oscillation_function_plot.svg" alt="Damped oscillation function plot.svg" height="500" width="961.8">
+<br>
+Рис. 4. Затухаюче коливання. Низька добротність - тут близько 5 - означає, що коливання швидко згасає.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Nicoguaro" title="User:Nicoguaro">Nicoguaro</a>, <a href="https://creativecommons.org/licenses/by/4.0" title="Creative Commons Attribution 4.0">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=115576647">Link</a>. <a href="https://en.wikipedia.org/wiki/Q_factor">Wikipedia</a></p></section>
 </section>
 <section id="id11">
-<h2>Додаткові матеріали<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
-<p>ПРИМІТКА: ЦЯ СТОРІНКА ЩЕ В РОБОТІ, ДЕЯКІ ПІДСУМКОВІ МАТЕРІАЛИ ЩЕ БУДУТЬ ДОДАНІ, А ІСНУЮЧИЙ МАТЕРІАЛ МОЖЕ БУТИ ВІДКОРЕГОВАНИМ.</p>
-<ul class="simple">
-<li></li>
-</ul>
+<h2>Підсумок<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Термін / Твердження</p></th>
+<th class="head"><p>Формула / Позначення</p></th>
+<th class="head"><p>Опис</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Активний опір</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>Характеризує властивість провідника перетворювати електричну енергію на теплову, що призводить до затухання коливань.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>RLC-контур</strong></p></td>
+<td><p>-</p></td>
+<td><p>Реальний коливальний контур, що складається з резистора R, котушки індуктивності L та конденсатора C.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Диференціальне рівняння затухаючих коливань</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(q'' + \frac{R}{L}q' + \frac{1}{LC}q = 0\)</span></p></td>
+<td><p>Описує зміну заряду в RLC-контурі з часом.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Власна циклічна частота</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span></p></td>
+<td><p>Частота коливань в контурі за відсутності опору (R=0 Ом).</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Коефіцієнт затухання</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\beta = \frac{R}{2L}\)</span></p></td>
+<td><p>Характеризує швидкість зменшення амплітуди коливань.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Стандартний вигляд рівняння коливань</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(q'' + 2\beta q' + \omega_0^2 q = 0\)</span></p></td>
+<td><p>Компактний запис диференціального рівняння через введені параметри.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Заряд при затухаючих коливаннях</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(q(t) = q_{m0} e^{-\beta t} \cos(\omega t + \varphi_0)\)</span></p></td>
+<td><p>Показує, що заряд змінюється за гармонічним законом з амплітудою, що спадає експоненційно.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Амплітуда затухаючих коливань</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(A(t) = q_{m0} e^{-\beta t}\)</span></p></td>
+<td><p>Зменшується з часом за експоненціальним законом.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Циклічна частота затухаючих коливань</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\omega = \sqrt{\omega_0^2 - \beta^2}\)</span></p></td>
+<td><p>Частота коливань в реальному контурі; вона менша за власну частоту.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Період затухаючих коливань</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(T = \frac{2\pi}{\sqrt{\omega_0^2 - \beta^2}} = \frac{2\pi}{\sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}}\)</span></p></td>
+<td><p>Залежить не тільки від L і C, але й від R. Більший за період вільних коливань.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Умова виникнення коливань</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(R &lt; 2\sqrt{\frac{L}{C}}\)</span></p></td>
+<td><p>Коливання виникають лише при достатньо малому опорі.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Критичний опір</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(R_{кр} = 2\sqrt{\frac{L}{C}}\)</span></p></td>
+<td><p>Найменший опір, за якого коливальний процес стає неможливим.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Коливальний режим</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(R &lt; R_{кр}\)</span></p></td>
+<td><p>У контурі відбуваються затухаючі коливання.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Критичний режим</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(R = R_{кр}\)</span></p></td>
+<td><p>Система повертається до рівноваги найшвидше, без коливань.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Аперіодичний режим</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(R &gt; R_{кр}\)</span></p></td>
+<td><p>Конденсатор повільно розряджається без коливань.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Логарифмічний декремент затухання</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\lambda = \ln \frac{A(t)}{A(t+T)} = \beta T\)</span></p></td>
+<td><p>Безрозмірна величина, що показує, у скільки разів (<span class="math notranslate nohighlight">\(e^\lambda\)</span>) зменшується амплітуда за один період.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Добротність контуру (Q-фактор)</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span></p></td>
+<td><p>Характеризує якість коливальної системи; показує, наскільки повільно вона втрачає енергію. Висока добротність означає слабке затухання.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Зв'язок добротності та затухання</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(Q \approx \frac{\pi}{\lambda} = \frac{\omega_0}{2\beta}\)</span></p></td>
+<td><p>Добротність обернено пропорційна коефіцієнту затухання.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="id12">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<h2>Додаткові матеріали<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%B8%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Коливання</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%BA%D0%BE%D0%BD%D1%82%D1%83%D1%80">https://uk.wikipedia.org/wiki/Коливальний_контур</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D1%82%D0%BD%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Добротність</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9B%D0%BE%D0%B3%D0%B0%D1%80%D0%B8%D1%84%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D0%B4%D0%B5%D0%BA%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%82_%D0%B7%D0%B0%D1%82%D1%83%D1%85%D0%B0%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Логарифмічний_декремент_затухання</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0_%D0%9A%D1%96%D1%80%D1%85%D0%B3%D0%BE%D1%84%D0%B0">https://uk.wikipedia.org/wiki/Правила_Кірхгофа</a></p></li>
+</ul>
+</section>
+<section id="id13">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/LC_circuit">https://en.wikipedia.org/wiki/LC_circuit</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RLC_circuit">https://en.wikipedia.org/wiki/RLC_circuit</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Damping">https://en.wikipedia.org/wiki/Damping</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Q_factor">https://en.wikipedia.org/wiki/Q_factor</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Logarithmic_decrement">https://en.wikipedia.org/wiki/Logarithmic_decrement</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance">https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">https://en.wikipedia.org/wiki/Kirchhoff's_circuit_laws</a></p></li>
 </ul>
 </section>
 </section>
@@ -892,8 +1002,9 @@ Q = \frac{1/\sqrt{LC}}{2 \cdot (R/2L)} = \frac{1/\sqrt{LC}}{R/L} = \frac{L}{R\sq
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Добротність коливального контуру</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
