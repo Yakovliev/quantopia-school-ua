@@ -140,6 +140,7 @@ parts:
       - file: physics/tasks/oscillations-test
       - file: physics/tasks/mkt-classroom
       - file: physics/tasks/electrodynamics-classroom-01
+      - file: physics/tasks/electrodynamics-classroom-02
       - file: physics/tasks/electromagnetic-waves-classroom
 
 
