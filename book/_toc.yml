@@ -110,6 +110,7 @@ parts:
       - file: physics/electromagnetic-waves/electromagnetic-oscillations
       - file: physics/electromagnetic-waves/damped-electromagnetic-oscillations
       - file: physics/electromagnetic-waves/self-oscillations
+      - file: physics/electromagnetic-waves/alternating-current
 
   - caption: ОПТИКА
     chapters:
