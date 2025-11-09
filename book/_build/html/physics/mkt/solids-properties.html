@@ -1,0 +1,1130 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Механічні властивості твердих тіл та теплове розширення &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/solids-properties';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Будова та властивості твердих тіл" href="solids.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real-gas.html">Реальні гази</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="humidity.html">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase-transitions.html">Фазові переходи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solids.html">Будова та властивості твердих тіл</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Механічні властивості твердих тіл та теплове розширення</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/self-oscillations.html">Автоколивання (Pending)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/alternating-current.html">Змінний струм</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-01.html">Електродинаміка. Задачі 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-02.html">Електродинаміка. Задачі 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electromagnetic-waves-classroom.html">Електромагнітні коливання та хвилі. Задачі</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mkt/solids-properties.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mkt/solids-properties.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Механічні властивості твердих тіл та теплове розширення</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Деформація твердих тіл</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Види деформацій за характером зміни форми</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Анізотропія та деформація</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Види деформацій за оборотністю</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Механічна напруга, відносне видовження та коефіцієнт Пуассона</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Абсолютне видовження</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Відносне видовження (відносна деформація)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Механічна напруга</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Коефіцієнт Пуассона</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Закон Гука та модуль Юнга</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Закон Гука для пружної деформації (у формі сили)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Закон Гука для пружної деформації (у формі напруги та деформації)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Діаграма напруг (діаграма розтягу)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Ключові ділянки та точки на діаграмі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Поведінка різних матеріалів на діаграмі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Теплове розширення твердих тіл</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Сутність теплового розширення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Лінійне теплове розширення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Об'ємне теплове розширення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Зв'язок між коефіцієнтами лінійного та об'ємного розширення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Механічні властивості твердих тіл та теплове розширення<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Коли ми застосовуємо силу до твердого тіла, воно змінює свою форму або розміри. Це явище ми називаємо деформацією.</p>
+<section id="id2">
+<h2>Деформація твердих тіл<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Деформація</strong> - це зміна форми та/або розмірів тіла під дією зовнішніх сил або інших чинників (наприклад, температури).</p>
+</div></blockquote>
+<p>Причиною деформації є зміна відстаней між атомами та молекулами та кутів між зв'язками, що їх утримують. Коли ми розтягуємо тіло, атоми віддаляються один від одного, а коли стискаємо - наближаються.</p>
+<section id="id3">
+<h3>Види деформацій за характером зміни форми<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Залежно від напрямку прикладеної сили та способу зміни форми тіла, ми можемо виділити кілька основних видів деформацій. Важливо пам'ятати, що реальні деформації часто є комбінацією цих простих видів.</p>
+<ul class="simple">
+<li><p><strong>Деформація розтягнення:</strong> Виникає, коли сили спрямовані відносно центру тіла, намагаючись його видовжити. Прикладом є розтягування гумової стрічки, пружини або сталевого троса, що тримає вантаж. Під час розтягнення довжина тіла збільшується, а його поперечні розміри (ширина, товщина) зазвичай зменшуються.</p></li>
+<li><p><strong>Деформація стиснення:</strong> Виникає, коли сили спрямовані до центру тіла, намагаючись його скоротити або зменшити в об'ємі. Це відбувається, коли ми натискаємо на цеглу, стискаємо губку або колону, що підтримує будівлю. При стисненні довжина тіла зменшується, а поперечні розміри збільшуються.</p></li>
+<li><p><strong>Деформація вигину:</strong> Виникає, коли сили прикладаються перпендикулярно до осі тіла, змушуючи його прогинатися. Приклад: балка моста під вагою автомобілів, або коли ми згинаємо лінійку. Цікаво, що при вигині верхня частина тіла зазнає деформації стиснення (вона коротшає), а нижня - деформації розтягнення (вона видовжується). Між ними існує так званий <strong>нейтральний шар</strong>, де напруги відсутні, а довжина волокон не змінюється.</p></li>
+<li><p><strong>Деформація зсуву:</strong> Виникає, коли сили діють паралельно до поверхні тіла, намагаючись зсунути одну частину тіла відносно іншої. Уявіть стопку книжок, на яку ми натискаємо зверху, зсуваючи верхні книжки відносно нижніх. Або коли ми ріжемо папір ножицями - леза створюють зсув. Цей вид деформації часто спостерігається у заклепках, болтах, або при різанні матеріалів.</p></li>
+<li><p><strong>Деформація кручення:</strong> Виникає, коли сили намагаються повернути одну частину тіла відносно іншої навколо спільної осі. Це, по суті, різновид деформації зсуву, що виникає по колу. Приклад: закручування викруткою гвинта, або коли ми викручуємо мокрий рушник. Вали двигунів, торсіонні підвіски автомобілів працюють на кручення.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Анізотропія та деформація<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>У попередній лекції ми обговорювали анізотропію - залежність властивостей матеріалу від напрямку. Важливо пам'ятати, що для <strong>анізотропних матеріалів</strong> (наприклад, монокристалів або деревини) механічні властивості, такі як жорсткість або міцність, будуть різними залежно від того, в якому напрямку прикладена сила. Це означає, що, наприклад, розтягувати кристал вздовж однієї осі може бути легше, ніж вздовж іншої. Для <strong>ізотропних матеріалів</strong> (аморфні тіла, полікристали з хаотичною орієнтацією зерен) механічні властивості однакові в усіх напрямках. Це має вирішальне значення при проектуванні конструкцій з різних матеріалів.</p>
+</section>
+<section id="id5">
+<h3>Види деформацій за оборотністю<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Ми також можемо класифікувати деформації за тим, чи повертається тіло до своєї початкової форми після зняття навантаження.</p>
+<ul class="simple">
+<li><p><strong>Пружна деформація:</strong> Це деформація, яка повністю зникає після припинення дії зовнішніх сил. Тіло повністю відновлює свої початкові розміри та форму. Уявіть, як ми розтягуємо пружину, а потім відпускаємо - вона повертається у вихідне положення. Більшість матеріалів демонструють пружну деформацію до певної межі. У цьому випадку атоми лише трохи зміщуються зі своїх положень рівноваги, а сили міжатомної взаємодії повертають їх на місце.</p></li>
+<li><p><strong>Пластична (залишкова) деформація:</strong> Це деформація, яка зберігається навіть після припинення дії зовнішніх сил. Тіло не повертається до своєї початкової форми. Приклад: коли ми згинаємо мідний дріт, він залишається зігнутим. Це відбувається тому, що атоми або цілі шари атомів зміщуються зі своїх початкових положень і займають нові положення рівноваги, які є стабільними навіть без зовнішнього навантаження. Пластична деформація є основою для багатьох технологічних процесів, таких як кування, штампування, прокатка металів.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Механічна напруга, відносне видовження та коефіцієнт Пуассона<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Для кількісного опису деформацій та сил, що їх викликають, ми використовуємо поняття напруги та деформації.</p>
+<section id="id7">
+<h3>Абсолютне видовження<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Абсолютне видовження</strong> (<span class="math notranslate nohighlight">\(\Delta l\)</span> або <span class="math notranslate nohighlight">\(x\)</span>) - це зміна довжини тіла в результаті деформації. Якщо тіло видовжується, <span class="math notranslate nohighlight">\(\Delta l &gt; 0\)</span>; якщо стискається, <span class="math notranslate nohighlight">\(\Delta l &lt; 0\)</span>.</p>
+<p>Ми можемо розрахувати його як різницю між кінцевою довжиною (<span class="math notranslate nohighlight">\(l\)</span>) та початковою довжиною (<span class="math notranslate nohighlight">\(l_0\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ \Delta l = l - l_0 \]</div>
+<p>Одиницею вимірювання абсолютного видовження в системі СІ є <strong>метр (м)</strong>.</p>
+</section>
+<section id="id8">
+<h3>Відносне видовження (відносна деформація)<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p><strong>Відносне видовження</strong> (<span class="math notranslate nohighlight">\(\varepsilon\)</span>) - це відношення абсолютного видовження до початкової довжини тіла. Ця величина показує, наскільки сильно змінилася довжина тіла відносно його початкового розміру.</p>
+<div class="math notranslate nohighlight">
+\[ \varepsilon = \frac{\Delta l}{l_0} \]</div>
+<p>Відносне видовження є безрозмірною величиною, оскільки це відношення двох довжин. Іноді його виражають у відсотках (%).</p>
+</section>
+<section id="id9">
+<h3>Механічна напруга<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Коли тіло деформується, всередині нього виникають внутрішні сили, які протидіють цій деформації та намагаються повернути тіло до початкового стану (якщо деформація пружна). Ці внутрішні сили розподілені по площі поперечного перерізу тіла.</p>
+<blockquote>
+<div><p><strong>Механічна напруга</strong> (<span class="math notranslate nohighlight">\(\sigma\)</span>, читається &quot;сигма&quot;) - це фізична величина, що характеризує інтенсивність внутрішніх сил, які виникають у деформованому тілі. Вона визначається як відношення величини внутрішньої сили пружності (<span class="math notranslate nohighlight">\(F_{\text{пруж}}\)</span>), що діє перпендикулярно до площі поперечного перерізу, до цієї площі (<span class="math notranslate nohighlight">\(S\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[ \sigma = \frac{F_{\text{пруж}}}{S} \]</div>
+</div></blockquote>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F_{\text{пруж}}\)</span> - сила пружності, що виникає всередині тіла (Н).</p></li>
+<li><p><span class="math notranslate nohighlight">\(S\)</span> - площа поперечного перерізу тіла (м²).</p></li>
+</ul>
+<p>Одиницею вимірювання механічної напруги в системі СІ є <strong>Паскаль (Па)</strong>. <span class="math notranslate nohighlight">\(1 \text{ Па} = 1 \text{ Н/м}^2\)</span>.</p>
+<p>Часто напругу вимірюють у мегапаскалях (МПа) або гігапаскалях (ГПа), оскільки паскаль є дуже малою одиницею для інженерних розрахунків. <span class="math notranslate nohighlight">\(1 \text{ МПа} = 10^6 \text{ Па}\)</span>, <span class="math notranslate nohighlight">\(1 \text{ ГПа} = 10^9 \text{ Па}\)</span>.</p>
+</section>
+<section id="id10">
+<h3>Коефіцієнт Пуассона<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Коли ми розтягуємо тіло вздовж однієї осі, воно не тільки видовжується, але й стискається (звужується) у перпендикулярних напрямках. Це явище описує <strong>коефіцієнт Пуассона</strong>.</p>
+<blockquote>
+<div><p><strong>Коефіцієнт Пуассона</strong> (<span class="math notranslate nohighlight">\(\nu\)</span>, читається &quot;ню&quot;) - це безрозмірна фізична величина, що характеризує пружні властивості матеріалу і визначається як відношення відносної поперечної деформації до відносної поздовжньої деформації при одновісному розтягуванні або стисненні.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[ \nu = -\frac{\varepsilon_{\text{попер}}}{ \varepsilon_{\text{позд}}} \]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{\text{попер}}\)</span> - відносна деформація у поперечному напрямку (наприклад, зміна ширини або товщини).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{\text{позд}}\)</span> - відносна деформація у поздовжньому напрямку (зміна довжини).</p></li>
+<li><p>Знак мінус додається для того, щоб коефіцієнт Пуассона був позитивним, оскільки при розтягуванні поздовжня деформація позитивна, а поперечна - негативна (звуження).</p></li>
+</ul>
+<p><strong>Приклад:</strong> Якщо ми розтягуємо гумовий джгут, він стає довшим і тоншим. Коефіцієнт Пуассона для більшості матеріалів лежить у діапазоні від 0 до 0.5. Для гуми він близький до 0.5 (тобто об'єм майже не змінюється при деформації), для металів - близько 0.25-0.35. Коефіцієнт Пуассона є безрозмірною величиною.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>Закон Гука та модуль Юнга<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Одним з найважливіших законів, що описує пружну деформацію, є закон Гука.</p>
+<section id="id12">
+<h3>Закон Гука для пружної деформації (у формі сили)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Роберт Гук у XVII столітті встановив, що при малих пружних деформаціях сила пружності, яка виникає в тілі, прямо пропорційна абсолютному видовженню тіла.</p>
+<blockquote>
+<div><p><strong>Закон Гука:</strong> Сила пружності (<span class="math notranslate nohighlight">\(F_{\text{пруж}}\)</span>), що виникає в тілі при пружній деформації, прямо пропорційна абсолютному видовженню (<span class="math notranslate nohighlight">\(\Delta l\)</span>) і спрямована протилежно напрямку зміщення частинок тіла.</p>
+<div class="math notranslate nohighlight">
+\[ F_{\text{пруж}} = k|\Delta l| \]</div>
+</div></blockquote>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F_{\text{пруж}}\)</span> - сила пружності (Н).</p></li>
+<li><p><span class="math notranslate nohighlight">\(|\Delta l|\)</span> - модуль абсолютного видовження (м).</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> - <strong>жорсткість тіла</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Жорсткість тіла</strong> (<span class="math notranslate nohighlight">\(k\)</span>) - це коефіцієнт пропорційності в законі Гука, який характеризує здатність <em>конкретного тіла</em> (наприклад, певної пружини або балки) чинити опір деформації. Чим більше значення <span class="math notranslate nohighlight">\(k\)</span>, тим важче деформувати дане тіло.</p>
+</div></blockquote>
+<p>Одиницею вимірювання жорсткості в системі СІ є <strong>Ньютон на метр (Н/м)</strong>.</p>
+</section>
+<section id="id13">
+<h3>Закон Гука для пружної деформації (у формі напруги та деформації)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Закон Гука також може бути виражений через механічну напругу та відносне видовження. Це більш універсальна форма, оскільки вона описує властивості <em>матеріалу</em>, а не конкретного тіла.</p>
+<p><strong>Закон Гука (у формі напруги та деформації):</strong> При малих пружних деформаціях механічна напруга (<span class="math notranslate nohighlight">\(\sigma\)</span>) прямо пропорційна відносному видовженню (<span class="math notranslate nohighlight">\(\varepsilon\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[ \sigma = E|\varepsilon| \]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> - механічна напруга (Па).</p></li>
+<li><p><span class="math notranslate nohighlight">\(|\varepsilon|\)</span> - модуль відносного видовження (безрозмірна величина).</p></li>
+<li><p><span class="math notranslate nohighlight">\(E\)</span> - <strong>модуль Юнга (модуль пружності)</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Модуль Юнга (модуль пружності)</strong> (<span class="math notranslate nohighlight">\(E\)</span>) - це коефіцієнт пропорційності в законі Гука, що характеризує пружні властивості <em>матеріалу</em>. Він показує, наскільки матеріал стійкий до пружної деформації розтягу або стиснення. Чим більше модуль Юнга, тим жорсткіший матеріал (тим важче його деформувати).</p>
+</div></blockquote>
+<p>Одиницею вимірювання модуля Юнга в системі СІ є <strong>Паскаль (Па)</strong>.</p>
+<p>Давайте подивимося, як ці дві форми закону Гука пов'язані між собою.
+Ми знаємо:</p>
+<ol class="arabic simple">
+<li><p>Закон Гука у формі сили: <span class="math notranslate nohighlight">\(F_{\text{пруж}} = k \Delta l\)</span></p></li>
+<li><p>Визначення напруги: <span class="math notranslate nohighlight">\(\sigma = \frac{F_{\text{пруж}}}{S}\)</span></p></li>
+<li><p>Визначення відносного видовження: <span class="math notranslate nohighlight">\(\varepsilon = \frac{\Delta l}{l_0}\)</span></p></li>
+</ol>
+<p>З визначення напруги ми можемо виразити силу пружності:</p>
+<div class="math notranslate nohighlight">
+\[ F_{\text{пруж}} = \sigma S \]</div>
+<p>З визначення відносного видовження ми можемо виразити абсолютне видовження:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta l = \varepsilon l_0 \]</div>
+<p>Тепер підставимо ці вирази у першу форму закону Гука:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma S = k (\varepsilon l_0) \]</div>
+<p>Але ми також знаємо другу форму закону Гука: <span class="math notranslate nohighlight">\(\sigma = E \varepsilon\)</span>. Підставимо це в рівняння:</p>
+<div class="math notranslate nohighlight">
+\[ (E \varepsilon) S = k \varepsilon l_0 \]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(\varepsilon\)</span> не дорівнює нулю (якщо є деформація), ми можемо скоротити його з обох сторін рівняння:</p>
+<div class="math notranslate nohighlight">
+\[ E S = k l_0 \]</div>
+<p>Звідси ми можемо виразити жорсткість тіла <span class="math notranslate nohighlight">\(k\)</span> через модуль Юнга <span class="math notranslate nohighlight">\(E\)</span>, площу поперечного перерізу <span class="math notranslate nohighlight">\(S\)</span> та початкову довжину <span class="math notranslate nohighlight">\(l_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ k = E \frac{S}{l_0} \]</div>
+<p>І навпаки, модуль Юнга <span class="math notranslate nohighlight">\(E\)</span> через жорсткість <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ E = k \frac{l_0}{S} \]</div>
+<p><strong>Ключова відмінність:</strong> Ці формули чітко показують, що <strong>жорсткість конкретного тіла (<span class="math notranslate nohighlight">\(k\)</span>)</strong> залежить не тільки від матеріалу (через <span class="math notranslate nohighlight">\(E\)</span>), а й від його геометричних розмірів (<span class="math notranslate nohighlight">\(S\)</span> та <span class="math notranslate nohighlight">\(l_0\)</span>). Натомість <strong>модуль Юнга (<span class="math notranslate nohighlight">\(E\)</span>) - це фундаментальна характеристика лише матеріалу</strong>, яка не залежить від форми чи розмірів зразка, що робить його універсальною мірою пружності.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h2>Діаграма напруг (діаграма розтягу)<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>Щоб детальніше вивчити, як матеріал поводиться під дією навантаження, ми будуємо <strong>діаграму напруг (діаграму розтягу)</strong>. Це графік залежності механічної напруги (<span class="math notranslate nohighlight">\(\sigma\)</span>) від відносного видовження (<span class="math notranslate nohighlight">\(\varepsilon\)</span>) при розтягуванні зразка матеріалу до його руйнування. Ця діаграма є &quot;паспортом&quot; механічних властивостей матеріалу.</p>
+<p>Для повного розуміння цієї діаграми, зазвичай використовують графік, де по горизонтальній осі відкладається відносне видовження <span class="math notranslate nohighlight">\(\varepsilon\)</span> (безрозмірна величина), а по вертикальній - механічна напруга <span class="math notranslate nohighlight">\(\sigma\)</span> (Па).</p>
+<p>Ми детально опишемо ключові ділянки та точки, які ви побачите на такому графіку для типового пластичного металу (наприклад, м'якої сталі). Уявіть, що ми поступово збільшуємо навантаження на зразок, і графік показує, як &quot;реагує&quot; матеріал.</p>
+<p><img alt="mechanical stress diagram" src="../../_images/mechanical_stress_diagram.png" /></p>
+<p>Рис. 1. Діаграма напруг.</p>
+<p>Графік починається з початку координат (0,0). Спочатку він піднімається як пряма лінія, потім може трохи вигнутися, після чого часто спостерігається майже горизонтальна ділянка, далі крива знову піднімається до свого максимуму, а потім спадає до точки руйнування.</p>
+<section id="id15">
+<h3>Ключові ділянки та точки на діаграмі<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Ділянка пропорційності (від початку координат до точки А):</strong></p>
+<ul class="simple">
+<li><p>Це початкова ділянка діаграми, яка є прямою лінією, що проходить через початок координат. На цій ділянці напруга прямо пропорційна деформації, тобто тут <strong>повністю виконується закон Гука</strong> (<span class="math notranslate nohighlight">\(\sigma = E\varepsilon\)</span>). Нахил цієї прямої і є модулем Юнга <span class="math notranslate nohighlight">\(E\)</span>.</p></li>
+<li><p><strong>Межа пропорційності</strong> (<span class="math notranslate nohighlight">\(\sigma_{\text{пр}}\)</span>) - це напруга в точці А, максимальне значення напруги, до якої зберігається лінійна залежність між напругою та деформацією.</p></li>
+</ul>
+</li>
+<li><p><strong>Ділянка пружності (від точки А до точки В):</strong></p>
+<ul class="simple">
+<li><p>На цій ділянці графік може трохи відхилятися від прямої, стаючи злегка вигнутим, але деформація <em>все ще є пружною</em>. Це означає, що якщо навантаження зняти, тіло повністю відновить свою початкову форму без залишкових деформацій.</p></li>
+<li><p><strong>Межа пружності</strong> (<span class="math notranslate nohighlight">\(\sigma_{\text{пруж}}\)</span>) - це напруга в точці В, максимальна напруга, після зняття якої тіло повністю відновлює свою початкову форму. Для багатьох матеріалів межа пропорційності та межа пружності дуже близькі або практично збігаються.</p></li>
+</ul>
+</li>
+<li><p><strong>Пластична деформація (від точки В до точки С)</strong></p>
+<ul class="simple">
+<li><p>Після межі пружності починається <strong>пластична деформація</strong>. Напруга зростає як і видовження до досягнення певної точки С, яка є межею плинності (текучості).</p></li>
+</ul>
+</li>
+<li><p><strong>Ділянка плинності (від точки C до точки D):</strong></p>
+<ul class="simple">
+<li><p><strong>Межа плинності (текучості)</strong> (<span class="math notranslate nohighlight">\(\sigma_{\text{пл}}\)</span>) - це напруга, при якій починається значна пластична деформація (текучість) матеріалу без помітного збільшення навантаження. Це дуже важлива характеристика для інженерних розрахунків, оскільки вона визначає момент, коли конструкція починає незворотно деформуватися. Для деяких матеріалів (наприклад, низьковуглецевої сталі) на графіку може бути видно &quot;зуб&quot; - верхня межа плинності (трохи вище) і нижня межа плинності (трохи нижче), що вказує на початок і стабілізацію процесу текучості.</p></li>
+<li><p>При досягненні межі плинності у точці C матеріал починає &quot;текти&quot; - він деформується зі значним збільшенням видовження, але при цьому напруга залишається майже постійною або навіть дещо зменшується. Це схоже на те, як в'язка рідина починає текти під певним тиском. Цей процес називають &quot;текучістю&quot; матеріалу.</p></li>
+</ul>
+</li>
+<li><p><strong>Ділянка зміцнення (від точки D до точки E):</strong></p>
+<ul class="simple">
+<li><p>Після ділянки плинності матеріал знову починає чинити опір деформації, і для подальшого видовження потрібно прикладати все більшу напругу. Графік знову йде вгору. Це явище називають <strong>&quot;зміцненням&quot; матеріалу</strong>, оскільки його внутрішня структура змінюється (наприклад, збільшується щільність дислокацій у кристалах), що підвищує опір до подальшої пластичної деформації.</p></li>
+<li><p><strong>Межа міцності (тимчасовий опір)</strong> (<span class="math notranslate nohighlight">\(\sigma_{\text{міц}}\)</span>) - це напруга в точці E, яка відповідає максимальній напрузі, яку матеріал може витримати перед руйнуванням. Після цієї точки починається локальне звуження зразка, і напруга, що розраховується на початкову площу, починає зменшуватися.</p></li>
+</ul>
+</li>
+<li><p><strong>Ділянка руйнування (від точки E до точки K):</strong></p>
+<ul class="simple">
+<li><p>Після досягнення межі міцності, матеріал продовжує деформуватися з локальним звуженням до моменту повного руйнування. Напруга, розрахована на початкову площу, падає, бо навантаження вже не зростає, а площа зменшується.</p></li>
+<li><p><strong>Точка руйнування</strong> (точка K) - це момент, коли зразок остаточно розривається.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id16">
+<h3>Поведінка різних матеріалів на діаграмі<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>Діаграма розтягу виглядає по-різному для різних типів матеріалів:</p>
+<ul class="simple">
+<li><p><strong>Пластичні матеріали</strong> (наприклад, м'яка сталь, алюміній, мідь) мають виражену ділянку плинності та значне видовження до руйнування. Вони можуть сильно деформуватися, перш ніж зруйнуватися, що є цінною властивістю для конструкцій, оскільки це дає попередження про перевантаження та дозволяє уникнути раптового катастрофічного руйнування.</p></li>
+<li><p><strong>Крихкі матеріали</strong> (наприклад, чавун, скло, кераміка) мають дуже малу або взагалі відсутню ділянку пластичної деформації. Їхня діаграма розтягу майже прямолінійна до точки руйнування. Вони руйнуються раптово, одразу після досягнення межі пружності (або навіть межі пропорційності), без помітного видовження. Їхня межа міцності майже збігається з межею пружності.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id17">
+<h2>Теплове розширення твердих тіл<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<p>Ми вже знаємо, що частинки в твердих тілах постійно коливаються навколо своїх положень рівноваги. Коли ми нагріваємо тіло, ці коливання стають інтенсивнішими - частинки коливаються з більшою амплітудою.</p>
+<section id="id18">
+<h3>Сутність теплового розширення<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Збільшення амплітуди коливань призводить до того, що середня відстань між частинками збільшується. Як наслідок, збільшуються розміри всього тіла. Це явище називається <strong>тепловим розширенням</strong>.</p>
+<blockquote>
+<div><p><strong>Теплове розширення</strong> - це зміна розмірів (довжини, площі, об'єму) тіла при зміні його температури.</p>
+</div></blockquote>
+<p>Ми стикаємося з тепловим розширенням повсюди:</p>
+<ul class="simple">
+<li><p>Залізничні рейки мають проміжки, щоб уникнути їх викривлення в спекотну погоду.</p></li>
+<li><p>Мости мають компенсаційні шви, які дозволяють їм розширюватися і стискатися без пошкоджень.</p></li>
+<li><p>Термометри працюють за принципом теплового розширення рідини (ртуті або спирту), що збільшує свій об'єм при нагріванні.</p></li>
+</ul>
+</section>
+<section id="id19">
+<h3>Лінійне теплове розширення<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Лінійне теплове розширення</strong> - це зміна довжини тіла при зміні його температури. Воно характерне для довгих, тонких об'єктів (стержні, дроти).</p>
+</div></blockquote>
+<p>Зміна довжини (<span class="math notranslate nohighlight">\(\Delta l\)</span>) при лінійному розширенні розраховується за формулою:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\Delta l}{l_0} = \alpha\Delta t \]</div>
+<p>Або у більш звичному вигляді:
+$<span class="math notranslate nohighlight">\( \Delta l = l_0 \alpha \Delta t \)</span>$</p>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta l\)</span> - абсолютне видовження (зміна довжини) (м).</p></li>
+<li><p><span class="math notranslate nohighlight">\(l_0\)</span> - початкова довжина тіла при початковій температурі (м).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta t\)</span> - зміна температури (<span class="math notranslate nohighlight">\( \Delta t = t - t_0 \)</span>, де <span class="math notranslate nohighlight">\(t\)</span> - кінцева, <span class="math notranslate nohighlight">\(t_0\)</span> - початкова температура) (°C або К).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> - <strong>коефіцієнт лінійного теплового розширення</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Коефіцієнт лінійного теплового розширення</strong> (<span class="math notranslate nohighlight">\(\alpha\)</span>) - це фізична величина, що показує, на яку частину своєї початкової довжини видовжується тіло при нагріванні на 1°C (або 1 К). Це характеристика матеріалу, яка залежить від його природи.</p>
+</div></blockquote>
+<p>Одиницею вимірювання <span class="math notranslate nohighlight">\(\alpha\)</span> в системі СІ є <strong>обернений Кельвін (К⁻¹)</strong> або <strong>обернений градус Цельсія (°C⁻¹)</strong>, оскільки зміна температури на 1 К дорівнює зміні температури на 1°C.</p>
+</section>
+<section id="id20">
+<h3>Об'ємне теплове розширення<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p><strong>Об'ємне теплове розширення</strong> - це зміна об'єму тіла при зміні його температури. Це загальне розширення, яке відбувається для будь-яких твердих тіл (і рідин, і газів).</p>
+<p>Зміна об'єму (<span class="math notranslate nohighlight">\(\Delta V\)</span>) при об'ємному розширенні розраховується за формулою:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\Delta V}{V_0} = \beta \Delta t \]</div>
+<p>Або:
+$<span class="math notranslate nohighlight">\( \Delta V = V_0 \beta \Delta t \)</span>$</p>
+<p>Де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta V\)</span> - зміна об'єму (м³).</p></li>
+<li><p><span class="math notranslate nohighlight">\(V_0\)</span> - початковий об'єм тіла при початковій температурі (м³).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta t\)</span> - зміна температури (°C або К).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta\)</span> - <strong>коефіцієнт об'ємного теплового розширення</strong>.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Коефіцієнт об'ємного теплового розширення</strong> (<span class="math notranslate nohighlight">\(\beta\)</span>) - це фізична величина, що показує, на яку частину свого початкового об'єму збільшується тіло при нагріванні на 1°C (або 1 К). Це також характеристика матеріалу.</p>
+</div></blockquote>
+<p>Одиницею вимірювання <span class="math notranslate nohighlight">\(\beta\)</span> в системі СІ є <strong>обернений Кельвін (К⁻¹)</strong> або <strong>обернений градус Цельсія (°C⁻¹)</strong>.</p>
+</section>
+<section id="id21">
+<h3>Зв'язок між коефіцієнтами лінійного та об'ємного розширення<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<p>Для ізотропних твердих тіл (тобто тих, чиї властивості однакові в усіх напрямках, як ми обговорювали на попередній сторінці, згадуючи полікристали та аморфні тіла) існує простий зв'язок між коефіцієнтом лінійного розширення <span class="math notranslate nohighlight">\(\alpha\)</span> та коефіцієнтом об'ємного розширення <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+<p>Давайте виведемо цей зв'язок. Уявимо кубик з початковою довжиною ребра <span class="math notranslate nohighlight">\(l_0\)</span>. Його початковий об'єм буде:</p>
+<div class="math notranslate nohighlight">
+\[ V_0 = l_0^3 \]</div>
+<p>При нагріванні на <span class="math notranslate nohighlight">\(\Delta t\)</span>, кожне ребро кубика видовжиться. Нова довжина ребра <span class="math notranslate nohighlight">\(l\)</span> буде:</p>
+<div class="math notranslate nohighlight">
+\[ l = l_0 + \Delta l \]</div>
+<p>Використовуючи формулу для лінійного розширення <span class="math notranslate nohighlight">\(\Delta l = l_0 \alpha \Delta t\)</span>, ми отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[ l = l_0 + l_0 \alpha \Delta t = l_0 (1 + \alpha \Delta t) \]</div>
+<p>Тепер знайдемо новий об'єм кубика <span class="math notranslate nohighlight">\(V\)</span>, піднісши нову довжину ребра до куба:</p>
+<div class="math notranslate nohighlight">
+\[ V = l^3 = (l_0 (1 + \alpha \Delta t))^3 \]</div>
+<div class="math notranslate nohighlight">
+\[ V = l_0^3 (1 + \alpha \Delta t)^3 \]</div>
+<p>Ми можемо розкрити дужки <span class="math notranslate nohighlight">\((1 + \alpha \Delta t)^3\)</span> за формулою бінома Ньютона або просто перемноживши:</p>
+<div class="math notranslate nohighlight">
+\[ (1 + x)^3 = 1 + 3x + 3x^2 + x^3 \]</div>
+<p>В нашому випадку <span class="math notranslate nohighlight">\(x = \alpha \Delta t\)</span>. Отже:</p>
+<div class="math notranslate nohighlight">
+\[ V = V_0 (1 + 3(\alpha \Delta t) + 3(\alpha \Delta t)^2 + (\alpha \Delta t)^3) \]</div>
+<p>Значення <span class="math notranslate nohighlight">\(\alpha\)</span> дуже мале (зазвичай порядку <span class="math notranslate nohighlight">\(10^{-5}\)</span> К⁻¹), а зміна температури <span class="math notranslate nohighlight">\(\Delta t\)</span> для більшості практичних випадків не є надто великою. Тому добуток <span class="math notranslate nohighlight">\(\alpha \Delta t\)</span> також буде дуже малим. Наприклад, якщо <span class="math notranslate nohighlight">\(\alpha = 10^{-5}\)</span> К⁻¹ і <span class="math notranslate nohighlight">\(\Delta t = 100\)</span> К, то <span class="math notranslate nohighlight">\(\alpha \Delta t = 10^{-3} = 0.001\)</span>.</p>
+<p>Тоді:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((\alpha \Delta t)^2 = (0.001)^2 = 0.000001\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((\alpha \Delta t)^3 = (0.001)^3 = 0.000000001\)</span></p></li>
+</ul>
+<p>Ті доданки, що містять <span class="math notranslate nohighlight">\((\alpha \Delta t)^2\)</span> та <span class="math notranslate nohighlight">\((\alpha \Delta t)^3\)</span>, настільки малі, що ними можна знехтувати в порівнянні з <span class="math notranslate nohighlight">\(3(\alpha \Delta t)\)</span>. Тому рівняння спрощується до:</p>
+<div class="math notranslate nohighlight">
+\[ V \approx V_0 (1 + 3\alpha \Delta t) \]</div>
+<p>З іншого боку, ми знаємо, що об'ємне розширення описується формулою:</p>
+<div class="math notranslate nohighlight">
+\[ V = V_0 (1 + \beta \Delta t) \]</div>
+<p>Порівнюючи ці два вирази, ми бачимо, що:</p>
+<div class="math notranslate nohighlight">
+\[ \beta \approx 3\alpha \]</div>
+<p>Таким чином, коефіцієнт об'ємного теплового розширення приблизно втричі більший за коефіцієнт лінійного теплового розширення для ізотропних матеріалів.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id22">
+<h2>Підсумок<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Термін</p></th>
+<th class="head text-left"><p>Визначення та ключові формули</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Деформація</strong></p></td>
+<td class="text-left"><p>Зміна форми та/або розмірів тіла під дією зовнішніх сил.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Пружна деформація</strong></p></td>
+<td class="text-left"><p>Деформація, яка повністю зникає після припинення дії зовнішніх сил.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Пластична деформація</strong></p></td>
+<td class="text-left"><p>Деформація, яка зберігається після припинення дії зовнішніх сил.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Абсолютне видовження</strong> <span class="math notranslate nohighlight">\(\Delta l\)</span></p></td>
+<td class="text-left"><p>Зміна довжини тіла в результаті деформації. <span class="math notranslate nohighlight">\(\Delta l = l - l_0\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Відносне видовження</strong> <span class="math notranslate nohighlight">\(\varepsilon\)</span></p></td>
+<td class="text-left"><p>Відношення абсолютного видовження до початкової довжини тіла. <span class="math notranslate nohighlight">\(\varepsilon = \frac{\Delta l}{l_0}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Механічна напруга</strong> <span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td class="text-left"><p>Відношення величини внутрішньої сили пружності до площі поперечного перерізу. <span class="math notranslate nohighlight">\(\sigma = \frac{F_{\text{пруж}}}{S}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Коефіцієнт Пуассона</strong> <span class="math notranslate nohighlight">\(\nu\)</span></p></td>
+<td class="text-left"><p>Відношення відносної поперечної деформації до відносної поздовжньої. <span class="math notranslate nohighlight">\(\nu = -\frac{\varepsilon_{\text{попер}}}{ \varepsilon_{\text{позд}}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Закон Гука (для тіла)</strong></p></td>
+<td class="text-left"><p>Сила пружності прямо пропорційна абсолютному видовженню. <span class="math notranslate nohighlight">\(F_{\text{пруж}} = k|\Delta l|\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Жорсткість тіла</strong> <span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td class="text-left"><p>Характеристика <em>конкретного тіла</em>, що показує його опір деформації. <span class="math notranslate nohighlight">\(k = E \frac{S}{l_0}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Закон Гука (для матеріалу)</strong></p></td>
+<td class="text-left"><p>Механічна напруга прямо пропорційна відносному видовженню. <span class="math notranslate nohighlight">\(\sigma = E|\varepsilon|\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Модуль Юнга (пружності)</strong> <span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td class="text-left"><p>Характеристика <em>матеріалу</em>, що показує його стійкість до пружної деформації. <span class="math notranslate nohighlight">\(E = k \frac{l_0}{S}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Межа пропорційності</strong> <span class="math notranslate nohighlight">\(\sigma_{\text{пр}}\)</span></p></td>
+<td class="text-left"><p>Максимальна напруга, до якої виконується закон Гука (<span class="math notranslate nohighlight">\(\sigma \sim \varepsilon\)</span>).</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Межа пружності</strong> <span class="math notranslate nohighlight">\(\sigma_{\text{пруж}}\)</span></p></td>
+<td class="text-left"><p>Максимальна напруга, після зняття якої в тілі не залишається деформацій.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Межа плинності (текучості)</strong> <span class="math notranslate nohighlight">\(\sigma_{\text{пл}}\)</span></p></td>
+<td class="text-left"><p>Напруга, при якій починається значна пластична деформація без збільшення навантаження.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Межа міцності</strong> <span class="math notranslate nohighlight">\(\sigma_{\text{міц}}\)</span></p></td>
+<td class="text-left"><p>Максимальна напруга, яку матеріал може витримати перед руйнуванням.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Теплове розширення</strong></p></td>
+<td class="text-left"><p>Зміна розмірів тіла при зміні його температури.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Лінійне теплове розширення</strong></p></td>
+<td class="text-left"><p>Зміна довжини тіла при зміні температури. <span class="math notranslate nohighlight">\(\Delta l = l_0 \alpha \Delta t\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Коефіцієнт лінійного розширення</strong> <span class="math notranslate nohighlight">\(\alpha\)</span></p></td>
+<td class="text-left"><p>Показує, на яку частину своєї довжини видовжується тіло при нагріванні на 1°C.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Об'ємне теплове розширення</strong></p></td>
+<td class="text-left"><p>Зміна об'єму тіла при зміні температури. <span class="math notranslate nohighlight">\(\Delta V = V_0 \beta \Delta t\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Коефіцієнт об'ємного розширення</strong> <span class="math notranslate nohighlight">\(\beta\)</span></p></td>
+<td class="text-left"><p>Показує, на яку частину свого об'єму збільшується тіло при нагріванні на 1°C.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Зв'язок коефіцієнтів розширення</strong></p></td>
+<td class="text-left"><p>Для ізотропних тіл: <span class="math notranslate nohighlight">\(\beta \approx 3\alpha\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id23">
+<h2>Додаткові матеріали<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D1%96%D1%8F_%D0%B7%D1%81%D1%83%D0%B2%D1%83">https://uk.wikipedia.org/wiki/Деформація_зсуву</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D1%96%D1%8F_%D0%BA%D1%80%D1%83%D1%87%D0%B5%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Деформація_кручення</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D0%BF%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Напруження</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82_%D0%9F%D1%83%D0%B0%D1%81%D1%81%D0%BE%D0%BD%D0%B0">https://uk.wikipedia.org/wiki/Коефіцієнт_Пуассона</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%93%D1%83%D0%BA%D0%B0">https://uk.wikipedia.org/wiki/Закон_Гука</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C_%D0%AE%D0%BD%D0%B3%D0%B0">https://uk.wikipedia.org/wiki/Модуль_Юнга</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8F_%D1%82%D0%B5%D0%BA%D1%83%D1%87%D0%BE%D1%81%D1%82%D1%96">https://uk.wikipedia.org/wiki/Границя_текучості</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8F_%D0%BC%D1%96%D1%86%D0%BD%D0%BE%D1%81%D1%82%D1%96">https://uk.wikipedia.org/wiki/Границя_міцності</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C_%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D1%96%D0%B0%D0%BB%D1%83">https://uk.wikipedia.org/wiki/Пластичність_матеріалу</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D1%85%D0%BA%D1%96%D1%81%D1%82%D1%8C">https://uk.wikipedia.org/wiki/Крихкість</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BF%D0%BB%D0%BE%D0%B2%D0%B5_%D1%80%D0%BE%D0%B7%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Теплове_розширення</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82_%D1%82%D0%B5%D0%BF%D0%BB%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D1%80%D0%BE%D0%B7%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D1%8F">https://uk.wikipedia.org/wiki/Коефіцієнт_теплового_розширення</a></p></li>
+</ul>
+</section>
+<section id="id24">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Deformation_(engineering)">https://en.wikipedia.org/wiki/Deformation_(engineering)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tension_(physics)">https://en.wikipedia.org/wiki/Tension_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Compression_(physics)">https://en.wikipedia.org/wiki/Compression_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bending">https://en.wikipedia.org/wiki/Bending</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Shear_stress">https://en.wikipedia.org/wiki/Shear_stress</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Torsion_(mechanics)">https://en.wikipedia.org/wiki/Torsion_(mechanics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Elasticity_(physics)">https://en.wikipedia.org/wiki/Elasticity_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Plasticity_(physics)">https://en.wikipedia.org/wiki/Plasticity_(physics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stress_(mechanics)">https://en.wikipedia.org/wiki/Stress_(mechanics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Strain_(mechanics)">https://en.wikipedia.org/wiki/Strain_(mechanics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Poisson%27s_ratio">https://en.wikipedia.org/wiki/Poisson's_ratio</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Hooke%27s_law">https://en.wikipedia.org/wiki/Hooke's_law</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stiffness">https://en.wikipedia.org/wiki/Stiffness</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Young%27s_modulus">https://en.wikipedia.org/wiki/Young's_modulus</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stress%E2%80%93strain_curve">https://en.wikipedia.org/wiki/Stress–strain_curve</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Yield_(engineering)">https://en.wikipedia.org/wiki/Yield_(engineering)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ultimate_tensile_strength">https://en.wikipedia.org/wiki/Ultimate_tensile_strength</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ductility">https://en.wikipedia.org/wiki/Ductility</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Brittleness">https://en.wikipedia.org/wiki/Brittleness</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Thermal_expansion">https://en.wikipedia.org/wiki/Thermal_expansion</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mkt"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="solids.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Будова та властивості твердих тіл</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../internal_energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Деформація твердих тіл</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Види деформацій за характером зміни форми</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Анізотропія та деформація</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Види деформацій за оборотністю</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Механічна напруга, відносне видовження та коефіцієнт Пуассона</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Абсолютне видовження</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Відносне видовження (відносна деформація)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Механічна напруга</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Коефіцієнт Пуассона</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Закон Гука та модуль Юнга</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Закон Гука для пружної деформації (у формі сили)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Закон Гука для пружної деформації (у формі напруги та деформації)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Діаграма напруг (діаграма розтягу)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Ключові ділянки та точки на діаграмі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Поведінка різних матеріалів на діаграмі</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Теплове розширення твердих тіл</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Сутність теплового розширення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Лінійне теплове розширення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Об'ємне теплове розширення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Зв'язок між коефіцієнтами лінійного та об'ємного розширення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

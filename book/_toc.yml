@@ -74,6 +74,7 @@ parts:
       - file: physics/mkt/phase-transitions
       - file: physics/mkt/liquid-surface-tension
       - file: physics/mkt/solids
+      - file: physics/mkt/solids-properties
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
