@@ -1,0 +1,993 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Реальні гази &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/real-gas';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Пароутворення і конденсація" href="evaporation-and-condensation.html" />
+    <link rel="prev" title="Рівняння стану ідеального газу" href="ideal-gas-law.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Реальні гази</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="humidity.html">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase-transitions.html">Фазові переходи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solids.html">Механічні властивості твердих тіл та теплове розширення</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/self-oscillations.html">Автоколивання (Pending)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/alternating-current.html">Змінний струм</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-01.html">Електродинаміка. Задачі 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-02.html">Електродинаміка. Задачі 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electromagnetic-waves-classroom.html">Електромагнітні коливання та хвилі. Задачі</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/Yakovliev/quantopia-school-ua/blob/main/book/physics/mkt/real-gas.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mkt/real-gas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mkt/real-gas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Реальні гази</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Вступ: Від ідеального до реального</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Що не так з ідеальним газом?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Рівняння стану Ван-дер-Ваальса</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Перша поправка: врахування власного об'єму молекул</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Друга поправка: врахування міжмолекулярного притягання</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Аналіз рівняння Ван-дер-Ваальса. Ізотерми реального газу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Математичне перетворення рівняння</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Графічний аналіз: ізотерми Ван-дер-Ваальса</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-t-c">1. Ізотерма при високій температурі <span class="math notranslate nohighlight">\(T &gt; T_c\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2. Ізотерма при низькій температурі <span class="math notranslate nohighlight">\(T &lt; T_c\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3. Критична ізотерма <span class="math notranslate nohighlight">\(T = T_c\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Обмеження рівняння Ван-дер-Ваальса</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Реальні гази<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Вступ: Від ідеального до реального<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У шкільному курсі фізики ми багато працюємо з моделлю <strong>ідеального газу</strong>. Це чудова і проста модель, яка добре працює в багатьох ситуаціях, наприклад, для опису повітря у кімнаті за звичайних умов (нормального атмосферного тиску та кімнатної температури).</p>
+<p>Давайте пригадаємо основні припущення цієї моделі:</p>
+<ol class="arabic simple">
+<li><p><strong>Молекули - це матеріальні точки.</strong> Вони не мають власного об'єму.</p></li>
+<li><p><strong>Молекули не взаємодіють між собою на відстані.</strong> Вони взаємодіють лише під час пружних зіткнень, як більярдні кулі.</p></li>
+</ol>
+<p>Стан ідеального газу описується знаменитим <strong>рівнянням стану ідеального газу</strong>:</p>
+<div class="math notranslate nohighlight">
+\[pV = \nu RT\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p\)</span> - тиск газу (одиниця в СІ: Паскаль, Па);</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> - об'єм газу (одиниця в СІ: метр кубічний, м³);</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nu\)</span> - кількість речовини (одиниця в СІ: моль, моль);</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> - абсолютна температура (одиниця в СІ: Кельвін, К);</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> - універсальна газова стала, <span class="math notranslate nohighlight">\(R \approx 8.314\)</span> Дж/(моль·К).</p></li>
+</ul>
+<p>Але що станеться, якщо ми почнемо сильно стискати газ (збільшувати тиск) або сильно його охолоджувати (зменшувати температуру)? У цих умовах модель ідеального газу перестає працювати. Газ починає поводитись інакше, і врешті-решт він може навіть перетворитися на рідину. Такий газ, поведінка якого залежить від взаємодії та розміру молекул, називається <strong>реальним газом</strong>.</p>
+<p>Наша мета - зрозуміти, чому модель ідеального газу дає збій, і як її можна виправити, щоб вона описувала реальні гази.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Що не так з ідеальним газом?<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>У реальному світі молекули - це не просто точки. Вони мають цілком конкретний, хоч і дуже малий, <strong>власний об'єм</strong>. Отже, перше, що ми повинні врахувати: <strong>реальний об'єм, доступний для руху молекул, є меншим за об'єм посудини.</strong></p>
+<p>Крім того, між ними існують <strong>сили міжмолекулярної взаємодії</strong>.</p>
+<p>Ці сили мають подвійну природу:</p>
+<ul class="simple">
+<li><p><strong>Сили притягання:</strong> Діють на відносно більших відстанях (порівняно з розміром молекул). Саме завдяки цим силам газ при достатньому охолодженні та стисненні може перетворитися на рідину. Молекули ніби &quot;чіпляються&quot; одна за одну.</p></li>
+<li><p><strong>Сили відштовхування:</strong> Проявляються на дуже малих відстанях, коли електронні оболонки молекул починають &quot;накладатися&quot; одна на одну. Саме ці сили не дають молекулам &quot;злипнутися&quot; в одну точку і відповідають за те, що речовина має власний об'єм.</p></li>
+</ul>
+<p>Отже, друге, що ми маємо врахувати: <strong>молекули реального газу притягуються одна до одної, що впливає на тиск, який газ чинить на стінки посудини.</strong></p>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h2>Рівняння стану Ван-дер-Ваальса<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Голландський фізик <strong>Ян Ван-дер-Ваальс</strong> у 1873 році запропонував геніально просте виправлення рівняння стану ідеального газу, яке враховувало б ці два фактори. Його ідея полягала не в тому, щоб створити нове рівняння з нуля, а в тому, щоб &quot;покращити&quot; вже існуюче, ввівши до нього дві поправки: одну для об'єму, іншу - для тиску.</p>
+<p>Давайте пройдемо його шляхом. Ми візьмемо рівняння ідеального газу <span class="math notranslate nohighlight">\(pV = \nu RT\)</span> і по черзі змінимо в ньому <span class="math notranslate nohighlight">\(V\)</span> і <span class="math notranslate nohighlight">\(p\)</span>.</p>
+<section id="id5">
+<h3>Перша поправка: врахування власного об'єму молекул<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Як ми вже з'ясували, вільний об'єм, у якому можуть рухатись молекули, менший за загальний об'єм посудини <span class="math notranslate nohighlight">\(V\)</span>. На скільки менший? Він менший на величину, яку можна назвати &quot;забороненим об'ємом&quot; - тим простором, який зайнятий самими молекулами.</p>
+<p>Ван-дер-Ваальс ввів величину <span class="math notranslate nohighlight">\(b\)</span>, яка позначає об'єм, що фактично &quot;займає&quot; один моль молекул. Ця величина враховує не тільки власний об'єм молекул, а й те, що центри двох молекул не можуть наблизитись один до одного на відстань, меншу за діаметр молекули. Тому виявляється, що цей &quot;виключений об'єм&quot; приблизно в <strong>4 рази більший за сумарний об'єм самих молекул</strong>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(b\)</span> - <strong>стала Ван-дер-Ваальса</strong>, яка є поправкою на власний об'єм молекул (одиниця в СІ: м<span class="math notranslate nohighlight">\(^3\)</span>/моль).</p></li>
+</ul>
+<p>Якщо в посудині знаходиться <span class="math notranslate nohighlight">\(\nu\)</span> молів газу, то сумарний &quot;заборонений&quot; об'єм буде дорівнювати <span class="math notranslate nohighlight">\(\nu b\)</span>. Отже, вільний об'єм, доступний для руху, буде не <span class="math notranslate nohighlight">\(V\)</span>, а <span class="math notranslate nohighlight">\(V_{\text{вільний}} = V - \nu b\)</span>.</p>
+<p>Тепер ми можемо замінити <span class="math notranslate nohighlight">\(V\)</span> у рівнянні ідеального газу на цей вираз:</p>
+<div class="math notranslate nohighlight">
+\[p(V - \nu b) = \nu RT\]</div>
+<p>Це вже перший крок до рівняння реального газу.</p>
+<p><strong>Пояснення &quot;виведення&quot; <span class="math notranslate nohighlight">\(b\)</span> (концептуальне):</strong></p>
+<p>Уявіть собі дві сферичні молекули радіусом <span class="math notranslate nohighlight">\(r\)</span>. Коли вони зближуються, центр однієї молекули не може наблизитися до центру іншої на відстань меншу, ніж сума їхніх радіусів, тобто <span class="math notranslate nohighlight">\(2r\)</span>. Це означає, що навколо кожної молекули є так званий &quot;виключений об'єм&quot;, куди <em>центр</em> іншої молекули не може проникнути.</p>
+<p>Для <em>пари</em> молекул цей &quot;виключений об'єм&quot; становить сферу радіусом <span class="math notranslate nohighlight">\(2r\)</span>. Об'єм цієї сфери:</p>
+<div class="math notranslate nohighlight">
+\[ V_{\text{викл, пара}} = \frac{4}{3}\pi (2r)^3 = 8 \cdot \frac{4}{3}\pi r^3 \]</div>
+<p>Ми знаємо, що об'єм однієї молекули <span class="math notranslate nohighlight">\(V_{\text{мол}} = \frac{4}{3}\pi r^3\)</span>. Отже, <span class="math notranslate nohighlight">\(V_{\text{викл, пара}} = 8 \cdot V_{\text{мол}}\)</span>.</p>
+<p>Цей об'єм стосується <em>двох</em> молекул. Якщо ми хочемо знайти, який виключений об'єм &quot;припадає&quot; на <em>одну</em> молекулу в середньому, ми повинні розділити цей об'єм на два, оскільки кожна молекула робить свій внесок у створення цього виключеного об'єму для іншої:</p>
+<div class="math notranslate nohighlight">
+\[ V_{\text{викл, на 1 мол.}} = \frac{V_{\text{викл, пара}}}{2} = \frac{8 \cdot V_{\text{мол}}}{2} = 4 \cdot V_{\text{мол}} \]</div>
+<p>Таким чином, виключений об'єм на одну молекулу приблизно в 4 рази перевищує її власний об'єм, як ми згадували вище.</p>
+<p>Якщо ми маємо <span class="math notranslate nohighlight">\(\nu\)</span> молів газу, а в одному молі <span class="math notranslate nohighlight">\(N_A\)</span> молекул (число Авогадро), то поправка <span class="math notranslate nohighlight">\(b\)</span> враховує цей виключений об'єм для одного моля:</p>
+<div class="math notranslate nohighlight">
+\[ b = 4 \cdot N_A \cdot V_{\text{мол}} \]</div>
+<p>Ця поправка зменшує об'єм у рівнянні ідеального газу. Отже, рівняння стану тепер виглядає так:</p>
+<div class="math notranslate nohighlight">
+\[ p(V - \nu b) = \nu RT \]</div>
+</section>
+<section id="id6">
+<h3>Друга поправка: врахування міжмолекулярного притягання<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Тепер розберемося з тиском. Тиск газу на стінки посудини створюється ударами молекул об ці стінки. Розглянемо молекулу, яка летить до стінки. В ідеальному газі на неї нічого не діє. У реальному газі її з усіх боків притягують інші молекули.</p>
+<ul class="simple">
+<li><p>Якщо молекула знаходиться <strong>всередині об'єму</strong>, ці сили притягання в середньому скомпенсовані, бо її тягнуть у всі боки однаково.</p></li>
+<li><p>Але якщо молекула знаходиться <strong>біля стінки</strong>, то з одного боку (з боку стінки) молекул немає, а з іншого (з боку об'єму газу) - є. Виникає рівнодійна сила, спрямована <strong>вглиб газу</strong>.</p></li>
+</ul>
+<p>Ця сила &quot;пригальмовує&quot; молекулу перед ударом об стінку. Внаслідок цього удар стає слабшим, а отже, і тиск, який ми вимірюємо манометром (<span class="math notranslate nohighlight">\(p\)</span>), буде <strong>меншим</strong> за той &quot;ідеальний&quot; тиск, який був би за відсутності сил притягання.</p>
+<p>Нам потрібно додати до виміряного тиску <span class="math notranslate nohighlight">\(p\)</span> якусь поправку, яку назвемо <strong>внутрішнім</strong> або <strong>молекулярним тиском</strong> <span class="math notranslate nohighlight">\(p_м\)</span>. Тобто, в рівнянні стану ми маємо використовувати не реальний виміряний тиск <span class="math notranslate nohighlight">\(p\)</span>, а &quot;ідеальний&quot; тиск <span class="math notranslate nohighlight">\(p_{\text{ідеальний}} = p + p_м\)</span>.</p>
+<p>Тепер найцікавіше: як знайти цей внутрішній тиск <span class="math notranslate nohighlight">\(p_м\)</span>? Давайте поміркуємо.</p>
+<ol class="arabic simple">
+<li><p>Сила, що діє на одну окрему молекулу біля стінки, пропорційна концентрації молекул у газі. Чим більше молекул навколо, тим сильніше вони її &quot;тягнуть&quot; назад. Концентрація <span class="math notranslate nohighlight">\(n = \frac{N}{V}\)</span>, де <span class="math notranslate nohighlight">\(N\)</span> - кількість молекул, або ж <span class="math notranslate nohighlight">\(n = \frac{\nu N_A}{V} \sim \frac{\nu}{V}\)</span>. Чим більша концентрація, тим сильніше молекули притягують ті, що біля стінки.</p></li>
+<li><p>Кількість молекул, що вдаряються об стінку за одиницю часу, також пропорційна їхній концентрації і, в свою чергу, пропорційна <span class="math notranslate nohighlight">\(\frac{\nu}{V}\)</span>. Чим більше молекул в одиниці об'єму, тим частіше вони б'ють по стінці.</p></li>
+</ol>
+<p>Отже, загальне зменшення тиску (внутрішній тиск <span class="math notranslate nohighlight">\(p_м\)</span>) пропорційне добутку цих двох факторів:</p>
+<div class="math notranslate nohighlight">
+\[ p_м \sim \left(\text{концентрація}\right) \cdot \left(\text{концентрація}\right) \]</div>
+<div class="math notranslate nohighlight">
+\[ p_м \sim \frac{\nu}{V} \cdot \frac{\nu}{V} \]</div>
+<p>або</p>
+<div class="math notranslate nohighlight">
+\[p_м \sim \left(\frac{\nu}{V}\right)^2\]</div>
+<p>Щоб перейти від пропорційності до рівності, вводять ще одну константу, яка залежить від конкретного газу і характеризує інтенсивність міжмолекулярного притягання. Назвемо її <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a\)</span> - <strong>стала Ван-дер-Ваальса</strong>, що характеризує сили міжмолекулярного притягання (одиниця в СІ: Па·м<span class="math notranslate nohighlight">\(^6\)</span>/моль<span class="math notranslate nohighlight">\(^2\)</span>).</p></li>
+</ul>
+<p>Таким чином, формула для внутрішнього тиску набуває вигляду:</p>
+<div class="math notranslate nohighlight">
+\[ p_м = \frac{a\nu^2}{V^2}\]</div>
+<p>Оскільки молекулярний тиск <span class="math notranslate nohighlight">\(p_м\)</span> зменшує &quot;реальний&quot; тиск газу, щоб отримати тиск, який був би, якби не було притягання (тобто &quot;ідеальний&quot; тиск), ми повинні до виміряного тиску <span class="math notranslate nohighlight">\(p\)</span> додати цю поправку:</p>
+<div class="math notranslate nohighlight">
+\[ p_{\text{ідеальний}} = p + p_м = p + \frac{a\nu^2}{V^2} \]</div>
+<p>Тепер ми можемо внести і цю поправку в наше рівняння (оскільки в рівнянні стану ідеального газу фігурує саме тиск ідеального газу, а не реального, то ми й шукали, як виразити тиск ідеального газу через тиск реального). Замість &quot;ідеального&quot; тиску <span class="math notranslate nohighlight">\(p_{\text{ідеальний}}\)</span> ми підставляємо вираз <span class="math notranslate nohighlight">\(p + p_м\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\left(p + \frac{a\nu^2}{V^2}\right)(V - \nu b) = \nu RT\]</div>
+<p>Це і є знамените <strong>рівняння стану реального газу Ван-дер-Ваальса</strong>!</p>
+<p>Воно враховує і власний об'єм молекул (через сталу <span class="math notranslate nohighlight">\(b\)</span>), і сили притягання між ними (через сталу <span class="math notranslate nohighlight">\(a\)</span>). Сталі <span class="math notranslate nohighlight">\(a\)</span> і <span class="math notranslate nohighlight">\(b\)</span> для кожного газу визначаються експериментально і є в довідниках.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Аналіз рівняння Ван-дер-Ваальса. Ізотерми реального газу<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Отже, ми отримали рівняння стану реального газу, яке враховує ключові відмінності від ідеальної моделі:</p>
+<div class="math notranslate nohighlight">
+\[\left(p + \frac{a\nu^2}{V^2}\right)(V - \nu b) = \nu RT\]</div>
+<p>На перший погляд, воно виглядає не набагато складнішим за рівняння стану ідеального газу. Але його математична структура та фізичні наслідки значно глибші. Щоб це побачити, давайте проведемо деякі алгебраїчні перетворення. Наша мета - виразити це рівняння у вигляді полінома відносно об'єму <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<section id="id8">
+<h3>Математичне перетворення рівняння<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Спочатку розкриємо дужки:</p>
+<div class="math notranslate nohighlight">
+\[p(V - \nu b) + \frac{a\nu^2}{V^2}(V - \nu b) = \nu RT\]</div>
+<div class="math notranslate nohighlight">
+\[pV - p\nu b + \frac{a\nu^2}{V} - \frac{ab\nu^3}{V^2} = \nu RT\]</div>
+<p>Тепер, щоб позбутися від <span class="math notranslate nohighlight">\(V\)</span> та <span class="math notranslate nohighlight">\(V^2\)</span> у знаменниках, помножимо обидві частини рівняння на <span class="math notranslate nohighlight">\(V^2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[pV \cdot V^2 - p\nu b \cdot V^2 + \frac{a\nu^2}{V} \cdot V^2 - \frac{ab\nu^3}{V^2} \cdot V^2 = \nu RT \cdot V^2\]</div>
+<p>Після спрощення отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[pV^3 - p\nu bV^2 + a\nu^2V - ab\nu^3 = \nu RTV^2\]</div>
+<p>І наостанок, перенесемо всі члени в один бік і згрупуємо їх за степенями змінної <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[pV^3 - p\nu bV^2 - \nu RTV^2 + a\nu^2V - ab\nu^3 = 0\]</div>
+<p>Винесемо <span class="math notranslate nohighlight">\(V^2\)</span> за дужки в другому та третьому членах:</p>
+<div class="math notranslate nohighlight">
+\[pV^3 - (p\nu b + \nu RT)V^2 + a\nu^2V - ab\nu^3 = 0\]</div>
+<p>Що ми отримали? Це <strong>кубічне рівняння</strong> відносно об'єму <span class="math notranslate nohighlight">\(V\)</span>. І це є фундаментальною відмінністю від рівняння ідеального газу (<span class="math notranslate nohighlight">\(pV - \nu RT = 0\)</span>), яке є лінійним відносно <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p><strong>Що це означає?</strong> Лінійне рівняння при заданих <span class="math notranslate nohighlight">\(p\)</span> і <span class="math notranslate nohighlight">\(T\)</span> завжди має лише один розв'язок для <span class="math notranslate nohighlight">\(V\)</span>. А ось кубічне рівняння може мати <strong>один</strong> або <strong>три</strong> дійсних корені. Саме ця математична особливість дозволяє рівнянню Ван-дер-Ваальса описувати такий складний фізичний процес, як перехід газу в рідину.</p>
+</section>
+</section>
+<section id="id9">
+<h2>Графічний аналіз: ізотерми Ван-дер-Ваальса<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Тепер давайте подивимось, як ця математика відображається на графіку залежності тиску <span class="math notranslate nohighlight">\(p\)</span> від об'єму <span class="math notranslate nohighlight">\(V\)</span> при сталій температурі <span class="math notranslate nohighlight">\(T\)</span>. Такий графік називається <strong>ізотермою</strong>.</p>
+<p>На графіку показано декілька ізотерм для різних температур. Проаналізуймо їхню поведінку.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/VdW_isotherms%2B2log.png" alt="VdW isotherms+2log.png" height="500" width="500">
+<br></p>
+<p>Рис. 1. Чотири ізотерми рівняння Ван-дер-Ваальса разом зі спінодальною кривою (чорна штрихпунктирна крива) та кривою співіснування (насичення) (червона штрихпунктирна крива), побудовані з використанням безрозмірних змінних. Критична точка знаходиться в точці перегину на помаранчевій ізотермі. <span class="math notranslate nohighlight">\(T_r\)</span> - критична температура (у нас в тексті ця температура позначена як <span class="math notranslate nohighlight">\(T_c\)</span>).
+By <a href="https://commons.wikimedia.org/w/index.php?title=User:Airman72&action=edit&redlink=1" class="new" title="User:Airman72 (page does not exist)">Airman72</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=138524451">Link</a>. <a href="https://en.wikipedia.org/wiki/Van_der_Waals_equation">Wikipedia</a></p>
+<section id="t-t-c">
+<h3>1. Ізотерма при високій температурі <span class="math notranslate nohighlight">\(T &gt; T_c\)</span><a class="headerlink" href="#t-t-c" title="Link to this heading">#</a></h3>
+<p>Верхня крива на графіку відповідає високій температурі. Ми бачимо, що вона дуже схожа на звичайну гіперболу, яка описує ізотерму ідеального газу. Чому так?</p>
+<ul class="simple">
+<li><p>При високій температурі кінетична енергія молекул (<span class="math notranslate nohighlight">\(\sim T\)</span>) є дуже великою. На її фоні енергія міжмолекулярного притягання (пов'язана зі сталою <span class="math notranslate nohighlight">\(a\)</span>) стає незначною.</p></li>
+<li><p>Також при високій температурі (і не надто високому тиску) газ займає великий об'єм <span class="math notranslate nohighlight">\(V\)</span>, тому поправка на власний об'єм молекул <span class="math notranslate nohighlight">\(\nu b\)</span> стає дуже малою порівняно з <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+</ul>
+<p>Таким чином, при високих <span class="math notranslate nohighlight">\(T\)</span> і великих <span class="math notranslate nohighlight">\(V\)</span> доданками <span class="math notranslate nohighlight">\(\frac{a\nu^2}{V^2}\)</span> та <span class="math notranslate nohighlight">\(\nu b\)</span> можна знехтувати, і рівняння Ван-дер-Ваальса перетворюється на рівняння ідеального газу. У цьому випадку наше кубічне рівняння має лише один дійсний корінь для <span class="math notranslate nohighlight">\(V\)</span> при будь-якому <span class="math notranslate nohighlight">\(p\)</span>.</p>
+</section>
+<section id="id10">
+<h3>2. Ізотерма при низькій температурі <span class="math notranslate nohighlight">\(T &lt; T_c\)</span><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Нижня крива є набагато цікавішою (синя крива на Рис. 1). Вона має характерну хвилеподібну ділянку. Давайте пройдемось по ній справа наліво, ніби ми стискаємо газ у циліндрі під поршнем.</p>
+<ul class="simple">
+<li><p><strong>Ділянка праворуч (газоподібний стан):</strong> Ми починаємо стискати газ. Його об'єм <span class="math notranslate nohighlight">\(V\)</span> зменшується, а тиск <span class="math notranslate nohighlight">\(p\)</span> плавно зростає. Тут речовина поводиться як газ.</p></li>
+<li><p><strong>Хвиляста ділянка:</strong> Модель Ван-дер-Ваальса прогнозує, що при досягненні певного об'єму тиск почне падати, а потім знову стрімко зростати. Частина цієї ділянки, де об'єм і тиск зростають одночасно, є абсолютно нефізичною. Така система була б нестабільною.</p></li>
+</ul>
+<p><strong>Що ж відбувається в реальному експерименті?</strong>
+У реальності, коли ми стискаємо газ і досягаємо певної точки, коли починається процес <strong>конденсації</strong>. Газ починає перетворюватися на рідину. Під час цього процесу, поки в посудині співіснують обидві фази (рідина і насичена пара), тиск і температура залишаються <strong>сталими</strong>. На графіку цей процес відповідає не хвилі, а прямій горизонтальній лінії (на Рис. 1 ця лінія не зображена).</p>
+<ul class="simple">
+<li><p>Коли ми рухаємось по цій лінії справа наліво, кількість газу зменшується, а кількість рідини зростає. У лівій точці перетину цієї горизонтальної лінії та теоретичної ізотерми весь газ перетворився на рідину.</p></li>
+<li><p><strong>Ділянка ліворуч (рідкий стан):</strong> Рідини дуже погано стискаються. Тому навіть незначне зменшення об'єму вимагає величезного зростання тиску. Ось чому ізотерма в цій області йде майже вертикально вгору.</p></li>
+</ul>
+<p>З точки зору нашого кубічного рівняння, в області тисків, де відбувається конденсація, воно має <strong>три дійсних корені</strong> для об'єму <span class="math notranslate nohighlight">\(V\)</span>. Найменший корінь відповідає об'єму рідини, найбільший - об'єму газу (пари), а середній корінь не має фізичного сенсу (він лежить на нестабільній ділянці).</p>
+<p>Підсумуємо:</p>
+<ul class="simple">
+<li><p><strong>Газова фаза:</strong> При великих об'ємах і низьких тисках (права частина графіка) газ поводиться як ідеальний - тиск повільно зростає зі зменшенням об'єму.</p></li>
+<li><p><strong>Фазовий перехід (конденсація):</strong> При певних значеннях тиску і температури газ починає конденсуватися в рідину. На реальних ізотермах (які ми отримуємо експериментально), ця ділянка є <strong>горизонтальною</strong>. Це означає, що при постійній температурі тиск залишається незмінним, поки весь газ не перетвориться на рідину. У цей час співіснують дві фази: газ і рідина.</p></li>
+<li><p><strong>Рідка фаза:</strong> Після повної конденсації газу в рідину (ліва частина графіка) об'єм продовжує зменшуватися, але тиск зростає дуже різко. Це пояснюється тим, що рідина майже нестислива.</p></li>
+<li><p><strong>Ізотерма Ван-дер-Ваальса та S-подібна крива:</strong> Рівняння Ван-дер-Ваальса передбачає хвилясту S-подібну криву з мінімумом і максимумом замість горизонтальної ділянки фазового переходу. Ділянка між мінімумом і максимумом (де об'єм зменшується при зростанні тиску) є <strong>фізично нестабільною</strong> і не реалізується в чистому вигляді. Вона відповідає метастабільним станам, таким як перегріта рідина (ділянка зростання тиску після мінімуму) або переохолоджена пара (ділянка спаду тиску перед максимумом). Насправді, ці стани нестійкі і швидко переходять у стабільні двофазні системи.</p></li>
+</ul>
+<p><strong>Приклад</strong>. Уявіть, що ми стискаємо газ в циліндрі при постійній температурі.</p>
+<ol class="arabic simple">
+<li><p><strong>Починаємо з великого об'єму (газ):</strong> Поршень легко рухається, тиск зростає повільно.</p></li>
+<li><p><strong>Досягаємо точки конденсації:</strong> Раптом, при подальшому русі поршня (зменшенні об'єму), тиск перестає зростати. Це тому, що газ починає перетворюватися на рідину. Енергія йде на формування міжмолекулярних зв'язків, а не на стиснення.</p></li>
+<li><p><strong>Весь газ сконденсувався (рідина):</strong> Поршень майже неможливо рухати далі. Навіть невелике зменшення об'єму викликає дуже різке зростання тиску, оскільки рідина майже нестислива.</p></li>
+</ol>
+<p>Рівняння Ван-дер-Ваальса було першою моделлю, яка могла якісно описати ці явища фазового переходу.</p>
+</section>
+<section id="id11">
+<h3>3. Критична ізотерма <span class="math notranslate nohighlight">\(T = T_c\)</span><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Між двома розглянутими режимами існує проміжний, особливий випадок. Це ізотерма, що відповідає <strong>критичній температурі</strong> <span class="math notranslate nohighlight">\(T_c\)</span>.</p>
+<ul class="simple">
+<li><p>На цій ізотермі хвиляста ділянка вироджується, &quot;стягуючись&quot; в одну точку - <strong>точку перегину K</strong>. Ця точка називається <strong>критичною точкою</strong>.</p></li>
+<li><p>У критичній точці всі три дійсних корені нашого кубічного рівняння зливаються в один.</p></li>
+<li><p><strong>Фізичний сенс критичної точки:</strong> При температурах, вищих за критичну <span class="math notranslate nohighlight">\(T &gt; T_c\)</span>, газ неможливо перетворити на рідину, яким би великим не був тиск. Речовина перебуває в особливому <strong>надкритичному стані</strong>, де зникає різниця між рідиною і газом.</p></li>
+</ul>
+<p>Отже, рівняння Ван-дер-Ваальса, попри свою відносну простоту, не тільки краще описує поведінку газів при високих тисках, а й якісно пояснює одне з найважливіших явищ у фізиці - фазовий перехід газ-рідина та існування критичної точки. Це був величезний крок уперед у розумінні природи речовини.</p>
+</section>
+</section>
+<section id="id12">
+<h2>Обмеження рівняння Ван-дер-Ваальса<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>Хоча рівняння Ван-дер-Ваальса стало величезним кроком вперед, воно є наближеним і має свої обмеження:</p>
+<ul class="simple">
+<li><p><strong>Наближений характер сталих <span class="math notranslate nohighlight">\(a\)</span> і <span class="math notranslate nohighlight">\(b\)</span>:</strong> Вважається, що <span class="math notranslate nohighlight">\(a\)</span> і <span class="math notranslate nohighlight">\(b\)</span> є константами, незалежними від температури і тиску. Насправді, вони можуть дещо змінюватися, особливо для різних діапазонів умов. Це робить рівняння менш точним у широкому діапазоні температур і тисків.</p></li>
+<li><p><strong>Неточний опис фазового переходу:</strong> Як ми бачили, S-подібна крива не точно відображає горизонтальну ділянку конденсації. Вона лише якісно показує існування фазового переходу та метастабільних станів (перегрітої рідини та переохолодженої пари), але не може точно описати рівновагу між рідкою та газоподібною фазами.</p></li>
+<li><p><strong>Недостатня точність для всіх речовин:</strong> Рівняння краще працює для газів з простими, неполярними молекулами (наприклад, благородних газів) та при не надто екстремальних умовах. Для складних молекул, сильно полярних речовин або при дуже високих тисках чи низьких температурах його точність значно знижується.</p></li>
+<li><p><strong>Ігнорування багаточастинкових взаємодій:</strong> Модель Ван-дер-Ваальса враховує лише парні взаємодії між молекулами, ігноруючи складніші взаємодії, які можуть виникати, коли багато молекул знаходяться близько одна до одної.</p></li>
+</ul>
+<p>Незважаючи на ці обмеження, рівняння Ван-дер-Ваальса залишається фундаментальним у термодинаміці та статистичній фізиці, оскільки воно вперше успішно врахувало реальні властивості молекул та якісно пояснило явище конденсації газів. Воно заклало основу для розробки більш складних і точних рівнянь стану.</p>
+</section>
+<section id="id13">
+<h2>Підсумок<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Термін</p></th>
+<th class="head text-left"><p>Опис / Пояснення</p></th>
+<th class="head text-left"><p>Формула / Вираз</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Ідеальний газ</strong></p></td>
+<td class="text-left"><p>Модель, де молекули є матеріальними точками без власного об'єму та не взаємодіють між собою на відстані (лише пружні зіткнення).</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(pV = \nu RT\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Реальний газ</strong></p></td>
+<td class="text-left"><p>Модель, що враховує власний об'єм молекул та сили міжмолекулярної взаємодії (притягання та відштовхування).</p></td>
+<td class="text-left"><p>-</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Рівняння Ван-дер-Ваальса</strong></p></td>
+<td class="text-left"><p>Рівняння стану для реального газу, яке вводить поправки на об'єм та тиск до рівняння стану ідеального газу.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\left(p + \frac{a\nu^2}{V^2}\right)(V - \nu b) = \nu RT\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Поправка на об'єм</strong></p></td>
+<td class="text-left"><p>Враховує, що реальний об'єм для руху молекул <span class="math notranslate nohighlight">\(V_{\text{вільний}}\)</span> менший за об'єм посудини <span class="math notranslate nohighlight">\(V\)</span> на величину &quot;виключеного об'єму&quot;, пов'язаного з розміром молекул.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(V_{\text{вільний}} = V - \nu b\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Стала Ван-дер-Ваальса</strong> <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+<td class="text-left"><p>Характеризує &quot;виключений об'єм&quot; одного моля молекул. Приблизно в 4 рази більша за сумарний власний об'єм молекул в одному молі.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(b = 4 N_A V_{\text{мол}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Поправка на тиск</strong></p></td>
+<td class="text-left"><p>Враховує, що сили притягання між молекулами зменшують тиск на стінки посудини. Цей ефект описується &quot;внутрішнім тиском&quot; <span class="math notranslate nohighlight">\(p_м\)</span>.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(p_{\text{ідеальний}} = p + p_м\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Внутрішній (молекулярний) тиск</strong> <span class="math notranslate nohighlight">\(p_м\)</span></p></td>
+<td class="text-left"><p>Додатковий тиск, зумовлений силами притягання між молекулами. Він пропорційний квадрату концентрації газу.</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(p_м = \frac{a\nu^2}{V^2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Стала Ван-дер-Ваальса</strong> <code class="docutils literal notranslate"><span class="pre">a</span></code></p></td>
+<td class="text-left"><p>Характеризує інтенсивність сил міжмолекулярного притягання. Чим більша <code class="docutils literal notranslate"><span class="pre">a</span></code>, тим сильніше притягуються молекули.</p></td>
+<td class="text-left"><p>-</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Ізотерми Ван-дер-Ваальса</strong></p></td>
+<td class="text-left"><p>Графіки залежності тиску <code class="docutils literal notranslate"><span class="pre">p</span></code> від об'єму <code class="docutils literal notranslate"><span class="pre">V</span></code> при сталій температурі <code class="docutils literal notranslate"><span class="pre">T</span></code>. На відміну від гіпербол ідеального газу, є кубічними кривими.</p></td>
+<td class="text-left"><p>-</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Ізотерма при високій температурі</strong> <span class="math notranslate nohighlight">\(T &gt; T_c\)</span></p></td>
+<td class="text-left"><p>Графік схожий на гіперболу ідеального газу. Речовина поводиться як газ, і її неможливо сконденсувати шляхом стиснення.</p></td>
+<td class="text-left"><p>-</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Ізотерма при низькій температурі</strong> <span class="math notranslate nohighlight">\(T &lt; T_c\)</span></p></td>
+<td class="text-left"><p>Має характерну хвилеподібну ділянку, що описує можливість фазового переходу (конденсації) з газоподібного стану в рідкий.</p></td>
+<td class="text-left"><p>-</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Критична точка</strong></p></td>
+<td class="text-left"><p>Точка перегину на критичній ізотермі (<span class="math notranslate nohighlight">\(T = T_c\)</span>), де зникає різниця між рідкою та газоподібною фазами. Вище цієї температури конденсація неможлива.</p></td>
+<td class="text-left"><p>-</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id14">
+<h2>Додаткові матеріали<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D1%96%D0%B2%D0%BD%D1%8F%D0%BD%D0%BD%D1%8F_%D0%92%D0%B0%D0%BD_%D0%B4%D0%B5%D1%80_%D0%92%D0%B0%D0%B0%D0%BB%D1%8C%D1%81%D0%B0">https://uk.wikipedia.org/wiki/Рівняння_Ван_дер_Ваальса</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%B3%D0%B0%D0%B7">https://uk.wikipedia.org/wiki/Реальний_газ</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B4%D0%BA%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D1%80%D1%96%D0%B4%D0%B8%D0%BD%D0%B0">https://uk.wikipedia.org/wiki/Надкритична_рідина</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B3%D1%80%D1%96%D1%82%D0%B0_%D1%80%D1%96%D0%B4%D0%B8%D0%BD%D0%B0">https://uk.wikipedia.org/wiki/Перегріта_рідина</a></p></li>
+</ul>
+</section>
+<section id="id15">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Van_der_Waals_equation">https://en.wikipedia.org/wiki/Van_der_Waals_equation</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Real_gas">https://en.wikipedia.org/wiki/Real_gas</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Critical_point_(thermodynamics)">https://en.wikipedia.org/wiki/Critical_point_(thermodynamics)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Supercritical_fluid">https://en.wikipedia.org/wiki/Supercritical_fluid</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Superheating">https://en.wikipedia.org/wiki/Superheating</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Supersaturation">https://en.wikipedia.org/wiki/Supersaturation</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mkt"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ideal-gas-law.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Рівняння стану ідеального газу</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="evaporation-and-condensation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Пароутворення і конденсація</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Вступ: Від ідеального до реального</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Що не так з ідеальним газом?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Рівняння стану Ван-дер-Ваальса</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Перша поправка: врахування власного об'єму молекул</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Друга поправка: врахування міжмолекулярного притягання</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Аналіз рівняння Ван-дер-Ваальса. Ізотерми реального газу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Математичне перетворення рівняння</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Графічний аналіз: ізотерми Ван-дер-Ваальса</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-t-c">1. Ізотерма при високій температурі <span class="math notranslate nohighlight">\(T &gt; T_c\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2. Ізотерма при низькій температурі <span class="math notranslate nohighlight">\(T &lt; T_c\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3. Критична ізотерма <span class="math notranslate nohighlight">\(T = T_c\)</span></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Обмеження рівняння Ван-дер-Ваальса</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
