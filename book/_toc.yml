@@ -68,10 +68,12 @@ parts:
       - file: physics/mkt/basic-equation-of-ideal-gas
       - file: physics/mkt/temperature-basics
       - file: physics/mkt/ideal-gas-law
+      - file: physics/mkt/real-gas
       - file: physics/mkt/evaporation-and-condensation
       - file: physics/mkt/humidity
       - file: physics/mkt/phase-transitions
       - file: physics/mkt/liquid-surface-tension
+      - file: physics/mkt/solids
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
