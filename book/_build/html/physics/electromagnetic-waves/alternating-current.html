@@ -67,7 +67,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Природа світла" href="../optics/nature_of_light.html" />
+    <link rel="next" title="Активний та рективний опори. Діючі значення сили струму та напруги" href="active-and-reactive-resistance.html" />
     <link rel="prev" title="Автоколивання (Pending)" href="self-oscillations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
@@ -274,6 +274,7 @@
 <li class="toctree-l1"><a class="reference internal" href="damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="self-oscillations.html">Автоколивання (Pending)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Змінний струм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="active-and-reactive-resistance.html">Активний та рективний опори. Діючі значення сили струму та напруги</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -544,8 +545,9 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Частота струму промислового генератора</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -579,7 +581,7 @@
 <blockquote>
 <div><p><strong>Магнітний потік</strong> <span class="math notranslate nohighlight">\(\Phi\)</span> - це фізична скалярна величина, яка є потоком вектора магнітної індукції через задану поверхню.</p>
 </div></blockquote>
-<p>Примітка: У математиці є таке поняття як потік векторного поля. Магнітний потік - це і є потік векторного поля, де у якості векторного поля є реальне фізичне магнітне векторне (бо має напрямок) поле. Подальші формули - це не просто результат роботи фізиків, це частина цілого математичного розділу, де розглядають векторні поля і описують їх математично.</p>
+<p>Примітка: У математиці є таке поняття як потік векторного поля. Магнітний потік - це і є потік векторного поля, де цим векторним полем є реальне фізичне магнітне поле, яке є векторним (тобто в кожній точці простору має не лише величину, а й напрямок). Подальші формули - це не просто результат роботи фізиків, це частина цілого математичного розділу, де розглядають векторні поля і описують їх математично.</p>
 <p>Для однорідного магнітного поля з індукцією <span class="math notranslate nohighlight">\(\vec{B}\)</span> та плоскої рамки площею <span class="math notranslate nohighlight">\(S\)</span>, магнітний потік розраховується за формулою:</p>
 <div class="math notranslate nohighlight">
 \[\Phi = BS \cos \alpha\]</div>
@@ -599,9 +601,7 @@
 </div></blockquote>
 <p>Математично це записується так:</p>
 <div class="math notranslate nohighlight">
-\[
-\mathcal{E}_i = -\frac{\Delta\Phi}{\Delta t} \quad \text{або в формі похідної:} \quad \mathcal{E}_i = -\Phi'(t)
-\]</div>
+\[\mathcal{E}_i = -\frac{\Delta\Phi}{\Delta t} \quad \text{або в формі похідної:} \quad \mathcal{E}_i = -\Phi'(t)\]</div>
 <p>де:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\mathcal{E}_i\)</span> - <strong>електрорушійна сила (ЕРС) індукції</strong>. Це не силова характеристика, а енергетична. Вона показує, яку роботу виконують сторонні (не кулонівські) сили при переміщенні одиничного позитивного заряду вздовж контуру. Вимірюється у <strong>Вольтах (В)</strong>.</p></li>
@@ -620,8 +620,14 @@
 <hr class="docutils" />
 <section id="id5">
 <h2>Принцип роботи ідеального генератора<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
-<p>Уявімо собі найпростішу модель генератора: прямокутна провідна рамка з <span class="math notranslate nohighlight">\(N\)</span> витків дроту, яка з постійною кутовою швидкістю обертається в однорідному магнітному полі.</p>
-<section id="id6">
+<p>Уявімо собі найпростішу модель генератора: прямокутна провідна рамка з <span class="math notranslate nohighlight">\(N\)</span> витків дроту, яка з постійною кутовою швидкістю обертається в однорідному магнітному полі (Рис. 1 та анімація на Рис. 2).</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Elementary_generator.svg" alt="Elementary generator.svg" height="450" width="513.6">
+<br>
+Рис. 1. Схема простого генератора з обертовою обмоткою та нерухомим магнітом.
+Автор: Federal Aviation Administration - <a rel="nofollow" class="external free" href="http://www.faa.gov/regulations_policies/handbooks_manuals/aircraft/amt_handbook/media/FAA-8083-30_Ch10.pdf">http://www.faa.gov/regulations_policies/handbooks_manuals/aircraft/amt_handbook/media/FAA-8083-30_Ch10.pdf</a>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=28091272">Link</a>. <a href="https://en.wikipedia.org/wiki/Faraday%27s_law_of_induction">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Dynamo.wechsel.wiki.v.1.00.gif" alt="Dynamo.wechsel.wiki.v.1.00.gif" height="396" width="500">
+<br>
+Рис. 2. Анімація, котра показує спосіб роботи синхронного генератора змінного струму. Кільця на валу передають змінну напругу у зовнішнє коло.
+Автор: Arthur Kronenberger, <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en" title="Creative Commons Attribution-Share Alike 3.0 de">CC BY-SA 3.0 de</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=25662559">Посилання</a>. <a href="https://uk.wikipedia.org/wiki/Електричний_генератор">Wikipedia</a></p><section id="id6">
 <h3>Виведення рівняння ЕРС<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>Давайте крок за кроком виведемо закон, за яким буде змінюватися ЕРС у такій рамці.</p>
 <ol class="arabic">
@@ -636,38 +642,27 @@
 <li><p><strong>Запишемо залежність магнітного потоку від часу.</strong></p>
 <p>Підставимо залежність кута <span class="math notranslate nohighlight">\(\alpha = \omega t\)</span> у формулу магнітного потоку <span class="math notranslate nohighlight">\(\Phi = BS \cos \alpha\)</span>. Отримаємо закон, за яким магнітний потік, що пронизує рамку, змінюється з часом:</p>
 <div class="math notranslate nohighlight">
-\[
-    \Phi(t) = BS \cos(\omega t)
-    \]</div>
+\[\Phi(t) = BS \cos(\omega t)\]</div>
 <p>Ми бачимо, що магнітний потік змінюється за гармонічним законом (за законом косинуса).</p>
 </li>
 <li><p><strong>Знайдемо ЕРС індукції за законом Фарадея.</strong></p>
 <p>Тепер найважливіший крок. Щоб знайти ЕРС, нам потрібно взяти похідну від магнітного потоку по часу зі знаком &quot;мінус&quot;:</p>
 <div class="math notranslate nohighlight">
-\[
-    \mathcal{E}_i(t) = -\frac{d\Phi}{dt} = -(BS \cos(\omega t))'
-    \]</div>
+\[\mathcal{E}_i(t) = -\frac{d\Phi}{dt} = -(BS \cos(\omega t))'\]</div>
 <p>Величини <span class="math notranslate nohighlight">\(B\)</span> і <span class="math notranslate nohighlight">\(S\)</span> є сталими, тому ми виносимо їх за знак похідної:</p>
 <div class="math notranslate nohighlight">
-\[
-    \mathcal{E}_i(t) = -BS \cdot (\cos(\omega t))'
-    \]</div>
+\[\mathcal{E}_i(t) = -BS \cdot (\cos(\omega t))'\]</div>
 <p>Похідна від складеної функції <span class="math notranslate nohighlight">\(\cos(\omega t)\)</span> дорівнює <span class="math notranslate nohighlight">\(-\omega \sin(\omega t)\)</span>. Підставляємо:</p>
 <div class="math notranslate nohighlight">
-\[
-    \mathcal{E}_i(t) = -BS \cdot (-\omega \sin(\omega t))
-    \]</div>
+\[\mathcal{E}_i(t) = -BS \cdot (-\omega \sin(\omega t))\]</div>
 <p>Після спрощення отримуємо:</p>
 <div class="math notranslate nohighlight">
-\[
-    \varepsilon(t) = BS\omega \sin(\omega t)
-    \]</div>
+\[\varepsilon(t) = BS\omega \sin(\omega t)\]</div>
 <p><em>Примітка: ми замінили позначення <span class="math notranslate nohighlight">\(\mathcal{E}_i\)</span> на <span class="math notranslate nohighlight">\(\varepsilon\)</span>, оскільки в темі змінного струму миттєві значення величин прийнято позначати маленькими літерами.</em></p>
-<p>Якщо наша рамка (обмотка) має не один, а <span class="math notranslate nohighlight">\(N\)</span> витків, то ЕРС в них будуть додаватися, і загальна ЕРС буде в <span class="math notranslate nohighlight">\(N\)</span> разів більшою:
-$<span class="math notranslate nohighlight">\(
-\varepsilon(t) = NBS\omega \sin(\omega t)
-\)</span>$
-Це і є <strong>основне рівняння ЕРС генератора змінного струму</strong>.</p>
+<p>Якщо наша рамка (обмотка) має не один, а <span class="math notranslate nohighlight">\(N\)</span> витків, то ЕРС в них будуть додаватися, і загальна ЕРС буде в <span class="math notranslate nohighlight">\(N\)</span> разів більшою:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon(t) = NBS\omega \sin(\omega t)\]</div>
+<p>Це і є <strong>основне рівняння ЕРС генератора змінного струму</strong>.</p>
 </li>
 </ol>
 </section>
@@ -690,9 +685,7 @@ $<span class="math notranslate nohighlight">\(
 </div></blockquote>
 <p>Тепер наше рівняння можна записати у більш компактному вигляді:</p>
 <div class="math notranslate nohighlight">
-\[
-e = \mathcal{E}_{\max} \sin(\omega t)
-\]</div>
+\[\varepsilon = \mathcal{E}_{\max} \sin(\omega t)\]</div>
 </section>
 <section id="id8">
 <h3>Зв'язок параметрів коливань<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
@@ -701,11 +694,10 @@ e = \mathcal{E}_{\max} \sin(\omega t)
 <li><p><strong>Період коливань</strong> <span class="math notranslate nohighlight">\(T\)</span> - це час одного повного коливання (одного повного оберту рамки). Вимірюється в <strong>секундах (с)</strong>.</p></li>
 <li><p><strong>Частота коливань</strong> <span class="math notranslate nohighlight">\(\nu\)</span> - це кількість повних коливань за одну секунду. Вимірюється в <strong>Герцах (Гц)</strong>.</p></li>
 </ul>
-<p>Вони пов'язані з циклічною частотою <span class="math notranslate nohighlight">\(\omega\)</span> наступними співвідношеннями:
-$<span class="math notranslate nohighlight">\(
-\omega = 2\pi\nu = \frac{2\pi}{T}
-\)</span>$</p>
-<p>Стандартна частота змінного струму в електромережах України та Європи становить <span class="math notranslate nohighlight">\(\nu = 50\)</span> Гц. Це означає, що за одну секунду струм 50 разів змінює свій напрямок на протилежний (здійснює 50 повних коливань).</p>
+<p>Вони пов'язані з циклічною частотою <span class="math notranslate nohighlight">\(\omega\)</span> наступними співвідношеннями:</p>
+<div class="math notranslate nohighlight">
+\[\omega = 2\pi\nu = \frac{2\pi}{T}\]</div>
+<p>Стандартна частота змінного струму в електромережах України та Європи становить <span class="math notranslate nohighlight">\(\nu = 50\)</span> Гц. Це означає, що за одну секунду відбувається 50 повних коливань. Оскільки протягом одного коливання струм двічі змінює свій напрямок, то за одну секунду це відбудеться 100 разів.</p>
 </section>
 </section>
 <hr class="docutils" />
@@ -717,14 +709,10 @@ $<span class="math notranslate nohighlight">\(
 </div></blockquote>
 <p>Знайдемо закон, за яким буде змінюватися сила струму в такому колі. Для цього використаємо <strong>закон Ома для повного кола</strong>:</p>
 <div class="math notranslate nohighlight">
-\[
-i = \frac{\text{ЕРС}}{\text{Повний опір}}
-\]</div>
+\[i = \frac{\text{ЕРС}}{\text{Повний опір}}\]</div>
 <p>Нехай наш генератор має внутрішній опір <span class="math notranslate nohighlight">\(r\)</span>, а зовнішнє навантаження - опір <span class="math notranslate nohighlight">\(R\)</span>. Тоді повний опір кола буде <span class="math notranslate nohighlight">\(R+r\)</span>. Підставимо миттєве значення ЕРС <span class="math notranslate nohighlight">\(\varepsilon(t) = \mathcal{E}_{\max} \sin(\omega t)\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-i(t) = \frac{\mathcal{E}_{\max} \sin(\omega t)}{R+r}
-\]</div>
+\[i(t) = \frac{\mathcal{E}_{\max} \sin(\omega t)}{R+r}\]</div>
 <p>Величина <span class="math notranslate nohighlight">\(\frac{\mathcal{E}_{\max}}{R+r}\)</span> є максимально можливим значенням сили струму. Позначимо її як амплітуду сили струму <span class="math notranslate nohighlight">\(I_{\max}\)</span>.</p>
 <blockquote>
 <div><p><strong>Амплітудне значення сили струму</strong> <span class="math notranslate nohighlight">\(I_{\max}\)</span> - це максимальне за модулем значення сили струму в колі.</p>
@@ -733,25 +721,17 @@ i(t) = \frac{\mathcal{E}_{\max} \sin(\omega t)}{R+r}
 </div></blockquote>
 <p>Тепер рівняння для миттєвого значення сили струму набуває вигляду:</p>
 <div class="math notranslate nohighlight">
-\[
-i = I_{\max} \sin(\omega t)
-\]</div>
+\[i = I_{\max} \sin(\omega t)\]</div>
 <p>Аналогічно, напруга на зовнішній ділянці кола (на нашому навантаженні <span class="math notranslate nohighlight">\(R\)</span>) буде:</p>
 <div class="math notranslate nohighlight">
-\[
-u = iR = (I_{\max} \sin(\omega t))R = I_{\max}R \sin(\omega t)
-\]</div>
+\[u = iR = (I_{\max} \sin(\omega t))R = I_{\max}R \sin(\omega t)\]</div>
 <p>Позначивши <span class="math notranslate nohighlight">\(U_{\max} = I_{\max}R\)</span> як амплітуду напруги, отримаємо:</p>
 <div class="math notranslate nohighlight">
-\[
-u = U_{\max} \sin(\omega t)
-\]</div>
+\[u = U_{\max} \sin(\omega t)\]</div>
 <p><strong>Важливий висновок:</strong> у колі з чисто активним навантаженням коливання сили струму <span class="math notranslate nohighlight">\(i(t)\)</span> і напруги <span class="math notranslate nohighlight">\(u(t)\)</span> <strong>збігаються за фазою</strong>. Це означає, що вони одночасно досягають своїх максимальних значень і одночасно проходять через нуль.</p>
 <p>У загальному випадку, якщо коло містить ще й конденсатори або котушки індуктивності, може виникати <strong>зсув фаз</strong> <span class="math notranslate nohighlight">\(\varphi_0\)</span> між коливаннями струму та напруги. Тоді рівняння для струму матиме вигляд:</p>
 <div class="math notranslate nohighlight">
-\[
-i = I_{\max} \sin(\omega t + \varphi_0)
-\]</div>
+\[i = I_{\max} \sin(\omega t + \varphi_0)\]</div>
 </section>
 <hr class="docutils" />
 <section id="id10">
@@ -770,7 +750,13 @@ i = I_{\max} \sin(\omega t + \varphi_0)
 <li><p><strong>Ротор</strong> (індуктор) - обертова частина генератора. У промислових генераторах ротор є потужним електромагнітом, який створює магнітне поле. Обертаючись, це магнітне поле &quot;пробігає&quot; по витках обмотки статора, змінюючи в них магнітний потік і тим самим індукуючи ЕРС.</p></li>
 <li><p><strong>Система збудження</strong> - для живлення електромагніту ротора потрібен постійний струм. Цей струм подається на ротор через <strong>контактні (ковзні) кільця</strong> та <strong>щітки</strong>. Щітки (зазвичай графітові) притискаються до кілець, що обертаються разом з ротором, забезпечуючи надійний електричний контакт.</p></li>
 </ol>
-<p><strong>Принцип дії:</strong></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Alternator_1.svg" alt="Alternator 1.svg" height="504" width="454">
+<br>
+Рис. 3. Схема простого генератора з обертовим магнітним осердям (ротором) та нерухомою обмоткою (статором).
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Egmason" title="User:Egmason">Egmason</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=10250453">Link</a>. <a href="https://uk.wikipedia.org/wiki/Генератор_змінного_струму">Wikipedia</a></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Stator_and_rotor_by_Zureks.JPG" alt="Stator and rotor by Zureks.JPG" height="500" width="705.9">
+<br>
+Рис. 4. Ротор (внизу ліворуч) і статор (угорі праворуч) електродвигуна.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:Zureks" title="User:Zureks">Zureks</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=4170132">Link</a>. <a href="https://en.wikipedia.org/wiki/Stator">Wikipedia</a></p><p><strong>Принцип дії:</strong></p>
 <ol class="arabic simple">
 <li><p>Зовнішня механічна сила (наприклад, від турбіни на гідро-, тепло- чи атомній електростанції) обертає ротор генератора.</p></li>
 <li><p>Електромагніт ротора створює потужне магнітне поле, яке обертається разом з ним.</p></li>
@@ -786,24 +772,131 @@ i = I_{\max} \sin(\omega t + \varphi_0)
 <p>У промислових генераторах ротор може мати не одну, а кілька пар магнітних полюсів (кількість пар позначається як <span class="math notranslate nohighlight">\(p\)</span>). Це дозволяє отримати стандартну частоту струму (в Україні та Європі - 50 Гц) при меншій швидкості обертання ротора, що є важливим з інженерної точки зору.</p>
 <p>Частота змінного струму <span class="math notranslate nohighlight">\(\nu\)</span>, що виробляється генератором, пов'язана зі швидкістю обертання ротора <span class="math notranslate nohighlight">\(n\)</span> (в обертах за секунду) та кількістю пар магнітних полюсів <span class="math notranslate nohighlight">\(p\)</span> наступною формулою:</p>
 <div class="math notranslate nohighlight">
-\[
-\nu = pn
-\]</div>
+\[\nu = pn\]</div>
 <p>Наприклад, щоб отримати струм частотою 50 Гц за допомогою двополюсного генератора (<span class="math notranslate nohighlight">\(p=1\)</span>), ротор має обертатися зі швидкістю <span class="math notranslate nohighlight">\(n = \nu/p = 50/1 = 50\)</span> об/с, або 3000 об/хв. Якщо ж генератор має дві пари полюсів (<span class="math notranslate nohighlight">\(p=2\)</span>), то для тієї ж частоти 50 Гц потрібна швидкість обертання вже 25 об/с, або 1500 об/хв.</p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="id12">
-<h2>Додаткові матеріали<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
-<p>(ЦЯ СТОРІНКА ЗНАХОДИТЬСЯ В ПРОЦЕСІ РОЗРОБКИ. ДОДАТКОВІ МАТЕРІАЛИ БУДУТЬ ДОДАНІ ДО 10 ЛИСТОПАДА 2025 РОКУ)</p>
-<ul class="simple">
-<li></li>
-</ul>
+<h2>Підсумок<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Поняття / Термін</p></th>
+<th class="head text-left"><p>Визначення, формула та пояснення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Основи явища</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Вимушені електромагнітні коливання</p></td>
+<td class="text-left"><p>Незатухаючі коливання заряду, напруги та сили струму, спричинені дією зовнішньої змінної ЕРС.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Явище електромагнітної індукції</p></td>
+<td class="text-left"><p>Виникнення електричного струму в замкненому провідному контурі при зміні магнітного поля, що його пронизує.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Магнітний потік <span class="math notranslate nohighlight">\(\Phi\)</span></p></td>
+<td class="text-left"><p>Скалярна величина, що характеризує &quot;пронизування&quot; поверхні магнітним полем. <br> <span class="math notranslate nohighlight">\(\Phi = BS \cos \alpha\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Закон Фарадея (ЕРС індукції) <span class="math notranslate nohighlight">\(\mathcal{E}_i\)</span></p></td>
+<td class="text-left"><p>ЕРС індукції дорівнює за модулем швидкості зміни магнітного потоку. <br> <span class="math notranslate nohighlight">\(\mathcal{E}_i = -\frac{\Delta\Phi}{\Delta t}\)</span> або в формі похідної <span class="math notranslate nohighlight">\(\mathcal{E}_i = -\Phi'(t)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Правило Ленца</p></td>
+<td class="text-left"><p>Знак &quot;мінус&quot; у законі Фарадея. Індукційний струм створює магнітне поле, що протидіє зміні потоку, який створив цей індукційний струм.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Ідеальний генератор</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Залежність потоку від часу (в генераторі)</p></td>
+<td class="text-left"><p>Магнітний потік через рамку, що обертається з кутовою швидкістю <span class="math notranslate nohighlight">\(\omega\)</span>. <br> <span class="math notranslate nohighlight">\(\Phi(t) = BS \cos(\omega t)\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Миттєва ЕРС генератора <span class="math notranslate nohighlight">\(\varepsilon(t)\)</span></p></td>
+<td class="text-left"><p>ЕРС, що індукується в обмотці з <span class="math notranslate nohighlight">\(N\)</span> витків. Змінюється за законом синуса. <br> <span class="math notranslate nohighlight">\(\varepsilon(t) = NBS\omega \sin(\omega t)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Амплітудне значення ЕРС <span class="math notranslate nohighlight">\(\mathcal{E}_{\max}\)</span></p></td>
+<td class="text-left"><p>Максимальне за модулем значення ЕРС. <br> <span class="math notranslate nohighlight">\(\mathcal{E}_{\max} = NBS\omega\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Рівняння ЕРС (компактний вигляд)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\varepsilon = \mathcal{E}_{\max} \sin(\omega t)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Параметри коливань</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Циклічна частота <span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<td class="text-left"><p>Кут, на який повертається рамка за одиницю часу (рад/с).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Частота <span class="math notranslate nohighlight">\(\nu\)</span> та Період <span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td class="text-left"><p>Кількість коливань за секунду (Гц) та час одного повного коливання (с). <br> <span class="math notranslate nohighlight">\(\omega = 2\pi\nu = \frac{2\pi}{T}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Змінний струм у колі</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Активний опір <span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td class="text-left"><p>Елемент кола, в якому електрична енергія перетворюється лише на теплову.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Миттєва сила струму <span class="math notranslate nohighlight">\(i(t)\)</span></p></td>
+<td class="text-left"><p>Сила струму в колі з активним опором. Коливання збігаються за фазою з ЕРС. <br> <span class="math notranslate nohighlight">\(i = I_{\max} \sin(\omega t)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Амплітудне значення сили струму <span class="math notranslate nohighlight">\(I_{\max}\)</span></p></td>
+<td class="text-left"><p>Максимальне значення сили струму. <br> <span class="math notranslate nohighlight">\(I_{\max} = \frac{\mathcal{E}_{\max}}{R+r}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Миттєва напруга <span class="math notranslate nohighlight">\(u(t)\)</span></p></td>
+<td class="text-left"><p>Напруга на зовнішній ділянці кола (на активному опорі <span class="math notranslate nohighlight">\(R\)</span>). <br> <span class="math notranslate nohighlight">\(u = U_{\max} \sin(\omega t)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Зсув фаз <span class="math notranslate nohighlight">\(\varphi_0\)</span></p></td>
+<td class="text-left"><p>У загальному випадку (з котушками/конденсаторами) коливання струму можуть випереджати/відставати від напруги. <br> <span class="math notranslate nohighlight">\(i = I_{\max} \sin(\omega t + \varphi_0)\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Промисловий генератор</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Статор</p></td>
+<td class="text-left"><p>Нерухома частина, де розташовані обмотки, в яких індукується ЕРС.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Ротор (індуктор)</p></td>
+<td class="text-left"><p>Обертова частина (потужний електромагніт), що створює змінне магнітне поле.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Струми Фуко (вихрові струми)</p></td>
+<td class="text-left"><p>Шкідливі індукційні струми в масивних провідниках, що викликають нагрівання. Для боротьби осердя роблять з ізольованих пластин.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Частота струму генератора <span class="math notranslate nohighlight">\(\nu\)</span></p></td>
+<td class="text-left"><p>Залежить від швидкості обертання ротора <span class="math notranslate nohighlight">\(n\)</span> (об/с) та кількості пар полюсів <span class="math notranslate nohighlight">\(p\)</span>. <br> <span class="math notranslate nohighlight">\(\nu = pn\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="id13">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<h2>Додаткові матеріали<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%BC%D1%96%D0%BD%D0%BD%D0%B8%D0%B9_%D1%81%D1%82%D1%80%D1%83%D0%BC">https://uk.wikipedia.org/wiki/Змінний_струм</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D1%96%D1%82%D0%BD%D0%B0_%D1%96%D0%BD%D0%B4%D1%83%D0%BA%D1%86%D1%96%D1%8F">https://uk.wikipedia.org/wiki/Електромагнітна_індукція</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B3%D0%BD%D1%96%D1%82%D0%BD%D0%B8%D0%B9_%D0%BF%D0%BE%D1%82%D1%96%D0%BA">https://uk.wikipedia.org/wiki/Магнітний_потік</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D1%96%D1%82%D0%BD%D0%BE%D1%97_%D1%96%D0%BD%D0%B4%D1%83%D0%BA%D1%86%D1%96%D1%97_%D0%A4%D0%B0%D1%80%D0%B0%D0%B4%D0%B5%D1%8F">https://uk.wikipedia.org/wiki/Закон_електромагнітної_індукції_Фарадея</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%80%D1%83%D1%88%D1%96%D0%B9%D0%BD%D0%B0_%D1%81%D0%B8%D0%BB%D0%B0">https://uk.wikipedia.org/wiki/Електрорушійна_сила</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D1%85%D1%80%D0%BE%D0%B2%D1%96_%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B8">https://uk.wikipedia.org/wiki/Вихрові_струми</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80_%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D1%81%D1%82%D1%80%D1%83%D0%BC%D1%83">https://uk.wikipedia.org/wiki/Генератор_змінного_струму</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80">https://uk.wikipedia.org/wiki/Електричний_генератор</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%82%D0%BE%D1%80">https://uk.wikipedia.org/wiki/Статор</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%BE%D1%82%D0%BE%D1%80">https://uk.wikipedia.org/wiki/Ротор</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B0%D0%B3%D0%BD%D1%96%D1%82">https://uk.wikipedia.org/wiki/Електромагніт</a></p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Alternating_current">https://en.wikipedia.org/wiki/Alternating_current</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electromagnetic_induction">https://en.wikipedia.org/wiki/Electromagnetic_induction</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Magnetic_flux">https://en.wikipedia.org/wiki/Magnetic_flux</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Faraday%27s_law_of_induction">https://en.wikipedia.org/wiki/Faraday's_law_of_induction</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electromotive_force">https://en.wikipedia.org/wiki/Electromotive_force</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Eddy_current">https://en.wikipedia.org/wiki/Eddy_current</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Ohm%27s_law">https://en.wikipedia.org/wiki/Ohm's_law</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Alternator">https://en.wikipedia.org/wiki/Alternator</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electric_generator">https://en.wikipedia.org/wiki/Electric_generator</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Stator">https://en.wikipedia.org/wiki/Stator</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Rotor_(electric)">https://en.wikipedia.org/wiki/Rotor_(electric)</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electromagnet">https://en.wikipedia.org/wiki/Electromagnet</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Slip_ring">https://en.wikipedia.org/wiki/Slip_ring</a></p></li>
 </ul>
 </section>
 </section>
@@ -848,11 +941,11 @@ i = I_{\max} \sin(\omega t + \varphi_0)
       </div>
     </a>
     <a class="right-next"
-       href="../optics/nature_of_light.html"
+       href="active-and-reactive-resistance.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Природа світла</p>
+        <p class="prev-next-title">Активний та рективний опори. Діючі значення сили струму та напруги</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -889,8 +982,9 @@ i = I_{\max} \sin(\omega t + \varphi_0)
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Частота струму промислового генератора</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 

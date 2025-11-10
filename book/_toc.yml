@@ -114,6 +114,7 @@ parts:
       - file: physics/electromagnetic-waves/damped-electromagnetic-oscillations
       - file: physics/electromagnetic-waves/self-oscillations
       - file: physics/electromagnetic-waves/alternating-current
+      - file: physics/electromagnetic-waves/active-and-reactive-resistance
 
   - caption: ОПТИКА
     chapters:
