@@ -533,7 +533,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z">Повний опір кола (імпеданс) <span class="math notranslate nohighlight">\(Z\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Зсув фаз у послідовному RLC-колі</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Активна потужність у послідовному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Резонанс напруг</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Резонанс напруг у послідовному RLC колі</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Паралельне коло змінного струму</a><ul class="nav section-nav flex-column">
@@ -541,11 +541,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Повний опір паралельного кола (імпеданс)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Зсув фаз у паралельному RLC-колі</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Активна потужність у паралельному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Резонанс струмів у паралельному RLC колі</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Застосування RLC-кіл та резонансу</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Порівняння резонансів в паралельному та послідовному RLC колах</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Застосування RLC-кіл та резонансу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -611,7 +613,7 @@
 <blockquote>
 <div><p><strong>Діюче (ефективне) значення сили струму</strong> <span class="math notranslate nohighlight">\(I\)</span> - це таке значення постійного струму, який за один період змінного струму виділяє в провіднику таку ж саму кількість теплоти, що й змінний струм.</p>
 <div class="math notranslate nohighlight">
-\[I = \frac{I_m}{\sqrt{2}}\]</div>
+\[I_{\text{д}} = \frac{I_m}{\sqrt{2}}\]</div>
 <p>Одиниця в СІ: <strong>Ампер (А)</strong>.</p>
 </div></blockquote>
 <p>Значення <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> приблизно дорівнює 1.41. Отже, <span class="math notranslate nohighlight">\(I \approx 0.707 I_m\)</span>. Діюче значення струму приблизно в 1.41 рази менше від амплітудного.</p>
@@ -1042,13 +1044,13 @@
 <p>Цей результат дуже важливий: <strong>активна потужність у колі змінного струму розсіюється тільки на активному опорі</strong> <span class="math notranslate nohighlight">\(R\)</span>. Реактивні елементи (котушка та конденсатор) не споживають енергію безповоротно, вони лише обмінюються нею з джерелом. Тому, якщо коло не містить активного опору (наприклад, чисте LC-коло), активна потужність буде нульовою.</p>
 </section>
 <section id="id23">
-<h3>Резонанс напруг<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<h3>Резонанс напруг у послідовному RLC колі<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
 <p>Коли індуктивний опір дорівнює ємнісному опору (<span class="math notranslate nohighlight">\(X_L = X_C\)</span>), повний опір кола стає мінімальним і дорівнює активному опору <span class="math notranslate nohighlight">\(R\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{R^2 + 0^2} = R\]</div>
 <p>При цьому струм у колі досягає максимального значення, а зсув фаз <span class="math notranslate nohighlight">\(\varphi = 0\)</span>. Це явище називається <strong>резонансом напруг</strong>. При резонансі напруга на котушці та конденсаторі можуть бути дуже великими (значно більшими за напругу джерела), але вони спрямовані протилежно і компенсують одна одну.</p>
-<p><strong>Резонансна частота:</strong>
-Умова резонансу <span class="math notranslate nohighlight">\(X_L = X_C\)</span> дозволяє нам знайти частоту, при якій виникає це явище. Підставимо формули для індуктивного та ємнісного опорів:</p>
+<p><strong>Резонансна частота:</strong></p>
+<p>Умова резонансу <span class="math notranslate nohighlight">\(X_L = X_C\)</span> дозволяє нам знайти частоту, при якій виникає це явище. Підставимо формули для індуктивного та ємнісного опорів:</p>
 <div class="math notranslate nohighlight">
 \[\omega L = \frac{1}{\omega C}\]</div>
 <p>Звідси ми можемо виразити циклічну резонансну частоту <span class="math notranslate nohighlight">\(\omega_0\)</span>:</p>
@@ -1065,6 +1067,27 @@
 <div><p><strong>Резонансна частота</strong> <span class="math notranslate nohighlight">\(\nu_0\)</span> (або <span class="math notranslate nohighlight">\(\omega_0\)</span>) - це частота змінного струму, при якій індуктивний та ємнісний опори в колі стають рівними за величиною, що призводить до резонансу.</p>
 <p>Одиниця в СІ: <strong>Герц (Гц)</strong> для <span class="math notranslate nohighlight">\(\nu_0\)</span>, <strong>радіан за секунду (рад/с)</strong> для <span class="math notranslate nohighlight">\(\omega_0\)</span>.</p>
 </div></blockquote>
+<p><strong>Сила струму під час резонансу:</strong></p>
+<p>При резонансі індуктивний опір <span class="math notranslate nohighlight">\(X_L\)</span> та ємнісний опір <span class="math notranslate nohighlight">\(X_C\)</span> стають рівними і, оскільки вони спрямовані в протилежні сторони, їх дії взаємно компенсуються.</p>
+<ul class="simple">
+<li><p><strong>Повний опір (імпеданс) кола <span class="math notranslate nohighlight">\(Z\)</span></strong> стає мінімальним, оскільки реактивна складова <span class="math notranslate nohighlight">\((X_L - X_C)\)</span> дорівнює нулю. Залишається лише активний опір <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+<li><p><strong>За законом Ома для кола змінного струму <span class="math notranslate nohighlight">\(I_{\text{д}} = U_{\text{д}} / Z\)</span></strong>, коли опір (<span class="math notranslate nohighlight">\(Z\)</span>) мінімальний (дорівнює <span class="math notranslate nohighlight">\(R\)</span>), сила струму (<span class="math notranslate nohighlight">\(I_{\text{д}}\)</span>) при незмінній напрузі джерела (<span class="math notranslate nohighlight">\(U_{\text{д}}\)</span>) досягає свого <strong>максимального</strong> значення.</p></li>
+</ul>
+<p>З точки зору струму, цей стан логічніше було б назвати &quot;резонансом струмів&quot;. І такий термін існує, але він використовується для паралельного RLC-кола. Чому ж тоді ми називаємо цей стан &quot;резонанс НАПРУГ&quot;?</p>
+<p>Назва &quot;резонанс напруг&quot; пов'язана з тим, що відбувається з напругами на реактивних елементах - котушці індуктивності (<span class="math notranslate nohighlight">\(U_L\)</span>) та конденсаторі (<span class="math notranslate nohighlight">\(U_C\)</span>).</p>
+<p>При резонансі:</p>
+<ol class="arabic simple">
+<li><p>Струм у колі максимальний (<span class="math notranslate nohighlight">\(I_{\text{д,max}} = U_{\text{д}} / R\)</span>).</p></li>
+<li><p>Напруга на котушці (<span class="math notranslate nohighlight">\(U_L = I_{\text{д,max}} \cdot X_L\)</span>) та напруга на конденсаторі (<span class="math notranslate nohighlight">\(U_C = I_{\text{д,max}} \cdot X_C\)</span>) також досягають своїх максимальних значень.</p></li>
+<li><p>Оскільки при резонансі <span class="math notranslate nohighlight">\(X_L = X_C\)</span>, то і напруги на цих елементах стають рівними за величиною: <span class="math notranslate nohighlight">\(U_L = U_C\)</span>.</p></li>
+<li><p>Найцікавіше те, що ці напруги можуть <strong>значно перевищувати</strong> напругу джерела живлення <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
+</ol>
+<p>Саме це явище - різке зростання напруг на котушці та конденсаторі, які можуть у багато разів перевищувати напругу джерела - і дало назву <strong>&quot;резонанс напруг&quot;</strong>.</p>
+<p>Хоча ці напруги дуже великі, вони перебувають у протифазі (зсунуті на 180° одна відносно одної) і тому компенсують одна одну. Якщо виміряти напругу на ділянці, що містить і котушку, і конденсатор, вона дорівнюватиме нулю. Але напруга на кожному з цих елементів окремо буде максимальною і доволі великою. Немає суперечності в тому, що при <strong>резонансі напруг</strong> спостерігається <strong>максимальний струм</strong>:</p>
+<ul class="simple">
+<li><p><strong>Максимальний струм</strong> - це наслідок мінімального повного опору кола.</p></li>
+<li><p><strong>Резонанс напруг</strong> - це назва явища, яка походить від різкого зростання напруг на реактивних елементах (котушці та конденсаторі) до значень, що можуть значно перевищувати напругу джерела.</p></li>
+</ul>
 </section>
 </section>
 <hr class="docutils" />
@@ -1138,41 +1161,238 @@
 <li><p>Якщо <span class="math notranslate nohighlight">\(I_L &gt; I_C\)</span> (або <span class="math notranslate nohighlight">\(\frac{1}{\omega L} &gt; \omega C\)</span>), то <span class="math notranslate nohighlight">\(\varphi &lt; 0\)</span>, струм відстає від напруги (коло має індуктивний характер).</p></li>
 <li><p>Якщо <span class="math notranslate nohighlight">\(I_C = I_L\)</span> (або <span class="math notranslate nohighlight">\(\omega C = \frac{1}{\omega L}\)</span>), то <span class="math notranslate nohighlight">\(\varphi = 0\)</span>, струм і напруга збігаються за фазою. Цей випадок називається <strong>резонансом струмів</strong> у паралельному RLC-колі. При резонансі індуктивний і ємнісний струми взаємно компенсуються, повний опір <span class="math notranslate nohighlight">\(Z\)</span> є максимальним, а загальний струм <span class="math notranslate nohighlight">\(I_{\text{д}}=U_{\text{д}}/Z\)</span> - мінімальним.</p></li>
 </ul>
-<p>Коефіцієнт потужності для паралельного RLC-кола:</p>
-<div class="math notranslate nohighlight">
-\[\cos \varphi = \frac{I_R}{I_{\text{д}}} = \frac{U_{\text{д}}/R}{U_{\text{д}}/Z} = \frac{Z}{R}\]</div>
 </section>
 <section id="id28">
 <h3>Активна потужність у паралельному RLC-колі<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <p>Як і для послідовного RLC-кола, активна потужність у паралельному RLC-колі визначається за формулою:</p>
 <div class="math notranslate nohighlight">
 \[P = U_{\text{д}} I_{\text{д}} \cos\varphi\]</div>
-<p>І знову ж таки, вся активна потужність розсіюється лише на активному опорі:</p>
+<p>Коефіцієнт потужності для паралельного RLC-кола:</p>
 <div class="math notranslate nohighlight">
-\[P = U_{\text{д}} I_{R,\text{д}} = U_{\text{д}} \frac{U_{\text{д}}}{R} = \frac{U_{\text{д}}^2}{R}\]</div>
+\[\cos \varphi = \frac{I_R}{I_{\text{д}}} = \frac{U_{\text{д}}/R}{U_{\text{д}}/Z} = \frac{Z}{R}\]</div>
+<p>Звідси:</p>
+<div class="math notranslate nohighlight">
+\[I_{\text{д}} \cos \varphi = I_R\]</div>
+<p>і потужність набуває вигляду</p>
+<div class="math notranslate nohighlight">
+\[P = U_{\text{д}} I_{R} = U_{\text{д}} \frac{U_{\text{д}}}{R} = \frac{U_{\text{д}}^2}{R}\]</div>
+<p>І знову, як і для послідовного з'єднання, бачимо, що активна потужність у колі змінного струму розсіюється тільки на активному опорі <span class="math notranslate nohighlight">\(R\)</span>.</p>
+</section>
+<section id="id29">
+<h3>Резонанс струмів у паралельному RLC колі<a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
+<p>У паралельному RLC-колі також може виникнути резонанс. Це відбувається, коли струми через ємнісний та індуктивний елементи компенсують один одного, тобто <span class="math notranslate nohighlight">\(I_C = I_L\)</span>. Це означає, що <span class="math notranslate nohighlight">\(\frac{U_{\text{д}}}{X_C} = \frac{U_{\text{д}}}{X_L}\)</span>, що призводить до умови <span class="math notranslate nohighlight">\(X_C = X_L\)</span> (як і для резонансу напруг).</p>
+<p>При резонансі струм, що відбирається від джерела, стає мінімальним і дорівнює струму через активний опір:</p>
+<div class="math notranslate nohighlight">
+\[I_{\text{д}} = \sqrt{I_R^2 + (I_C - I_L)^2} = \sqrt{I_R^2 + 0^2} = I_R\]</div>
+<p>При цьому фазовий зсув між загальною напругою та струмом дорівнює нулю (<span class="math notranslate nohighlight">\(\varphi=0\)</span>). Це явище називається <strong>резонансом струмів</strong>. Особливістю резонансу струмів є те, що струми в реактивних гілках (<span class="math notranslate nohighlight">\(I_C\)</span> та <span class="math notranslate nohighlight">\(I_L\)</span>) можуть бути дуже великими, значно більшими за струм джерела, циркулюючи всередині контуру.</p>
+<p><strong>Резонансна частота:</strong></p>
+<p>Умова резонансу <span class="math notranslate nohighlight">\(I_C = I_L\)</span> також призводить до умови <span class="math notranslate nohighlight">\(X_L = X_C\)</span>. Отже, резонансна частота для паралельного RLC-кола є такою ж, як і для послідовного:</p>
+<div class="math notranslate nohighlight">
+\[\omega L = \frac{1}{\omega C}\]</div>
+<div class="math notranslate nohighlight">
+\[\omega_0 = \frac{1}{\sqrt{LC}}\]</div>
+<p>або</p>
+<div class="math notranslate nohighlight">
+\[\nu_0 = \frac{1}{2\pi\sqrt{LC}}\]</div>
+<blockquote>
+<div><p><strong>Резонансна частота</strong> <span class="math notranslate nohighlight">\(\nu_0\)</span> (або <span class="math notranslate nohighlight">\(\omega_0\)</span>) - це частота змінного струму, при якій індуктивний та ємнісний опори в колі стають рівними за величиною, що призводить до резонансу.</p>
+<p>Одиниця в СІ: <strong>Герц (Гц)</strong> для <span class="math notranslate nohighlight">\(\nu_0\)</span>, <strong>радіан за секунду (рад/с)</strong> для <span class="math notranslate nohighlight">\(\omega_0\)</span>.</p>
+</div></blockquote>
+<p><strong>Повний опір та сила струму під час резонансу:</strong></p>
+<p>На перший погляд, назва &quot;резонанс струмів&quot; може здатися нелогічною, адже загальний струм, що споживається від джерела, при цьому явищі стає <strong>мінімальним</strong>. Щоб зрозуміти суть назви, потрібно розглянути, що відбувається з повним опором кола та зі струмами в окремих його гілках.</p>
+<ul>
+<li><p><strong>Повний опір (імпеданс) кола <span class="math notranslate nohighlight">\(Z\)</span></strong> при резонансі стає <strong>максимальним</strong>. Оскільки реактивні струми <span class="math notranslate nohighlight">\(I_L\)</span> та <span class="math notranslate nohighlight">\(I_C\)</span> рівні за величиною і протилежні за фазою, вони компенсують один одного. Для зовнішнього джерела коло поводить себе так, ніби реактивних елементів немає, і воно &quot;бачить&quot; лише великий активний опір <span class="math notranslate nohighlight">\(R\)</span>. Це легко бачити із формули для повного опору за умови <span class="math notranslate nohighlight">\(X_L = X_C\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{1}{\sqrt{\left(\frac{1}{R}\right)^2 + \left(\frac{1}{X_C} - \frac{1}{X_L}\right)^2}}\]</div>
+</li>
+<li><p><strong>За законом Ома <span class="math notranslate nohighlight">\(I_{\text{д}} = U_{\text{д}} / Z\)</span></strong>, коли повний опір (<span class="math notranslate nohighlight">\(Z\)</span>) максимальний (і дорівнює <span class="math notranslate nohighlight">\(R\)</span>), загальний струм (<span class="math notranslate nohighlight">\(I_{\text{д}}\)</span>) при незмінній напрузі джерела (<span class="math notranslate nohighlight">\(U_{\text{д}}\)</span>) досягає свого <strong>мінімального</strong> значення.</p></li>
+</ul>
+<p>Чому ж тоді ми називаємо цей стан &quot;резонанс СТРУМІВ&quot;?</p>
+<p>Назва походить від того, що відбувається зі струмами всередині паралельного контуру, а саме в гілках з котушкою індуктивності (<span class="math notranslate nohighlight">\(I_L\)</span>) та конденсатором (<span class="math notranslate nohighlight">\(I_C\)</span>).</p>
+<p>При резонансі:</p>
+<ol class="arabic simple">
+<li><p>Загальний струм від джерела мінімальний (<span class="math notranslate nohighlight">\(I_{\text{д,min}} = U_{\text{д}} / R\)</span>).</p></li>
+<li><p>Струм у гілці з котушкою (<span class="math notranslate nohighlight">\(I_L = U_{\text{д}} / X_L\)</span>) та струм у гілці з конденсатором (<span class="math notranslate nohighlight">\(I_C = U_{\text{д}} / X_C\)</span>) можуть бути дуже великими, оскільки їхні опори <span class="math notranslate nohighlight">\(X_L\)</span> та <span class="math notranslate nohighlight">\(X_C\)</span> можуть бути значно меншими за <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+<li><p>Оскільки при резонансі <span class="math notranslate nohighlight">\(X_L = X_C\)</span>, то і величини цих струмів однакові: <span class="math notranslate nohighlight">\(I_L = I_C\)</span>.</p></li>
+<li><p>Найцікавіше те, що ці струми можуть <strong>значно перевищувати</strong> струм, що надходить від джерела живлення <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span>.</p></li>
+</ol>
+<p>Саме це явище - виникнення великих, рівних за величиною, але протилежних за фазою струмів у котушці та конденсаторі, які циркулюють всередині контуру LC і можуть у багато разів перевищувати струм джерела - і дало назву <strong>&quot;резонанс струмів&quot;</strong>.</p>
+<p>Ці великі струми не виходять у зовнішнє коло, оскільки вони перебувають у протифазі (зсунуті на 180° один відносно одного) і безперервно &quot;перетікають&quot; між котушкою та конденсатором, обмінюючись енергією. Джерело лише поповнює втрати енергії в активному опорі <span class="math notranslate nohighlight">\(R\)</span>.</p>
+<p>Немає суперечності в тому, що при <strong>резонансі струмів</strong> спостерігається <strong>мінімальний загальний струм</strong>:</p>
+<ul class="simple">
+<li><p><strong>Мінімальний струм джерела</strong> - це наслідок максимального повного опору кола.</p></li>
+<li><p><strong>Резонанс струмів</strong> - це назва явища, яка походить від різкого зростання струмів у реактивних гілках (з котушкою та конденсатором) до значень, що можуть значно перевищувати струм джерела.</p></li>
+</ul>
 </section>
 </section>
 <hr class="docutils" />
-<section id="id29">
-<h2>Застосування RLC-кіл та резонансу<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
-<p>RLC-кола та явище резонансу мають величезне практичне значення. Вони є основою для багатьох електронних пристроїв, таких як:</p>
-<ul class="simple">
-<li><p><strong>Радіоприймачі:</strong> Резонанс дозволяє &quot;налаштуватися&quot; на певну частоту радіостанції, пропускаючи потрібний сигнал і відсіюючи інші.</p></li>
-<li><p><strong>Фільтри:</strong> RLC-кола використовуються для виділення або приглушення певних частот у звукових системах, комунікаціях тощо.</p></li>
-<li><p><strong>Генератори коливань:</strong> Резонансні контури можуть створювати коливання заданої частоти.</p></li>
-<li><p><strong>Системи компенсації реактивної потужності:</strong> На великих промислових об'єктах паралельні RLC-кола допомагають покращити коефіцієнт потужності, зменшуючи втрати в мережі.</p></li>
-</ul>
-</section>
 <section id="id30">
-<h2>Додаткові матеріали<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<h2>Порівняння резонансів в паралельному та послідовному RLC колах<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<p>Після вивчення послідовних та паралельних RLC-кіл ми бачимо два цікавих результати:</p>
+<ol class="arabic">
+<li><p>Формула для резонансної частоти виявилася <strong>однаковою</strong> для обох типів з'єднання:</p>
+<div class="math notranslate nohighlight">
+\[ \omega_0 = \frac{1}{\sqrt{LC}} \]</div>
+</li>
+<li><p>Ця формула <strong>ідентична</strong> формулі для циклічної частоти власних коливань в ідеальному LC-контурі (формула Томсона), яку ми розглядали в попередніх лекціях.</p></li>
+</ol>
+<p>Чи є це збігом? Абсолютно ні. Це відображає глибокий фізичний зв'язок між вимушеними коливаннями в системі з втратами (RLC-коло) та вільними коливаннями в ідеальній системі (LC-контур). Давайте розберемося, чому це так.</p>
+<p><strong>Чому резонансна частота однакова для послідовного та паралельного кіл?</strong></p>
+<p>Суть резонансу в RLC-колі, незалежно від типу з'єднання, полягає в <strong>повній компенсації реактивних ефектів</strong> котушки індуктивності та конденсатора.</p>
 <ul class="simple">
-<li></li>
+<li><p><strong>Котушка індуктивності</strong> чинить опір зміні струму. Її реактивний опір <span class="math notranslate nohighlight">\(X_L = \omega L\)</span> зростає з частотою. Вона створює фазовий зсув, через який струм <em>відстає</em> від напруги.</p></li>
+<li><p><strong>Конденсатор</strong> чинить опір зміні напруги. Його реактивний опір <span class="math notranslate nohighlight">\(X_C = 1/(\omega C)\)</span> падає з частотою. Він створює фазовий зсув, через який струм <em>випереджає</em> напругу.</p></li>
+</ul>
+<p>Ці два елементи діють у протифазі. Коли котушка накопичує енергію в магнітному полі, конденсатор віддає її з електричного поля, і навпаки. Резонанс настає на тій єдиній частоті, де їхні опори стають рівними за величиною:</p>
+<div class="math notranslate nohighlight">
+\[ X_L = X_C \]</div>
+<p>Саме за цієї умови їхні протилежні впливи на фазу повністю врівноважують один одного. Подальший вигляд кола (послідовний чи паралельний) визначає, <strong>що саме</strong> відбувається при цій компенсації (див. таблицю нижче):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Характеристика</p></th>
+<th class="head text-left"><p>Послідовне RLC коло (Резонанс напруг)</p></th>
+<th class="head text-left"><p>Паралельне RLC коло (Резонанс струмів)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Умова резонансу</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(X_L = X_C\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(X_L = X_C\)</span> (або <span class="math notranslate nohighlight">\(I_L = I_C\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Резонансна частота</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\nu_0 = \frac{1}{2\pi\sqrt{LC}}\)</span> (Однакова) <br> <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> (Однакова)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\nu_0 = \frac{1}{2\pi\sqrt{LC}}\)</span> (Однакова) <br> <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> (Однакова)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Повний опір (Імпеданс)</strong></p></td>
+<td class="text-left"><p><strong>Мінімальний</strong> (<span class="math notranslate nohighlight">\(Z = R\)</span>)</p></td>
+<td class="text-left"><p><strong>Максимальний</strong> (<span class="math notranslate nohighlight">\(Z = R\)</span>)*</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Струм від джерела</strong></p></td>
+<td class="text-left"><p><strong>Максимальний</strong> (<span class="math notranslate nohighlight">\(I_{\text{д,max}} = U_{\text{д}}/R\)</span>)</p></td>
+<td class="text-left"><p><strong>Мінімальний</strong> (<span class="math notranslate nohighlight">\(I_{\text{д,min}} = U_{\text{д}}/R\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Що стає великим?</strong></p></td>
+<td class="text-left"><p><strong>Напруги</strong> на котушці (<span class="math notranslate nohighlight">\(U_L\)</span>) та конденсаторі (<span class="math notranslate nohighlight">\(U_C\)</span>)</p></td>
+<td class="text-left"><p><strong>Струми</strong> в гілках з котушкою (<span class="math notranslate nohighlight">\(I_L\)</span>) та конденсатором (<span class="math notranslate nohighlight">\(I_C\)</span>)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Зсув фаз (<span class="math notranslate nohighlight">\(\varphi\)</span>)</strong></p></td>
+<td class="text-left"><p>Дорівнює нулю</p></td>
+<td class="text-left"><p>Дорівнює нулю</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>*Примітка: в ідеальному паралельному LC-колі (без R) імпеданс на резонансній частоті був би нескінченно великим. У реальному колі з опором R він стає максимальним, але скінченним.</p>
+<p>Отже,</p>
+<ol class="arabic simple">
+<li><p><strong>У послідовному колі (Резонанс напруг):</strong></p>
+<ul class="simple">
+<li><p>Коло &quot;охоче&quot; пропускає струм резонансної частоти, оскільки реактивні опори компенсують один одного.</p></li>
+<li><p><strong>Ефект:</strong> Джерелу дуже легко &quot;проштовхнути&quot; струм через коло. Цей максимальний струм, протікаючи через котушку та конденсатор, створює на них <strong>дуже великі напруги</strong>.</p></li>
+<li><p><strong>Аналогія:</strong> Це схоже на розгойдування гойдалки. Якщо штовхати її в такт (на резонансній частоті), невеликим зусиллям (напруга джерела) можна досягти дуже великої амплітуди (напруги на L і C).</p></li>
+</ul>
+</li>
+<li><p><strong>У паралельному колі (Резонанс струмів):</strong></p>
+<ul class="simple">
+<li><p>На резонансній частоті котушка та конденсатор утворюють замкнений контур, в якому вони безперервно обмінюються енергією. Енергія коливається між магнітним полем котушки та електричним полем конденсатора.</p></li>
+<li><p><strong>Ефект:</strong> У цьому внутрішньому контурі циркулює <strong>дуже великий реактивний струм</strong>. Джерелу живлення потрібно лише &quot;підживлювати&quot; цю систему, компенсуючи втрати в активному опорі R. Тому струм, який коло бере від джерела, є <strong>мінімальним</strong>.</p></li>
+<li><p><strong>Аналогія:</strong> Уявіть резервуар з водою, де хвилі (енергія) можуть довго коливатися туди-сюди (між L і C) майже без зовнішньої допомоги. Вам потрібно лише доливати трохи води (струм від джерела), щоб компенсувати випаровування (втрати на R).</p></li>
+</ul>
+</li>
+</ol>
+<p>Хоча <strong>прояви</strong> резонансу різні (максимальний струм проти мінімального), <strong>умова</strong> його виникнення одна й та сама: <span class="math notranslate nohighlight">\(X_L = X_C\)</span>. А оскільки умова одна, то й частота, що випливає з цієї умови, буде однаковою для обох випадків:</p>
+<div class="math notranslate nohighlight">
+\[ \omega L = \frac{1}{\omega C} \implies \omega_0 = \frac{1}{\sqrt{LC}} \]</div>
+<p><strong>Чому резонансна частота дорівнює частоті власних коливань LC-контуру?</strong></p>
+<p>Це найцікавіше питання. Тут ми стикаємося з фундаментальним принципом фізики, який проявляється не тільки в електриці, але й у механіці, акустиці та інших галузях.</p>
+<ul class="simple">
+<li><p><strong>Вільні коливання (LC-контур):</strong> Ідеальний LC-контур - це система без втрат енергії (<span class="math notranslate nohighlight">\(R=0\)</span>). Якщо зарядити конденсатор і залишити систему в спокої, вона буде коливатися вічно з <strong>власною (природною) частотою</strong> <span class="math notranslate nohighlight">\(\omega_0 = 1/\sqrt{LC}\)</span>. Це частота, на якій енергія найефективніше перекачується між електричним полем конденсатора та магнітним полем котушки. Це &quot;внутрішній ритм&quot; системи, визначений її параметрами <span class="math notranslate nohighlight">\(L\)</span> та <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<ul>
+<li><p><em>Аналогія:</em> Це як ідеальна гойдалка без тертя. Якщо її штовхнути, вона буде коливатися зі своєю власною частотою, яка залежить від її довжини.</p></li>
+</ul>
+</li>
+<li><p><strong>Вимушені коливання (RLC-коло):</strong> RLC-коло, підключене до зовнішнього джерела, - це система, в якій відбуваються <strong>вимушені коливання</strong>. Джерело зі своєю частотою <span class="math notranslate nohighlight">\(\omega\)</span> &quot;нав'язує&quot; системі свій ритм. Резистор <span class="math notranslate nohighlight">\(R\)</span> при цьому постійно розсіює енергію, тобто виступає в ролі &quot;демпфера&quot; або &quot;тертя&quot;.</p>
+<ul>
+<li><p><em>Аналогія:</em> Це як реальна гойдалка з тертям, яку ви розгойдуєте, періодично її підштовхуючи.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Резонанс - це явище різкого зростання амплітуди вимушених коливань, коли частота зовнішньої сили (джерела) збігається з власною частотою коливальної системи.</strong></p>
+<p>Коли ви штовхаєте гойдалку в такт її власному руху (тобто з її власною частотою), кожен ваш поштовх додає енергію в потрібний момент, і амплітуда розмаху різко зростає. Якщо ж ви будете штовхати її занадто часто або занадто рідко, ваші зусилля будуть неефективними, іноді навіть гальмуючи її.</p>
+<p>Так само і в RLC-колі. Коли частота джерела <span class="math notranslate nohighlight">\(\omega\)</span> дорівнює власній частоті LC-контуру <span class="math notranslate nohighlight">\(\omega_0\)</span>, джерело &quot;потрапляє в такт&quot; з внутрішнім процесом обміну енергією між котушкою та конденсатором. Енергія від джерела передається в коло найефективніше, компенсуючи втрати на резисторі <span class="math notranslate nohighlight">\(R\)</span>. Саме тому ми спостерігаємо максимальну реакцію системи: максимальний струм (у послідовному колі) або максимальний внутрішній обмін енергією між котушкою індуктивності та конденсатором при мінімальному споживанні від джерела (у паралельному колі).</p>
+<p><strong>Висновок:</strong> Рівність резонансної частоти RLC-кола та власної частоти коливань LC-контуру - це не збіг, а прояв універсального принципу резонансу. <strong>Активний опір R визначає гостроту резонансу</strong> (наскільки високим і вузьким буде пік), але <strong>не змінює саму резонансну частоту</strong>, яка визначається лише реактивними елементами L і C.</p>
+</section>
+<hr class="docutils" />
+<section id="id31">
+<h2>Застосування RLC-кіл та резонансу<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<p>RLC-кола та явище резонансу є основою сучасної радіотехніки та електроніки. Їхня унікальна здатність &quot;відгукуватися&quot; на певну частоту і &quot;ігнорувати&quot; інші дозволяє створювати безліч корисних пристроїв.</p>
+<ol class="arabic">
+<li><p><strong>Налаштування та вибіркова фільтрація (Радіо- та телеприймачі)</strong></p>
+<p>Це класичне і найвідоміше застосування.</p>
+<ul class="simple">
+<li><p><strong>Проблема:</strong> В ефірі одночасно існують сигнали від десятків радіостанцій, кожен на своїй унікальній частоті-носії. Антена приймача вловлює їх усі одночасно, створюючи в своєму вході мішанину слабких змінних струмів різних частот.</p></li>
+<li><p><strong>Рішення:</strong> Вхідний каскад радіоприймача - це, по суті, RLC-контур (зазвичай послідовний). У старих приймачах, обертаючи ручку налаштування, ви фізично змінювали ємність змінного конденсатора <span class="math notranslate nohighlight">\(C\)</span>.</p></li>
+<li><p><strong>Як це працює:</strong> Змінюючи <span class="math notranslate nohighlight">\(C\)</span>, ви змінюєте резонансну частоту контуру <span class="math notranslate nohighlight">\(\nu_0 = 1/(2\pi\sqrt{LC})\)</span>. Коли ця частота збігається з частотою потрібної вам радіостанції, імпеданс контуру для цієї частоти стає мінімальним (<span class="math notranslate nohighlight">\(Z=R\)</span>). Струм від цієї станції різко зростає і проходить далі на підсилення та обробку. Для всіх інших станцій, чиї частоти далекі від резонансної, імпеданс контуру дуже великий, і їхні сигнали ефективно приглушуються. Таким чином, RLC-коло працює як <strong>смуговий фільтр</strong>, пропускаючи вузьку смугу частот навколо резонансної.</p></li>
+</ul>
+</li>
+<li><p><strong>Електронні фільтри</strong></p>
+<p>RLC-кола дозволяють створювати фільтри для будь-яких цілей, де потрібно розділити сигнали за частотою.</p>
+<ul class="simple">
+<li><p><strong>Аудіотехніка:</strong> В акустичних системах (колонках) використовуються <strong>кросовери</strong> - набори фільтрів, які розділяють звуковий сигнал.</p>
+<ul>
+<li><p><strong>Фільтр низьких частот (Low-pass):</strong> Пропускає тільки низькі частоти на великий динамік (сабвуфер).</p></li>
+<li><p><strong>Фільтр високих частот (High-pass):</strong> Пропускає тільки високі частоти на маленький динамік (твітер).</p></li>
+<li><p><strong>Смуговий фільтр (Band-pass):</strong> Пропускає середні частоти на середньочастотний динамік.</p></li>
+</ul>
+</li>
+<li><p><strong>Блоки живлення:</strong> Після випрямлення змінного струму в постійний залишаються небажані &quot;пульсації&quot; (залишки змінної складової). LC-фільтри ефективно &quot;згладжують&quot; ці пульсації, оскільки для постійного струму (<span class="math notranslate nohighlight">\(\nu=0\)</span>) опір котушки близький до нуля, а для змінних пульсацій - значний.</p></li>
+<li><p><strong>Придушення перешкод (Notch-фільтри):</strong> Іноді потрібно видалити одну конкретну небажану частоту, наприклад, гудіння від мережі 50 Гц. Для цього використовують <strong>режекторний (notch) фільтр</strong>, який налаштований на резонанс саме на цій частоті і створює для неї максимальний опір, блокуючи її.</p></li>
+</ul>
+</li>
+<li><p><strong>Генератори коливань (Осцилятори)</strong></p>
+<p>Будь-який передавач (радіо, Wi-Fi, мобільний телефон) повинен генерувати стабільну високочастотну хвилю-носій.</p>
+<ul class="simple">
+<li><p><strong>Принцип роботи:</strong> В основі генератора лежить коливальний LC-контур, який задає потрібну частоту. Оскільки будь-яке реальне коло має опір <span class="math notranslate nohighlight">\(R\)</span>, коливання в ньому швидко б затухли. Щоб цього не сталося, до контуру підключають активний елемент (транзистор або операційний підсилювач) зі зворотним зв'язком. Цей елемент діє як &quot;гойдалка&quot;: він &quot;відчуває&quot; коливання в контурі і в потрібний момент додає в нього невелику порцію енергії від джерела живлення, точно компенсуючи втрати на опорі. В результаті в контурі встановлюються стабільні незатухаючі коливання з резонансною частотою.</p></li>
+</ul>
+</li>
+<li><p><strong>Компенсація реактивної потужності в промисловості</strong></p>
+<ul class="simple">
+<li><p><strong>Проблема:</strong> На заводах і фабриках працює багато потужних електродвигунів, трансформаторів та інших пристроїв, які мають велику індуктивність <span class="math notranslate nohighlight">\(L\)</span>. Таке навантаження споживає не тільки активну потужність (яка виконує роботу), але й значну <strong>реактивну потужність</strong>, необхідну для створення магнітних полів. Ця реактивна потужність не виконує корисної роботи, але створює додатковий струм у мережі, що призводить до:</p>
+<ul>
+<li><p>Збільшення втрат енергії на нагрівання дротів (<span class="math notranslate nohighlight">\(P_{втрат} = I^2 R\)</span>).</p></li>
+<li><p>Необхідності використовувати товстіші та дорожчі кабелі.</p></li>
+</ul>
+</li>
+<li><p><strong>Рішення:</strong> Щоб компенсувати індуктивний характер навантаження, паралельно йому підключають батареї конденсаторів.</p></li>
+<li><p><strong>Як це працює:</strong> Індуктивне навантаження створює струм, що відстає від напруги. Конденсатори створюють струм, що випереджає напругу. Правильно підібравши ємність <span class="math notranslate nohighlight">\(C\)</span>, можна досягти стану, близького до <strong>паралельного резонансу струмів</strong>. Реактивний струм, необхідний для двигунів, буде циркулювати всередині контуру &quot;двигун-конденсатор&quot;, а не &quot;гуляти&quot; по всій мережі до електростанції. В результаті загальний струм, що споживається від мережі, значно зменшується, коефіцієнт потужності <span class="math notranslate nohighlight">\(\cos\varphi\)</span> наближається до 1, а втрати енергії в мережі падають.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id32">
+<h2>Додаткові матеріали<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%B8%D0%B9_%D0%BE%D0%BF%D1%96%D1%80">https://uk.wikipedia.org/wiki/Реактивний_опір</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D1%96%D0%BC%D0%BF%D0%B5%D0%B4%D0%B0%D0%BD%D1%81">https://uk.wikipedia.org/wiki/Електричний_імпеданс</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82_%D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%96">https://uk.wikipedia.org/wiki/Коефіцієнт_потужності</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D1%96%D1%8E%D1%87%D0%B5_%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F_%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D1%81%D1%82%D1%80%D1%83%D0%BC%D1%83">https://uk.wikipedia.org/wiki/Діюче_значення_змінного_струму</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D1%80%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%D0%BD%D1%81">https://uk.wikipedia.org/wiki/Електричний_резонанс</a></p></li>
+<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0_%D0%9A%D1%96%D1%80%D1%85%D0%B3%D0%BE%D1%84%D0%B0">https://uk.wikipedia.org/wiki/Правила_Кірхгофа</a></p></li>
 </ul>
 </section>
-<section id="id31">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<section id="id33">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
 <ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RLC_circuit">https://en.wikipedia.org/wiki/RLC_circuit</a> (<strong>IMAGES</strong>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrical_impedance">https://en.wikipedia.org/wiki/Electrical_impedance</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrical_reactance">https://en.wikipedia.org/wiki/Electrical_reactance</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Volt-ampere">https://en.wikipedia.org/wiki/Volt-ampere</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/AC_power">https://en.wikipedia.org/wiki/AC_power</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Power_factor">https://en.wikipedia.org/wiki/Power_factor</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Alternating_current#Root_mean_square_voltage">https://en.wikipedia.org/wiki/Alternating_current#Root_mean_square_voltage</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrical_resonance">https://en.wikipedia.org/wiki/Electrical_resonance</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phasor">https://en.wikipedia.org/wiki/Phasor</a> (<strong>IMAGES</strong>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">https://en.wikipedia.org/wiki/Kirchhoff's_circuit_laws</a></p></li>
 </ul>
 </section>
 </section>
@@ -1277,7 +1497,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z">Повний опір кола (імпеданс) <span class="math notranslate nohighlight">\(Z\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Зсув фаз у послідовному RLC-колі</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Активна потужність у послідовному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Резонанс напруг</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Резонанс напруг у послідовному RLC колі</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Паралельне коло змінного струму</a><ul class="nav section-nav flex-column">
@@ -1285,11 +1505,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Повний опір паралельного кола (імпеданс)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Зсув фаз у паралельному RLC-колі</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Активна потужність у паралельному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Резонанс струмів у паралельному RLC колі</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Застосування RLC-кіл та резонансу</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Порівняння резонансів в паралельному та послідовному RLC колах</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Застосування RLC-кіл та резонансу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 
