@@ -68,7 +68,7 @@ $$I_{\text{д}} = \sqrt{\frac{I_m^2}{2}} = \frac{I_m}{\sqrt{2}}$$
 
 > **Діюче (ефективне) значення сили струму** $I$ - це таке значення постійного струму, який за один період змінного струму виділяє в провіднику таку ж саму кількість теплоти, що й змінний струм.
 >
-> $$I = \frac{I_m}{\sqrt{2}}$$
+> $$I_{\text{д}} = \frac{I_m}{\sqrt{2}}$$
 >
 > Одиниця в СІ: **Ампер (А)**.
 
@@ -891,10 +891,24 @@ RLC-кола та явище резонансу є основою сучасно
 
 ## Додаткові матеріали
 
-* 
+* https://uk.wikipedia.org/wiki/Реактивний_опір
+* https://uk.wikipedia.org/wiki/Електричний_імпеданс
+* https://uk.wikipedia.org/wiki/Коефіцієнт_потужності
+* https://uk.wikipedia.org/wiki/Діюче_значення_змінного_струму
+* https://uk.wikipedia.org/wiki/Електричний_резонанс
+* https://uk.wikipedia.org/wiki/Правила_Кірхгофа
 
 
 ## Додаткові матеріали (англійською)
 
+* https://en.wikipedia.org/wiki/RLC_circuit (**IMAGES**)
+* https://en.wikipedia.org/wiki/Electrical_impedance
+* https://en.wikipedia.org/wiki/Electrical_reactance
 * https://en.wikipedia.org/wiki/Volt-ampere
+* https://en.wikipedia.org/wiki/AC_power
+* https://en.wikipedia.org/wiki/Power_factor
+* https://en.wikipedia.org/wiki/Alternating_current#Root_mean_square_voltage
+* https://en.wikipedia.org/wiki/Electrical_resonance
+* https://en.wikipedia.org/wiki/Phasor (**IMAGES**)
+* https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws
 
