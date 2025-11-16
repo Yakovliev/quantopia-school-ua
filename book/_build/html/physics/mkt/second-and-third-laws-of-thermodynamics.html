@@ -1,0 +1,1342 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Другий та третій закони термодинаміки. Теплові машини &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/second-and-third-laws-of-thermodynamics';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Внутрішня енергія" href="../internal_energy.html" />
+    <link rel="prev" title="Перший закон термодинаміки" href="first-law-of-thermodynamics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real-gas.html">Реальні гази</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="humidity.html">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase-transitions.html">Фазові переходи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solids.html">Будова та властивості твердих тіл</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solids-properties.html">Механічні властивості твердих тіл та теплове розширення</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internal-energy-and-work-in-thermodynamics.html">Вступ до термодинаміки. Внутрішня енергія та робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first-law-of-thermodynamics.html">Перший закон термодинаміки</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Другий та третій закони термодинаміки. Теплові машини</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/self-oscillations.html">Автоколивання (Pending)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/alternating-current.html">Змінний струм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/active-and-reactive-resistance.html">Активний та рективний опори. Діючі значення сили струму та напруги</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-01.html">Електродинаміка. Задачі 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-02.html">Електродинаміка. Задачі 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electromagnetic-waves-classroom.html">Електромагнітні коливання та хвилі. Задачі</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mkt/second-and-third-laws-of-thermodynamics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mkt/second-and-third-laws-of-thermodynamics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Другий та третій закони термодинаміки. Теплові машини</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Теплові машини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Основні елементи теплової машини</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Циклічний процес в тепловій машині</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Робота газу за цикл</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Коефіцієнт корисної дії (ККД) теплового двигуна</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Другий закон термодинаміки: Межі перетворення енергії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Оборотні та необоротні процеси</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Формулювання другого закону термодинаміки</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Ідеальний тепловий двигун та цикл Карно</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Цикл Карно</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Максимально можливий ККД (ККД ідеального двигуна)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Формулювання Саді Карно (Теореми Карно)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Практичне застосування теплових двигунів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Двигун внутрішнього згоряння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Дизельний двигун</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Такти дизельного двигуна</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Холодильні установки та теплові насоси: Переміщення тепла</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Механізм роботи:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Робота зовнішніх сил у холодильній машині</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Холодильний коефіцієнт</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Максимальний холодильний коефіцієнт</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Кондиціонер</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Тепловий насос</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Ентропія: Міра безладу та напрямок процесів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Зміна ентропії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Закон зростання ентропії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Ентропія як функція стану</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Третій закон термодинаміки: Межа холоду</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Абсолютний нуль температури</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Формулювання Третього закону термодинаміки</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Наслідки Третього закону термодинаміки</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Другий та третій закони термодинаміки. Теплові машини<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Теплові машини<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Ми вже знаємо, що енергія може перетворюватися з однієї форми в іншу. <strong>Теплові машини</strong> - це пристрої, які дозволяють нам перетворювати теплову енергію на механічну роботу. Це основа для роботи двигунів автомобілів, електростанцій та багатьох інших пристроїв.</p>
+<blockquote>
+<div><p><strong>Теплова машина</strong> - це пристрій, який циклічно перетворює теплову енергію, отриману від джерела тепла, на механічну роботу.</p>
+</div></blockquote>
+<section id="id3">
+<h3>Основні елементи теплової машини<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Будь-яка теплова машина, незалежно від її складності, складається з трьох основних елементів:</p>
+<ol class="arabic simple">
+<li><p><strong>Нагрівник (джерело тепла):</strong> Це джерело енергії, яке постачає тепло робочому тілу. Нагрівник має високу абсолютну температуру <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Приклади:</strong> Паливо, що горить у двигуні (бензин, дизель, вугілля), ядерний реактор, сонячна енергія.</p></li>
+<li><p><strong>Функція:</strong> Передає робочому тілу кількість теплоти <span class="math notranslate nohighlight">\(Q_1\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Робоче тіло:</strong> Це речовина (зазвичай газ або пара), яка здійснює циклічний процес, приймаючи тепло, виконуючи роботу і віддаючи надлишок тепла.</p>
+<ul class="simple">
+<li><p><strong>Приклади:</strong> Суміш палива з повітрям у двигуні внутрішнього згоряння, водяна пара в паровому двигуні.</p></li>
+<li><p><strong>Функція:</strong> Отримує <span class="math notranslate nohighlight">\(Q_1\)</span> від нагрівника, виконує роботу <span class="math notranslate nohighlight">\(A\)</span> і віддає <span class="math notranslate nohighlight">\(Q_2\)</span> холодильнику.</p></li>
+</ul>
+</li>
+<li><p><strong>Холодильник (приймач тепла):</strong> Це середовище або пристрій, який поглинає надлишкову теплоту, що не була перетворена на роботу. Холодильник має низьку абсолютну температуру <span class="math notranslate nohighlight">\(T_{\text{х}}\)</span>, причому <span class="math notranslate nohighlight">\(T_{\text{х}} &lt; T_{\text{н}}\)</span>.</p>
+<ul class="simple">
+<li><p><strong>Приклади:</strong> Атмосферне повітря, вода в річці або озері.</p></li>
+<li><p><strong>Функція:</strong> Приймає від робочого тіла кількість теплоти <span class="math notranslate nohighlight">\(Q_2\)</span>.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id4">
+<h3>Циклічний процес в тепловій машині<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Для того, щоб теплова машина працювала безперервно, робоче тіло повинно здійснювати <strong>циклічний процес</strong>. Це означає, що після виконання серії послідовних змін стану, робоче тіло повертається до свого початкового стану.</p>
+<blockquote>
+<div><p><strong>Циклічний процес (або цикл)</strong> - це термодинамічний процес, в якому система (робоче тіло) після низки перетворень повертається у свій початковий стан.</p>
+</div></blockquote>
+<p>На <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі (діаграмі тиску від об'єму) циклічний процес зображується замкнутою кривою.</p>
+</section>
+<section id="id5">
+<h3>Робота газу за цикл<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Ми вже знаємо, що робота, яку виконує газ, чисельно дорівнює площі фігури під графіком на <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі. Якщо газ проходить циклічний процес, то:</p>
+<ul class="simple">
+<li><p>На етапах розширення (рух по графіку вправо), газ виконує додатну роботу.</p></li>
+<li><p>На етапах стиснення (рух по графіку вліво), над газом виконується робота зовнішніми силами (газ виконує від'ємну роботу).</p></li>
+</ul>
+<p><strong>Робота, виконана газом за весь цикл, дорівнює площі, обмеженій цим циклом на <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі.</strong></p>
+<ul class="simple">
+<li><p>Якщо цикл обходиться за годинниковою стрілкою (як у теплових двигунах), то робота газу є <strong>додатною</strong> (система виконує роботу над зовнішнім середовищем).</p></li>
+<li><p>Якщо цикл обходиться проти годинникової стрілки (як у холодильних установках), то робота газу є <strong>від'ємною</strong> (над системою виконується робота зовнішніми силами).</p></li>
+</ul>
+<p><strong>Застосування першого закону термодинаміки до циклу:</strong></p>
+<p>Оскільки робоче тіло повертається у свій початковий стан, його внутрішня енергія наприкінці циклу дорівнює внутрішній енергії на початку циклу. Отже, зміна внутрішньої енергії за цикл дорівнює нулю:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta U_{\text{цикл}} = 0 \]</div>
+<p>Згідно з першим законом термодинаміки (<span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span>), для циклічного процесу маємо:</p>
+<div class="math notranslate nohighlight">
+\[ Q_{\text{цикл}} = \Delta U_{\text{цикл}} + A_{\text{цикл}} \]</div>
+<div class="math notranslate nohighlight">
+\[ Q_{\text{цикл}} = 0 + A_{\text{цикл}} \]</div>
+<p>Отже,</p>
+<div class="math notranslate nohighlight">
+\[ A_{\text{цикл}} = Q_{\text{цикл}} \]</div>
+<p>Кількість теплоти за цикл <span class="math notranslate nohighlight">\(Q_{\text{цикл}}\)</span> - це алгебраїчна сума теплоти, отриманої від нагрівника (<span class="math notranslate nohighlight">\(Q_1\)</span>, додатна), та теплоти, відданої холодильнику (<span class="math notranslate nohighlight">\(Q_2\)</span>, від'ємна). Ми будемо розглядати <span class="math notranslate nohighlight">\(Q_1\)</span> та <span class="math notranslate nohighlight">\(Q_2\)</span> як модулі (додатні величини), тому сумарна теплота буде <span class="math notranslate nohighlight">\(Q_1 - Q_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ A = Q_1 - Q_2 \]</div>
+<p>де</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> - корисна робота, виконана робочим тілом за цикл. Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q_1\)</span> - кількість теплоти, отримана робочим тілом від нагрівника. Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q_2\)</span> - кількість теплоти, віддана робочим тілом холодильнику. Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+</ul>
+<p>Ця формула показує, що робота, виконана тепловою машиною, є різницею між теплотою, отриманою від нагрівника, і теплотою, відданою холодильнику. Це прямий наслідок закону збереження енергії.</p>
+</section>
+<section id="id6">
+<h3>Коефіцієнт корисної дії (ККД) теплового двигуна<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Ефективність теплової машини характеризується її коефіцієнтом корисної дії (ККД).</p>
+<blockquote>
+<div><p><strong>Коефіцієнт корисної дії (ККД) теплового двигуна <span class="math notranslate nohighlight">\(\eta\)</span></strong> - це відношення корисної роботи, виконаної двигуном за цикл, до кількості теплоти, отриманої від нагрівника.</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{A}{Q_1} \]</div>
+</div></blockquote>
+<p>Одиниця ККД в СІ: ККД є безрозмірною величиною. Зазвичай виражається у відсотках.</p>
+<p>Підставивши вираз для роботи <span class="math notranslate nohighlight">\(A = Q_1 - Q_2\)</span>, ми отримаємо формулу ККД через теплоту:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{Q_1 - Q_2}{Q_1} \]</div>
+<p>Цю формулу можна також записати як:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = 1 - \frac{Q_2}{Q_1} \]</div>
+<p><strong>Важливі зауваження про ККД:</strong></p>
+<ul class="simple">
+<li><p><strong>Чому ККД завжди менший за 1 (або 100%)?</strong> З формули <span class="math notranslate nohighlight">\(\eta = 1 - \frac{Q_2}{Q_1}\)</span> ми бачимо, що для того, щоб ККД дорівнював 1, <span class="math notranslate nohighlight">\(Q_2\)</span> повинно бути нулем. Це означало б, що вся теплота, отримана від нагрівника, повністю перетворилася на роботу, і жодна частина теплоти не була віддана холодильнику. Ми побачимо далі, що другий закон термодинаміки забороняє такий процес. Завжди <span class="math notranslate nohighlight">\(Q_2 &gt; 0\)</span>, тому ККД завжди менший за 1.</p></li>
+<li><p><strong>Куди йде <span class="math notranslate nohighlight">\(Q_2\)</span>?</strong> Це &quot;відпрацьована&quot; теплота, яка не змогла бути перетворена на корисну роботу. Вона відводиться в навколишнє середовище (холодильник).</p></li>
+</ul>
+<p><strong>Кількість теплоти від згоряння палива:</strong></p>
+<p>Кількість теплоти <span class="math notranslate nohighlight">\(Q_1\)</span>, що надходить від нагрівника, часто генерується за рахунок згоряння палива. Ми можемо розрахувати її за формулою:</p>
+<div class="math notranslate nohighlight">
+\[ Q_1 = qm \]</div>
+<p>де</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(q\)</span> - питома теплота згоряння палива. Одиниця в СІ: <span class="math notranslate nohighlight">\(\left[q\right] = 1 \frac{\text{Дж}}{\text{кг}}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> - маса спаленого палива. Одиниця в СІ: <strong>кілограм (кг)</strong>.</p></li>
+</ul>
+<p><strong>Приклад:</strong> Тепловий двигун отримав від нагрівника 1000 Дж теплоти і віддав холодильнику 700 Дж. Яка робота була виконана і який ККД двигуна?</p>
+<p>Дано: <span class="math notranslate nohighlight">\(Q_1 = 1000 \text{ Дж}\)</span>, <span class="math notranslate nohighlight">\(Q_2 = 700 \text{ Дж}\)</span>.</p>
+<p>Робота:</p>
+<div class="math notranslate nohighlight">
+\[ A = Q_1 - Q_2 = 1000 \text{ Дж} - 700 \text{ Дж} = 300 \text{ Дж} \]</div>
+<p>ККД:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = \frac{A}{Q_1} = \frac{300 \text{ Дж}}{1000 \text{ Дж}} = 0.3 \]</div>
+<p>Або у відсотках:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = 0.3 \cdot 100\% = 30\% \]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Другий закон термодинаміки: Межі перетворення енергії<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Перший закон термодинаміки говорить нам, що енергія зберігається, але він не вказує напрямку, в якому можуть відбуватися процеси. Наприклад, він не забороняє самовільне перетікання тепла від холодного тіла до гарячого або повне перетворення теплової енергії на роботу. Однак ми знаємо з досвіду, що такі процеси не відбуваються. Саме <strong>другий закон термодинаміки</strong> встановлює ці обмеження.</p>
+<p>Другий закон термодинаміки є одним із найглибших і найважливіших законів природи. Він говорить нам про <strong>незворотність</strong> реальних процесів і про те, що всі спонтанні процеси в ізольованій системі йдуть у напрямку зростання <strong>безладу</strong> (ентропії).</p>
+<section id="id8">
+<h3>Оборотні та необоротні процеси<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Щоб зрозуміти другий закон, спочатку розберемося з поняттями оборотності.</p>
+<blockquote>
+<div><p><strong>Оборотний (рівноважний) процес</strong> - це ідеалізований термодинамічний процес, який можна провести у зворотному напрямку, пройшовши всі ті самі проміжні стани, причому після завершення зворотного процесу і система, і навколишнє середовище повернуться до свого початкового стану без будь-яких залишкових змін.</p>
+</div></blockquote>
+<p><strong>Особливості оборотних процесів:</strong></p>
+<ul class="simple">
+<li><p>Вони є <strong>квазістатичними</strong> (протікають нескінченно повільно), так що система завжди перебуває у стані термодинамічної рівноваги.</p></li>
+<li><p>Відсутні будь-які дисипативні (розсіювальні) явища, такі як тертя, в'язкість, теплопровідність (при теплообміні через скінченну різницю температур).</p></li>
+<li><p><strong>Приклад:</strong> Дуже повільне ізотермічне розширення ідеального газу, коли теплота передається від нагрівника з нескінченно малою різницею температур.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Необоротний процес</strong> - це реальний термодинамічний процес, який неможливо провести у зворотному напрямку так, щоб і система, і навколишнє середовище повернулися до свого початкового стану без будь-яких змін.</p>
+</div></blockquote>
+<p><strong>Особливості необоротних процесів:</strong></p>
+<ul class="simple">
+<li><p>Всі реальні процеси є необоротними.</p></li>
+<li><p>Вони завжди супроводжуються зростанням загальної ентропії системи та навколишнього середовища (що таке ентропія, розберемо нижче)</p></li>
+<li><p><strong>Приклади:</strong></p>
+<ul>
+<li><p><strong>Теплопередача:</strong> Тепло завжди самовільно переходить від гарячого тіла до холодного. Зворотний процес (самовільне перетікання тепла від холодного до гарячого) ніколи не спостерігається.</p></li>
+<li><p><strong>Змішування газів:</strong> Гази самовільно змішуються. Для їхнього розділення потрібна робота ззовні.</p></li>
+<li><p><strong>Тертя:</strong> Механічна енергія перетворюється на теплоту через тертя. Зворотний процес (перетворення теплоти від тертя назад у механічну роботу) не відбувається.</p></li>
+<li><p><strong>Горіння палива:</strong> Це хімічна реакція, що виділяє теплоту. Вона необоротна в термодинамічному сенсі.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Чому всі реальні процеси необоротні?</strong></p>
+<p>Необоротність пов'язана з фундаментальною властивістю природи - прагненням до максимального безладу або &quot;розсіювання&quot; енергії. Коли енергія переходить з однієї форми в іншу або від однієї частини системи до іншої, вона часто стає менш &quot;упорядкованою&quot; або менш доступною для виконання корисної роботи. Наприклад, тепло, що перетікає від гарячого до холодного, розсіюється і стає рівномірно розподіленим, що ускладнює його збір і використання. Цей процес збільшує ентропію, і повернення до початкового стану без зовнішніх змін стає неможливим.</p>
+</section>
+<section id="id9">
+<h3>Формулювання другого закону термодинаміки<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Другий закон термодинаміки має кілька еквівалентних формулювань. Ми розглянемо найвідоміші з них.</p>
+<p><strong>Формулювання Рудольфа Клаузіуса</strong></p>
+<blockquote>
+<div><p><strong>Неможливий процес, єдиним результатом якого було б перенесення теплоти від холодного тіла до гарячого.</strong></p>
+</div></blockquote>
+<p>Це формулювання підкреслює напрямок природного теплообміну. Ми ніколи не побачимо, як гарячий чайник самовільно закипає, черпаючи тепло з навколишнього холодного повітря. Для того, щоб перекачати тепло від холодного до гарячого (як у холодильнику), необхідно виконати роботу ззовні.</p>
+<p><strong>Формулювання Вільяма Томсона (лорда Кельвіна)</strong></p>
+<blockquote>
+<div><p><strong>Неможливий процес, єдиним результатом якого було б повне перетворення всієї теплоти, отриманої від нагрівника, на роботу.</strong></p>
+</div></blockquote>
+<p>Це формулювання стосується теплових машин. Воно означає, що <strong>жодна теплова машина не може мати ККД, рівний 100%</strong>. Завжди частина теплоти <span class="math notranslate nohighlight">\(Q_2\)</span> повинна бути віддана холодильнику.</p>
+<p><strong>Вічний двигун другого роду</strong></p>
+<p>Обидва формулювання Другого закону термодинаміки унеможливлюють створення <strong>вічного двигуна другого роду</strong>.</p>
+<blockquote>
+<div><p><strong>Вічний двигун другого роду</strong> - це гіпотетична машина, яка могла б перетворювати всю теплоту, отриману від одного джерела тепла, на роботу, не віддаючи частину теплоти холодильнику.</p>
+</div></blockquote>
+<p>Така машина не суперечила б першому закону термодинаміки (закону збереження енергії), оскільки вона б не створювала енергію з нічого. Однак вона б суперечила другому закону, оскільки її ККД дорівнював би 100%.</p>
+<p><strong>Висновок:</strong> Створення вічного двигуна другого роду <strong>неможливе</strong>, оскільки це суперечить другому закону термодинаміки.</p>
+</section>
+</section>
+<section id="id10">
+<h2>Ідеальний тепловий двигун та цикл Карно<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Оскільки другий закон термодинаміки встановлює обмеження на ККД, виникає питання: який максимально можливий ККД може мати теплова машина? Відповідь на це питання дав французький інженер Саді Карно, запропонувавши ідеальний циклічний процес, який тепер називається <strong>циклом Карно</strong>.</p>
+<blockquote>
+<div><p><strong>Ідеальний тепловий двигун</strong> - це гіпотетична теплова машина, яка працює за оборотним циклом (циклом Карно) і має максимально можливий ККД.</p>
+</div></blockquote>
+<section id="id11">
+<h3>Цикл Карно<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Цикл Карно складається з чотирьох оборотних процесів, що відбуваються з ідеальним газом. <strong>Цей цикл є ідеалізованою моделлю, яка працює за припущеннями ідеального газу та ідеально оборотних (квазістатичних) процесів без будь-яких втрат (наприклад, тертя або теплопередачі через кінцеву різницю температур).</strong> Це дозволяє нам встановити теоретичні межі ефективності, які є фундаментальними для всіх теплових машин.</p>
+<p>Розглянемо ці процеси на <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі, рухаючись за годинниковою стрілкою (від точки 1 до 2, далі до 3, 4 і назад до 1):</p>
+<ol class="arabic">
+<li><p><strong>Ізотермічне розширення (1 <span class="math notranslate nohighlight">\(\to\)</span> 2):</strong></p>
+<ul>
+<li><p>Робоче тіло (ідеальний газ) перебуває в контакті з <strong>нагрівником</strong> температури <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span>.</p></li>
+<li><p>Газ повільно розширюється від об'єму <span class="math notranslate nohighlight">\(V_1\)</span> до <span class="math notranslate nohighlight">\(V_2\)</span> при сталій абсолютній температурі <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span>.</p></li>
+<li><p>Згідно з першим законом термодинаміки для ізотермічного процесу ідеального газу (де зміна внутрішньої енергії <span class="math notranslate nohighlight">\(\Delta U = 0\)</span>, оскільки температура стала), вся теплота <span class="math notranslate nohighlight">\(Q_1\)</span>, отримана від нагрівника, повністю перетворюється на роботу, яку газ виконує при розширенні.</p></li>
+<li><p>Ми вже знаємо з попереднього матеріалу, що робота, виконана ідеальним газом при ізотермічному розширенні, а отже, і отримана теплота <span class="math notranslate nohighlight">\(Q_1\)</span>, дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[ A_{12} = Q_1 = \nu R T_{\text{н}} \ln\left(\frac{V_2}{V_1}\right) \]</div>
+<p>де <span class="math notranslate nohighlight">\(\nu\)</span> - кількість речовини газу (моль), <span class="math notranslate nohighlight">\(R\)</span> - універсальна газова стала, <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span> - абсолютна температура нагрівника, <span class="math notranslate nohighlight">\(\ln\)</span> - натуральний логарифм. Оскільки <span class="math notranslate nohighlight">\(V_2 &gt; V_1\)</span>, то <span class="math notranslate nohighlight">\(\ln(V_2/V_1) &gt; 0\)</span>, отже <span class="math notranslate nohighlight">\(Q_1 &gt; 0\)</span>. Ця формула відображає площу під ізотермою на <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Адіабатне розширення (2 <span class="math notranslate nohighlight">\(\to\)</span> 3):</strong></p>
+<ul>
+<li><p>Нагрівник від'єднується, система ідеально теплоізолюється, тобто теплообмін відсутній (<span class="math notranslate nohighlight">\(Q=0\)</span>).</p></li>
+<li><p>Газ продовжує розширюватися від об'єму <span class="math notranslate nohighlight">\(V_2\)</span> до <span class="math notranslate nohighlight">\(V_3\)</span>, виконуючи роботу за рахунок зменшення своєї внутрішньої енергії.</p></li>
+<li><p>Як ми вже вивчали, при адіабатному розширенні температура газу знижується. На цьому етапі температура падає від <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span> до <span class="math notranslate nohighlight">\(T_{\text{х}}\)</span>.</p></li>
+<li><p>Для адіабатного процесу ідеального газу справедливе рівняння Пуассона (виведення якого виходить за межі шкільного курсу): <span class="math notranslate nohighlight">\(T V^{\gamma-1} = \text{const}\)</span>. Тому для цього етапу:</p>
+<div class="math notranslate nohighlight">
+\[ T_{\text{н}} V_2^{\gamma-1} = T_{\text{х}} V_3^{\gamma-1} \]</div>
+<p>де <span class="math notranslate nohighlight">\(\gamma = C_p/C_V\)</span> - показник адіабати.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Ізотермічне стиснення (3 <span class="math notranslate nohighlight">\(\to\)</span> 4):</strong></p>
+<ul>
+<li><p>Газ контактує з <strong>холодильником</strong> температури <span class="math notranslate nohighlight">\(T_{\text{х}}\)</span>.</p></li>
+<li><p>Газ повільно стискається від об'єму <span class="math notranslate nohighlight">\(V_3\)</span> до <span class="math notranslate nohighlight">\(V_4\)</span> при сталій абсолютній температурі <span class="math notranslate nohighlight">\(T_{\text{х}}\)</span>.</p></li>
+<li><p>Над газом виконується робота зовнішніми силами (газ виконує від'ємну роботу). Згідно з першим законом термодинаміки для ізотермічного процесу (<span class="math notranslate nohighlight">\(\Delta U = 0\)</span>), вся ця робота перетворюється на теплоту <span class="math notranslate nohighlight">\(Q_2\)</span>, яка віддається холодильнику.</p></li>
+<li><p>Кількість теплоти <span class="math notranslate nohighlight">\(Q_2\)</span>, відданої холодильнику (за модулем), дорівнює роботі стиснення, взятої зі знаком &quot;мінус&quot;:</p>
+<div class="math notranslate nohighlight">
+\[ |A_{34}| = Q_2 = - A_{34} = - \nu R T_{\text{х}} \ln\left(\frac{V_4}{V_3}\right) \]</div>
+<div class="math notranslate nohighlight">
+\[ |A_{34}| = Q_2 = \nu R T_{\text{х}} \ln\left(\frac{V_4}{V_3}\right)^{-1} \]</div>
+<div class="math notranslate nohighlight">
+\[ |A_{34}| = Q_2 = \nu R T_{\text{х}} \ln\left(\frac{V_3}{V_4}\right) \]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(V_4 &lt; V_3\)</span>, то <span class="math notranslate nohighlight">\(\ln(V_3/V_4) &gt; 0\)</span>, тому <span class="math notranslate nohighlight">\(Q_2\)</span> тут є додатною величиною, що відповідає кількості відданої теплоти.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Адіабатне стиснення (4 <span class="math notranslate nohighlight">\(\to\)</span> 1):</strong></p>
+<ul>
+<li><p>Холодильник від'єднується, система ідеально теплоізолюється (<span class="math notranslate nohighlight">\(Q = 0\)</span>).</p></li>
+<li><p>Газ продовжує стискатися від об'єму <span class="math notranslate nohighlight">\(V_4\)</span> до <span class="math notranslate nohighlight">\(V_1\)</span>, і зовнішні сили виконують над ним роботу.</p></li>
+<li><p>Як ми вже вивчали, при адіабатному стисненні температура газу зростає. На цьому етапі температура зростає від <span class="math notranslate nohighlight">\(T_{\text{х}}\)</span> до <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span>, повертаючи робоче тіло у початковий стан 1.</p></li>
+<li><p>За рівнянням Пуассона для цього етапу:</p>
+<div class="math notranslate nohighlight">
+\[ T_{\text{х}} V_4^{\gamma-1} = T_{\text{н}} V_1^{\gamma-1} \]</div>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id12">
+<h3>Максимально можливий ККД (ККД ідеального двигуна)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Саді Карно довів, що ККД теплової машини, що працює за оборотним циклом Карно, залежить лише від абсолютних температур нагрівника та холодильника.</p>
+<blockquote>
+<div><p><strong>Максимально можливий ККД (ККД ідеального двигуна) <span class="math notranslate nohighlight">\(\eta_{\max}\)</span></strong> - це ККД теплової машини, що працює за оборотним циклом Карно, який залежить лише від абсолютних температур нагрівника <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span> та холодильника <span class="math notranslate nohighlight">\(T_{\text{х}}\)</span>. Цей ККД є теоретичним максимумом, недосяжним для реальних машин.</p>
+</div></blockquote>
+<p><strong>Детальне виведення формули максимального ККД:</strong></p>
+<p>Ми вже знаємо, що загальний ККД будь-якого теплового двигуна визначається як відношення корисної роботи до отриманої теплоти, або через відношення теплот:</p>
+<div class="math notranslate nohighlight">
+\[ \eta = 1 - \frac{Q_2}{Q_1} \]</div>
+<p>Для того щоб знайти максимальний ККД <span class="math notranslate nohighlight">\(\eta_{\max}\)</span> для циклу Карно, нам потрібно визначити відношення теплоти, відданої холодильнику (<span class="math notranslate nohighlight">\(Q_2\)</span>), до теплоти, отриманої від нагрівника (<span class="math notranslate nohighlight">\(Q_1\)</span>), використовуючи властивості ізотермічних та адіабатних процесів.</p>
+<ul>
+<li><p><strong>Крок 1: Записуємо вирази для <span class="math notranslate nohighlight">\(Q_1\)</span> та <span class="math notranslate nohighlight">\(Q_2\)</span>.</strong></p>
+<p>З етапу 1 (ізотермічне розширення, 1 <span class="math notranslate nohighlight">\(\to\)</span> 2), теплота, отримана від нагрівника:</p>
+<div class="math notranslate nohighlight">
+\[ Q_1 = \nu R T_{\text{н}} \ln\left(\frac{V_2}{V_1}\right) \quad (Рівняння \ 1) \]</div>
+<p>З етапу 3 (ізотермічне стиснення, 3 <span class="math notranslate nohighlight">\(\to\)</span> 4), теплота, віддана холодильнику (беремо за модулем):</p>
+<div class="math notranslate nohighlight">
+\[ Q_2 = \nu R T_{\text{х}} \ln\left(\frac{V_3}{V_4}\right) \quad (Рівняння \ 2) \]</div>
+</li>
+<li><p><strong>Крок 2: Формуємо відношення <span class="math notranslate nohighlight">\(\frac{Q_2}{Q_1}\)</span>.</strong></p>
+<p>Ділимо Рівняння 2 на Рівняння 1:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{Q_2}{Q_1} = \frac{\nu R T_{\text{х}} \ln\left(\frac{V_3}{V_4}\right)}{\nu R T_{\text{н}} \ln\left(\frac{V_2}{V_1}\right)} \]</div>
+<p>Скорочуємо спільні множники <span class="math notranslate nohighlight">\(\nu R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{Q_2}{Q_1} = \frac{T_{\text{х}}}{T_{\text{н}}} \cdot \frac{\ln\left(\frac{V_3}{V_4}\right)}{\ln\left(\frac{V_2}{V_1}\right)} \quad (Рівняння \ 3) \]</div>
+<p>Для подальшого спрощення нам потрібно знайти зв'язок між відношеннями об'ємів.</p>
+</li>
+<li><p><strong>Крок 3: Використовуємо рівняння адіабатних процесів.</strong></p>
+<p>Для адіабатного розширення (етап 2 <span class="math notranslate nohighlight">\(\to\)</span> 3):</p>
+<div class="math notranslate nohighlight">
+\[ T_{\text{н}} V_2^{\gamma-1} = T_{\text{х}} V_3^{\gamma-1} \]</div>
+<p>Виразимо відношення температур:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{T_{\text{н}}}{T_{\text{х}}} = \left(\frac{V_3}{V_2}\right)^{\gamma-1} \quad (Рівняння \ 4) \]</div>
+<p>Для адіабатного стиснення (етап 4 <span class="math notranslate nohighlight">\(\to\)</span> 1):</p>
+<div class="math notranslate nohighlight">
+\[ T_{\text{х}} V_4^{\gamma-1} = T_{\text{н}} V_1^{\gamma-1} \]</div>
+<p>Аналогічно виразимо відношення температур:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{T_{\text{н}}}{T_{\text{х}}} = \left(\frac{V_4}{V_1}\right)^{\gamma-1} \quad (Рівняння \ 5) \]</div>
+</li>
+<li><p><strong>Крок 4: Порівнюємо відношення об'ємів.</strong></p>
+<p>Оскільки ліві частини Рівнянь 4 і 5 однакові, то і їхні праві частини рівні:</p>
+<div class="math notranslate nohighlight">
+\[ \left(\frac{V_3}{V_2}\right)^{\gamma-1} = \left(\frac{V_4}{V_1}\right)^{\gamma-1} \]</div>
+<p>Оскільки показники степенів рівні, то рівні й основи:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_3}{V_2} = \frac{V_4}{V_1} \]</div>
+<p>Перегрупуємо члени, щоб отримати потрібні нам відношення об'ємів:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{V_3}{V_4} = \frac{V_2}{V_1} \]</div>
+<p>Це ключовий результат: відношення об'ємів під час ізотермічного розширення дорівнює відношенню об'ємів під час ізотермічного стиснення.</p>
+</li>
+<li><p><strong>Крок 5: Підставляємо результат у вираз для відношення теплот.</strong></p>
+<p>Оскільки <span class="math notranslate nohighlight">\(\frac{V_3}{V_4} = \frac{V_2}{V_1}\)</span>, то їхні натуральні логарифми також рівні: <span class="math notranslate nohighlight">\(\ln\left(\frac{V_3}{V_4}\right) = \ln\left(\frac{V_2}{V_1}\right)\)</span>.</p>
+<p>Підставимо це в Рівняння 3:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{Q_2}{Q_1} = \frac{T_{\text{х}}}{T_{\text{н}}} \cdot \frac{\ln\left(\frac{V_2}{V_1}\right)}{\ln\left(\frac{V_2}{V_1}\right)} \]</div>
+<p>Скорочуємо логарифмічні члени:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{Q_2}{Q_1} = \frac{T_{\text{х}}}{T_{\text{н}}} \]</div>
+<p>Це співвідношення є фундаментальним для оборотного циклу Карно.</p>
+</li>
+<li><p><strong>Крок 6: Обчислюємо максимальний ККД.</strong></p>
+<p>Нарешті, підставимо отримане відношення теплот у вихідну формулу для ККД:</p>
+<div class="math notranslate nohighlight">
+\[ \eta_{\max} = 1 - \frac{T_{\text{х}}}{T_{\text{н}}} \]</div>
+<p>Цю формулу також зручно записати як:</p>
+<div class="math notranslate nohighlight">
+\[ \eta_{\max} = \frac{T_{\text{н}} - T_{\text{х}}}{T_{\text{н}}} \]</div>
+<p>Якщо потрібно виразити у відсотках:</p>
+<div class="math notranslate nohighlight">
+\[ \eta_{\max} = \frac{T_{\text{н}} - T_{\text{х}}}{T_{\text{н}}} \cdot 100\% \]</div>
+<p>де</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\eta_{\max}\)</span> - максимально можливий ККД теплового двигуна (ККД ідеального двигуна).</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{\text{н}}\)</span> - абсолютна температура нагрівника, виміряна в <strong>Кельвінах (К)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{\text{х}}\)</span> - абсолютна температура холодильника, виміряна в <strong>Кельвінах (К)</strong>.</p></li>
+</ul>
+<p><strong>Важливі висновки з формули Карно:</strong></p>
+<ul class="simple">
+<li><p>Для того, щоб <span class="math notranslate nohighlight">\(\eta_{\max}\)</span> був високим, необхідно, щоб різниця температур <span class="math notranslate nohighlight">\(T_{\text{н}} - T_{\text{х}}\)</span> була якомога більшою, а температура холодильника <span class="math notranslate nohighlight">\(T_{\text{х}}\)</span> була якомога нижчою.</p></li>
+<li><p>ККД дорівнював би 1 (або 100%) лише тоді, коли <span class="math notranslate nohighlight">\(T_{\text{х}} = 0 \text{ К}\)</span> (абсолютний нуль), що є недосяжним. Тому <span class="math notranslate nohighlight">\(\eta_{\max}\)</span> завжди менший за 1.</p></li>
+<li><p>ККД будь-якої реальної теплової машини завжди менший за ККД ідеальної машини, що працює між тими ж температурами. Це є наслідком необоротних процесів (тертя, неповне згоряння палива, швидкий теплообмін тощо).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id13">
+<h3>Формулювання Саді Карно (Теореми Карно)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Виходячи з аналізу ідеального циклу, Саді Карно сформулював дві важливі теореми:</p>
+<ol class="arabic simple">
+<li><p><strong>ККД будь-якої теплової машини, що працює між даними температурами нагрівника і холодильника, не може перевищувати ККД ідеальної теплової машини, що працює за циклом Карно між тими ж температурами.</strong></p></li>
+<li><p><strong>ККД всіх ідеальних теплових машин, що працюють за оборотним циклом між одними й тими ж температурами нагрівника і холодильника, є однаковим і не залежить від природи робочого тіла.</strong></p></li>
+</ol>
+<p>Ці теореми є ще одним формулюванням другого закону термодинаміки і встановлюють фундаментальні обмеження на ефективність перетворення тепла в роботу.</p>
+<p><strong>Приклад:</strong> Ідеальний тепловий двигун працює між нагрівником з температурою 500 К і холодильником з температурою 300 К. Який його максимальний ККД?</p>
+<p>Дано: <span class="math notranslate nohighlight">\(T_{\text{н}} = 500 \text{ К}\)</span>, <span class="math notranslate nohighlight">\(T_{\text{х}} = 300 \text{ К}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \eta_{\max} = \frac{T_{\text{н}} - T_{\text{х}}}{T_{\text{н}}} = \frac{500 \text{ К} - 300 \text{ К}}{500 \text{ К}} = \frac{200 \text{ К}}{500 \text{ К}} = 0.4 \]</div>
+<p>У відсотках:</p>
+<div class="math notranslate nohighlight">
+\[ \eta_{\max} = 0.4 \cdot 100\% = 40\% \]</div>
+<p>Це означає, що навіть в ідеальних умовах, лише 40% теплоти, отриманої від нагрівника, може бути перетворено на корисну роботу. Решта 60% обов'язково відводиться в холодильник.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id14">
+<h2>Практичне застосування теплових двигунів<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<p>На принципах, які ми щойно розглянули, працюють усі сучасні теплові двигуни. Хоча їхні цикли є набагато складнішими і необоротними, ніж ідеальний цикл Карно, вони все одно прагнуть максимально наблизитися до його ефективності.</p>
+<section id="id15">
+<h3>Двигун внутрішнього згоряння<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Двигун внутрішнього згоряння (ДВЗ)</strong> - це тепловий двигун, в якому паливо згорає безпосередньо всередині робочої камери (циліндра), і продукти згоряння є робочим тілом.</p>
+</div></blockquote>
+<p>ДВЗ широко використовуються в автомобілях, мотоциклах, літаках, генераторах тощо.
+Основні етапи роботи ДВЗ можна описати як цикл, що складається з кількох &quot;тактів&quot;.</p>
+</section>
+<section id="id16">
+<h3>Дизельний двигун<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>Ми розглянемо <strong>дизельний двигун</strong> як приклад двигуна внутрішнього згоряння, який є чотиритактним.</p>
+</section>
+<section id="id17">
+<h3>Такти дизельного двигуна<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Такт всмоктування (або впуск):</strong></p>
+<ul class="simple">
+<li><p><strong>Опис:</strong> Поршень рухається вниз, об'єм циліндра збільшується. Через відкритий впускний клапан в циліндр надходить чисте повітря.</p></li>
+<li><p><strong>Принцип:</strong> Тиск у циліндрі стає нижчим за атмосферний, тому повітря ззовні і заходить всередину циліндра.</p></li>
+<li><p><strong>Завдання:</strong> Заповнити циліндр повітрям.</p></li>
+</ul>
+</li>
+<li><p><strong>Такт стиснення:</strong></p>
+<ul class="simple">
+<li><p><strong>Опис:</strong> Впускний і випускний клапани закриваються. Поршень рухається вгору, стискаючи повітря.</p></li>
+<li><p><strong>Принцип:</strong> Це адіабатне стиснення. Об'єм повітря сильно зменшується (у 15-25 разів), що призводить до значного підвищення його тиску та температури (до 700-900 °C). Ми вже знаємо, що при адіабатному стисненні вся робота, виконана над газом, йде на збільшення його внутрішньої енергії, що призводить до значного підвищення температури.</p></li>
+<li><p><strong>Завдання:</strong> Нагріти повітря до температури самозаймання дизельного палива.</p></li>
+</ul>
+</li>
+<li><p><strong>Такт робочого ходу (або розширення):</strong></p>
+<ul class="simple">
+<li><p><strong>Опис:</strong> У момент, коли поршень досягає верхньої &quot;мертвої&quot; точки, в циліндр під високим тиском впорскується дизельне паливо. Воно самозаймається від гарячого повітря. Продукти згоряння (гарячі гази) тиснуть на поршень, штовхаючи його вниз.</p></li>
+<li><p><strong>Принцип:</strong> Швидке згоряння палива призводить до різкого зростання тиску і температури, що штовхає поршень. Гази розширюються, виконуючи роботу над поршнем (це і є корисна робота двигуна).</p></li>
+<li><p><strong>Завдання:</strong> Виконати корисну роботу.</p></li>
+</ul>
+</li>
+<li><p><strong>Такт випускання (або випуск):</strong></p>
+<ul class="simple">
+<li><p><strong>Опис:</strong> Поршень знову рухається вгору. Відкривається випускний клапан, і відпрацьовані гази виштовхуються з циліндра в атмосферу.</p></li>
+<li><p><strong>Принцип:</strong> Поршень очищає циліндр від продуктів згоряння.</p></li>
+<li><p><strong>Завдання:</strong> Видалити відпрацьовані гази, підготувавши циліндр до нового циклу.</p></li>
+</ul>
+</li>
+</ol>
+<p>Після четвертого такту процес повторюється. Кожен такт відповідає половині оберту колінчастого валу.</p>
+<p><strong>Чому дизельні двигуни ефективніші за бензинові?</strong>
+ККД дизельних двигунів зазвичай вищий (до 40-50%) порівняно з бензиновими (до 30-35%). Це пояснюється кількома факторами:</p>
+<ul class="simple">
+<li><p><strong>Вищий ступінь стиснення:</strong> Повітря стискається до значно більшого тиску і температури, що призводить до більшої різниці температур між нагрівником і холодильником (вищий <span class="math notranslate nohighlight">\(T_{\text{н}}\)</span>). Згідно з формулою Карно, це збільшує ККД.</p></li>
+<li><p><strong>Різний принцип подачі палива:</strong> У дизелі паливо впорскується наприкінці такту стиснення і згорає поступово, тоді як у бензиновому двигуні паливно-повітряна суміш запалюється іскрою на початку робочого ходу.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id18">
+<h2>Холодильні установки та теплові насоси: Переміщення тепла<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<p>Ми вже знаємо, що тепло самовільно переходить від гарячого до холодного. Але що, якщо нам потрібно зробити навпаки – охолодити щось, тобто забрати тепло від холодного тіла і передати його гарячому? Для цього існують холодильні установки, які є, по суті, <strong>тепловими машинами, що працюють у зворотному напрямку</strong>.</p>
+<blockquote>
+<div><p><strong>Холодильний пристрій (холодильна машина)</strong> - це пристрій, який переносить тепло від холодного тіла (холодильної камери) до гарячого тіла (навколишнього середовища) за рахунок виконання роботи зовнішніми силами.</p>
+</div></blockquote>
+<p>Основні елементи холодильної машини такі ж, як і в тепловому двигуні, але їхні ролі та напрямок процесів змінені:</p>
+<ol class="arabic simple">
+<li><p><strong>Нагрівник (навколишнє середовище):</strong> Це тепер тіло з вищою температурою (<span class="math notranslate nohighlight">\(T_{\text{н}}\)</span>), куди відводиться тепло.</p></li>
+<li><p><strong>Холодильник (холодильна камера):</strong> Це тіло з нижчою температурою (<span class="math notranslate nohighlight">\(T_{\text{х}}\)</span>), з якого забирається тепло.</p></li>
+<li><p><strong>Робоче тіло (холодоагент):</strong> Це рідина або газ, яка циркулює в системі.</p></li>
+</ol>
+<section id="id19">
+<h3>Механізм роботи:<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Холодоагент</strong> (наприклад, фреон) спочатку знаходиться у випарнику всередині холодильної камери. Тут він забирає тепло <span class="math notranslate nohighlight">\(Q_2\)</span> від продуктів, випаровується і перетворюється на газ. Температура в камері знижується.</p></li>
+<li><p>Цей газ надходить у <strong>компресор</strong>. Компресор виконує роботу <span class="math notranslate nohighlight">\(A'\)</span> над газом, стискаючи його. При цьому температура і тиск газу значно зростають.</p></li>
+<li><p>Гарячий, стиснутий газ надходить у <strong>конденсатор</strong> (радіатор на задній стінці холодильника). Тут він віддає тепло <span class="math notranslate nohighlight">\(Q_1\)</span> у навколишнє середовище (кухню) і конденсується, перетворюючись на рідину. Температура навколишнього середовища трохи підвищується.</p></li>
+<li><p>Рідкий холодоагент проходить через дросельний клапан, де його тиск різко падає, і він знову надходить у випарник, замикаючи цикл.</p></li>
+</ul>
+<p>На <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі цикл холодильної машини обходиться <strong>проти годинникової стрілки</strong>, що вказує на виконання роботи над системою.</p>
+</section>
+<section id="id20">
+<h3>Робота зовнішніх сил у холодильній машині<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p>Застосуємо Перший закон термодинаміки до циклу холодильної машини. Знову ж таки, <span class="math notranslate nohighlight">\(\Delta U_{\text{цикл}} = 0\)</span>.
+Отже, <span class="math notranslate nohighlight">\(Q_{\text{цикл}} = A_{\text{цикл}}\)</span>.
+У холодильній машині, робота <span class="math notranslate nohighlight">\(A_{\text{цикл}}\)</span> (яку виконує робоче тіло) є від'ємною, оскільки обхід циклу відбувається проти годинникової стрілки, і роботу над системою виконує компресор. Ми позначаємо роботу, виконану <em>зовнішніми силами</em> (компресором) як <span class="math notranslate nohighlight">\(A'\)</span>.</p>
+<p>З холодильної камери (холодильника) забирається тепло <span class="math notranslate nohighlight">\(Q_2\)</span>. У навколишнє середовище (нагрівник) віддається тепло <span class="math notranslate nohighlight">\(Q_1\)</span>.
+За Першим законом термодинаміки, енергія, яка забирається від холодного тіла (<span class="math notranslate nohighlight">\(Q_2\)</span>), плюс робота, виконана над холодоагентом (<span class="math notranslate nohighlight">\(A'\)</span>), дорівнює енергії, яка віддається гарячому тілу (<span class="math notranslate nohighlight">\(Q_1\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ Q_1 = Q_2 + A' \]</div>
+<p>Звідси, робота зовнішніх сил:</p>
+<div class="math notranslate nohighlight">
+\[ A' = Q_1 - Q_2 \]</div>
+<p>де</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A'\)</span> - робота, виконана над холодильною машиною зовнішніми силами (компресором). Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q_1\)</span> - кількість теплоти, віддана нагрівнику (навколишньому середовищу). Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q_2\)</span> - кількість теплоти, забрана від холодильника (холодильної камери). Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+</ul>
+<p><strong>Фізичний зміст:</strong> Робота <span class="math notranslate nohighlight">\(A'\)</span>, виконана компресором, &quot;перекачує&quot; теплоту <span class="math notranslate nohighlight">\(Q_2\)</span> від холодного об'єкта і &quot;викидає&quot; її разом з енергією роботи у гаряче середовище. Тому <span class="math notranslate nohighlight">\(Q_1\)</span> (теплота, віддана зовнішньому середовищу) завжди більша за <span class="math notranslate nohighlight">\(Q_2\)</span> (теплота, відібрана від охолоджуваного об'єкта) на величину виконаної роботи <span class="math notranslate nohighlight">\(A'\)</span>.</p>
+</section>
+<section id="id21">
+<h3>Холодильний коефіцієнт<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<p>Ефективність холодильної машини характеризується <strong>холодильним коефіцієнтом</strong> (або коефіцієнтом перетворення, COP).</p>
+<blockquote>
+<div><p><strong>Холодильний коефіцієнт <span class="math notranslate nohighlight">\(k\)</span></strong> - це відношення кількості теплоти, забраної від холодильника, до роботи, витраченої на це зовнішніми силами.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[ k = \frac{Q_2}{A'} \]</div>
+<p>Одиниця холодильного коефіцієнта в СІ: <span class="math notranslate nohighlight">\(k\)</span> є безрозмірною величиною.</p>
+<p>Підставивши вираз для роботи <span class="math notranslate nohighlight">\(A' = Q_1 - Q_2\)</span>, отримуємо формулу холодильного коефіцієнта через теплоту:</p>
+<div class="math notranslate nohighlight">
+\[ k = \frac{Q_2}{Q_1 - Q_2} \]</div>
+<p><strong>Важлива відмінність від ККД:</strong> Холодильний коефіцієнт може бути (і зазвичай є) <strong>більшим за 1</strong>. Це означає, що за одну одиницю витраченої електричної енергії (роботи) ми можемо перемістити кілька одиниць теплової енергії. Наприклад, якщо <span class="math notranslate nohighlight">\(k=3\)</span>, то 1 Дж роботи компресора дозволяє перемістити 3 Дж теплоти з холодильної камери назовні.</p>
+</section>
+<section id="id22">
+<h3>Максимальний холодильний коефіцієнт<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<p>Для ідеальної холодильної машини, що працює за оборотним циклом Карно, холодильний коефіцієнт також залежить лише від абсолютних температур:</p>
+<p><strong>Виведення максимального холодильного коефіцієнта:</strong>
+Ми вже вивели для оборотного циклу Карно, що:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{Q_2}{Q_1} = \frac{T_{\text{х}}}{T_{\text{н}}} \]</div>
+<p>Звідси ми можемо виразити <span class="math notranslate nohighlight">\(Q_1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q_1 = Q_2 \frac{T_{\text{н}}}{T_{\text{х}}} \]</div>
+<p>Підставимо цей вираз для <span class="math notranslate nohighlight">\(Q_1\)</span> у формулу холодильного коефіцієнта <span class="math notranslate nohighlight">\(k = \frac{Q_2}{Q_1 - Q_2}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ k_{\max} = \frac{Q_2}{Q_2 \frac{T_{\text{н}}}{T_{\text{х}}} - Q_2} \]</div>
+<p>Винесемо <span class="math notranslate nohighlight">\(Q_2\)</span> у знаменнику за дужки та скоротимо його:</p>
+<div class="math notranslate nohighlight">
+\[ k_{\max} = \frac{Q_2}{Q_2 \left( \frac{T_{\text{н}}}{T_{\text{х}}} - 1 \right)} = \frac{1}{\frac{T_{\text{н}}}{T_{\text{х}}} - 1} \]</div>
+<p>Приведемо до спільного знаменника у знаменнику дробу:</p>
+<div class="math notranslate nohighlight">
+\[ k_{\max} = \frac{1}{\frac{T_{\text{н}} - T_{\text{х}}}{T_{\text{х}}}} \]</div>
+<p>І перевернемо дріб:</p>
+<div class="math notranslate nohighlight">
+\[ k_{\max} = \frac{T_{\text{х}}}{T_{\text{н}} - T_{\text{х}}} \]</div>
+<p>де</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_{\text{х}}\)</span> - абсолютна температура холодильника (звідки забираємо тепло). Одиниця в СІ: <strong>Кельвін (К)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{\text{н}}\)</span> - абсолютна температура нагрівника (куди віддаємо тепло). Одиниця в СІ: <strong>Кельвін (К)</strong>.</p></li>
+</ul>
+<p>Зверніть увагу, що <span class="math notranslate nohighlight">\(k_{\max}\)</span> може бути дуже великим, якщо різниця температур <span class="math notranslate nohighlight">\(T_{\text{н}} - T_{\text{х}}\)</span> мала.</p>
+<p><strong>Приклад:</strong> Ідеальний холодильник підтримує температуру в камері 273 К (0 °C), а температура навколишнього середовища 300 К (27 °C). Який його максимальний холодильний коефіцієнт?</p>
+<p>Дано: <span class="math notranslate nohighlight">\(T_{\text{х}} = 273 \text{ К}\)</span>, <span class="math notranslate nohighlight">\(T_{\text{н}} = 300 \text{ К}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ k_{\max} = \frac{273 \text{ К}}{300 \text{ К} - 273 \text{ К}} = \frac{273 \text{ К}}{27 \text{ К}} \approx 10.1 \]</div>
+<p>Це означає, що на кожен Джоуль витраченої електричної енергії, холодильник може перемістити близько 10.1 Дж теплоти зсередини назовні.</p>
+</section>
+<section id="id23">
+<h3>Кондиціонер<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Кондиціонер</strong> - це холодильна машина, яка охолоджує повітря в приміщенні, переносячи тепло зсередини назовні.</p>
+</div></blockquote>
+<p>По суті, це той самий холодильник, тільки холодильна камера - це наша кімната, а нагрівник - зовнішнє повітря.</p>
+</section>
+<section id="id24">
+<h3>Тепловий насос<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Тепловий насос</strong> - це холодильна машина, яка використовується для опалення приміщень, переносячи тепло від холодного зовнішнього джерела (наприклад, ґрунту, води або зовнішнього повітря) до гарячого внутрішнього середовища приміщення.</p>
+</div></blockquote>
+<p>Тепловий насос працює за тим же принципом, що й холодильник, але корисним ефектом є не охолодження &quot;холодного&quot; джерела, а нагрівання &quot;гарячого&quot; приймача (приміщення).
+Його ефективність оцінюється <strong>коефіцієнтом перетворення тепла (heating COP)</strong>, який дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[ \text{COP}_{\text{опалення}} = \frac{Q_1}{A'} = \frac{Q_2 + A'}{A'} = k + 1 \]</div>
+<p>де <span class="math notranslate nohighlight">\(Q_1\)</span> - теплота, що віддається в приміщення, а <span class="math notranslate nohighlight">\(A'\)</span> - витрачена робота.
+Максимальний коефіцієнт перетворення тепла для теплового насоса:</p>
+<div class="math notranslate nohighlight">
+\[ \text{COP}_{\text{опалення, max}} = \frac{T_{\text{н}}}{T_{\text{н}} - T_{\text{х}}} \]</div>
+<p>Зверніть увагу, що тепловий насос може бути набагато ефективнішим за звичайний електричний нагрівач, який просто перетворює електричну енергію на теплоту (з <span class="math notranslate nohighlight">\(COP=1\)</span>). Тепловий насос не <em>виробляє</em> теплоту, а <em>перекачує</em> її, тому його COP може бути 3, 4 і навіть більше, що робить його дуже енергоефективним рішенням для опалення.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id25">
+<h2>Ентропія: Міра безладу та напрямок процесів<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<p>Ми говорили про необоротні процеси та другий закон термодинаміки, але нам потрібна кількісна міра для опису цих явищ. Такою мірою є <strong>ентропія</strong>.</p>
+<blockquote>
+<div><p><strong>Ентропія <span class="math notranslate nohighlight">\(S\)</span></strong> - це термодинамічна функція стану, яка є мірою невпорядкованості, безладу або хаотичності системи. Вона також є мірою кількості мікростанів, що відповідають певному макростану системи. Ентропія також може розглядатися як міра &quot;розсіювання&quot; енергії або її &quot;недоступності&quot; для виконання корисної роботи.</p>
+</div></blockquote>
+<p>Одиниця ентропії в СІ: <span class="math notranslate nohighlight">\([S] = 1 \frac{\text{Дж}}{\text{К}}\)</span>.</p>
+<p>З погляду статистичної механіки, ентропія <span class="math notranslate nohighlight">\(S\)</span> має ще більш глибокий сенс і пов'язана з кількістю мікростанів <span class="math notranslate nohighlight">\(W\)</span>, що відповідають даному макроскопічному стану системи, за знаменитою формулою Людвіга Больцмана:</p>
+<div class="math notranslate nohighlight">
+\[ S = k \ln W \]</div>
+<p>де <span class="math notranslate nohighlight">\(k\)</span> - стала Больцмана (<span class="math notranslate nohighlight">\(k \approx 1.38 \cdot 10^{-23} \frac{\text{Дж}}{\text{К}}\)</span>), а <span class="math notranslate nohighlight">\(\ln W\)</span> - натуральний логарифм кількості мікростанів. Ця формула є одним із наріжних каменів теоретичної фізики, що поєднує мікроскопічний (кількість способів розташування та руху молекул) та макроскопічний (ентропія) опис системи. Вона прямо показує, що чим більше різних мікроскопічних конфігурацій може мати система (тобто чим більший &quot;безлад&quot;), тим вища її ентропія.</p>
+<p><strong>Ентропія як &quot;інформаційний зміст&quot; системи:</strong></p>
+<p>Уявіть, що ми маємо систему. Якщо її стан дуже впорядкований (наприклад, ідеальний кристал при низькій температурі), існує мало способів розташування атомів, і ми можемо легко описати її стан. Такий стан має низьку ентропію. Якщо ж система перебуває у стані безладу (наприклад, газ при високій температурі), існує величезна кількість способів розташування та руху молекул, і описати її стан стає набагато складніше. Такий стан має високу ентропію. Ентропія, таким чином, може розглядатися як міра &quot;невизначеності&quot; або &quot;інформації&quot;, необхідної для повного опису мікроскопічного стану системи.</p>
+<p><strong>Ентропія як міра &quot;якості&quot; енергії.</strong></p>
+<p>У термодинаміці ентропія також слугує мірою &quot;якості&quot; або &quot;доступності&quot; енергії для виконання корисної роботи. Енергія з низькою ентропією (наприклад, механічна енергія або тепло при дуже високій температурі) є &quot;якісною&quot; і може бути легко перетворена на роботу. Натомість, теплова енергія, рівномірно розподілена в просторі при низькій температурі, має високу ентропію і є &quot;низькоякісною&quot; - її важко або неможливо перетворити на корисну роботу. Другий закон термодинаміки, по суті, говорить про те, що якість енергії постійно знижується в ізольованих системах, перетворюючись на менш доступні форми. Це є фундаментальним обмеженням на те, скільки корисної роботи ми можемо отримати з будь-якого джерела енергії.</p>
+<section id="id26">
+<h3>Зміна ентропії<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<p>Зміна ентропії <span class="math notranslate nohighlight">\(\Delta S\)</span> для <strong>оборотного процесу</strong> визначається як відношення кількості теплоти <span class="math notranslate nohighlight">\(Q_{\text{обр}}\)</span>, переданої системі, до її абсолютної температури <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta S = \frac{Q_{\text{обр}}}{T} \]</div>
+<p>де <span class="math notranslate nohighlight">\(Q_{\text{обр}}\)</span> - теплота, передана системі (для оборотного процесу), <span class="math notranslate nohighlight">\(T\)</span> - абсолютна температура, при якій відбувається теплообмін.</p>
+<p>Зміна ентропії є ключовим показником для розрізнення оборотних та необоротних процесів. Для <strong>ідеального оборотного процесу</strong> повна ентропія ізольованої системи (система + навколишнє середовище) залишається незмінною. Однак, у <strong>реальних необоротних процесах</strong>, які ми спостерігаємо в повсякденному житті, завжди відбувається <strong>генерація ентропії</strong>. Це означає, що повна ентропія ізольованої системи <em>завжди зростає</em>. Цей факт є кількісним виразом нерівності Клаузіуса, про яку ми згадували раніше: <span class="math notranslate nohighlight">\(\Delta S &gt; Q/T\)</span>.</p>
+<p><strong>Важливо:</strong> Ця формула стосується лише <strong>оборотних процесів</strong>. Для <strong>необоротних (реальних) процесів</strong> зміна ентропії завжди більша, ніж <span class="math notranslate nohighlight">\(Q/T\)</span>. Це так звана <strong>нерівність Клаузіуса</strong>:
+$<span class="math notranslate nohighlight">\( \Delta S &gt; \frac{Q}{T} \)</span>$
+Ця нерівність є кількісним виразом того факту, що в необоротних процесах завжди відбувається &quot;генерація&quot; ентропії всередині системи.</p>
+</section>
+<section id="id27">
+<h3>Закон зростання ентропії<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<p>Найбільш загальне формулювання Другого закону термодинаміки виражається через ентропію:</p>
+<blockquote>
+<div><p><strong>В ізольованій системі ентропія ніколи не зменшується. У реальних (необоротних) процесах ентропія ізольованої системи завжди зростає, досягаючи максимального значення в стані термодинамічної рівноваги.</strong></p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[ \Delta S_{\text{ізольована система}} \ge 0 \]</div>
+<ul class="simple">
+<li><p>Знак рівності (<span class="math notranslate nohighlight">\(\Delta S = 0\)</span>) відповідає оборотним процесам.</p></li>
+<li><p>Знак строгої нерівності (<span class="math notranslate nohighlight">\(\Delta S &gt; 0\)</span>) відповідає необоротним процесам.</p></li>
+</ul>
+<p><strong>Мікроскопічний зміст закону зростання ентропії:</strong></p>
+<p>Припустимо, ми маємо склянку з гарячою водою і склянку з холодною. Якщо ми їх змішаємо, тепло перейде від гарячої води до холодної, і ми отримаємо воду з однаковою проміжною температурою. Цей процес необоротний. Чому? Тому що в кінцевому стані молекули мають більше &quot;способів&quot; розподілитися і рухатися, ніж у початковому, розділеному стані. Збільшення ентропії означає, що система прагне перейти до найбільш ймовірного, найбільш безладного стану.</p>
+<p><strong>Аналогія з розкиданими речами:</strong></p>
+<p>Уявіть свою кімнату. Якщо ви не докладаєте зусиль, речі (книги, одяг, іграшки) мають тенденцію розкидатися, створюючи безлад. Щоб підтримувати порядок, потрібна робота (прибирання). Замкнена система (ваша кімната без прибирання) природно переходить у стан більшого безладу (зростання ентропії). Всесвіт, як ізольована система, також постійно рухається до стану максимального безладу.</p>
+</section>
+<section id="id28">
+<h3>Ентропія як функція стану<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<p>Як і внутрішня енергія, <strong>ентропія є функцією стану системи</strong>. Це означає, що зміна ентропії <span class="math notranslate nohighlight">\(\Delta S\)</span> між двома станами залежить лише від цих станів, а не від шляху, яким система перейшла з одного стану в інший. Це дуже зручна властивість для розрахунків.</p>
+<p><strong>Наслідки закону зростання ентропії:</strong></p>
+<ul class="simple">
+<li><p><strong>Теплова смерть Всесвіту:</strong> Згідно з Другим законом термодинаміки, ентропія Всесвіту постійно зростає. Це означає, що з часом усі форми енергії перетворяться на теплову енергію, рівномірно розподілену в просторі. Коли вся матерія матиме однакову температуру, не буде можливості виконувати роботу, і Всесвіт досягне стану максимальної ентропії, що часто називають &quot;тепловою смертю&quot;.</p></li>
+<li><p><strong>Неможливість самоорганізації без зовнішніх джерел енергії:</strong> Складні структури (наприклад, живі організми) можуть виникати та підтримуватися лише за рахунок постійного притоку енергії ззовні та відведення ентропії в навколишнє середовище.</p></li>
+</ul>
+<p><strong>Чи ентропія - єдина &quot;стріла часу&quot;?</strong></p>
+<p>Хоча зростання ентропії в ізольованих системах є потужним поясненням &quot;стріли часу&quot; (чому час рухається лише в одному напрямку), деякі фізики вважають, що існують й інші, можливо, пов'язані з нею, &quot;стріли часу&quot;. Наприклад, космологічна стріла часу (постійне розширення Всесвіту) або квантова стріла часу (колапс хвильової функції). Взаємозв'язок між цими різними аспектами часу та ентропією є одним із найскладніших і найцікавіших питань сучасної фізики. Чи справді все зводиться до безладу, чи є глибші принципи, що керують еволюцією Всесвіту?</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id29">
+<h2>Третій закон термодинаміки: Межа холоду<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<p>Останній з трьох законів термодинаміки стосується поведінки систем при дуже низьких температурах, наближених до абсолютного нуля.</p>
+<section id="id30">
+<h3>Абсолютний нуль температури<a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
+<p>Ми вже знаємо, що <strong>абсолютний нуль температури</strong> - це теоретично найнижча можлива температура, при якій кінетична енергія теплового руху частинок речовини є мінімальною (не нульовою, через квантові ефекти, але мінімальною). Ця температура дорівнює <span class="math notranslate nohighlight">\(0 \text{ К}\)</span> (або <span class="math notranslate nohighlight">\(-273.15 \text{ °C}\)</span>).</p>
+<p>Класична фізика передбачає, що при абсолютному нулі температури рух усіх частинок повністю припиняється. Однак, згідно з принципами <strong>квантової механіки</strong>, навіть при <span class="math notranslate nohighlight">\(0 \text{ К}\)</span> частинки зберігають мінімальну, так звану <strong>нульову енергію коливань</strong>. Це означає, що вони не є повністю нерухомими, але їхня кінетична енергія досягає свого абсолютного мінімуму, зумовленого фундаментальними законами квантового світу (принцип невизначеності Гейзенберга). Це важливо для розуміння того, що абсолютний нуль - це не повна відсутність енергії, а найнижчий можливий енергетичний стан.</p>
+</section>
+<section id="id31">
+<h3>Формулювання Третього закону термодинаміки<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Ентропія ідеального кристала чистої речовини прямує до нуля, коли його температура наближається до абсолютного нуля (<span class="math notranslate nohighlight">\(0 \text{ К}\)</span>).</strong></p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[ S(T=0 \text{ К}) = 0 \]</div>
+<p><strong>Що це означає?</strong>
+При абсолютному нулі температури рух молекул припиняється (або зводиться до мінімальних квантових коливань). Якщо речовина є ідеальним кристалом (ідеально впорядкована структура без дефектів), то існує лише один спосіб розташування атомів/молекул. Тобто система перебуває в максимально впорядкованому стані. Отже, її ентропія, яка є мірою безладу, дорівнює нулю. Це називається <strong>теоремою Нернста</strong>.</p>
+</section>
+<section id="id32">
+<h3>Наслідки Третього закону термодинаміки<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Неможливість досягнення абсолютного нуля:</strong> Третій закон також має важливий наслідок, який часто розглядається як окреме формулювання: <strong>Абсолютний нуль температури недосяжний</strong>. Ми можемо наблизитися до нього дуже близько (сучасні експерименти досягають мільярдних часток Кельвіна), але ніколи не досягнемо його повністю за скінченну кількість кроків. Це пов'язано з тим, що для подальшого охолодження завжди потрібно відводити все меншу кількість теплоти від системи, яка сама стає майже ідеально впорядкованою, а процеси стають все менш ефективними.</p></li>
+<li><p><strong>Всі фізичні та хімічні властивості речовин стають незалежними від температури поблизу абсолютного нуля.</strong></p></li>
+</ul>
+<p><strong>Абсолютний нуль: не лише технологічна, а й фундаментальна межа?</strong>
+Неможливість досягнення абсолютного нуля, хоч і має практичні технологічні наслідки, є також глибоким фундаментальним твердженням про природу реальності. Це не просто &quot;ми ще не винайшли досить ефективний холодильник&quot;. Цей закон вказує на внутрішню властивість Всесвіту, що запобігає повному видаленню енергії з будь-якої системи. Це обмежує не лише нашу здатність охолоджувати, але й нашу здатність контролювати інформацію та маніпулювати матерією на фундаментальному рівні, що має далекосяжні наслідки для квантових обчислень та інших перспективних технологій.</p>
+<hr class="docutils" />
+<p><strong>Термодинаміка: Інструмент для розуміння чи догма?</strong>
+Ми пройшли шлях від ідеалізованих моделей до глибоких законів, які здаються універсальними. Але чи є вони остаточними? Пам'ятаймо, що навіть &quot;універсальні&quot; закони фізики часто є найкращими моделями, які ми маємо на даний момент, і вони завжди мають межі застосовності. Класична термодинаміка є неймовірно потужним інструментом для розуміння макроскопічного світу. Однак, за її межами – у квантовому вимірі, у хаотичних системах далеко від рівноваги, або в екстремальних умовах космосу – можуть діяти інші, ще не повністю зрозумілі принципи. Можливо, майбутні відкриття переосмислять наше розуміння енергії, ентропії та навіть часу, показавши, що реальність є набагато складнішою і нелінійною, ніж здається з погляду класичних законів. Завжди будьмо відкритими до нових ідей, які можуть кинути виклик усталеним парадигмам!</p>
+</section>
+</section>
+<section id="id33">
+<h2>Додаткові матеріали<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
+</section>
+<section id="id34">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mkt"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="first-law-of-thermodynamics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Перший закон термодинаміки</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../internal_energy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Внутрішня енергія</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Теплові машини</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Основні елементи теплової машини</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Циклічний процес в тепловій машині</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Робота газу за цикл</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Коефіцієнт корисної дії (ККД) теплового двигуна</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Другий закон термодинаміки: Межі перетворення енергії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Оборотні та необоротні процеси</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Формулювання другого закону термодинаміки</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Ідеальний тепловий двигун та цикл Карно</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Цикл Карно</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Максимально можливий ККД (ККД ідеального двигуна)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Формулювання Саді Карно (Теореми Карно)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Практичне застосування теплових двигунів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Двигун внутрішнього згоряння</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Дизельний двигун</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Такти дизельного двигуна</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Холодильні установки та теплові насоси: Переміщення тепла</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Механізм роботи:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Робота зовнішніх сил у холодильній машині</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Холодильний коефіцієнт</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Максимальний холодильний коефіцієнт</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Кондиціонер</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Тепловий насос</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Ентропія: Міра безладу та напрямок процесів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Зміна ентропії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Закон зростання ентропії</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Ентропія як функція стану</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Третій закон термодинаміки: Межа холоду</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Абсолютний нуль температури</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Формулювання Третього закону термодинаміки</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Наслідки Третього закону термодинаміки</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

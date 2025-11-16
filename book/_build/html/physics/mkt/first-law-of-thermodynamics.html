@@ -1,0 +1,1128 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Перший закон термодинаміки &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/mkt/first-law-of-thermodynamics';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Другий та третій закони термодинаміки. Теплові машини" href="second-and-third-laws-of-thermodynamics.html" />
+    <link rel="prev" title="Вступ до термодинаміки. Внутрішня енергія та робота в термодинаміці" href="internal-energy-and-work-in-thermodynamics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="real-gas.html">Реальні гази</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="humidity.html">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="phase-transitions.html">Фазові переходи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solids.html">Будова та властивості твердих тіл</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solids-properties.html">Механічні властивості твердих тіл та теплове розширення</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internal-energy-and-work-in-thermodynamics.html">Вступ до термодинаміки. Внутрішня енергія та робота в термодинаміці</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Перший закон термодинаміки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="second-and-third-laws-of-thermodynamics.html">Другий та третій закони термодинаміки. Теплові машини</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/self-oscillations.html">Автоколивання (Pending)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/alternating-current.html">Змінний струм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/active-and-reactive-resistance.html">Активний та рективний опори. Діючі значення сили струму та напруги</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-01.html">Електродинаміка. Задачі 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-02.html">Електродинаміка. Задачі 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electromagnetic-waves-classroom.html">Електромагнітні коливання та хвилі. Задачі</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/mkt/first-law-of-thermodynamics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/mkt/first-law-of-thermodynamics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Перший закон термодинаміки</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Закон збереження та перетворення енергії для теплових процесів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Формулювання 1: Через роботу зовнішніх сил над системою</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Формулювання 2: Через роботу системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Функції стану та шлях процесу</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Вічний двигун першого роду</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Теплоємність ідеального газу. Рівняння Маєра</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-v">Молярна теплоємність при сталому об'ємі (<span class="math notranslate nohighlight">\(C_V\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-p">Молярна теплоємність при сталому тиску (<span class="math notranslate nohighlight">\(C_p\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Рівняння Маєра</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Застосування першого закону термодинаміки до ізопроцесів ідеального газу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v-text-const">1. Ізохорний процес (<span class="math notranslate nohighlight">\(V = \text{const}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-text-const">2. Ізотермічний процес (<span class="math notranslate nohighlight">\(T = \text{const}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-text-const">3. Ізобарний процес (<span class="math notranslate nohighlight">\(p = \text{const}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4. Адіабатний процес</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Рівняння теплового балансу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Перший закон термодинаміки<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Закон збереження та перетворення енергії для теплових процесів<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Перший закон термодинаміки</strong> - це не новий, окремий закон, а <strong>формулювання універсального закону збереження та перетворення енергії</strong>, застосоване до процесів, в яких відбувається теплообмін та виконання роботи. Він стверджує, що енергія не може бути створена з нічого або зникнути в нікуди; вона може лише перетворюватися з однієї форми в іншу або передаватися від однієї системи до іншої.</p>
+<p>У контексті термодинаміки, це означає, що зміна внутрішньої енергії системи відбувається лише двома способами: шляхом <strong>передачі теплоти</strong> до системи (або від неї) та шляхом <strong>виконання роботи</strong> над системою (або системою).</p>
+<p>Існує два поширені варіанти запису першого закону термодинаміки, які відрізняються лише тим, як ми визначаємо роботу. Ми будемо використовувати обидва для повноти розуміння, але далі зосередимося на другому, більш поширеному у фізиці:</p>
+<section id="id3">
+<h3>Формулювання 1: Через роботу зовнішніх сил над системою<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Зміна внутрішньої енергії <span class="math notranslate nohighlight">\(\Delta U\)</span> термодинамічної системи дорівнює сумі кількості теплоти <span class="math notranslate nohighlight">\(Q\)</span>, переданої системі, та роботи <span class="math notranslate nohighlight">\(A'\)</span>, виконаної над системою зовнішніми силами.</strong></p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[ \Delta U = Q + A' \]</div>
+<p>де</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta U\)</span> - зміна внутрішньої енергії системи. Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q\)</span> - кількість теплоти, передана системі. Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A'\)</span> - робота зовнішніх сил над системою. Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p></li>
+</ul>
+<p><strong>Знакові правила для цієї форми:</strong></p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(Q &gt; 0\)</span>:</strong> Теплота надходить у систему (система отримує енергію).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(Q &lt; 0\)</span>:</strong> Теплота виходить із системи (система віддає енергію).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(A' &gt; 0\)</span>:</strong> Зовнішні сили виконують роботу <em>над</em> системою (наприклад, стискають газ).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(A' &lt; 0\)</span>:</strong> Система сама виконує роботу <em>над</em> зовнішніми тілами (наприклад, газ розширюється).</p></li>
+</ul>
+<p>Ця форма є більш фундаментальною з погляду фізики, оскільки вона виражає зміну енергії системи як суму енергії, що надійшла в систему.</p>
+</section>
+<section id="id4">
+<h3>Формулювання 2: Через роботу системи<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Часто в термодинаміці зручніше розглядати роботу, яку виконує сама система (наприклад, газ) над зовнішнім середовищем. Ми вже знаємо, що робота системи <span class="math notranslate nohighlight">\(A\)</span> і робота зовнішніх сил <span class="math notranslate nohighlight">\(A'\)</span> пов'язані співвідношенням:</p>
+<div class="math notranslate nohighlight">
+\[ A = -A' \]</div>
+<p>Тобто, якщо газ виконує додатну роботу <span class="math notranslate nohighlight">\(A &gt; 0\)</span> (розширюється), то зовнішні сили виконують від'ємну роботу <span class="math notranslate nohighlight">\(A' &lt; 0\)</span>. І навпаки.</p>
+<p>Давайте виведемо другу формулу, підставивши <span class="math notranslate nohighlight">\(A' = -A\)</span> у перше формулювання:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta U = Q + (-A) \]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta U = Q - A \]</div>
+<p>Звідси, якщо ми виразимо <span class="math notranslate nohighlight">\(Q\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \Delta U + A \]</div>
+<blockquote>
+<div><p><strong>Кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span>, передана термодинамічній системі, йде на зміну її внутрішньої енергії <span class="math notranslate nohighlight">\(\Delta U\)</span> та на виконання системою роботи <span class="math notranslate nohighlight">\(A\)</span> над зовнішніми тілами.</strong></p>
+</div></blockquote>
+<p><strong>Знакові правила для цієї форми:</strong></p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(Q &gt; 0\)</span>:</strong> Теплота надходить у систему.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(Q &lt; 0\)</span>:</strong> Теплота виходить із системи.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(A &gt; 0\)</span>:</strong> Система виконує роботу над зовнішніми тілами (розширюється).</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(A &lt; 0\)</span>:</strong> Над системою виконується робота зовнішніми силами (система стискається).</p></li>
+</ul>
+<p>Ця форма є найбільш поширеною у шкільному курсі фізики, і ми будемо використовувати її в подальших поясненнях.</p>
+</section>
+<section id="id5">
+<h3>Функції стану та шлях процесу<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Ми вже говорили, що <strong>внутрішня енергія <span class="math notranslate nohighlight">\(U\)</span> є функцією стану системи</strong>. Це означає, що її зміна <span class="math notranslate nohighlight">\(\Delta U\)</span> залежить лише від початкового та кінцевого станів системи, а не від того, яким шляхом система перейшла з одного стану в інший.</p>
+<p>Натомість, <strong>кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span> та робота <span class="math notranslate nohighlight">\(A\)</span> не є функціями стану</strong>. Їхні значення залежать від конкретного шляху, яким відбувається термодинамічний процес. Система може перейти з одного стану в інший різними шляхами, при цьому <span class="math notranslate nohighlight">\(\Delta U\)</span> буде однаковою, але <span class="math notranslate nohighlight">\(Q\)</span> та <span class="math notranslate nohighlight">\(A\)</span> будуть різними. Однак їхня сума (<span class="math notranslate nohighlight">\(Q + A'\)</span>) або різниця (<span class="math notranslate nohighlight">\(Q - A\)</span>) завжди буде дорівнювати <span class="math notranslate nohighlight">\(\Delta U\)</span>.</p>
+</section>
+<section id="id6">
+<h3>Вічний двигун першого роду<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Перший закон термодинаміки має дуже важливий наслідок: він унеможливлює створення <strong>вічного двигуна першого роду</strong>.</p>
+<blockquote>
+<div><p><strong>Вічний двигун першого роду</strong> - це гіпотетична машина, яка могла б нескінченно довго виконувати роботу, не отримуючи енергії ззовні, або виробляти більше енергії, ніж споживає.</p>
+</div></blockquote>
+<p>Згідно з першим законом термодинаміки (<span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span>):</p>
+<ul class="simple">
+<li><p>Якщо машина не отримує теплоти (<span class="math notranslate nohighlight">\(Q=0\)</span>) і працює циклічно (тобто повертається у початковий стан), то її внутрішня енергія не змінюється (<span class="math notranslate nohighlight">\(\Delta U=0\)</span>). У такому випадку рівняння перетворюється на <span class="math notranslate nohighlight">\(0 = 0 + A\)</span>, тобто <span class="math notranslate nohighlight">\(A=0\)</span>. Це означає, що машина не може виконувати роботу.</p></li>
+<li><p>Якщо машина виробляє більше енергії, ніж споживає, це означало б, що вона створює енергію &quot;з нічого&quot;, що прямо суперечить закону збереження енергії.</p></li>
+</ul>
+<p><strong>Висновок:</strong> Створення вічного двигуна першого роду <strong>неможливе</strong>, оскільки це суперечить закону збереження енергії, який є основою першого закону термодинаміки.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id7">
+<h2>Теплоємність ідеального газу. Рівняння Маєра<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Перш ніж застосовувати перший закон до ізопроцесів, нам потрібно глибше розібратися з поняттям теплоємності, особливо для газів. Ми вже знаємо питому теплоємність (<span class="math notranslate nohighlight">\(c\)</span>) та теплоємність тіла (<span class="math notranslate nohighlight">\(C=cm\)</span>). Тепер ми введемо поняття <strong>молярної теплоємності</strong>, яка є більш зручною для газів.</p>
+<blockquote>
+<div><p><strong>Молярна теплоємність <span class="math notranslate nohighlight">\(C_{\text{мол}}\)</span></strong> - це кількість теплоти, яку необхідно надати одному молю речовини, щоб змінити її температуру на 1 Кельвін.</p>
+</div></blockquote>
+<p>Одиниця молярної теплоємності в СІ: <span class="math notranslate nohighlight">\([C_{\text{мол}}] = 1 \frac{\text{Дж}}{\text{моль} \cdot \text{К}}\)</span>.</p>
+<p>Для газів молярна теплоємність є дуже важливою, оскільки вона може відрізнятися залежно від того, як відбувається нагрівання: при сталому об'ємі чи при сталому тиску.</p>
+<section id="c-v">
+<h3>Молярна теплоємність при сталому об'ємі (<span class="math notranslate nohighlight">\(C_V\)</span>)<a class="headerlink" href="#c-v" title="Link to this heading">#</a></h3>
+<p>Розглянемо нагрівання ідеального газу при <strong>сталому об'ємі</strong> (<span class="math notranslate nohighlight">\(V = \text{const}\)</span>). Цей процес називається <strong>ізохорним</strong>.</p>
+<blockquote>
+<div><p><strong>Молярна теплоємність при сталому об'ємі <span class="math notranslate nohighlight">\(C_V\)</span></strong> - це кількість теплоти, яку необхідно передати одному молю газу, щоб підвищити його температуру на 1 Кельвін, за умови, що об'єм газу залишається незмінним.</p>
+<p>Одиниця в СІ: <span class="math notranslate nohighlight">\(\left[C_V\right] = 1 \frac{\text{Дж}}{\text{моль} \cdot \text{К}}\)</span>.</p>
+</div></blockquote>
+<ul>
+<li><p><strong>Крок 1: Застосування Першого закону термодинаміки.</strong></p>
+<p>При ізохорному процесі об'єм газу не змінюється, тому робота, яку виконує газ, дорівнює нулю (<span class="math notranslate nohighlight">\(A = p\Delta V = 0\)</span>).
+Тоді перший закон термодинаміки <span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span> спрощується до:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \Delta U \]</div>
+<p>Це означає, що вся передана газу теплота йде на збільшення його внутрішньої енергії.</p>
+</li>
+<li><p><strong>Крок 2: Вираз для зміни внутрішньої енергії.</strong></p>
+<p>Ми вже знаємо з попереднього матеріалу, що зміна внутрішньої енергії ідеального газу сталої маси дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta U = \frac{i}{2} \nu R \Delta T \]</div>
+</li>
+<li><p><strong>Крок 3: Підстановка та визначення <span class="math notranslate nohighlight">\(C_V\)</span>.</strong></p>
+<p>Підставимо вираз для <span class="math notranslate nohighlight">\(\Delta U\)</span> у формулу для <span class="math notranslate nohighlight">\(Q\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{i}{2} \nu R \Delta T \]</div>
+<p>Для <span class="math notranslate nohighlight">\(\nu\)</span> молів газу, щоб змінити його температуру на <span class="math notranslate nohighlight">\(\Delta T\)</span>, необхідна теплота</p>
+<div class="math notranslate nohighlight">
+\[Q = C_V \nu \Delta T\]</div>
+<p>Порівнюючи ці два вирази для <span class="math notranslate nohighlight">\(Q\)</span>, ми отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[ C_V \nu \Delta T = \frac{i}{2} \nu R \Delta T \]</div>
+<p>Скорочуємо <span class="math notranslate nohighlight">\(\nu \Delta T\)</span> (за умови, що <span class="math notranslate nohighlight">\(\nu \neq 0\)</span> та <span class="math notranslate nohighlight">\(\Delta T \neq 0\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ C_V = \frac{i}{2} R \]</div>
+<p>де <span class="math notranslate nohighlight">\(R\)</span> - універсальна газова стала (<span class="math notranslate nohighlight">\(R \approx 8.314 \frac{\text{Дж}}{\text{моль} \cdot \text{К}}\)</span>).</p>
+<p>Це і є <strong>молярна теплоємність ідеального газу при сталому об'ємі</strong>. Вона залежить тільки від кількості ступенів вільності молекули газу <span class="math notranslate nohighlight">\(i\)</span> та універсальної газової сталої.</p>
+<ul class="simple">
+<li><p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>): <span class="math notranslate nohighlight">\(C_V = \frac{3}{2}R\)</span>.</p></li>
+<li><p>Для двохатомного газу (<span class="math notranslate nohighlight">\(i=5\)</span>): <span class="math notranslate nohighlight">\(C_V = \frac{5}{2}R\)</span>.</p></li>
+<li><p>Для багатоатомного газу (<span class="math notranslate nohighlight">\(i=6\)</span>): <span class="math notranslate nohighlight">\(C_V = \frac{6}{2}R = 3R\)</span>.</p></li>
+</ul>
+<p>Це є ще одним яскравим прикладом того, як мікроскопічні властивості (кількість ступенів вільності молекули) безпосередньо впливають на макроскопічні властивості (теплоємність газу).</p>
+</li>
+</ul>
+</section>
+<section id="c-p">
+<h3>Молярна теплоємність при сталому тиску (<span class="math notranslate nohighlight">\(C_p\)</span>)<a class="headerlink" href="#c-p" title="Link to this heading">#</a></h3>
+<p>Тепер розглянемо нагрівання ідеального газу при <strong>сталому тиску</strong> (<span class="math notranslate nohighlight">\(p = \text{const}\)</span>). Цей процес називається <strong>ізобарним</strong>.</p>
+<blockquote>
+<div><p><strong>Молярна теплоємність при сталому тиску <span class="math notranslate nohighlight">\(C_p\)</span></strong> - це кількість теплоти, яку необхідно передати одному молю газу, щоб підвищити його температуру на 1 Кельвін, за умови, що тиск газу залишається незмінним.</p>
+<p>Одиниця в СІ: <span class="math notranslate nohighlight">\(\left[C_p\right] = 1 \frac{\text{Дж}}{\text{моль} \cdot \text{К}}\)</span>.</p>
+</div></blockquote>
+<ul>
+<li><p><strong>Крок 1: Застосування першого закону термодинаміки.</strong></p>
+<p>При ізобарному процесі газ розширюється (або стискається), виконуючи роботу. Перший закон термодинаміки має вигляд:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \Delta U + A \]</div>
+</li>
+<li><p><strong>Крок 2: Вираз для зміни внутрішньої енергії та роботи.</strong></p>
+<p>Ми знаємо:</p>
+<ul class="simple">
+<li><p>Зміна внутрішньої енергії: <span class="math notranslate nohighlight">\(\Delta U = \frac{i}{2} \nu R \Delta T\)</span>.</p></li>
+<li><p>Робота газу при ізобарному процесі: <span class="math notranslate nohighlight">\(A = p\Delta V\)</span>. Ми також виводили в попередньому матеріалі, що <span class="math notranslate nohighlight">\(A = \nu R \Delta T\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Крок 3: Підстановка та визначення <span class="math notranslate nohighlight">\(C_p\)</span>.</strong></p>
+<p>Підставимо вирази для <span class="math notranslate nohighlight">\(\Delta U\)</span> та <span class="math notranslate nohighlight">\(A\)</span> у перший закон термодинаміки:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{i}{2} \nu R \Delta T + \nu R \Delta T \]</div>
+<p>Винесемо спільні множники <span class="math notranslate nohighlight">\(\nu R \Delta T\)</span> за дужки:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \left( \frac{i}{2} + 1 \right) \nu R \Delta T \]</div>
+<p>За визначенням молярної теплоємності при сталому тиску, <span class="math notranslate nohighlight">\(Q = C_p \nu \Delta T\)</span>. Порівнюючи ці два вирази для <span class="math notranslate nohighlight">\(Q\)</span>, ми отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[ C_p \nu \Delta T = \left( \frac{i}{2} + 1 \right) \nu R \Delta T \]</div>
+<p>Скорочуємо <span class="math notranslate nohighlight">\(\nu \Delta T\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    C_p = \left( \frac{i}{2} + 1 \right) R
+    \]</div>
+<p>Це і є <strong>молярна теплоємність ідеального газу при сталому тиску</strong>.</p>
+<ul class="simple">
+<li><p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>): <span class="math notranslate nohighlight">\(C_p = \left( \frac{3}{2} + 1 \right) R = \frac{5}{2}R\)</span>.</p></li>
+<li><p>Для двохатомного газу (<span class="math notranslate nohighlight">\(i=5\)</span>): <span class="math notranslate nohighlight">\(C_p = \left( \frac{5}{2} + 1 \right) R = \frac{7}{2}R\)</span>.</p></li>
+<li><p>Для багатоатомного газу (<span class="math notranslate nohighlight">\(i=6\)</span>): <span class="math notranslate nohighlight">\(C_p = \left( \frac{6}{2} + 1 \right) R = 4R\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Чому <span class="math notranslate nohighlight">\(C_p &gt; C_V\)</span>? Мікроскопічний погляд:</strong></p>
+<p>Ми бачимо, що <span class="math notranslate nohighlight">\(C_p\)</span> завжди більша за <span class="math notranslate nohighlight">\(C_V\)</span>. Це легко пояснити як з макроскопічної, так і з мікроскопічної точок зору.</p>
+<ul class="simple">
+<li><p><strong>Макроскопічно:</strong> При сталому об'ємі (ізохорний процес) вся теплота йде виключно на збільшення внутрішньої енергії газу (на підвищення його температури). При сталому тиску (ізобарний процес) газ, крім збільшення своєї внутрішньої енергії (підвищення температури), ще й розширюється, виконуючи роботу проти зовнішніх сил. Отже, щоб нагріти газ на ту ж саму кількість градусів, при сталому тиску потрібно передати йому більше теплоти, оскільки частина цієї енергії буде &quot;витрачена&quot; на виконання роботи.</p></li>
+<li><p><strong>Мікроскопічно:</strong> Коли ми нагріваємо газ ізохорно, молекули отримують енергію, і вся ця енергія переходить у збільшення їхньої середньої кінетичної енергії поступального руху (тобто температури) та, якщо є, енергії обертального/коливального руху. Коли ми нагріваємо газ ізобарно, молекули також отримують енергію і збільшують свою кінетичну енергію. Але при цьому вони ще й &quot;відштовхують&quot; зовнішній поршень, виконуючи роботу. Щоб підтримувати сталий тиск під час нагрівання, об'єм має зростати, а для цього молекулам потрібно не тільки швидше рухатися, а й долати опір зовнішнього середовища, передаючи йому частину енергії через роботу. Таким чином, для однакового підвищення температури (тобто однакового збільшення середньої кінетичної енергії молекул, яка є мірою температури) при ізобарному процесі потрібно більше сумарної енергії, оскільки частина її &quot;губиться&quot; на виконання роботи. Це пояснює математичну різницю <span class="math notranslate nohighlight">\(C_p - C_V = R\)</span>.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Рівняння Маєра<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>З виведених нами формул для <span class="math notranslate nohighlight">\(C_V\)</span> та <span class="math notranslate nohighlight">\(C_p\)</span> ми можемо отримати дуже важливе співвідношення, відоме як <strong>рівняння Маєра</strong>.</p>
+<ul>
+<li><p>Ми маємо:
+$<span class="math notranslate nohighlight">\( C_V = \frac{i}{2} R \)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\( C_p = \left( \frac{i}{2} + 1 \right) R = \frac{i}{2} R + R \)</span>$</p></li>
+<li><p>Підставимо <span class="math notranslate nohighlight">\(C_V\)</span> у вираз для <span class="math notranslate nohighlight">\(C_p\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ C_p = C_V + R \]</div>
+<p>Це <strong>рівняння Маєра</strong> (або закон Маєра) і воно є фундаментальним для ідеальних газів. Воно показує, що різниця між молярними теплоємностями при сталому тиску і при сталому об'ємі завжди дорівнює універсальній газовій сталій <span class="math notranslate nohighlight">\(R\)</span>. Це прямий наслідок того, що при сталому тиску частина енергії йде на виконання роботи, а не лише на зміну внутрішньої енергії.</p>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id9">
+<h2>Застосування першого закону термодинаміки до ізопроцесів ідеального газу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Тепер, коли ми озброєні знаннями про перший закон термодинаміки та молярні теплоємності, ми можемо детально розглянути, як він застосовується до різних ізопроцесів ідеального газу. Ми будемо використовувати формулювання <span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span>. Важливо пам'ятати, що <strong>внутрішня енергія <span class="math notranslate nohighlight">\(U\)</span> є функцією стану</strong>, і її зміна <span class="math notranslate nohighlight">\(\Delta U\)</span> для ідеального газу залежить виключно від зміни температури (<span class="math notranslate nohighlight">\(\Delta U = \frac{i}{2} \nu R \Delta T\)</span>).</p>
+<section id="v-text-const">
+<h3>1. Ізохорний процес (<span class="math notranslate nohighlight">\(V = \text{const}\)</span>)<a class="headerlink" href="#v-text-const" title="Link to this heading">#</a></h3>
+<p>Нагадаємо:</p>
+<ul>
+<li><p><strong>Визначення:</strong> Процес, що відбувається при сталому об'ємі.</p></li>
+<li><p><strong>На <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі:</strong> Вертикальна пряма.</p></li>
+<li><p><strong>Робота газу (<span class="math notranslate nohighlight">\(A\)</span>):</strong>
+Оскільки об'єм газу не змінюється (<span class="math notranslate nohighlight">\(\Delta V = 0\)</span>), то робота, виконана газом, дорівнює нулю:</p>
+<div class="math notranslate nohighlight">
+\[ A = p\Delta V = 0 \]</div>
+</li>
+<li><p><strong>Зміна внутрішньої енергії (<span class="math notranslate nohighlight">\(\Delta U\)</span>):</strong></p>
+<p>З попереднього матеріалу ми знаємо, що для ідеального газу <span class="math notranslate nohighlight">\(\Delta U = \frac{i}{2} \nu R \Delta T\)</span>. При ізохорному нагріванні/охолодженні температура газу змінюється, тому змінюється і його внутрішня енергія:</p>
+<ul class="simple">
+<li><p>Якщо <span class="math notranslate nohighlight">\(T\)</span> зростає, <span class="math notranslate nohighlight">\(\Delta T &gt; 0 \Rightarrow \Delta U &gt; 0\)</span>.</p></li>
+<li><p>Якщо <span class="math notranslate nohighlight">\(T\)</span> спадає, <span class="math notranslate nohighlight">\(\Delta T &lt; 0 \Rightarrow \Delta U &lt; 0\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Кількість теплоти (<span class="math notranslate nohighlight">\(Q\)</span>) за Першим законом термодинаміки:</strong></p>
+<p>Підставимо <span class="math notranslate nohighlight">\(A=0\)</span> у формулу Першого закону термодинаміки <span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \Delta U \]</div>
+<p><strong>Висновок:</strong> Вся теплота, передана газу при ізохорному процесі, йде виключно на зміну його внутрішньої енергії (тобто на зміну його температури, що означає зміну середньої кінетичної енергії молекул).</p>
+<ul class="simple">
+<li><p>Якщо газ отримує теплоту (<span class="math notranslate nohighlight">\(Q&gt;0\)</span>), то його внутрішня енергія зростає (<span class="math notranslate nohighlight">\(\Delta U&gt;0\)</span>), і він нагрівається (<span class="math notranslate nohighlight">\(\Delta T&gt;0\)</span>).</p></li>
+<li><p>Якщо газ віддає теплоту (<span class="math notranslate nohighlight">\(Q&lt;0\)</span>), то його внутрішня енергія зменшується (<span class="math notranslate nohighlight">\(\Delta U&lt;0\)</span>), і він охолоджується (<span class="math notranslate nohighlight">\(\Delta T&lt;0\)</span>).</p></li>
+</ul>
+</li>
+<li><p><strong>Формули для <span class="math notranslate nohighlight">\(Q\)</span> в ізохорному процесі:</strong></p>
+<p>Використовуючи вирази для <span class="math notranslate nohighlight">\(\Delta U\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{i}{2} \nu R \Delta T \]</div>
+<p>Або через масу газу:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{i}{2} \frac{m}{M} R \Delta T \]</div>
+<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{3}{2} \nu R \Delta T = \frac{3}{2} \frac{m}{M} R \Delta T \]</div>
+<p>Ми також можемо виразити <span class="math notranslate nohighlight">\(Q\)</span> через зміну тиску, використовуючи рівняння стану ідеального газу <span class="math notranslate nohighlight">\(p V = \nu R T\)</span>. Оскільки <span class="math notranslate nohighlight">\(V = \text{const}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ V \Delta p = \nu R \Delta T \]</div>
+<p>Підставимо це в формулу для <span class="math notranslate nohighlight">\(Q\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{i}{2} V\Delta p \]</div>
+<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{3}{2} V\Delta p \]</div>
+<p><strong>Приклад:</strong> Закрита посудина з 2 молями одноатомного газу нагрівається так, що його температура зростає на 50 К. Яка кількість теплоти була передана газу?</p>
+<p>Дано: <span class="math notranslate nohighlight">\(\nu = 2 \text{ моль}\)</span>, <span class="math notranslate nohighlight">\(\Delta T = 50 \text{ К}\)</span>, <span class="math notranslate nohighlight">\(i=3\)</span> (одноатомний газ).
+<span class="math notranslate nohighlight">\(R = 8.314 \frac{\text{Дж}}{\text{моль} \cdot \text{К}}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{3}{2} \nu R \Delta T = \frac{3}{2} \cdot 2 \text{ моль} \cdot 8.314 \frac{\text{Дж}}{\text{моль} \cdot \text{К}} \cdot 50 \text{ К} \]</div>
+<div class="math notranslate nohighlight">
+\[ Q = 3 \cdot 8.314 \cdot 50 = 1247.1 \text{ Дж} \approx 1.25 \text{ кДж} \]</div>
+</li>
+</ul>
+</section>
+<section id="t-text-const">
+<h3>2. Ізотермічний процес (<span class="math notranslate nohighlight">\(T = \text{const}\)</span>)<a class="headerlink" href="#t-text-const" title="Link to this heading">#</a></h3>
+<p>Нагадаємо:</p>
+<ul>
+<li><p><strong>Визначення:</strong> Процес, що відбувається при сталій температурі.</p></li>
+<li><p><strong>На <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі:</strong> Гіпербола (ізотерма).</p></li>
+<li><p><strong>Зміна внутрішньої енергії (<span class="math notranslate nohighlight">\(\Delta U\)</span>):</strong></p>
+<p>Оскільки температура газу не змінюється (<span class="math notranslate nohighlight">\(\Delta T = 0\)</span>), то для ідеального газу зміна внутрішньої енергії дорівнює нулю (як ми вже знаємо з попереднього матеріалу):</p>
+<div class="math notranslate nohighlight">
+\[ \Delta U = \frac{i}{2} \nu R \Delta T = 0 \]</div>
+<p><strong>Висновок:</strong> При ізотермічному процесі внутрішня енергія ідеального газу <strong>не змінюється</strong>. Це означає, що середня кінетична енергія молекул (та їхня потенціальна енергія взаємодії, якої немає в ідеальному газі) залишається сталою.</p>
+</li>
+<li><p><strong>Кількість теплоти (<span class="math notranslate nohighlight">\(Q\)</span>) за Першим законом термодинаміки:</strong></p>
+<p>Підставимо <span class="math notranslate nohighlight">\(\Delta U=0\)</span> у формулу Першого закону термодинаміки <span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q = A \]</div>
+<p><strong>Висновок:</strong> Вся теплота, передана газу при ізотермічному процесі, повністю перетворюється на роботу, яку виконує газ (при розширенні), або вся робота, виконана над газом, повністю перетворюється на теплоту, що віддається газом (при стисненні).</p>
+<ul class="simple">
+<li><p><strong>Мікроскопічний зміст ізотермічного процесу та швидкість його протікання:</strong> Уявіть, що газ розширюється, штовхаючи поршень і виконуючи роботу (<span class="math notranslate nohighlight">\(A &gt; 0\)</span>). Молекули газу, вдаряючись об рухомий поршень, втрачають частину своєї кінетичної енергії (їхні швидкості зменшуються). Це призвело б до охолодження газу та зменшення його внутрішньої енергії. Однак, оскільки процес ізотермічний (<span class="math notranslate nohighlight">\(T=\text{const}\)</span>), середня кінетична енергія молекул повинна залишатися незмінною. Щоб компенсувати втрати енергії на роботу, система <em>мусить постійно отримувати</em> еквівалентну кількість теплоти ззовні (<span class="math notranslate nohighlight">\(Q &gt; 0\)</span>). Ця теплота поповнює кінетичну енергію молекул, підтримуючи сталу температуру. При стисненні відбувається зворотний процес: молекули набирають енергію від поршня, і ця надлишкова енергія <em>повинна бути відведена</em> у вигляді теплоти (<span class="math notranslate nohighlight">\(Q &lt; 0\)</span>), щоб температура залишалася сталою. Ізотермічні процеси зазвичай є <strong>повільними</strong>, щоб система встигала обмінюватися теплотою з навколишнім середовищем і підтримувати сталу температуру, що дозволяє енергії перетікати в або з системи у вигляді теплоти.</p></li>
+</ul>
+</li>
+<li><p><strong>Робота газу (<span class="math notranslate nohighlight">\(A\)</span>) в ізотермічному процесі:</strong></p>
+<p>На відміну від ізохорного процесу, в ізотермічному процесі робота не дорівнює нулю. Ми вже знаємо, що робота - це площа під графіком на <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі. Для ізотермічного процесу <span class="math notranslate nohighlight">\(p = \frac{\nu RT}{V}\)</span>, тому тиск не є сталим. Обчислення роботи в цьому випадку вимагає виконання такої математичної операції як інтегрування, тому тут ми надаємо кінцеву формулу без виведення:</p>
+<div class="math notranslate nohighlight">
+\[ A = \nu R T \ln\left(\frac{V_2}{V_1}\right) \]</div>
+<p>де <span class="math notranslate nohighlight">\(\ln\)</span> - натуральний логарифм, <span class="math notranslate nohighlight">\(T\)</span> - абсолютна температура процесу.</p>
+<ul class="simple">
+<li><p>При ізотермічному розширенні (<span class="math notranslate nohighlight">\(V_2 &gt; V_1\)</span>), <span class="math notranslate nohighlight">\(\frac{V_2}{V_1} &gt; 1\)</span>, <span class="math notranslate nohighlight">\(\ln \left( \frac{V_2}{V_1} \right) &gt; 0\)</span>, тому <span class="math notranslate nohighlight">\(A &gt; 0\)</span>. Газ виконує додатну роботу і отримує теплоту ззовні (<span class="math notranslate nohighlight">\(Q &gt; 0\)</span>).</p></li>
+<li><p>При ізотермічному стисненні (<span class="math notranslate nohighlight">\(V_2 &lt; V_1\)</span>), <span class="math notranslate nohighlight">\(\frac{V_2}{V_1} &lt; 1\)</span>, <span class="math notranslate nohighlight">\(\ln \left( \frac{V_2}{V_1} \right) &lt; 0\)</span>, тому <span class="math notranslate nohighlight">\(A &lt; 0\)</span>. Над газом виконується додатна робота, і він віддає теплоту ззовні (<span class="math notranslate nohighlight">\(Q &lt; 0\)</span>).</p></li>
+</ul>
+<p><strong>Оборотність та швидкість ізотермічних процесів:</strong> Формула для роботи <span class="math notranslate nohighlight">\(A = \nu R T \ln \left( \frac{V_2}{V_1} \right)\)</span> та її інтерпретація, як і площа під графіком на <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі, є точною лише для <strong>квазістатичних (ідеально повільних) і оборотних процесів</strong>. Оборотний процес - це такий, який можна провести у зворотному напрямку, пройшовши всі проміжні стани, і повернути систему та навколишнє середовище до початкового стану без будь-яких змін. У реальному світі всі процеси є певною мірою необоротними (наприклад, через тертя або швидкий теплообмін). Ізотермічні процеси вимагають постійного обміну теплотою з навколишнім середовищем для підтримки сталої температури, тому вони повинні бути досить повільними, щоб цей обмін встигав відбуватися.</p>
+</li>
+</ul>
+</section>
+<section id="p-text-const">
+<h3>3. Ізобарний процес (<span class="math notranslate nohighlight">\(p = \text{const}\)</span>)<a class="headerlink" href="#p-text-const" title="Link to this heading">#</a></h3>
+<p>Нагадаємо:</p>
+<ul>
+<li><p><strong>Визначення:</strong> Процес, що відбувається при сталому тиску.</p></li>
+<li><p><strong>На <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі:</strong> Горизонтальна пряма.</p></li>
+<li><p><strong>Робота газу (<span class="math notranslate nohighlight">\(A\)</span>):</strong></p>
+<p>При ізобарному процесі газ виконує роботу (або над ним виконується роботу), оскільки об'єм змінюється:</p>
+<div class="math notranslate nohighlight">
+\[ A = p\Delta V \]</div>
+<p>Ми також виводили в попередньому матеріалі, що:</p>
+<div class="math notranslate nohighlight">
+\[ A = \nu R \Delta T \]</div>
+</li>
+<li><p><strong>Зміна внутрішньої енергії (<span class="math notranslate nohighlight">\(\Delta U\)</span>):</strong></p>
+<p>Оскільки при зміні об'єму при сталому тиску температура газу також змінюється, внутрішня енергія газу змінюється:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta U = \frac{i}{2} \nu R \Delta T = \frac{i}{2} \frac{m}{M} R \Delta T \]</div>
+</li>
+<li><p><strong>Кількість теплоти (<span class="math notranslate nohighlight">\(Q\)</span>) за першим законом термодинаміки:</strong></p>
+<p>Підставимо вирази для <span class="math notranslate nohighlight">\(\Delta U\)</span> та <span class="math notranslate nohighlight">\(A\)</span> у формулу першого закону термодинаміки <span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{i}{2} \nu R \Delta T + \nu R \Delta T \]</div>
+<p>Винесемо спільні множники <span class="math notranslate nohighlight">\(\nu R \Delta T\)</span> за дужки:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \left( \frac{i}{2} + 1 \right) \nu R \Delta T \]</div>
+<p><strong>Висновок:</strong> При ізобарному процесі теплота, передана газу, йде як на зміну його внутрішньої енергії (зміна температури), так і на виконання роботи розширення (або на поповнення внутрішньої енергії та компенсацію роботи стиснення).</p>
+</li>
+<li><p><strong>Формули для <span class="math notranslate nohighlight">\(Q\)</span> в ізобарному процесі:</strong></p>
+<p>Використовуючи молярну теплоємність при сталому тиску <span class="math notranslate nohighlight">\(C_p = \left( \frac{i}{2} + 1 \right) R\)</span>, маємо альтернативну формулу:</p>
+<div class="math notranslate nohighlight">
+\[ Q = C_p \nu \Delta T \]</div>
+<p>Або через масу газу:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \left( \frac{i}{2} + 1 \right) \frac{m}{M} R \Delta T \]</div>
+<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):
+$<span class="math notranslate nohighlight">\( Q = \frac{5}{2} \nu R \Delta T = \frac{5}{2} \frac{m}{M} R \Delta T \)</span>$</p>
+<p>Ми також можемо виразити <span class="math notranslate nohighlight">\(Q\)</span> через зміну об'єму, оскільки <span class="math notranslate nohighlight">\(A = p\Delta V\)</span> і <span class="math notranslate nohighlight">\(\Delta U = \frac{i}{2} p\Delta V\)</span> (пам'ятаємо, що <span class="math notranslate nohighlight">\(pV = \nu RT\)</span>, тому <span class="math notranslate nohighlight">\(\Delta U = \frac{i}{2}\nu R \Delta T = \frac{i}{2}p\Delta V\)</span> для ізобарного процесу):</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{i}{2} p\Delta V + p\Delta V \]</div>
+<div class="math notranslate nohighlight">
+\[ Q = \left( \frac{i}{2} + 1 \right) p\Delta V \]</div>
+<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):
+$<span class="math notranslate nohighlight">\( Q = \frac{5}{2} p\Delta V \)</span>$</p>
+<p><strong>Приклад:</strong> 1 моль двохатомного газу розширюється при сталому тиску <span class="math notranslate nohighlight">\(10^5 \text{ Па}\)</span>, збільшуючи свій об'єм на <span class="math notranslate nohighlight">\(0.01 \text{ м}^3\)</span>. Яка кількість теплоти була передана газу?</p>
+<p>Дано: <span class="math notranslate nohighlight">\(\nu = 1 \text{ моль}\)</span>, <span class="math notranslate nohighlight">\(p = 10^5 \text{ Па}\)</span>, <span class="math notranslate nohighlight">\(\Delta V = 0.01 \text{ м}^3\)</span>, <span class="math notranslate nohighlight">\(i=5\)</span> (двохатомний газ).</p>
+<p>Спочатку знайдемо роботу:</p>
+<div class="math notranslate nohighlight">
+\[ A = p\Delta V = 10^5 \text{ Па} \cdot 0.01 \text{ м}^3 = 1000 \text{ Дж} \]</div>
+<p>Потім знайдемо зміну внутрішньої енергії. Оскільки <span class="math notranslate nohighlight">\(p\Delta V = \nu R \Delta T\)</span>, то <span class="math notranslate nohighlight">\(\Delta T = \frac{p\Delta V}{\nu R}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \Delta U = \frac{i}{2} \nu R \Delta T = \frac{i}{2} \nu R \frac{p\Delta V}{\nu R} = \frac{i}{2} p\Delta V \]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta U = \frac{5}{2} \cdot 1000 \text{ Дж} = 2500 \text{ Дж} \]</div>
+<p>Тепер за першим законом термодинаміки:</p>
+<div class="math notranslate nohighlight">
+\[ Q = \Delta U + A = 2500 \text{ Дж} + 1000 \text{ Дж} = 3500 \text{ Дж} = 3.5 \text{ кДж} \]</div>
+<p>Ми бачимо, що 1000 Дж пішло на виконання роботи, а 2500 Дж - на збільшення внутрішньої енергії.</p>
+</li>
+</ul>
+</section>
+<section id="id10">
+<h3>4. Адіабатний процес<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p><strong>Адіабатний процес</strong> - це термодинамічний процес, що відбувається без теплообміну системи з навколишнім середовищем (<span class="math notranslate nohighlight">\(Q=0\)</span>).</p>
+</div></blockquote>
+<p>Одиниця кількості теплоти в СІ: <span class="math notranslate nohighlight">\([Q] = 1\)</span> Дж (Д).
+Такі процеси відбуваються або дуже швидко (так що система не встигає обмінятися теплотою з навколишнім середовищем), або в ідеально теплоізольованих системах.</p>
+<ul>
+<li><p><strong>Кількість теплоти (<span class="math notranslate nohighlight">\(Q\)</span>):</strong></p>
+<p>За визначенням адіабатного процесу:</p>
+<div class="math notranslate nohighlight">
+\[ Q = 0 \]</div>
+</li>
+<li><p><strong>Застосування першого закону термодинаміки:</strong></p>
+<p>Підставимо <span class="math notranslate nohighlight">\(Q=0\)</span> у формулу Першого закону термодинаміки <span class="math notranslate nohighlight">\(Q = \Delta U + A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ 0 = \Delta U + A \]</div>
+<p>Звідси отримуємо:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta U = -A \]</div>
+<p>або</p>
+<div class="math notranslate nohighlight">
+\[ A = -\Delta U \]</div>
+<p><strong>Висновок:</strong> При адіабатному процесі вся робота, виконана газом, відбувається виключно за рахунок зміни його внутрішньої енергії. І навпаки, вся робота, виконана над газом, йде на зміну його внутрішньої енергії. Теплообмін відсутній.</p>
+</li>
+<li><p><strong>Адіабатне розширення:</strong></p>
+<ul class="simple">
+<li><p>Якщо газ адіабатно розширюється, він виконує додатну роботу (<span class="math notranslate nohighlight">\(A &gt; 0\)</span>).</p></li>
+<li><p>Згідно з <span class="math notranslate nohighlight">\(\Delta U = -A\)</span>, це означає, що <span class="math notranslate nohighlight">\(\Delta U &lt; 0\)</span>.</p></li>
+<li><p><strong>Мікроскопічний зміст адіабатного процесу та швидкість його протікання:</strong> Адіабатні процеси зазвичай відбуваються <strong>дуже швидко</strong> (наприклад, вибух, розширення газу з балона), або в умовах ідеальної теплоізоляції. Швидкість процесу є ключовою, оскільки вона не дає часу для значного теплообміну з навколишнім середовищем (<span class="math notranslate nohighlight">\(Q=0\)</span>). При адіабатному розширенні, коли газ виконує роботу, молекули газу витрачають свою кінетичну енергію на штовхання зовнішніх тіл (наприклад, поршня). Оскільки немає припливу теплоти ззовні для поповнення цієї енергії (бо <span class="math notranslate nohighlight">\(Q=0\)</span>), загальна кінетична енергія молекул <em>зменшується</em>. Це безпосередньо призводить до <strong>зниження температури</strong> газу (<span class="math notranslate nohighlight">\(\Delta T &lt; 0\)</span>). Газ охолоджується, не віддаючи теплоти, а &quot;витрачаючи&quot; власну внутрішню енергію на виконання роботи.</p></li>
+<li><p><strong>Приклад:</strong> Коли ви випускаєте повітря з велосипедної шини, воно здається холодним. Це відбувається через адіабатне розширення повітря. Також утворюються хмари, коли тепле вологе повітря піднімається вгору, адіабатно розширюється і охолоджується, досягаючи точки роси.</p></li>
+</ul>
+</li>
+<li><p><strong>Адіабатне стиснення:</strong></p>
+<ul class="simple">
+<li><p>Якщо газ адіабатно стискається, зовнішні сили виконують над ним роботу (<span class="math notranslate nohighlight">\(A &lt; 0\)</span>).</p></li>
+<li><p>Згідно з <span class="math notranslate nohighlight">\(\Delta U = -A\)</span>, це означає, що <span class="math notranslate nohighlight">\(\Delta U &gt; 0\)</span>.</p></li>
+<li><p>При адіабатному стисненні, навпаки, зовнішні сили виконують роботу над газом. Ця енергія передається молекулам, збільшуючи їхню кінетичну енергію. Оскільки немає відведення теплоти назовні (<span class="math notranslate nohighlight">\(Q=0\)</span>), вся ця додаткова енергія залишається в системі, викликаючи <strong>підвищення температури</strong> газу (<span class="math notranslate nohighlight">\(\Delta T &gt; 0\)</span>). Газ нагрівається, не отримуючи теплоти ззовні, а за рахунок роботи, виконаної над ним.</p></li>
+<li><p><strong>Приклад:</strong> У дизельному двигуні паливо запалюється не від іскри, а від різкого адіабатного стиснення повітря в циліндрі, яке нагріває його до дуже високих температур. Або коли ви швидко накачуєте шину насосом, корпус насоса нагрівається.</p></li>
+</ul>
+</li>
+<li><p><strong>Рівняння адіабатного процесу (Рівняння Пуассона):</strong></p>
+<p>На відміну від ізотерми, де <span class="math notranslate nohighlight">\(pV = \text{const}\)</span>, для адіабатного процесу залежність між тиском і об'ємом є більш складною:</p>
+<div class="math notranslate nohighlight">
+\[ pV^{\gamma} = \text{const} \]</div>
+<p>Це <strong>рівняння Пуассона</strong>. Його виведення виходить за межі шкільного курсу, але важливо знати його вигляд та розуміти, що воно описує адіабатний процес.</p>
+<p><span class="math notranslate nohighlight">\(\gamma\)</span> - це <strong>показник адіабати</strong>.</p>
+</li>
+<li><p><strong>Показник адіабати (<span class="math notranslate nohighlight">\(\gamma\)</span>):</strong></p>
+<p>Показник адіабати - це відношення молярної теплоємності при сталому тиску до молярної теплоємності при сталому об'ємі:</p>
+<div class="math notranslate nohighlight">
+\[ \gamma = \frac{C_p}{C_V} \]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(C_p = \left( \frac{i}{2} + 1 \right) R\)</span> та <span class="math notranslate nohighlight">\(C_V = \frac{i}{2} R\)</span>, ми можемо обчислити <span class="math notranslate nohighlight">\(\gamma\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \gamma = \frac{\left( \frac{i}{2} + 1 \right) R}{\frac{i}{2} R} = \frac{\frac{i}{2} + 1}{\frac{i}{2}} = 1 + \frac{1}{\frac{i}{2}} = 1 + \frac{2}{i} \]</div>
+<ul class="simple">
+<li><p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>): <span class="math notranslate nohighlight">\(\gamma = 1 + \frac{2}{3} = \frac{5}{3} \approx 1.67\)</span>.</p></li>
+<li><p>Для двохатомного газу (<span class="math notranslate nohighlight">\(i=5\)</span>): <span class="math notranslate nohighlight">\(\gamma = 1 + \frac{2}{5} = \frac{7}{5} = 1.4\)</span>.</p></li>
+<li><p>Для багатоатомного газу (<span class="math notranslate nohighlight">\(i=6\)</span>): <span class="math notranslate nohighlight">\(\gamma = 1 + \frac{2}{6} = 1 + \frac{1}{3} = \frac{4}{3} \approx 1.33\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Адіабата (графік адіабатного процесу):</strong></p>
+<p>На <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі адіабата є крутішою кривою, ніж ізотерма, що проходить через ту ж початкову точку. Це тому, що при адіабатному розширенні газ не тільки виконує роботу (зменшується тиск через збільшення об'єму), але й охолоджується (зменшується внутрішня енергія), що призводить до ще більшого падіння тиску. Аналогічно, при адіабатному стисненні тиск зростає швидше, ніж при ізотермічному, через нагрівання газу.</p>
+</li>
+</ul>
+<p><strong>Нерівноважні адіабатні процеси та їхні обмеження:</strong></p>
+<p>Важливо пам'ятати, що швидкі адіабатні процеси, які ми часто зустрічаємо в реальності (наприклад, у двигунах внутрішнього згоряння), є <strong>нерівноважними</strong>. Під час дуже швидкого стиснення або розширення газ всередині системи не встигає досягти рівноваги. Тиск і температура можуть сильно відрізнятися в різних точках об'єму газу. У таких випадках поняття &quot;стану системи&quot; (одного значення <span class="math notranslate nohighlight">\(p, V, T\)</span>) є умовним, а графік на <span class="math notranslate nohighlight">\(p-V\)</span> діаграмі (адіабата) та формула <span class="math notranslate nohighlight">\(pV^\gamma = \text{const}\)</span> стають лише наближеннями, які описують ідеалізований, оборотний адіабатний процес. Реальні ж адіабатні процеси супроводжуються зростанням ентропії, що відображає їхню необоротність.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2>Рівняння теплового балансу<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Рівняння теплового балансу є прямим наслідком закону збереження енергії і застосовується для ізольованих систем, де відбувається лише теплообмін (без виконання макроскопічної роботи).</p>
+<blockquote>
+<div><p><strong>Рівняння теплового балансу</strong> стверджує, що сума всіх кількостей теплоти, які обмінюються між тілами в ізольованій системі, дорівнює нулю.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[ Q_1 + Q_2 + ... + Q_n = 0 \]</div>
+<p>де <span class="math notranslate nohighlight">\(Q_k\)</span> - кількість теплоти, яку отримало (якщо <span class="math notranslate nohighlight">\(Q_k &gt; 0\)</span>) або віддало (якщо <span class="math notranslate nohighlight">\(Q_k &lt; 0\)</span>) <span class="math notranslate nohighlight">\(k\)</span>-те тіло.</p>
+<p><strong>Фізичний зміст:</strong> Енергія, яку віддають одні тіла, повністю поглинається іншими тілами в системі, без втрат у навколишнє середовище (оскільки система ізольована).</p>
+<p><strong>Приклад:</strong> Уявіть, що ви кидаєте гарячий металевий брусок у холодну воду в теплоізольованій посудині. Система &quot;брусок + вода + посудина&quot; є ізольованою (припускаємо, що немає теплообміну з навколишнім середовищем).</p>
+<ul class="simple">
+<li><p>Брусок віддає теплоту: <span class="math notranslate nohighlight">\(Q_{\text{брусок}} &lt; 0\)</span>.</p></li>
+<li><p>Вода отримує теплоту: <span class="math notranslate nohighlight">\(Q_{\text{вода}} &gt; 0\)</span>.</p></li>
+<li><p>Посудина (якщо вона теж бере участь у теплообміні) отримує теплоту: <span class="math notranslate nohighlight">\(Q_{\text{посудина}} &gt; 0\)</span>.
+Рівняння теплового балансу буде:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ Q_{\text{брусок}} + Q_{\text{вода}} + Q_{\text{посудина}} = 0 \]</div>
+<p>Підставляючи формули для <span class="math notranslate nohighlight">\(Q\)</span> (наприклад, <span class="math notranslate nohighlight">\(cm\Delta T\)</span>), ми можемо знайти невідомі параметри (наприклад, кінцеву температуру, питому теплоємність одного з тіл тощо).</p>
+</section>
+<hr class="docutils" />
+<section id="id12">
+<h2>Додаткові матеріали<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+</section>
+<section id="id13">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\mkt"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="internal-energy-and-work-in-thermodynamics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Вступ до термодинаміки. Внутрішня енергія та робота в термодинаміці</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="second-and-third-laws-of-thermodynamics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Другий та третій закони термодинаміки. Теплові машини</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Закон збереження та перетворення енергії для теплових процесів</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Формулювання 1: Через роботу зовнішніх сил над системою</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Формулювання 2: Через роботу системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Функції стану та шлях процесу</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Вічний двигун першого роду</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Теплоємність ідеального газу. Рівняння Маєра</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-v">Молярна теплоємність при сталому об'ємі (<span class="math notranslate nohighlight">\(C_V\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-p">Молярна теплоємність при сталому тиску (<span class="math notranslate nohighlight">\(C_p\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Рівняння Маєра</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Застосування першого закону термодинаміки до ізопроцесів ідеального газу</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v-text-const">1. Ізохорний процес (<span class="math notranslate nohighlight">\(V = \text{const}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-text-const">2. Ізотермічний процес (<span class="math notranslate nohighlight">\(T = \text{const}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-text-const">3. Ізобарний процес (<span class="math notranslate nohighlight">\(p = \text{const}\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4. Адіабатний процес</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Рівняння теплового балансу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Додаткові матеріали (англійською)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
