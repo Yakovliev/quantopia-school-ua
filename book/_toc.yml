@@ -75,6 +75,9 @@ parts:
       - file: physics/mkt/liquid-surface-tension
       - file: physics/mkt/solids
       - file: physics/mkt/solids-properties
+      - file: physics/mkt/internal-energy-and-work-in-thermodynamics
+      - file: physics/mkt/first-law-of-thermodynamics
+      - file: physics/mkt/second-and-third-laws-of-thermodynamics
 
   - caption: ТЕРМОДИНАМІКА
     chapters:   
