@@ -150,6 +150,7 @@ parts:
       - file: physics/tasks/electrodynamics-classroom-01
       - file: physics/tasks/electrodynamics-classroom-02
       - file: physics/tasks/electromagnetic-waves-classroom
+      - file: physics/tasks/optics-tasks
 
 
   # - caption: Розділ Електричне поле
