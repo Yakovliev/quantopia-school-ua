@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Активний та рективний опори. Діючі значення сили струму та напруги &#8212; Quantopia School UA</title>
+    <title>Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло &#8212; Quantopia School UA</title>
   
   
   
@@ -67,8 +67,8 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Природа світла" href="../optics/nature_of_light.html" />
-    <link rel="prev" title="Змінний струм" href="alternating-current.html" />
+    <link rel="next" title="Трансформатор. Передача електроенергії на великі відстані" href="transformer.html" />
+    <link rel="prev" title="Діючі значення змінного струму та напруги. Потужність у колі змінного струму" href="power-and-effective-current.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="ua"/>
   <meta name="docsearch:version" content="" />
@@ -277,7 +277,10 @@
 <li class="toctree-l1"><a class="reference internal" href="damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="self-oscillations.html">Автоколивання (Pending)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="alternating-current.html">Змінний струм</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Активний та рективний опори. Діючі значення сили струму та напруги</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power-and-effective-current.html">Діючі значення змінного струму та напруги. Потужність у колі змінного струму</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transformer.html">Трансформатор. Передача електроенергії на великі відстані</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -492,7 +495,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Активний та рективний опори. Діючі значення сили струму та напруги</h1>
+    <h1>Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -502,56 +505,41 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Діючі (ефективні) значення змінного струму та напруги</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Тепловий ефект змінного струму та діюче значення сили струму</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Діюче значення напруги</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Діюче значення ЕРС</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Активний опір (резистор) у колі змінного струму</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Конденсатор у колі змінного струму</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-c">Ємнісний опір (<span class="math notranslate nohighlight">\(X_C\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Закон Ома для кола з ємністю</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Потужність у колі з ємнісним навантаженням</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Потужність у колі змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Миттєва потужність</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Середня потужність за період (активна потужність)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Коефіцієнт потужності</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Реактивна потужність та повна потужність (трикутник потужностей)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Котушка індуктивності в колі змінного струму</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-l">Індуктивний опір (<span class="math notranslate nohighlight">\(X_L\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Закон Ома для кола з індуктивністю</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Потужність у колі з індуктивним навантаженням</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Елементи кола змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Активний опір (резистор) у колі змінного струму</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Конденсатор у колі змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-c">Ємнісний опір (<span class="math notranslate nohighlight">\(X_C\)</span>)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Закон Ома для кола з ємністю</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Потужність у колі з ємнісним навантаженням</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Котушка індуктивності в колі змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-l">Індуктивний опір (<span class="math notranslate nohighlight">\(X_L\)</span>)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Закон Ома для кола з індуктивністю</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Потужність у колі з індуктивним навантаженням</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Реактивний опір</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlc">Послідовне коло змінного струму (RLC-коло)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Векторна діаграма напруг</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Реактивний опір</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlc">Послідовне коло змінного струму з активним, ємнісним та індуктивними опорами (послідовне RLC коло)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Векторна діаграма напруг</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z">Повний опір кола (імпеданс) <span class="math notranslate nohighlight">\(Z\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Зсув фаз у послідовному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Активна потужність у послідовному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Резонанс напруг у послідовному RLC колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Зсув фаз у послідовному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Активна потужність у послідовному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Резонанс напруг у послідовному RLC колі</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Паралельне коло змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Векторна діаграма струмів</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Повний опір паралельного кола (імпеданс)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Зсув фаз у паралельному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Активна потужність у паралельному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Резонанс струмів у паралельному RLC колі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Паралельне коло змінного струму з активним, ємнісним та індуктивними опорами (паралельне RLC коло)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Векторна діаграма струмів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Повний опір паралельного кола (імпеданс)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Зсув фаз у паралельному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Активна потужність у паралельному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Резонанс струмів у паралельному RLC колі</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Порівняння резонансів в паралельному та послідовному RLC колах</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Застосування RLC-кіл та резонансу</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Порівняння резонансів в паралельному та послідовному RLC колах</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Застосування RLC-кіл та резонансу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Додаткові матеріали (англійською)</a></li>
 </ul>
             </nav>
         </div>
@@ -563,181 +551,11 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Активний та рективний опори. Діючі значення сили струму та напруги<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<section id="id2">
-<h2>Діючі (ефективні) значення змінного струму та напруги<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>У попередньому розділі ми розглядали <strong>миттєві значення</strong> сили струму <span class="math notranslate nohighlight">\(i(t)\)</span> та напруги <span class="math notranslate nohighlight">\(u(t)\)</span>, які змінюються за синусоїдальним законом, а також їхні <strong>амплітудні значення</strong> <span class="math notranslate nohighlight">\(I_m\)</span> та <span class="math notranslate nohighlight">\(U_m\)</span> (максимальні значення).</p>
-<p>Ми знаємо, що для чисто активного навантаження (резистора) у колі змінного струму миттєві значення сили струму та напруги задаються так:</p>
-<div class="math notranslate nohighlight">
-\[i(t) = I_m \sin(\omega t)\]</div>
-<div class="math notranslate nohighlight">
-\[u(t) = U_m \sin(\omega t)\]</div>
-<p>Однак, якщо ми спробуємо обчислити середнє значення синусоїдального струму за один період, то отримаємо нуль, оскільки струм однаково часто буває позитивним і негативним. Це створює незручності для практичного використання. Наприклад, лампочка розжарювання світиться, тому що спіраль нагрівається, незалежно від напрямку струму. Отже, нам потрібна така характеристика, яка б відображала &quot;працю&quot; змінного струму, його здатність виділяти тепло.</p>
-<p>Саме для цього вводять поняття <strong>діючих (ефективних) значень</strong> сили струму та напруги. Вони дозволяють нам використовувати звичні формули закону Ома та потужності, наче ми маємо справу з постійним струмом, що значно спрощує розрахунки.</p>
-<section id="id3">
-<h3>Тепловий ефект змінного струму та діюче значення сили струму<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<p>Давайте згадаємо закон Джоуля для постійного струму. Кількість теплоти <span class="math notranslate nohighlight">\(Q_d\)</span>, що виділяється в резисторі з опором <span class="math notranslate nohighlight">\(R\)</span> за час <span class="math notranslate nohighlight">\(t\)</span>, визначається як:</p>
-<div class="math notranslate nohighlight">
-\[Q_d = I^2 R t\]</div>
-<p>де <span class="math notranslate nohighlight">\(I\)</span> - постійна сила струму.</p>
-<p>У випадку змінного струму, його миттєве значення <span class="math notranslate nohighlight">\(i(t)\)</span> постійно змінюється. Тому миттєва потужність тепловиділення також змінюється:</p>
-<div class="math notranslate nohighlight">
-\[p(t) = i^2(t) R\]</div>
-<p>Підставимо вираз для <span class="math notranslate nohighlight">\(i(t)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[p(t) = (I_m \sin(\omega t))^2 R = I_m^2 R \sin^2(\omega t)\]</div>
-<p>Щоб знайти загальну кількість теплоти, що виділиться за один період <span class="math notranslate nohighlight">\(T\)</span>, нам потрібно проінтегрувати миттєву потужність за цей період. На профільному шкільному рівні ми можемо скористатися відомою математичною тотожністю для <span class="math notranslate nohighlight">\(\sin^2(\omega t)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\sin^2(\omega t) = \frac{1 - \cos(2\omega t)}{2}\]</div>
-<p>Тепер миттєва потужність стає:</p>
-<div class="math notranslate nohighlight">
-\[p(t) = I_m^2 R \frac{1 - \cos(2\omega t)}{2}\]</div>
-<div class="math notranslate nohighlight">
-\[p(t) = \frac{I_m^2 R}{2} - \frac{I_m^2 R}{2} \cos(2\omega t)\]</div>
-<p>Ми бачимо, що потужність складається з двох частин: постійної <span class="math notranslate nohighlight">\(\frac{I_m^2 R}{2}\)</span> та змінної <span class="math notranslate nohighlight">\(\frac{I_m^2 R}{2} \cos(2\omega t)\)</span>, яка коливається з подвоєною частотою. Середнє значення косинуса за цілий період (або будь-яку кількість періодів) дорівнює нулю. Отже, <strong>середня потужність тепловиділення</strong> за період буде:</p>
-<div class="math notranslate nohighlight">
-\[P_{с} = \overline{p(t)} = \frac{I_m^2 R}{2}\]</div>
-<p>Тепер давайте поставимо питання: яка має бути сила <strong>постійного струму</strong> <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span>, щоб він виділив таку ж саму кількість теплоти в тому ж резисторі <span class="math notranslate nohighlight">\(R\)</span> за той же час <span class="math notranslate nohighlight">\(T\)</span>?</p>
-<div class="math notranslate nohighlight">
-\[Q_{постійний} = I_{\text{д}}^2 R T\]</div>
-<p>А кількість теплоти від змінного струму за час <span class="math notranslate nohighlight">\(T\)</span> дорівнює <span class="math notranslate nohighlight">\(P_{с} \cdot T\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[Q_{змінний} = \left(\frac{I_m^2 R}{2}\right) T\]</div>
-<p>Прирівнюємо ці кількості теплоти:</p>
-<div class="math notranslate nohighlight">
-\[I_{\text{д}}^2 R T = \frac{I_m^2 R}{2} T\]</div>
-<p>Скорочуємо <span class="math notranslate nohighlight">\(R\)</span> і <span class="math notranslate nohighlight">\(T\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[I_{\text{д}}^2 = \frac{I_m^2}{2}\]</div>
-<p>Підносимо до квадратного кореня:</p>
-<div class="math notranslate nohighlight">
-\[I_{\text{д}} = \sqrt{\frac{I_m^2}{2}} = \frac{I_m}{\sqrt{2}}\]</div>
-<p>Отже, ми визначили <strong>діюче (ефективне) значення сили струму</strong>.</p>
-<blockquote>
-<div><p><strong>Діюче (ефективне) значення сили струму</strong> <span class="math notranslate nohighlight">\(I\)</span> - це таке значення постійного струму, який за один період змінного струму виділяє в провіднику таку ж саму кількість теплоти, що й змінний струм.</p>
-<div class="math notranslate nohighlight">
-\[I_{\text{д}} = \frac{I_m}{\sqrt{2}}\]</div>
-<p>Одиниця в СІ: <strong>Ампер (А)</strong>.</p>
-</div></blockquote>
-<p>Значення <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> приблизно дорівнює 1.41. Отже, <span class="math notranslate nohighlight">\(I \approx 0.707 I_m\)</span>. Діюче значення струму приблизно в 1.41 рази менше від амплітудного.</p>
-</section>
-<section id="id4">
-<h3>Діюче значення напруги<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
-<p>Аналогічно ми можемо ввести діюче значення напруги. Якщо ми знаємо, що <span class="math notranslate nohighlight">\(U_m = I_m R\)</span> (для активного опору), то:</p>
-<div class="math notranslate nohighlight">
-\[U_{\text{д}} = I_{\text{д}} R = \left(\frac{I_m}{\sqrt{2}}\right) R = \frac{I_m R}{\sqrt{2}} = \frac{U_m}{\sqrt{2}}\]</div>
-<blockquote>
-<div><p><strong>Діюче (ефективне) значення напруги</strong> <span class="math notranslate nohighlight">\(U\)</span> - це таке значення постійної напруги, яка за один період змінного струму виділяє в провіднику таку ж саму кількість теплоти, що й змінна напруга.</p>
-<div class="math notranslate nohighlight">
-\[U_{\text{д}} = \frac{U_m}{\sqrt{2}}\]</div>
-<p>Одиниця в СІ: <strong>Вольт (В)</strong>.</p>
-</div></blockquote>
-<p>Ми бачимо, що діючі значення струму та напруги пов'язані з амплітудними однаковим співвідношенням.</p>
-</section>
-<section id="id5">
-<h3>Діюче значення ЕРС<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
-<p>За аналогією, діюче значення ЕРС генератора також визначається як:</p>
-<div class="math notranslate nohighlight">
-\[\mathcal{E}_{\text{д}} = \frac{\mathcal{E}_m}{\sqrt{2}}\]</div>
-<p>Одиниця в СІ: <strong>Вольт (В)</strong>.</p>
-<p><strong>Важливо пам'ятати:</strong> усі значення напруги та струму, які ми зазвичай бачимо на електроприладах, в розетках (наприклад, &quot;220 В&quot;), є саме діючими (ефективними) значеннями. Це зручно, оскільки вони безпосередньо пов'язані з виділенням енергії та дозволяють застосовувати звичні формули. Амплітудне значення напруги в розетці 220 В буде <span class="math notranslate nohighlight">\(U_m = U \sqrt{2} = 220 \cdot 1.41 \approx 311\)</span> В.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="id6">
-<h2>Потужність у колі змінного струму<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
-<p>Потужність - це одна з найважливіших характеристик електричного кола, що показує швидкість перетворення електричної енергії в інші види. У колі змінного струму все дещо складніше, ніж у колі постійного струму, через зміну напрямку струму та можливість фазового зсуву між струмом і напругою.</p>
-<p>Миттєві значення струму та напруги в загальному випадку (коли є фазовий зсув <span class="math notranslate nohighlight">\(\varphi\)</span>) можна записати як:</p>
-<div class="math notranslate nohighlight">
-\[u(t) = U_m \sin(\omega t)\]</div>
-<div class="math notranslate nohighlight">
-\[i(t) = I_m \sin(\omega t + \varphi)\]</div>
-<section id="id7">
-<h3>Миттєва потужність<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
-<p>Миттєва потужність <span class="math notranslate nohighlight">\(p(t)\)</span> у колі, як і для постійного струму, дорівнює добутку миттєвих значень напруги та сили струму:</p>
-<div class="math notranslate nohighlight">
-\[p(t) = u(t) \cdot i(t)\]</div>
-<p>Підставимо наші вирази для <span class="math notranslate nohighlight">\(u(t)\)</span> та <span class="math notranslate nohighlight">\(i(t)\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[p(t) = U_m \sin(\omega t) \cdot I_m \sin(\omega t + \varphi)\]</div>
-<div class="math notranslate nohighlight">
-\[p(t) = U_m I_m \sin(\omega t) \sin(\omega t + \varphi)\]</div>
-<p>Використаємо тригонометричну тотожність <span class="math notranslate nohighlight">\(\sin A \sin B = \frac{1}{2}[\cos(A-B) - \cos(A+B)]\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[p(t) = U_m I_m \frac{1}{2}[\cos(\omega t - (\omega t + \varphi)) - \cos(\omega t + \omega t + \varphi)]\]</div>
-<div class="math notranslate nohighlight">
-\[p(t) = \frac{U_m I_m}{2}[\cos(-\varphi) - \cos(2\omega t + \varphi)]\]</div>
-<div class="math notranslate nohighlight">
-\[p(t) = \frac{U_m I_m}{2}[\cos(\varphi) - \cos(2\omega t + \varphi)]\]</div>
-<p>Ця формула показує, що миттєва потужність коливається з подвоєною частотою <span class="math notranslate nohighlight">\(2\omega\)</span>. Вона може бути як позитивною, так і негативною, що означає, що енергія не тільки віддається в коло, але й повертається до джерела (наприклад, накопичується в реактивних елементах, таких як котушка індуктивності та конденсатор, а потім віддається назад).</p>
-</section>
-<section id="id8">
-<h3>Середня потужність за період (активна потужність)<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
-<p>Для практичних цілей нас більше цікавить середня потужність за період, тобто та потужність, яка безповоротно перетворюється в інші види енергії (наприклад, теплоту, світло, механічну роботу). Ця потужність називається <strong>активною потужністю</strong>.</p>
-<p>Щоб знайти середнє значення миттєвої потужності <span class="math notranslate nohighlight">\(p(t)\)</span> за період <span class="math notranslate nohighlight">\(T\)</span>, ми можемо взяти середнє від кожного члена у виразі для <span class="math notranslate nohighlight">\(p(t)\)</span>. Ми пам'ятаємо, що середнє значення гармонічних функцій (синуса або косинуса) за цілий період дорівнює нулю. Отже, середнє значення члена <span class="math notranslate nohighlight">\(\cos(2\omega t + \varphi)\)</span> буде нульовим.</p>
-<p>Залишається тільки перший член, який є постійною величиною:</p>
-<div class="math notranslate nohighlight">
-\[P = \overline{p(t)} = \frac{U_m I_m}{2}\cos\varphi\]</div>
-<p>Це і є формула для <strong>середньої (активної) потужності</strong> у колі змінного струму.</p>
-<p>Ми можемо переписати цю формулу, використовуючи діючі значення струму та напруги. Ми знаємо, що <span class="math notranslate nohighlight">\(U_m = U_{\text{д}} \sqrt{2}\)</span> та <span class="math notranslate nohighlight">\(I_m = I_{\text{д}} \sqrt{2}\)</span>. Підставимо їх:</p>
-<div class="math notranslate nohighlight">
-\[P = \frac{(U_{\text{д}} \sqrt{2})(I_{\text{д}}\sqrt{2})}{2}\cos\varphi\]</div>
-<div class="math notranslate nohighlight">
-\[P = \frac{U_{\text{д}} I_{\text{д}} \cdot 2}{2}\cos\varphi\]</div>
-<div class="math notranslate nohighlight">
-\[P = U_{\text{д}} I_{\text{д}} \cos\varphi\]</div>
-<blockquote>
-<div><p><strong>Активна потужність</strong> <span class="math notranslate nohighlight">\(P\)</span> - це середня потужність, яка безповоротно перетворюється в інші види енергії (теплову, механічну, світлову) за період коливань.</p>
-<div class="math notranslate nohighlight">
-\[P = U_{\text{д}} I_{\text{д}} \cos\varphi\]</div>
-<p>Одиниця в СІ: <strong>Ватт (Вт)</strong>.</p>
-</div></blockquote>
-</section>
-<section id="id9">
-<h3>Коефіцієнт потужності<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
-<p>Величина <span class="math notranslate nohighlight">\(\cos\varphi\)</span> у формулі активної потужності називається <strong>коефіцієнтом потужності</strong>.</p>
-<blockquote>
-<div><p><strong>Коефіцієнт потужності</strong> <span class="math notranslate nohighlight">\(\cos\varphi\)</span> - це величина, що показує, яка частка повної (уявної) потужності перетворюється на активну. Вона характеризує ефективність використання електричної енергії.</p>
-<p>Оскільки <span class="math notranslate nohighlight">\(\cos\varphi\)</span> - це відношення, він є безрозмірнісною величиною.</p>
-</div></blockquote>
-<p>Значення коефіцієнта потужності лежить у межах від 0 до 1.</p>
-<ul class="simple">
-<li><p>Якщо <span class="math notranslate nohighlight">\(\cos\varphi = 1\)</span> (тобто <span class="math notranslate nohighlight">\(\varphi=0\)</span>), вся потужність є активною. Це ідеальний випадок, характерний для чисто активного навантаження. Саме цей випадок ми детально розглянули вище, коли шукали діючі значення сили струму та напруги.</p></li>
-<li><p>Якщо <span class="math notranslate nohighlight">\(\cos\varphi = 0\)</span> (тобто <span class="math notranslate nohighlight">\(\varphi = \pm \frac{\pi}{2}\)</span>), активна потужність дорівнює нулю. Це означає, що енергія в колі тільки обмінюється між джерелом та навантаженням, не перетворюючись в інші види. Таке навантаження називають <strong>реактивним</strong>.</p></li>
-</ul>
-<p>Низький коефіцієнт потужності (мале <span class="math notranslate nohighlight">\(\cos\varphi\)</span>) означає, що для передачі тієї ж активної потужності потрібно пропускати більший струм, що призводить до більших втрат енергії на нагрівання проводів і зменшує ефективність роботи електромережі. Тому на промислових підприємствах прагнуть &quot;компенсувати&quot; реактивну потужність, підвищуючи коефіцієнт потужності.</p>
-</section>
-<section id="id10">
-<h3>Реактивна потужність та повна потужність (трикутник потужностей)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
-<p>Окрім активної потужності, у колах змінного струму часто розглядають також <strong>реактивну потужність</strong> та <strong>повну (уявну) потужність</strong>.</p>
-<ul>
-<li><p><strong>Реактивна потужність</strong> <span class="math notranslate nohighlight">\(Q = U_{\text{д}} I_{\text{д}} \sin\varphi\)</span>. Вона характеризує енергію, яка не перетворюється в інші види, а циркулює між джерелом і реактивними елементами (котушками та конденсаторами) кола. Реактивна потужність не виконує корисної роботи, але її наявність призводить до збільшення струму в мережі та додаткових втрат. Одиниця в СІ: <strong>ватт (Вт)</strong>. Позасистемна одиниця - <strong>вольт-ампер реактивний (Вар)</strong>.</p></li>
-<li><p><strong>Повна (уявна) потужність</strong> <span class="math notranslate nohighlight">\(S = U_{\text{д}} I_{\text{д}}\)</span>. Це повна потужність, що генерується джерелом і передається в коло. Вона є <strong>геометричною сумою</strong> активної та реактивної потужностей. Ми можемо уявити ці три потужності як сторони прямокутного трикутника, який називається <strong>трикутником потужностей</strong>:</p>
-<ul class="simple">
-<li><p>Активна потужність <span class="math notranslate nohighlight">\(P\)</span> - прилеглий катет (горизонтальна вісь).</p></li>
-<li><p>Реактивна потужність <span class="math notranslate nohighlight">\(Q\)</span> - протилежний катет (вертикальна вісь).</p></li>
-<li><p>Повна потужність <span class="math notranslate nohighlight">\(S\)</span> - гіпотенуза.</p></li>
-</ul>
-<p>Тоді за теоремою Піфагора:</p>
-<div class="math notranslate nohighlight">
-\[S = \sqrt{P^2 + Q^2}\]</div>
-<p>Одиниця в СІ: <strong>вольт-ампер (ВА)</strong>.</p>
-</li>
-</ul>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Cmplxpower.svg" alt="Cmplxpower.svg" height="499" width="793"></p>
-<br>
-<p>Рис. 1. Повна (уявна) потужність <span class="math notranslate nohighlight">\(S\)</span> - це векторна сума вектора активної потужності <span class="math notranslate nohighlight">\(P\)</span> та вектора реактивної потужності <span class="math notranslate nohighlight">\(Q\)</span>. <span class="math notranslate nohighlight">\(\phi\)</span> - це фазовий зсув між напругою та струмом. Хоча потужності є скалярними величинами, у даному випадку ми їм присвоюємо певні напрямки, щоб утворити прямокутний трикутних потужностей.
-Автор: <a href="https://commons.wikimedia.org/w/index.php?title=User:Eli_Osherovich&amp;action=edit&amp;redlink=1" class="new" title="User:Eli Osherovich (page does not exist)">Eli Osherovich</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=15308452">Link</a>. <a href="https://en.wikipedia.org/wiki/Volt-ampere">Wikipedia</a></p>
-<p>Надалі ми будемо зосереджуватись переважно на активній потужності <span class="math notranslate nohighlight">\(P\)</span>, оскільки вона відображає корисну роботу.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="id11">
-<h2>Елементи кола змінного струму<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
-<p>Ми вже коротко розглянули активний опір. Тепер детальніше зупинимося на всіх трьох основних пасивних елементах кола змінного струму: активному опорі (резисторі), конденсаторі та котушці індуктивності. Ми дізнаємося, як кожен з них взаємодіє зі змінним струмом і як це впливає на фазові співвідношення між струмом і напругою.</p>
-<section id="id12">
-<h3>Активний опір (резистор) у колі змінного струму<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="rlc-rlc">
+<h1>Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло<a class="headerlink" href="#rlc-rlc" title="Link to this heading">#</a></h1>
+<p>У цій лекції ми детальніше зупинимося на всіх трьох основних пасивних елементах кола змінного струму: активному опорі (резисторі), конденсаторі та котушці індуктивності. Ми дізнаємося, як кожен з них взаємодіє зі змінним струмом і як це впливає на фазові співвідношення між струмом і напругою. Перед вивченням цієї лекції, рекомендуємо детально згадати попередню <a class="reference internal" href="power-and-effective-current.html"><span class="std std-doc">лекцію</span></a>.</p>
+<section id="id1">
+<h2>Активний опір (резистор) у колі змінного струму<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p><strong>Активний опір</strong> (або <strong>омічний опір</strong>) <span class="math notranslate nohighlight">\(R\)</span> - це елемент кола, який повністю перетворює електричну енергію на теплову. Прикладами є лампи розжарювання, нагрівальні елементи.</p>
 <p>Якщо до резистора підключити джерело змінної напруги <span class="math notranslate nohighlight">\(u(t) = U_m \sin(\omega t)\)</span>, то сила струму через нього визначатиметься законом Ома:</p>
 <div class="math notranslate nohighlight">
@@ -763,8 +581,8 @@
 \[P = U_{\text{д}}I_{\text{д}} = I_{\text{д}}^2 R = \frac{U_{\text{д}}^2}{R}\]</div>
 <p>Уся енергія, що подається на резистор, перетворюється на тепло.</p>
 </section>
-<section id="id13">
-<h3>Конденсатор у колі змінного струму<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<section id="id2">
+<h2>Конденсатор у колі змінного струму<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Ми знаємо, що конденсатор - це пристрій, здатний накопичувати електричний заряд, а отже, й електричну енергію. Його основна характеристика - <strong>електрична ємність</strong> <span class="math notranslate nohighlight">\(C\)</span>.</p>
 <p>Коли ми підключаємо конденсатор до джерела постійної напруги, він заряджається до цієї напруги, і струм через нього припиняється (після завершення процесу зарядки). Але що відбувається, коли напруга постійно змінюється?</p>
 <p>У колі змінного струму напруга на конденсаторі безперервно змінюється за синусоїдальним законом. Це означає, що конденсатор постійно перезаряджається:</p>
@@ -803,9 +621,9 @@
 <div><p><strong>Фазовий зсув у колі з конденсатором:</strong> Струм у чисто ємнісному колі <strong>випереджає</strong> напругу на <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> (на 90 градусів).</p>
 </div></blockquote>
 <p>Це означає, що струм досягає свого максимуму на чверть періоду раніше, ніж напруга. Іншими словами, струм тече, коли напруга ще тільки починає зростати або спадати.</p>
-<p>Примітка: Напруга на конденсаторі в будь-який момент часу визначається зарядом цього конденсатора <span class="math notranslate nohighlight">\(u(t) = C / q(t)\)</span>. Заряд конденсатора утворюється в результаті проходження електричного струму. Тобто струм йде &quot;першим&quot;, а напруга, як і заряд, &quot;другою&quot;. Саме тому ми говоримо, що струм <strong>випереджає</strong> напругу.</p>
+<p>Примітка: Напруга на конденсаторі в будь-який момент часу визначається зарядом цього конденсатора <span class="math notranslate nohighlight">\(u(t) = q(t) / C\)</span>. Заряд конденсатора утворюється в результаті проходження електричного струму. Тобто струм йде &quot;першим&quot;, а напруга, як і заряд, &quot;другою&quot;. Саме тому ми говоримо, що струм <strong>випереджає</strong> напругу.</p>
 <section id="x-c">
-<h4>Ємнісний опір (<span class="math notranslate nohighlight">\(X_C\)</span>)<a class="headerlink" href="#x-c" title="Link to this heading">#</a></h4>
+<h3>Ємнісний опір (<span class="math notranslate nohighlight">\(X_C\)</span>)<a class="headerlink" href="#x-c" title="Link to this heading">#</a></h3>
 <p>З отриманого виразу для амплітуди струму <span class="math notranslate nohighlight">\(I_m = U_m C \omega\)</span>, ми можемо визначити так званий <strong>ємнісний опір</strong> <span class="math notranslate nohighlight">\(X_C\)</span>. За аналогією із законом Ома для активного опору (<span class="math notranslate nohighlight">\(R = U_m/I_m\)</span>), ми можемо записати:</p>
 <div class="math notranslate nohighlight">
 \[X_C = \frac{U_m}{I_m}\]</div>
@@ -827,8 +645,8 @@
 <li><p>Чим вища частота <span class="math notranslate nohighlight">\(\nu\)</span> (або <span class="math notranslate nohighlight">\(\omega\)</span>), тим менший ємнісний опір. При високих частотах конденсатор постійно перезаряджається, і струм через нього легко тече. Для постійного струму (<span class="math notranslate nohighlight">\(\nu=0\)</span>) ємнісний опір стає нескінченним (<span class="math notranslate nohighlight">\(X_C \to \infty\)</span>), що означає, що постійний струм через конденсатор не проходить.</p></li>
 </ul>
 </section>
-<section id="id14">
-<h4>Закон Ома для кола з ємністю<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<section id="id3">
+<h3>Закон Ома для кола з ємністю<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>Використовуючи діючі значення напруги та струму, закон Ома для чисто ємнісного кола має вигляд:</p>
 <div class="math notranslate nohighlight">
 \[I_{\text{д}} = \frac{U_{\text{д}}}{X_C}\]</div>
@@ -836,8 +654,8 @@
 <div class="math notranslate nohighlight">
 \[U_{\text{д}} = I_{\text{д}} X_C\]</div>
 </section>
-<section id="id15">
-<h4>Потужність у колі з ємнісним навантаженням<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<section id="id4">
+<h3>Потужність у колі з ємнісним навантаженням<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>Давайте розглянемо активну потужність у чисто ємнісному колі. Ми знаємо, що загальна формула для активної потужності:</p>
 <div class="math notranslate nohighlight">
 \[P = U_{\text{д}} I_{\text{д}} \cos\varphi\]</div>
@@ -851,8 +669,8 @@
 <p>Це означає, що конденсатор не споживає енергію безповоротно. Він лише накопичує енергію в електричному полі під час зарядки і повністю віддає її назад у коло під час розрядки. Ця енергія, яка циркулює між джерелом і реактивним елементом, є реактивною потужністю.</p>
 </section>
 </section>
-<section id="id16">
-<h3>Котушка індуктивності в колі змінного струму<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h2>Котушка індуктивності в колі змінного струму<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>Котушка індуктивності (індуктор) - це елемент кола, який накопичує енергію в магнітному полі. Її основна характеристика - <strong>індуктивність</strong> <span class="math notranslate nohighlight">\(L\)</span>.</p>
 <p>Ми вже знаємо, що при зміні струму в котушці виникає <strong>ЕРС самоіндукції</strong>, яка протидіє цій зміні.</p>
 <blockquote>
@@ -890,7 +708,7 @@
 </div></blockquote>
 <p>Це означає, що струм досягає свого максимуму на чверть періоду пізніше, ніж напруга. Котушка &quot;чинить опір&quot; швидкій зміні струму, тому струм &quot;запізнюється&quot; відносно напруги, яка його викликає.</p>
 <section id="x-l">
-<h4>Індуктивний опір (<span class="math notranslate nohighlight">\(X_L\)</span>)<a class="headerlink" href="#x-l" title="Link to this heading">#</a></h4>
+<h3>Індуктивний опір (<span class="math notranslate nohighlight">\(X_L\)</span>)<a class="headerlink" href="#x-l" title="Link to this heading">#</a></h3>
 <p>З отриманого виразу для амплітуди напруги <span class="math notranslate nohighlight">\(U_m = I_m L \omega\)</span>, ми можемо визначити так званий <strong>індуктивний опір</strong> <span class="math notranslate nohighlight">\(X_L\)</span>. За аналогією із законом Ома для активного опору (<span class="math notranslate nohighlight">\(R = U_m/I_m\)</span>), ми можемо записати:</p>
 <div class="math notranslate nohighlight">
 \[X_L = \frac{U_m}{I_m}\]</div>
@@ -912,8 +730,8 @@
 <li><p>Чим вища частота <span class="math notranslate nohighlight">\(\nu\)</span> (або <span class="math notranslate nohighlight">\(\omega\)</span>), тим більший індуктивний опір. При високих частотах струм змінюється дуже швидко, ЕРС самоіндукції велика, і котушка сильно перешкоджає протіканню струму. Для постійного струму (<span class="math notranslate nohighlight">\(\nu=0\)</span>) індуктивний опір дорівнює нулю (<span class="math notranslate nohighlight">\(X_L = 0\)</span>), що означає, що постійний струм через ідеальну котушку проходить без опору (якщо не враховувати її власного активного опору обмотки).</p></li>
 </ul>
 </section>
-<section id="id17">
-<h4>Закон Ома для кола з індуктивністю<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
+<section id="id6">
+<h3>Закон Ома для кола з індуктивністю<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p>Використовуючи діючі значення напруги та струму, закон Ома для чисто індуктивного кола має вигляд:</p>
 <div class="math notranslate nohighlight">
 \[I_{\text{д}} = \frac{U_{\text{д}}}{X_L}\]</div>
@@ -921,8 +739,8 @@
 <div class="math notranslate nohighlight">
 \[U_{\text{д}} = I_{\text{д}} X_L\]</div>
 </section>
-<section id="id18">
-<h4>Потужність у колі з індуктивним навантаженням<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
+<section id="id7">
+<h3>Потужність у колі з індуктивним навантаженням<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>Розглянемо активну потужність у чисто індуктивному колі. Знову скористаємося загальною формулою:</p>
 <div class="math notranslate nohighlight">
 \[P = U_{\text{д}} I_{\text{д}} \cos\varphi\]</div>
@@ -936,8 +754,8 @@
 <p>Це означає, що котушка індуктивності, як і конденсатор, не споживає енергію безповоротно. Вона лише накопичує енергію в магнітному полі під час зростання струму і повністю віддає її назад у коло під час спадання струму. Це також реактивна потужність.</p>
 </section>
 </section>
-<section id="id19">
-<h3>Реактивний опір<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<section id="id8">
+<h2>Реактивний опір<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <p>Ми бачимо, що конденсатор та котушка індуктивності мають власні види опору, які залежать від частоти струму. Ці опори називаються <strong>реактивними опорами</strong>.</p>
 <blockquote>
 <div><p><strong>Реактивний опір</strong> - це загальна назва для індуктивного (<span class="math notranslate nohighlight">\(X_L\)</span>) та ємнісного (<span class="math notranslate nohighlight">\(X_C\)</span>) опорів. Він отримав свою назву тому, що ці елементи не перетворюють електричну енергію в тепло, а &quot;реагують&quot; на зміну струму чи напруги, накопичуючи енергію (у вигляді електричного або магнітного поля) і повертаючи її назад у коло.</p>
@@ -945,12 +763,19 @@
 <p>Одиниця в СІ: <strong>Ом (<span class="math notranslate nohighlight">\(\Omega\)</span>)</strong>.</p>
 </div></blockquote>
 </section>
-</section>
 <hr class="docutils" />
 <section id="rlc">
-<h2>Послідовне коло змінного струму (RLC-коло)<a class="headerlink" href="#rlc" title="Link to this heading">#</a></h2>
+<h2>Послідовне коло змінного струму з активним, ємнісним та індуктивними опорами (послідовне RLC коло)<a class="headerlink" href="#rlc" title="Link to this heading">#</a></h2>
 <p>Тепер, коли ми розібралися з поведінкою кожного елемента окремо, давайте об'єднаємо їх у послідовне коло і подивимося, як вони працюють разом. У послідовному RLC-колі резистор <span class="math notranslate nohighlight">\(R\)</span>, котушка індуктивності <span class="math notranslate nohighlight">\(L\)</span> та конденсатор <span class="math notranslate nohighlight">\(C\)</span> з'єднані послідовно.</p>
 <p><strong>Ключова особливість послідовного з'єднання:</strong> сила струму <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span> (або <span class="math notranslate nohighlight">\(I_m\)</span>) однакова у всіх елементах кола, але напруги на кожному елементі будуть мати різні фазові зсуви відносно цього струму. Саме тому у цьому випадку ми обираємо силу струму як еталонну фазову величину, відносно якої будемо рахувати будь-які фазові зсуви.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/RLC_series_circuit_v1.svg" alt="RLC series circuit v1.svg" height="300" width="216.6">
+<br>
+Рис. 1. Послідовне коло змінного струму з активним, ємнісним та індуктивними опорами (послідовне RLC коло).
+Автор: <a href="https://commons.wikimedia.org/wiki/User:V4711" title="User:V4711">V4711</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=29120181">Link</a>. <a href="https://en.wikipedia.org/wiki/RLC_circuit">Wikipedia</a></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/RLC_series.png" alt="RLC series.png" height="250" width="711.6">
+<br>
+Рис. 2. Послідовне RLC коло: зліва направо резистор, котушка індуктивності та конденсатор.
+Автор: <a class="external text" href="https://en.wikipedia.org/wiki/User:Spinningspark">Spinningspark at Wikipedia</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=29919519">Link</a>. <a href="https://en.wikipedia.org/wiki/RLC_circuit">Wikipedia</a></p>
 <p>Ми будемо вважати, що миттєвий струм у всьому колі задається як <span class="math notranslate nohighlight">\(i(t) = I_m \sin(\omega t)\)</span>. Тоді напруги на кожному елементі будуть:</p>
 <ul class="simple">
 <li><p><strong>Напруга на резисторі <span class="math notranslate nohighlight">\(R\)</span></strong>: <span class="math notranslate nohighlight">\(u_R(t) = I_m R \sin(\omega t)\)</span>. Напруга <span class="math notranslate nohighlight">\(u_R\)</span> <strong>збігається за фазою</strong> зі струмом. Діюче значення <span class="math notranslate nohighlight">\(U_R = I_{\text{д}} R\)</span>.</p></li>
@@ -961,8 +786,8 @@
 <div class="math notranslate nohighlight">
 \[u(t) = u_R(t) + u_L(t) + u_C(t)\]</div>
 <p>Просто додавати амплітудні або діючі значення напруг не можна, оскільки вони мають різні фази. Для цього використовують <strong>векторні діаграми</strong> (або фазові діаграми). Векторні діаграми дозволяють графічно додавати гармонічні коливання, що мають однакову частоту, але різні фази.</p>
-<section id="id20">
-<h3>Векторна діаграма напруг<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<section id="id9">
+<h3>Векторна діаграма напруг<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <p>Для того, щоб зрозуміти, як додаються ці напруги, давайте побудуємо векторну діаграму крок за кроком:</p>
 <ol class="arabic simple">
 <li><p><strong>Виберіть горизонтальну вісь як вісь струму.</strong> Оскільки в послідовному колі струм <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span> однаковий для всіх елементів, зручно прийняти його фазу за нульову. Уявіть, що ви малюєте горизонтальний вектор, що вказує вправо, і позначте його <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span>. Це буде ваша опорна вісь.</p></li>
@@ -1006,8 +831,8 @@
 \[I_{\text{д}} = \frac{U_{\text{д}}}{Z}\]</div>
 <p>де <span class="math notranslate nohighlight">\(U_{\text{д}}\)</span> - діюче значення напруги джерела, <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span> - діюче значення струму в колі, <span class="math notranslate nohighlight">\(Z\)</span> - повний опір кола.</p>
 </section>
-<section id="id21">
-<h3>Зсув фаз у послідовному RLC-колі<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<section id="id10">
+<h3>Зсув фаз у послідовному RLC-колі<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <p>На векторній діаграмі кут <span class="math notranslate nohighlight">\(\varphi\)</span> між вектором загальної напруги <span class="math notranslate nohighlight">\(U\)</span> та вектором струму <span class="math notranslate nohighlight">\(I\)</span> є <strong>зсувом фаз</strong> у всьому колі. З прямокутного трикутника, утвореного векторами <span class="math notranslate nohighlight">\(U_R\)</span>, <span class="math notranslate nohighlight">\((U_L - U_C)\)</span> та <span class="math notranslate nohighlight">\(U\)</span>, ми можемо знайти тангенс цього кута:</p>
 <div class="math notranslate nohighlight">
 \[\tan \varphi = \frac{\text{протилежний катет}}{\text{прилеглий катет}} = \frac{U_L - U_C}{U_R}\]</div>
@@ -1028,8 +853,8 @@
 <li><p>Якщо <span class="math notranslate nohighlight">\(X_L = X_C\)</span>, то <span class="math notranslate nohighlight">\(\varphi = 0\)</span>, струм і напруга збігаються за фазою (коло має чисто активний характер). Цей випадок називається <strong>резонансом напруг</strong> у послідовному RLC-колі. При резонансі індуктивний і ємнісний опори взаємно компенсуються, імпеданс <span class="math notranslate nohighlight">\(Z=R\)</span> є мінімальним, а струм <span class="math notranslate nohighlight">\(I_{\text{д}}=U_{\text{д}}/R\)</span> - максимальним.</p></li>
 </ul>
 </section>
-<section id="id22">
-<h3>Активна потужність у послідовному RLC-колі<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<section id="id11">
+<h3>Активна потужність у послідовному RLC-колі<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <p>Активна потужність у послідовному RLC-колі визначається загальною формулою:</p>
 <div class="math notranslate nohighlight">
 \[P = U_{\text{д}} I_{\text{д}} \cos\varphi\]</div>
@@ -1047,8 +872,8 @@
 \[P = I_{\text{д}}^2 R\]</div>
 <p>Цей результат дуже важливий: <strong>активна потужність у колі змінного струму розсіюється тільки на активному опорі</strong> <span class="math notranslate nohighlight">\(R\)</span>. Реактивні елементи (котушка та конденсатор) не споживають енергію безповоротно, вони лише обмінюються нею з джерелом. Тому, якщо коло не містить активного опору (наприклад, чисте LC-коло), активна потужність буде нульовою.</p>
 </section>
-<section id="id23">
-<h3>Резонанс напруг у послідовному RLC колі<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<section id="id12">
+<h3>Резонанс напруг у послідовному RLC колі<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <p>Коли індуктивний опір дорівнює ємнісному опору (<span class="math notranslate nohighlight">\(X_L = X_C\)</span>), повний опір кола стає мінімальним і дорівнює активному опору <span class="math notranslate nohighlight">\(R\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[Z = \sqrt{R^2 + (X_L - X_C)^2} = \sqrt{R^2 + 0^2} = R\]</div>
@@ -1095,9 +920,13 @@
 </section>
 </section>
 <hr class="docutils" />
-<section id="id24">
-<h2>Паралельне коло змінного струму<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h2>Паралельне коло змінного струму з активним, ємнісним та індуктивними опорами (паралельне RLC коло)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <p>У <strong>паралельному RLC-колі</strong> резистор <span class="math notranslate nohighlight">\(R\)</span>, котушка індуктивності <span class="math notranslate nohighlight">\(L\)</span> та конденсатор <span class="math notranslate nohighlight">\(C\)</span> з'єднані паралельно.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/RLC_parallel_circuit_v1.svg" alt="RLC parallel circuit v1.svg" height="250" width="456.1">
+<br>
+Рис. 3. Паралельне RLC коло.
+Автор: <a href="https://commons.wikimedia.org/wiki/User:V4711" title="User:V4711">V4711</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=29138657">Link</a>. <a href="https://en.wikipedia.org/wiki/RLC_circuit">Wikipedia</a></p>
 <p><strong>Ключова особливість паралельного з'єднання:</strong> напруга <span class="math notranslate nohighlight">\(U_{\text{д}}\)</span> (або <span class="math notranslate nohighlight">\(U_m\)</span>) однакова на всіх елементах кола, але струми через кожен елемент будуть мати різні фазові зсуви відносно цієї напруги. Саме тому у цьому випадку ми обираємо напругу як еталонну фазову величину, відносно якої будемо рахувати будь-які фазові зсуви.</p>
 <p>Ми будемо вважати, що миттєва напруга на всіх елементах задається як <span class="math notranslate nohighlight">\(u(t) = U_m \sin(\omega t)\)</span>. Тоді струми через кожен елемент будуть:</p>
 <ul class="simple">
@@ -1109,8 +938,8 @@
 <div class="math notranslate nohighlight">
 \[i(t) = i_R(t) + i_L(t) + i_C(t)\]</div>
 <p>Як і у випадку з послідовним колом, для додавання цих коливань ми використовуємо <strong>векторні діаграми</strong>, але цього разу це <strong>векторна діаграма струмів</strong>.</p>
-<section id="id25">
-<h3>Векторна діаграма струмів<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<section id="id14">
+<h3>Векторна діаграма струмів<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <p>Для паралельного кола ми використовуємо <strong>векторну діаграму струмів</strong>. Давайте побудуємо її крок за кроком:</p>
 <ol class="arabic simple">
 <li><p><strong>Виберіть горизонтальну вісь як вісь напруги.</strong> Оскільки в паралельному колі напруга <span class="math notranslate nohighlight">\(U_{\text{д}}\)</span> однакова для всіх елементів, зручно прийняти її фазу за нульову. Уявіть, що ви малюєте горизонтальний вектор, що вказує вправо, і позначте його <span class="math notranslate nohighlight">\(U_{\text{д}}\)</span>. Це буде ваша опорна вісь.</p></li>
@@ -1126,8 +955,8 @@
 \[I_{\text{д}} = \sqrt{I_R^2 + (I_C - I_L)^2}\]</div>
 <p>Це співвідношення між діючими значеннями струмів. Загальний вектор <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span> буде відхилений від горизонтальної осі (осі напруги) на деякий кут <span class="math notranslate nohighlight">\(\varphi\)</span>, який і є зсувом фаз між загальним струмом і напругою.</p>
 </section>
-<section id="id26">
-<h3>Повний опір паралельного кола (імпеданс)<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<section id="id15">
+<h3>Повний опір паралельного кола (імпеданс)<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <p>Ми знаємо, що <span class="math notranslate nohighlight">\(I_{\text{д}} = \frac{U_{\text{д}}}{Z}\)</span>. Підставимо це та вирази для <span class="math notranslate nohighlight">\(I_R, I_C, I_L\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\frac{U_{\text{д}}}{Z} = \sqrt{\left(\frac{U_{\text{д}}}{R}\right)^2 + \left(\frac{U_{\text{д}}}{X_C} - \frac{U_{\text{д}}}{X_L}\right)^2}\]</div>
@@ -1146,12 +975,12 @@
 \[Z = \frac{1}{\sqrt{\left(\frac{1}{R}\right)^2 + \left(\frac{1}{X_C} - \frac{1}{X_L}\right)^2}}\]</div>
 <p>або</p>
 <div class="math notranslate nohighlight">
-\[Z = \frac{1}{\sqrt{\left(\frac{1}{R}\right)^2 + \left(\omega L - \frac{1}{\omega C}\right)^2}}\]</div>
+\[Z = \frac{1}{\sqrt{\left(\frac{1}{R}\right)^2 + \left(\omega C - \frac{1}{\omega L}\right)^2}}\]</div>
 </div></blockquote>
 <p>Це і є формула для повного опору паралельного RLC-кола.</p>
 </section>
-<section id="id27">
-<h3>Зсув фаз у паралельному RLC-колі<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<section id="id16">
+<h3>Зсув фаз у паралельному RLC-колі<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <p>На векторній діаграмі кут <span class="math notranslate nohighlight">\(\varphi\)</span> між вектором загального струму <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span> та вектором напруги <span class="math notranslate nohighlight">\(U_{\text{д}}\)</span> є зсувом фаз у всьому колі. З прямокутного трикутника, утвореного векторами <span class="math notranslate nohighlight">\(I_R\)</span>, <span class="math notranslate nohighlight">\((I_C - I_L)\)</span> та <span class="math notranslate nohighlight">\(I\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\tan \varphi = \frac{\text{протилежний катет}}{\text{прилеглий катет}} = \frac{I_C - I_L}{I_R}\]</div>
@@ -1166,8 +995,8 @@
 <li><p>Якщо <span class="math notranslate nohighlight">\(I_C = I_L\)</span> (або <span class="math notranslate nohighlight">\(\omega C = \frac{1}{\omega L}\)</span>), то <span class="math notranslate nohighlight">\(\varphi = 0\)</span>, струм і напруга збігаються за фазою. Цей випадок називається <strong>резонансом струмів</strong> у паралельному RLC-колі. При резонансі індуктивний і ємнісний струми взаємно компенсуються, повний опір <span class="math notranslate nohighlight">\(Z\)</span> є максимальним, а загальний струм <span class="math notranslate nohighlight">\(I_{\text{д}}=U_{\text{д}}/Z\)</span> - мінімальним.</p></li>
 </ul>
 </section>
-<section id="id28">
-<h3>Активна потужність у паралельному RLC-колі<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<section id="id17">
+<h3>Активна потужність у паралельному RLC-колі<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <p>Як і для послідовного RLC-кола, активна потужність у паралельному RLC-колі визначається за формулою:</p>
 <div class="math notranslate nohighlight">
 \[P = U_{\text{д}} I_{\text{д}} \cos\varphi\]</div>
@@ -1182,8 +1011,8 @@
 \[P = U_{\text{д}} I_{R} = U_{\text{д}} \frac{U_{\text{д}}}{R} = \frac{U_{\text{д}}^2}{R}\]</div>
 <p>І знову, як і для послідовного з'єднання, бачимо, що активна потужність у колі змінного струму розсіюється тільки на активному опорі <span class="math notranslate nohighlight">\(R\)</span>.</p>
 </section>
-<section id="id29">
-<h3>Резонанс струмів у паралельному RLC колі<a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
+<section id="id18">
+<h3>Резонанс струмів у паралельному RLC колі<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <p>У паралельному RLC-колі також може виникнути резонанс. Це відбувається, коли струми через ємнісний та індуктивний елементи компенсують один одного, тобто <span class="math notranslate nohighlight">\(I_C = I_L\)</span>. Це означає, що <span class="math notranslate nohighlight">\(\frac{U_{\text{д}}}{X_C} = \frac{U_{\text{д}}}{X_L}\)</span>, що призводить до умови <span class="math notranslate nohighlight">\(X_C = X_L\)</span> (як і для резонансу напруг).</p>
 <p>При резонансі струм, що відбирається від джерела, стає мінімальним і дорівнює струму через активний опір:</p>
 <div class="math notranslate nohighlight">
@@ -1230,8 +1059,8 @@
 </section>
 </section>
 <hr class="docutils" />
-<section id="id30">
-<h2>Порівняння резонансів в паралельному та послідовному RLC колах<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<section id="id19">
+<h2>Порівняння резонансів в паралельному та послідовному RLC колах<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
 <p>Після вивчення послідовних та паралельних RLC-кіл ми бачимо два цікавих результати:</p>
 <ol class="arabic">
 <li><p>Формула для резонансної частоти виявилася <strong>однаковою</strong> для обох типів з'єднання:</p>
@@ -1240,7 +1069,7 @@
 </li>
 <li><p>Ця формула <strong>ідентична</strong> формулі для циклічної частоти власних коливань в ідеальному LC-контурі (формула Томсона), яку ми розглядали в попередніх лекціях.</p></li>
 </ol>
-<p>Чи є це збігом? Абсолютно ні. Це відображає глибокий фізичний зв'язок між вимушеними коливаннями в системі з втратами (RLC-коло) та вільними коливаннями в ідеальній системі (LC-контур). Давайте розберемося, чому це так.</p>
+<p>Чи є це збігом? Абсолютно ні. Це відображає глибокий фізичний зв'язок між вимушеними коливаннями в системі з втратами (RLC коло) та вільними коливаннями в ідеальній системі (LC-контур). Давайте розберемося, чому це так.</p>
 <p><strong>Чому резонансна частота однакова для послідовного та паралельного кіл?</strong></p>
 <p>Суть резонансу в RLC-колі, незалежно від типу з'єднання, полягає в <strong>повній компенсації реактивних ефектів</strong> котушки індуктивності та конденсатора.</p>
 <ul class="simple">
@@ -1287,7 +1116,7 @@
 </table>
 </div>
 <p>*Примітка: в ідеальному паралельному LC-колі (без R) імпеданс на резонансній частоті був би нескінченно великим. У реальному колі з опором R він стає максимальним, але скінченним.</p>
-<p>Отже,</p>
+<p>Отже, маємо наступні висновки.</p>
 <ol class="arabic simple">
 <li><p><strong>У послідовному колі (Резонанс напруг):</strong></p>
 <ul class="simple">
@@ -1315,7 +1144,7 @@
 <li><p><em>Аналогія:</em> Це як ідеальна гойдалка без тертя. Якщо її штовхнути, вона буде коливатися зі своєю власною частотою, яка залежить від її довжини.</p></li>
 </ul>
 </li>
-<li><p><strong>Вимушені коливання (RLC-коло):</strong> RLC-коло, підключене до зовнішнього джерела, - це система, в якій відбуваються <strong>вимушені коливання</strong>. Джерело зі своєю частотою <span class="math notranslate nohighlight">\(\omega\)</span> &quot;нав'язує&quot; системі свій ритм. Резистор <span class="math notranslate nohighlight">\(R\)</span> при цьому постійно розсіює енергію, тобто виступає в ролі &quot;демпфера&quot; або &quot;тертя&quot;.</p>
+<li><p><strong>Вимушені коливання (RLC коло):</strong> RLC коло, підключене до зовнішнього джерела, - це система, в якій відбуваються <strong>вимушені коливання</strong>. Джерело зі своєю частотою <span class="math notranslate nohighlight">\(\omega\)</span> &quot;нав'язує&quot; системі свій ритм. Резистор <span class="math notranslate nohighlight">\(R\)</span> при цьому постійно розсіює енергію, тобто виступає в ролі &quot;демпфера&quot; або &quot;тертя&quot;.</p>
 <ul>
 <li><p><em>Аналогія:</em> Це як реальна гойдалка з тертям, яку ви розгойдуєте, періодично її підштовхуючи.</p></li>
 </ul>
@@ -1327,8 +1156,8 @@
 <p><strong>Висновок:</strong> Рівність резонансної частоти RLC-кола та власної частоти коливань LC-контуру - це не збіг, а прояв універсального принципу резонансу. <strong>Активний опір R визначає гостроту резонансу</strong> (наскільки високим і вузьким буде пік), але <strong>не змінює саму резонансну частоту</strong>, яка визначається лише реактивними елементами L і C.</p>
 </section>
 <hr class="docutils" />
-<section id="id31">
-<h2>Застосування RLC-кіл та резонансу<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<section id="id20">
+<h2>Застосування RLC-кіл та резонансу<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
 <p>RLC-кола та явище резонансу є основою сучасної радіотехніки та електроніки. Їхня унікальна здатність &quot;відгукуватися&quot; на певну частоту і &quot;ігнорувати&quot; інші дозволяє створювати безліч корисних пристроїв.</p>
 <ol class="arabic">
 <li><p><strong>Налаштування та вибіркова фільтрація (Радіо- та телеприймачі)</strong></p>
@@ -1336,7 +1165,7 @@
 <ul class="simple">
 <li><p><strong>Проблема:</strong> В ефірі одночасно існують сигнали від десятків радіостанцій, кожен на своїй унікальній частоті-носії. Антена приймача вловлює їх усі одночасно, створюючи в своєму вході мішанину слабких змінних струмів різних частот.</p></li>
 <li><p><strong>Рішення:</strong> Вхідний каскад радіоприймача - це, по суті, RLC-контур (зазвичай послідовний). У старих приймачах, обертаючи ручку налаштування, ви фізично змінювали ємність змінного конденсатора <span class="math notranslate nohighlight">\(C\)</span>.</p></li>
-<li><p><strong>Як це працює:</strong> Змінюючи <span class="math notranslate nohighlight">\(C\)</span>, ви змінюєте резонансну частоту контуру <span class="math notranslate nohighlight">\(\nu_0 = 1/(2\pi\sqrt{LC})\)</span>. Коли ця частота збігається з частотою потрібної вам радіостанції, імпеданс контуру для цієї частоти стає мінімальним (<span class="math notranslate nohighlight">\(Z=R\)</span>). Струм від цієї станції різко зростає і проходить далі на підсилення та обробку. Для всіх інших станцій, чиї частоти далекі від резонансної, імпеданс контуру дуже великий, і їхні сигнали ефективно приглушуються. Таким чином, RLC-коло працює як <strong>смуговий фільтр</strong>, пропускаючи вузьку смугу частот навколо резонансної.</p></li>
+<li><p><strong>Як це працює:</strong> Змінюючи <span class="math notranslate nohighlight">\(C\)</span>, ви змінюєте резонансну частоту контуру <span class="math notranslate nohighlight">\(\nu_0 = 1/(2\pi\sqrt{LC})\)</span>. Коли ця частота збігається з частотою потрібної вам радіостанції, імпеданс контуру для цієї частоти стає мінімальним (<span class="math notranslate nohighlight">\(Z=R\)</span>). Струм від цієї станції різко зростає і проходить далі на підсилення та обробку. Для всіх інших станцій, чиї частоти далекі від резонансної, імпеданс контуру дуже великий, і їхні сигнали ефективно приглушуються. Таким чином, RLC коло працює як <strong>смуговий фільтр</strong>, пропускаючи вузьку смугу частот навколо резонансної.</p></li>
 </ul>
 </li>
 <li><p><strong>Електронні фільтри</strong></p>
@@ -1373,29 +1202,125 @@
 </li>
 </ol>
 </section>
-<section id="id32">
-<h2>Додаткові матеріали<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<section id="id21">
+<h2>Підсумок<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Характеристика / Поняття</p></th>
+<th class="head text-left"><p>Формула / Опис</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Окремі елементи кола</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Активний опір R</p></td>
+<td class="text-left"><p>Опір, що перетворює електроенергію на тепло. Струм і напруга <strong>збігаються за фазою</strong> <span class="math notranslate nohighlight">\(\varphi=0\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Ємнісний опір <span class="math notranslate nohighlight">\(X_C\)</span></p></td>
+<td class="text-left"><p>Опір конденсатора змінному струму <span class="math notranslate nohighlight">\(X_C = \frac{1}{\omega C} = \frac{1}{2\pi\nu C}\)</span>. Струм <strong>випереджає</strong> напругу на <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>. Активна потужність <span class="math notranslate nohighlight">\(P=0\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Індуктивний опір <span class="math notranslate nohighlight">\(X_L\)</span></p></td>
+<td class="text-left"><p>Опір котушки індуктивності змінному струму <span class="math notranslate nohighlight">\(X_L = \omega L = 2\pi\nu L\)</span>. Струм <strong>відстає</strong> від напруги на <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>. Активна потужність <span class="math notranslate nohighlight">\(P=0\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Послідовне RLC коло</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Загальна напруга <span class="math notranslate nohighlight">\(U_{\text{д}}\)</span></p></td>
+<td class="text-left"><p>Визначається векторною сумою: <span class="math notranslate nohighlight">\(U_{\text{д}}^2 = U_R^2 + (U_L - U_C)^2\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Повний опір (імпеданс) Z</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(Z = \sqrt{R^2 + (X_L - X_C)^2}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Закон Ома</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(I_{\text{д}} = \frac{U_{\text{д}}}{Z}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Зсув фаз <span class="math notranslate nohighlight">\(\varphi\)</span> (між U та I)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\tan \varphi = \frac{X_L - X_C}{R}\)</span>. <br> Якщо <span class="math notranslate nohighlight">\(\varphi &gt; 0\)</span>, характер індуктивний; якщо <span class="math notranslate nohighlight">\(\varphi &lt; 0\)</span>, характер ємнісний.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Активна потужність P</p></td>
+<td class="text-left"><p>Розсіюється лише на активному опорі <span class="math notranslate nohighlight">\(P = I_{\text{д}}^2 R\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Коефіцієнт потужності</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\cos\varphi = \frac{R}{Z}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Паралельне RLC коло</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Загальний струм <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span></p></td>
+<td class="text-left"><p>Визначається векторною сумою: <span class="math notranslate nohighlight">\(I_{\text{д}}^2 = I_R^2 + (I_C - I_L)^2\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Повний опір (імпеданс) Z</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\frac{1}{Z} = \sqrt{\left(\frac{1}{R}\right)^2 + \left(\frac{1}{X_C} - \frac{1}{X_L}\right)^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Зсув фаз <span class="math notranslate nohighlight">\(\varphi\)</span> (між I та U)</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\tan \varphi = R\left(\frac{1}{X_C} - \frac{1}{X_L}\right)\)</span>. <br> Якщо <span class="math notranslate nohighlight">\(\varphi &gt; 0\)</span>, характер ємнісний; якщо <span class="math notranslate nohighlight">\(\varphi &lt; 0\)</span>, характер індуктивний.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Активна потужність P</p></td>
+<td class="text-left"><p>Розсіюється лише на активному опорі <span class="math notranslate nohighlight">\(P = \frac{U_{\text{д}}^2}{R}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Коефіцієнт потужності</p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\cos\varphi = \frac{Z}{R}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Резонанс в RLC колах</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Умова резонансу</p></td>
+<td class="text-left"><p>Реактивні опори рівні <span class="math notranslate nohighlight">\(X_L = X_C\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Резонансна частота <span class="math notranslate nohighlight">\(\nu_0\)</span></p></td>
+<td class="text-left"><p>Однакова для обох типів з'єднання <span class="math notranslate nohighlight">\(\nu_0 = \frac{1}{2\pi\sqrt{LC}}\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Резонансна циклічна частота <span class="math notranslate nohighlight">\(\omega_0\)</span></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Резонанс напруг (послідовне коло)</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Повний опір Z</p></td>
+<td class="text-left"><p><strong>Мінімальний</strong> <span class="math notranslate nohighlight">\(Z = R\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Струм від джерела <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span></p></td>
+<td class="text-left"><p><strong>Максимальний</strong> <span class="math notranslate nohighlight">\(I_{\text{д,max}} = U_{\text{д}}/R\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Напруги на L та C</p></td>
+<td class="text-left"><p><strong>Максимальні</strong>, <span class="math notranslate nohighlight">\(U_L=U_C\)</span>, можуть значно перевищувати напругу джерела <span class="math notranslate nohighlight">\(U_{\text{д}}\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Резонанс струмів (паралельне коло)</strong></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Повний опір Z</p></td>
+<td class="text-left"><p><strong>Максимальний</strong> <span class="math notranslate nohighlight">\(Z = R\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Струм від джерела <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span></p></td>
+<td class="text-left"><p><strong>Мінімальний</strong> <span class="math notranslate nohighlight">\(I_{\text{д,min}} = U_{\text{д}}/R\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Струми в гілках L та C</p></td>
+<td class="text-left"><p><strong>Максимальні</strong>, <span class="math notranslate nohighlight">\(I_L=I_C\)</span>, можуть значно перевищувати струм джерела <span class="math notranslate nohighlight">\(I_{\text{д}}\)</span>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="id22">
+<h2>Додаткові матеріали<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%B8%D0%B9_%D0%BE%D0%BF%D1%96%D1%80">https://uk.wikipedia.org/wiki/Реактивний_опір</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D1%96%D0%BC%D0%BF%D0%B5%D0%B4%D0%B0%D0%BD%D1%81">https://uk.wikipedia.org/wiki/Електричний_імпеданс</a></p></li>
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%B5%D1%84%D1%96%D1%86%D1%96%D1%94%D0%BD%D1%82_%D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%96">https://uk.wikipedia.org/wiki/Коефіцієнт_потужності</a></p></li>
-<li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%94%D1%96%D1%8E%D1%87%D0%B5_%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%BD%D1%8F_%D0%B7%D0%BC%D1%96%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D1%81%D1%82%D1%80%D1%83%D0%BC%D1%83">https://uk.wikipedia.org/wiki/Діюче_значення_змінного_струму</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D1%80%D0%B5%D0%B7%D0%BE%D0%BD%D0%B0%D0%BD%D1%81">https://uk.wikipedia.org/wiki/Електричний_резонанс</a></p></li>
 <li><p><a class="reference external" href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0_%D0%9A%D1%96%D1%80%D1%85%D0%B3%D0%BE%D1%84%D0%B0">https://uk.wikipedia.org/wiki/Правила_Кірхгофа</a></p></li>
 </ul>
 </section>
-<section id="id33">
-<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
+<section id="id23">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RLC_circuit">https://en.wikipedia.org/wiki/RLC_circuit</a> (<strong>IMAGES</strong>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RLC_circuit">https://en.wikipedia.org/wiki/RLC_circuit</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrical_impedance">https://en.wikipedia.org/wiki/Electrical_impedance</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrical_reactance">https://en.wikipedia.org/wiki/Electrical_reactance</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Volt-ampere">https://en.wikipedia.org/wiki/Volt-ampere</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/AC_power">https://en.wikipedia.org/wiki/AC_power</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Power_factor">https://en.wikipedia.org/wiki/Power_factor</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Alternating_current#Root_mean_square_voltage">https://en.wikipedia.org/wiki/Alternating_current#Root_mean_square_voltage</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Electrical_resonance">https://en.wikipedia.org/wiki/Electrical_resonance</a></p></li>
-<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phasor">https://en.wikipedia.org/wiki/Phasor</a> (<strong>IMAGES</strong>)</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Phasor">https://en.wikipedia.org/wiki/Phasor</a></p></li>
 <li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Kirchhoff%27s_circuit_laws">https://en.wikipedia.org/wiki/Kirchhoff's_circuit_laws</a></p></li>
 </ul>
 </section>
@@ -1432,20 +1357,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="alternating-current.html"
+       href="power-and-effective-current.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Змінний струм</p>
+        <p class="prev-next-title">Діючі значення змінного струму та напруги. Потужність у колі змінного струму</p>
       </div>
     </a>
     <a class="right-next"
-       href="../optics/nature_of_light.html"
+       href="transformer.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Природа світла</p>
+        <p class="prev-next-title">Трансформатор. Передача електроенергії на великі відстані</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1466,56 +1391,41 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Діючі (ефективні) значення змінного струму та напруги</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Тепловий ефект змінного струму та діюче значення сили струму</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Діюче значення напруги</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Діюче значення ЕРС</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Активний опір (резистор) у колі змінного струму</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Конденсатор у колі змінного струму</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-c">Ємнісний опір (<span class="math notranslate nohighlight">\(X_C\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Закон Ома для кола з ємністю</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Потужність у колі з ємнісним навантаженням</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Потужність у колі змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Миттєва потужність</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Середня потужність за період (активна потужність)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Коефіцієнт потужності</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Реактивна потужність та повна потужність (трикутник потужностей)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Котушка індуктивності в колі змінного струму</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x-l">Індуктивний опір (<span class="math notranslate nohighlight">\(X_L\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Закон Ома для кола з індуктивністю</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Потужність у колі з індуктивним навантаженням</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Елементи кола змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Активний опір (резистор) у колі змінного струму</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Конденсатор у колі змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-c">Ємнісний опір (<span class="math notranslate nohighlight">\(X_C\)</span>)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Закон Ома для кола з ємністю</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Потужність у колі з ємнісним навантаженням</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Котушка індуктивності в колі змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#x-l">Індуктивний опір (<span class="math notranslate nohighlight">\(X_L\)</span>)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Закон Ома для кола з індуктивністю</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Потужність у колі з індуктивним навантаженням</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Реактивний опір</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlc">Послідовне коло змінного струму (RLC-коло)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Векторна діаграма напруг</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Реактивний опір</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rlc">Послідовне коло змінного струму з активним, ємнісним та індуктивними опорами (послідовне RLC коло)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Векторна діаграма напруг</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z">Повний опір кола (імпеданс) <span class="math notranslate nohighlight">\(Z\)</span></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Зсув фаз у послідовному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Активна потужність у послідовному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Резонанс напруг у послідовному RLC колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Зсув фаз у послідовному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Активна потужність у послідовному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Резонанс напруг у послідовному RLC колі</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Паралельне коло змінного струму</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Векторна діаграма струмів</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Повний опір паралельного кола (імпеданс)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">Зсув фаз у паралельному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Активна потужність у паралельному RLC-колі</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Резонанс струмів у паралельному RLC колі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Паралельне коло змінного струму з активним, ємнісним та індуктивними опорами (паралельне RLC коло)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Векторна діаграма струмів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Повний опір паралельного кола (імпеданс)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Зсув фаз у паралельному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Активна потужність у паралельному RLC-колі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Резонанс струмів у паралельному RLC колі</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Порівняння резонансів в паралельному та послідовному RLC колах</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">Застосування RLC-кіл та резонансу</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Додаткові матеріали</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Додаткові матеріали (англійською)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Порівняння резонансів в паралельному та послідовному RLC колах</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Застосування RLC-кіл та резонансу</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Підсумок</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Додаткові матеріали (англійською)</a></li>
 </ul>
   </nav></div>
 

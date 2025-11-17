@@ -277,7 +277,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/self-oscillations.html">Автоколивання (Pending)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/alternating-current.html">Змінний струм</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/active-and-reactive-resistance.html">Активний та рективний опори. Діючі значення сили струму та напруги</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/power-and-effective-current.html">Діючі значення змінного струму та напруги. Потужність у колі змінного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/active-and-reactive-resistance.html">Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/transformer.html">Трансформатор. Передача електроенергії на великі відстані</a></li>
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -717,9 +720,12 @@
 <h3>Рівняння Маєра<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <p>З виведених нами формул для <span class="math notranslate nohighlight">\(C_V\)</span> та <span class="math notranslate nohighlight">\(C_p\)</span> ми можемо отримати дуже важливе співвідношення, відоме як <strong>рівняння Маєра</strong>.</p>
 <ul>
-<li><p>Ми маємо:
-$<span class="math notranslate nohighlight">\( C_V = \frac{i}{2} R \)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\( C_p = \left( \frac{i}{2} + 1 \right) R = \frac{i}{2} R + R \)</span>$</p></li>
+<li><p>Ми маємо:</p>
+<div class="math notranslate nohighlight">
+\[ C_V = \frac{i}{2} R \]</div>
+<div class="math notranslate nohighlight">
+\[ C_p = \left( \frac{i}{2} + 1 \right) R = \frac{i}{2} R + R \]</div>
+</li>
 <li><p>Підставимо <span class="math notranslate nohighlight">\(C_V\)</span> у вираз для <span class="math notranslate nohighlight">\(C_p\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ C_p = C_V + R \]</div>
@@ -858,15 +864,17 @@ $<span class="math notranslate nohighlight">\( C_V = \frac{i}{2} R \)</span><spa
 <p>Або через масу газу:</p>
 <div class="math notranslate nohighlight">
 \[ Q = \left( \frac{i}{2} + 1 \right) \frac{m}{M} R \Delta T \]</div>
-<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):
-$<span class="math notranslate nohighlight">\( Q = \frac{5}{2} \nu R \Delta T = \frac{5}{2} \frac{m}{M} R \Delta T \)</span>$</p>
+<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{5}{2} \nu R \Delta T = \frac{5}{2} \frac{m}{M} R \Delta T \]</div>
 <p>Ми також можемо виразити <span class="math notranslate nohighlight">\(Q\)</span> через зміну об'єму, оскільки <span class="math notranslate nohighlight">\(A = p\Delta V\)</span> і <span class="math notranslate nohighlight">\(\Delta U = \frac{i}{2} p\Delta V\)</span> (пам'ятаємо, що <span class="math notranslate nohighlight">\(pV = \nu RT\)</span>, тому <span class="math notranslate nohighlight">\(\Delta U = \frac{i}{2}\nu R \Delta T = \frac{i}{2}p\Delta V\)</span> для ізобарного процесу):</p>
 <div class="math notranslate nohighlight">
 \[ Q = \frac{i}{2} p\Delta V + p\Delta V \]</div>
 <div class="math notranslate nohighlight">
 \[ Q = \left( \frac{i}{2} + 1 \right) p\Delta V \]</div>
-<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):
-$<span class="math notranslate nohighlight">\( Q = \frac{5}{2} p\Delta V \)</span>$</p>
+<p>Для одноатомного газу (<span class="math notranslate nohighlight">\(i=3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ Q = \frac{5}{2} p\Delta V \]</div>
 <p><strong>Приклад:</strong> 1 моль двохатомного газу розширюється при сталому тиску <span class="math notranslate nohighlight">\(10^5 \text{ Па}\)</span>, збільшуючи свій об'єм на <span class="math notranslate nohighlight">\(0.01 \text{ м}^3\)</span>. Яка кількість теплоти була передана газу?</p>
 <p>Дано: <span class="math notranslate nohighlight">\(\nu = 1 \text{ моль}\)</span>, <span class="math notranslate nohighlight">\(p = 10^5 \text{ Па}\)</span>, <span class="math notranslate nohighlight">\(\Delta V = 0.01 \text{ м}^3\)</span>, <span class="math notranslate nohighlight">\(i=5\)</span> (двохатомний газ).</p>
 <p>Спочатку знайдемо роботу:</p>
