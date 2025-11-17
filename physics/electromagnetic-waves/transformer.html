@@ -1,0 +1,1008 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ua" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Трансформатор. Передача електроенергії на великі відстані &#8212; Quantopia School UA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=aa57a211"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'physics/electromagnetic-waves/transformer';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Природа світла" href="../optics/nature_of_light.html" />
+    <link rel="prev" title="Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло" href="active-and-reactive-resistance.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ua"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Quantopia School UA - Home"/>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="Quantopia School UA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Quantopia School UA (Alpha Version)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">АСТРОНОМІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/cassini.html">Великий фінал: останній політ крізь кільця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/astronomy_science.html">Астрономія та її основні розділи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/discoveries_inventions.html">Історія астрономічних відкриттів та винаходів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_sphere.html">Небесна сфера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/angle_dimensions.html">Одиниці вимірювання кутів</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/celestial_coordinates.html">Системи небесних координат</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/distances.html">Вимірювання відстаней в астрономії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/apparent_and_absolute_magnitude.html">Видима та абсолютна зоряна величина</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/terrestrial_planets.html">Планети земної групи: Меркурій, Венера, Земля, Марс та супутники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/giant_planets.html">Планети-гіганти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/dwarf_planets.html">Карликові планети</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/asteroid_comet_meteoroid.html">Астероїди, комети, метеороїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/space-age.html">Початок космічної ери</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/sun-basics.html">Сонце - найближча зоря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-neutrino.html">Сонячне нейтрино</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/solar-activity.html">Активність Сонця</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/star-classification.html">Зорі: від народження до загибелі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/milky-way.html">Галактика Молочний Шлях</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/galaxies.html">Галактики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../astronomy/universe.html">Всесвіт</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ФІЗИКА. МЕХАНІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-01.html">Механіка та кінематика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-02.html">Швидкість та відносність руху</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-03.html">Рівноприскорений прямолінійний рух</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-04.html">Рух під дією сили тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/kinematics-05.html">Рівномірний рух по колу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-first-law.html">Перший закон Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newton-second-third-laws.html">Другий та третій закони Ньютона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/newtons-law-of-universal-gravitation.html">Закон всесвітнього тяжіння</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/weight.html">Вага тіла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/elasticity.html">Сила пружності</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/work-kinetic-energy.html">Механічна робота, кінетична енергія та потужність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/potential-energy-and-conservation.html">Потенціальна енергія та закон збереження енергії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mechanics/momentum.html">Імпульс тіла</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МЕХАНІЧНІ КОЛИВАННЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-oscillations.html">Механічні коливання</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/pendulums.html">Математичний і пружинний маятники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/resonance.html">Резонанс</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/mechanical-waves.html">Механічні хвилі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/interference-diffraction.html">Інтерференція і дифракція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../oscillations-and-waves/sound-waves.html">Звукові хвилі</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">МОЛЕКУЛЯРНО-КІНЕТИЧНА ТЕОРІЯ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../mkt/fundamentals-of-mkt.html">Молекулярно-кінетична теорія (МКТ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/molecules-interaction.html">Рух та взаємодія молекул</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/basic-equation-of-ideal-gas.html">Основне рівняння МКТ ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/temperature-basics.html">Температура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/ideal-gas-law.html">Рівняння стану ідеального газу</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/real-gas.html">Реальні гази</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/evaporation-and-condensation.html">Пароутворення і конденсація</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/humidity.html">Вологість повітря</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/phase-transitions.html">Фазові переходи</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/liquid-surface-tension.html">Поверхневий натяг рідини та капілярні явища</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/solids.html">Будова та властивості твердих тіл</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/solids-properties.html">Механічні властивості твердих тіл та теплове розширення</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/internal-energy-and-work-in-thermodynamics.html">Вступ до термодинаміки. Внутрішня енергія та робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/first-law-of-thermodynamics.html">Перший закон термодинаміки</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mkt/second-and-third-laws-of-thermodynamics.html">Другий та третій закони термодинаміки. Теплові машини</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ТЕРМОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../internal_energy.html">Внутрішня енергія</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../heat_transfer.html">Види теплопередачі</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal_energy_task_01.html">Задача. Зміна внутрішньої енергії</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../work_thermo.html">Робота в термодинаміці</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../first_law_thermo.html">Перший закон термодинаміки та адіабатний процес</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_01.html">Електричний заряд. Закон Кулона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/charge_02.html">Напруженість електричного поля та силові лінії</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current.html">Електричний струм та закон Ома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/series_and_parallel_connection.html">Послідовне та паралельне з'єднання провідників</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/work_power_electric_current.html">Робота та потужність постійного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromotive_force.html">Електрорушійна сила та закон Ома для повного кола</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric_current_metals.html">Електричний струм у металах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electrolysis.html">Електроліз та електроліти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ec_gases.html">Електричний струм у газах</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electric-current-vacuum.html">Електричний струм у вакуумі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/semiconductor.html">Напівпровідники</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic_field.html">Магнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/ampere_force_law.html">Сила Ампера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/lorentz-force.html">Сила Лоренца</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-induction.html">Закон електромагнітної індукції</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/eddy-current.html">Вихрові струми</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/inductance.html">Індуктивність та самоіндукція</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/magnetic-properties.html">Діа-, пара- і феромагнетики</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/electromagnetic-field.html">Електромагнітне поле</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../electrodynamics/oscillations.html">Коливання</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЕЛЕКТРОДИНАМІКА. ЕЛЕКТРОМАГНІТНІ КОЛИВАННЯ</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="electromagnetic-oscillations.html">Вільні електромагнітні коливання та коливальний контур</a></li>
+<li class="toctree-l1"><a class="reference internal" href="damped-electromagnetic-oscillations.html">Затухаючі електромагнітні коливання в реальному контурі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="self-oscillations.html">Автоколивання (Pending)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alternating-current.html">Змінний струм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="power-and-effective-current.html">Діючі значення змінного струму та напруги. Потужність у колі змінного струму</a></li>
+<li class="toctree-l1"><a class="reference internal" href="active-and-reactive-resistance.html">Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Трансформатор. Передача електроенергії на великі відстані</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../optics/nature_of_light.html">Природа світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photometric_quantities.html">Фотометрія та фотометричні величини</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/light_reflection.html">Закони відбивання світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/interference.html">Інтерференція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/diffraction.html">Дифракція світла</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/electromagnetic_spectrum.html">Шкала електромагнітних хвиль</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/polarization.html">Поляризація світла. Поляроїди</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/quantum_em_field.html">Формула Планка. Світлові кванти</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/photoelectric-effect.html">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">АТОМНА І ЯДЕРНА ФІЗИКА</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/rutherford-bohr.html">Дослід Резерфорда. Постулати Бора. Енергетичні рівні атома</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/atomic-nucleus.html">Модель атомного ядра. Ядерні сили. Енергія зв'язку</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/radioactivity.html">Радіоактивність</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nuclear-physics/nuclear-chain-reaction.html">Ланцюгові ядерні реакції та термоядерні реакції</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ЗАДАЧІ</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-classroom.html">Кінематика. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/kinematics-test.html">Кінематика. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/dynamics-classroom.html">Динаміка. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-classroom.html">Механічні коливання. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/oscillations-test.html">Механічні коливання. Самостійна робота</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/mkt-classroom.html">Молекулярно-кінетична теорія. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-01.html">Електродинаміка. Задачі 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electrodynamics-classroom-02.html">Електродинаміка. Задачі 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/electromagnetic-waves-classroom.html">Електромагнітні коливання та хвилі. Задачі</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/optics-tasks.html">Оптика</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Yakovliev/quantopia-school-ua/issues/new?title=Issue%20on%20page%20%2Fphysics/electromagnetic-waves/transformer.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/physics/electromagnetic-waves/transformer.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Трансформатор. Передача електроенергії на великі відстані</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Трансформатор. Передача електроенергії на великі відстані</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Передача електричної енергії на великі відстані: Чому це виклик?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Проблема: Втрати енергії в лініях електропередачі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Від чого залежить опір проводів?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ключове питання: Як зменшити струм, зберігаючи передану потужність?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-u-2-r">Розвіюємо плутанину: Чому формула <span class="math notranslate nohighlight">\(P=U^2/R\)</span> не суперечить цьому?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Трансформатор: Змінюючи напругу змінного струму</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Будова трансформатора</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Принцип дії трансформатора: Електромагнітна індукція в дії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Математичне виведення рівнянь трансформатора</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Режим холостого ходу (ненавантажений трансформатор)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">Коефіцієнт трансформації (<span class="math notranslate nohighlight">\(k\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Навантажений трансформатор (режим роботи)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Формула трансформатора для струму: Збереження потужності</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Реальний трансформатор та втрати енергії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eta">Коефіцієнт корисної дії (ККД, <span class="math notranslate nohighlight">\(\eta\)</span>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Лінії електропередачі (ЛЕП) та особливості високої напруги</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Передача електроенергії високовольтними лініями</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Виклики високої напруги: Коронний розряд</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Баланс потужності в енергосистемі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Додаткові матеріали (англійською)</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>Трансформатор. Передача електроенергії на великі відстані<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>Передача електричної енергії на великі відстані: Чому це виклик?<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уявіть собі величезну електростанцію, яка виробляє колосальну кількість електричної енергії. Ця енергія має бути доставлена до міст, заводів, наших будинків, які часто розташовані за десятки, а то й сотні кілометрів. Це завдання не таке просте, як здається на перший погляд, і пов'язане воно з неминучими втратами.</p>
+<section id="id3">
+<h3>Проблема: Втрати енергії в лініях електропередачі<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Будь-який провідник, навіть найкращий, має електричний опір. Коли електричний струм проходить через провідник, частина електричної енергії неминуче перетворюється на теплову енергію, нагріваючи сам провідник. Це явище описується <strong>законом Джоуля-Ленца</strong>, який ми вже розглядали.</p>
+<p>Кількість теплоти <span class="math notranslate nohighlight">\(Q\)</span>, що виділяється в провіднику з активним опором <span class="math notranslate nohighlight">\(R\)</span> за час <span class="math notranslate nohighlight">\(t\)</span> при протіканні струму <span class="math notranslate nohighlight">\(I\)</span>, дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[Q = I^2 R t\]</div>
+<p>Одиниця в СІ: <strong>Джоуль (Дж)</strong>.</p>
+<p>Якщо ми говоримо про швидкість виділення теплоти, тобто про <strong>потужність теплових втрат</strong> <span class="math notranslate nohighlight">\(P_{\text{втрат}}\)</span>, то вона буде:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{втрат}} = I^2 R_{\text{лінії}}\]</div>
+<p>Одиниця в СІ: <strong>Ватт (Вт)</strong>.</p>
+<p>де <span class="math notranslate nohighlight">\(I\)</span> - діюче значення сили струму, що протікає по лінії, а <span class="math notranslate nohighlight">\(R_{\text{лінії}}\)</span> - активний опір самої лінії електропередачі.</p>
+<p>Ця потужність втрат є прямою втратою корисної енергії. Вона не доходить до споживача, а просто розсіюється в навколишнє середовище, нагріваючи дроти та повітря.</p>
+</section>
+<section id="id4">
+<h3>Від чого залежить опір проводів?<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Давайте згадаємо, від чого залежить <strong>активний опір провідника</strong> <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R = \rho \frac{l}{S}\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> - <strong>питомий опір матеріалу</strong>. Одиниця в СІ: <strong>Ом-метр (<span class="math notranslate nohighlight">\(\text{Ом} \cdot \text{м}\)</span>)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(l\)</span> - <strong>довжина провідника</strong>. Одиниця в СІ: <strong>метр (<span class="math notranslate nohighlight">\(\text{м}\)</span>)</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(S\)</span> - <strong>площа поперечного перерізу провідника</strong>. Одиниця в СІ: <strong>квадратний метр (<span class="math notranslate nohighlight">\(\text{м}^2\)</span>)</strong>.</p></li>
+</ul>
+<p>Давайте проаналізуємо ці параметри та наші можливості впливати на них:</p>
+<ul class="simple">
+<li><p><strong>Довжина <span class="math notranslate nohighlight">\(l\)</span></strong>: Цей параметр визначається відстанню від електростанції до споживача. Ми не можемо її змінити, оскільки це географічна та логістична реальність.</p></li>
+<li><p><strong>Питомий опір <span class="math notranslate nohighlight">\(\rho\)</span></strong>: Ми використовуємо метали з найменшим питомим опором, такі як мідь або алюміній. Але навіть вони мають певний опір, і суттєво зменшити його, змінивши матеріал на щось краще і водночас економічно доцільне, майже неможливо. Надпровідники могли б вирішити цю проблему, але їх використання у великомасштабних ЛЕП поки що економічно недоцільне та технологічно неможливе.</p></li>
+<li><p><strong>Площа поперечного перерізу <span class="math notranslate nohighlight">\(S\)</span></strong>: Збільшення <span class="math notranslate nohighlight">\(S\)</span> зменшує опір <span class="math notranslate nohighlight">\(R\)</span>, що добре. Однак це означає використання товстіших проводів, що веде до різкого збільшення їхньої маси, вартості та складності будівництва опор для таких важких ліній. Це економічно невигідно і технічно складно після певної межі.</p></li>
+</ul>
+<p>Отже, можливості для суттєвого зменшення активного опору лінії <span class="math notranslate nohighlight">\(R_{\text{лінії}}\)</span> сильно обмежені. Потужність теплових втрат <span class="math notranslate nohighlight">\(P_{\text{втрат}} = I^2 R_{\text{лінії}}\)</span> є формою <strong>активної потужності</strong>, яка безповоротно перетворюється на тепло. З нашого попереднього вивчення RLC-кіл ми пам'ятаємо, що активна потужність розсіюється виключно на активному опорі. Таким чином, кожна одиниця енергії, що перетворюється на тепло в проводах, є втраченою корисною енергією, яку не отримає споживач. Якщо ми не можемо ефективно зменшити <span class="math notranslate nohighlight">\(R_{\text{лінії}}\)</span>, то для мінімізації втрат <span class="math notranslate nohighlight">\(P_{\text{втрат}} = I^2 R_{\text{лінії}}\)</span> нам залишається лише один шлях: <strong>зменшити силу струму <span class="math notranslate nohighlight">\(I\)</span></strong>.</p>
+</section>
+</section>
+<section id="id5">
+<h2>Ключове питання: Як зменшити струм, зберігаючи передану потужність?<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Тут ми підходимо до серцевини проблеми. Електростанція виробляє певну <strong>активну потужність</strong> <span class="math notranslate nohighlight">\(P_{\text{передачі}}\)</span>, яку необхідно доставити споживачам. Ми пам'ятаємо, що потужність електричного струму визначається формулою:</p>
+<div class="math notranslate nohighlight">
+\[P = UI \cos\varphi\]</div>
+<p>Де <span class="math notranslate nohighlight">\(U\)</span> - діюче значення напруги, <span class="math notranslate nohighlight">\(I\)</span> - діюче значення сили струму, а <span class="math notranslate nohighlight">\(\cos\varphi\)</span> - коефіцієнт потужності. У лініях електропередачі, як правило, навантаження має переважно активний характер або реактивна складова компенсується, тому ми можемо для спрощення вважати, що <span class="math notranslate nohighlight">\(\cos\varphi \approx 1\)</span>. Таким чином, активна потужність, що передається лінією, приблизно дорівнює:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{передачі}} = U_{\text{лінії}} I_{\text{лінії}}\]</div>
+<p>де <span class="math notranslate nohighlight">\(U_{\text{лінії}}\)</span> - напруга, під якою передається енергія (наприклад, на початку лінії), а <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span> - сила струму в ній.</p>
+<p>Якщо електростанція виробляє певну потужність <span class="math notranslate nohighlight">\(P_{\text{передачі}}\)</span>, яка має залишатися практично сталою (адже ми хочемо доставити енергію споживачеві), то з формули <span class="math notranslate nohighlight">\(P_{\text{передачі}} = U_{\text{лінії}} I_{\text{лінії}}\)</span> випливає дуже важливий зв'язок:</p>
+<p>Якщо ми <strong>збільшуємо напругу <span class="math notranslate nohighlight">\(U_{\text{лінії}}\)</span></strong>, то для збереження сталої потужності <span class="math notranslate nohighlight">\(P_{\text{передачі}}\)</span> <strong>сила струму <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span> має пропорційно зменшитися</strong>.</p>
+<p>Саме це і є геніальним рішенням! Якщо сила струму <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span> зменшується, то втрати енергії <span class="math notranslate nohighlight">\(P_{\text{втрат}} = I_{\text{лінії}}^2 R_{\text{лінії}}\)</span> зменшуються <strong>квадратично</strong>. Тобто, якщо струм зменшити в 10 разів, втрати зменшаться в <span class="math notranslate nohighlight">\(10^2 = 100\)</span> разів! Це математичний &quot;подарунок&quot;, який робить високовольтну передачу енергії економічно доцільною.</p>
+<section id="p-u-2-r">
+<h3>Розвіюємо плутанину: Чому формула <span class="math notranslate nohighlight">\(P=U^2/R\)</span> не суперечить цьому?<a class="headerlink" href="#p-u-2-r" title="Link to this heading">#</a></h3>
+<p>Дуже часто виникає плутанина, коли згадують іншу формулу для потужності: <span class="math notranslate nohighlight">\(P = U^2/R\)</span>. Деякі можуть подумати: &quot;Якщо ми збільшуємо напругу <span class="math notranslate nohighlight">\(U\)</span>, то, за цією формулою, потужність (і втрати) також мають зрости, оскільки <span class="math notranslate nohighlight">\(U\)</span> стоїть у квадраті!&quot;</p>
+<p>Давайте детально розберемося, чому це не так, і де саме виникає непорозуміння:</p>
+<ol class="arabic">
+<li><p><strong>Потужність, що передається</strong> <span class="math notranslate nohighlight">\(P_{\text{передачі}}\)</span>: Це та потужність, яку електростанція відправляє в лінію. Вона визначається <strong>загальною напругою на лінії</strong> <span class="math notranslate nohighlight">\(U_{\text{лінії}}\)</span> та <strong>струмом у лінії</strong> <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{передачі}} = U_{\text{лінії}} I_{\text{лінії}}\]</div>
+<p>Щоб передати фіксовану потужність <span class="math notranslate nohighlight">\(P_{\text{передачі}}\)</span>, якщо ми збільшуємо <span class="math notranslate nohighlight">\(U_{\text{лінії}}\)</span> (наприклад, у 10 разів), то <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span> має зменшитися (також у 10 разів).</p>
+</li>
+<li><p><strong>Потужність втрат у лінії</strong> <span class="math notranslate nohighlight">\(P_{\text{втрат}}\)</span>: Це потужність, яка перетворюється на тепло безпосередньо в опорі проводів лінії <span class="math notranslate nohighlight">\(R_{\text{лінії}}\)</span>. Ця потужність визначається <strong>струмом у лінії <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span></strong> та <strong>активним опором <span class="math notranslate nohighlight">\(R_{\text{лінії}}\)</span></strong>:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{втрат}} = I_{\text{лінії}}^2 R_{\text{лінії}}\]</div>
+<p>Як ми вже з'ясували, зменшення <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span> (наприклад, у 10 разів) призводить до зменшення <span class="math notranslate nohighlight">\(P_{\text{втрат}}\)</span> (у <span class="math notranslate nohighlight">\(10^2 = 100\)</span> разів).</p>
+</li>
+<li><p><strong>Формула <span class="math notranslate nohighlight">\(P = U^2/R\)</span> для втрат</strong>: Ця формула також є правильною, але в ній <span class="math notranslate nohighlight">\(U\)</span> - це <strong>спад напруги, який відбувається саме на тому опорі <span class="math notranslate nohighlight">\(R\)</span>, де вимірюються втрати</strong>. Для наших втрат у лінії це буде <strong>спад напруги на опорі самої лінії</strong> <span class="math notranslate nohighlight">\(U_{\text{спад}}\)</span>. Цей спад напруги визначається законом Ома:</p>
+<div class="math notranslate nohighlight">
+\[U_{\text{спад}} = I_{\text{лінії}} R_{\text{лінії}}\]</div>
+<p>Тоді потужність втрат можна записати як:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{втрат}} = \frac{U_{\text{спад}}^2}{R_{\text{лінії}}}\]</div>
+</li>
+</ol>
+<p><strong>Ключова відмінність, що розвіює плутанину:</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(U_{\text{лінії}}\)</span> у формулі <span class="math notranslate nohighlight">\(P_{\text{передачі}} = U_{\text{лінії}} I_{\text{лінії}}\)</span> - це <strong>загальна напруга, під якою передається енергія</strong> (наприклад, 400 кВ). Вона є <em>незалежною</em> змінною, яку ми цілеспрямовано підвищуємо.</p></li>
+<li><p><span class="math notranslate nohighlight">\(U_{\text{спад}}\)</span> у формулі <span class="math notranslate nohighlight">\(P_{\text{втрат}} = U_{\text{спад}}^2 / R_{\text{лінії}}\)</span> - це <strong>напруга, яка &quot;падає&quot; (розсіюється) безпосередньо на опорі проводів</strong>, перетворюючись на тепло. Вона є <em>залежною</em> змінною, яка змінюється разом зі струмом.</p></li>
+</ul>
+<p><strong>Отже, як працює механізм зменшення втрат (логічний ланцюжок):</strong></p>
+<ol class="arabic simple">
+<li><p>Ми <strong>збільшуємо загальну напругу передачі <span class="math notranslate nohighlight">\(U_{\text{лінії}}\)</span></strong> (наприклад, у 10 разів), щоб передати ту ж саму потужність.</p></li>
+<li><p>При сталій потужності <span class="math notranslate nohighlight">\(P_{\text{передачі}}\)</span> це призводить до <strong>зменшення сили струму <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span></strong> (у 10 разів).</p></li>
+<li><p>Оскільки втрати залежать від квадрата струму (<span class="math notranslate nohighlight">\(P_{\text{втрат}} = I_{\text{лінії}}^2 R_{\text{лінії}}\)</span>), то ці втрати <strong>зменшуються у <span class="math notranslate nohighlight">\(10^2 = 100\)</span> разів</strong>!</p></li>
+<li><p>Зменшення струму <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span> також призводить до <strong>зменшення спаду напруги на лінії <span class="math notranslate nohighlight">\(U_{\text{спад}} = I_{\text{лінії}} R_{\text{лінії}}\)</span></strong> (також у 10 разів, якщо опір лінії сталий).</p></li>
+<li><p>Таким чином, і формули <span class="math notranslate nohighlight">\(P_{\text{втрат}} = I_{\text{лінії}}^2 R_{\text{лінії}}\)</span> та <span class="math notranslate nohighlight">\(P_{\text{втрат}} = U_{\text{спад}}^2 / R_{\text{лінії}}\)</span> узгоджуються: зменшення <span class="math notranslate nohighlight">\(I_{\text{лінії}}\)</span> веде до зменшення <span class="math notranslate nohighlight">\(U_{\text{спад}}\)</span>, а отже, і до значного зменшення втрат.</p></li>
+</ol>
+<p><strong>Давайте розглянемо числовий приклад:</strong>
+Припустимо, ми хочемо передати активну потужність <span class="math notranslate nohighlight">\(P_{\text{передачі}} = 10 \text{ МВт}\)</span> на лінію з опором <span class="math notranslate nohighlight">\(R_{\text{лінії}} = 10 \text{ Ом}\)</span>.</p>
+<p><strong>Варіант 1: Низька напруга</strong></p>
+<p>Нехай <span class="math notranslate nohighlight">\(U_{\text{лінії}} = 1000 \text{ В}\)</span>. Тоді струм у лінії:</p>
+<div class="math notranslate nohighlight">
+\[I_{\text{лінії}} = \frac{P_{\text{передачі}}}{U_{\text{лінії}}} = \frac{10 \cdot 10^6 \text{ Вт}}{1000 \text{ В}} = 10000 \text{ А}\]</div>
+<p>Втрати потужності:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{втрат}} = I_{\text{лінії}}^2 R_{\text{лінії}} = (10000 \text{ А})^2 \cdot 10 \text{ Ом} = 100 \cdot 10^6 \cdot 10 \text{ Вт} = 1000 \cdot 10^6 \text{ Вт} = 1000 \text{ МВт}\]</div>
+<p>Це колосальні втрати, які у 100 разів перевищують передану потужність! Очевидно, що така потужність втрат не зможе бути реалізована, оскільки корисна потужність, яка нам доступна, є меншою. Але така відповідь означає, що уся можлива потужність розсіялася б у лінії електропередач.</p>
+<p><strong>Варіант 2: Висока напруга</strong></p>
+<p>Нехай ми збільшимо напругу <span class="math notranslate nohighlight">\(U_{\text{лінії}}\)</span> в 100 разів, до <span class="math notranslate nohighlight">\(100000 \text{ В}\)</span> (100 кВ). Тоді струм у лінії:</p>
+<div class="math notranslate nohighlight">
+\[I_{\text{лінії}} = \frac{P_{\text{передачі}}}{U_{\text{лінії}}} = \frac{10 \cdot 10^6 \text{ Вт}}{100000 \text{ В}} = 100 \text{ А}\]</div>
+<p>Струм зменшився у 100 разів. Втрати потужності:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{втрат}} = I_{\text{лінії}}^2 R_{\text{лінії}} = (100 \text{ А})^2 \cdot 10 \text{ Ом} = 10000 \cdot 10 \text{ Вт} = 100000 \text{ Вт} = 0.1 \text{ МВт}\]</div>
+<p>Втрати зменшилися в <span class="math notranslate nohighlight">\(100^2 = 10000\)</span> разів! Тепер вони становлять лише 1% від переданої потужності.</p>
+<p><strong>Висновок:</strong> Для ефективної передачі електричної енергії на великі відстані необхідно <strong>суттєво підвищувати напругу</strong> в лініях електропередачі. Наприклад, на електростанціях генерується напруга в кілька кіловольт, а в магістральних лініях вона підвищується до сотень кіловольт (110 кВ, 220 кВ, 330 кВ, 400 кВ, 750 кВ).</p>
+<p>Ця перевага перетворення напруги за допомогою трансформаторів стала ключовою у так званій &quot;війні струмів&quot; наприкінці XIX століття, що призвела до домінування систем змінного струму над постійним для великомасштабної передачі електроенергії. Хоча сьогодні існують технології передачі високовольтного постійного струму (HVDC), які мають свої переваги для дуже великих відстаней (наприклад, підводні кабелі або трансконтинентальні лінії), змінні струми та трансформатори залишаються основою світової енергетичної інфраструктури.</p>
+<p>Звичайно, така висока напруга є небезпечною і не підходить для безпосереднього використання споживачами. Тому поблизу міст і селищ напругу потрібно знову <strong>знижувати</strong> до безпечних і придатних для використання рівнів (наприклад, 380 В / 220 В у наших розетках).</p>
+<p>Саме для цих цілей - підвищення та зниження напруги змінного струму - і був створений <strong>трансформатор</strong>. Це єдиний ефективний спосіб змінювати напругу змінного струму з мінімальними втратами.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2>Трансформатор: Змінюючи напругу змінного струму<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>Трансформатор</strong> - це статичний (без рухомих частин) електромагнітний пристрій, призначений для перетворення змінної електричної енергії однієї напруги та сили струму на змінну електричну енергію іншої напруги та сили струму при незмінній частоті.</p>
+</div></blockquote>
+</section>
+<section id="id7">
+<h2>Будова трансформатора<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Основні частини трансформатора:</p>
+<ol class="arabic simple">
+<li><p><strong>Осердя (магнітопровід)</strong>: Це замкнений контур, виготовлений зі спеціальної феромагнітної (трансформаторної) сталі. Його завдання - концентрувати магнітний потік і направляти його через обмотки, мінімізуючи розсіювання. Осердя виготовляють не суцільним, а набраним з тонких сталевих пластин, ізольованих одна від одної (ламіноване осердя). Вибір матеріалу осердя, такого як спеціальна трансформаторна сталь з певними магнітними властивостями, є критично важливим для мінімізації втрат на перемагнічування (гістерезисні втрати). Ламінування осердя - це інженерне рішення, яке ефективно бореться зі <strong>струмами Фуко</strong> (вихрові струми), оскільки вони, за законом електромагнітної індукції, виникають у масивних провідниках. Розбиття осердя на тонкі, ізольовані пластини значно збільшує опір шляху для цих струмів, обмежуючи їх і, відповідно, зменшуючи теплові втрати.</p></li>
+<li><p><strong>Первинна обмотка</strong> (<span class="math notranslate nohighlight">\(N_1\)</span>): Це провід, намотаний на осердя, який підключають до джерела змінного струму (джерела вхідної напруги <span class="math notranslate nohighlight">\(U_1\)</span>). Струм у первинній обмоці створює змінний магнітний потік в осерді. Кількість витків первинної обмотки позначається <span class="math notranslate nohighlight">\(N_1\)</span>.</p></li>
+<li><p><strong>Вторинна обмотка</strong> (<span class="math notranslate nohighlight">\(N_2\)</span>): Це також провід, намотаний на те ж саме осердя, але електрично ізольований від первинної обмотки. До вторинної обмотки підключають навантаження (споживача). У ній індукується ЕРС за рахунок змінного магнітного потоку, створеного первинною обмоткою. Кількість витків вторинної обмотки позначається <span class="math notranslate nohighlight">\(N_2\)</span>.</p></li>
+</ol>
+<p>Обидві обмотки намотані на осердя, але електрично не з'єднані між собою. Зв'язок між ними здійснюється виключно через <strong>магнітне поле</strong>.</p>
+</section>
+<section id="id8">
+<h2>Принцип дії трансформатора: Електромагнітна індукція в дії<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>Принцип роботи трансформатора ґрунтується на явищі <strong>електромагнітної індукції</strong>, яке ми вже детально вивчили.</p>
+<ol class="arabic simple">
+<li><p><strong>Створення змінного магнітного потоку:</strong> Коли первинну обмотку підключають до джерела змінного струму, по ній починає текти змінний струм <span class="math notranslate nohighlight">\(I_1\)</span>. Цей струм створює навколо обмотки <strong>змінне магнітне поле</strong>. Оскільки обмотка намотана на феромагнітне осердя, магнітний потік <span class="math notranslate nohighlight">\(\Phi\)</span>, що пронизує осердя, також стає змінним і замикається по осердю.</p></li>
+<li><p><strong>Індукція ЕРС у вторинній обмоці:</strong> Змінний магнітний потік <span class="math notranslate nohighlight">\(\Phi(t)\)</span> пронизує також і вторинну обмотку. Згідно із <strong>законом Фарадея про електромагнітну індукцію</strong>, якщо магнітний потік, що пронизує замкнений контур, змінюється з часом, то в цьому контурі індукується ЕРС. Отже, у вторинній обмоці виникає індукційна ЕРС <span class="math notranslate nohighlight">\(\mathcal{E}_2\)</span>.</p></li>
+<li><p><strong>Самоіндукція в первинній обмоці:</strong> Одночасно, змінний магнітний потік <span class="math notranslate nohighlight">\(\Phi(t)\)</span> пронизує і саму первинну обмотку, викликаючи в ній <strong>ЕРС самоіндукції</strong> <span class="math notranslate nohighlight">\(\mathcal{E}_1\)</span>. За <strong>правилом Ленца</strong>, ця ЕРС самоіндукції завжди протидіє зміні струму, який її породив. У ідеальному трансформаторі (в режимі холостого ходу, коли до вторинної обмотки нічого не підключено) прикладена зовнішня напруга <span class="math notranslate nohighlight">\(U_1\)</span> майже повністю компенсується ЕРС самоіндукції <span class="math notranslate nohighlight">\(\mathcal{E}_1\)</span>.</p></li>
+</ol>
+<section id="id9">
+<h3>Математичне виведення рівнянь трансформатора<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Ми знаємо, що миттєве значення ЕРС індукції в одному витку провідника дорівнює швидкості зміни магнітного потоку, що пронизує цей виток:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon = -\Phi'(t)\]</div>
+<p>де <span class="math notranslate nohighlight">\(\Phi'(t)\)</span> - похідна магнітного потоку за часом. Одиниця в СІ: <strong>Вебер за секунду (<span class="math notranslate nohighlight">\(\text{Вб}/\text{с}\)</span>)</strong>.</p>
+<p>Якщо обмотка має <span class="math notranslate nohighlight">\(N\)</span> витків, і весь магнітний потік проходить через кожен виток (ідеальне магнітне зв'язування), то загальна ЕРС в обмоці буде в <span class="math notranslate nohighlight">\(N\)</span> разів більшою:</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_1 = -N_1 \Phi'(t)\]</div>
+<div class="math notranslate nohighlight">
+\[\varepsilon_2 = -N_2 \Phi'(t)\]</div>
+<p>де <span class="math notranslate nohighlight">\(N_1\)</span> та <span class="math notranslate nohighlight">\(N_2\)</span> - кількість витків первинної та вторинної обмоток відповідно.</p>
+<p>З цих двох рівнянь ми можемо знайти відношення ЕРС:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\varepsilon_1}{\varepsilon_2} = \frac{-N_1 \Phi'(t)}{-N_2 \Phi'(t)}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{\varepsilon_1}{\varepsilon_2} = \frac{N_1}{N_2}\]</div>
+<p>Ця формула показує, що відношення миттєвих значень ЕРС прямо пропорційне відношенню кількості витків. Оскільки для змінного струму ми частіше використовуємо діючі значення, і для синусоїдальних коливань діючі значення пов'язані з амплітудними через <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>, то відношення діючих значень ЕРС також буде пропорційним:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathcal{E}_{1\text{д}}}{\mathcal{E}_{2\text{д}}} = \frac{N_1}{N_2}\]</div>
+<p>Або, для спрощення запису, використовуючи позначення <span class="math notranslate nohighlight">\(\mathcal{E}_1\)</span> та <span class="math notranslate nohighlight">\(\mathcal{E}_2\)</span> для діючих значень:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\mathcal{E}_1}{\mathcal{E}_2} = \frac{N_1}{N_2}\]</div>
+</section>
+<section id="id10">
+<h3>Режим холостого ходу (ненавантажений трансформатор)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>У режимі <strong>холостого ходу</strong> вторинна обмотка трансформатора не підключена до навантаження, тобто струм у ній не тече (<span class="math notranslate nohighlight">\(I_2 = 0\)</span>). У цьому випадку:</p>
+<ul class="simple">
+<li><p>Прикладена до первинної обмотки напруга <span class="math notranslate nohighlight">\(U_1\)</span> майже повністю компенсується ЕРС самоіндукції <span class="math notranslate nohighlight">\(\mathcal{E}_1\)</span>. Тому ми можемо вважати <span class="math notranslate nohighlight">\(U_1 \approx \mathcal{E}_1\)</span>.</p></li>
+<li><p>Напруга на вторинній обмотці <span class="math notranslate nohighlight">\(U_2\)</span> дорівнює індукованій у ній ЕРС <span class="math notranslate nohighlight">\(\mathcal{E}_2\)</span> (оскільки немає струму, немає і спаду напруги на внутрішньому опорі обмотки). Отже, <span class="math notranslate nohighlight">\(U_2 = \mathcal{E}_2\)</span>.</p></li>
+</ul>
+<p>Підставляючи ці співвідношення у формулу для відношення ЕРС, отримуємо <strong>формулу трансформатора для напруги в режимі холостого ходу</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{U_1}{U_2} \approx \frac{N_1}{N_2}\]</div>
+<p>Ця формула є фундаментальною для розуміння роботи трансформатора.</p>
+</section>
+<section id="k">
+<h3>Коефіцієнт трансформації (<span class="math notranslate nohighlight">\(k\)</span>)<a class="headerlink" href="#k" title="Link to this heading">#</a></h3>
+<p>Для зручності вводять поняття <strong>коефіцієнта трансформації</strong> <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<blockquote>
+<div><p><strong>Коефіцієнт трансформації</strong> <span class="math notranslate nohighlight">\(k\)</span> - це відношення кількості витків первинної обмотки до кількості витків вторинної обмотки.</p>
+<div class="math notranslate nohighlight">
+\[k = \frac{N_1}{N_2}\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(k\)</span> є відношенням кількості витків, він є <strong>безрозмірнісною величиною</strong>.</p>
+</div></blockquote>
+<p>Тоді формула трансформатора набуває вигляду:</p>
+<div class="math notranslate nohighlight">
+\[\frac{U_1}{U_2} = k\]</div>
+<p>Звідси:</p>
+<ul class="simple">
+<li><p>Якщо <span class="math notranslate nohighlight">\(k &gt; 1\)</span> (тобто <span class="math notranslate nohighlight">\(N_1 &gt; N_2\)</span>), то <span class="math notranslate nohighlight">\(U_1 &gt; U_2\)</span>. Такий трансформатор називається <strong>знижувальним</strong>, оскільки він знижує напругу.</p></li>
+<li><p>Якщо <span class="math notranslate nohighlight">\(k &lt; 1\)</span> (тобто <span class="math notranslate nohighlight">\(N_1 &lt; N_2\)</span>), то <span class="math notranslate nohighlight">\(U_1 &lt; U_2\)</span>. Такий трансформатор називається <strong>підвищувальним</strong>, оскільки він підвищує напругу.</p></li>
+<li><p>Якщо <span class="math notranslate nohighlight">\(k = 1\)</span> (тобто <span class="math notranslate nohighlight">\(N_1 = N_2\)</span>), то <span class="math notranslate nohighlight">\(U_1 = U_2\)</span>. Такий трансформатор називається <strong>розділювальним</strong> і використовується для гальванічної розв'язки кіл.</p></li>
+</ul>
+<p>Підвищувальні трансформатори використовуються на електростанціях для підвищення напруги перед передачею по ЛЕП, а знижувальні - на підстанціях для зниження напруги перед подачею споживачам.</p>
+</section>
+<section id="id11">
+<h3>Навантажений трансформатор (режим роботи)<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Коли до вторинної обмотки підключають навантаження (споживача), по ній починає текти струм <span class="math notranslate nohighlight">\(I_2\)</span>. Цей струм створює своє власне магнітне поле, яке, згідно з правилом Ленца, протидіє магнітному полю, створеному первинною обмоткою. В результаті магнітний потік в осерді починає зменшуватися.</p>
+<p>Зменшення магнітного потоку в осерді призводить до зменшення ЕРС самоіндукції <span class="math notranslate nohighlight">\(\mathcal{E}_1\)</span> у первинній обмотці. Оскільки напруга джерела <span class="math notranslate nohighlight">\(U_1\)</span> залишається незмінною, ця різниця призводить до зростання струму <span class="math notranslate nohighlight">\(I_1\)</span> у первинній обмотці.</p>
+<p>Таким чином, у навантаженому трансформаторі: <strong>якщо у вторинній обмотці виникає струм <span class="math notranslate nohighlight">\(I_2\)</span>, то й у первинній обмотці автоматично зростає струм <span class="math notranslate nohighlight">\(I_1\)</span></strong>. Це забезпечує передачу енергії від джерела до навантаження.</p>
+</section>
+<section id="id12">
+<h3>Формула трансформатора для струму: Збереження потужності<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Ідеальний трансформатор не має втрат енергії. Це означає, що <strong>активна потужність, споживана первинною обмоткою, дорівнює активній потужності, що віддається вторинною обмоткою</strong>:</p>
+<div class="math notranslate nohighlight">
+\[P_1 = P_2\]</div>
+<p>Використовуючи формулу активної потужності <span class="math notranslate nohighlight">\(P = UI \cos\varphi\)</span> (для ідеального трансформатора або при активному навантаженні коефіцієнт потужності <span class="math notranslate nohighlight">\(\cos\varphi\)</span> близький до 1, тому для спрощення будемо вважати <span class="math notranslate nohighlight">\(\cos\varphi_1 \approx \cos\varphi_2 \approx 1\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[U_1 I_1 = U_2 I_2\]</div>
+<p>Звідси ми можемо знайти відношення струмів:</p>
+<div class="math notranslate nohighlight">
+\[\frac{I_2}{I_1} = \frac{U_1}{U_2}\]</div>
+<p>Підставляючи сюди відношення напруг з формули трансформатора (<span class="math notranslate nohighlight">\(\frac{U_1}{U_2} = \frac{N_1}{N_2} = k\)</span>), отримуємо <strong>формулу трансформатора для струму</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{I_2}{I_1} = \frac{N_1}{N_2} = k\]</div>
+<p>Це означає, що:</p>
+<ul class="simple">
+<li><p>Якщо <span class="math notranslate nohighlight">\(k &gt; 1\)</span> (знижувальний трансформатор, <span class="math notranslate nohighlight">\(U_2 &lt; U_1\)</span>), то <span class="math notranslate nohighlight">\(I_2 &gt; I_1\)</span>. Тобто, знижуючи напругу, трансформатор підвищує силу струму.</p></li>
+<li><p>Якщо <span class="math notranslate nohighlight">\(k &lt; 1\)</span> (підвищувальний трансформатор, <span class="math notranslate nohighlight">\(U_2 &gt; U_1\)</span>), то <span class="math notranslate nohighlight">\(I_2 &lt; I_1\)</span>. Тобто, підвищуючи напругу, трансформатор знижує силу струму.</p></li>
+</ul>
+<p>Ці співвідношення показують, що трансформатор є надзвичайно ефективним інструментом для управління електричною енергією, дозволяючи змінювати напругу та струм у зворотно пропорційній залежності, зберігаючи при цьому передану потужність.</p>
+</section>
+</section>
+<section id="id13">
+<h2>Реальний трансформатор та втрати енергії<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>Жоден реальний пристрій не є ідеальним, і трансформатор не виняток. У ньому виникають певні втрати енергії, що знижують його ефективність:</p>
+<ol class="arabic simple">
+<li><p><strong>Втрати в обмотках (мідні втрати)</strong>: Провід обмоток має активний опір <span class="math notranslate nohighlight">\(R_1\)</span> та <span class="math notranslate nohighlight">\(R_2\)</span>. При протіканні струмів <span class="math notranslate nohighlight">\(I_1\)</span> та <span class="math notranslate nohighlight">\(I_2\)</span> в обмотках виділяється тепло за законом Джоуля-Ленца (<span class="math notranslate nohighlight">\(P_{\text{втрат, мідь}} = I_1^2 R_1 + I_2^2 R_2\)</span>). Для зменшення цих втрат використовують дроти з великим поперечним перерізом та матеріали з низьким питомим опором (мідь).</p></li>
+<li><p><strong>Втрати в осерді (втрати в сталі або магнітні втрати)</strong>:</p>
+<ul class="simple">
+<li><p><strong>Втрати на перемагнічування (гістерезисні втрати)</strong>: Феромагнітне осердя постійно перемагнічується змінним магнітним полем. На це витрачається енергія (так звана енергія гістерезису). Для зменшення цих втрат використовують спеціальні сорти трансформаторної сталі, що мають вузьку петлю гістерезису.</p></li>
+<li><p><strong>Втрати на вихрові струми (струми Фуко)</strong>: Змінний магнітний потік індукує струми не тільки в обмотках, а й у самому масивному осерді. Ці струми нагрівають осердя. Для їх зменшення осердя складають з тонких, ізольованих одна від одної пластин, що значно збільшує опір для струмів Фуко.</p></li>
+</ul>
+</li>
+<li><p><strong>Втрати на магнітне розсіювання</strong>: Частина магнітного потоку, створеного первинною обмоткою, може не пронизувати вторинну обмотку (і навпаки). Більш точним терміном для цього явища є <strong>потік розсіювання (leakage flux)</strong>. Це та частина магнітного потоку, що створюється однією обмоткою, але не проходить через іншу. Потік розсіювання призводить до появи так званих індуктивностей розсіювання, які спричиняють додатковий спад напруги на обмотках під навантаженням і погіршують регулювальні характеристики трансформатора. Проектування трансформаторів передбачає оптимізацію форми осердя та розташування обмоток для мінімізації цих небажаних потоків.</p></li>
+</ol>
+<p>Через ці втрати коефіцієнт трансформації для напруги та струму може трохи відрізнятися від співвідношення витків, особливо при навантаженні. Також напруга на вторинній обмотці під навантаженням буде дещо меншою за ЕРС індукції через спад напруги на внутрішньому опорі обмотки:</p>
+<div class="math notranslate nohighlight">
+\[U_2 = \mathcal{E}_2 - I_2 R_2\]</div>
+<p>Незважаючи на ці втрати, сучасні трансформатори мають дуже високий <strong>коефіцієнт корисної дії (ККД)</strong>, який для потужних промислових трансформаторів може сягати 98-99.5%.</p>
+<section id="eta">
+<h3>Коефіцієнт корисної дії (ККД, <span class="math notranslate nohighlight">\(\eta\)</span>)<a class="headerlink" href="#eta" title="Link to this heading">#</a></h3>
+<p><strong>Коефіцієнт корисної дії (ККД)</strong> <span class="math notranslate nohighlight">\(\eta\)</span> трансформатора показує, яка частина електричної потужності, спожитої первинною обмоткою (<span class="math notranslate nohighlight">\(P_1\)</span>), перетворюється на корисну потужність, що віддається вторинною обмоткою (<span class="math notranslate nohighlight">\(P_2\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{P_2}{P_1} \cdot 100\ \%\]</div>
+<p>Оскільки <span class="math notranslate nohighlight">\(P_1 = U_1 I_1 \cos\varphi_1\)</span> та <span class="math notranslate nohighlight">\(P_2 = U_2 I_2 \cos\varphi_2\)</span>, то:</p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{U_2 I_2 \cos\varphi_2}{U_1 I_1 \cos\varphi_1} \cdot 100\ \%\]</div>
+<p>У добре спроектованих трансформаторах коефіцієнти потужності <span class="math notranslate nohighlight">\(\cos\varphi_1\)</span> і <span class="math notranslate nohighlight">\(\cos\varphi_2\)</span> близькі до одиниці, особливо при активному навантаженні. Одиниця в СІ: <strong>відсотки (%)</strong> (безрозмірна величина).</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="id14">
+<h1>Лінії електропередачі (ЛЕП) та особливості високої напруги<a class="headerlink" href="#id14" title="Link to this heading">#</a></h1>
+<p>Отже, ми з'ясували, що для мінімізації втрат енергії на великих відстанях необхідно передавати електричну енергію під дуже високою напругою. Для цього використовують <strong>лінії електропередачі (ЛЕП)</strong>.</p>
+<section id="id15">
+<h2>Передача електроенергії високовольтними лініями<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p>Процес передачі електроенергії відбувається так:</p>
+<ol class="arabic simple">
+<li><p><strong>На електростанції</strong>: Генератори виробляють змінний струм відносно невисокої напруги (наприклад, 10-25 кВ).</p></li>
+<li><p><strong>Підвищувальна підстанція</strong>: Відразу біля електростанції встановлюється <strong>підвищувальний трансформатор</strong>, який перетворює цю напругу на дуже високу (наприклад, 110 кВ, 220 кВ, 330 кВ, 400 кВ і навіть до 750 кВ).</p></li>
+<li><p><strong>Магістральні ЛЕП</strong>: Електроенергія передається по високовольтних лініях електропередачі на великі відстані до великих населених пунктів або промислових центрів. Завдяки високій напрузі, струм у цих лініях дуже малий, що зводить до мінімуму втрати на нагрівання проводів.</p></li>
+<li><p><strong>Знижувальні підстанції</strong>: Поблизу споживачів встановлюються <strong>знижувальні трансформатори</strong>, які поетапно знижують напругу. Наприклад, спочатку до 35-110 кВ для міських розподільчих мереж, потім до 6-10 кВ для внутрішньоміських ліній, і нарешті, до 380 В / 220 В для безпосереднього використання в будинках та на підприємствах.</p></li>
+</ol>
+<p>Таким чином, трансформатори є ключовими елементами всієї енергетичної системи, дозволяючи нам ефективно транспортувати електроенергію.</p>
+</section>
+<section id="id16">
+<h2>Виклики високої напруги: Коронний розряд<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<p>Передача енергії під дуже високою напругою має свої особливості та проблеми. Однією з них є <strong>коронний розряд</strong>.</p>
+<blockquote>
+<div><p><strong>Коронний розряд</strong> - це вид самостійного електричного розряду в газах, який виникає навколо провідників при дуже високій напруженості електричного поля, що перевищує поріг іонізації повітря.</p>
+</div></blockquote>
+<p>При дуже високій напрузі на поверхні проводів ЛЕП електричне поле може стати настільки сильним, що починає іонізувати навколишнє повітря. Це призводить до появи слабкого світіння (особливо помітного вночі), характерного шипіння та втрат енергії. Коронний розряд посилюється за несприятливих погодних умов (туман, дощ, ожеледиця).</p>
+<p>Для боротьби з коронним розрядом на високовольтних ЛЕП використовують товсті проводи або розщеплені проводи (кілька дротів, об'єднаних в один &quot;пакет&quot;), що зменшує напруженість електричного поля біля поверхні провідника.</p>
+<p>Всі ці інженерні рішення, від конструкції трансформаторів до вибору матеріалів для ЛЕП та методів боротьби з коронним розрядом, є результатом глибокого розуміння законів класичної електродинаміки, зокрема рівнянь Максвелла. Явище електромагнітної індукції, яке лежить в основі роботи трансформатора, є одним з центральних стовпів цієї теорії.</p>
+</section>
+<section id="id17">
+<h2>Баланс потужності в енергосистемі<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<p>Враховуючи всі втрати, ми можемо записати баланс активної потужності в енергосистемі, що є прямим застосуванням <strong>закону збереження енергії</strong>:</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{ген}} = P_{\text{спож}} + P_{\text{втрат, лінії}} + P_{\text{втрат, трансфор}} + P_{\text{інші втрати}}\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P_{\text{ген}}\)</span> - активна потужність, що виробляється генератором на електростанції.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{\text{спож}}\)</span> - корисна активна потужність, що споживається кінцевим споживачем.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{\text{втрат, лінії}}\)</span> - потужність втрат у лініях електропередачі (<span class="math notranslate nohighlight">\(I^2 R_{\text{лінії}}\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{\text{втрат, трансфор}}\)</span> - потужність втрат у трансформаторах (нагрівання обмоток, струми Фуко, перемагнічування).</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{\text{інші втрати}}\)</span> - інші, менш значні втрати.</p></li>
+</ul>
+<p>Основна мета всієї системи передачі енергії - зробити <span class="math notranslate nohighlight">\(P_{\text{втрат, лінії}}\)</span> та <span class="math notranslate nohighlight">\(P_{\text{втрат, трансфор}}\)</span> якомога меншими, щоб максимізувати <span class="math notranslate nohighlight">\(P_{\text{спож}}\)</span>. І, як ми бачили, трансформатори відіграють тут ключову роль, дозволяючи нам маніпулювати напругою та струмом для досягнення цієї мети.</p>
+</section>
+<section id="id18">
+<h2>Додаткові матеріали<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+</section>
+<section id="id19">
+<h2>Додаткові матеріали (англійською)<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Transformer">https://en.wikipedia.org/wiki/Transformer</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./physics\electromagnetic-waves"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="active-and-reactive-resistance.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../optics/nature_of_light.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Природа світла</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Трансформатор. Передача електроенергії на великі відстані</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Передача електричної енергії на великі відстані: Чому це виклик?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Проблема: Втрати енергії в лініях електропередачі</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Від чого залежить опір проводів?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Ключове питання: Як зменшити струм, зберігаючи передану потужність?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-u-2-r">Розвіюємо плутанину: Чому формула <span class="math notranslate nohighlight">\(P=U^2/R\)</span> не суперечить цьому?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Трансформатор: Змінюючи напругу змінного струму</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Будова трансформатора</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Принцип дії трансформатора: Електромагнітна індукція в дії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Математичне виведення рівнянь трансформатора</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Режим холостого ходу (ненавантажений трансформатор)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k">Коефіцієнт трансформації (<span class="math notranslate nohighlight">\(k\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Навантажений трансформатор (режим роботи)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Формула трансформатора для струму: Збереження потужності</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Реальний трансформатор та втрати енергії</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eta">Коефіцієнт корисної дії (ККД, <span class="math notranslate nohighlight">\(\eta\)</span>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Лінії електропередачі (ЛЕП) та особливості високої напруги</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Передача електроенергії високовольтними лініями</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Виклики високої напруги: Коронний розряд</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Баланс потужності в енергосистемі</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Додаткові матеріали</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Додаткові матеріали (англійською)</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Vladyslav Yakovliev
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025 Vladyslav Yakovliev. Всі права захищені.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
