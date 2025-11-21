@@ -224,7 +224,8 @@ https://www.youtube.com/watch?v=hb-C0fbU2lo
 
 **Теоретичний матеріал**:
 - Підручник Бар'яхтар 10 клас рівень стандарту: параграф 20
-- TBD
+- https://yakovliev.github.io/quantopia-school-ua/physics/electromagnetic-waves/power-and-effective-current.html
+- https://yakovliev.github.io/quantopia-school-ua/physics/electromagnetic-waves/active-and-reactive-resistance.html
 
 **Завдання 1**:
 - Записати наступні означення/формули в конспект: активний опір, діюче значення змінного струму, індуктивний опір провідника, ємнісний опір, повний опір кола.
@@ -237,7 +238,7 @@ https://www.youtube.com/watch?v=hb-C0fbU2lo
 
 **Завдання 3**:
 
-На ділянці кола з активним опором 900 Ом сила струму змінюється за законом $i = 0.5 \sin (100 \pi t) (А). Визначте:
+На ділянці кола з активним опором 900 Ом сила струму змінюється за законом $i = 0.5 \sin (100 \pi t)$ (А). Визначте:
 1. Діючі значення сили струму й напруги;
 2. потужність, яка виділяється на ділянці;
 3. напругу, на яку має бути розрахована ізоляція проводів;
@@ -250,7 +251,7 @@ https://www.youtube.com/watch?v=hb-C0fbU2lo
 
 **Теоретичний матеріал**:
 - Підручник Бар'яхтар 10 клас рівень стандарту: параграфи 21, 22, 23
-- TBD
+- https://yakovliev.github.io/quantopia-school-ua/physics/electromagnetic-waves/transformer.html
 
 **Завдання 1**:
 - Записати наступні означення/формули в конспект: трансформатор, коефіцієнт трансформації, ККД трансформатора.

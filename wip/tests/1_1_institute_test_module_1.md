@@ -8,6 +8,7 @@ puppeteer:
     left: '1cm'
   landscape: false
 ---
+% style.less > global file for styles of markdown converatation to PDF
 
 
 # Модульна контрольна робота 1
