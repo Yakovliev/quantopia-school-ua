@@ -60,6 +60,8 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'physics/tasks/optics-tasks';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
@@ -277,7 +279,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/power-and-effective-current.html">Діючі значення змінного струму та напруги. Потужність у колі змінного струму</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/active-and-reactive-resistance.html">Активний та рективний опори. Послідовне RLC коло та паралельне RLC коло</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../electromagnetic-waves/transformer.html">Трансформатор. Передача електроенергії на великі відстані</a></li>
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ОПТИКА</span></p>
 <ul class="nav bd-sidenav">
@@ -479,7 +480,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -495,6 +498,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Формула Планка. Світлові кванти</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -528,6 +540,104 @@
 <li><p>На якій відстані від лінзи потрібно розмістити екран?</p></li>
 <li><p>Яким буде зображення: дійсним чи уявним, прямим чи перевернутим, збільшеним чи зменшеним?</p></li>
 </ol>
+<section id="id2">
+<h2>Формула Планка. Світлові кванти<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Сучасні мережі 5G працюють на різних частотах. Один із діапазонів використовує частоту <span class="math notranslate nohighlight">\(\nu = 28\)</span> ГГц (<span class="math notranslate nohighlight">\(28 \cdot 10^9\)</span> Гц). Обчисліть енергію одного кванта (фотона) такого випромінювання, використовуючи сталу Планка <span class="math notranslate nohighlight">\(h = 6.63 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span>.</p>
+<p>Варіант 1. Сучасні Wi-Fi роутери часто працюють на частоті <span class="math notranslate nohighlight">\(\nu = 2.4\)</span> ГГц (<span class="math notranslate nohighlight">\(2.4 \cdot 10^9\)</span> Гц). Обчисліть енергію одного кванта (фотона) такого випромінювання, використовуючи сталу Планка <span class="math notranslate nohighlight">\(h = 6.63 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span>.</p>
+<p>Варіант 2. Супутникове телебачення використовує діапазон частот порядку <span class="math notranslate nohighlight">\(\nu = 12\)</span> ГГц (<span class="math notranslate nohighlight">\(12 \cdot 10^9\)</span> Гц). Обчисліть енергію одного кванта (фотона) такого випромінювання, використовуючи сталу Планка <span class="math notranslate nohighlight">\(h = 6.63 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span>.</p>
+<p>Варіант 3. Поліцейські радари для вимірювання швидкості можуть працювати на частоті <span class="math notranslate nohighlight">\(\nu = 24\)</span> ГГц (<span class="math notranslate nohighlight">\(24 \cdot 10^9\)</span> Гц). Обчисліть енергію одного кванта (фотона) такого випромінювання, використовуючи сталу Планка <span class="math notranslate nohighlight">\(h = 6.63 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span>.</p>
+<p><strong>Задача 2</strong></p>
+<p>Лазерна указка зеленого кольору випромінює світло з довжиною хвилі <span class="math notranslate nohighlight">\(\lambda = 532\)</span> нм (<span class="math notranslate nohighlight">\(532 \cdot 10^{-9}\)</span> м). Згадавши, що швидкість світла <span class="math notranslate nohighlight">\(c = 3 \cdot 10^8\)</span> м/с, знайдіть частоту <span class="math notranslate nohighlight">\(\nu\)</span>, імпульс та енергію цього випромінювання.</p>
+<p>Варіант 1. Лазерна указка червоного кольору випромінює світло з довжиною хвилі <span class="math notranslate nohighlight">\(\lambda = 650\)</span> нм (<span class="math notranslate nohighlight">\(650 \cdot 10^{-9}\)</span> м). Згадавши, що швидкість світла <span class="math notranslate nohighlight">\(c = 3 \cdot 10^8\)</span> м/с, знайдіть частоту <span class="math notranslate nohighlight">\(\nu\)</span>, імпульс та енергію цього випромінювання.</p>
+<p>Варіант 2. Лазер у програвачі Blu-ray випромінює фіолетове світло з довжиною хвилі <span class="math notranslate nohighlight">\(\lambda = 405\)</span> нм (<span class="math notranslate nohighlight">\(405 \cdot 10^{-9}\)</span> м). Згадавши, що швидкість світла <span class="math notranslate nohighlight">\(c = 3 \cdot 10^8\)</span> м/с, знайдіть частоту <span class="math notranslate nohighlight">\(\nu\)</span>, імпульс та енергію цього випромінювання.</p>
+<p>Варіант 3. Інфрачервоний пульт дистанційного керування випромінює сигнал з довжиною хвилі <span class="math notranslate nohighlight">\(\lambda = 940\)</span> нм (<span class="math notranslate nohighlight">\(940 \cdot 10^{-9}\)</span> м). Згадавши, що швидкість світла <span class="math notranslate nohighlight">\(c = 3 \cdot 10^8\)</span> м/с, знайдіть частоту <span class="math notranslate nohighlight">\(\nu\)</span>, імпульс та енергію цього випромінювання.</p>
+<p><strong>Задача 3</strong></p>
+<p>Бактерицидні лампи, які використовують для дезінфекції повітря в лікарнях та офісах, випромінюють ультрафіолет. Найефективнішою для знищення вірусів є довжина хвилі <span class="math notranslate nohighlight">\(\lambda = 254\)</span> нм. Визначте енергію <span class="math notranslate nohighlight">\(E\)</span> та імпульс <span class="math notranslate nohighlight">\(p\)</span> фотона такого випромінювання.</p>
+<p>Варіант 1. У літографії для створення сучасних мікропроцесорів використовують глибокий ультрафіолет з довжиною хвилі <span class="math notranslate nohighlight">\(\lambda = 193\)</span> нм. Визначте енергію <span class="math notranslate nohighlight">\(E\)</span> та імпульс <span class="math notranslate nohighlight">\(p\)</span> фотона такого випромінювання.</p>
+<p>Варіант 2. Для перевірки справжності банкнот використовують ультрафіолетові детектори з довжиною хвилі <span class="math notranslate nohighlight">\(\lambda = 365\)</span> нм. Визначте енергію <span class="math notranslate nohighlight">\(E\)</span> та імпульс <span class="math notranslate nohighlight">\(p\)</span> фотона такого випромінювання.</p>
+<p>Варіант 3. Сонячне випромінювання, яке сприяє виробленню вітаміну D у шкірі людини, має довжину хвилі близько <span class="math notranslate nohighlight">\(\lambda = 300\)</span> нм (UV-B діапазон). Визначте енергію <span class="math notranslate nohighlight">\(E\)</span> та імпульс <span class="math notranslate nohighlight">\(p\)</span> фотона такого випромінювання.</p>
+<p><strong>Задача 4</strong></p>
+<p>У сучасній квантовій електроніці та під час опису коливальних процесів часто зручніше використовувати не звичайну частоту <span class="math notranslate nohighlight">\(\nu\)</span>, а кутову частоту <span class="math notranslate nohighlight">\(\omega\)</span>. Обчисліть енергію фотона, якщо його кутова частота становить <span class="math notranslate nohighlight">\(\omega = 4 \cdot 10^{15}\)</span> рад/с. Використайте зведену сталу Планка <span class="math notranslate nohighlight">\(\hbar \approx 1.05 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span> (обчисліть її точніше як <span class="math notranslate nohighlight">\(h/2\pi\)</span>).</p>
+<p>Варіант 1. У сучасній квантовій електроніці часто використовують кутову частоту. Обчисліть енергію фотона, якщо його кутова частота <span class="math notranslate nohighlight">\(\omega = 3 \cdot 10^{15}\)</span> рад/с. Використайте зведену сталу Планка <span class="math notranslate nohighlight">\(\hbar \approx 1.05 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span>.</p>
+<p>Варіант 2. У сучасній квантовій електроніці часто використовують кутову частоту. Обчисліть енергію фотона, якщо його кутова частота <span class="math notranslate nohighlight">\(\omega = 6 \cdot 10^{14}\)</span> рад/с. Використайте зведену сталу Планка <span class="math notranslate nohighlight">\(\hbar \approx 1.05 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span>.</p>
+<p>Варіант 3. У сучасній квантовій електроніці часто використовують кутову частоту. Обчисліть енергію фотона, якщо його кутова частота <span class="math notranslate nohighlight">\(\omega = 9 \cdot 10^{15}\)</span> рад/с. Використайте зведену сталу Планка <span class="math notranslate nohighlight">\(\hbar \approx 1.05 \cdot 10^{-34} \text{ Дж} \cdot \text{с}\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h2>Фотоефект. Закони фотоефекту<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><strong>Задача 1</strong></p>
+<p>Інженер тестує вакуумний фотоелемент для системи безпеки. Прилад фіксує, що за 2 секунди роботи в режимі насичення з катода на анод перейшло <span class="math notranslate nohighlight">\(2 \cdot 10^{12}\)</span> електронів.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть заряд, перенесений фотоелектронами за цей час.</p></li>
+<li><p>Визначте силу струму насичення в цьому фотоелементі.</p></li>
+</ol>
+<p><strong>Задача 2</strong></p>
+<p>Розробники лазерного обладнання обирають матеріал для катода фотоелемента. У них є лазер із зеленим променем (довжина хвилі <span class="math notranslate nohighlight">\(\lambda = 532\)</span> нм).</p>
+<ol class="arabic simple">
+<li><p>Обчисліть енергію фотонів цього лазера в джоулях та електрон-вольтах (вважайте <span class="math notranslate nohighlight">\(1 \text{ еВ} = 1.6 \cdot 10^{-19} \text{ Дж}\)</span>).</p></li>
+<li><p>Користуючись таблицею, визначте, з якого металу (Цезій, Калій або Натрій) потрібно зробити катод, щоб цей лазер викликав фотоефект.</p></li>
+</ol>
+<p><strong>Таблиця 1. Робота виходу електронів із поверхні деяких металів</strong> (1 еВ = <span class="math notranslate nohighlight">\(1.6 \cdot 10^{-19}\)</span> Дж)</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Метал</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(A_{вих}\)</span>, еВ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Вольфрам</p></td>
+<td><p>4.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Золото</p></td>
+<td><p>4.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Калій</p></td>
+<td><p>2.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Кобальт</p></td>
+<td><p>4.4</p></td>
+</tr>
+<tr class="row-even"><td><p>Літій</p></td>
+<td><p>2.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Мідь</p></td>
+<td><p>4.7</p></td>
+</tr>
+<tr class="row-even"><td><p>Нікель</p></td>
+<td><p>4.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Платина</p></td>
+<td><p>6.35</p></td>
+</tr>
+<tr class="row-even"><td><p>Срібло</p></td>
+<td><p>4.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Хром</p></td>
+<td><p>4.6</p></td>
+</tr>
+<tr class="row-even"><td><p>Цезій</p></td>
+<td><p>1.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Цинк</p></td>
+<td><p>4.2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Задача 3</strong></p>
+<p>У вакуумному фотоелементі електрони, вибиті світлом з катода, повністю затримуються, коли на анод подається негативна напруга 1.5 В.</p>
+<ol class="arabic simple">
+<li><p>Чому дорівнює максимальна кінетична енергія фотоелектронів (у джоулях та електрон-вольтах)?</p></li>
+<li><p>Якою є максимальна швидкість руху цих електронів? (Маса електрона <span class="math notranslate nohighlight">\(m = 9.1 \cdot 10^{-31}\)</span> кг).</p></li>
+</ol>
+<p><strong>Задача 4</strong></p>
+<p>Студент вивчає властивості Цезію (робота виходу <span class="math notranslate nohighlight">\(A_{вих} = 1.8\)</span> еВ), який використовується в приладах нічного бачення.</p>
+<ol class="arabic simple">
+<li><p>Обчисліть червону межу фотоефекту для Цезію (максимальну довжину хвилі <span class="math notranslate nohighlight">\(\lambda_{max}\)</span>).</p></li>
+<li><p>Чи буде спостерігатися фотоефект при опроміненні цезію інфрачервоним світлом з довжиною хвилі 800 нм?</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -575,6 +685,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Формула Планка. Світлові кванти</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Фотоефект. Закони фотоефекту</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
